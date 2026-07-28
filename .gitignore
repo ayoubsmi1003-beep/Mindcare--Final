@@ -1,0 +1,33 @@
+# Secrets — never committed
+.env
+.env.*
+!.env.example
+supabase/.env
+*.key
+*.pem
+
+# Backups & volumes
+backups/
+volumes/
+
+# Audio — must never exist on disk (ADR-009), but guard the repo anyway
+*.webm
+*.wav
+*.ogg
+
+# Node / build
+node_modules/
+.next/
+dist/
+build/
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Supabase local dev
+supabase/.temp/
