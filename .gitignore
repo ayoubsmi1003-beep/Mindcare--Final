@@ -5,6 +5,8 @@
 supabase/.env
 *.key
 *.pem
+*api*key*
+*.env.txt
 
 # Backups & volumes
 backups/
