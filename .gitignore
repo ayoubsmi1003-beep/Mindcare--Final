@@ -8,6 +8,12 @@ supabase/.env
 *api*key*
 *.env.txt
 
+# Configuration d'outillage MCP — pointe une cible de données, jamais committée.
+# En litige avec ADR-001 (« jamais Supabase Cloud ») : cf. STATE.md, décision
+# humaine en attente. Ignorer ce fichier ne le débranche pas — ce n'est qu'un
+# garde-fou contre un `git add -A` distrait.
+.mcp.json
+
 # Backups & volumes
 backups/
 volumes/
@@ -24,6 +30,8 @@ dist/
 build/
 *.log
 npm-debug.log*
+*.tsbuildinfo
+next-env.d.ts
 
 # OS / editor
 .DS_Store
