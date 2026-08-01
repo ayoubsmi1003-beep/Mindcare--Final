@@ -1,0 +1,271 @@
+# 00 — DECISIONS
+**MindCare OS — Cabinet Dr. Larbi N. (Alger)**
+Statut : **VERROUILLÉ** — aucune ligne de code avant lecture complète de ce document.
+Version 1.0 — 2026-07-28
+
+> Ce fichier est la source de vérité. Toute session Claude Code doit le lire en premier.
+> Si un choix technique contredit ce document, **le document gagne**. Toute dérogation = nouvel ADR ajouté ici.
+
+---
+
+## 1. CONTEXTE & CONTRAINTES
+
+### 1.1 Le cabinet
+- Praticienne principale : **Dr. LARBI N.**, psychiatre / psychothérapeute, N° d'Ordre **16/16780**
+- **Deuxième praticienne** (arrivée future) : patientèle séparée, médicaments séparés, revenus séparés
+- **Assistante** : 1 personne, poste dédié sur le même LAN
+- Localisation : Alger, Algérie. Loi **18-07** (protection des données personnelles) applicable.
+
+### 1.2 Matériel — état des lieux (Mois 1)
+| Composant | Spec actuelle | Verdict |
+|---|---|---|
+| CPU | Intel i7 | ✅ suffisant |
+| RAM | 16 GB | ⚠️ limite — Supabase Docker ≈ 5–6 GB |
+| GPU | Intel iGPU | ❌ **aucune inférence locale possible** |
+| Disque | 256 GB SSD | 🔴 **insuffisant** |
+| OS | Windows 10 Pro | ⚠️ EOL — non patché |
+| Réseau | Wi-Fi, modem cabinet, pas d'IP fixe | ⚠️ |
+| PC assistante | Même LAN, **compte Windows séparé** | ✅ |
+
+### 1.3 Actions matérielles obligatoires
+| # | Action | Délai | Coût estimé |
+|---|---|---|---|
+| H1 | **NVMe 1 TB** (le 256 GB sature avant M3 : Windows 60 GB + Docker 25 GB + Postgres + WAL + backups) | Avant J1 si possible | ~8 000 DZD |
+| H2 | **Disque externe USB 1 TB** dédié backups (jamais monté en permanence) | Semaine 1 | ~6 000 DZD |
+| H3 | Upgrade **Windows 11 Pro** (gratuit si hardware compatible) | Semaine 2 | 0 |
+| H4 | **Nouveau PC + GPU** (RTX 3090 24 GB ou 4090) → bascule 100 % locale | Mois 2 | à budgéter |
+| H5 | Passage **Ethernet** (Wi-Fi = coupures = perte de session en cours) | Semaine 1 | ~2 000 DZD |
+
+---
+
+## 2. LES 6 RÈGLES DE FER
+
+Non négociables. Elles priment sur la vitesse, sur le confort, sur la deadline.
+
+**R1 — Localité des données.**
+Toute donnée identifiante patient (Tier 0) reste sur le PC du cabinet. Aucune sortie vers un cloud, jamais, sous aucun prétexte.
+
+**R2 — Passerelle de pseudonymisation.**
+Tout appel vers une API externe (OpenRouter, Groq) passe **obligatoirement** par une fonction serveur unique qui retire nom, prénom, date de naissance, téléphone, adresse, N° pièce d'identité, et les remplace par des jetons (`PT_4471`). Ré-hydratation locale au retour. Aucun appel direct depuis le client.
+
+**R3 — Clés API serveur uniquement.**
+Aucune clé dans le code client, dans le repo, dans le `.env` versionné, ni dans un message de chat. Variables d'environnement serveur uniquement, `.env` dans `.gitignore` dès le commit initial.
+
+**R4 — Propose → Confirme → Exécute → Journalise.**
+Jarvis ne réalise **aucune** action d'écriture (créer, modifier, supprimer, envoyer, imprimer) sans confirmation explicite de l'utilisateur affichée à l'écran. Chaque action exécutée est journalisée.
+
+**R5 — Note clinique immuable.**
+Voir ADR-004. Signature → gel. Correction = amendement visible, jamais écrasement.
+
+**R6 — Journal d'audit dès J1.**
+Toute lecture et écriture de donnée clinique est tracée : qui, quoi, quand, depuis où. Non rétro-installable — donc fait maintenant.
+
+---
+
+## 3. ARCHITECTURE DECISION RECORDS
+
+### ADR-001 — Supabase auto-hébergé dès J1 (jamais Supabase Cloud)
+**Décision.** Supabase self-hosted en Docker (WSL2) sur le PC du cabinet, dès la première ligne.
+**Pourquoi.** Supabase Cloud stocke en Europe/Asie → viole R1 et Loi 18-07 dès le jour 1. Le SDK, le Postgres, les RLS, l'Auth sont **identiques**. Le coût est ~3 h de setup une seule fois.
+**Rejeté.** « Cloud maintenant, migration plus tard » — la migration d'un Postgres en production avec données cliniques réelles = 2 semaines de risque, à payer deux fois.
+**Conséquence.** Setup WSL2 + Docker Desktop en tâche J0, avant toute autre chose.
+
+### ADR-002 — STT cloud pendant le Mois 1, bascule locale par flag
+**Décision.** Transcription via **Groq `whisper-large-v3-turbo`**, en streaming par segments, à travers la passerelle de pseudonymisation.
+**Pourquoi.** L'iGPU Intel ne permet aucune inférence. Whisper large-v3 sur CPU tourne à ~0,3× temps réel — 10 min d'audio = 30 min de traitement. Le temps réel est impossible. Groq est ~10× plus rapide qu'un routage OpenRouter et moins cher.
+**Garde-fous.**
+- Audio streamé en mémoire, **jamais écrit sur disque**, purgé après transcription
+- Aucun identifiant patient transmis — uniquement un `session_token` éphémère
+- Consentement écrit signé par la patiente, archivé (modèle à produire)
+- Variable `STT_PROVIDER=groq` → `local_whisper` : **une ligne** le jour du GPU
+**Révision.** À l'arrivée du GPU (Mois 2).
+
+### ADR-003 — Scoping multi-praticien dès le schéma initial
+**Décision.** `practitioner_id` sur toute ligne clinique et financière. `cabinet_id` présent partout (valeur unique aujourd'hui).
+**Pourquoi.** La 2ᵉ praticienne est déjà annoncée. Ajouter une colonne de scoping après mise en production = réécriture de toutes les policies RLS et de toutes les requêtes.
+**Coût aujourd'hui.** ~0. **Coût plus tard.** ~1 semaine.
+
+### ADR-004 — Notes cliniques append-only
+**Décision.** États : `draft` → `signed` → (immuable). Fenêtre de brouillon **15 minutes** après signature. Après gel, toute correction crée une ligne `clinical_note_amendment` liée, horodatée, visible.
+**Pourquoi.** Un dossier modifiable a une valeur probatoire **nulle** devant un tribunal ou une expertise. Un dossier append-only avec audit trail est une preuve.
+**Coût UX.** Elle ne peut pas « corriger une faute de frappe » après gel — elle produit un amendement visible. Accepté.
+**Coût technique.** 2 tables, ~40 lignes. Rétro-installation = réécriture de toutes les requêtes cliniques.
+
+### ADR-005 — Modèle de permissions à 4 rôles
+| Rôle | Voit | Ne voit pas |
+|---|---|---|
+| `owner` (Dr. Larbi) | Tout le cabinet, tous praticiens, finances globales | — |
+| `practitioner` (Dr. #2) | Ses patients, ses notes, ses ordonnances, **ses seuls revenus** | Patients et revenus des autres |
+| `assistant` | Identité, contact, RDV, statut & montant de paiement — **tous praticiens** | **Aucune** note clinique, transcription, diagnostic, ordonnance |
+| `patient` | Ses propres données via portail aftercare | Tout le reste |
+
+Appliqué par **RLS Postgres**, pas par le front-end. Le front-end n'est jamais une frontière de sécurité.
+
+### ADR-006 — Le QR est statique ; le téléphone est la clé
+**Décision.** Un QR unique affiché en salle d'attente → formulaire web → le patient saisit **son numéro de téléphone** comme identifiant.
+**Logique.**
+- Téléphone existant → réponses rattachées au dossier existant, marquées `pre_consultation`
+- Téléphone inconnu → création dans `pending_patients` → **validation obligatoire** par le médecin ou l'assistante avant de devenir un dossier réel
+**Pourquoi la validation.** Sans elle, un QR public = n'importe qui pollue la base. Le fossé de validation est la protection.
+**Anti-abus.** Rate-limit par numéro (3 soumissions / 24 h), champ honeypot, expiration de session 30 min.
+
+### ADR-007 — OpenRouter comme passerelle LLM unique
+**Décision.** Une clé OpenRouter, un seul module `llm_gateway` côté serveur. Aucun SDK fournisseur en direct.
+**Pourquoi.** Changer de modèle = changement de config, jamais de code. Prépare la bascule vers un modèle local (LiteLLM parle le même protocole OpenAI).
+**Note.** STT passe par Groq en direct (OpenRouter ne route pas l'audio efficacement) — même passerelle de pseudonymisation.
+
+### ADR-008 — Langue
+- **Interface** : français intégral
+- **Sortie de transcription** : arabe (fidèle au parlé)
+- **Jarvis** : répond en français ou en arabe selon la langue d'entrée
+- **Formulaire d'accueil patient** : FR / AR / Darija
+- Aucune chaîne de texte codée en dur — tout en fichier de traduction dès J1
+
+### ADR-009 — Aucun audio conservé
+**Décision.** L'audio n'est jamais persisté. Transcription → note structurée → l'audio disparaît.
+**Pourquoi.** L'audio psychiatrique est le passif juridique le plus lourd d'un cabinet. Ce qui n'existe pas ne peut pas fuiter, être saisi, ni être réclamé.
+
+### ADR-010 — Finance : cash uniquement, pas de facture
+**Décision.** Le médecin saisit le prix manuellement en fin de séance. Aucune facture légale émise. Journal interne des paiements uniquement.
+**Conséquence.** Pas de numérotation légale requise → mais on implémente quand même une **numérotation sans trou** via table compteur (pas de séquence Postgres) pour la cohérence interne et la traçabilité.
+**Notification.** Prix saisi → événement → notification temps réel sur le poste assistante (montant + patient suivant).
+
+### ADR-011 — Documents : moteur à templates
+**Décision.** Un moteur unique, en-tête/pied de page partagés, corps variable par type.
+
+**En-tête commun (extrait des documents existants) :**
+```
+[FR]  Dr. LARBI . N
+      Médecin Spécialiste en Psychiatrie et Psychothérapie
+[AR]  الدكتورة العربي . ن
+      طبيبة مختصة في الأمراض النفسية العقلية والعصبية
+      N° d'Ordre : 16/16780
+      Tel : 0554813911
+[LOGO] arbre/cerveau + main, teal
+[BLOC DROITE] Date / Nom / Prénom / Age
+Police : Times New Roman 14
+```
+
+**Types identifiés :**
+| Code | Titre | Champs variables |
+|---|---|---|
+| `bonne_sante_mentale` | Certificat de bonne santé mentale | n° pièce identité, mairie de délivrance |
+| `suivi_medical` | Certificat de suivi médical | nombre de jours d'arrêt (chiffres + lettres), date de début |
+| `certificat_medical` | Certificat médical | date de naissance, traitement |
+| `justification` | Justification | date de consultation |
+| `ordonnance` | **⚠️ MODÈLE MANQUANT** | à fournir |
+
+**Questions ouvertes à trancher avec la praticienne :**
+- ⚠️ L'en-tête actuel écrit « **Pychiaterie** » (faute) — corriger en « Psychiatrie » ou reproduire à l'identique ?
+- ⚠️ Numérotation des certificats (n° d'ordre par document) : souhaitée ou non ?
+
+### ADR-012 — Vidal : intégration différée, schéma prêt maintenant
+**Décision.** Le PDF Vidal est **scanné (images)** → extraction OCR non triviale. Les tables `medications` et `medication_forms` sont créées à J1 avec un jeu de départ saisi manuellement (les ~60 molécules psychotropes qu'elle prescrit réellement). Extraction Vidal complète en tâche de fond, Semaine 2–3.
+**Pourquoi.** Une psychiatre prescrit dans un périmètre étroit. 60 molécules couvrent >95 % de sa pratique. Attendre le Vidal complet bloquerait la mise en service pour un gain marginal.
+
+### ADR-013 — Comptes Windows séparés
+**Décision.** Session Windows distincte pour l'assistante. Chiffrement BitLocker sur le disque système.
+**Pourquoi.** Une RLS applicative avec un compte Windows partagé est du théâtre : l'assistante accède au conteneur Docker et lit la base directement.
+
+### ADR-014 — Sauvegardes
+- `pg_dump` chiffré **toutes les 4 h** → disque interne
+- Copie quotidienne → **disque externe USB**, débranché après copie (protection ransomware)
+- Test de restauration **hebdomadaire**, obligatoire, tracé
+- WAL archiving activé → PITR
+- **Règle : une sauvegarde jamais restaurée n'est pas une sauvegarde.**
+
+### ADR-015 — Aftercare : chat simple, sans engagement de garde
+**Décision.** Messagerie asynchrone médecin↔patient. Bandeau permanent : *« Ce service n'est pas une urgence. En cas d'urgence, contactez le 14 ou rendez-vous aux urgences les plus proches. »*
+**Pas de** détection de risque automatisée, **pas d'**engagement de délai de réponse en Mois 1.
+**Note.** Décision prise sciemment pour tenir le délai. À revisiter avant montée en charge.
+
+---
+
+## 4. PÉRIMÈTRE DES 2 JOURS
+
+### 4.1 Doit fonctionner réellement — J+2
+| Module | Contenu |
+|---|---|
+| **Auth & rôles** | Connexion, 4 rôles, RLS active et testée |
+| **Patients** | Liste, fiche, création, édition, recherche, historique |
+| **Diary / Agenda** | Vue jour/semaine, création RDV, statuts, file d'attente |
+| **Consultation** | Démarrer séance, timer, transcription live, analyse live, note structurée, signature |
+| **Traitements / Ordonnance** | Sélection médicament, posologie, durée, impression |
+| **Documents** | 4 certificats + ordonnance, génération et impression |
+| **Finance (minimal)** | Saisie prix, notification assistante, journal des paiements |
+| **Vue assistante** | Agenda, ajout patient, confirmation RDV web, prix, sans accès clinique |
+| **Accueil QR** | Formulaire multilingue, file `pending_patients`, validation |
+| **Jarvis (texte)** | Commandes texte, allowlist d'outils, garde-fou de confirmation visible |
+| **Journal d'activité** | Audit trail lisible |
+
+### 4.2 Coquilles fonctionnelles — écran réel, logique différée
+Communications · Aftercare Follow-up · Reports & Analytics · AI Agents · Settings (partiel)
+
+> Ces écrans existent, sont navigables, affichent un état vide honnête. Ils **ne mentent pas** avec de fausses données.
+
+### 4.3 Explicitement hors périmètre — Mois 1
+Jarvis vocal (wake word, TTS) · agents marketing/externes · WhatsApp · site public · app mobile native · inférence locale
+
+### 4.4 Ce que je refuse de promettre
+Jarvis **vocal** en 2 jours. Le pipeline wake-word → STT → intention → outil → TTS est un sous-système entier. Le forcer sur J2 fait tomber tout le reste. **Jarvis texte J2 → Jarvis vocal J4–J6.**
+
+---
+
+## 5. SÉQUENCE DE CONSTRUCTION
+
+```
+J0  (préparation, avant les 2 jours)
+    Setup WSL2 + Docker + Supabase self-hosted
+    Comptes Windows séparés, BitLocker
+    Repo Git, .gitignore, secrets serveur
+    → si J0 n'est pas fait, les 2 jours ne tiennent pas
+
+J1  matin   Schéma + RLS + audit + seed
+    aprèm   Auth, rôles, shell applicatif, Patients, Diary
+J2  matin   Consultation + transcription + analyse live + note
+    aprèm   Ordonnance/Vidal, Documents, Finance, vue assistante, QR, Jarvis texte
+J3  tampon  Tests réels, corrections, sauvegardes, formation
+```
+
+**Règle de checkpoint.** Chaque étape se termine par un test vert/rouge copiable-collable. Aucun passage à l'étape suivante sur un checkpoint rouge. Commit Git après chaque validation.
+
+---
+
+## 6. RISQUES OUVERTS
+
+| # | Risque | Gravité | Mitigation |
+|---|---|---|---|
+| RSK-1 | Disque 256 GB saturé | 🔴 | H1 avant J1 |
+| RSK-2 | Coupure Wi-Fi pendant séance | 🟠 | Ethernet + buffer local de transcription |
+| RSK-3 | Windows 10 EOL non patché | 🟠 | H3 semaine 2 |
+| RSK-4 | Panne disque unique = perte totale | 🔴 | ADR-014 appliqué semaine 1 |
+| RSK-5 | 16 GB RAM insuffisants sous charge | 🟠 | Surveiller ; sinon 32 GB (~15 000 DZD) |
+| RSK-6 | Qualité STT sur darija mixte | 🟠 | Toujours éditable par le médecin ; jamais auto-validé |
+| RSK-7 | Modèle d'ordonnance manquant | 🟡 | **À fournir avant J2** |
+| RSK-8 | Pas d'IP fixe → accès externe | 🟡 | Tailscale (Mois 1) au lieu d'un port ouvert |
+
+---
+
+## 7. À FOURNIR PAR AYOUB
+
+- [ ] **Modèle d'ordonnance** (photo/scan) — bloquant J2
+- [ ] Logo en vectoriel ou PNG haute résolution
+- [ ] Arbitrage sur la faute « Pychiaterie »
+- [ ] Liste des ~60 médicaments réellement prescrits
+- [ ] Tarifs pratiqués (fourchette)
+- [ ] Confirmation : NVMe 1 TB commandé ?
+
+---
+
+## 8. DÉCISIONS EN ATTENTE
+
+| # | Sujet | Nécessaire pour |
+|---|---|---|
+| P-1 | Numérotation des certificats | 01-SCHEMA |
+| P-2 | Durée de rétention des dossiers (DZ : à confirmer) | 01-SCHEMA |
+| P-3 | L'assistante voit-elle le motif de consultation ? *(recommandation : non)* | RLS |
+| P-4 | Accès de la Dr. #2 aux patients partagés ? *(recommandation : non, cloison stricte)* | RLS |
+
+---
+
+*Fin du document. Prochain livrable : `01-SCHEMA.md`.*
