@@ -1,20 +1,41 @@
 {
-  "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "permissions": {
+    "allow": [
+      "Bash(pnpm typecheck)",
+      "Bash(pnpm lint)",
+      "Bash(pnpm build)",
+      "Bash(pnpm dev)",
+      "Bash(bash scripts/*.sh)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(psql:*)",
+      "Bash(supabase migration:*)",
+      "Bash(supabase db push:*)",
+      "Read(src/**)",
+      "Read(supabase/**)",
+      "Read(docs/**)",
+      "Read(scripts/**)",
+      "Edit(src/**)",
+      "Edit(supabase/**)",
+      "Write(src/**)",
+      "Write(supabase/**)"
+    ],
     "deny": [
-      "Read(./.env)",
-      "Read(./.env.*)",
-      "Read(./supabase/.env)",
-      "Read(./**/*.key)",
-      "Read(./**/*.pem)",
-      "Bash(git push --force*)",
-      "Bash(git push -f*)",
-      "Bash(rm -rf*)",
-      "Bash(psql*DROP*)",
-      "Bash(psql*TRUNCATE*)",
-      "Bash(supabase db reset*)",
-      "Bash(curl*)",
-      "Bash(wget*)"
+      "Read(.env)",
+      "Read(.env.local)",
+      "Read(docs/archive/**)",
+      "Edit(docs/archive/**)",
+      "Write(docs/archive/**)",
+      "Grep(docs/archive/**)",
+      "Glob(docs/archive/**)",
+      "Bash(cat docs/archive/*)",
+      "Bash(head docs/archive/*)",
+      "Bash(supabase db reset:*)",
+      "Bash(git push --force:*)",
+      "Bash(rm -rf:*)"
     ]
   },
   "hooks": {
@@ -22,21 +43,7 @@
       {
         "matcher": "Bash",
         "hooks": [
-          {
-            "type": "command",
-            "command": "bash scripts/guard-bash.sh"
-          }
-        ]
-      }
-    ],
-    "PostToolUse": [
-      {
-        "matcher": "Write|Edit",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bash scripts/preflight.sh"
-          }
+          { "type": "command", "command": "bash scripts/guard-bash.sh" }
         ]
       }
     ]

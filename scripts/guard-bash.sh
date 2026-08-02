@@ -48,4 +48,14 @@ printf '%s' "$cmd" | grep -Eq '[A-Za-z0-9_-]\.(webm|wav|ogg|mp3|m4a)([^A-Za-z0-9
 printf '%s' "$cmd" | grep -Eq '(curl|wget|Invoke-WebRequest)[[:space:]]+[^|;&]*https?://' \
   && block "appel réseau depuis le shell. Une seule porte de sortie : _shared/external-call.ts."
 
+# 7 — docs/archive : illisible et inaccessible, quel que soit le chemin d'accès.
+# La deny-list de settings.json ne couvre que les outils qu'elle nomme ; ici on ferme
+# la classe entière (cat, less, sed, awk, type, redirection, git show…).
+# Le motif porte la barre oblique finale : `ls -d docs/*rchive*` et `git add docs/archive`
+# passent, `cat docs/archive/x.md` est bloqué. C'est délibéré, et ça tient à un caractère.
+# La majuscule est couverte aussi : sous Windows docs/Archive désigne le même dossier
+# sur le disque, mais pas le même motif dans une deny-list.
+printf '%s' "$cmd" | grep -Eq 'docs/[Aa]rchive/' \
+  && block "docs/archive est interdit aux agents (DOC-AUTHORITY §2). L'archivage est une opération humaine."
+
 exit 0
