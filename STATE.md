@@ -22,6 +22,20 @@ Dernière mise à jour : 2026-08-02 · commit à venir (lot T1.2)
   dernier, ne réinjectant que le volet couleur).
 
 ## En cours
+- **S1 — les 16 migrations sont écrites et ÉPROUVÉES, pas encore appliquées au cloud.**
+  Schéma complet du §16 de `01-SCHEMA.md` + `016_deployment_guard`. Épreuve hors ligne sur
+  Postgres 15 jetable, en rôle **non superutilisateur** (fidèle à Supabase) :
+  16 migrations vertes d'un bloc sur base neuve, `checkpoint-j1a.sh` **VERT sur 12 contrôles**,
+  **rejoué trois fois de suite**. Sondes négatives : une table Tier 1 nue fait rougir T9 et T10,
+  un patient réel est refusé par le garde-fou ADR-016.
+  - **ADR-017** — `reason` sort de `app.appointments` vers `app.appointment_reasons`, sans policy
+    assistante. Q-A refermé. Le §5.1 de `01-SCHEMA.md` est marqué périmé.
+  - **ADR-018** — `integer amount_dzd`. Q-C refermé.
+  - **Q-B** (audit des lectures) reste ouvert, requalifié en dette datée → S2.
+  Cinq défauts trouvés **par exécution**, aucun par relecture : privilèges absents sur le schéma
+  `app` (la RLS restreint, elle n'accorde pas) · `schema_migrations` sans RLS · le rattrapage de
+  016 se heurtait au verrou d'immuabilité des notes signées · T8 non rejouable · `.env.example`
+  disparu du disque, restauré.
 - **ADR-016 — phase cloud encadrée, ouverte.** ADR-001 **suspendue**, pas annulée. Trois conditions :
   accès développeur seul · données synthétiques seules · migration à l'achat du serveur **ou** avant
   le premier patient réel, le premier des deux.
@@ -61,6 +75,15 @@ Dernière mise à jour : 2026-08-02 · commit à venir (lot T1.2)
 - Thème sombre : `darkMode`/`night.*` désarmés volontairement, réouverture sur rampe nocturne spécifiée
 
 ## Prochaine tâche
+**Appliquer S1 au cloud** — bloqué sur une action humaine d'une minute :
+`DATABASE_URL` dans `.env` pointe la connexion **directe** (`db.<ref>.supabase.co`), que Supabase
+ne publie plus qu'en **IPv6** — le réseau Docker n'en a pas. Prendre la chaîne
+**Session pooler** (Dashboard → Settings → Database → Connection string → « Session pooler »),
+de la forme `postgresql://postgres.<ref>:<mdp>@aws-0-<region>.pooler.supabase.com:5432/postgres`.
+Le mot de passe se colle tel quel : `db-migrate.sh` l'encode lui-même.
+Puis `bash scripts/db-migrate.sh` et `bash scripts/checkpoint-j1a.sh`.
+
+
 **S1 — migrations 001→015 + seed, appliquées au NOUVEAU projet cloud** · agent `db-migrator`
 Checkpoint : les 8 tests du §15 de `01-SCHEMA.md` (`checkpoint-j1a.sh`) **plus** les deux contrôles
 de couverture d'ADR-016 à y ajouter : aucune table Tier 0/1 sans `is_synthetic` + trigger, aucune

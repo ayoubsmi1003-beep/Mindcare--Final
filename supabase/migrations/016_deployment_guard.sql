@@ -42,6 +42,20 @@ ALTER TABLE app.deployment FORCE  ROW LEVEL SECURITY;
 DROP POLICY IF EXISTS deployment_read ON app.deployment;
 CREATE POLICY deployment_read ON app.deployment FOR SELECT USING (true);
 
+-- ⚠️ `FORCE ROW LEVEL SECURITY` vaut aussi pour le propriétaire. Si le rôle qui
+-- exécute `app.set_deployment_environment()` (SECURITY DEFINER) n'a pas
+-- BYPASSRLS, il ne peut pas écrire sans ces deux policies. Le rôle `postgres`
+-- de Supabase l'a aujourd'hui — on ne s'appuie pas dessus pour autant.
+-- Ce n'est pas un relâchement : le vrai verrou est le trigger
+-- `deployment_no_direct_write` ci-dessous, qui refuse toute écriture n'ayant pas
+-- posé le garde de session — y compris au propriétaire.
+DROP POLICY IF EXISTS deployment_write_via_function ON app.deployment;
+CREATE POLICY deployment_write_via_function ON app.deployment
+  FOR INSERT TO PUBLIC WITH CHECK (true);
+DROP POLICY IF EXISTS deployment_update_via_function ON app.deployment;
+CREATE POLICY deployment_update_via_function ON app.deployment
+  FOR UPDATE TO PUBLIC USING (true) WITH CHECK (true);
+
 REVOKE ALL     ON app.deployment FROM anon, authenticated, service_role;
 GRANT  SELECT  ON app.deployment TO   anon, authenticated, service_role;
 
@@ -69,6 +83,12 @@ ALTER TABLE audit.deployment_transitions FORCE  ROW LEVEL SECURITY;
 DROP POLICY IF EXISTS deployment_transitions_read ON audit.deployment_transitions;
 CREATE POLICY deployment_transitions_read ON audit.deployment_transitions
   FOR SELECT USING (true);
+
+-- Même raison qu'au-dessus : FORCE RLS vaut pour le propriétaire. L'ajout seul
+-- reste garanti par le trigger, pas par l'absence de policy.
+DROP POLICY IF EXISTS deployment_transitions_append ON audit.deployment_transitions;
+CREATE POLICY deployment_transitions_append ON audit.deployment_transitions
+  FOR INSERT TO PUBLIC WITH CHECK (true);
 
 REVOKE ALL    ON audit.deployment_transitions FROM anon, authenticated, service_role;
 GRANT  SELECT ON audit.deployment_transitions TO   anon, authenticated, service_role;
@@ -194,14 +214,24 @@ BEGIN
                       WHERE a.attrelid = c.oid AND a.attname = 'patient_id'
                         AND a.attnum > 0 AND NOT a.attisdropped))
   LOOP
+    -- Le rattrapage des lignes du seed se fait par le DÉFAUT DE LA COLONNE, pas
+    -- par un UPDATE — et ce n'est pas un détail de style.
+    -- `ADD COLUMN ... DEFAULT true` remplit les lignes existantes en DDL, sans
+    -- déclencher un seul trigger. Un UPDATE, lui, réveille
+    -- `trg_note_immutable` sur `app.clinical_notes` et échoue sur toute note
+    -- signée et verrouillée — constaté en éprouvant la migration :
+    --   « Note … verrouillée depuis … Utilisez un amendement. »
+    -- Le verrou avait raison. C'est l'UPDATE qui était de trop : une migration
+    -- n'a pas à passer outre l'immuabilité d'une note signée (I15), même pour
+    -- une colonne technique. On passe donc par un chemin qui n'y touche pas.
     EXECUTE format(
-      'ALTER TABLE app.%I ADD COLUMN IF NOT EXISTS is_synthetic boolean NOT NULL DEFAULT false',
+      'ALTER TABLE app.%I ADD COLUMN IF NOT EXISTS is_synthetic boolean NOT NULL DEFAULT true',
       t.relname);
 
-    -- Le seed 015 a tourné avant ce garde-fou : en cloud-dev, tout ce qui
-    -- préexiste EST synthétique. Le dire, plutôt que laisser un `false` qui ment.
+    -- Puis le défaut redevient `false` : une insertion distraite ÉCHOUE, elle
+    -- ne passe pas. Seul l'existant d'avant le garde-fou hérite de `true`.
     EXECUTE format(
-      'UPDATE app.%I SET is_synthetic = true WHERE app.is_cloud_dev()', t.relname);
+      'ALTER TABLE app.%I ALTER COLUMN is_synthetic SET DEFAULT false', t.relname);
 
     EXECUTE format('DROP TRIGGER IF EXISTS assert_synthetic ON app.%I', t.relname);
     EXECUTE format(

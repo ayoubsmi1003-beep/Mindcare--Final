@@ -117,12 +117,12 @@ Appliqué par **RLS Postgres**, jamais par le front.
 > **EN LITIGE (§7, Q-A) — ne code rien qui en dépende.**
 
 ## 7 · EN LITIGE — NE PAS CODER, DEMANDER
-- **Q-A · Motif de consultation.** La policy assistante accorde `FOR ALL` sur la table
-  `app.appointments` ; `reason` n'est protégé que par une vue et une convention de code.
-  Contradiction interne à `01-SCHEMA`.
+- ~~**Q-A · Motif de consultation.**~~ **TRANCHÉ 2026-08-02 — ADR-017.** `reason` vit dans
+  `app.appointment_reasons`, sans policy assistant. Le §5.1 de `01-SCHEMA` est périmé.
 - **Q-B · Audit des lectures.** Exigé par I4, implémenté nulle part — un déclencheur Postgres
-  ne voit pas les `SELECT`.
-- **Q-C · Monnaie.** `numeric(10,2) amount_dzd` contre « DZD sans décimales » (I8).
+  ne voit pas les `SELECT`. **Requalifié en dette datée** : traité en S2 dans `src/services/*`
+  (I3), après évaluation de `pgaudit`. Ne rien inventer d'ici là.
+- ~~**Q-C · Monnaie.**~~ **TRANCHÉ 2026-08-02 — ADR-018.** `integer amount_dzd`, dinars entiers.
 
 ## 8 · DÉCISIONS GELÉES non couvertes par les invariants
 - **ADR-001** Supabase auto-hébergé sur le PC du cabinet. **SUSPENDUE par ADR-016** le temps du

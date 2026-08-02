@@ -306,9 +306,15 @@ CREATE UNIQUE INDEX appt_no_overlap ON app.appointments (practitioner_id, starts
 ```
 
 ### 5.1 Le problème de `reason` — et sa solution
+> 🔴 **CETTE SECTION EST PÉRIMÉE — voir ADR-017 (2026-08-02).** La solution par la vue décrite
+> ci-dessous **ne protège rien** : `appt_assistant` accorde `FOR ALL` sur `app.appointments`,
+> donc l'assistante lit `reason` en interrogeant la table au lieu de la vue. `reason` vit
+> désormais dans `app.appointment_reasons`, sans policy assistant. Conservé ici pour mémoire du
+> raisonnement, **à ne pas coder.**
+
 P-3 tranché : **l'assistante ne voit pas le motif.** Or PostgreSQL RLS filtre les *lignes*, pas les *colonnes*.
 
-**Solution : une vue.**
+**Solution : une vue.** ❌ *insuffisante — cf. ADR-017*
 ```sql
 CREATE VIEW app.appointments_admin
 WITH (security_invoker = true) AS
@@ -673,7 +679,7 @@ CREATE TABLE app.payments (
     patient_id          uuid NOT NULL REFERENCES app.patients(id),
     consultation_id     uuid REFERENCES app.consultations(id),
     receipt_number      text NOT NULL,
-    amount_dzd          numeric(10,2) NOT NULL CHECK (amount_dzd >= 0),
+    amount_dzd          integer NOT NULL CHECK (amount_dzd >= 0),   -- ADR-018 : dinars entiers
     method              app.payment_method NOT NULL DEFAULT 'cash',
     set_by              uuid NOT NULL REFERENCES app.profiles(id),
     collected_by        uuid REFERENCES app.profiles(id),

@@ -99,21 +99,80 @@ else
   red 6 "executed sans confirmed_at refusé" "cabinet/owner introuvable (seed 015 ?)"
 fi
 
-# --- T7 : l'assistante ne voit pas le motif ------------------------------------
+# --- T7 : l'assistante ne voit pas le motif (ADR-017) --------------------------
+# Trois volets. L'ancien test ne gardait que le premier — or c'est le seul qui
+# ne prouvait rien : constater qu'une VUE n'a pas de colonne ne dit pas que la
+# donnée est inatteignable. C'était le trou de Q-A.
 out=$(q "SELECT reason FROM app.appointments_admin LIMIT 1;")
 printf '%s' "$out" | grep -qi 'ERROR\|does not exist\|n.existe pas' \
-  && green 7 "appointments_admin sans reason" || red 7 "appointments_admin sans reason" "la colonne reason est exposée"
+  && green "7a" "appointments_admin sans reason" \
+  || red "7a" "appointments_admin sans reason" "la colonne reason est exposée"
+
+# 7b — la colonne n'existe plus DU TOUT sur la table (ADR-017).
+out=$(q "SELECT reason FROM app.appointments LIMIT 1;")
+printf '%s' "$out" | grep -qi 'ERROR\|does not exist\|n.existe pas' \
+  && green "7b" "app.appointments sans colonne reason" \
+  || red "7b" "app.appointments sans colonne reason" "reason est encore sur la table"
+
+# 7c — LE test qui compte : l'assistante interrogeant DIRECTEMENT la table des
+# motifs ne voit aucune ligne. Et il faut qu'il y ait des lignes à voir, sinon
+# le test passerait au vert sur une table vide sans rien démontrer.
+if uuid_ok "$ASSISTANT"; then
+  total=$(q "SELECT count(*) FROM app.appointment_reasons;" | tail -1)
+  seen=$(q "BEGIN; SET LOCAL role='authenticated'; SET LOCAL request.jwt.claim.sub='$ASSISTANT';
+            SELECT count(*) FROM app.appointment_reasons; ROLLBACK;" | tail -1)
+  if [ "${total:-0}" = "0" ]; then
+    red "7c" "assistante -> motifs de consultation" "aucun motif en base — test non prouvable"
+  elif [ "$seen" = "0" ]; then
+    green "7c" "assistante -> motifs de consultation"
+  else
+    red "7c" "assistante -> motifs de consultation" "attendu=0 obtenu=$seen sur $total"
+  fi
+else
+  red "7c" "assistante -> motifs de consultation" "profil assistant introuvable (seed 015 ?)"
+fi
 
 # --- T8 : l'audit capture les modifications ------------------------------------
 if uuid_ok "$PATIENT"; then
+  # Numéro DIFFÉRENT à chaque exécution : réécrire la même valeur ne change
+  # aucun champ, `changed_fields` revient vide, et le test échoue au second
+  # passage. Un checkpoint qui ne passe qu'une fois sur une base neuve ne prouve
+  # rien — c'est ce qui l'a fait rougir en cours d'épreuve.
+  newphone=$(printf '0555%06d' $(( ($$ + RANDOM) % 1000000 )))
   q "BEGIN; SET LOCAL role='authenticated'; SET LOCAL request.jwt.claim.sub='$OWNER';
-     UPDATE app.patients SET phone='0555000000' WHERE id='$PATIENT'; COMMIT;" >/dev/null 2>&1
+     UPDATE app.patients SET phone='$newphone' WHERE id='$PATIENT'; COMMIT;" >/dev/null 2>&1
   cf=$(q "SELECT changed_fields::text FROM audit.log ORDER BY occurred_at DESC LIMIT 1;" | tail -1)
   printf '%s' "$cf" | grep -q 'phone' \
     && green 8 "audit.log capture le champ modifié" || red 8 "audit.log capture le champ modifié" "attendu={phone} obtenu=$cf"
 else
   red 8 "audit.log capture le champ modifié" "aucun patient en base — test non prouvable"
 fi
+
+# --- T9 : couverture du garde-fou synthétique (ADR-016 §3.3) -------------------
+# PAR DÉCOUVERTE, pas par liste : une table Tier 0/1 ajoutée demain doit faire
+# ROUGIR ce test si elle échappe au garde-fou. Une liste en dur ne verrait rien.
+missing=$(q "SELECT string_agg(c.relname, ', ')
+             FROM pg_class c JOIN pg_namespace n ON n.oid = c.relnamespace
+             WHERE n.nspname = 'app' AND c.relkind = 'r'
+               AND (c.relname = 'patients' OR EXISTS (
+                     SELECT 1 FROM pg_attribute a WHERE a.attrelid = c.oid
+                       AND a.attname = 'patient_id' AND a.attnum > 0 AND NOT a.attisdropped))
+               AND NOT (
+                 EXISTS (SELECT 1 FROM pg_attribute a WHERE a.attrelid = c.oid
+                         AND a.attname = 'is_synthetic' AND a.attnum > 0 AND NOT a.attisdropped)
+                 AND EXISTS (SELECT 1 FROM pg_trigger g WHERE g.tgrelid = c.oid
+                             AND g.tgname = 'assert_synthetic' AND NOT g.tgisinternal));" | tail -1)
+[ -z "$missing" ] && green 9 "garde-fou synthetique sur tout Tier 0/1" \
+  || red 9 "garde-fou synthetique sur tout Tier 0/1" "tables non couvertes : $missing"
+
+# --- T10 : RLS armée partout (I2, ADR-016 §3.4) --------------------------------
+# ENABLE ne suffit pas : sans FORCE, le propriétaire de la table passe outre.
+norls=$(q "SELECT string_agg(c.relname, ', ')
+           FROM pg_class c JOIN pg_namespace n ON n.oid = c.relnamespace
+           WHERE n.nspname = 'app' AND c.relkind = 'r'
+             AND NOT (c.relrowsecurity AND c.relforcerowsecurity);" | tail -1)
+[ -z "$norls" ] && green 10 "RLS ENABLE + FORCE sur tout app.*" \
+  || red 10 "RLS ENABLE + FORCE sur tout app.*" "tables sans RLS forcee : $norls"
 
 echo
 if [ $fail -eq 0 ]; then

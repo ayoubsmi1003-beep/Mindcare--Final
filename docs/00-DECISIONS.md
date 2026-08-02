@@ -203,6 +203,26 @@ Police : Times New Roman 14
 
 **Conséquence.** `docs/SELF-HOST-SETUP.md` cesse d'être la tâche S0 et devient la **procédure de migration** ; `s0-provision.sh` et `checkpoint-s0.sh` sont conservés inchangés pour ce jour-là.
 
+### ADR-017 — `reason` sort de `app.appointments` (résout Q-A)
+**Date.** 2026-08-02. **Remplace** la « solution » du §5.1 de `01-SCHEMA.md`.
+
+**Le problème.** Le §5.1 protégeait le motif de consultation par une **vue** `appointments_admin` et une règle de revue de code. Ce n'en est pas une protection : la policy `appt_assistant` accorde `FOR ALL` sur `app.appointments`, donc l'assistante peut lire `reason` en interrogeant la table via PostgREST. Une convention n'est pas un contrôle — c'est exactement ce que R4 et la règle 4 de `CLAUDE.md` refusent.
+
+**Décision.** `reason` quitte `app.appointments` pour `app.appointment_reasons` (1-1, `appointment_id` en PK), **sans aucune policy `assistant`** — donc invisible pour elle même en SQL brut, au même titre que les notes cliniques.
+
+**Pourquoi ça marche, alors que la vue non.** La RLS filtre des **lignes**, pas des colonnes. La seule façon de rendre une donnée invisible par RLS est de lui donner sa propre ligne. `app.appointments_admin` reste pour le confort de lecture, mais ne porte plus aucune responsabilité de sécurité.
+
+**Conséquence.** Le test T7 du §15 devient vérifiable : l'assistante interrogeant directement `app.appointment_reasons` doit obtenir **zéro ligne**. Auparavant, il ne constatait que l'absence d'une colonne dans une vue — il ne testait pas le vecteur réel. Coût : une jointure côté praticien.
+
+### ADR-018 — Montants en dinars entiers (résout Q-C)
+**Date.** 2026-08-02. **Remplace** `numeric(10,2) amount_dzd` au §10 de `01-SCHEMA.md`.
+
+**Décision.** `integer amount_dzd`, `CHECK (amount_dzd >= 0)`.
+
+**Pourquoi.** Le cabinet encaisse en espèces, en dinars entiers, et n'émet **aucune facture légale** (ADR-010). Il n'y a pas de centimes à stocker. `numeric(10,2)` invitait des décimales qui n'existent pas et imposait une politique d'arrondi à l'affichage partout dans l'interface.
+
+**Rejeté.** Stocker des centimes en entier — robuste en général, inutile ici, et ajoute une conversion à chaque lecture et écriture pour représenter une précision qui n'existe pas.
+
 ---
 
 ## 4. PÉRIMÈTRE DES 2 JOURS
