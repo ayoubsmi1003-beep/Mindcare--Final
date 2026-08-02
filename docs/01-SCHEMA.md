@@ -917,8 +917,16 @@ SELECT changed_fields FROM audit.log ORDER BY occurred_at DESC LIMIT 1;  -- ATTE
 013_audit_schema_and_triggers
 014_storage_health_and_purges
 015_seed_data
+016_deployment_guard        ← ADR-016, phase cloud encadrée
 ```
 Une migration = un fichier = une transaction = une ligne dans `schema_migrations`.
+
+`016` **allonge** cet ordre, elle ne le renumérote pas : 001–015 sont gelées. Elle pose
+`app.deployment`, `audit.deployment_transitions`, et attache `assert_synthetic` à toute table
+Tier 0/1 **par découverte** (`app.patients` + toute table portant `patient_id`), pour qu'une table
+ajoutée plus tard ne puisse pas s'exonérer par oubli. Elle disparaîtra avec la phase cloud —
+non pas en supprimant la migration, mais en basculant `environment` à `self-hosted`, ce qui rend
+le trigger inerte.
 
 ---
 

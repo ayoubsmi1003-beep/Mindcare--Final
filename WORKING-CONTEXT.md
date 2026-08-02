@@ -125,7 +125,11 @@ Appliqué par **RLS Postgres**, jamais par le front.
 - **Q-C · Monnaie.** `numeric(10,2) amount_dzd` contre « DZD sans décimales » (I8).
 
 ## 8 · DÉCISIONS GELÉES non couvertes par les invariants
-- **ADR-001** Supabase auto-hébergé sur le PC du cabinet. Jamais Supabase Cloud.
+- **ADR-001** Supabase auto-hébergé sur le PC du cabinet. **SUSPENDUE par ADR-016** le temps du
+  développement : cloud autorisé, **données synthétiques uniquement**, appliqué par la base
+  (migration `016` : `is_synthetic` + trigger sur toute table Tier 0/1). Aucun accès Dr. Larbi.
+  Migration à l'achat du serveur **ou** avant le premier patient réel — le premier des deux.
+  Si ta tâche fait entrer une donnée patient réelle, **arrête-toi et demande.**
 - **ADR-003** `cabinet_id` + `practitioner_id` dès le schéma initial (2ᵉ praticienne annoncée).
 - **ADR-008** Transcription en arabe · intake FR/AR/Darija.
 - **ADR-010** Cash uniquement, **aucune facture légale**.

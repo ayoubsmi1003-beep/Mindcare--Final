@@ -22,6 +22,15 @@ Dernière mise à jour : 2026-08-02 · commit à venir (lot T1.2)
   dernier, ne réinjectant que le volet couleur).
 
 ## En cours
+- **ADR-016 — phase cloud encadrée, ouverte.** ADR-001 **suspendue**, pas annulée. Trois conditions :
+  accès développeur seul · données synthétiques seules · migration à l'achat du serveur **ou** avant
+  le premier patient réel, le premier des deux.
+  Livré et **prouvé sur Postgres 15 jetable, 16 contrôles** : `supabase/migrations/016_deployment_guard.sql`
+  (`app.deployment` en écriture interdite même pour `postgres` et `service_role`,
+  `audit.deployment_transitions` en ajout seul, `assert_synthetic` attaché **par découverte** aux
+  tables Tier 0/1) + contrôle 8 de preflight (sondé rouge puis vert).
+  Un défaut réel trouvé par exécution : le rattrapage du seed tournait avant l'amorçage de
+  `app.deployment`, laissant les lignes de seed marquées **réelles**. Corrigé, reprouvé de zéro.
 - **S0 — préparé, non provisionné.** WSL2 et Docker sont opérationnels (WSL 2, Docker 29.6.1,
   Compose v5.2.0) mais **sur le poste de développement**, pas sur le serveur : i3 bicœur / 7,9 Go
   contre 16 Go dimensionnés au §1. Rien n'a été installé ici, volontairement.
@@ -29,7 +38,9 @@ Dernière mise à jour : 2026-08-02 · commit à venir (lot T1.2)
   `scripts/checkpoint-s0.sh` (verdict binaire). Le provisionnement refuse de démarrer sous 14 Go.
 
 ## Dette assumée, datée
-- **D-01 ÉTEINTE** — auto-hébergement décidé (D-07). Révoquer le projet Supabase Cloud et ses clés.
+- **D-01 RALLUMÉE par ADR-016** — phase cloud rouverte, mais le projet `fnrcxlewbuqgpgykwfwg` de
+  `.mcp.json` reste **compromis** (clés passées par un chat, règle 3). **Action humaine bloquante :**
+  créer un NOUVEAU projet Supabase, puis supprimer l'ancien. Ne réutiliser aucune de ses clés.
 - **D-04** Transcription Groq absente → semaine 2, échéance 2026-08-13. `analyze_session` livré sans micro (D-10).
 - **D-08** Front assistante absent → semaine 2, échéance 2026-08-13. Rôle + vues créés en base dès S1.
 - Sauvegarde non testée → échéance 2026-08-06, avant la démo
@@ -50,8 +61,17 @@ Dernière mise à jour : 2026-08-02 · commit à venir (lot T1.2)
 - Thème sombre : `darkMode`/`night.*` désarmés volontairement, réouverture sur rampe nocturne spécifiée
 
 ## Prochaine tâche
-**S0 — sur le PC serveur du cabinet** · `bash scripts/s0-provision.sh /c/mindcare-db`, puis
-`docker compose up -d`, puis `bash scripts/checkpoint-s0.sh /c/mindcare-db`.
-Checkpoint : 9 conteneurs healthy · `lc_collate = fr-DZ` · `nc -zv <ip> 5432` depuis un autre poste
-**échoue** ← le seul test qu'aucun script local ne peut prouver, à faire à la main.
+**S1 — migrations 001→015 + seed, appliquées au NOUVEAU projet cloud** · agent `db-migrator`
+Checkpoint : les 8 tests du §15 de `01-SCHEMA.md` (`checkpoint-j1a.sh`) **plus** les deux contrôles
+de couverture d'ADR-016 à y ajouter : aucune table Tier 0/1 sans `is_synthetic` + trigger, aucune
+table de `app` sans `relrowsecurity` **et** `relforcerowsecurity`.
+Bloqué en amont par : le nouveau projet Supabase (D-01) et la liste des ~60 médicaments.
+
+Reste d'ADR-016 non fait, faute de socle : le **bandeau « données fictives »** (étape 5 du plan)
+attend la couche `src/services/*` — I3 interdit qu'un composant lise la base en direct, et cette
+couche naît en S1.
+
+**S0 (auto-hébergé)** devient la procédure de migration, à l'achat du serveur :
+`scripts/s0-provision.sh` → `docker compose up -d` → `scripts/checkpoint-s0.sh`, puis le test
+qui compte : `nc -zv <ip> 5432` depuis un autre poste **doit échouer**.
 Puis **S1 — migrations 001→015 + seed** · agent `db-migrator` (opus) · checkpoint = 8 tests du §15 de `01-SCHEMA.md`.

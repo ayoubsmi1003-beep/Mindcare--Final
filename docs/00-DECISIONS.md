@@ -65,6 +65,10 @@ Toute lecture et écriture de donnée clinique est tracée : qui, quoi, quand, d
 ## 3. ARCHITECTURE DECISION RECORDS
 
 ### ADR-001 — Supabase auto-hébergé dès J1 (jamais Supabase Cloud)
+> ⚠️ **SUSPENDUE le 2026-08-02 par ADR-016**, le temps de la phase de développement, et sous les
+> trois conditions qui y sont écrites. **Redevient applicable de plein droit à la migration.**
+> Ne pas lire cet ADR sans ADR-016, ni ADR-016 sans celui-ci.
+
 **Décision.** Supabase self-hosted en Docker (WSL2) sur le PC du cabinet, dès la première ligne.
 **Pourquoi.** Supabase Cloud stocke en Europe/Asie → viole R1 et Loi 18-07 dès le jour 1. Le SDK, le Postgres, les RLS, l'Auth sont **identiques**. Le coût est ~3 h de setup une seule fois.
 **Rejeté.** « Cloud maintenant, migration plus tard » — la migration d'un Postgres en production avec données cliniques réelles = 2 semaines de risque, à payer deux fois.
@@ -178,6 +182,26 @@ Police : Times New Roman 14
 **Décision.** Messagerie asynchrone médecin↔patient. Bandeau permanent : *« Ce service n'est pas une urgence. En cas d'urgence, contactez le 14 ou rendez-vous aux urgences les plus proches. »*
 **Pas de** détection de risque automatisée, **pas d'**engagement de délai de réponse en Mois 1.
 **Note.** Décision prise sciemment pour tenir le délai. À revisiter avant montée en charge.
+
+### ADR-016 — Phase cloud encadrée : ADR-001 **suspendue**, pas annulée
+**Date.** 2026-08-02. **Statut.** Active jusqu'à l'achat du serveur du cabinet.
+
+**Décision.** Développer sur Supabase Cloud, migrer vers l'auto-hébergé à l'achat d'une machine 16–32 Go. ADR-001 reste la décision applicable ; elle est **suspendue pour la phase de développement**, et **redevient applicable de plein droit** à la migration.
+
+**Pourquoi maintenant.** Le PC serveur n'existe pas. Le poste de développement (i3 bicœur, 7,9 Go) ne peut pas héberger la pile — `scripts/s0-provision.sh` le refuse par construction. Le projet était à l'arrêt sur du matériel.
+
+**Pourquoi ce n'est pas une violation de R1.** R1 protège la **donnée**, pas le serveur. Un Postgres cloud sans aucune donnée patient réelle ne viole ni R1 ni la Loi 18-07. Le motif de rejet d'ADR-001 — « la migration d'un Postgres en production **avec données cliniques réelles** = 2 semaines de risque » — porte précisément sur des données réelles.
+
+**Les trois conditions. Elles ne sont pas des recommandations.**
+1. **Accès développeur seul.** Aucun compte pour la Dr. Larbi sur cette instance, aucune démo dessus. Lever cette condition exige de rouvrir cet ADR.
+2. **Données synthétiques uniquement**, appliqué par la base (migration `016`), pas par une convention : colonne `is_synthetic`, trigger sur toute table Tier 0/1, et test de couverture qui échoue si une table y échappe.
+3. **Migration avant tout patient réel.** Déclencheur double — achat du serveur **ou** premier patient réel, la première condition atteinte l'emportant.
+
+**Ce qui rend la condition 2 tenable.** `app.deployment.environment` est effectivement immuable : écriture directe refusée pour `anon`, `authenticated` **et** `service_role` (un trigger ne se contourne pas avec `service_role`, contrairement à la RLS), voie unique par `app.set_deployment_environment()`, transitions journalisées en ajout seul dans `audit.deployment_transitions`. Un superutilisateur Postgres peut toujours désactiver un trigger : c'est « effectivement immuable », pas inviolable, et c'est écrit tel quel dans la migration.
+
+**Ce qui répond au « 2 semaines de risque ».** La migration est **répétée à blanc** dès que le cloud porte des données synthétiques (`scripts/migrate-to-selfhosted.sh` + `checkpoint-j1a.sh` sur la base restaurée), pas improvisée le jour J. Une restauration jamais testée n'est pas une restauration.
+
+**Conséquence.** `docs/SELF-HOST-SETUP.md` cesse d'être la tâche S0 et devient la **procédure de migration** ; `s0-provision.sh` et `checkpoint-s0.sh` sont conservés inchangés pour ce jour-là.
 
 ---
 

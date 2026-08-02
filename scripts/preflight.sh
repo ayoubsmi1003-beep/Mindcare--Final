@@ -241,5 +241,37 @@ out=$( { find . \( -path ./node_modules -o -path ./.git -o -path ./.next \) -pru
 out=$(git ls-files 2>/dev/null | grep -E '(^|/)\.env' | grep -vE '\.env\.(example|sample|template)$')
 [ -n "$out" ] && { echo "🔴 fichier .env suivi par git :"; echo "$out"; fail=1; }
 
+# 8 — ADR-016 : le garde-fou de la phase cloud n'est ni absent, ni désarmé.
+#
+# CE QUE CE CONTRÔLE PROUVE, ET RIEN DE PLUS : que le dépôt ne contient pas de
+# quoi désarmer le garde-fou, et que la migration qui le pose est bien là. Il ne
+# regarde AUCUNE base de données. L'application réelle vit dans Postgres
+# (trigger `assert_synthetic`), et c'est `checkpoint-j1a.sh` qui l'éprouve.
+# Ne pas lire un vert ici comme « le cloud ne contient pas de donnée réelle » :
+# ce contrôle-là ne peut pas être fait par un grep. Sur-déclarer une couverture
+# est exactement la faute qui a produit ROUGE 6.
+guard="supabase/migrations/016_deployment_guard.sql"
+
+# 8a — l'URL cloud impose la présence de la migration de garde.
+if [ -f .env ] && grep -qE '^NEXT_PUBLIC_SUPABASE_URL=https?://' .env 2>/dev/null \
+   && ! grep -qE '^NEXT_PUBLIC_SUPABASE_URL=https?://(localhost|127\.0\.0\.1)' .env 2>/dev/null; then
+  [ -f "$guard" ] || {
+    echo "🔴 ADR-016 : URL Supabase distante, et $guard est absent."
+    echo "   Aucune barrière ne s'oppose à l'écriture d'une donnée patient réelle."
+    fail=1; }
+fi
+
+# 8b — personne ne bascule l'environnement depuis le code applicatif. La bascule
+# appartient à la procédure de migration, et à elle seule (ADR-016 §3.1).
+out=$(grep -rn "set_deployment_environment" --include="*.ts" --include="*.tsx" src/ 2>/dev/null)
+[ -n "$out" ] && { echo "🔴 ADR-016 : bascule d'environnement depuis le front :"; echo "$out"; fail=1; }
+
+# 8c — personne ne désarme le trigger ni ne relâche la RLS ailleurs que dans la
+# migration qui les pose.
+out=$(grep -rniE "DISABLE TRIGGER (assert_synthetic|deployment_no_direct_write)|DROP TRIGGER (IF EXISTS )?assert_synthetic|DISABLE ROW LEVEL SECURITY" \
+        --include="*.sql" --include="*.ts" . 2>/dev/null \
+      | grep -v node_modules | grep -v "^\./$guard:")
+[ -n "$out" ] && { echo "🔴 ADR-016/I2 : garde-fou ou RLS désarmé hors migration 016 :"; echo "$out"; fail=1; }
+
 [ $fail -eq 0 ] && echo "✅ preflight vert"
 exit $fail
