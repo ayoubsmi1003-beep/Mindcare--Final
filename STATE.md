@@ -22,7 +22,11 @@ Dernière mise à jour : 2026-08-02 · commit à venir (lot T1.2)
   dernier, ne réinjectant que le volet couleur).
 
 ## En cours
-- (rien — prochaine session = S0)
+- **S0 — préparé, non provisionné.** WSL2 et Docker sont opérationnels (WSL 2, Docker 29.6.1,
+  Compose v5.2.0) mais **sur le poste de développement**, pas sur le serveur : i3 bicœur / 7,9 Go
+  contre 16 Go dimensionnés au §1. Rien n'a été installé ici, volontairement.
+  Livré prêt à tourner sur le PC serveur : `scripts/s0-provision.sh` (§2 → §2.3 d'un bloc) et
+  `scripts/checkpoint-s0.sh` (verdict binaire). Le provisionnement refuse de démarrer sous 14 Go.
 
 ## Dette assumée, datée
 - **D-01 ÉTEINTE** — auto-hébergement décidé (D-07). Révoquer le projet Supabase Cloud et ses clés.
@@ -39,11 +43,15 @@ Dernière mise à jour : 2026-08-02 · commit à venir (lot T1.2)
 - **7 fontes `.woff2` manquantes** dans `src/styles/fonts/` : Geist Sans 400/500/600 · Geist Mono 500 · Newsreader 400 · IBM Plex Sans Arabic 400/500/600 → **bloque S2**
 - Logo SVG
 - Liste des ~60 médicaments → bloque le seed de S1
-- WSL2 + Docker Desktop non installés → **bloque S0, à lancer en téléchargement maintenant**
+- **Accès au PC serveur du cabinet** (16 Go / i7) → **bloque S0**. WSL2 + Docker sont installés et
+  vérifiés, mais sur le poste de développement, qui ne peut pas héberger la pile. Sur le serveur :
+  créer `.wslconfig` (§1), puis `bash scripts/s0-provision.sh /c/mindcare-db`.
 - Arbitrage « Pychiaterie » dans l'en-tête → bloque S7
 - Thème sombre : `darkMode`/`night.*` désarmés volontairement, réouverture sur rampe nocturne spécifiée
 
 ## Prochaine tâche
-**S0 — Supabase auto-hébergé sur le PC serveur** · pas d'agent, procédure `docs/SELF-HOST-SETUP.md`
-Checkpoint : 9 conteneurs healthy · `lc_collate = fr-DZ` · `nc -zv <ip> 5432` depuis un autre poste **échoue**.
+**S0 — sur le PC serveur du cabinet** · `bash scripts/s0-provision.sh /c/mindcare-db`, puis
+`docker compose up -d`, puis `bash scripts/checkpoint-s0.sh /c/mindcare-db`.
+Checkpoint : 9 conteneurs healthy · `lc_collate = fr-DZ` · `nc -zv <ip> 5432` depuis un autre poste
+**échoue** ← le seul test qu'aucun script local ne peut prouver, à faire à la main.
 Puis **S1 — migrations 001→015 + seed** · agent `db-migrator` (opus) · checkpoint = 8 tests du §15 de `01-SCHEMA.md`.

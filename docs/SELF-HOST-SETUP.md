@@ -1,6 +1,11 @@
 # SELF-HOST-SETUP.md
 **Supabase auto-hébergé sur le PC serveur du cabinet — session S0**
-v1 — 2026-08-02 · Windows 10 Pro · i7 · 16 GB
+v2 — 2026-08-02 · Windows 10 Pro · i7 · 16 GB
+
+> ⚠️ **Ce document décrit le PC SERVEUR DU CABINET, pas le poste de développement.**
+> Le poste de développement fait 7,9 GB / i3 bicœur : il ne peut pas héberger la pile
+> (§1 dimensionne pour 16 GB). Vérifié le 2026-08-02, WSL2 et Docker pourtant opérationnels.
+> `scripts/s0-provision.sh` refuse de s'exécuter sous 14 GB visibles — c'est voulu.
 
 > Ce document remplace la décision « Supabase Cloud ».
 > Conséquence directe : **aucune donnée patient ne quitte l'Algérie.** Loi 18-07 respectée,
@@ -40,6 +45,22 @@ Sans ce fichier, WSL2 prend jusqu'à 50 % de la RAM et le poste devient lent pen
 
 ## 2. INSTALLATION
 
+**Scripté.** Sur le PC serveur, depuis le dépôt :
+```bash
+bash scripts/s0-provision.sh /c/mindcare-db
+```
+Le script fait §2, §2.1, §2.2 et §2.3 d'un bloc, et **s'arrête en ROUGE** plutôt que de continuer
+sur un prérequis manquant. Il ne démarre pas la pile : `docker compose up -d` reste à la main.
+
+Ce qu'il fait, et pourquoi la version manuelle ci-dessous reste la référence :
+- refuse une cible **dans un dépôt git** — le `.env` porte `SERVICE_ROLE_KEY` ;
+- refuse d'écraser une installation existante — un second `initdb` détruit un cluster peuplé ;
+- génère les secrets sur la machine, `chmod 600`, **sans jamais les afficher** (§2.1) ;
+- préfixe tous les ports publiés par `127.0.0.1:` puis **revérifie** (§2.3) ;
+- prouve la locale `fr-DZ` sur un **cluster jetable** avant de créer le vrai (§2.2) — après le
+  premier `up`, il est trop tard.
+
+Équivalent manuel :
 ```bash
 git clone --depth 1 https://github.com/supabase/supabase
 cp -r supabase/docker mindcare-db
@@ -81,6 +102,14 @@ docker compose up -d
 ---
 
 ## 3. ✅ CHECKPOINT S0 — copier-coller
+
+```bash
+bash scripts/checkpoint-s0.sh /c/mindcare-db     # verdict VERT/ROUGE, contrôles locaux
+```
+Il couvre les trois commandes ci-dessous **plus** un contrôle que le document n'avait pas : aucun
+port publié sur `0.0.0.0`, lu dans la configuration docker et non dans le réseau. Il **ne peut pas**
+faire le test qui compte — celui depuis un autre poste — et il le dit au lieu de le passer sous
+silence.
 
 ```bash
 docker ps --format '{{.Names}}\t{{.Status}}'          # 9 conteneurs, tous "healthy"
