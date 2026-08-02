@@ -18,7 +18,74 @@ out=$(find . -name "*.webm" -o -name "*.wav" -o -name "*.ogg" 2>/dev/null | grep
 
 # 4 — aucune valeur hex inventée dans le front
 # (bloquant : la sortie pose fail=1, l'étiquette le dit maintenant.)
-out=$(grep -rnE "#[0-9A-Fa-f]{6}" src/ --include="*.tsx" 2>/dev/null | grep -v "tokens.css")
+#
+# Deux trous fermés en T1.2 :
+#   a) le contrôle ne regardait que `*.tsx`. Un `.ts` ou un `.css` portant
+#      `#ff0000` passait. Extensions élargies à tout ce qui vit sous src/.
+#   b) l'exclusion `grep -v "tokens.css"` portait sur le NOM : n'importe quel
+#      `src/components/panel.tokens.css` s'exonérait tout seul. Elle porte
+#      désormais sur le CHEMIN EXACT du fichier de jetons, seul autorisé à
+#      contenir une valeur littérale (I10).
+#   c) `{3,8}` était glouton et tirait sur `// voir ticket #12345` : un
+#      contrôle bruyant finit désactivé, donc protège moins. Le motif énumère
+#      désormais les seules longueurs qu'une couleur CSS peut avoir (3, 4, 6, 8).
+#   d) le contrôle ne regardait que `src/`. Or les fichiers où une valeur en dur
+#      a le PLUS d'effet sont à la RACINE : `tailwind.config.ts` est le thème du
+#      système entier, et les règles I10 d'ESLint étaient alors attachées à
+#      `src/**/*.ts(x)` — la racine n'était couverte par rien. Un
+#      `night: { bg: "#0A1413" }` rétabli en dur y passait les quatre portes.
+#      → recherche sur tout le dépôt. `.json` inclus : `resolveJsonModule` est
+#      actif, un `src/theme.json` est donc importable par un composant.
+#      ATTENTION — la fermeture par ce contrôle est PARTIELLE, et l'avoir
+#      présentée comme totale est exactement ce que la 5ᵉ passe a signalé
+#      (ROUGE 6). Couverture réelle du motif ci-dessous, à la racine comme
+#      ailleurs : hex 6 et 8 chiffres, sans condition ✅ ; hex 3 et 4 chiffres,
+#      SEULEMENT avec un contexte de valeur immédiat ⚠️ ; `rgb()/rgba()/hsl()`,
+#      JAMAIS ❌. Le reste est rattrapé par ESLint, dont les règles de COULEUR
+#      couvrent désormais aussi les fichiers de configuration racine (cf. le
+#      bloc `files: ["*.ts", …]` en fin d'`eslint.config.js`). Les deux
+#      garde-fous sont complémentaires : ne pas en désarmer un en croyant que
+#      l'autre couvre tout.
+#   e) l'élargissement (d) portait sur les RÉPERTOIRES, pas sur les EXTENSIONS :
+#      `./design.mjs` ou `./root.js` à la racine passaient encore, alors que
+#      `postcss.config.js` est réellement chargé par la chaîne CSS et que les
+#      règles I10 d'ESLint s'arrêtent à `src/**/*.ts(x)`. → liste complétée.
+#   f) `--include` de grep est SENSIBLE À LA CASSE, le système de fichiers de
+#      Windows ne l'est pas, et webpack résout `./mod` vers `mod.TS`. Un
+#      `src/**/*.TS` portant des couleurs en dur était donc invisible aux
+#      contrôles 4 et 6 quater ET à ESLint, tout en étant livré au navigateur.
+#      → énumération par `find -iname`, insensible à la casse. Le vecteur
+#      lui-même est fermé par le contrôle 6 quinquies plus bas.
+#
+# LIMITE ASSUMÉE du motif : les formes à 3 et 4 chiffres exigent un contexte de
+# valeur (quote, parenthèse, ou `:` de propriété CSS) parce que `#1234` et `#42a`
+# sont des références de ticket parfaitement légitimes en commentaire — et un
+# contrôle qui crie sur du texte innocent finit désarmé. Conséquence acceptée :
+# `border: 1px solid #fff` n'est pas vu, la classe de contexte ne contenant ni
+# l'espace ni `[`. Les formes à 6 et 8 chiffres, elles, sont détectées sans
+# condition, et `rgb()/rgba()/hsl()` ne sont pas regardés du tout par ce motif.
+#
+# Ce qui rattrape cette limite, et il faut le savoir avant de toucher au motif :
+#   · sous `src/` — ESLint, règles I10 complètes (dimension + couleur), plus le
+#     fait que le CSS libre y est interdit hors tokens.css (6 ter) et qu'en
+#     TypeScript une couleur s'écrit entre quotes.
+#   · à la RACINE — ESLint également, depuis la fermeture de ROUGE 6 : le volet
+#     COULEUR de I10 est attaché aux fichiers de config racine. C'est là que
+#     `rgba(11,22,20,.05)` dans `tailwind.config.ts` est vu ; pas ici.
+# Raffiner ce motif n'est donc PAS le correctif de secours par défaut : élargir
+# la classe de contexte ferait revenir le faux positif `#1234`, que la 4ᵉ passe
+# a déjà payé une fois.
+src_files=$(find . \( -path ./node_modules -o -path ./.git -o -path ./.next \) -prune -o \
+              -type f \( -iname "*.ts" -o -iname "*.tsx" -o -iname "*.css" -o -iname "*.json" \
+                         -o -iname "*.js" -o -iname "*.jsx" -o -iname "*.mjs" -o -iname "*.cjs" \
+                         -o -iname "*.mts" -o -iname "*.cts" \) -print 2>/dev/null \
+            | grep -viE "^\./(pnpm-lock\.yaml|package-lock\.json)$" \
+            | grep -viE "^\./src/styles/tokens\.css$")
+out=$(printf '%s\n' "$src_files" | grep -v '^$' \
+      | while IFS= read -r f; do
+          grep -nE "#([0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})\b|[\"'\`(]#[0-9A-Fa-f]{3,4}\b|:[[:space:]]*#[0-9A-Fa-f]{3,4}\b" "$f" 2>/dev/null \
+            | sed "s|^|$f:|"
+        done)
 [ -n "$out" ] && { echo "🔴 hex en dur hors tokens :"; echo "$out"; fail=1; }
 
 # 5 — le piège de la colonne reason
@@ -63,12 +130,22 @@ mask_env_values() {
 env_templates=$(find . \( -path ./node_modules -o -path ./.git -o -path ./.next \) -prune -o \
                 -type f \( -name ".env.example" -o -name ".env.sample" -o -name ".env.template" \) -print 2>/dev/null)
 
-for f in $env_templates; do
+# Itération par `read -r` et NON par `for f in $env_templates` : la forme non
+# quotée découpe sur l'espace, et ce dépôt vit sous un chemin qui en contient un
+# (« ABC Informatique »). Un `.env.example` dans un sous-répertoire à espace
+# aurait fait chercher grep dans deux fichiers inexistants — contrôle vert, secret
+# committé. Le mode de défaillance interdit : un garde-fou qui passe sans regarder.
+#
+# Le flux entre par `<<<` et NON par un pipe : un `while` en bout de pipe tourne
+# dans un SOUS-SHELL, où `fail=1` serait affecté puis perdu à la sortie de la
+# boucle. Le script rendrait alors « ✅ preflight vert » en ayant vu la violation.
+while IFS= read -r f; do
+  [ -n "$f" ] || continue
   # Valeur assignée, avec ou sans `export`, commentée ou non.
   out=$(grep -nE '^[[:space:]]*#*[[:space:]]*(export[[:space:]]+)?[A-Za-z_][A-Za-z0-9_]*[[:space:]]*=[[:space:]]*[^[:space:]#]' "$f" 2>/dev/null \
         | mask_env_values)
   [ -n "$out" ] && { echo "🔴 valeur renseignée dans $f (gabarit attendu, aucune valeur, même en commentaire) :"; echo "$out"; fail=1; }
-done
+done <<< "$env_templates"
 
 # 6 bis — aucun répertoire caché sous src/.
 # ESLint saute les répertoires commençant par un point lors de l'expansion de `.`,
@@ -77,6 +154,88 @@ done
 # un fichier ne le protège pas : on interdit le répertoire, pas le symptôme.
 out=$(find src -type d -name ".*" 2>/dev/null)
 [ -n "$out" ] && { echo "🔴 répertoire caché sous src/ (invisible au lint) :"; echo "$out"; fail=1; }
+
+# 6 ter — une seule feuille de style dans TOUT le dépôt : src/styles/tokens.css.
+# ESLint ne parse pas le CSS : aucune de ses règles I10 ne s'applique à un
+# `.css`. T1.2 a créé le premier `.css` du dépôt et, ce faisant, ouvert un
+# chemin où couleurs, espacements et durées en dur seraient invisibles au lint.
+# Même traitement que les `.mjs/.cts` en T1.1 : on interdit le VECTEUR, on ne
+# rattrape pas le symptôme. Un composant se style par classes Tailwind, qui ne
+# consomment que des jetons ; il n'a aucun besoin légitime de son propre CSS.
+#
+# Deux évasions ont été PROUVÉES contre la 1ʳᵉ version de ce contrôle et sont
+# fermées ici. Un garde-fou troué rend « preflight vert » plus dangereux
+# qu'absent, puisqu'il fait croire à une preuve :
+#   a) `styles-probe/theme.css`, HORS `src/` — la 1ʳᵉ version ne cherchait que
+#      sous `src/`, alors qu'une feuille voisine s'importe parfaitement depuis
+#      `src/app/layout.tsx` par un chemin relatif. Le trou I10 était juste
+#      remonté d'un répertoire. → recherche sur tout le dépôt.
+#   b) `src/components/panel.pcss` — `.pcss`, `.postcss`, `.styl` n'étaient pas
+#      dans la liste. → liste élargie à tout ce que PostCSS/Next sait charger.
+#   c) `-name` est sensible à la casse alors que le système de fichiers de
+#      Windows ne l'est pas. → `-iname`.
+out=$(find . \( -path ./node_modules -o -path ./.git -o -path ./.next \) -prune -o \
+        -type f \( -iname "*.css" -o -iname "*.scss" -o -iname "*.sass" -o -iname "*.less" \
+                   -o -iname "*.pcss" -o -iname "*.postcss" -o -iname "*.styl" -o -iname "*.stylus" \) -print 2>/dev/null \
+      | grep -viE "^\./src/styles/tokens\.css$")
+[ -n "$out" ] && { echo "🔴 feuille de style hors src/styles/tokens.css (hors de portée d'ESLint, I10) :"; echo "$out"; fail=1; }
+
+# 6 quinquies — aucune extension en casse haute sous src/.
+# `src/probe/mod.TS` a été livré dans le bundle en passant les QUATRE portes :
+# `--include`/`-name` sont sensibles à la casse, NTFS ne l'est pas, et webpack
+# résout `./mod` vers `mod.TS`. Les greps de preflight sont désormais en
+# `-iname`, mais ESLint, lui, ne matche toujours pas `**/*.TS` : I3, I9 et I10
+# resteraient muets sur ce fichier. Élargir chaque glob d'ESLint à toutes les
+# variantes de casse serait interminable et se retrouverait troué à la première
+# extension oubliée. On interdit donc le vecteur : sous `src/`, une extension
+# s'écrit en minuscules. C'est la convention de tout le dépôt, la contrainte ne
+# coûte rien, et elle referme la classe entière plutôt qu'un cas.
+out=$(find src -type f -name "*.*" 2>/dev/null \
+      | while IFS= read -r f; do
+          ext="${f##*.}"
+          [ "$ext" = "$(printf '%s' "$ext" | tr '[:upper:]' '[:lower:]')" ] || echo "$f"
+        done)
+[ -n "$out" ] && { echo "🔴 extension en casse haute sous src/ (invisible à ESLint) :"; echo "$out"; fail=1; }
+
+# 6 quater — aucun fichier source ne contient d'octet NUL.
+# Le 2026-08-01, `src/app/page.tsx` s'est retrouvé à 50 octets NUL après
+# l'interruption d'un agent. `git status` ne l'a PAS signalé : git compare
+# taille et stat avant de hasher, et la taille était par coïncidence identique
+# à celle de HEAD. Trois portes sur quatre tombaient, et un `git commit -a`
+# aurait figé le fichier vide en croyant ne rien toucher.
+# Leçon : `git status` n'est pas un contrôle d'intégrité. Celui-ci en est un.
+#
+# Restreint aux extensions de SOURCE : une image ou une fonte contient des NUL
+# tout à fait légitimement. `grep -I` serait ici l'exact contraire du besoin —
+# il saute les fichiers binaires, c'est-à-dire précisément ceux qu'on traque.
+#
+# La détection passe par `tr -d '\0'` et une comparaison de taille, PAS par
+# `grep $'\x00'` : bash ne peut pas transporter un octet NUL dans un argument,
+# `$'\x00'` s'y réduit à la chaîne VIDE, et grep matche alors TOUS les fichiers.
+# La 1ʳᵉ version de ce contrôle faisait exactement cela — elle signalait les 43
+# fichiers du dépôt. Un garde-fou qui crie sur tout est un garde-fou qu'on
+# désactive : le faux positif total est un mode de défaillance, pas un détail.
+#
+# La 2ᵉ version énumérait `git ls-files`, donc les seuls fichiers SUIVIS. Faux
+# négatif exact sur le cas qui compte : preflight tourne AVANT le commit, où un
+# fichier neuf est par définition non suivi. `src/i18n/fr.ts` et
+# `src/styles/tokens.css` — les deux livrables de ce lot — étaient hors de
+# portée du contrôle censé les protéger, et `git status` repliait `src/i18n/`
+# en une seule ligne, la cécité même qui avait produit la corruption de
+# `page.tsx`. → énumération par `find`, suivis ET non suivis. `git ls-files`
+# reste ajouté pour attraper un fichier suivi qui aurait disparu du disque.
+out=$( { find . \( -path ./node_modules -o -path ./.git -o -path ./.next \) -prune -o \
+           -type f \( -iname "*.ts" -o -iname "*.tsx" -o -iname "*.js" -o -iname "*.mjs" \
+                      -o -iname "*.cjs" -o -iname "*.css" -o -iname "*.json" -o -iname "*.md" \
+                      -o -iname "*.sh" -o -iname "*.yaml" -o -iname "*.yml" \) -print 2>/dev/null \
+           | sed 's|^\./||'
+         git ls-files -- '*.ts' '*.tsx' '*.js' '*.mjs' '*.cjs' '*.css' '*.json' '*.md' '*.sh' '*.yaml' '*.yml' 2>/dev/null
+       } | sort -u \
+      | while IFS= read -r f; do
+          [ -f "$f" ] || continue
+          if [ "$(tr -d '\0' < "$f" | wc -c)" -ne "$(wc -c < "$f")" ]; then echo "$f"; fi
+        done)
+[ -n "$out" ] && { echo "🔴 fichier source contenant des octets NUL (écriture avortée ?) :"; echo "$out"; fail=1; }
 
 # 7 — aucun fichier d'environnement réel suivi par git.
 out=$(git ls-files 2>/dev/null | grep -E '(^|/)\.env' | grep -vE '\.env\.(example|sample|template)$')

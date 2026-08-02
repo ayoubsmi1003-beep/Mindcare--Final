@@ -13,7 +13,12 @@ import type { Config } from "tailwindcss";
 //      borderWidth) — un jeu minimal fermé, faute de token dédié.
 const config: Config = {
   content: ["./src/**/*.{ts,tsx}"],
-  darkMode: ["class"],
+  // `darkMode` est délibérément ABSENT, et les couleurs `night.*` ne sont pas
+  // exposées : 04-DESIGN-SYSTEM ne définit que 4 jetons nocturnes, sans rampe
+  // d'encre ni contrastes vérifiés. Les laisser disponibles rendrait
+  // `dark:bg-night-bg` fonctionnel tout en laissant le texte sur --ink-900 :
+  // encre presque noire sur fond presque noir, sans qu'aucune règle ne tire.
+  // Détail et condition de réouverture : src/styles/tokens.css, § THÈME SOMBRE.
   theme: {
     colors: {
       transparent: "transparent",
@@ -49,12 +54,10 @@ const config: Config = {
         DEFAULT: "var(--positive)",
         bg: "var(--positive-bg)",
       },
-      night: {
-        bg: "var(--night-bg)",
-        card: "var(--night-card)",
-        rule: "var(--night-rule)",
-        ink: "var(--night-ink)",
-      },
+      // `night.*` retiré — voir le commentaire sur `darkMode` en tête de
+      // fichier. Les jetons --night-* restent déclarés dans tokens.css parce
+      // que §3 les définit ; ils ne sont simplement consommables par aucune
+      // classe tant que la rampe nocturne n'est pas spécifiée.
     },
     spacing: {
       // "0" est la valeur nulle universelle, pas une décision de design : pas
@@ -205,7 +208,7 @@ const config: Config = {
       eyebrow: "var(--text-eyebrow-tracking)",
       num: "var(--text-num-tracking)",
     },
-    // Ombres — valeurs définies en T1.2 (04-DESIGN-SYSTEM §4.1), pas ici.
+    // Ombres — valeurs définies en T1.2 (04-DESIGN-SYSTEM §4.4), pas ici.
     boxShadow: {
       none: "none",
       lift0: "var(--lift-0)",
@@ -214,14 +217,20 @@ const config: Config = {
       lift3: "var(--lift-3)",
     },
     // Le verre décore le mobilier, jamais la donnée (§4 règle 2). Ses valeurs
-    // viennent de --glass-*, définies en T1.2 (04-DESIGN-SYSTEM §4.4).
+    // viennent de --glass-*, définies en T1.2 (04-DESIGN-SYSTEM §4.1).
+    // On consomme ici --glass-blur-radius et NON --glass-blur : ces utilitaires
+    // injectent leur valeur dans `blur(…)`, et --glass-blur est le filtre
+    // complet (`saturate(180%) blur(20px)`). Lui passer le filtre produirait
+    // `blur(saturate(180%) blur(20px))` — déclaration invalide, ignorée en
+    // silence par le navigateur. Le filtre complet s'applique en CSS, pas par
+    // utilitaire. Les deux variables ont la même source : src/styles/tokens.css.
     blur: {
       none: "none",
-      glass: "var(--glass-blur)",
+      glass: "var(--glass-blur-radius)",
     },
     backdropBlur: {
       none: "none",
-      glass: "var(--glass-blur)",
+      glass: "var(--glass-blur-radius)",
     },
     // Exception documentée : les breakpoints Tailwind sont résolus à la
     // compilation CSS, `var(--…)` y est inopérant. Ruptures du §3 : 1024/1280,

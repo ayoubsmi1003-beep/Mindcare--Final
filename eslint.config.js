@@ -144,7 +144,17 @@ const localPlugin = {
 // I10 — aucune valeur en dur (couleur, dimension, durée) : tokens uniquement.
 // Dé-ancré de toute position JSX : la valeur est interdite où qu'elle apparaisse
 // dans src/**, pas seulement en attribut className/style direct.
-const designTokenSyntax = [
+//
+// SCISSION EN DEUX GROUPES (ROUGE 6) — dimension d'un côté, couleur de l'autre.
+// Ce n'est PAS un affaiblissement : `designTokenSyntax` plus bas recompose les
+// deux groupes à l'identique, et `src/**` voit exactement les mêmes sélecteurs
+// qu'avant. La scission existe parce que les fichiers de configuration RACINE
+// doivent recevoir les règles de COULEUR sans recevoir celles de dimension :
+// `tailwind.config.ts` contient des littéraux de dimension légitimes et
+// documentés (`screens: "1024px"`, plancher d'accessibilité `2px`, `borderWidth`)
+// qui sont les valeurs QUE les tokens nomment. Aucune couleur, en revanche,
+// n'a de raison légitime d'y être écrite en dur.
+const designTokenDimensionSyntax = [
   {
     // valeur littérale en dur assignée à une propriété d'objet (dimension, durée, %),
     // indépendamment du fait que l'objet soit inline dans un JSX ou déclaré ailleurs.
@@ -154,7 +164,9 @@ const designTokenSyntax = [
       "Valeur en dur interdite dans un style. Utilise les tokens CSS (var(--nom-du-token)).",
   },
   {
-    // syntaxe Tailwind arbitraire (`p-[17px]`, `bg-[#123456]`, `duration-[250ms]`),
+    // syntaxe Tailwind arbitraire (`p-[17px]`, `bg-[#nnnnnn]`, `duration-[250ms]`),
+    // — hex écrit en `n` à dessein : le contrôle 4 de preflight.sh balaye aussi
+    // ce fichier, et la documentation d'une règle ne doit pas déclencher la règle.
     // dans n'importe quelle chaîne de src/**, pas seulement un attribut className.
     selector: "Literal[value=/-\\[[^\\]]+\\]/]",
     message:
@@ -164,17 +176,6 @@ const designTokenSyntax = [
     selector: "TemplateElement[value.raw=/-\\[[^\\]]+\\]/]",
     message:
       "Valeur Tailwind arbitraire interdite. Utilise les classes mappées sur les tokens.",
-  },
-  {
-    // couleur hex n'importe où dans la chaîne (attribut, texte composé), 3 à 8 chiffres.
-    selector: "Literal[value=/#[0-9A-Fa-f]{3,8}/]",
-    message:
-      "Couleur hexadécimale interdite. Utilise les tokens CSS (var(--nom-du-token)).",
-  },
-  {
-    selector: "TemplateElement[value.raw=/#[0-9A-Fa-f]{3,8}/]",
-    message:
-      "Couleur hexadécimale interdite. Utilise les tokens CSS (var(--nom-du-token)).",
   },
   {
     // Littéral NUMÉRIQUE en dur dans un attribut `style={{ ... }}` (React le
@@ -191,6 +192,24 @@ const designTokenSyntax = [
     message:
       "Valeur numérique en dur interdite dans style={{ }} (React la sérialise en px). Utilise les tokens CSS (var(--nom-du-token)).",
   },
+];
+
+// I10, volet COULEUR — appliqué à `src/**` ET aux fichiers de configuration
+// racine (cf. le bloc `files: ["*.ts", …]` plus bas). Une couleur en dur n'a
+// aucun usage légitime nulle part dans ce dépôt : `tokens.css` est la source
+// unique, tout le reste la consomme par `var(--…)`.
+const designTokenColorSyntax = [
+  {
+    // couleur hex n'importe où dans la chaîne (attribut, texte composé), 3 à 8 chiffres.
+    selector: "Literal[value=/#[0-9A-Fa-f]{3,8}/]",
+    message:
+      "Couleur hexadécimale interdite. Utilise les tokens CSS (var(--nom-du-token)).",
+  },
+  {
+    selector: "TemplateElement[value.raw=/#[0-9A-Fa-f]{3,8}/]",
+    message:
+      "Couleur hexadécimale interdite. Utilise les tokens CSS (var(--nom-du-token)).",
+  },
   {
     // rgb()/rgba()/hsl()/hsla() n'importe où dans la chaîne — même trou que
     // le hex : la règle couleur ne cherchait que `#...`.
@@ -203,6 +222,14 @@ const designTokenSyntax = [
     message:
       "Couleur rgb()/rgba()/hsl()/hsla() interdite. Utilise les tokens CSS (var(--nom-du-token)).",
   },
+];
+
+// Recomposition à l'identique pour `src/**` : dimension + couleur, mêmes
+// sélecteurs, même ordre relatif qu'avant la scission. Ce que voit le code
+// applicatif n'a pas changé d'un sélecteur.
+const designTokenSyntax = [
+  ...designTokenDimensionSyntax,
+  ...designTokenColorSyntax,
 ];
 
 // I9 — interdit le MOTIF de double assertion lui-même (structurel : une
@@ -233,7 +260,14 @@ const config = [
   },
   ...compat.extends("next/core-web-vitals"),
   {
-    files: ["**/*.ts", "**/*.tsx"],
+    // ROUGE 7 (6ᵉ passe) — `.mts`/`.cts` AJOUTÉS. Trou prouvé par exécution :
+    // `**/*.ts` ne matche PAS `.mts`, ni ici, ni dans `include` de
+    // `tsconfig.json`. Un `tailwind.theme.mts` posé à la racine échappait donc
+    // à la FOIS au typecheck et à la totalité des règles I9/I10 — une sonde
+    // oubliée y a survécu jusqu'au commit. Les deux extensions sont ajoutées
+    // ici ET dans `tsconfig.json` : les règles type-aware plus bas exigent que
+    // le fichier soit dans le programme TS.
+    files: ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
     languageOptions: {
       parser: tsParser,
       parserOptions: {
@@ -293,16 +327,38 @@ const config = [
       ],
       // I9 — le motif de double assertion est interdit partout, y compris
       // dans les fichiers de config racine.
-      "no-restricted-syntax": ["error", ...typeAssertionSyntax],
+      // I10 EN ENTIER (couleur + dimension) à la même portée (6ᵉ passe).
+      // Deux trous prouvés par sonde, tous deux hors `src/**` et hors racine —
+      // la zone que personne ne regardait :
+      //   (a) COULEUR : une sonde sous `supabase/functions/**` (le code qui
+      //       touche SERVICE_ROLE) sortait verte. Le contrôle 4 de preflight ne
+      //       rattrape que les hex 6/8 chiffres, jamais `rgb()/hsl()`.
+      //   (b) DIMENSION : un module `config/theme-probe.ts` portant
+      //       `padding: "17px"`, `duration: "250ms"` et une classe Tailwind
+      //       arbitraire, IMPORTÉ par `src/app/page.tsx`, sortait vert. Borner
+      //       le volet dimension à `src/**` ne protège rien : il suffit de
+      //       sortir la valeur d'un fichier pour la réimporter dans `src/`.
+      // L'exception des fichiers de config RACINE (screens, plancher
+      // d'accessibilité, échelles Tailwind) reste intacte : le bloc racine placé
+      // en DERNIER ne réinjecte que le volet couleur, et le dernier bloc gagne.
+      "no-restricted-syntax": [
+        "error",
+        ...typeAssertionSyntax,
+        ...designTokenSyntax,
+      ],
     },
   },
   {
-    // I10 (tokens, dé-ancré du JSX) ne s'applique qu'au code applicatif sous
-    // src/** : `tailwind.config.ts` et les autres fichiers de config racine
-    // contiennent légitimement les valeurs littérales d'exception documentées
-    // en tête de `tailwind.config.ts` (screens, plancher d'accessibilité,
-    // échelles utilitaires sans token dédié) — ce ne sont pas des tokens de
-    // design, ce sont les valeurs QUE les tokens serviront à nommer.
+    // I10 en ENTIER (dimension + couleur) sous src/**. Le volet DIMENSION
+    // s'arrête ici, et seulement lui : `tailwind.config.ts` et les autres
+    // fichiers de config racine contiennent légitimement les valeurs littérales
+    // d'exception documentées en tête de `tailwind.config.ts` (screens,
+    // plancher d'accessibilité, échelles utilitaires sans token dédié) — ce ne
+    // sont pas des tokens de design, ce sont les valeurs QUE les tokens
+    // serviront à nommer.
+    // Le volet COULEUR, lui, s'applique AUSSI à la racine : cf. le bloc
+    // `files: ["*.ts", …]` juste après. Ne pas relire ce commentaire comme
+    // « I10 s'arrête à src/ » — c'est cette formulation-là qui a produit ROUGE 6.
     files: ["src/**/*.ts", "src/**/*.tsx"],
     rules: {
       "no-restricted-syntax": [
@@ -377,7 +433,7 @@ const config = [
     // `.mjs`/`.cjs` sont dans la liste, et ce n'est pas de la précaution :
     // sans eux le trou restait grand ouvert. `designTokenSyntax` (I10) n'est
     // attaché qu'à `src/**/*.ts(x)` ; prouvé empiriquement, un `src/**.mjs`
-    // contenant `#123456`, `p-[17px]` et `{ width: "17px" }` passait `pnpm
+    // contenant `#nnnnnn`, `p-[17px]` et `{ width: "17px" }` passait `pnpm
     // lint` à zéro erreur. Interdire le fichier ferme I10 en même temps que
     // le reste, sans dupliquer les sélecteurs de tokens sur chaque extension.
     // `.mts`/`.cts` sont dans la liste pour la même raison : `**/*.ts` ne les
@@ -422,6 +478,46 @@ const config = [
     rules: {
       "no-restricted-imports": "off",
       "local/no-supabase-resolution": "off",
+    },
+  },
+  // ROUGE 6 (5ᵉ passe de revue) — I10 COULEUR sur les fichiers de configuration
+  // RACINE. Trou prouvé par exécution : `designTokenSyntax` était attaché à
+  // `src/**/*.ts(x)`, et le contrôle 4 de preflight.sh ne voit ni
+  // `rgb()/rgba()/hsl()`, ni un hex 3/4 chiffres sans contexte de valeur
+  // immédiat (`"0 1px 2px #fff"` échappe à sa classe de contexte). Résultat :
+  // `boxShadow: { lift1: "0 1px 2px rgba(11,22,20,.05)" }` remis en dur dans
+  // `tailwind.config.ts` — le THÈME DU SYSTÈME ENTIER — passait les quatre
+  // portes en vert. On ferme le vecteur là où il se referme proprement : la
+  // règle qui connaît déjà les tokens couvre désormais le fichier qui définit
+  // le thème, au lieu de raffiner indéfiniment un motif texte.
+  //
+  // Portée : `*.ts` (etc.) sans `**/` ne matche QUE la racine — `next.config.ts`,
+  // `postcss.config.js`, `tailwind.config.ts` et tout futur voisin, sans avoir à
+  // les nommer un par un. On ferme la classe, pas trois cas.
+  //
+  // Ce bloc est placé en DERNIER à dessein : en flat config, le dernier objet
+  // qui déclare une règle gagne. Placé plus haut, le bloc `**/*.js` réécrirait
+  // `no-restricted-syntax` et effacerait ce qu'on vient d'ajouter.
+  // `typeAssertionSyntax` est réinjecté pour la même raison : sans lui, ce bloc
+  // désarmerait I9 sur les fichiers de config.
+  //
+  // `eslint.config.js` est exclu NOMINATIVEMENT : ce fichier contient le TEXTE
+  // DES MESSAGES de la règle (« Couleur rgb()/rgba()/hsl()/hsla() interdite »),
+  // qui déclenche la règle. Même piège que `#nnnnnn` en 4ᵉ passe, mais ici le
+  // maquiller à la source dégraderait le message lu par un humain. Couverture
+  // résiduelle : le contrôle 4 de preflight balaye ce fichier pour les hex 6/8
+  // chiffres, et il n'est jamais livré au navigateur. Précédent identique et
+  // déjà accepté plus haut (bloc `**/*.js`).
+  {
+    // `.mts`/`.cts` : cf. ROUGE 7, bloc `**/*.ts` plus haut.
+    files: ["*.ts", "*.tsx", "*.mts", "*.cts", "*.js", "*.jsx", "*.mjs", "*.cjs"],
+    ignores: ["eslint.config.js"],
+    rules: {
+      "no-restricted-syntax": [
+        "error",
+        ...typeAssertionSyntax,
+        ...designTokenColorSyntax,
+      ],
     },
   },
 ];

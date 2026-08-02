@@ -1,0 +1,123 @@
+/**
+ * MindCare OS — textes d'interface. Français intégral (I8).
+ *
+ * SOURCE UNIQUE de toute chaîne affichée. Aucune chaîne en dur dans un
+ * composant, dès le premier composant (WORKING-CONTEXT §5). Une chaîne écrite
+ * ailleurs échappe à la relecture linguistique et finit par diverger.
+ *
+ * Trois règles qui gouvernent ce fichier :
+ *   1. Les noms d'écran et les verbes sont IMPOSÉS (§5). Les variantes
+ *      « Accueil », « Dossiers », « Calendrier », « Communications »,
+ *      « Aftercare », « Rapports » sont des pièges : elles n'apparaissent pas
+ *      ici, et ne doivent pas y être ajoutées.
+ *   2. Un bouton nomme son action, et le retour reprend le même verbe :
+ *      `Signer la note` → « Note signée. » Jamais « Soumettre », « OK », ni
+ *      « Valider » seul.
+ *   3. Aucune donnée fictive, aucun nom, aucun contenu clinique d'exemple
+ *      (I19). Un état vide est honnête.
+ *
+ * Pas de bibliothèque i18n en Phase 1 : un objet figé suffit, et `tsc` vérifie
+ * chaque clé à la compilation — ce qu'une clé dynamique ne permettrait pas.
+ */
+
+export const fr = {
+  /** Les douze écrans, groupés comme dans la navigation. Libellés imposés §5. */
+  nav: {
+    groupes: {
+      menu: "MENU",
+      clinique: "CLINIQUE",
+      gestion: "GESTION",
+      systeme: "SYSTÈME",
+    },
+    ecrans: {
+      tableauDeBord: "Tableau de bord",
+      patients: "Patients",
+      agenda: "Agenda",
+      messages: "Messages",
+      documents: "Documents",
+      traitements: "Traitements",
+      suivi: "Suivi",
+      finances: "Finances",
+      statistiques: "Statistiques",
+      agents: "Agents",
+      journalActivite: "Journal d'activité",
+      parametres: "Paramètres",
+    },
+  },
+
+  /** Verbes d'action imposés §5. Un bouton nomme son action. */
+  actions: {
+    enregistrer: "Enregistrer",
+    signerLaNote: "Signer la note",
+    demarrerLaSeance: "Démarrer la séance",
+    terminerLaSeance: "Terminer la séance",
+    genererLeCertificat: "Générer le certificat",
+    confirmer: "Confirmer",
+    annuler: "Annuler",
+    fixerLeTarif: "Fixer le tarif",
+    reessayer: "Réessayer",
+  },
+
+  /** Retours d'action — même verbe que l'action qui les déclenche. */
+  feedback: {
+    enregistre: "Modifications enregistrées.",
+    noteSignee: "Note signée.",
+    seanceDemarree: "Séance démarrée.",
+    seanceTerminee: "Séance terminée.",
+    certificatGenere: "Certificat généré.",
+    confirme: "Confirmé.",
+    annule: "Annulé.",
+    tarifFixe: "Tarif fixé.",
+  },
+
+  /**
+   * Les cinq états que tout composant doit gérer (I11).
+   * `texteAbsent` couvre le champ vide ou non renseigné — jamais un tiret nu,
+   * qui se confond avec une valeur.
+   */
+  etats: {
+    chargement: "Chargement…",
+    vide: "Aucun élément à afficher.",
+    // Pas de clé `erreur` ici, délibérément. « Une erreur est survenue. » est
+    // le prototype exact du vague qu'interdit §4 règle 8, et l'offrir comme
+    // clé prête à l'emploi à côté du gabarit `erreur.*` reviendrait à fournir
+    // la règle et son contournement le plus commode dans le même fichier.
+    // Un état d'erreur se décrit toujours par le gabarit en trois temps.
+    horsLigne: "Hors ligne. Les données affichées peuvent ne pas être à jour.",
+    texteAbsent: "Non renseigné",
+  },
+
+  /**
+   * Gabarit d'erreur (§4, règle 8) : ce qui s'est passé · ce qui a été préservé
+   * · quoi faire. Jamais de vague.
+   *
+   * ⚠️ Les trois EN-TÊTES sont ici ; les CONTENUS ne le sont pas, et c'est
+   * délibéré. Une phrase du type « votre saisie est conservée localement »
+   * n'est pas un libellé, c'est une affirmation de fait sur le comportement du
+   * système. Aucune persistance locale n'existe aujourd'hui dans ce dépôt.
+   * L'afficher dirait à la praticienne, après une coupure, que sa note est
+   * sauvegardée — elle fermerait l'écran et perdrait son travail. C'est
+   * exactement le mensonge qu'I19 interdit, sous une forme plus dangereuse
+   * qu'une donnée fictive.
+   *
+   * Chaque écran fournit donc le contenu qui décrit CE QUE SON CODE FAIT
+   * réellement, et ces phrases s'écrivent en même temps que le mécanisme de
+   * préservation (I20), jamais avant.
+   */
+  erreur: {
+    titre: "Ce qui s'est passé",
+    preserveTitre: "Ce qui a été préservé",
+    actionTitre: "Ce que vous pouvez faire",
+    reseauIndisponible: "La connexion au serveur a échoué.",
+  },
+
+  /**
+   * Mention permanente sur toute sortie d'aide à la décision (I7).
+   * Elle n'est pas décorative et ne se masque pas : l'IA décrit, elle ne
+   * conclut jamais.
+   */
+  disclaimer:
+    "Aide à la décision — le jugement clinique appartient au praticien.",
+} as const;
+
+export type Fr = typeof fr;

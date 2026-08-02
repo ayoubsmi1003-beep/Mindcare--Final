@@ -13,7 +13,7 @@ v1 — 2026-08-02
 ```
 SESSION PRINCIPALE = CHEF DE CHANTIER
   ├── lit : CLAUDE.md + STATE.md + DOC-AUTHORITY.md   (~3k tokens, c'est tout)
-  ├── ne lit JAMAIS : 01-SCHEMA.md, 04-DESIGN-SYSTEM.md, le code source
+  ├── ne lit JAMAIS : 04-DESIGN-SYSTEM.md, le code source
   ├── ne code JAMAIS elle-même
   └── délègue → lit un verdict de 5 lignes → décide → délègue
 
