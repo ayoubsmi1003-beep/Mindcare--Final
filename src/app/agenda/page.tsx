@@ -1,10 +1,10 @@
 /**
- * Agenda — la journée, puis ce qui vient.
+ * Agenda — vue semaine par défaut, vue jour au besoin.
  *
- * ⚠️ TROIS PIÈGES DE PÉRIMÈTRE, TOUS PORTÉS PAR LA BASE, TOUS À RESPECTER ICI.
+ * ⚠️ QUATRE PIÈGES DE PÉRIMÈTRE, TOUS PORTÉS PAR LA BASE, TOUS À RESPECTER ICI.
  *
  * 1. ZÉRO LIGNE N'EST PAS ZÉRO RENDEZ-VOUS. `app.list_agenda` applique la RLS
- *    de 006 : une journée vide signifie « rien de VISIBLE par vous ». L'écran ne
+ *    de 006 : une grille vide signifie « rien de VISIBLE par vous ». L'écran ne
  *    dit donc jamais « le cabinet n'a aucun rendez-vous » — l'agenda de l'autre
  *    praticienne existe peut-être, et c'est la cloison ADR-003 qui le masque.
  *
@@ -13,48 +13,89 @@
  *    demande web non validée rendent une ligne sans identité. La masquer
  *    cacherait une HEURE OCCUPÉE, donc produirait un double booking.
  *
- * 3. LA PLAGE EST BORNÉE EN BASE — 62 jours. Ce n'est pas une pagination
- *    d'affichage : une plage que l'écran choisirait sans limite serait un export
- *    de la base patients par la porte de service.
+ * 3. LA PLAGE EST BORNÉE EN BASE — 62 jours. Une plage que l'écran choisirait
+ *    sans limite serait un export de la base patients par la porte de service.
  *
- * I4 — LA LECTURE EST JOURNALISÉE PAR LA BASE, UNE FOIS PAR AFFICHAGE, en
- * contexte `liste`. Cet écran n'a rien à journaliser lui-même et ne doit pas
- * essayer : le journal applicatif n'est pas l'audit légal.
+ * 4. LE FILTRE D'ÉTAT N'EST PAS UNE PROTECTION. `STATUTS_AGENDA` choisit ce
+ *    qu'on REGARDE, pas ce qu'on a le DROIT de lire — c'est la RLS qui décide
+ *    ça, et une demande en attente reste parfaitement lisible. Ne jamais
+ *    présenter ce filtre comme une cloison.
  *
- * AUCUNE DÉCISION D'AUTORISATION ICI. Pas un seul `if (role === …)`. Le rôle ne
- * sert qu'à composer la navigation (I12).
+ * I4 — LA LECTURE EST JOURNALISÉE PAR LA BASE, UNE FOIS PAR APPEL, en contexte
+ * `liste`. Deux appels sont faits ici (la grille, puis la file d'attente) : deux
+ * lignes d'audit, ce qui est exact — ce sont deux consultations distinctes.
  *
- * LE MOTIF DE CONSULTATION N'APPARAÎT NULLE PART, et n'apparaîtra pas : il vit
- * dans `app.appointment_reasons`, sans policy assistante (ADR-017).
+ * AUCUNE DÉCISION D'AUTORISATION ICI. Pas un seul `if (role === …)`.
+ *
+ * LE MOTIF DE CONSULTATION N'APPARAÎT NULLE PART : il vit dans
+ * `app.appointment_reasons`, sans policy assistante (ADR-017). `kind` — le TYPE
+ * de consultation — est une autre donnée, administrative, et lui est affiché.
  */
 
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { AppShell } from "@/components/AppShell";
-import { heure, jour, nomPatient, Statut } from "@/components/AgendaPieces";
+import { heure, jour, jourComplet, nomPatient, Statut } from "@/components/AgendaPieces";
 import { BandeauHorsLigne, BlocErreur } from "@/components/EtatsEcran";
+import { GrilleSemaine } from "@/components/GrilleSemaine";
 import { useSessionEcran } from "@/components/useSessionEcran";
 import { fr } from "@/i18n/fr";
-import { listAgenda, type AgendaEntry } from "@/services/appointments";
+import {
+  listAgenda,
+  STATUTS_AGENDA,
+  STATUTS_EN_ATTENTE,
+  type AgendaEntry,
+} from "@/services/appointments";
 
-/** Minuit local du jour donné. La base compare des instants absolus (I8). */
-function minuit(decalageJours: number): Date {
+/** Amplitude affichée. Bornes de la grille, pas des heures d'ouverture : le
+    cabinet n'a pas déclaré les siennes, et les inventer afficherait une
+    information fausse sur son fonctionnement. */
+const HEURE_DEBUT = 8;
+const HEURE_FIN = 19;
+const JOURS_SEMAINE = 7;
+
+type Vue = "semaine" | "jour";
+
+/** Minuit local, décalé de `n` jours. */
+function minuit(n: number): Date {
   const d = new Date();
   d.setHours(0, 0, 0, 0);
-  d.setDate(d.getDate() + decalageJours);
+  d.setDate(d.getDate() + n);
   return d;
+}
+
+/** Le lundi de la semaine contenant `d`. La semaine française commence lundi. */
+function lundiDe(d: Date): Date {
+  const l = new Date(d);
+  l.setHours(0, 0, 0, 0);
+  // `getDay()` rend 0 pour dimanche : on le ramène à 7 pour que lundi soit 1.
+  const jourSemaine = l.getDay() === 0 ? 7 : l.getDay();
+  l.setDate(l.getDate() - (jourSemaine - 1));
+  return l;
 }
 
 export default function PageAgenda(): React.JSX.Element {
   const { utilisateur, horsLigne: horsLigneSession, deconnecter } = useSessionEcran();
 
+  const [vue, setVue] = useState<Vue>("semaine");
+  const [ancre, setAncre] = useState<Date>(() => lundiDe(new Date()));
+
   const [entrees, setEntrees] = useState<readonly AgendaEntry[] | undefined>(undefined);
+  const [enAttente, setEnAttente] = useState<readonly AgendaEntry[]>([]);
   const [messageErreur, setMessageErreur] = useState<string | undefined>(undefined);
   const [horsLigne, setHorsLigne] = useState(false);
   const [chargement, setChargement] = useState(true);
+
+  const debut = vue === "semaine" ? ancre : minuit(0);
+  const nbJours = vue === "semaine" ? JOURS_SEMAINE : 1;
+  const fin = new Date(debut);
+  fin.setDate(fin.getDate() + nbJours);
+
+  const debutIso = debut.toISOString();
+  const finIso = fin.toISOString();
 
   // Attend que la session soit tranchée avant d'interroger : la porte
   // journalise CHAQUE appel, et lancer la requête pour un visiteur qu'on est en
@@ -65,12 +106,7 @@ export default function PageAgenda(): React.JSX.Element {
     let annule = false;
     setChargement(true);
 
-    // 30 jours : bien en deçà de la borne de 62 imposée en base. Un agenda
-    // regarde la semaine qui vient, pas le trimestre.
-    void listAgenda({
-      from: minuit(0).toISOString(),
-      to: minuit(30).toISOString(),
-    }).then((result) => {
+    void listAgenda({ from: debutIso, to: finIso, statuts: STATUTS_AGENDA }).then((result) => {
       if (annule) return;
       if (!result.ok) {
         setHorsLigne(result.error.code === "hors-ligne");
@@ -88,7 +124,36 @@ export default function PageAgenda(): React.JSX.Element {
     return () => {
       annule = true;
     };
+  }, [utilisateur, debutIso, finIso]);
+
+  // La file d'attente d'approbation, sur une fenêtre volontairement plus large
+  // que la grille : une demande pour dans trois semaines doit se voir
+  // aujourd'hui, sinon elle est approuvée la veille.
+  useEffect(() => {
+    if (utilisateur === undefined) return;
+    let annule = false;
+    void listAgenda({
+      from: minuit(0).toISOString(),
+      to: minuit(60).toISOString(),
+      statuts: STATUTS_EN_ATTENTE,
+    }).then((result) => {
+      if (annule) return;
+      // Un échec ici n'efface pas la grille et ne bloque rien : la file
+      // d'attente est un complément, pas la raison d'être de l'écran (I20).
+      if (result.ok) setEnAttente(result.data);
+    });
+    return () => {
+      annule = true;
+    };
   }, [utilisateur]);
+
+  const decaler = useCallback((jours: number) => {
+    setAncre((a) => {
+      const d = new Date(a);
+      d.setDate(d.getDate() + jours);
+      return d;
+    });
+  }, []);
 
   if (utilisateur === undefined) {
     return (
@@ -98,29 +163,28 @@ export default function PageAgenda(): React.JSX.Element {
     );
   }
 
-  const finDuJour = minuit(1).getTime();
-  const aujourdhui = (entrees ?? []).filter((e) => Date.parse(e.startsAt) < finDuJour);
-  const aVenir = (entrees ?? []).filter((e) => Date.parse(e.startsAt) >= finDuJour);
+  const liste = entrees ?? [];
+  const finSemaine = new Date(debut);
+  finSemaine.setDate(finSemaine.getDate() + nbJours - 1);
+
+  // Créneaux libres : ce que la grille montre réellement, pas une estimation.
+  // Compter autrement afficherait un chiffre que l'écran contredit juste en
+  // dessous.
+  const creneauxTotal = (HEURE_FIN - HEURE_DEBUT) * nbJours;
+  const creneauxOccupes = new Set(
+    liste.map((e) => {
+      const d = new Date(Date.parse(e.startsAt));
+      return `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}-${d.getHours()}`;
+    }),
+  ).size;
 
   return (
-    /* DÉFAUT SÛR sur la composition : profil illisible → navigation la plus
-       étroite (`assistant`). Ce n'est pas une protection — la RLS décide seule
-       de ce qui est lisible — mais entre deux compositions, afficher la plus
-       restreinte quand on ne sait pas qui est connecté coûte le moins cher. */
     <AppShell
       role={utilisateur?.role ?? "assistant"}
       nomComplet={utilisateur?.fullName ?? ""}
       onDeconnexion={deconnecter}
     >
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: "var(--s-4)",
-          flexWrap: "wrap",
-        }}
-      >
+      <header style={{ display: "flex", flexDirection: "column", gap: "var(--s-1)" }}>
         <h1
           style={{
             fontSize: "var(--text-display-size)",
@@ -133,6 +197,56 @@ export default function PageAgenda(): React.JSX.Element {
         >
           {fr.agenda.titre}
         </h1>
+        <p
+          style={{
+            margin: "var(--size-0)",
+            color: "var(--ink-500)",
+            fontSize: "var(--text-body-size)",
+            lineHeight: "var(--text-body-leading)",
+          }}
+        >
+          {jourComplet(new Date().toISOString()) ?? fr.etats.texteAbsent}
+        </p>
+      </header>
+
+      {/* ── Barre de période, chiffres et action ──────────────────────────── */}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: "var(--s-4)",
+          flexWrap: "wrap",
+          marginTop: "var(--s-6)",
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: "var(--s-4)", flexWrap: "wrap" }}>
+          <h2
+            style={{
+              margin: "var(--size-0)",
+              fontSize: "var(--text-title-size)",
+              lineHeight: "var(--text-title-leading)",
+              letterSpacing: "var(--text-title-tracking)",
+              fontWeight: "var(--weight-semibold)",
+              color: "var(--ink-900)",
+            }}
+          >
+            {vue === "semaine"
+              ? `${fr.agenda.semaine.titre} ${jour(debut.toISOString()) ?? ""} ${fr.agenda.semaine.au} ${jour(finSemaine.toISOString()) ?? ""}`
+              : fr.agenda.aujourdhui}
+          </h2>
+
+          <Chiffre valeur={liste.length} libelle={fr.agenda.semaine.seancesCetteSemaine} />
+          <Chiffre
+            valeur={Math.max(0, creneauxTotal - creneauxOccupes)}
+            libelle={fr.agenda.semaine.creneauxLibres}
+          />
+          <Chiffre
+            valeur={enAttente.length}
+            libelle={fr.agenda.semaine.demandesEnAttente}
+            attention={enAttente.length > 0}
+          />
+        </div>
 
         <Link
           href="/agenda/nouveau"
@@ -154,159 +268,193 @@ export default function PageAgenda(): React.JSX.Element {
         </Link>
       </div>
 
+      {/* ── Navigation de période ─────────────────────────────────────────── */}
+      <div style={{ display: "flex", alignItems: "center", gap: "var(--s-2)", flexWrap: "wrap", marginTop: "var(--s-4)" }}>
+        <BoutonPeriode onClick={() => decaler(-JOURS_SEMAINE)} libelle={fr.agenda.semaine.semainePrecedente} />
+        <BoutonPeriode onClick={() => setAncre(lundiDe(new Date()))} libelle={fr.agenda.semaine.cetteSemaine} />
+        <BoutonPeriode onClick={() => decaler(JOURS_SEMAINE)} libelle={fr.agenda.semaine.semaineSuivante} />
+
+        <span style={{ display: "inline-flex", gap: "var(--s-1)", marginLeft: "var(--s-4)" }}>
+          <BoutonPeriode
+            onClick={() => setVue("semaine")}
+            libelle={fr.agenda.semaine.vueSemaine}
+            actif={vue === "semaine"}
+          />
+          <BoutonPeriode
+            onClick={() => setVue("jour")}
+            libelle={fr.agenda.semaine.vueJour}
+            actif={vue === "jour"}
+          />
+        </span>
+      </div>
+
       {horsLigne || horsLigneSession ? <BandeauHorsLigne /> : null}
       {messageErreur !== undefined && !horsLigne ? <BlocErreur message={messageErreur} /> : null}
 
       {chargement ? (
-        <p style={{ color: "var(--ink-500)", fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)" }}>
+        <p style={{ marginTop: "var(--s-6)", color: "var(--ink-500)", fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)" }}>
           {fr.etats.chargement}
         </p>
       ) : null}
 
       {!chargement && entrees !== undefined ? (
-        <>
-          <Section
-            titre={fr.agenda.aujourdhui}
-            entrees={aujourdhui}
-            /* Deux phrases distinctes, et il ne faut pas les fusionner :
-               « rien aujourd'hui » et « rien de visible » ne disent pas la même
-               chose. Si l'agenda ENTIER est vide, on ne peut pas affirmer que la
-               journée l'est — la RLS a pu tout filtrer. */
-            vide={entrees.length === 0 ? fr.agenda.aucunVisible : fr.agenda.journeeVide}
+        <div style={{ marginTop: "var(--s-6)" }}>
+          {liste.length === 0 ? (
+            /* État vide : une phrase --ink-500, aucune illustration (§4 règle 7).
+               La phrase dit « rien de VISIBLE par vous », jamais « rien ». */
+            <p style={{ color: "var(--ink-500)", fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)" }}>
+              {vue === "semaine" ? fr.agenda.semaine.semaineVide : fr.agenda.journeeVide}
+            </p>
+          ) : null}
+
+          <GrilleSemaine
+            debutSemaine={debut}
+            jours={nbJours}
+            heureDebut={HEURE_DEBUT}
+            heureFin={HEURE_FIN}
+            entrees={liste}
           />
-          <Section titre={fr.agenda.aVenir} entrees={aVenir} vide={fr.agenda.aucunAVenir} />
-        </>
+        </div>
       ) : null}
+
+      {/* ── Demandes en attente d'approbation ─────────────────────────────── */}
+      <section style={{ marginTop: "var(--s-10)" }}>
+        <h2
+          style={{
+            margin: "var(--size-0)",
+            fontSize: "var(--text-heading-size)",
+            lineHeight: "var(--text-heading-leading)",
+            letterSpacing: "var(--text-heading-tracking)",
+            fontWeight: "var(--weight-semibold)",
+            color: "var(--ink-900)",
+          }}
+        >
+          {fr.agenda.semaine.demandesEnAttente}
+        </h2>
+
+        {enAttente.length === 0 ? (
+          <p style={{ marginTop: "var(--s-3)", color: "var(--ink-500)", fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)" }}>
+            {fr.agenda.semaine.aucuneDemande}
+          </p>
+        ) : (
+          <ul style={{ listStyle: "none", margin: "var(--s-4) var(--size-0)", padding: "var(--size-0)", display: "flex", flexDirection: "column", gap: "var(--s-2)" }}>
+            {enAttente.map((entree) => (
+              <li key={entree.id}>
+                <Link
+                  href={`/agenda/${entree.id}`}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "var(--s-4)",
+                    minHeight: "var(--target-comfort)",
+                    padding: "var(--s-3) var(--s-4)",
+                    borderRadius: "var(--r-md)",
+                    border: "var(--rule-width) solid var(--attention)",
+                    background: "var(--attention-bg)",
+                    color: "var(--ink-900)",
+                    textDecoration: "none",
+                  }}
+                >
+                  <span style={{ fontFamily: "var(--font-num)", fontVariantNumeric: "tabular-nums", minWidth: "var(--target-comfort)" }}>
+                    {heure(entree.startsAt) ?? fr.etats.texteAbsent}
+                  </span>
+                  <span style={{ flex: "1 1 auto", minWidth: "var(--size-0)", overflowWrap: "anywhere" }}>
+                    {nomPatient(entree.lastName, entree.firstName) ?? fr.agenda.patientNonRattache}
+                    {" · "}
+                    {jour(entree.startsAt) ?? fr.etats.texteAbsent}
+                  </span>
+                  <Statut statut={entree.status} />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
     </AppShell>
   );
 }
 
-function Section({
-  titre,
-  entrees,
-  vide,
+/**
+ * Un chiffre d'en-tête. `tabular-nums` obligatoire : ces valeurs changent à
+ * chaque navigation, et sans chasse fixe elles sautillent d'un pixel à l'autre,
+ * ce qui attire l'œil sur du bruit.
+ */
+function Chiffre({
+  valeur,
+  libelle,
+  attention = false,
 }: {
-  readonly titre: string;
-  readonly entrees: readonly AgendaEntry[];
-  readonly vide: string;
+  readonly valeur: number;
+  readonly libelle: string;
+  readonly attention?: boolean;
 }): React.JSX.Element {
   return (
-    <section style={{ marginTop: "var(--s-8)" }}>
-      <h2
+    <span
+      style={{
+        display: "inline-flex",
+        alignItems: "baseline",
+        gap: "var(--s-2)",
+        padding: "var(--s-2) var(--s-4)",
+        borderRadius: "var(--r-full)",
+        border: "var(--rule-width) solid var(--rule)",
+        background: attention ? "var(--attention-bg)" : "var(--card)",
+      }}
+    >
+      <strong
         style={{
-          fontSize: "var(--text-title-size)",
-          lineHeight: "var(--text-title-leading)",
-          letterSpacing: "var(--text-title-tracking)",
+          fontFamily: "var(--font-num)",
+          fontVariantNumeric: "tabular-nums",
+          fontSize: "var(--text-body-size)",
           fontWeight: "var(--weight-semibold)",
-          color: "var(--ink-900)",
-          margin: "var(--size-0)",
+          color: attention ? "var(--attention)" : "var(--teal-700)",
         }}
       >
-        {titre}
-      </h2>
-
-      {entrees.length === 0 ? (
-        /* État vide : une phrase --ink-500, aucune illustration (§4 règle 7). */
-        <p
-          style={{
-            marginTop: "var(--s-3)",
-            color: "var(--ink-500)",
-            fontSize: "var(--text-body-size)",
-            lineHeight: "var(--text-body-leading)",
-          }}
-        >
-          {vide}
-        </p>
-      ) : (
-        <ul
-          style={{
-            listStyle: "none",
-            margin: "var(--s-4) var(--size-0)",
-            padding: "var(--size-0)",
-            display: "flex",
-            flexDirection: "column",
-            gap: "var(--s-2)",
-          }}
-        >
-          {entrees.map((entree) => (
-            <li key={entree.id}>
-              <LigneRendezVous entree={entree} />
-            </li>
-          ))}
-        </ul>
-      )}
-    </section>
+        {valeur}
+      </strong>
+      <span
+        style={{
+          fontSize: "var(--text-label-size)",
+          lineHeight: "var(--text-label-leading)",
+          color: "var(--ink-500)",
+        }}
+      >
+        {libelle}
+      </span>
+    </span>
   );
 }
 
-function LigneRendezVous({ entree }: { readonly entree: AgendaEntry }): React.JSX.Element {
-  const debut = heure(entree.startsAt);
-  const date = jour(entree.startsAt);
-  const nom = nomPatient(entree.lastName, entree.firstName);
-
+function BoutonPeriode({
+  onClick,
+  libelle,
+  actif = false,
+}: {
+  readonly onClick: () => void;
+  readonly libelle: string;
+  readonly actif?: boolean;
+}): React.JSX.Element {
   return (
-    <Link
-      href={`/agenda/${entree.id}`}
+    <button
+      type="button"
+      onClick={onClick}
+      /* L'état sélectionné est porté par `aria-pressed` ET par le contraste,
+         jamais par la seule couleur (§4 règle 4). */
+      aria-pressed={actif}
       style={{
-        display: "flex",
-        alignItems: "center",
-        gap: "var(--s-4)",
-        minHeight: "var(--target-comfort)",
-        padding: "var(--s-3) var(--s-4)",
+        minHeight: "var(--target-min)",
+        padding: "var(--s-2) var(--s-4)",
         borderRadius: "var(--r-md)",
         border: "var(--rule-width) solid var(--rule)",
-        background: "var(--card)",
-        color: "var(--ink-900)",
-        textDecoration: "none",
+        background: actif ? "var(--teal-600)" : "var(--card)",
+        color: actif ? "var(--card)" : "var(--ink-700)",
+        fontSize: "var(--text-label-size)",
+        lineHeight: "var(--text-label-leading)",
+        fontFamily: "var(--font-ui)",
+        fontWeight: actif ? "var(--weight-semibold)" : "var(--weight-regular)",
+        cursor: "pointer",
       }}
     >
-      {/* L'HEURE NE BOUGE PAS et se lit en un coup d'œil (§4 règle 5, et la
-          deuxième question du TEST de CLAUDE.md). `tabular-nums` est obligatoire
-          sur un chiffre : sans lui, les colonnes d'heures ne s'alignent pas. */}
-      <span
-        style={{
-          minWidth: "var(--target-comfort)",
-          fontSize: "var(--text-num-size)",
-          lineHeight: "var(--text-num-leading)",
-          fontWeight: "var(--weight-medium)",
-          fontFamily: "var(--font-num)",
-          fontVariantNumeric: "tabular-nums",
-          color: "var(--ink-900)",
-        }}
-      >
-        {debut ?? fr.etats.texteAbsent}
-      </span>
-
-      <span style={{ display: "flex", flexDirection: "column", gap: "var(--s-1)", flex: "1 1 auto", minWidth: "var(--size-0)" }}>
-        <span
-          style={{
-            fontSize: "var(--text-body-size)",
-            lineHeight: "var(--text-body-leading)",
-            fontWeight: "var(--weight-medium)",
-            color: nom === null ? "var(--ink-300)" : "var(--ink-900)",
-            overflowWrap: "anywhere",
-          }}
-        >
-          {/* Aucun dossier rattaché : on le DIT. Laisser la ligne sans nom ferait
-              croire à un défaut d'affichage, et la praticienne chercherait un
-              patient qui n'existe pas dans son périmètre. */}
-          {nom ?? fr.agenda.patientNonRattache}
-        </span>
-        <span
-          style={{
-            color: "var(--ink-500)",
-            fontSize: "var(--text-label-size)",
-            lineHeight: "var(--text-label-leading)",
-            fontVariantNumeric: "tabular-nums",
-            overflowWrap: "anywhere",
-          }}
-        >
-          {date ?? fr.etats.texteAbsent} · {entree.durationMinutes} {fr.agenda.dureeUnite}
-          {entree.practitionerName === null ? "" : ` · ${entree.practitionerName}`}
-        </span>
-      </span>
-
-      <Statut statut={entree.status} />
-    </Link>
+      {libelle}
+    </button>
   );
 }

@@ -57,6 +57,49 @@
     --positive: #3e7a5e;
     --positive-bg: #edf5f1;
 
+    /* ── FAMILLES DE CONSULTATION — agenda (migration 024) ──────────────────
+     *
+     * CINQ familles, pas treize types. Le schéma porte treize valeurs de
+     * `app.consult_kind` ; leur donner treize teintes produirait des couleurs
+     * indiscernables entre elles, dont plusieurs sous le plancher de contraste
+     * de 4.5:1 (§4 règle 4), et une légende de deux lignes pleines.
+     *
+     * ⚠️ LA COULEUR NE PORTE JAMAIS L'INFORMATION SEULE. Le libellé complet du
+     * type est toujours écrit dans la carte de rendez-vous ; ces teintes ne
+     * font que doubler une information déjà lisible. C'est la condition qui
+     * rend l'encodage par couleur acceptable — le retirer rendrait l'agenda
+     * illisible pour un daltonien, et un agenda mal lu est un patient reçu au
+     * mauvais créneau.
+     *
+     * Trois des cinq réutilisent la palette existante ; deux teintes seulement
+     * sont nouvelles, et elles ne sortent pas du système : même saturation
+     * modérée, même clarté que `--teal-600`, pour qu'aucune ne crie plus fort
+     * que les autres. AUCUNE n'est `--critical` : le rouge est un budget
+     * réservé au disque critique et à la perte de données (§4 règle 1), et un
+     * type de consultation n'est jamais une alerte.
+     *
+     * `*-bg` sert au fond de la carte, `*-accent` au liseré de 3px et au point
+     * de légende. Les deux sont appairés et vérifiés ensemble. */
+    --kind-suivi-accent: var(--teal-600);
+    --kind-suivi-bg: var(--teal-050);
+
+    --kind-premiere-accent: #5b5bd6;
+    --kind-premiere-bg: #eeeefb;
+
+    --kind-psychotherapie-accent: #2b7a9b;
+    --kind-psychotherapie-bg: #e8f2f7;
+
+    --kind-entretien-accent: var(--attention);
+    --kind-entretien-bg: var(--attention-bg);
+
+    --kind-administratif-accent: var(--ink-500);
+    --kind-administratif-bg: var(--sunken);
+
+    /* Le liseré gauche d'une carte de rendez-vous. Distinct de `--rule-width` :
+     * ce n'est pas un trait de séparation mais un marqueur de catégorie, et
+     * lui donner 1px le rendrait invisible à distance de lecture. */
+    --kind-accent-width: 3px;
+
     /* Palette nocturne — DÉCLARÉE, JAMAIS APPLIQUÉE À CE JOUR.
      * Ces quatre jetons existent parce que §3 les définit, et pour rien
      * d'autre : aucun remap `.dark` n'existe dans ce fichier, et ils ne sont

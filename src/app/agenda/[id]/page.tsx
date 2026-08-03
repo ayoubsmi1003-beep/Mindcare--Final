@@ -11,10 +11,16 @@
  *
  * ⚠️ CE QUI N'EST PAS MODIFIABLE ICI L'EST PARCE QUE LA BASE LE REFUSE, pas
  * parce que le formulaire l'omet. `app.update_appointment` porte une allowlist
- * de trois champs ; `patient_id`, `practitioner_id` et `status` en sont exclus
- * pour qu'une modification de routine ne puisse pas réattribuer un rendez-vous
- * d'une praticienne à l'autre (ADR-003). Ajouter le champ à ce formulaire ne
+ * de quatre champs — `starts_at`, `duration_minutes`, `notes_admin`, `kind` ;
+ * `patient_id`, `practitioner_id`, `cabinet_id` et `status` en sont exclus pour
+ * qu'une modification de routine ne puisse pas réattribuer un rendez-vous d'une
+ * praticienne à l'autre (ADR-003). Ajouter le champ à ce formulaire ne
  * l'ouvrirait pas — la porte lèverait une exception, et c'est le but.
+ *
+ * `status` fait exception PAR SES PROPRES PORTES, pas par l'allowlist :
+ * `app.confirm_appointment` et `app.cancel_appointment` nomment chacune leur
+ * transition. Chaque changement d'état est ainsi un geste explicite, jamais un
+ * effet de bord d'une mise à jour de routine.
  *
  * ⚠️ L'ANNULATION N'EST PAS UNE SUPPRESSION. Le clinique est en ajout seul : le
  * rendez-vous reste, marqué `Annulé`, avec son historique dans `audit.log`. Un
@@ -46,10 +52,29 @@ import { useSessionEcran } from "@/components/useSessionEcran";
 import { fr } from "@/i18n/fr";
 import {
   cancelAppointment,
+  confirmAppointment,
   getAppointment,
   updateAppointment,
   type AgendaEntry,
+  type ConsultationKind,
 } from "@/services/appointments";
+
+/** Les treize types, dans l'ordre fourni par le cabinet (cf. `/agenda/nouveau`). */
+const TYPES_ORDONNES = [
+  "premiere_consultation",
+  "suivi",
+  "psychotherapie_individuelle",
+  "therapie_couple",
+  "therapie_familiale",
+  "therapie_groupe",
+  "teleconsultation",
+  "certificat_medical",
+  "renouvellement_ordonnance",
+  "evaluation_psychiatrique",
+  "bilan_psychologique",
+  "entretien_famille",
+  "entretien_tiers",
+] as const satisfies readonly ConsultationKind[];
 
 const champStyle: React.CSSProperties = {
   minHeight: "var(--target-min)",
@@ -89,6 +114,7 @@ export default function PageRendezVous(): React.JSX.Element {
   const [debutLocal, setDebutLocal] = useState("");
   const [duree, setDuree] = useState("");
   const [notes, setNotes] = useState("");
+  const [kind, setKind] = useState<ConsultationKind | "">("");
 
   const [annulationOuverte, setAnnulationOuverte] = useState(false);
   const [motif, setMotif] = useState("");
@@ -114,6 +140,7 @@ export default function PageRendezVous(): React.JSX.Element {
         setDebutLocal(versSaisieLocale(result.data.startsAt));
         setDuree(String(result.data.durationMinutes));
         setNotes(result.data.notesAdmin ?? "");
+        setKind(result.data.kind ?? "");
       }
     });
     return () => {
@@ -129,8 +156,29 @@ export default function PageRendezVous(): React.JSX.Element {
           setDebutLocal(versSaisieLocale(result.data.startsAt));
           setDuree(String(result.data.durationMinutes));
           setNotes(result.data.notesAdmin ?? "");
+          setKind(result.data.kind ?? "");
         }
       }
+    });
+  }
+
+  function approuver(): void {
+    setMessageErreur(undefined);
+    setConfirmation(undefined);
+    setEnvoi(true);
+    void confirmAppointment(id).then((result) => {
+      setEnvoi(false);
+      if (!result.ok) {
+        setHorsLigne(result.error.code === "hors-ligne");
+        setMessageErreur(result.error.message);
+        return;
+      }
+      if (!result.data) {
+        setMessageErreur(fr.agenda.introuvable);
+        return;
+      }
+      setConfirmation(fr.agenda.demandeApprouvee);
+      recharger();
     });
   }
 
@@ -152,6 +200,9 @@ export default function PageRendezVous(): React.JSX.Element {
       // `null` EFFACE, une propriété absente ne change rien. Vider le champ à
       // l'écran doit donc vider la note en base, pas la laisser telle quelle.
       notesAdmin: notes.trim() === "" ? null : notes.trim(),
+      // `null` remet le type à « non renseigné ». Un rendez-vous mal typé doit
+      // pouvoir redevenir vide plutôt que de garder une valeur fausse.
+      kind: kind === "" ? null : kind,
     }).then((result) => {
       setEnvoi(false);
       if (!result.ok) {
@@ -297,6 +348,10 @@ export default function PageRendezVous(): React.JSX.Element {
               />
               <Champ libelle={fr.agenda.praticienne} valeur={rdv.practitionerName} />
               <Champ libelle={fr.patients.numeroDossier} valeur={rdv.recordNumber} />
+              <Champ
+                libelle={fr.agenda.typeConsultation}
+                valeur={rdv.kind === null ? null : fr.agenda.types[rdv.kind]}
+              />
               <Champ libelle={fr.agenda.origine} valeur={fr.agenda.origines[rdv.source]} />
               <Champ libelle={fr.agenda.notesAdministratives} valeur={rdv.notesAdmin} />
             </div>
@@ -347,6 +402,25 @@ export default function PageRendezVous(): React.JSX.Element {
               </div>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "var(--s-2)" }}>
+                <label htmlFor="kind" style={libelleStyle}>
+                  {fr.agenda.typeConsultation}
+                </label>
+                <select
+                  id="kind"
+                  value={kind}
+                  onChange={(event) => setKind(event.target.value as ConsultationKind | "")}
+                  style={champStyle}
+                >
+                  <option value="">{fr.etats.texteAbsent}</option>
+                  {TYPES_ORDONNES.map((valeur) => (
+                    <option key={valeur} value={valeur}>
+                      {fr.agenda.types[valeur]}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div style={{ display: "flex", flexDirection: "column", gap: "var(--s-2)" }}>
                 <label htmlFor="notes" style={libelleStyle}>
                   {fr.agenda.notesAdministratives}
                 </label>
@@ -386,6 +460,7 @@ export default function PageRendezVous(): React.JSX.Element {
                     setDebutLocal(versSaisieLocale(rdv.startsAt));
                     setDuree(String(rdv.durationMinutes));
                     setNotes(rdv.notesAdmin ?? "");
+                    setKind(rdv.kind ?? "");
                   }}
                   style={{
                     minHeight: "var(--target-min)",
@@ -496,6 +571,33 @@ export default function PageRendezVous(): React.JSX.Element {
           {!edition && !annulationOuverte
             && rdv.status !== "cancelled" && rdv.status !== "completed" ? (
             <div style={{ display: "flex", gap: "var(--s-4)", flexWrap: "wrap", marginTop: "var(--s-6)" }}>
+              {/* L'approbation n'apparaît QUE sur une demande en attente. Sur
+                  tout autre état, la porte `app.confirm_appointment` lève — et
+                  proposer un bouton qui va échouer apprend à la praticienne que
+                  les commandes de cet écran ne font pas ce qu'elles disent. */}
+              {rdv.status === "requested" ? (
+                <button
+                  type="button"
+                  onClick={approuver}
+                  disabled={envoi}
+                  style={{
+                    minHeight: "var(--target-min)",
+                    padding: "var(--s-2) var(--s-5)",
+                    borderRadius: "var(--r-md)",
+                    border: "none",
+                    background: envoi ? "var(--teal-400)" : "var(--teal-600)",
+                    color: "var(--card)",
+                    fontSize: "var(--text-body-size)",
+                    lineHeight: "var(--text-body-leading)",
+                    fontWeight: "var(--weight-semibold)",
+                    fontFamily: "var(--font-ui)",
+                    cursor: envoi ? "default" : "pointer",
+                  }}
+                >
+                  {fr.agenda.approuver}
+                </button>
+              ) : null}
+
               <button
                 type="button"
                 onClick={() => setEdition(true)}

@@ -124,6 +124,10 @@ LIB_BASE=(
   "list_agenda refuse une plage de plus de 62 jours"
   "create_appointment crée réellement un rendez-vous"
   "cancel_appointment écrit le motif dans notes_admin"
+  "kind : les 13 types du cabinet, aller-retour vérifié"
+  "confirm_appointment refuse un RDV déjà confirmé"
+  "le filtre de statut ne rend que les états demandés"
+  "les portes de lecture appartiennent à app_gatekeeper"
 )
 
 if [ $reachable -eq 0 ]; then
@@ -289,6 +293,66 @@ else
     *"sonde checkpoint"*) green "${LIB_BASE[11]}" ;;
     *) red "${LIB_BASE[11]}" "trace obtenue : ${trace:-aucune}" ;;
   esac
+
+  # 22 · LES TREIZE TYPES, ET EXACTEMENT CEUX-LÀ. Un type ajouté ou renommé en
+  #      base sans que `ConsultationKind` suive produirait un libellé `undefined`
+  #      à l'écran — sur une donnée clinique. On compte les valeurs de
+  #      l'énumération ET on éprouve un aller-retour réel.
+  nb=$(qfull "SELECT count(*) FROM pg_enum e JOIN pg_type t ON t.oid=e.enumtypid
+              JOIN pg_namespace n ON n.oid=t.typnamespace
+              WHERE n.nspname='app' AND t.typname='consult_kind';" \
+       | grep -E '^[0-9]+$' | tail -1)
+  if [ -z "$PATIENT" ]; then
+    skip "${LIB_BASE[12]}" "aucun patient de la Dr #1 en base (seed 015 ?)"
+  else
+    aller=$(qfull "BEGIN; SET LOCAL role='authenticated'; SET LOCAL request.jwt.claim.sub='$OWNER';
+      SELECT app.create_appointment('$PATIENT','$OWNER', now() + interval '4 days', 30, 'sonde kind', 'therapie_couple');
+      SELECT kind FROM app.list_agenda(now(), now() + interval '6 days') WHERE notes_admin='sonde kind';
+      ROLLBACK;" | grep -F 'therapie_couple' | tail -1)
+    if [ "$nb" = "13" ] && [ "$aller" = "therapie_couple" ]; then
+      green "${LIB_BASE[12]}"
+    else
+      red "${LIB_BASE[12]}" "valeurs=$nb (attendu 13) aller-retour=${aller:-aucun}"
+    fi
+  fi
+
+  # 23 · L'approbation est une TRANSITION, pas une écriture idempotente.
+  #      Reconfirmer un rendez-vous déjà confirmé doit lever : sans ça, un
+  #      double-clic produirait une seconde ligne d'audit d'approbation pour un
+  #      geste qui n'a pas eu lieu.
+  out=$(qfull "BEGIN; SET LOCAL role='authenticated'; SET LOCAL request.jwt.claim.sub='$OWNER';
+               SELECT app.confirm_appointment('$APPT'); ROLLBACK;")
+  refused "$out" && green "${LIB_BASE[13]}" \
+                 || red "${LIB_BASE[13]}" "un RDV confirmé a pu être re-confirmé"
+
+  # 24 · LE FILTRE DE VUE FAIT CE QU'IL DIT — et rien de plus. On vérifie les
+  #      DEUX sens : `confirmed` rend des lignes, `requested` n'en rend aucune
+  #      aujourd'hui. Ne tester que le second laisserait passer un filtre qui
+  #      rend systématiquement vide, ce qui viderait l'agenda sans un mot.
+  ok_c=$(qfull "BEGIN; SET LOCAL role='authenticated'; SET LOCAL request.jwt.claim.sub='$OWNER';
+    SELECT count(*) FROM app.list_agenda(now()-interval '30 days', now()+interval '30 days', NULL, ARRAY['confirmed']);
+    ROLLBACK;" | grep -E '^[0-9]+$' | tail -1)
+  ok_r=$(qfull "BEGIN; SET LOCAL role='authenticated'; SET LOCAL request.jwt.claim.sub='$OWNER';
+    SELECT count(*) FROM app.list_agenda(now()-interval '30 days', now()+interval '30 days', NULL, ARRAY['cancelled']);
+    ROLLBACK;" | grep -E '^[0-9]+$' | tail -1)
+  if [ "${ok_c:-0}" -ge 1 ] 2>/dev/null && [ "${ok_c:-0}" != "${ok_r:-x}" ]; then
+    green "${LIB_BASE[14]}"
+  else
+    red "${LIB_BASE[14]}" "confirmed=$ok_c cancelled=$ok_r (le filtre ne discrimine pas)"
+  fi
+
+  # 25 · LA PROPRIÉTÉ DES PORTES, APRÈS UN CYCLE DROP/CREATE. 024 et 025 ont dû
+  #      SUPPRIMER `list_agenda` pour changer son type de retour — et un DROP
+  #      emporte le propriétaire avec lui. Réattribuée à `postgres`, la porte
+  #      s'exécuterait sous un rôle `rolbypassrls` : c'est la faute de 018, la
+  #      cloison entre praticiennes tomberait, et la migration serait VERTE.
+  proprios=$(qfull "SELECT count(*) FROM pg_proc p
+                    JOIN pg_namespace n ON n.oid=p.pronamespace
+                    JOIN pg_roles r ON r.oid=p.proowner
+                    WHERE n.nspname='app' AND p.proname IN ('list_agenda','get_appointment')
+                      AND r.rolname='app_gatekeeper';" | grep -E '^[0-9]+$' | tail -1)
+  [ "$proprios" = "2" ] && green "${LIB_BASE[15]}" \
+                        || red "${LIB_BASE[15]}" "portes possédées par app_gatekeeper : $proprios/2"
 fi
 
 echo

@@ -52,6 +52,52 @@ export type AppointmentStatus =
 export type AppointmentSource = "phone" | "walk_in" | "web" | "assistant" | "doctor";
 
 /**
+ * Type de consultation (`app.consult_kind`, migration 024).
+ *
+ * Les treize valeurs viennent du cabinet, pas de nous. L'union est FERMÉE : un
+ * type inventé côté interface ne compile pas, et c'est exactement la garantie
+ * qu'on veut sur une donnée clinique.
+ *
+ * ⚠️ À ne pas confondre avec `AppointmentSource`, qui dit par quel CANAL le
+ * rendez-vous est entré, ni avec le motif de consultation, qui vit dans
+ * `app.appointment_reasons` et n'apparaît nulle part dans ce fichier (ADR-017).
+ */
+export type ConsultationKind =
+  | "premiere_consultation"
+  | "suivi"
+  | "psychotherapie_individuelle"
+  | "therapie_couple"
+  | "therapie_familiale"
+  | "therapie_groupe"
+  | "teleconsultation"
+  | "certificat_medical"
+  | "renouvellement_ordonnance"
+  | "evaluation_psychiatrique"
+  | "bilan_psychologique"
+  | "entretien_famille"
+  | "entretien_tiers";
+
+/**
+ * Les états qui occupent réellement la grille d'agenda.
+ *
+ * ⚠️ CE N'EST PAS UNE PROTECTION, et il ne faut jamais le présenter comme telle.
+ * La RLS de 006 a déjà décidé quelles LIGNES existent pour l'appelante ; ceci
+ * ne fait que choisir lesquelles elle regarde. Une demande `requested` reste
+ * parfaitement lisible — elle attend simplement l'approbation de l'assistante
+ * et n'a pas à occuper un créneau tant qu'elle ne l'a pas.
+ */
+export const STATUTS_AGENDA: readonly AppointmentStatus[] = [
+  "confirmed",
+  "arrived",
+  "in_session",
+  "completed",
+  "no_show",
+];
+
+/** L'unique état d'attente d'approbation. */
+export const STATUTS_EN_ATTENTE: readonly AppointmentStatus[] = ["requested"];
+
+/**
  * Une ligne d'agenda.
  *
  * L'identité patient est OPTIONNELLE, et ce n'est pas une facilité de typage :
@@ -67,6 +113,7 @@ export interface AgendaEntry {
   readonly durationMinutes: number;
   readonly status: AppointmentStatus;
   readonly source: AppointmentSource;
+  readonly kind: ConsultationKind | null;
   readonly notesAdmin: string | null;
   readonly arrivedAt: string | null;
   readonly patientId: string | null;
@@ -83,6 +130,7 @@ interface AgendaRow {
   readonly ends_at: string;
   readonly status: AppointmentStatus;
   readonly source: AppointmentSource;
+  readonly kind: ConsultationKind | null;
   readonly notes_admin: string | null;
   readonly arrived_at: string | null;
   readonly patient_id: string | null;
@@ -99,6 +147,11 @@ export interface AgendaRangeFilters {
   /** Borne haute exclue. La base refuse au-delà de 62 jours. */
   readonly to: string;
   readonly practitionerId?: string;
+  /**
+   * Filtre de VUE, jamais une protection — voir `STATUTS_AGENDA`. Omis, la
+   * porte rend tous les états visibles par l'appelante.
+   */
+  readonly statuts?: readonly AppointmentStatus[];
 }
 
 export interface CreateAppointmentInput {
@@ -109,6 +162,7 @@ export interface CreateAppointmentInput {
   /** 5 à 240 minutes. La borne est appliquée EN BASE, pas seulement ici. */
   readonly durationMinutes: number;
   readonly notesAdmin?: string;
+  readonly kind?: ConsultationKind;
 }
 
 /**
@@ -127,6 +181,8 @@ export interface UpdateAppointmentChanges {
   readonly startsAt?: string;
   readonly durationMinutes?: number;
   readonly notesAdmin?: string | null;
+  /** `null` remet le type à « non renseigné » plutôt que d'y laisser une valeur fausse. */
+  readonly kind?: ConsultationKind | null;
 }
 
 function minutesBetween(startsAt: string, endsAt: string): number {
@@ -146,6 +202,7 @@ function toEntry(row: AgendaRow): AgendaEntry {
     durationMinutes: minutesBetween(row.starts_at, row.ends_at),
     status: row.status,
     source: row.source,
+    kind: row.kind,
     notesAdmin: row.notes_admin,
     arrivedAt: row.arrived_at,
     patientId: row.patient_id,
@@ -164,6 +221,12 @@ export async function listAgenda(
     p_from: filters.from,
     p_to: filters.to,
     p_practitioner: filters.practitionerId ?? null,
+    // Le tableau voyage SÉRIALISÉ : `RpcArgs` n'accepte que des scalaires, et
+    // PostgREST sérialise mal un tableau de type énuméré personnalisé. La porte
+    // reçoit du `text[]` et fait le cast elle-même, où l'énumération ferme
+    // l'ensemble des valeurs admissibles.
+    p_statuts:
+      filters.statuts === undefined ? null : `{${filters.statuts.join(",")}}`,
   });
 
   if (!result.ok) {
@@ -207,6 +270,7 @@ export async function createAppointment(
     p_starts_at: input.startsAt,
     p_duration_minutes: input.durationMinutes,
     p_notes_admin: input.notesAdmin ?? null,
+    p_kind: input.kind ?? null,
   });
 
   if (!result.ok) {
@@ -243,6 +307,7 @@ export async function updateAppointment(
     document["duration_minutes"] = changes.durationMinutes;
   }
   if (changes.notesAdmin !== undefined) document["notes_admin"] = changes.notesAdmin;
+  if (changes.kind !== undefined) document["kind"] = changes.kind;
 
   if (Object.keys(document).length === 0) {
     // Rien à écrire. On ne consulte pas la base pour ne rien faire : ce serait
@@ -264,6 +329,26 @@ export async function updateAppointment(
   // erreur, mais surtout pas un succès : l'écran doit pouvoir le dire.
   const touche = result.data[0] !== undefined && result.data[0] !== null;
   log.info("agenda.modification", { count: touche ? 1 : 0 });
+  return ok(touche);
+}
+
+/**
+ * Approuve une demande de rendez-vous.
+ *
+ * `status` étant exclu de l'allowlist de `update_appointment`, c'est la seule
+ * voie vers `confirmed` : aucune transition ne se fait par une modification de
+ * routine. Qui a le droit d'approuver est tranché par la RLS de 006, pas ici.
+ */
+export async function confirmAppointment(id: string): Promise<Result<boolean>> {
+  const result = await db().rpc<string>("confirm_appointment", { p_id: id });
+
+  if (!result.ok) {
+    log.error("agenda.approbation", { code: result.error.code });
+    return err(result.error);
+  }
+
+  const touche = result.data[0] !== undefined && result.data[0] !== null;
+  log.info("agenda.approbation", { count: touche ? 1 : 0 });
   return ok(touche);
 }
 

@@ -219,13 +219,77 @@ export const fr = {
       doctor: "Praticienne",
     },
 
+    typeConsultation: "Type de consultation",
+
     /**
-     * Le champ manquant, dit honnêtement plutôt que rempli d'à-peu-près.
-     * Affiché nulle part par défaut ; disponible pour l'écran qui devra
-     * expliquer l'absence, le jour où la question se pose.
+     * Les treize types de `app.consult_kind` (migration 024). Libellés fournis
+     * par le cabinet — ne pas en ajouter, ne pas en reformuler sans la
+     * praticienne : ce sont des actes, pas des étiquettes d'interface.
      */
-    typeConsultationAbsent:
-      "Le type de consultation n'est pas encore enregistré par ce système.",
+    types: {
+      premiere_consultation: "Première consultation",
+      suivi: "Consultation de suivi",
+      psychotherapie_individuelle: "Psychothérapie individuelle",
+      therapie_couple: "Thérapie de couple",
+      therapie_familiale: "Thérapie familiale",
+      therapie_groupe: "Thérapie de groupe",
+      teleconsultation: "Téléconsultation",
+      certificat_medical: "Certificat médical",
+      renouvellement_ordonnance: "Renouvellement d'ordonnance",
+      evaluation_psychiatrique: "Évaluation psychiatrique",
+      bilan_psychologique: "Bilan psychologique",
+      entretien_famille: "Entretien avec la famille",
+      entretien_tiers: "Entretien avec un tiers",
+    },
+
+    /**
+     * Cinq FAMILLES pour la légende et la couleur d'accent.
+     *
+     * Treize teintes distinctes seraient indiscernables et plusieurs
+     * tomberaient sous le plancher de contraste de 4.5:1 (§4 règle 4). La
+     * couleur ne code donc que la famille ; le LIBELLÉ complet du type est
+     * toujours écrit dans la carte, et la couleur ne porte jamais
+     * l'information seule.
+     */
+    familles: {
+      suivi: "Suivi",
+      premiere: "Première consultation",
+      psychotherapie: "Psychothérapie",
+      entretien: "Entretiens",
+      administratif: "Administratif",
+    },
+
+    /** Vue semaine — l'écran principal de l'agenda. */
+    semaine: {
+      titre: "Semaine du",
+      au: "au",
+      seancesCetteSemaine: "Séances cette semaine",
+      creneauxLibres: "Créneaux libres",
+      demandesEnAttente: "Demandes en attente",
+      seances: "séances",
+      libre: "libre",
+      semainePrecedente: "Semaine précédente",
+      semaineSuivante: "Semaine suivante",
+      cetteSemaine: "Cette semaine",
+      vueSemaine: "Semaine",
+      vueJour: "Jour",
+      /**
+       * ⚠️ Phrase distincte de `journeeVide`. `list_agenda` applique la RLS :
+       * une grille vide signifie « rien de visible par vous », jamais « le
+       * cabinet ne travaille pas cette semaine ».
+       */
+      semaineVide: "Aucun rendez-vous visible dans votre périmètre cette semaine.",
+      /**
+       * La file d'attente est honnêtement vide tant que l'accueil QR n'existe
+       * pas : les demandes `requested` viennent du web, flux non construit. On
+       * le dit plutôt que d'afficher un compteur inventé (I19).
+       */
+      aucuneDemande: "Aucune demande en attente d'approbation.",
+    },
+
+    approuver: "Approuver la demande",
+    demandeApprouvee: "Demande approuvée.",
+    enAttenteApprobation: "En attente d'approbation",
   },
 
   /**

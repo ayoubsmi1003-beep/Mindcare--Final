@@ -8,13 +8,15 @@
  * lui-même donnerait l'illusion d'une règle, et cette illusion tomberait au
  * premier appelant qui ne passe pas par cet écran.
  *
- * ⚠️ LE TYPE DE CONSULTATION N'EST PAS DEMANDÉ, et son absence est délibérée.
- * `app.appointments` ne porte pas cette colonne, et la liste réellement employée
- * par la praticienne n'a pas été fournie. Proposer « première consultation /
- * suivi / urgence » serait une taxonomie clinique inventée dans un dossier
- * médical (I19) — le genre de donnée que personne ne relit parce qu'elle a l'air
- * juste. Le champ s'ajoutera par une migration isolée le jour où la liste
- * existe ; cet écran ne sera pas à reconstruire.
+ * LE TYPE DE CONSULTATION est proposé depuis la migration 024, avec les treize
+ * valeurs fournies par le cabinet. Il reste FACULTATIF : `app.consult_kind` est
+ * nullable, et forcer un choix pousserait à cocher n'importe quoi pour sortir du
+ * formulaire — une valeur fausse dans un dossier médical vaut moins qu'une
+ * valeur absente, parce qu'elle a l'air d'une donnée.
+ *
+ * ⚠️ `kind` n'est PAS le motif de consultation. Le motif vit dans
+ * `app.appointment_reasons`, sans policy assistante (ADR-017), et cet écran ne
+ * le demande pas.
  *
  * `source` n'est pas demandé non plus : la base le dérive du rôle de l'appelant.
  * C'est le CANAL d'entrée du rendez-vous, pas son type ; le laisser saisir
@@ -37,11 +39,36 @@ import { versIso } from "@/components/AgendaPieces";
 import { BandeauHorsLigne, BlocErreur } from "@/components/EtatsEcran";
 import { useSessionEcran } from "@/components/useSessionEcran";
 import { fr } from "@/i18n/fr";
-import { createAppointment } from "@/services/appointments";
+import { createAppointment, type ConsultationKind } from "@/services/appointments";
 import { searchPatients, type PatientListItem } from "@/services/patients";
 import { listPractitioners, type Practitioner } from "@/services/practitioners";
 
 const DUREE_PAR_DEFAUT = 30;
+
+/**
+ * Les treize types, dans l'ordre fourni par le cabinet — pas trié
+ * alphabétiquement : l'ordre métier place en tête ce qui se saisit le plus
+ * souvent, et un tri machine remonterait « Bilan psychologique » en premier.
+ *
+ * `satisfies` plutôt qu'une annotation : le compilateur vérifie que chaque
+ * entrée est bien un `ConsultationKind` ET qu'aucune valeur du schéma n'a été
+ * oubliée quand on relit la liste, sans élargir le type des éléments.
+ */
+const TYPES_ORDONNES = [
+  "premiere_consultation",
+  "suivi",
+  "psychotherapie_individuelle",
+  "therapie_couple",
+  "therapie_familiale",
+  "therapie_groupe",
+  "teleconsultation",
+  "certificat_medical",
+  "renouvellement_ordonnance",
+  "evaluation_psychiatrique",
+  "bilan_psychologique",
+  "entretien_famille",
+  "entretien_tiers",
+] as const satisfies readonly ConsultationKind[];
 
 const champStyle: React.CSSProperties = {
   minHeight: "var(--target-min)",
@@ -79,6 +106,7 @@ export default function PageNouveauRendezVous(): React.JSX.Element {
   const [debutLocal, setDebutLocal] = useState("");
   const [duree, setDuree] = useState(String(DUREE_PAR_DEFAUT));
   const [notes, setNotes] = useState("");
+  const [kind, setKind] = useState<ConsultationKind | "">("");
 
   const [messageErreur, setMessageErreur] = useState<string | undefined>(undefined);
   const [horsLigne, setHorsLigne] = useState(false);
@@ -145,7 +173,10 @@ export default function PageNouveauRendezVous(): React.JSX.Element {
       practitionerId: praticienneId,
       startsAt: debutIso,
       durationMinutes: dureeMinutes,
+      // Propriété OMISE plutôt que passée à `undefined` : sous
+      // `exactOptionalPropertyTypes`, les deux ne sont pas la même chose.
       ...(notes.trim() === "" ? {} : { notesAdmin: notes.trim() }),
+      ...(kind === "" ? {} : { kind }),
     }).then((result) => {
       setEnvoi(false);
       if (!result.ok) {
@@ -362,6 +393,29 @@ export default function PageNouveauRendezVous(): React.JSX.Element {
             onChange={(event) => setDuree(event.target.value)}
             style={{ ...champStyle, fontVariantNumeric: "tabular-nums", fontFamily: "var(--font-num)" }}
           />
+        </div>
+
+        {/* ── Type de consultation ────────────────────────────────────────── */}
+        <div style={{ display: "flex", flexDirection: "column", gap: "var(--s-2)" }}>
+          <label htmlFor="kind" style={libelleStyle}>
+            {fr.agenda.typeConsultation}
+          </label>
+          <select
+            id="kind"
+            value={kind}
+            onChange={(event) => setKind(event.target.value as ConsultationKind | "")}
+            style={champStyle}
+          >
+            {/* Option vide EN PREMIER et sélectionnée par défaut : le champ est
+                facultatif, et pré-cocher « Première consultation » écrirait un
+                type que personne n'a choisi. */}
+            <option value="">{fr.etats.texteAbsent}</option>
+            {TYPES_ORDONNES.map((valeur) => (
+              <option key={valeur} value={valeur}>
+                {fr.agenda.types[valeur]}
+              </option>
+            ))}
+          </select>
         </div>
 
         {/* ── Notes administratives ───────────────────────────────────────── */}
