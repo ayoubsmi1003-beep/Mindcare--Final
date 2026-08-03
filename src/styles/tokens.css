@@ -221,6 +221,54 @@
     --grid-nav-width: 248px;
     --grid-main-max: 1120px;
     --grid-context-width: 340px;
+
+    /* ------------------------------------------------------------------
+     * CIBLES DE POINTAGE — WORKING-CONTEXT §4 règle 4
+     *
+     * Ces deux valeurs ne sont pas un choix d'auteur : le plancher
+     * d'accessibilité les IMPOSE (≥ 36px partout, 44px sur le formulaire QR
+     * rempli par un patient debout, souvent d'une seule main). Elles étaient
+     * jusqu'ici réécrites à la main dans chaque composant, donc destinées à
+     * diverger — et une cible qui rétrécit à 32px dans un coin ne se voit pas
+     * en relecture. Nommées ici, elles se vérifient d'un `grep`.
+     * ------------------------------------------------------------------ */
+    --target-min: 36px;
+    /* Cible CONFORTABLE — le plancher que le §4 impose au formulaire QR (rempli
+     * par un patient debout, souvent d'une seule main), et qui vaut pour toute
+     * commande saisie sous contrainte : champs de connexion, ligne de patient
+     * cliquée pendant qu'on parle. Nommé d'après ce qu'il EST — une taille de
+     * cible — et non d'après le seul écran qui l'exige, sous peine de le voir
+     * rétréci par quiconque lira le commentaire au pied de la lettre. */
+    --target-comfort: 44px;
+
+    /* ------------------------------------------------------------------
+     * VALEURS STRUCTURELLES
+     *
+     * Ni couleur ni décision de design : une marge remise à zéro, la largeur
+     * pleine d'un conteneur, la hauteur de la fenêtre.
+     *
+     * ⚠️ HONNÊTETÉ SUR CE QUE CES JETONS FONT. Ils ne rendent pas le dépôt
+     * conforme à I10 : le lint n'attrape que les littéraux qu'il sait voir
+     * (`0` nu, `"100%"`), et laisse passer `minmax(240px, 1fr)` à l'intérieur
+     * d'une chaîne composée. Les nommer évite d'écrire `"0"` en chaîne pour se
+     * glisser sous le sélecteur — ce qui viderait la règle de son sens — mais
+     * ne dispense PAS de regarder les valeurs que la règle ne voit pas. Un
+     * garde-fou n'est pas une preuve de conformité, c'est un filet.
+     * ------------------------------------------------------------------ */
+    --size-0: 0;
+    --size-full: 100%;
+    --size-viewport: 100vh;
+
+    /* Largeur minimale d'une colonne de fiche avant repli : en dessous, une
+     * étiquette et sa valeur se chevauchent sur un nom long. Valeur de design,
+     * nommée ici parce qu'elle vivait en dur dans un `minmax()` — endroit
+     * exact où le lint ne la voyait pas. */
+    --card-column-min: 240px;
+
+    /* Largeur de la carte de connexion. Assez étroite pour rester lisible
+     * (§3 : une ligne de formulaire ne gagne rien à s'étirer), assez large
+     * pour un e-mail long sans troncature. */
+    --width-form: 420px;
   }
 
   /* --------------------------------------------------------------------

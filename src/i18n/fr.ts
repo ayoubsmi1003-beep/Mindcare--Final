@@ -56,6 +56,8 @@ export const fr = {
     annuler: "Annuler",
     fixerLeTarif: "Fixer le tarif",
     reessayer: "Réessayer",
+    seConnecter: "Se connecter",
+    seDeconnecter: "Se déconnecter",
   },
 
   /** Retours d'action — même verbe que l'action qui les déclenche. */
@@ -68,6 +70,67 @@ export const fr = {
     confirme: "Confirmé.",
     annule: "Annulé.",
     tarifFixe: "Tarif fixé.",
+    connecte: "Connecté.",
+    deconnecte: "Déconnecté.",
+  },
+
+  /** Écran de connexion — libellés pour l'écran qu'un autre agent construit. */
+  connexion: {
+    titre: "Connexion",
+    champEmail: "E-mail",
+    champMotDePasse: "Mot de passe",
+    connexionEnCours: "Connexion en cours…",
+  },
+
+  /**
+   * Coquille de navigation (`AppShell`). Les libellés d'écran viennent de
+   * `nav.ecrans` ; ceux-ci ne décrivent que l'état de construction, jamais un
+   * nom d'écran supplémentaire.
+   */
+  coquille: {
+    /** Écran référencé dans la navigation mais pas encore construit (I19). */
+    ecranAVenir: "Écran à venir",
+    deconnexionCompte: "Compte connecté :",
+  },
+
+  /**
+   * Écran Patients — liste, recherche, fiche.
+   *
+   * ⚠️ `listeVide` et `rechercheSansResultat` sont DEUX phrases distinctes, et
+   * il ne faut pas les fusionner. `app.search_patients` applique la RLS avant
+   * de compter : zéro ligne signifie « aucun dossier VISIBLE PAR VOUS », ce qui
+   * n'est pas « aucun dossier ». Écrire « aucun patient dans le cabinet »
+   * affirmerait quelque chose que cet écran ne peut pas savoir — la file de
+   * l'autre praticienne existe peut-être, et c'est la cloison qui la masque.
+   *
+   * ⚠️ `ficheIntrouvable` sert AUSSI BIEN au dossier inexistant qu'au dossier
+   * hors périmètre : `getPatient` rend `ok(null)` dans les deux cas et
+   * l'interface ne doit pas les distinguer. Un message « ce dossier ne vous est
+   * pas accessible » divulguerait l'existence d'un patient d'une autre
+   * praticienne — exactement ce que la cloison ADR-003 interdit. Une seule
+   * phrase, donc, et surtout pas deux.
+   */
+  patients: {
+    titre: "Patients",
+    rechercher: "Rechercher un patient",
+    rechercherIndication: "Nom, téléphone ou numéro de dossier",
+    listeVide: "Aucun dossier visible dans votre périmètre.",
+    rechercheSansResultat: "Aucun dossier ne correspond à cette recherche.",
+    /** Le total est celui du périmètre de l'appelant, jamais celui du cabinet. */
+    comptage: "dossier(s) dans votre périmètre",
+    ficheIntrouvable:
+      "Ce dossier est introuvable. Rien n'a été modifié. Vérifiez le lien, ou revenez à la liste.",
+    retourALaListe: "Revenir à la liste",
+    numeroDossier: "Numéro de dossier",
+    dateNaissance: "Date de naissance",
+    telephone: "Téléphone",
+    telephoneSecondaire: "Téléphone secondaire",
+    adresse: "Adresse",
+    notesAdministratives: "Notes administratives",
+    /** Statut porté par un TEXTE, jamais par la couleur seule (§4 règle 4). */
+    dossierInactif: "Dossier inactif",
+    /** La liste ne montre que les dossiers actifs — le dire plutôt que le laisser croire. */
+    listeActifsSeulement: "Seuls les dossiers actifs apparaissent dans cette liste.",
   },
 
   /**
@@ -132,6 +195,8 @@ export const fr = {
       "La connexion au serveur est interrompue. Rien n'a été perdu : ce qui est affiché reste utilisable et la consultation peut continuer. Réessayez lorsque le réseau est rétabli.",
     "non-authentifie":
       "Votre session a expiré. Aucune donnée n'a été modifiée. Reconnectez-vous pour reprendre.",
+    "identifiants-refuses":
+      "L'e-mail ou le mot de passe est incorrect. Aucune session n'a été ouverte. Vérifiez votre saisie, puis réessayez.",
     interdit:
       "Cet accès n'est pas autorisé pour votre rôle. Aucune donnée n'a été lue ni modifiée. Si vous pensez qu'il devrait l'être, signalez-le — la règle est appliquée par la base de données.",
     introuvable:
