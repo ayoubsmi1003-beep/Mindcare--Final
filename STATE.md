@@ -1,5 +1,5 @@
 # STATE — MindCare OS
-Dernière mise à jour : 2026-08-03 · **jalon S4 LIVRÉ**, checkpoint VERT 21 · **pas encore
+Dernière mise à jour : 2026-08-04 · **jalon S4 LIVRÉ**, `checkpoint-s4` VERT 25 · **pas encore
 vérifié à l'écran** — voir §« Ce qui reste à faire sur S4 »
 
 ## Fait & vert
@@ -14,6 +14,7 @@ vérifié à l'écran** — voir §« Ce qui reste à faire sur S4 »
 - 074a306 **S4a** — portes RDV en base, audit de liste (ADR-021), migrations 022 + 023
 - 0a695c9 **S4b** — service rendez-vous sur `DbPort`
 - 63fadd1 **S4c** — agenda : vue jour, création, modification, annulation
+- 1017734 **S4d** — vue semaine, 13 types de consultation (024), approbation (025)
 
 ## Portes, toutes rejouées le 2026-08-03 après S4
 `preflight` · `typecheck` · `lint` · `build` · **`checkpoint-s4` VERT 21** ·
@@ -31,19 +32,25 @@ liste Patients avec recherche · fiche patient · état hors ligne · audit des 
 automatisation du compte de développement. ADR respectées, aucune réécrite.
 
 ## Ce que S4 livre, et qui fonctionne
-Agenda du jour et des trente jours suivants · création · modification · annulation · détail d'un
-rendez-vous · statuts · sélecteur de praticienne · cinq portes Postgres (ADR-021) · déclencheur de
-transitions · `useSessionEcran` extrait. **Aucune ADR réécrite, `DbPort` inchangé.**
+**Vue semaine** (grille jour × heure, créneaux libres, chiffres d'en-tête, navigation, bascule
+jour/semaine, légende) · vue jour · création · modification · annulation · **approbation** ·
+détail · **13 types de consultation** · statuts · sélecteur de praticienne · **sept portes
+Postgres** (ADR-021) · déclencheur de transitions · `useSessionEcran` extrait.
+**Aucune ADR réécrite, aucune policy de 006 modifiée, `DbPort` inchangé.**
 
 ## Ce qui reste à faire sur S4
-- **Vérification à l'écran NON FAITE.** Le chemin de données est prouvé par 21 contrôles ; le
-  rendu ne l'est pas. S3 a été validé à l'écran et c'est là qu'ont surgi quatre défauts que les
-  portes n'avaient pas vus. **Ne pas clore S4 avant de l'avoir fait.**
-- **Type de consultation absent** — colonne inexistante, liste réelle non fournie. Migration
-  isolée d'une quinzaine de lignes le jour où la Dr. Larbi la donne ; colonne **nullable**, aucun
-  écran à reconstruire. Même traitement que les ~60 molécules : un état vide est honnête.
-- Vue **semaine** non construite (MODULE-MAP la nomme) · file d'attente · `mark_patient_arrived` ·
-  validation des demandes web `requested`.
+- 🔴 **VÉRIFICATION À L'ÉCRAN NON FAITE — c'est le seul point qui bloque la clôture.**
+  Le chemin de données est prouvé par 25 contrôles ; le RENDU ne l'est pas. S3 a été validé à
+  l'écran et c'est là qu'ont surgi quatre défauts que les portes n'avaient pas vus. Serveur :
+  `pnpm dev` → `/agenda`. À regarder en priorité : la grille semaine avec plusieurs RDV le même
+  jour, un nom de patient très long, un créneau à deux séances, la coupure réseau en cours de
+  saisie.
+- **La file « Demandes en attente » est VIDE, et c'est exact.** `create_appointment` écrit
+  `confirmed` : un rendez-vous saisi au cabinet est approuvé par le geste qui le crée. L'état
+  `requested` vient de l'accueil QR, non construit. **Décision d'organisation en attente :** si le
+  cabinet veut qu'un RDV saisi par l'assistante attende l'aval de la praticienne, c'est UNE ligne
+  dans `create_appointment` — mais personne ne l'a tranché.
+- `mark_patient_arrived` · file d'attente · validation des demandes web.
 
 ## Le défaut de S4, à ne pas réapprendre
 **Dix-neuf contrôles VERTS pendant que `create_appointment` ne créait rien.** Elle butait sur le
@@ -55,6 +62,13 @@ main **après** un checkpoint vert, pas par le checkpoint.
 **Un checkpoint qui ne teste que ce qui doit échouer ne prouve pas que le reste marche.** Les
 contrôles 20 et 21 comblent le trou. À appliquer à tout checkpoint futur : pour chaque refus
 vérifié, vérifier le succès correspondant.
+
+**Second piège, trouvé en 024/025 :** `CREATE OR REPLACE FUNCTION` ne peut pas changer un type de
+retour. Ajouter une colonne à un `RETURNS TABLE` impose un `DROP` — et **un DROP emporte le
+propriétaire avec lui**. Réattribuée à `postgres`, une porte `SECURITY DEFINER` s'exécute sous un
+rôle `rolbypassrls` : la cloison entre praticiennes tombe, exactement comme en 018, et la
+migration reste VERTE. La propriété est reposée explicitement dans les deux fichiers, et le
+contrôle 25 la vérifie désormais à chaque exécution.
 
 Corollaire sur ADR-016, écrit parce qu'il est vrai : `create_appointment` dérive `is_synthetic` de
 `app.is_cloud_dev()`, donc **le garde-fou ne bloque plus les écritures de RDV de l'application**
