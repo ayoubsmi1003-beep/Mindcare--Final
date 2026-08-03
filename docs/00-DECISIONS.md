@@ -223,6 +223,46 @@ Police : Times New Roman 14
 
 **Rejeté.** Stocker des centimes en entier — robuste en général, inutile ici, et ajoute une conversion à chaque lecture et écriture pour représenter une précision qui n'existe pas.
 
+### ADR-019 — Audit des lectures par fonction, `pgaudit` rejeté en cloud (résout Q-B)
+**Date.** 2026-08-02. **Résout** le dernier litige ouvert du §7 de `WORKING-CONTEXT.md`. **Complète** le §12 de `01-SCHEMA.md`.
+
+**Le problème.** I4 exige l'audit des **lectures** de dossier patient. Aucun déclencheur Postgres ne voit un `SELECT` : la migration `013` couvre les écritures et le dit explicitement dans son en-tête. La dette était datée, pas comblée.
+
+**`pgaudit` est rejeté pour la phase cloud.** L'extension est disponible sur Supabase, mais elle journalise le **texte de la requête** dans le log Postgres, lequel part vers l'ingestion de logs de Supabase. Un `SELECT … WHERE id = '<patient_id>'` dans ce flux est une donnée identifiante qui quitte la machine : règle 1 de `CLAUDE.md` et **I5**. S'y ajoutent trois défauts moindres — non joignable à `audit.log`, non *append-only* au sens d'I4, rétention non maîtrisée. Le remède aurait fabriqué exactement la fuite qu'il prétend surveiller.
+
+**Décision.** L'accès en lecture au dossier patient passe par deux fonctions qui journalisent avant de retourner, dans la même transaction, et le chemin direct est **fermé** :
+
+```sql
+REVOKE SELECT ON app.patients FROM authenticated, service_role;
+app.search_patients(q, p_limit, p_offset)   -- SECURITY INVOKER
+app.get_patient(p_id)                       -- SECURITY INVOKER
+```
+
+**Pourquoi `SECURITY INVOKER`.** La RLS de `004` s'applique inchangée et aucun privilège n'est élargi. Ce qui disparaît, c'est le chemin non audité — rien d'autre.
+
+**Pourquoi pas un appel applicatif discipliné.** C'était la première rédaction de ce plan : chaque service appelle `log_read()` à la main. Elle portait sa propre faille, écrite noir sur blanc — *un appel oublié n'est pas tracé*. Même raisonnement qu'ADR-017 : on ferme le chemin, on ne discipline pas l'usage. Lire un dossier sans laisser de trace n'est plus une question de rigueur du développeur, **c'est un `permission denied`**.
+
+**Charge journalisée.** `patient_id`, acteur, rôle, horodatage, libellé de contexte. **Jamais un nom, jamais un contenu de colonne** (I5).
+
+**Limite, et elle est réelle.** Un superutilisateur Postgres lit toujours la table en direct. Même portée qu'ADR-016 §3 : *effectivement* fermé pour l'application, PostgREST, les edge functions et Jarvis ; pas *inviolable*. Ne pas présenter cette couverture comme totale.
+
+**Coût assumé.** Les filtres et la pagination PostgREST ne s'appliquent plus à `app.patients` — ils deviennent des paramètres de fonction. Toute jointure future ayant besoin de l'identité patient devra passer par ces deux portes. C'est une contrainte, et c'est le but.
+
+**Réévaluation.** À la migration auto-hébergée (ADR-001), le log Postgres ne quitte plus le PC du cabinet : `pgaudit` redevient pertinent — en **second filet sous** ces fonctions, jamais à leur place.
+
+### ADR-020 — L'accès aux données passe par un port, pas par un client Supabase
+**Date.** 2026-08-02. **Condition de faisabilité d'ADR-001.**
+
+**Le problème.** ADR-016 promet que le retour à l'auto-hébergé sera « un changement de configuration, pas une reconstruction ». Cette promesse est vide si chaque service importe `@supabase/supabase-js` et parle le dialecte PostgREST : le jour du basculement, il faudrait réécrire toute la couche d'accès.
+
+**Décision.** `src/services/*` ne dépend que d'une interface `DbPort` (`query`, `rpc`, `paginate`). Un unique adaptateur, `src/services/db/supabase.ts`, est le **seul fichier du dépôt autorisé à importer `@supabase/supabase-js`** — garanti par `no-restricted-imports` et par le préflight, donc par une erreur de compilation et non par une consigne.
+
+**Ce que ça achète.** Postgres local (ADR-001), Electron, mode hors-ligne, agents IA locaux et tests sans réseau se branchent par un second adaptateur, sans toucher un service. C'est le point d'extension qui rend I3 utile au-delà du rangement de fichiers.
+
+**Rejeté — un dépôt (*repository*) par table.** Vingt-neuf classes pour envelopper vingt-neuf tables ajoute une couche sans rien fermer. `DbPort` suffit ; une abstraction qui ne supprime pas une dépendance n'en est pas une.
+
+**Rejeté — un assistant de transaction.** PostgREST n'expose pas de transaction multi-requêtes : un tel assistant donnerait une garantie d'atomicité **fausse**, ce qui est pire que son absence. Quand l'atomicité sera requise, elle sera écrite en fonction Postgres — comme `app.set_deployment_environment()` et `app.get_patient()` le font déjà.
+
 ---
 
 ## 4. PÉRIMÈTRE DES 2 JOURS

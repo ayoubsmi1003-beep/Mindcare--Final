@@ -117,12 +117,21 @@ Appliqué par **RLS Postgres**, jamais par le front.
 > **EN LITIGE (§7, Q-A) — ne code rien qui en dépende.**
 
 ## 7 · EN LITIGE — NE PAS CODER, DEMANDER
-- ~~**Q-A · Motif de consultation.**~~ **TRANCHÉ 2026-08-02 — ADR-017.** `reason` vit dans
-  `app.appointment_reasons`, sans policy assistant. Le §5.1 de `01-SCHEMA` est périmé.
-- **Q-B · Audit des lectures.** Exigé par I4, implémenté nulle part — un déclencheur Postgres
-  ne voit pas les `SELECT`. **Requalifié en dette datée** : traité en S2 dans `src/services/*`
-  (I3), après évaluation de `pgaudit`. Ne rien inventer d'ici là.
-- ~~**Q-C · Monnaie.**~~ **TRANCHÉ 2026-08-02 — ADR-018.** `integer amount_dzd`, dinars entiers.
+Q-A → ADR-017 · Q-B → ADR-019 · Q-C → ADR-018, résumés au §8. Le §5.1 de `01-SCHEMA` est
+périmé (ADR-017). Une question nouvelle s'inscrit ICI avant d'être codée, jamais l'inverse.
+
+**Q-D — OUVERTE au 2026-08-03. ADR-019 est INAPPLICABLE en l'état.** Prouvé en base, pas déduit.
+- `SECURITY INVOKER` + `SELECT` révoqué = les deux portes butent sur leur propre révocation.
+  `app.patients` n'a aujourd'hui **aucun chemin de lecture ni d'écriture applicatif.**
+- `SECURITY DEFINER` **ne répare pas** : le propriétaire `postgres` a `rolbypassrls = t`, donc les
+  portes ne voient plus aucune policy. Essayé en 018, **la cloison praticiennes est tombée**
+  (Dr #2 lisant la patiente de la Dr Larbi) — annulé par 019. `FORCE ROW LEVEL SECURITY` et
+  `rolsuper = f` ne suffisent pas : c'est `rolbypassrls` qu'il faut lire.
+- Piste non codée : propriétaire de fonction dédié **sans** `BYPASSRLS`, et policies de `004`
+  rendues applicables à ce rôle (`TO PUBLIC` au lieu de `TO authenticated`, prédicats inchangés).
+  **Touche le fichier le plus sensible du corpus — ne rien écrire sans arbitrage humain.**
+- Tant que Q-D est ouverte : `checkpoint-j1a` T2/T8 et `checkpoint-s2` contrôles base ne peuvent
+  pas être verts. **Aucun commit ne doit prétendre le contraire.**
 
 ## 8 · DÉCISIONS GELÉES non couvertes par les invariants
 - **ADR-001** Supabase auto-hébergé sur le PC du cabinet. **SUSPENDUE par ADR-016** le temps du
@@ -134,6 +143,12 @@ Appliqué par **RLS Postgres**, jamais par le front.
 - **ADR-008** Transcription en arabe · intake FR/AR/Darija.
 - **ADR-010** Cash uniquement, **aucune facture légale**.
 - **ADR-015** Aftercare = chat simple. **Aucune détection de risque automatisée en Mois 1.**
+- **ADR-019** Dossier patient lisible **uniquement** par `app.get_patient` et
+  `app.search_patients` : `SELECT` révoqué sur `app.patients`. Une lecture non auditée n'est plus
+  une négligence possible, c'est un `permission denied`. `pgaudit` rejeté en cloud (il ferait
+  fuiter le `patient_id` dans un log sortant), réévalué en auto-hébergé.
+- **ADR-020** `src/services/*` ne connaît qu'un `DbPort`. Seul `src/services/db/supabase.ts`
+  importe `@supabase/supabase-js` — vérifié par ESLint et le préflight, pas par la relecture.
 Les autres (004 notes, 005 rôles, 009 audio, 014 sauvegardes) sont déjà en §1 et §6.
 
 ## 9 · SCHÉMA
