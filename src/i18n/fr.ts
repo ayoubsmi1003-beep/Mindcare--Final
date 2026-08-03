@@ -58,6 +58,21 @@ export const fr = {
     reessayer: "Réessayer",
     seConnecter: "Se connecter",
     seDeconnecter: "Se déconnecter",
+    /**
+     * Agenda. `annuler` seul reste ce qu'il a toujours été — abandonner la
+     * saisie en cours. Annuler un RENDEZ-VOUS est un autre geste, irréversible
+     * et visible du patient : il porte son propre libellé, sans quoi le même mot
+     * désignerait « fermer ce formulaire » et « prévenir quelqu'un de ne pas
+     * venir ».
+     */
+    enregistrerLeRendezVous: "Enregistrer le rendez-vous",
+    annulerLeRendezVous: "Annuler le rendez-vous",
+    /**
+     * Ouvre le formulaire ; il ne sauvegarde pas. L'étiqueter `Enregistrer`
+     * serait un bouton qui ne fait pas ce qu'il dit — la faute exacte du bouton
+     * « Masquer le contexte » retiré en S3.
+     */
+    modifierLeRendezVous: "Modifier le rendez-vous",
   },
 
   /** Retours d'action — même verbe que l'action qui les déclenche. */
@@ -72,6 +87,8 @@ export const fr = {
     tarifFixe: "Tarif fixé.",
     connecte: "Connecté.",
     deconnecte: "Déconnecté.",
+    rendezVousEnregistre: "Rendez-vous enregistré.",
+    rendezVousAnnule: "Rendez-vous annulé.",
   },
 
   /** Écran de connexion — libellés pour l'écran qu'un autre agent construit. */
@@ -131,6 +148,84 @@ export const fr = {
     dossierInactif: "Dossier inactif",
     /** La liste ne montre que les dossiers actifs — le dire plutôt que le laisser croire. */
     listeActifsSeulement: "Seuls les dossiers actifs apparaissent dans cette liste.",
+  },
+
+  /**
+   * Écran Agenda — journée, création, détail, annulation.
+   *
+   * ⚠️ `journeeVide` et `aucunVisible` sont DEUX phrases distinctes, comme pour
+   * Patients et pour la même raison : `app.list_agenda` applique la RLS. Zéro
+   * ligne signifie « rien de VISIBLE par vous », ce qui n'est pas « rien dans
+   * le cabinet ». Écrire « aucun rendez-vous » affirmerait quelque chose que cet
+   * écran ne peut pas savoir — l'agenda de l'autre praticienne existe peut-être,
+   * et c'est la cloison qui le masque.
+   *
+   * ⚠️ `introuvable` sert AUSSI BIEN au rendez-vous inexistant qu'au rendez-vous
+   * hors périmètre. `getAppointment` rend `ok(null)` dans les deux cas et
+   * l'interface ne doit pas les distinguer.
+   *
+   * ⚠️ AUCUN LIBELLÉ DE « TYPE DE CONSULTATION » ICI. La colonne n'existe pas
+   * dans le schéma et la liste réelle employée par la praticienne n'a pas été
+   * fournie. Inventer « première consultation / suivi / urgence » serait une
+   * taxonomie clinique fabriquée (I19). `origine` ci-dessous nomme le CANAL
+   * d'entrée du rendez-vous (`app.appt_source`), qui est une autre donnée — ne
+   * pas l'employer comme un type de consultation.
+   */
+  agenda: {
+    titre: "Agenda",
+    aujourdhui: "Aujourd'hui",
+    aVenir: "À venir",
+    journeeVide: "Aucun rendez-vous aujourd'hui.",
+    aucunVisible: "Aucun rendez-vous visible dans votre périmètre.",
+    aucunAVenir: "Aucun rendez-vous à venir dans les trente prochains jours.",
+    /** Le total est celui du périmètre de l'appelant, jamais celui du cabinet. */
+    comptage: "rendez-vous dans votre périmètre",
+    nouveau: "Nouveau rendez-vous",
+    retourALAgenda: "Revenir à l'agenda",
+    introuvable:
+      "Ce rendez-vous est introuvable. Rien n'a été modifié. Vérifiez le lien, ou revenez à l'agenda.",
+
+    patient: "Patient",
+    patientNonRattache: "Aucun dossier rattaché",
+    praticienne: "Praticienne",
+    date: "Date",
+    heure: "Heure",
+    duree: "Durée",
+    dureeUnite: "min",
+    origine: "Origine du rendez-vous",
+    notesAdministratives: "Notes administratives",
+    notesFacultatives: "Notes administratives (facultatif)",
+    motifAnnulation: "Motif de l'annulation",
+    motifAnnulationIndication:
+      "Visible par l'assistante. N'y écrivez rien de clinique.",
+
+    /** Statuts de `app.appt_status`. Un statut porte un TEXTE, jamais une couleur seule. */
+    statuts: {
+      requested: "Demandé",
+      confirmed: "Confirmé",
+      arrived: "Arrivé",
+      in_session: "En séance",
+      completed: "Terminé",
+      no_show: "Non présenté",
+      cancelled: "Annulé",
+    },
+
+    /** Canaux de `app.appt_source`. Dérivé du rôle à la création, jamais saisi. */
+    origines: {
+      phone: "Téléphone",
+      walk_in: "Sans rendez-vous",
+      web: "Demande web",
+      assistant: "Assistante",
+      doctor: "Praticienne",
+    },
+
+    /**
+     * Le champ manquant, dit honnêtement plutôt que rempli d'à-peu-près.
+     * Affiché nulle part par défaut ; disponible pour l'écran qui devra
+     * expliquer l'absence, le jour où la question se pose.
+     */
+    typeConsultationAbsent:
+      "Le type de consultation n'est pas encore enregistré par ce système.",
   },
 
   /**
