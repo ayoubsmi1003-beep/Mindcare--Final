@@ -1,5 +1,6 @@
 # STATE — MindCare OS
-Dernière mise à jour : 2026-08-03 · **jalon S3 CLOS**, vérifié à l'écran
+Dernière mise à jour : 2026-08-03 · **jalon S4 LIVRÉ**, checkpoint VERT 21 · **pas encore
+vérifié à l'écran** — voir §« Ce qui reste à faire sur S4 »
 
 ## Fait & vert
 - 5cd3d3e T1.2 jetons CSS, i18n FR, durcissement I10 → VERT
@@ -10,10 +11,14 @@ Dernière mise à jour : 2026-08-03 · **jalon S3 CLOS**, vérifié à l'écran
 - fe444f1 docs — Q-D tranchée
 - b7ac4f9 **S3a** — session applicative, compte de développement connectable
 - 2e432d8 **S3b** — connexion, coquille, liste et fiche Patients
+- 074a306 **S4a** — portes RDV en base, audit de liste (ADR-021), migrations 022 + 023
+- 0a695c9 **S4b** — service rendez-vous sur `DbPort`
+- 63fadd1 **S4c** — agenda : vue jour, création, modification, annulation
 
-## Portes, toutes rejouées le 2026-08-03 après la revue adversariale
-`preflight` · `typecheck` · `lint` · `build` · **`checkpoint-adr019` VERT 24** ·
-`checkpoint-j1a` VERT 14 · `checkpoint-s2` VERT 15 · `verify-migrations` VERT 7.
+## Portes, toutes rejouées le 2026-08-03 après S4
+`preflight` · `typecheck` · `lint` · `build` · **`checkpoint-s4` VERT 21** ·
+**`checkpoint-adr019` VERT 24** · `checkpoint-j1a` VERT 14 · `checkpoint-s2` VERT 15 ·
+`verify-migrations` VERT 7. Aucune régression sur S1–S3.
 
 **La couche sécurité est gelée.** ADR-019 tient sur `app_gatekeeper` : sans `BYPASSRLS`, membre
 de `authenticated` **avec `INHERIT TRUE`**, propriétaire des trois portes. Les policies de `004`
@@ -24,6 +29,38 @@ Connexion · routes protégées · gestion de session · écran de connexion · 
 coquille `AppShell` · navigation composée par rôle · abstraction `DbPort` · `src/services/auth.ts` ·
 liste Patients avec recherche · fiche patient · état hors ligne · audit des lectures (I4) ·
 automatisation du compte de développement. ADR respectées, aucune réécrite.
+
+## Ce que S4 livre, et qui fonctionne
+Agenda du jour et des trente jours suivants · création · modification · annulation · détail d'un
+rendez-vous · statuts · sélecteur de praticienne · cinq portes Postgres (ADR-021) · déclencheur de
+transitions · `useSessionEcran` extrait. **Aucune ADR réécrite, `DbPort` inchangé.**
+
+## Ce qui reste à faire sur S4
+- **Vérification à l'écran NON FAITE.** Le chemin de données est prouvé par 21 contrôles ; le
+  rendu ne l'est pas. S3 a été validé à l'écran et c'est là qu'ont surgi quatre défauts que les
+  portes n'avaient pas vus. **Ne pas clore S4 avant de l'avoir fait.**
+- **Type de consultation absent** — colonne inexistante, liste réelle non fournie. Migration
+  isolée d'une quinzaine de lignes le jour où la Dr. Larbi la donne ; colonne **nullable**, aucun
+  écran à reconstruire. Même traitement que les ~60 molécules : un état vide est honnête.
+- Vue **semaine** non construite (MODULE-MAP la nomme) · file d'attente · `mark_patient_arrived` ·
+  validation des demandes web `requested`.
+
+## Le défaut de S4, à ne pas réapprendre
+**Dix-neuf contrôles VERTS pendant que `create_appointment` ne créait rien.** Elle butait sur le
+garde-fou `is_synthetic` d'ADR-016 — qui faisait exactement son travail. Aucun des dix-neuf
+n'exerçait le chemin nominal : les contrôles d'écriture vérifiaient tous un **refus**, et un refus
+reste vert quand la fonction échoue pour une tout autre raison. Trouvé en sondant la base à la
+main **après** un checkpoint vert, pas par le checkpoint.
+
+**Un checkpoint qui ne teste que ce qui doit échouer ne prouve pas que le reste marche.** Les
+contrôles 20 et 21 comblent le trou. À appliquer à tout checkpoint futur : pour chaque refus
+vérifié, vérifier le succès correspondant.
+
+Corollaire sur ADR-016, écrit parce qu'il est vrai : `create_appointment` dérive `is_synthetic` de
+`app.is_cloud_dev()`, donc **le garde-fou ne bloque plus les écritures de RDV de l'application**
+en phase cloud. Ce qui protège encore l'instance n'est pas ce trigger mais l'absence d'écran de
+création de dossier patient et la condition 1 d'ADR-016. Ne pas présenter la couverture de 016
+comme totale sur les tables où l'application écrit.
 
 ## Preuve I4, par le chemin réel de l'écran
 Une fiche ouverte = **+1 ligne d'audit, exactement**. Décomposition mesurée : `recherche` 1 ligne
@@ -88,17 +125,20 @@ Corollaire mesuré ce jour : le lint I10 laisse passer `minmax(240px, 1fr)` (lit
 - PC serveur cabinet (16–32 Go) → déclenche ADR-016 → ADR-001
 
 ## Reste à faire
-**Tout ce qui vient après la consultation d'un dossier.** S3 s'arrête à la lecture : aucune
-création de patient, aucune modification, aucun agenda, aucune consultation, aucune note, aucun
-document, aucun paiement, aucun Jarvis. Onze des douze écrans du §5 ne sont pas construits — la
-coquille les affiche inertes et marqués « Écran à venir » (I19), pas en liens morts.
+**Tout le clinique.** S4 ajoute l'agenda ; il n'y a toujours aucune création de patient, aucune
+consultation, aucune note, aucun document, aucun paiement, aucun Jarvis. Dix des douze écrans du
+§5 ne sont pas construits — la coquille les affiche inertes et marqués « Écran à venir » (I19),
+pas en liens morts.
 
-## Prochain jalon — S4
-**Agenda** : vues jour/semaine sur `src/services/appointments.ts`, déjà écrit et jamais consommé.
-⚠️ Deux pièges à relire AVANT d'écrire une ligne :
-- Le front assistante requête la vue `app.appointments_admin`, **jamais** la table.
-- ADR-017 a sorti `reason` dans `app.appointment_reasons`, **sans aucune policy assistante** — la
-  RLS filtre des lignes, pas des colonnes, et c'est pour ça que la vue seule ne protégeait rien.
+## Prochain jalon — S5
+**Consultation** (`/consultation/[id]`, tables `consultations` + `clinical_notes`), praticienne
+seule. ⚠️ À relire AVANT d'écrire une ligne : I15 — note signée immuable, brouillon 15 min puis
+verrou par déclencheur, correction = amendement visible. **Aucun bypass, jamais.** Et I7 : l'IA
+décrit, elle ne conclut pas.
+
+Ce que S4 a appris et qui vaut pour S5 : la première voie d'écriture d'une table Tier 0/1
+rencontre le garde-fou `is_synthetic` d'ADR-016. Le prévoir, et **dériver** la valeur de
+`app.is_cloud_dev()` — jamais l'écrire en dur.
 
 Deux dettes d'écran ouvertes par S3, à traiter quand un besoin réel les justifie, pas avant :
 le tableau de bord n'existe pas (la racine redirige vers Patients), et la troisième colonne de

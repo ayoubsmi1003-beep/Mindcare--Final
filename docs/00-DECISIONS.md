@@ -278,6 +278,38 @@ app.get_patient(p_id)                       -- SECURITY INVOKER
 
 **Rejeté — un assistant de transaction.** PostgREST n'expose pas de transaction multi-requêtes : un tel assistant donnerait une garantie d'atomicité **fausse**, ce qui est pire que son absence. Quand l'atomicité sera requise, elle sera écrite en fonction Postgres — comme `app.set_deployment_environment()` et `app.get_patient()` le font déjà.
 
+### ADR-021 — L'agenda passe par des portes ; `DbPort` n'apprend pas à écrire
+**Date.** 2026-08-03. **Complète** ADR-019 et ADR-020. **Migration** `022_appointment_gates.sql`.
+
+**Le problème.** S4 doit créer, déplacer et annuler des rendez-vous. `DbPort` (ADR-020) expose `select`, `rpc` et l'authentification : **rien dans le dépôt ne sait écrire dans une table.** Il fallait trancher entre étendre le port et fermer le chemin en base.
+
+**Décision.** Cinq fonctions Postgres, et le port reste **inchangé** :
+
+```sql
+app.list_agenda(from, to, practitioner)   -- SECURITY DEFINER, OWNER app_gatekeeper
+app.get_appointment(id)                   -- SECURITY DEFINER, OWNER app_gatekeeper
+app.create_appointment(…)                 -- SECURITY INVOKER
+app.update_appointment(id, changes)       -- SECURITY INVOKER, allowlist stricte
+app.cancel_appointment(id, motif)         -- SECURITY INVOKER
+trg_appt_transition                       -- BEFORE UPDATE, sur la TABLE
+```
+
+**Pourquoi pas un port qui sait écrire.** Trois raisons, dans l'ordre. *Atomicité* — un rendez-vous et son motif (ADR-017) sont deux lignes dans deux tables ; ADR-020 écrit déjà que l'atomicité s'obtient en fonction Postgres, pas par un assistant qui la promettrait faussement. *Les règles du dossier vivent en base* — « une consultation terminée ne s'annule pas » écrit en TypeScript ne s'applique qu'aux appelants qui y pensent, donc pas à Jarvis, pas au futur front assistante ; écrit en déclencheur, il s'applique à tout le monde. *Surface* — un `update` générique accepterait `practitioner_id`, c'est-à-dire la cloison ADR-003 contournée par une modification de routine.
+
+**Aucune élévation de privilège pour les écritures.** Les trois portes d'écriture sont `SECURITY INVOKER` : `authenticated` possède déjà `INSERT`/`UPDATE` sur `app.appointments` (privilèges par défaut de `001`) et les policies `appt_clinical` / `appt_assistant` de `006` portent un `WITH CHECK`. Ces fonctions ne testent aucun rôle et ne filtrent rien. **La RLS décide.**
+
+**Le contexte d'audit `liste`, et pourquoi il fallait le sortir du placard.** Un agenda affiche des **noms**, et le nom d'un patient ne s'obtient que par `app.get_patient`, qui journalise une ligne `fiche` **par appel**. Douze rendez-vous à l'écran auraient produit douze « ouvertures de dossier » dans le journal légal, et la preuve établie en S3 — *une fiche ouverte = +1 ligne d'audit, exactement* — serait devenue fausse. `audit.log_read` acceptait `fiche`, `recherche` et `liste` depuis `017` ; le troisième n'avait jamais servi. `list_agenda` en écrit **une seule** par affichage, `patient_id` à NULL. `get_appointment` écrit `liste` **avec** le `patient_id` : consulter un rendez-vous désigne une personne, ouvrir son dossier est autre chose.
+
+**Les deux portes de lecture appartiennent à `app_gatekeeper`**, comme celles de `020`, et pour la même raison mesurée en `018` : une fonction `SECURITY DEFINER` possédée par un rôle `rolbypassrls` ne voit **aucune** policy. Le contrôle 11 de `checkpoint-s4.sh` étend à `app.appointments` la vérification qui aurait arrêté `018`.
+
+**La plage est bornée à 62 jours EN BASE.** C'est l'analogue du `p_limit ≤ 100` de `search_patients` : une plage que l'appelant choisit sans limite n'est pas un agenda, c'est un export de la base patients par la porte de service.
+
+**Le paramètre de modification est `text`, pas `jsonb`.** `RpcArgs` n'accepte que des scalaires, délibérément : un port qui transporterait des structures arbitraires obligerait chaque adaptateur futur à reproduire la sérialisation de PostgREST. Le document voyage en texte et se décode en base, par un cast explicite. Une clé absente ne change rien, une clé à `null` efface — distinction qu'aucun jeu de paramètres nullables ne sait rendre.
+
+**Limite écrite, à ne pas enjoliver.** `appt_no_overlap` (`006`) ne bloque qu'un `starts_at` **identique** sur un statut actif. **Deux rendez-vous qui se chevauchent sans commencer à la même seconde passent.** Fermer ça demande `btree_gist` et une contrainte `EXCLUDE` — décision de schéma hors périmètre S4, signalée telle quelle et **pas** contournée par une vérification en JavaScript, qui ne serait qu'une convention de plus.
+
+**Non décidé, et donc non construit.** Le **type de consultation** n'existe dans aucune table. `source` est le canal d'entrée (`phone`/`walk_in`/`web`/`assistant`/`doctor`), pas le type. La liste réellement employée par la praticienne n'ayant pas été fournie, inventer « première consultation / suivi / urgence » aurait fabriqué une taxonomie clinique dans un dossier médical (I19). Le champ s'ajoutera par une migration isolée — colonne **nullable**, visible de tous les rôles — sans qu'aucun écran soit à reconstruire.
+
 ---
 
 ## 4. PÉRIMÈTRE DES 2 JOURS
