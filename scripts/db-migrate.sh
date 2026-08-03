@@ -117,9 +117,18 @@ echo "Cible : ${host:-inconnue}"
 
 # `$PGURL` est développé DANS le conteneur, jamais sur la ligne de commande de
 # l'hôte : le mot de passe n'apparaît donc ni dans `ps`, ni dans l'historique.
+#
+# CHEMIN DE MONTAGE — sous Git Bash, `pwd` rend `/c/Users/…`, que Docker Desktop
+# ne sait pas monter : il crée un volume vide, et psql rend « No such file or
+# directory » en désignant un fichier qui EXISTE. Le message accuse la migration
+# alors que le montage est vide. `pwd -W` rend la forme `C:/Users/…` attendue.
+# MSYS_NO_PATHCONV empêche par ailleurs Git Bash de réécrire `/mig` en chemin
+# Windows au passage de la ligne de commande.
+HOSTDIR="$(pwd -W 2>/dev/null || pwd)/$MIGDIR"
+
 psql_run() {
-  docker run --rm -i -e PGURL="$DATABASE_URL" \
-    -v "$(pwd)/$MIGDIR:/mig:ro" "$PGIMAGE" \
+  MSYS_NO_PATHCONV=1 docker run --rm -i -e PGURL="$DATABASE_URL" \
+    -v "$HOSTDIR:/mig:ro" "$PGIMAGE" \
     sh -c "psql \"\$PGURL\" $*" 2>&1
 }
 

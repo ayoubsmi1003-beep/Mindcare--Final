@@ -38,17 +38,29 @@ VALUES
    'authenticated', 'authenticated', 'assistante.dev@invalid.local', 'CONNEXION-IMPOSSIBLE', now(), now())
 ON CONFLICT (id) DO NOTHING;
 
+-- IDENTITÉ DU CABINET ET DES PRATICIENNES : SYNTHÉTIQUE ELLE AUSSI.
+-- Ce fichier semait le nom réel de la praticienne, son numéro personnel et son
+-- numéro d'ordre. Aucune donnée patient, donc ni la règle 1 ni I5 n'étaient
+-- franchies — mais la migration 016 marque tout ce fichier `is_synthetic =
+-- true`, et le garde-fou aurait donc DÉCLARÉ SYNTHÉTIQUE une donnée qui ne
+-- l'était pas. Un garde-fou qui affirme quelque chose de faux est pire qu'un
+-- garde-fou absent : on lui fait confiance.
+-- Le numéro d'ordre en particulier est ce qui rend un certificat médical
+-- opposable ; il n'a rien à faire dans une base de développement.
+-- L'identité réelle est saisie à la migration auto-hébergée (ADR-001), sur la
+-- machine du cabinet, là où elle a sa place.
 INSERT INTO app.cabinets (id, name, address, phone)
-VALUES ('00000000-0000-0000-0000-000000000001', 'Cabinet Dr. Larbi N.', 'Alger', '0554813911')
+VALUES ('00000000-0000-0000-0000-000000000001',
+        'Cabinet de développement (données de test)', 'Alger', '0000000000')
 ON CONFLICT (id) DO NOTHING;
 
 INSERT INTO app.profiles (id, cabinet_id, role, full_name, title, speciality_fr,
                           speciality_ar, order_number, phone)
 VALUES
   ('00000000-0000-0000-0000-0000000000a1', '00000000-0000-0000-0000-000000000001',
-   'owner', 'Larbi N.', 'Dr.',
+   'owner', 'Praticienne 1 (données de test)', 'Dr.',
    'Médecin Spécialiste en Psychiatrie et Psychothérapie',
-   'طبيب أخصائي في الطب النفسي والعلاج النفسي', '16/16780', '0554813911'),
+   'طبيب أخصائي في الطب النفسي والعلاج النفسي', 'TEST/0000', '0000000000'),
   ('00000000-0000-0000-0000-0000000000a2', '00000000-0000-0000-0000-000000000001',
    'practitioner', 'Praticienne 2 (données de test)', 'Dr.',
    'Médecin Spécialiste en Psychiatrie', NULL, NULL, NULL),
