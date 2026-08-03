@@ -58,8 +58,14 @@ interface GroupeNav {
   readonly ecrans: readonly EcranKey[];
 }
 
-/** Seul écran construit à ce jour (§ brief). Tout le reste est inerte. */
-const ECRAN_CONSTRUIT: EcranKey = "patients";
+/**
+ * Écrans construits à ce jour. Tout le reste est inerte et visiblement à venir
+ * (I19) — pas de lien mort qui ouvre une page blanche.
+ *
+ * S4 y ajoute `agenda`. La liste est la SEULE chose à toucher ici quand un
+ * écran est livré : la navigation elle-même ne change pas.
+ */
+const ECRANS_CONSTRUITS: readonly EcranKey[] = ["patients", "agenda"];
 
 /**
  * Composition COMPLÈTE — praticienne (`owner`/`practitioner`). Les deux rôles
@@ -203,7 +209,7 @@ export function AppShell({
             <ul style={{ listStyle: "none", margin: "var(--size-0)", padding: "var(--size-0)", display: "flex", flexDirection: "column", gap: "var(--s-1)" }}>
               {groupe.ecrans.map((ecranKey) => {
                 const libelle = fr.nav.ecrans[ecranKey];
-                const construit = ecranKey === ECRAN_CONSTRUIT;
+                const construit = ECRANS_CONSTRUITS.includes(ecranKey);
 
                 return (
                   <li key={ecranKey}>
