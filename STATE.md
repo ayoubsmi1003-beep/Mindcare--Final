@@ -1,5 +1,5 @@
 # STATE — MindCare OS
-Dernière mise à jour : 2026-08-03 · commit 2e432d8 · **jalon S3 livré**
+Dernière mise à jour : 2026-08-03 · **jalon S3 CLOS**, vérifié à l'écran
 
 ## Fait & vert
 - 5cd3d3e T1.2 jetons CSS, i18n FR, durcissement I10 → VERT
@@ -19,14 +19,22 @@ Dernière mise à jour : 2026-08-03 · commit 2e432d8 · **jalon S3 livré**
 de `authenticated` **avec `INHERIT TRUE`**, propriétaire des trois portes. Les policies de `004`
 ne sont pas modifiées — c'est tout le design. Y toucher casse la cloison.
 
-## Preuve I4, par le chemin réel de l'écran
-Connexion `owner.dev@invalid.local` → 2 patients → une fiche ouverte = **+1 ligne d'audit,
-exactement**. Décomposition mesurée : `recherche` 1 ligne avec `patient_id` NULL (la recherche ne
-nomme personne), `fiche` 1 ligne par ouverture — y compris pour un dossier inexistant, puisque
-`log_read` s'exécute AVANT la lecture et que la TENTATIVE est ce qu'un audit doit savoir dire.
+## Ce que S3 livre, et qui fonctionne
+Connexion · routes protégées · gestion de session · écran de connexion · bouton de déconnexion ·
+coquille `AppShell` · navigation composée par rôle · abstraction `DbPort` · `src/services/auth.ts` ·
+liste Patients avec recherche · fiche patient · état hors ligne · audit des lectures (I4) ·
+automatisation du compte de développement. ADR respectées, aucune réécrite.
 
-Reste à faire par un humain : le clic visuel dans un navigateur, et la coupure réseau en cours de
-route (I20). Le chemin de données est prouvé, le rendu ne l'est pas.
+## Preuve I4, par le chemin réel de l'écran
+Une fiche ouverte = **+1 ligne d'audit, exactement**. Décomposition mesurée : `recherche` 1 ligne
+avec `patient_id` NULL (la recherche ne nomme personne), `fiche` 1 ligne par ouverture — y compris
+pour un dossier inexistant, puisque `log_read` s'exécute AVANT la lecture et que la TENTATIVE est
+ce qu'un audit doit savoir dire.
+
+## Vérification visuelle — FAITE
+Connexion fonctionnelle, barre latérale fonctionnelle, **2 patients synthétiques visibles**, liste
+chargée correctement, application stable. Le rendu est constaté, plus seulement le chemin de
+données.
 
 ## Quatre défauts trouvés à l'exécution — à ne pas réapprendre
 - **`grep -m1` sur `.env` retient une affectation VIDE.** Le gabarit laissait
@@ -79,12 +87,19 @@ Corollaire mesuré ce jour : le lint I10 laisse passer `minmax(240px, 1fr)` (lit
   sont semées inactives et sans barème pour la même raison (I19)
 - PC serveur cabinet (16–32 Go) → déclenche ADR-016 → ADR-001
 
-## Prochaine tâche
-**S4 — Agenda** : vues jour/semaine sur `src/services/appointments.ts`, déjà écrit et non
-consommé. ⚠️ Le front assistante doit requêter la vue `app.appointments_admin`, **jamais** la
-table — et ADR-017 a sorti `reason` dans `app.appointment_reasons`, sans aucune policy assistante.
-Relire ADR-017 avant d'écrire une seule ligne.
+## Reste à faire
+**Tout ce qui vient après la consultation d'un dossier.** S3 s'arrête à la lecture : aucune
+création de patient, aucune modification, aucun agenda, aucune consultation, aucune note, aucun
+document, aucun paiement, aucun Jarvis. Onze des douze écrans du §5 ne sont pas construits — la
+coquille les affiche inertes et marqués « Écran à venir » (I19), pas en liens morts.
 
-Avant S4, deux dettes d'écran ouvertes par S3 : le tableau de bord n'existe pas (la racine redirige
-vers Patients), et la troisième colonne de contexte du §3 n'est pas posée — le jeton
-`--grid-context-width` attend l'écran qui en aura besoin.
+## Prochain jalon — S4
+**Agenda** : vues jour/semaine sur `src/services/appointments.ts`, déjà écrit et jamais consommé.
+⚠️ Deux pièges à relire AVANT d'écrire une ligne :
+- Le front assistante requête la vue `app.appointments_admin`, **jamais** la table.
+- ADR-017 a sorti `reason` dans `app.appointment_reasons`, **sans aucune policy assistante** — la
+  RLS filtre des lignes, pas des colonnes, et c'est pour ça que la vue seule ne protégeait rien.
+
+Deux dettes d'écran ouvertes par S3, à traiter quand un besoin réel les justifie, pas avant :
+le tableau de bord n'existe pas (la racine redirige vers Patients), et la troisième colonne de
+contexte du §3 n'est pas posée — le jeton `--grid-context-width` attend l'écran qui en aura besoin.

@@ -120,18 +120,23 @@ Appliqué par **RLS Postgres**, jamais par le front.
 Q-A → ADR-017 · Q-B → ADR-019 · Q-C → ADR-018, résumés au §8. Le §5.1 de `01-SCHEMA` est
 périmé (ADR-017). Une question nouvelle s'inscrit ICI avant d'être codée, jamais l'inverse.
 
-**Q-D — OUVERTE au 2026-08-03. ADR-019 est INAPPLICABLE en l'état.** Prouvé en base, pas déduit.
-- `SECURITY INVOKER` + `SELECT` révoqué = les deux portes butent sur leur propre révocation.
-  `app.patients` n'a aujourd'hui **aucun chemin de lecture ni d'écriture applicatif.**
-- `SECURITY DEFINER` **ne répare pas** : le propriétaire `postgres` a `rolbypassrls = t`, donc les
-  portes ne voient plus aucune policy. Essayé en 018, **la cloison praticiennes est tombée**
-  (Dr #2 lisant la patiente de la Dr Larbi) — annulé par 019. `FORCE ROW LEVEL SECURITY` et
-  `rolsuper = f` ne suffisent pas : c'est `rolbypassrls` qu'il faut lire.
-- Piste non codée : propriétaire de fonction dédié **sans** `BYPASSRLS`, et policies de `004`
-  rendues applicables à ce rôle (`TO PUBLIC` au lieu de `TO authenticated`, prédicats inchangés).
-  **Touche le fichier le plus sensible du corpus — ne rien écrire sans arbitrage humain.**
-- Tant que Q-D est ouverte : `checkpoint-j1a` T2/T8 et `checkpoint-s2` contrôles base ne peuvent
-  pas être verts. **Aucun commit ne doit prétendre le contraire.**
+**Q-D — CLOSE le 2026-08-03, migrations `020`/`021`.** ADR-019 est opérationnelle et éprouvée par
+exécution : `checkpoint-adr019` VERT 24, `checkpoint-j1a` VERT 14, `checkpoint-s2` VERT 15.
+
+Résolution : rôle propriétaire dédié `app_gatekeeper`, **sans `BYPASSRLS`**, membre de
+`authenticated` **avec `INHERIT TRUE`**, propriétaire des trois portes `SECURITY DEFINER`.
+**Les policies de `004` ne sont PAS modifiées** — la piste esquissée ici proposait de les passer
+`TO PUBLIC` ; ça n'a pas été nécessaire, et ne pas toucher au fichier le plus sensible du corpus
+est tout l'intérêt du design retenu. **Y toucher casse la cloison.**
+
+Ce qu'il ne faut pas réapprendre, et qui reste vrai :
+- `SECURITY INVOKER` + `SELECT` révoqué = les portes butent sur leur propre révocation.
+- `SECURITY DEFINER` possédé par `postgres` **fait tomber la cloison praticiennes** — mesuré en
+  `018` (Dr #2 lisant la patiente de la Dr Larbi), annulé par `019`. Pour juger si la RLS
+  s'applique, `rolsuper = f` et `FORCE ROW LEVEL SECURITY` ne suffisent pas : **lire
+  `rolbypassrls`.**
+- Sous Postgres 16, l'appartenance à un rôle gèle son héritage : `GRANT … WITH INHERIT TRUE` est
+  requis, un `ALTER ROLE … INHERIT` ultérieur ne rattrape pas une adhésion déjà accordée.
 
 ## 8 · DÉCISIONS GELÉES non couvertes par les invariants
 - **ADR-001** Supabase auto-hébergé sur le PC du cabinet. **SUSPENDUE par ADR-016** le temps du
