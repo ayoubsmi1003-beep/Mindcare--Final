@@ -203,6 +203,21 @@ Police : Times New Roman 14
 
 **Conséquence.** `docs/SELF-HOST-SETUP.md` cesse d'être la tâche S0 et devient la **procédure de migration** ; `s0-provision.sh` et `checkpoint-s0.sh` sont conservés inchangés pour ce jour-là.
 
+#### Amendement du 2026-08-03 — un compte **développeur** connectable, la condition 1 intacte
+
+**Ce qui change.** Un seul compte de l'instance cloud devient connectable : `…a1` (`owner.dev@invalid.local`), posé par la migration `015`. Les comptes `…a2` (praticien 2) et `…a3` (assistante) gardent leur hash volontairement invalide et **restent inconnectables**.
+
+**Pourquoi c'est nécessaire, et pas un confort.** Le client Supabase utilise la clé `anon` avec session. Sans session, `auth.uid()` est NULL, la RLS ne rend rien, et **tout écran affiche un vide permanent sans le moindre message**. On ne peut donc ni construire ni éprouver un écran clinique. Le jalon S3 était bloqué là, pas ailleurs.
+
+**Pourquoi la condition 1 n'est pas levée.** Elle interdit un accès **praticien** — « aucun compte pour la Dr. Larbi sur cette instance, aucune démo dessus ». Ce compte n'est pas le sien : il porte une identité de cabinet synthétique (la migration `015` a été expurgée de son nom, de son téléphone et de son numéro d'ordre le 2026-08-02, précisément pour que rien de réel ne subsiste). Il ouvre des dossiers fictifs, sur une base que le trigger `assert_synthetic_when_cloud` empêche de recevoir autre chose. La condition 1 protège la donnée réelle et la praticienne, pas le mécanisme d'authentification.
+
+**Ce qui l'encadre.**
+- Le mot de passe **n'entre jamais dans une migration** : il vivrait dans le dépôt, donc partagé et irrévocable (I1). Il est lu depuis `.env` par `scripts/dev-account.sh` à l'exécution.
+- Le script **refuse de s'exécuter** si `app.deployment` ne confirme pas exactement une ligne `cloud-dev` — et refuse aussi en cas de doute : lecture impossible, table absente, plusieurs lignes.
+- **Ce compte disparaît à la migration ADR-001.** La procédure de bascule doit le supprimer, au même titre que le reste des données synthétiques. Un compte de développement survivant sur la machine du cabinet serait un accès `owner` sur des dossiers réels.
+
+**Limite écrite, à ne pas enjoliver.** Quiconque a accès au démon Docker de ce poste peut lire le mot de passe pendant la vie du conteneur éphémère (`docker inspect`). Acceptable sur une machine de développement portant des données synthétiques ; inacceptable sur le serveur du cabinet — et c'est une raison de plus pour que ce script n'y tourne jamais.
+
 ### ADR-017 — `reason` sort de `app.appointments` (résout Q-A)
 **Date.** 2026-08-02. **Remplace** la « solution » du §5.1 de `01-SCHEMA.md`.
 
