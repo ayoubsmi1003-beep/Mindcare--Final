@@ -35,6 +35,13 @@
     --card: #ffffff;
     --sunken: #f2f5f4;
     --rule: #e4eae8;
+    /* Épaisseur du trait de séparation. Absente du §3 de WORKING-CONTEXT, qui
+       ne liste que la COULEUR `--rule` : sans elle, tout composant portant une
+       bordure écrit `1px` en dur et I10 le refuse — l'invariant devenait
+       inapplicable pour un trait. Valeur unique et volontairement seule : une
+       échelle d'épaisseurs inviterait des traits de 2px et 3px, et le système
+       n'en a pas. Un trait est un trait. */
+    --rule-width: 1px;
 
     --teal-900: #0d3833;
     --teal-700: #14544d;

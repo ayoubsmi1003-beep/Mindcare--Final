@@ -273,5 +273,59 @@ out=$(grep -rniE "DISABLE TRIGGER (assert_synthetic|deployment_no_direct_write)|
       | grep -v node_modules | grep -v "^\./$guard:")
 [ -n "$out" ] && { echo "🔴 ADR-016/I2 : garde-fou ou RLS désarmé hors migration 016 :"; echo "$out"; fail=1; }
 
+# 9 — ADR-019 / ADR-020 : les chemins d'accès aux données restent uniques.
+#
+# Les trois contrôles ci-dessous doublent ce qu'ESLint applique déjà. Ce n'est
+# pas de la redondance décorative : ESLint peut être désarmé par un fichier de
+# configuration dans le même commit que la violation, et une revue lit rarement
+# les deux. Un grep ne se désarme pas depuis le code qu'il inspecte.
+
+# 9a — un seul fichier importe Supabase (ADR-020).
+adapter="src/services/db/supabase.ts"
+out=$(grep -rln "@supabase/supabase-js\|@supabase/ssr" --include="*.ts" --include="*.tsx" src/ 2>/dev/null \
+      | grep -v "^$adapter$")
+[ -n "$out" ] && { echo "🔴 ADR-020 : import Supabase hors de $adapter :"; echo "$out"; fail=1; }
+
+# 9b — la table `patients` n'est jamais requêtée en direct (ADR-019).
+# Depuis la migration 017, `SELECT` y est révoqué : un accès direct ne rend pas
+# une liste vide, il rend 42501. Ce contrôle attrape l'erreur à l'écriture
+# plutôt qu'en consultation.
+out=$(grep -rnE "relation:[[:space:]]*[\"']patients[\"']|from\([\"']patients[\"']\)" \
+        --include="*.ts" --include="*.tsx" src/ 2>/dev/null)
+[ -n "$out" ] && {
+  echo "🔴 ADR-019 : lecture directe de app.patients (audit contourné) :"; echo "$out"
+  echo "   Passer par app.get_patient / app.search_patients (src/services/patients.ts)."; fail=1; }
+
+# 9c — l'agenda passe par la vue, jamais par la table brute.
+# La vue n'est PAS le garde-fou (c'est ADR-017 qui protège le motif), mais
+# requêter la table brute signale un développeur qui n'a pas lu pourquoi la vue
+# existe — et c'est là que les erreurs de colonne clinique commencent.
+out=$(grep -rnE "relation:[[:space:]]*[\"']appointments[\"']|from\([\"']appointments[\"']\)" \
+        --include="*.ts" --include="*.tsx" src/ 2>/dev/null)
+[ -n "$out" ] && { echo "🔴 ADR-017 : app.appointments requêtée au lieu de appointments_admin :"; echo "$out"; fail=1; }
+
+# 9d — aucun identifiant patient dans le journal applicatif (règle 1, I5).
+# `LogFields` est une interface FERMÉE : rajouter `patientId` compile, et c'est
+# précisément le problème — la faute redevient possible d'une seule ligne. La
+# règle 1 nomme `patient_id` parmi les données qui ne quittent jamais la
+# machine, « pas vers un log ». Un UUID qui désigne une personne dans un cabinet
+# de quelques centaines de dossiers EST identifiant, recoupé avec un agenda.
+# La trace nominative légale a son endroit : `audit.log`, en base, en ajout seul.
+#
+# ⚠️ ON DÉPOUILLE LES COMMENTAIRES. Sans ça, ce contrôle mord sur le paragraphe
+# de `log.ts` qui explique justement pourquoi le champ a été retiré — quatrième
+# garde-fou de ce dépôt à tomber dans ce piège. Un garde-fou qui crie à tort
+# finit désactivé, donc protège moins. (Le contrôle 2, les secrets, reste
+# volontairement NON dépouillé : qu'il morde dans un commentaire est une
+# qualité, c'est ce qui attrape une clé collée « juste pour tester ».)
+out=$(sed -e 's|//.*$||' -e '/^[[:space:]]*\*/d' -e '/^[[:space:]]*\/\*/d' \
+          src/services/log.ts 2>/dev/null | grep -nE "patientId")
+[ -n "$out" ] && {
+  echo "🔴 I5 : patientId réintroduit dans le journal applicatif :"; echo "$out"
+  echo "   La trace nominative va dans audit.log, jamais dans un log applicatif."; fail=1; }
+
+out=$(grep -rnE "log\.(info|warn|error)\([^)]*patientId" --include="*.ts" --include="*.tsx" src/ 2>/dev/null)
+[ -n "$out" ] && { echo "🔴 I5 : patientId passé à un appel de journalisation :"; echo "$out"; fail=1; }
+
 [ $fail -eq 0 ] && echo "✅ preflight vert"
 exit $fail

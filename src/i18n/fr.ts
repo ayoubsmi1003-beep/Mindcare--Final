@@ -112,6 +112,57 @@ export const fr = {
   },
 
   /**
+   * Messages d'erreur de la couche données (`src/services/errors.ts`).
+   *
+   * Chacun est écrit en TROIS TEMPS — ce qui s'est passé · ce qui a été
+   * préservé · quoi faire — parce que « Une erreur est survenue » ne dit aucun
+   * des trois et laisse la praticienne décider seule si elle a perdu son
+   * travail, avec un patient en face.
+   *
+   * ⚠️ Ces phrases remplacent le message brut de Postgres, qui n'atteint JAMAIS
+   * l'écran : il porte régulièrement la valeur qui a déclenché l'erreur
+   * (« Key (phone)=(0554…) »), c'est-à-dire une donnée identifiante dans un
+   * message d'interface (I5).
+   *
+   * Les clés reprennent exactement `AppErrorCode`. `tsc` vérifie la
+   * correspondance à la compilation : un code sans message ne compile pas.
+   */
+  erreurs: {
+    "hors-ligne":
+      "La connexion au serveur est interrompue. Rien n'a été perdu : ce qui est affiché reste utilisable et la consultation peut continuer. Réessayez lorsque le réseau est rétabli.",
+    "non-authentifie":
+      "Votre session a expiré. Aucune donnée n'a été modifiée. Reconnectez-vous pour reprendre.",
+    interdit:
+      "Cet accès n'est pas autorisé pour votre rôle. Aucune donnée n'a été lue ni modifiée. Si vous pensez qu'il devrait l'être, signalez-le — la règle est appliquée par la base de données.",
+    introuvable:
+      "Cet élément est introuvable. Rien n'a été modifié. Il a pu être déplacé, ou ne relève pas de votre dossier.",
+    conflit:
+      "Cette valeur entre en conflit avec une donnée existante. Rien n'a été enregistré. Vérifiez la saisie, puis réessayez.",
+    "regle-metier":
+      "L'enregistrement a été refusé par une règle du dossier médical. Rien n'a été modifié. Le détail de la règle figure dans le journal d'activité.",
+    indisponible:
+      "Le service de données est momentanément indisponible. Aucune donnée n'a été perdue. Réessayez dans quelques instants.",
+    inattendu:
+      "Une erreur inattendue s'est produite. Aucune donnée n'a été modifiée. Réessayez ; si cela se reproduit, signalez-le avec l'heure exacte.",
+  },
+
+  /**
+   * Bandeau « données fictives » — ADR-016.
+   *
+   * La valeur affichée est LUE EN BASE (`app.deployment`), jamais déduite d'une
+   * variable d'environnement : le bandeau doit dire ce que la base fait.
+   * Jetons `--attention`, jamais `--critical` — le rouge est un budget réservé
+   * au disque critique et à la perte de données. Aucun verre : le verre décore
+   * le mobilier, pas la donnée.
+   */
+  bandeauSynthetique: {
+    titre: "Données fictives",
+    corps:
+      "Cette instance est une base de développement. Elle n'accepte que des données synthétiques et refuse toute donnée patient réelle.",
+    reference: "ADR-016",
+  },
+
+  /**
    * Mention permanente sur toute sortie d'aide à la décision (I7).
    * Elle n'est pas décorative et ne se masque pas : l'IA décrit, elle ne
    * conclut jamais.

@@ -461,10 +461,23 @@ const config = [
     },
   },
   {
-    // src/services/* est la seule porte d'accès autorisée à Supabase (I3).
-    // I9/I10 restent pleinement appliquées : parler à la base ne dispense
-    // ni des types, ni des tokens.
-    files: ["src/services/**/*.ts", "src/services/**/*.tsx"],
+    // I3 + ADR-020 — UN SEUL FICHIER, nommé, est dispensé.
+    //
+    // L'exception portait auparavant sur `src/services/**` en entier. C'était
+    // plus large que nécessaire : n'importe lequel des services métier pouvait
+    // se remettre à parler PostgREST en direct sans qu'aucune porte ne bronche,
+    // et I3 serait redevenue une convention de rangement. ADR-020 exige une
+    // seule dépendance à Supabase dans tout le dépôt — c'est ici qu'on
+    // l'applique, en nommant le fichier plutôt qu'un répertoire.
+    //
+    // Un second adaptateur (Postgres local pour ADR-001, SQLite hors-ligne,
+    // Electron) s'ajoutera À CÔTÉ et devra être ajouté À CETTE LISTE, donc
+    // relu. C'est le but : élargir la surface d'accès aux données doit être un
+    // geste visible dans un diff, pas un effet de bord d'un glob.
+    //
+    // I9/I10 restent pleinement appliquées : parler à la base ne dispense ni
+    // des types, ni des tokens.
+    files: ["src/services/db/supabase.ts"],
     rules: {
       "no-restricted-imports": "off",
       "local/no-supabase-resolution": "off",
