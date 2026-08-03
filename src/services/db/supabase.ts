@@ -28,7 +28,7 @@ import { getClientEnv } from "@/lib/env";
 
 import { toAppError } from "../errors";
 import { err, ok, type Result } from "../result";
-import type { DbPort, RpcArgs, SelectSpec } from "./port";
+import type { DbPort, RpcArgs, SelectSpec, SessionInfo, SignInCredentials } from "./port";
 
 function createAppClient() {
   const env = getClientEnv();
@@ -120,6 +120,48 @@ export const supabaseDbPort: DbPort = {
       const error = "error" in response ? response.error : null;
       if (error !== null && error !== undefined) return err(toAppError(error));
       return ok(asRows<T>("data" in response ? response.data : null));
+    } catch (cause) {
+      return err(toAppError(cause));
+    }
+  },
+
+  // `signInWithPassword` / `getSession` sont typés par le SDK — contrairement à
+  // `rpc()`, qui n'a pas de types générés. Pas besoin ici du détour par
+  // `unknown` : le compilateur connaît déjà la forme de `data.user.id`.
+  async signIn(credentials: SignInCredentials): Promise<Result<SessionInfo>> {
+    try {
+      const { data, error } = await getClient().auth.signInWithPassword({
+        email: credentials.email,
+        password: credentials.password,
+      });
+      if (error !== null) return err(toAppError(error));
+      // Cas sans erreur ET sans utilisateur : le SDK ne le documente pas, mais
+      // rendre une session vide comme un succès ferait croire à l'écran qu'il
+      // est connecté. On le traite en échec explicite plutôt que de repasser
+      // `error` — qui vaut `null` ici, et donnerait un diagnostic trompeur.
+      if (data.user === null) return err(toAppError(undefined));
+      return ok({ userId: data.user.id });
+    } catch (cause) {
+      return err(toAppError(cause));
+    }
+  },
+
+  async signOut(): Promise<Result<void>> {
+    try {
+      const { error } = await getClient().auth.signOut();
+      if (error !== null) return err(toAppError(error));
+      return ok(undefined);
+    } catch (cause) {
+      return err(toAppError(cause));
+    }
+  },
+
+  async getSession(): Promise<Result<SessionInfo | null>> {
+    try {
+      const { data, error } = await getClient().auth.getSession();
+      if (error !== null) return err(toAppError(error));
+      if (data.session === null) return ok(null);
+      return ok({ userId: data.session.user.id });
     } catch (cause) {
       return err(toAppError(cause));
     }

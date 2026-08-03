@@ -43,15 +43,33 @@ function toRole(value: string): UserRole | null {
 }
 
 /**
- * `app.profiles` porte sa propre policy : chacun ne lit que l'annuaire de son
- * cabinet. On ne filtre donc pas sur l'identité ici — la base l'a déjà fait, et
- * refaire son travail en JavaScript donnerait l'illusion que c'est ce filtre
- * qui protège.
+ * `app.profiles` porte sa propre policy : chacun lit l'annuaire de SON CABINET
+ * — donc plusieurs lignes, pas seulement la sienne.
+ *
+ * ⚠️ C'EST POURQUOI LE FILTRE SUR `id` EST INDISPENSABLE, ET CE N'EST PAS UNE
+ * DÉCISION D'AUTORISATION. Une version antérieure faisait `limit: 1` sans
+ * filtre ni tri, en s'appuyant sur « la base a déjà filtré ». Elle avait
+ * filtré : elle avait rendu tout le cabinet. Sans `ORDER BY`, PostgreSQL ne
+ * garantit aucun ordre, et `data[0]` était donc une ligne ARBITRAIRE de
+ * l'annuaire. L'assistante pouvait recevoir la ligne de la Dr Larbi : la
+ * coquille composait alors la navigation praticienne et affichait le nom d'une
+ * collègue comme « compte connecté ». Aucune donnée patient ne fuyait — la RLS
+ * tient — mais l'écran affirmait une identité qu'il n'avait pas vérifiée.
+ *
+ * Le filtre ne protège donc rien et ne prétend rien protéger : il DÉSIGNE la
+ * ligne voulue parmi celles que la base a légitimement rendues. La distinction
+ * est celle de tout ce fichier : choisir quoi afficher n'est pas décider qui a
+ * le droit de voir.
  */
 export async function getCurrentUser(): Promise<Result<CurrentUser | null>> {
+  const session = await db().getSession();
+  if (!session.ok) return err(session.error);
+  if (session.data === null) return ok(null);
+
   const result = await db().select<ProfileRow>({
     relation: "profiles",
     columns: ["id", "role", "full_name", "cabinet_id"],
+    filters: [{ column: "id", op: "eq", value: session.data.userId }],
     limit: 1,
   });
 

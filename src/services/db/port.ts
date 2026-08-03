@@ -58,9 +58,42 @@ export interface SelectSpec {
 
 export type RpcArgs = Readonly<Record<string, ScalarValue>>;
 
+export interface SignInCredentials {
+  readonly email: string;
+  readonly password: string;
+}
+
+/**
+ * Session PAUVRE, délibérément. `userId` et rien d'autre : ni e-mail, ni
+ * jeton, ni métadonnées. Un port qui rendrait le jeton d'accès inviterait un
+ * appelant à s'en servir ailleurs que dans l'adaptateur — exactement ce que
+ * `DbPort` interdit déjà pour les requêtes (voir l'en-tête du fichier).
+ */
+export interface SessionInfo {
+  readonly userId: string;
+}
+
 export interface DbPort {
   /** Lecture d'une relation exposée (table ou vue). */
   readonly select: <T>(spec: SelectSpec) => Promise<Result<readonly T[]>>;
   /** Appel d'une fonction Postgres. Seule voie vers l'identité patient (ADR-019). */
   readonly rpc: <T>(name: string, args: RpcArgs) => Promise<Result<readonly T[]>>;
+
+  /**
+   * `auth` APPARTIENT AU PORT, PAS À UN MODULE SÉPARÉ. Le jour d'ADR-001
+   * (Postgres local), l'authentification change d'implémentation EN MÊME
+   * TEMPS que la base — un cabinet hors-ligne ne peut pas dépendre d'un
+   * service d'identité cloud pendant que ses données vivent sur la machine
+   * locale. Si `auth` vivait à côté du port, le second adaptateur pourrait
+   * compiler sans la fournir, et l'application démarrerait sans authentification
+   * sans que rien ne le signale. En la mettant dans `DbPort`, un adaptateur
+   * incomplet échoue à la compilation, pas en cabinet.
+   *
+   * Trois opérations, aussi pauvres que `SessionInfo` : ouvrir une session,
+   * la fermer, lire celle en cours. Rien qui décide d'un accès — la RLS
+   * Postgres s'en charge, comme partout ailleurs dans ce dépôt.
+   */
+  readonly signIn: (credentials: SignInCredentials) => Promise<Result<SessionInfo>>;
+  readonly signOut: () => Promise<Result<void>>;
+  readonly getSession: () => Promise<Result<SessionInfo | null>>;
 }

@@ -27,4 +27,12 @@ export function setDbPort(port: DbPort | undefined): void {
   current = port;
 }
 
-export type { DbPort, SelectSpec, Filter, Order, RpcArgs } from "./port";
+export type {
+  DbPort,
+  SelectSpec,
+  Filter,
+  Order,
+  RpcArgs,
+  SessionInfo,
+  SignInCredentials,
+} from "./port";
