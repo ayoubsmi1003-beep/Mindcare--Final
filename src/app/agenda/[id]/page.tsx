@@ -72,6 +72,7 @@ import {
   type AgendaEntry,
   type ConsultationKind,
 } from "@/services/appointments";
+import { startConsultation } from "@/services/consultations";
 
 /** Les treize types, dans l'ordre fourni par le cabinet (cf. `/agenda/nouveau`). */
 const TYPES_ORDONNES = [
@@ -193,6 +194,40 @@ export default function PageRendezVous(): React.JSX.Element {
       }
       setConfirmation(fr.agenda.demandeApprouvee);
       recharger();
+    });
+  }
+
+  /**
+   * Ouvre la séance et s'y rend.
+   *
+   * La porte est IDEMPOTENTE sur un même rendez-vous : rejouée, elle rend la
+   * séance déjà ouverte au lieu de heurter l'index `one_open_consult` (026).
+   * Un double clic ou un retour arrière ne produit donc pas d'erreur illisible,
+   * et « Reprendre la séance » emprunte exactement le même chemin que
+   * « Démarrer la séance ».
+   */
+  function demarrerLaSeance(): void {
+    setMessageErreur(undefined);
+    setConfirmation(undefined);
+
+    const patientId = rdv?.patientId;
+    if (patientId == null) {
+      // Sans dossier rattaché, la note n'aurait aucun patient. Le bouton n'est
+      // pas rendu dans ce cas ; ce garde existe pour le chemin que le typage
+      // ne peut pas fermer.
+      setMessageErreur(fr.agenda.patientNonRattache);
+      return;
+    }
+
+    setEnvoi(true);
+    void startConsultation({ patientId, appointmentId: id }).then((result) => {
+      setEnvoi(false);
+      if (!result.ok) {
+        setHorsLigne(result.error.code === "hors-ligne");
+        setMessageErreur(result.error.message);
+        return;
+      }
+      router.push(`/consultation/${result.data}`);
     });
   }
 
@@ -458,6 +493,27 @@ export default function PageRendezVous(): React.JSX.Element {
               {rdv.status === "requested" ? (
                 <Bouton rang="principal" onClick={approuver} disabled={envoi}>
                   {fr.agenda.approuver}
+                </Bouton>
+              ) : null}
+
+              {/* ENTRÉE VERS LA SÉANCE (S5).
+                  La condition porte sur la PRATICIENNE DU RENDEZ-VOUS, pas sur
+                  un rôle : `app.start_consultation` refuse d'ouvrir une séance
+                  sur le rendez-vous d'une consœur, parce qu'une séance porte le
+                  nom de qui la conduit. La même règle, écrite ici, ne fait
+                  qu'éviter de proposer un bouton qui va échouer — elle ne
+                  protège rien, et la base refuserait de toute façon.
+                  Un rendez-vous sans dossier rattaché n'ouvre pas de séance :
+                  il n'y aurait pas de patient à qui rattacher la note. */}
+              {rdv.patientId !== null && rdv.practitionerId === utilisateur?.id ? (
+                <Bouton
+                  rang={rdv.status === "requested" ? "secondaire" : "principal"}
+                  onClick={demarrerLaSeance}
+                  disabled={envoi}
+                >
+                  {rdv.status === "in_session"
+                    ? fr.consultation.reprendre
+                    : fr.actions.demarrerLaSeance}
                 </Bouton>
               ) : null}
 

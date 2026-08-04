@@ -141,6 +141,69 @@ export function Squelette({
 }
 
 /**
+ * L'état d'enregistrement d'une saisie longue.
+ *
+ * IL EXISTE PARCE QUE LE SILENCE MENT. Une zone de texte qui s'enregistre toute
+ * seule sans rien dire laisse la praticienne décider seule si son travail est
+ * en sécurité — et la réponse par défaut, quand rien ne s'affiche, est « oui ».
+ * Elle ferme l'onglet. Sur une note de consultation, c'est la séance qui est
+ * perdue.
+ *
+ * `echec` ne dit JAMAIS que le texte est conservé quelque part : aucune
+ * persistance locale n'existe dans ce dépôt. Il dit ce qui est vrai — le texte
+ * est encore à l'écran, et il faut le laisser là.
+ *
+ * `role="status"` et non `alert` : l'information n'interrompt pas la frappe.
+ */
+export function IndicateurEnregistrement({
+  etat,
+  horodatage,
+}: {
+  readonly etat: "repos" | "encours" | "enregistre" | "echec";
+  /** Heure du dernier enregistrement réussi, déjà formatée par l'appelant. */
+  readonly horodatage?: string;
+}): React.JSX.Element | null {
+  if (etat === "repos") return null;
+
+  const libelles = {
+    encours: fr.consultation.enregistrement,
+    enregistre: fr.consultation.enregistre,
+    echec: fr.consultation.nonEnregistre,
+  } as const;
+
+  const encres = {
+    encours: "text-ink-500",
+    enregistre: "text-ink-500",
+    echec: "text-attention",
+  } as const;
+
+  return (
+    <span
+      role="status"
+      className={["flex items-center gap-2 font-ui text-label", encres[etat]].join(" ")}
+    >
+      {/* Une forme, pas seulement une couleur (§4 règle 4) : le point est plein
+          quand l'enregistrement a abouti, creux tant qu'il est en cours. */}
+      <span
+        aria-hidden="true"
+        className={[
+          "inline-block h-2 w-2 shrink-0 rounded-full border",
+          etat === "enregistre"
+            ? "border-positive bg-positive"
+            : etat === "echec"
+              ? "border-attention bg-attention"
+              : "border-ink-300 bg-transparent",
+        ].join(" ")}
+      />
+      {libelles[etat]}
+      {etat === "enregistre" && horodatage !== undefined ? (
+        <span className="font-num tabular-nums">{horodatage}</span>
+      ) : null}
+    </span>
+  );
+}
+
+/**
  * Un champ en lecture.
  *
  * Champ non renseigné : une PHRASE, jamais un tiret nu — un tiret se confond

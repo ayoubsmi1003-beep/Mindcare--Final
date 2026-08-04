@@ -302,6 +302,104 @@ export const fr = {
   },
 
   /**
+   * Consultation — la séance et la note clinique (S5).
+   *
+   * ⚠️ AUCUNE PHRASE ICI N'AFFIRME UNE PROTECTION QUE LE CODE NE TIENT PAS.
+   * `verrouParLaBase` dit que le refus vient de la base, parce que c'est vrai :
+   * `trg_note_immutable` (008) lève, et l'interface ne fait que le relayer.
+   * Ne jamais écrire ici qu'une note est « sauvegardée automatiquement » ni
+   * qu'une saisie est « conservée localement » : aucune persistance locale
+   * n'existe dans ce dépôt, et la praticienne fermerait l'écran en le croyant.
+   *
+   * ⚠️ AUCUN CONTENU CLINIQUE D'EXEMPLE (I19). Les indications sous les champs
+   * SOAP décrivent la RUBRIQUE, jamais ce qu'il faudrait y écrire — suggérer
+   * un contenu à une praticienne, c'est orienter un dossier médical.
+   */
+  consultation: {
+    titre: "Consultation",
+    surTitreSeance: "SÉANCE EN COURS",
+    surTitreClose: "SÉANCE CLOSE",
+    introuvable:
+      "Cette séance est introuvable. Rien n'a été modifié. Vérifiez le lien, ou revenez à l'agenda.",
+
+    /* ⚠️ NI « Démarrer la séance », NI « Terminer la séance », NI « Signer la
+       note » NE SONT ICI. Ces trois verbes sont IMPOSÉS par le §5 et vivent
+       déjà dans `actions.*`, avec leurs retours dans `feedback.*`. Les
+       redéclarer donnerait deux sources pour un même libellé, et le jour où
+       l'une change, deux écrans nomment le même geste différemment. */
+    reprendre: "Reprendre la séance",
+    /* Le geste est irréversible côté dossier : le rendez-vous passe à
+       « terminé » et les notes de travail se figent. On le dit avant, pas après. */
+    confirmerCloture:
+      "Terminer la séance ? Le rendez-vous passera à « Terminé » et les notes de travail ne seront plus modifiables.",
+
+    duree: "Durée de la séance",
+    debut: "Début",
+    fin: "Fin",
+    typeConsultation: "Type de consultation",
+
+    notesBrutes: "Notes de séance",
+    notesBrutesIndication:
+      "Brouillon de travail, saisi au fil de la séance. Ne fait pas partie de la note signée.",
+    notesBrutesFigees: "La séance est close : ces notes ne sont plus modifiables.",
+
+    note: "Note clinique",
+    noteAbsente: "Aucune note n'a encore été ouverte pour cette séance.",
+    subjective: "Subjectif",
+    subjectiveIndication: "Ce que le patient rapporte.",
+    objective: "Objectif",
+    objectiveIndication: "Ce qui est observé pendant l'entretien.",
+    assessment: "Évaluation",
+    assessmentIndication: "L'analyse clinique de la praticienne.",
+    plan: "Conduite à tenir",
+    planIndication: "Ce qui est décidé pour la suite.",
+
+    /* Le mot « définitivement » n'y est pas : la fenêtre de 15 minutes existe,
+       et l'annoncer comme définitif serait faux dans les deux sens. */
+    confirmerSignature:
+      "Signer cette note ? Elle entrera au dossier. Vous pourrez encore la corriger pendant quinze minutes, puis toute correction devra passer par un amendement.",
+    signeePar: "Signée par",
+    signeeLe: "Signée le",
+    noteVide: "Renseignez au moins une rubrique avant de signer.",
+
+    fenetreCorrection: "Correction possible encore",
+    fenetreIndication:
+      "Après ce délai, la note est verrouillée par la base de données et toute correction passe par un amendement.",
+    verrouillee: "Note verrouillée",
+    verrouParLaBase:
+      "Cette note est verrouillée. Le refus vient de la base de données, pas de cet écran : elle ne peut plus être réécrite par aucun moyen. Une correction s'ajoute en amendement.",
+
+    amendements: "Amendements",
+    amendementsAucun: "Aucun amendement.",
+    /* Le français accorde à partir de deux ; « 0 amendement » reste au
+       singulier. Le défaut « 1 séances » de S4 ne se rejoue pas ici. */
+    amendementSingulier: "amendement",
+    amendementPluriel: "amendements",
+    redigerAmendement: "Rédiger un amendement",
+    amendementMotif: "Motif de l'amendement",
+    amendementMotifIndication: "Pourquoi cette correction est nécessaire.",
+    amendementCorps: "Contenu de l'amendement",
+    amendementEnregistre: "Amendement enregistré.",
+    amendementIncomplet: "Le motif et le contenu sont tous deux requis.",
+    amendementPar: "Par",
+
+    /* Le panneau existe, la fonctionnalité non — et l'écran le dit au lieu
+       d'afficher une transcription inventée (I19). */
+    filSeance: "Fil de séance",
+    filSeanceIndisponible:
+      "La transcription automatique n'est pas disponible ce mois-ci. Les notes de séance ci-contre se saisissent à la main.",
+    assistance: "Aide à la décision",
+    assistanceIndisponible:
+      "L'analyse de séance n'est pas encore construite. Aucune suggestion n'est produite.",
+
+    enregistrement: "Enregistrement…",
+    enregistre: "Enregistré",
+    nonEnregistre: "Non enregistré",
+    nonEnregistreIndication:
+      "La dernière saisie n'a pas pu être envoyée. Le texte reste affiché à l'écran ; ne fermez pas cet onglet avant qu'il soit enregistré.",
+  },
+
+  /**
    * Les cinq états que tout composant doit gérer (I11).
    * `texteAbsent` couvre le champ vide ou non renseigné — jamais un tiret nu,
    * qui se confond avec une valeur.

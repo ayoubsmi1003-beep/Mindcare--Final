@@ -20,4 +20,13 @@ export type { TonBadge } from "./Badge";
 
 export { ChampTexte, ChampSelection, ChampZoneTexte } from "./Champs";
 
-export { BandeauHorsLigne, BlocErreur, EtatVide, Squelette, Champ } from "./Etats";
+export { EspaceTravail, SectionPliable } from "./Espaces";
+
+export {
+  BandeauHorsLigne,
+  BlocErreur,
+  EtatVide,
+  Squelette,
+  Champ,
+  IndicateurEnregistrement,
+} from "./Etats";

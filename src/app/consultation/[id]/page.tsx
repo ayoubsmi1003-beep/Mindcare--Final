@@ -1,0 +1,830 @@
+/**
+ * Consultation — l'espace de travail clinique.
+ *
+ * ⚠️ CET ÉCRAN NE PROTÈGE RIEN, ET C'EST LE POINT LE PLUS IMPORTANT À GARDER EN
+ * TÊTE EN LE MODIFIANT. Il grise un bouton quand la fenêtre de 15 minutes est
+ * passée ; ce qui EMPÊCHE la réécriture d'une note signée est
+ * `trg_note_immutable` (migration 008), en base, hors de portée de tout
+ * appelant. Si l'horloge de ce poste dérive de deux minutes, cet écran se
+ * trompe et le déclencheur, non. Il doit donc savoir encaisser un refus sur un
+ * bouton qu'il croyait actif — c'est ce que fait `signalerErreur`.
+ *
+ * Ne jamais présenter le grisage comme la protection d'I15. Ne jamais ajouter
+ * de chemin qui « réessaie » une écriture refusée.
+ *
+ * ⚠️ INTROUVABLE ET HORS PÉRIMÈTRE SONT INDISCERNABLES. `app.get_consultation`
+ * rend zéro ligne dans les deux cas. Afficher « cette séance ne vous est pas
+ * accessible » confirmerait à une praticienne l'existence d'une consultation
+ * chez sa consœur — une fuite par le message d'erreur, sans qu'aucune donnée
+ * n'ait été lue (cloison ADR-003). Un seul message pour les deux.
+ *
+ * ═══ POURQUOI LA PAGE A CETTE FORME, ET PAS UNE AUTRE ══════════════════════
+ *
+ * Deux colonnes : LE TRAVAIL et SON CONTEXTE. C'est la disposition définitive
+ * de l'espace clinique, pas celle de S5. La transcription (semaine 2),
+ * l'analyse de séance (S6), les ordonnances et les documents (S7) s'ajoutent
+ * comme des `SectionPliable` supplémentaires — dans la colonne de contexte pour
+ * ce qui informe, dans la colonne de travail pour ce qui se rédige. Aucun de
+ * ces ajouts ne redécoupe la page.
+ *
+ * LES DEUX PANNEAUX À VENIR SONT DÉJÀ LÀ, ET ILS SONT HONNÊTEMENT VIDES (I19).
+ * « Fil de séance » et « Aide à la décision » disent ce qui n'existe pas encore
+ * plutôt que d'afficher une transcription inventée ou une suggestion
+ * fabriquée. Un panneau vide qui annonce son absence est une information ; un
+ * panneau rempli de faux est un mensonge qu'on découvre devant un patient.
+ *
+ * ⚠️ AUCUN APPEL À UNE IA DANS CE FICHIER, aujourd'hui. Le jour où l'analyse de
+ * séance arrivera, elle proposera et la praticienne décidera (I6) : la sortie
+ * n'entre au dossier que si elle la reprend dans sa note. Le disclaimer d'I7
+ * est déjà affiché sur le panneau qui l'accueillera.
+ */
+
+"use client";
+
+import { useParams, useRouter } from "next/navigation";
+import { useCallback, useEffect, useRef, useState } from "react";
+
+import { AppShell } from "@/components/AppShell";
+import { heure, jourComplet, nomPatient } from "@/components/AgendaPieces";
+import {
+  Badge,
+  BandeauHorsLigne,
+  BarreActions,
+  BlocErreur,
+  Bouton,
+  Carte,
+  Champ,
+  ChampTexte,
+  ChampZoneTexte,
+  EnTetePage,
+  EspaceTravail,
+  EtatVide,
+  GrilleChamps,
+  IndicateurEnregistrement,
+  LienBouton,
+  PanneauInfo,
+  SectionPliable,
+  Squelette,
+} from "@/components/ui";
+import { useSessionEcran } from "@/components/useSessionEcran";
+import { fr } from "@/i18n/fr";
+import {
+  amendNote,
+  closeConsultation,
+  CHAMPS_SOAP,
+  getConsultation,
+  listAmendments,
+  noteEstVerrouillee,
+  noteEstVide,
+  saveNote,
+  saveRawNotes,
+  signNote,
+  tempsRestantAvantVerrou,
+  type Amendment,
+  type ChampSoap,
+  type Consultation,
+} from "@/services/consultations";
+
+/**
+ * Délai d'inactivité avant enregistrement d'une saisie longue.
+ *
+ * Deux secondes, et c'est un compromis assumé : plus court, on écrit une ligne
+ * d'audit à chaque mot ; plus long, une coupure réseau emporte davantage de
+ * texte. Ce n'est PAS une garantie de sauvegarde — rien n'est conservé
+ * localement dans ce dépôt, et `IndicateurEnregistrement` le dit à l'écran
+ * plutôt que de laisser croire le contraire.
+ */
+const DELAI_ENREGISTREMENT_MS = 2000;
+
+/** Une seconde : le pas du chronomètre et du décompte de verrouillage. */
+const PAS_HORLOGE_MS = 1000;
+
+type EtatEnregistrement = "repos" | "encours" | "enregistre" | "echec";
+
+/**
+ * Durée écoulée, en `hh:mm:ss`.
+ *
+ * Chasse fixe et `tabular-nums` à l'affichage : un chronomètre dont les
+ * chiffres changent de largeur bouge en permanence dans le coin de l'œil, et
+ * cet écran reste ouvert pendant toute la séance.
+ */
+function chrono(depuisIso: string, jusqua: number): string {
+  const debut = Date.parse(depuisIso);
+  if (Number.isNaN(debut)) return "";
+  const secondes = Math.max(0, Math.floor((jusqua - debut) / 1000));
+  const h = Math.floor(secondes / 3600);
+  const m = Math.floor((secondes % 3600) / 60);
+  const s = secondes % 60;
+  const pad = (v: number): string => String(v).padStart(2, "0");
+  return `${pad(h)}:${pad(m)}:${pad(s)}`;
+}
+
+/**
+ * Date ET heure, pour ce qui est horodaté au dossier.
+ *
+ * `jourComplet` seul rend « mardi 4 août 2026 » : suffisant pour un rendez-vous,
+ * insuffisant pour une SIGNATURE. L'heure exacte est ce qui situe une note par
+ * rapport à la consultation qu'elle documente, et c'est elle qu'un dossier
+ * oppose devant un juge. Les deux formats existants sont composés plutôt que
+ * réécrits.
+ */
+function dateHeure(iso: string): string | null {
+  const j = jourComplet(iso);
+  const h = heure(iso);
+  return j === null ? null : h === null ? j : `${j} — ${h}`;
+}
+
+/** Décompte `mm:ss` de la fenêtre de correction. */
+function decompte(restantMs: number): string {
+  const secondes = Math.max(0, Math.ceil(restantMs / 1000));
+  const m = Math.floor(secondes / 60);
+  const s = secondes % 60;
+  return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+}
+
+/**
+ * Accord du pluriel. Le français accorde À PARTIR DE DEUX : « 0 amendement »
+ * reste au singulier, et « 1 séances » de S4 ne se rejoue pas ici.
+ */
+function amendementsLibelle(n: number): string {
+  return `${n} ${n >= 2 ? fr.consultation.amendementPluriel : fr.consultation.amendementSingulier}`;
+}
+
+const LIBELLES_SOAP: Readonly<Record<ChampSoap, { titre: string; indication: string }>> = {
+  subjective: {
+    titre: fr.consultation.subjective,
+    indication: fr.consultation.subjectiveIndication,
+  },
+  objective: {
+    titre: fr.consultation.objective,
+    indication: fr.consultation.objectiveIndication,
+  },
+  assessment: {
+    titre: fr.consultation.assessment,
+    indication: fr.consultation.assessmentIndication,
+  },
+  plan: { titre: fr.consultation.plan, indication: fr.consultation.planIndication },
+};
+
+export default function PageConsultation(): React.JSX.Element {
+  const router = useRouter();
+  const params = useParams<{ id: string }>();
+  const id = params.id;
+
+  const { utilisateur, horsLigne: horsLigneSession, deconnecter } = useSessionEcran();
+
+  const [seance, setSeance] = useState<Consultation | null | undefined>(undefined);
+  const [amendements, setAmendements] = useState<readonly Amendment[]>([]);
+  const [messageErreur, setMessageErreur] = useState<string | undefined>(undefined);
+  const [confirmation, setConfirmation] = useState<string | undefined>(undefined);
+  const [horsLigne, setHorsLigne] = useState(false);
+  const [envoi, setEnvoi] = useState(false);
+
+  // Saisies. Elles vivent dans l'état de l'écran et NON dans `seance` : un
+  // rechargement de la séance pendant la frappe écraserait ce qui est en train
+  // d'être tapé, ce qui est la façon la plus sûre de perdre une note.
+  const [brut, setBrut] = useState("");
+  const [soap, setSoap] = useState<Record<ChampSoap, string>>({
+    subjective: "",
+    objective: "",
+    assessment: "",
+    plan: "",
+  });
+
+  const [etatBrut, setEtatBrut] = useState<EtatEnregistrement>("repos");
+  const [etatSoap, setEtatSoap] = useState<EtatEnregistrement>("repos");
+  const [heureBrut, setHeureBrut] = useState<string | undefined>(undefined);
+  const [heureSoap, setHeureSoap] = useState<string | undefined>(undefined);
+
+  const [amendementOuvert, setAmendementOuvert] = useState(false);
+  const [motif, setMotif] = useState("");
+  const [corps, setCorps] = useState("");
+
+  // L'horloge de l'écran. Un seul intervalle pour le chronomètre ET le décompte
+  // de verrouillage : deux horloges pour un même écran finiraient par afficher
+  // deux heures différentes, et l'une des deux porte sur une pièce juridique.
+  const [maintenant, setMaintenant] = useState(() => Date.now());
+
+  const minuteurBrut = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const minuteurSoap = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+
+  const charger = useCallback(
+    (avecSaisies: boolean): void => {
+      void getConsultation(id).then((result) => {
+        if (!result.ok) {
+          setHorsLigne(result.error.code === "hors-ligne");
+          setMessageErreur(result.error.message);
+          setSeance(null);
+          return;
+        }
+        setHorsLigne(false);
+        setSeance(result.data);
+        if (result.data === null) return;
+
+        // Les saisies ne sont réinitialisées qu'au PREMIER chargement. Après une
+        // signature ou un amendement, on recharge la séance sans toucher aux
+        // champs : la praticienne peut avoir continué à écrire entre-temps.
+        if (avecSaisies) {
+          setBrut(result.data.rawNotes ?? "");
+          const note = result.data.note;
+          setSoap({
+            subjective: note?.soap.subjective ?? "",
+            objective: note?.soap.objective ?? "",
+            assessment: note?.soap.assessment ?? "",
+            plan: note?.soap.plan ?? "",
+          });
+        }
+
+        const noteId = result.data.note?.id;
+        if (noteId === undefined) {
+          setAmendements([]);
+          return;
+        }
+        void listAmendments(noteId).then((r) => {
+          if (r.ok) setAmendements(r.data);
+        });
+      });
+    },
+    [id],
+  );
+
+  // Attend que la session soit tranchée : `app.get_consultation` journalise une
+  // ouverture de dossier À CHAQUE APPEL, et interroger pour un visiteur qu'on
+  // redirige écrirait une trace `fiche` pour une consultation qui n'a pas eu
+  // lieu. La preuve I4 de S3 doit rester vraie.
+  useEffect(() => {
+    if (utilisateur === undefined) return;
+    charger(true);
+  }, [utilisateur, charger]);
+
+  useEffect(() => {
+    const t = setInterval(() => setMaintenant(Date.now()), PAS_HORLOGE_MS);
+    return () => clearInterval(t);
+  }, []);
+
+  // Les minuteurs d'enregistrement sont annulés au démontage : sans ça, quitter
+  // l'écran pendant la fenêtre d'inactivité déclencherait une écriture sur un
+  // composant démonté, et le résultat serait perdu sans rien afficher.
+  useEffect(
+    () => () => {
+      if (minuteurBrut.current !== undefined) clearTimeout(minuteurBrut.current);
+      if (minuteurSoap.current !== undefined) clearTimeout(minuteurSoap.current);
+    },
+    [],
+  );
+
+  const note = seance?.note ?? null;
+  const etatVerrou = noteEstVerrouillee(note, maintenant);
+  const restantMs = tempsRestantAvantVerrou(note, maintenant);
+  const seanceClose = seance?.status === "closed";
+  // La note se rédige tant qu'elle n'est pas verrouillée — y compris pendant la
+  // fenêtre de 15 minutes qui SUIT la signature. Ce n'est pas une tolérance :
+  // c'est le dispositif d'I15, et le retirer ferait passer par un amendement une
+  // correction faite dans la minute.
+  const noteModifiable = etatVerrou !== "verrouillee";
+
+  function signalerErreur(message: string): void {
+    setMessageErreur(message);
+    // La base a refusé : on relit ce qu'elle dit vraiment plutôt que de garder
+    // à l'écran un état que l'écran avait supposé.
+    charger(false);
+  }
+
+  function enregistrerBrut(texte: string): void {
+    setBrut(texte);
+    if (seanceClose) return;
+    setEtatBrut("encours");
+    if (minuteurBrut.current !== undefined) clearTimeout(minuteurBrut.current);
+    minuteurBrut.current = setTimeout(() => {
+      void saveRawNotes(id, texte).then((result) => {
+        if (!result.ok || !result.data) {
+          setEtatBrut("echec");
+          return;
+        }
+        setEtatBrut("enregistre");
+        setHeureBrut(heure(new Date().toISOString()) ?? undefined);
+      });
+    }, DELAI_ENREGISTREMENT_MS);
+  }
+
+  function enregistrerSoap(champ: ChampSoap, texte: string): void {
+    const suivant = { ...soap, [champ]: texte };
+    setSoap(suivant);
+    if (!noteModifiable) return;
+    setEtatSoap("encours");
+    if (minuteurSoap.current !== undefined) clearTimeout(minuteurSoap.current);
+    minuteurSoap.current = setTimeout(() => {
+      void saveNote(id, { [champ]: texte }).then((result) => {
+        if (!result.ok || result.data === null) {
+          setEtatSoap("echec");
+          // Un refus ici est significatif : c'est le verrou qui s'est fermé
+          // pendant la frappe. On relit l'état réel pour que l'écran cesse de
+          // proposer une édition que la base ne veut plus.
+          if (!result.ok) charger(false);
+          return;
+        }
+        setEtatSoap("enregistre");
+        setHeureSoap(heure(new Date().toISOString()) ?? undefined);
+        // Première écriture : la note vient d'être créée en base. On recharge
+        // pour obtenir son identifiant, sans quoi la signature n'aurait pas de
+        // cible.
+        if (note === null) charger(false);
+      });
+    }, DELAI_ENREGISTREMENT_MS);
+  }
+
+  /**
+   * Envoie tout de suite ce qui attendait dans un minuteur.
+   *
+   * Sans ça, signer une note deux secondes après la dernière frappe signerait
+   * la version PRÉCÉDENTE : le texte affiché à l'écran ne serait pas celui qui
+   * entre au dossier. Sur une pièce juridique, c'est inadmissible.
+   */
+  async function viderLesAttentes(): Promise<boolean> {
+    if (minuteurSoap.current !== undefined) {
+      clearTimeout(minuteurSoap.current);
+      minuteurSoap.current = undefined;
+    }
+    if (minuteurBrut.current !== undefined) {
+      clearTimeout(minuteurBrut.current);
+      minuteurBrut.current = undefined;
+      const r = await saveRawNotes(id, brut);
+      if (!r.ok) {
+        setEtatBrut("echec");
+        return false;
+      }
+      setEtatBrut("enregistre");
+    }
+    const complet: Partial<Record<ChampSoap, string>> = {};
+    for (const champ of CHAMPS_SOAP) complet[champ] = soap[champ];
+    const r = await saveNote(id, complet);
+    if (!r.ok) {
+      setEtatSoap("echec");
+      signalerErreur(r.error.message);
+      return false;
+    }
+    setEtatSoap("enregistre");
+    return true;
+  }
+
+  function signer(): void {
+    setMessageErreur(undefined);
+    setConfirmation(undefined);
+
+    if (noteEstVide({ ...soap })) {
+      // Le même refus existe en base (`app.sign_note`). On le dit avant plutôt
+      // que de faire faire un aller-retour pour une phrase moins claire.
+      setMessageErreur(fr.consultation.noteVide);
+      return;
+    }
+    if (!window.confirm(fr.consultation.confirmerSignature)) return;
+
+    setEnvoi(true);
+    void viderLesAttentes().then((pret) => {
+      if (!pret) {
+        setEnvoi(false);
+        return;
+      }
+      // L'identifiant de note est relu APRÈS l'enregistrement : sur une première
+      // note, il n'existait pas avant.
+      void getConsultation(id).then((lecture) => {
+        const cible = lecture.ok ? (lecture.data?.note?.id ?? null) : null;
+        if (cible === null) {
+          setEnvoi(false);
+          signalerErreur(fr.consultation.introuvable);
+          return;
+        }
+        void signNote(cible).then((result) => {
+          setEnvoi(false);
+          if (!result.ok) {
+            setHorsLigne(result.error.code === "hors-ligne");
+            signalerErreur(result.error.message);
+            return;
+          }
+          if (!result.data) {
+            signalerErreur(fr.consultation.introuvable);
+            return;
+          }
+          setConfirmation(fr.feedback.noteSignee);
+          charger(false);
+        });
+      });
+    });
+  }
+
+  function clore(): void {
+    setMessageErreur(undefined);
+    setConfirmation(undefined);
+    if (!window.confirm(fr.consultation.confirmerCloture)) return;
+
+    setEnvoi(true);
+    void viderLesAttentes().then((pret) => {
+      if (!pret) {
+        setEnvoi(false);
+        return;
+      }
+      void closeConsultation(id).then((result) => {
+        setEnvoi(false);
+        if (!result.ok) {
+          setHorsLigne(result.error.code === "hors-ligne");
+          signalerErreur(result.error.message);
+          return;
+        }
+        if (!result.data) {
+          signalerErreur(fr.consultation.introuvable);
+          return;
+        }
+        setConfirmation(fr.feedback.seanceTerminee);
+        charger(false);
+      });
+    });
+  }
+
+  function amender(): void {
+    setMessageErreur(undefined);
+    setConfirmation(undefined);
+
+    if (motif.trim() === "" || corps.trim() === "") {
+      setMessageErreur(fr.consultation.amendementIncomplet);
+      return;
+    }
+    const cible = note?.id;
+    if (cible === undefined) {
+      setMessageErreur(fr.consultation.introuvable);
+      return;
+    }
+
+    setEnvoi(true);
+    void amendNote(cible, motif.trim(), corps.trim()).then((result) => {
+      setEnvoi(false);
+      if (!result.ok) {
+        setHorsLigne(result.error.code === "hors-ligne");
+        signalerErreur(result.error.message);
+        return;
+      }
+      if (!result.data) {
+        signalerErreur(fr.consultation.introuvable);
+        return;
+      }
+      setAmendementOuvert(false);
+      setMotif("");
+      setCorps("");
+      setConfirmation(fr.consultation.amendementEnregistre);
+      charger(false);
+    });
+  }
+
+  // ── Rendu ────────────────────────────────────────────────────────────────
+
+  if (utilisateur === undefined) {
+    return (
+      <main className="p-8">
+        <Squelette lignes={4} />
+      </main>
+    );
+  }
+
+  if (utilisateur === null) {
+    return (
+      <main className="flex flex-col gap-4 p-8">
+        {horsLigneSession ? <BandeauHorsLigne /> : null}
+        <BlocErreur
+          message={horsLigneSession ? fr.erreurs["hors-ligne"] : fr.erreurs["non-authentifie"]}
+          action={
+            <Bouton onClick={() => router.replace("/connexion")}>{fr.actions.reessayer}</Bouton>
+          }
+        />
+      </main>
+    );
+  }
+
+  const contenu = ((): React.JSX.Element => {
+    if (seance === undefined) return <Squelette lignes={6} />;
+
+    if (seance === null) {
+      return (
+        <EtatVide
+          message={messageErreur ?? fr.consultation.introuvable}
+          action={<LienBouton href="/agenda">{fr.agenda.retourALAgenda}</LienBouton>}
+        />
+      );
+    }
+
+    return (
+      <EspaceTravail
+        travail={
+          <>
+            <SectionPliable
+              titre={fr.consultation.notesBrutes}
+              action={
+                <IndicateurEnregistrement
+                  etat={etatBrut}
+                  {...(heureBrut === undefined ? {} : { horodatage: heureBrut })}
+                />
+              }
+            >
+              <div className="flex flex-col gap-3">
+                <ChampZoneTexte
+                  libelle={fr.consultation.notesBrutes}
+                  valeur={brut}
+                  onChange={enregistrerBrut}
+                  lignes={8}
+                  clinique
+                  disabled={seanceClose}
+                  indication={
+                    seanceClose
+                      ? fr.consultation.notesBrutesFigees
+                      : fr.consultation.notesBrutesIndication
+                  }
+                />
+                {etatBrut === "echec" ? (
+                  <PanneauInfo ton="attention">
+                    {fr.consultation.nonEnregistreIndication}
+                  </PanneauInfo>
+                ) : null}
+              </div>
+            </SectionPliable>
+
+            <SectionPliable
+              titre={fr.consultation.note}
+              {...(note?.status === "signed" ? { annotation: fr.feedback.noteSignee } : {})}
+              action={
+                noteModifiable ? (
+                  <IndicateurEnregistrement
+                    etat={etatSoap}
+                    {...(heureSoap === undefined ? {} : { horodatage: heureSoap })}
+                  />
+                ) : null
+              }
+            >
+              <div className="flex flex-col gap-6">
+                {/* L'ÉTAT DU VERROU, DIT EXPLICITEMENT. Une note qu'on ne peut
+                    plus modifier sans que l'écran l'explique se lit comme une
+                    panne, et la praticienne cherche à contourner. */}
+                {etatVerrou === "fenetre-correction" && restantMs !== null ? (
+                  <PanneauInfo ton="attention" titre={fr.consultation.fenetreCorrection}>
+                    <span className="font-num tabular-nums">{decompte(restantMs)}</span>
+                    {" — "}
+                    {fr.consultation.fenetreIndication}
+                  </PanneauInfo>
+                ) : null}
+
+                {etatVerrou === "verrouillee" ? (
+                  <PanneauInfo titre={fr.consultation.verrouillee}>
+                    {fr.consultation.verrouParLaBase}
+                  </PanneauInfo>
+                ) : null}
+
+                {noteModifiable ? (
+                  CHAMPS_SOAP.map((champ) => (
+                    <ChampZoneTexte
+                      key={champ}
+                      libelle={LIBELLES_SOAP[champ].titre}
+                      indication={LIBELLES_SOAP[champ].indication}
+                      valeur={soap[champ]}
+                      onChange={(v) => enregistrerSoap(champ, v)}
+                      lignes={5}
+                      clinique
+                    />
+                  ))
+                ) : (
+                  <div className="flex flex-col gap-6">
+                    {CHAMPS_SOAP.map((champ) => (
+                      <Champ
+                        key={champ}
+                        libelle={LIBELLES_SOAP[champ].titre}
+                        valeur={note?.soap[champ] ?? null}
+                      />
+                    ))}
+                  </div>
+                )}
+
+                {note?.signedAt == null ? null : (
+                  <Carte discrete>
+                    <div className="p-4">
+                      <GrilleChamps>
+                        <Champ
+                          libelle={fr.consultation.signeePar}
+                          valeur={note.signerName}
+                        />
+                        <Champ
+                          libelle={fr.consultation.signeeLe}
+                          valeur={dateHeure(note.signedAt)}
+                        />
+                      </GrilleChamps>
+                    </div>
+                  </Carte>
+                )}
+              </div>
+            </SectionPliable>
+
+            {/* Les amendements n'apparaissent qu'une fois la note signée : sur
+                un brouillon, la section n'aurait aucun contenu possible. */}
+            {note?.status === "signed" ? (
+              <SectionPliable
+                titre={fr.consultation.amendements}
+                annotation={amendementsLibelle(amendements.length)}
+                action={
+                  amendementOuvert ? null : (
+                    <Bouton onClick={() => setAmendementOuvert(true)}>
+                      {fr.consultation.redigerAmendement}
+                    </Bouton>
+                  )
+                }
+              >
+                <div className="flex flex-col gap-6">
+                  {amendements.length === 0 && !amendementOuvert ? (
+                    <EtatVide message={fr.consultation.amendementsAucun} />
+                  ) : null}
+
+                  {/* Les amendements sont VISIBLES et SÉPARÉS, jamais fondus
+                      dans le texte de la note : c'est ce qui distingue une
+                      correction traçable d'une réécriture (ADR-004). */}
+                  {amendements.map((a) => (
+                    <Carte key={a.id} discrete>
+                      <div className="flex flex-col gap-3 p-4">
+                        <div className="flex flex-wrap items-center gap-3">
+                          <Badge>{a.reason}</Badge>
+                          <span className="font-ui text-label text-ink-500">
+                            {fr.consultation.amendementPar}{" "}
+                            {a.authorName ?? fr.etats.texteAbsent} —{" "}
+                            <span className="font-num tabular-nums">
+                              {dateHeure(a.createdAt) ?? ""}
+                            </span>
+                          </span>
+                        </div>
+                        <p className="whitespace-pre-wrap break-words font-ui text-notes text-ink-900">
+                          {a.body}
+                        </p>
+                      </div>
+                    </Carte>
+                  ))}
+
+                  {amendementOuvert ? (
+                    <div className="flex flex-col gap-4">
+                      <ChampTexte
+                        libelle={fr.consultation.amendementMotif}
+                        indication={fr.consultation.amendementMotifIndication}
+                        valeur={motif}
+                        onChange={setMotif}
+                        requis
+                      />
+                      <ChampZoneTexte
+                        libelle={fr.consultation.amendementCorps}
+                        valeur={corps}
+                        onChange={setCorps}
+                        lignes={5}
+                        clinique
+                      />
+                      <BarreActions>
+                        <Bouton rang="principal" onClick={amender} disabled={envoi}>
+                          {fr.consultation.redigerAmendement}
+                        </Bouton>
+                        <Bouton
+                          rang="discret"
+                          onClick={() => {
+                            setAmendementOuvert(false);
+                            setMotif("");
+                            setCorps("");
+                          }}
+                        >
+                          {fr.actions.annuler}
+                        </Bouton>
+                      </BarreActions>
+                    </div>
+                  ) : null}
+                </div>
+              </SectionPliable>
+            ) : null}
+          </>
+        }
+        contexte={
+          <>
+            <Carte>
+              <div className="p-6">
+                <GrilleChamps>
+                  <Champ
+                    libelle={fr.agenda.patient}
+                    valeur={nomPatient(seance.firstName, seance.lastName)}
+                  />
+                  <Champ libelle={fr.patients.numeroDossier} valeur={seance.recordNumber} />
+                  <Champ
+                    libelle={fr.consultation.typeConsultation}
+                    valeur={
+                      seance.appointmentKind === null
+                        ? null
+                        : fr.agenda.types[seance.appointmentKind]
+                    }
+                  />
+                  <Champ libelle={fr.consultation.debut} valeur={jourComplet(seance.startedAt)} />
+                  {seance.endedAt === null ? null : (
+                    <Champ libelle={fr.consultation.fin} valeur={jourComplet(seance.endedAt)} />
+                  )}
+                </GrilleChamps>
+              </div>
+            </Carte>
+
+            {/* LES DEUX EMPLACEMENTS DES MODULES À VENIR. Ils sont posés
+                maintenant pour que la transcription (semaine 2) et l'analyse de
+                séance (S6) s'ajoutent sans redécouper la page — et ils disent
+                honnêtement qu'ils sont vides (I19). */}
+            <SectionPliable titre={fr.consultation.filSeance}>
+              <EtatVide message={fr.consultation.filSeanceIndisponible} />
+            </SectionPliable>
+
+            <SectionPliable titre={fr.consultation.assistance}>
+              <div className="flex flex-col gap-4">
+                <EtatVide message={fr.consultation.assistanceIndisponible} />
+                {/* I7 — mention permanente, jamais masquée, sur toute surface
+                    d'aide à la décision. Elle est là AVANT la fonctionnalité :
+                    le jour où une suggestion s'affiche, elle est déjà encadrée. */}
+                <p className="font-ui text-label text-ink-500">{fr.disclaimer}</p>
+              </div>
+            </SectionPliable>
+          </>
+        }
+      />
+    );
+  })();
+
+  return (
+    <AppShell
+      role={utilisateur.role}
+      nomComplet={utilisateur.fullName}
+      onDeconnexion={deconnecter}
+    >
+      <div className="flex flex-col gap-8">
+        {horsLigne || horsLigneSession ? <BandeauHorsLigne /> : null}
+
+        <EnTetePage
+          surTitre={
+            seanceClose ? fr.consultation.surTitreClose : fr.consultation.surTitreSeance
+          }
+          titre={
+            seance == null
+              ? fr.consultation.titre
+              : // Un rendez-vous sans dossier visible garde sa séance et perd
+                // seulement son nom : faire disparaître l'écran masquerait une
+                // consultation réelle (même raison que le LEFT JOIN en base).
+                (nomPatient(seance.firstName, seance.lastName) ??
+                fr.agenda.patientNonRattache)
+          }
+          {...(seance?.practitionerName == null
+            ? {}
+            : { sousTitre: seance.practitionerName })}
+          actions={
+            seance == null ? (
+              <LienBouton href="/agenda">{fr.agenda.retourALAgenda}</LienBouton>
+            ) : (
+              <div className="flex flex-wrap items-center gap-4">
+                {/* Le chronomètre s'arrête à la clôture : une séance close
+                    affiche sa durée réelle, pas un compteur qui continue. */}
+                <span className="font-num text-num tabular-nums text-ink-900">
+                  {chrono(
+                    seance.startedAt,
+                    seance.endedAt === null ? maintenant : Date.parse(seance.endedAt),
+                  )}
+                </span>
+                <LienBouton href="/agenda" rang="discret">
+                  {fr.agenda.retourALAgenda}
+                </LienBouton>
+              </div>
+            )
+          }
+        />
+
+        {confirmation === undefined ? null : (
+          <PanneauInfo ton="positif">{confirmation}</PanneauInfo>
+        )}
+
+        {messageErreur === undefined || seance === null ? null : (
+          <BlocErreur
+            message={messageErreur}
+            action={<Bouton onClick={() => charger(false)}>{fr.actions.reessayer}</Bouton>}
+          />
+        )}
+
+        {contenu}
+
+        {seance == null ? null : (
+          <BarreActions>
+            {/* Le bouton disparaît quand il n'a plus de sens, il ne reste pas
+                grisé : une commande grisée en permanence apprend à ne plus la
+                regarder. La SIGNATURE, elle, reste visible et grisée pendant la
+                fenêtre de correction — c'est une information. */}
+            {note === null || note.status === "draft" ? (
+              <Bouton rang="principal" onClick={signer} disabled={envoi || seance === null}>
+                {fr.actions.signerLaNote}
+              </Bouton>
+            ) : null}
+            {seanceClose ? null : (
+              <Bouton onClick={clore} disabled={envoi}>
+                {fr.actions.terminerLaSeance}
+              </Bouton>
+            )}
+          </BarreActions>
+        )}
+      </div>
+    </AppShell>
+  );
+}
