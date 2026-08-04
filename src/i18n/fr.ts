@@ -268,6 +268,13 @@ export const fr = {
       seancesCetteSemaine: "Séances cette semaine",
       creneauxLibres: "Créneaux libres",
       demandesEnAttente: "Demandes en attente",
+      /**
+       * En-tête de colonne. Le français accorde à partir de DEUX : « 1 séance »,
+       * « 2 séances » — et « 0 séance », au singulier, contrairement à l'anglais.
+       * Écrire « 1 séances » sept fois par écran signale un logiciel approximatif
+       * à quelqu'un dont le métier est de remarquer les détails.
+       */
+      seance: "séance",
       seances: "séances",
       libre: "libre",
       semainePrecedente: "Semaine précédente",

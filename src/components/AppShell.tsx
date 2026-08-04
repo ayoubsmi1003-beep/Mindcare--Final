@@ -118,10 +118,22 @@ export function AppShell({
   const groupes = navigationPour(role);
 
   return (
+    /* SOUS LA RUPTURE `tablet` (1024px), LA COQUILLE REPASSE À UNE COLONNE.
+     *
+     * La navigation occupait 248px FIXES à toute largeur. Mesuré à l'écran le
+     * 2026-08-04 sur 390px : il restait ~140px au contenu, la grille d'agenda
+     * s'y brisait à une lettre par ligne et la page atteignait 7458px de haut.
+     *
+     * ⚠️ ÉCART ASSUMÉ AVEC `04-DESIGN-SYSTEM` §3, qui prescrit « < 1024px nav →
+     * icônes ». Aucun jeu d'icônes n'existe dans ce dépôt, et en inventer un ici
+     * poserait un vocabulaire visuel entier au détour d'un correctif de mise en
+     * page. La navigation passe donc AU-DESSUS du contenu, pleine largeur, en
+     * attendant les icônes. Ce n'est pas la conformité au §3, c'est ce qui ne
+     * casse pas l'écran d'ici là — et la cible reste 1920×1080, le poste du
+     * cabinet. */
     <div
+      className="grid grid-cols-1 tablet:grid-cols-app"
       style={{
-        display: "grid",
-        gridTemplateColumns: `var(--grid-nav-width) minmax(0, 1fr)`,
         minHeight: "var(--size-viewport)",
         background: "var(--paper)",
         fontFamily: "var(--font-ui)",
@@ -129,12 +141,12 @@ export function AppShell({
     >
       <nav
         aria-label={fr.nav.groupes.menu}
+        className="border-b border-rule tablet:border-b-0 tablet:border-r"
         style={{
           display: "flex",
           flexDirection: "column",
           gap: "var(--s-6)",
           padding: "var(--s-5) var(--s-4)",
-          borderRight: "var(--rule-width) solid var(--rule)",
           background: "var(--card)",
         }}
       >

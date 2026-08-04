@@ -14,8 +14,10 @@
 import Link from "next/link";
 
 import { heure, nomPatient, plage } from "@/components/AgendaPieces";
+import { Badge } from "@/components/ui";
+import type { TonBadge } from "@/components/ui";
 import { fr } from "@/i18n/fr";
-import type { AgendaEntry, ConsultationKind } from "@/services/appointments";
+import type { AgendaEntry, AppointmentStatus, ConsultationKind } from "@/services/appointments";
 
 /** Les cinq familles de la légende (§ tokens.css, bloc FAMILLES DE CONSULTATION). */
 export type FamilleConsultation =
@@ -200,20 +202,24 @@ export function GrilleSemaine({
   );
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "var(--s-4)" }}>
-      {/* Le tableau scrolle dans SON conteneur : la page, elle, ne défile jamais
-          horizontalement (règle 9). */}
-      <div style={{ overflowX: "auto" }}>
+    <div className="flex flex-col gap-4">
+      {/* La grille est posée dans une carte : elle EST la surface principale de
+          l'écran, et un tableau nu au milieu d'une page flotte sans se poser.
+          Le tableau scrolle dans SON conteneur — la page, elle, ne défile
+          jamais horizontalement (règle 9). */}
+      <div className="overflow-x-auto rounded-lg border border-rule bg-card shadow-lift1">
         <table
+          className="w-full table-fixed border-collapse"
+          // La largeur plancher dépend du NOMBRE de colonnes, qui est une
+          // donnée d'affichage (7 en semaine, 1 en jour) et non une valeur de
+          // design : elle se calcule donc ici, à partir de deux jetons. En
+          // dessous, le conteneur défile au lieu d'écraser les colonnes.
           style={{
-            borderCollapse: "collapse",
-            width: "var(--size-full)",
-            minWidth: "var(--card-column-min)",
-            tableLayout: "fixed",
+            minWidth: `calc(var(--s-16) + ${colonnesJours.length} * var(--grid-day-min))`,
           }}
         >
           <colgroup>
-            <col style={{ width: "var(--s-16)" }} />
+            <col className="w-16" />
             {colonnesJours.map((_, i) => (
               <col key={i} />
             ))}
@@ -221,53 +227,50 @@ export function GrilleSemaine({
 
           <thead>
             <tr>
-              <th
-                scope="col"
-                style={{
-                  minWidth: "var(--size-0)",
-                  border: "var(--rule-width) solid var(--rule)",
-                  background: "var(--sunken)",
-                }}
-              />
+              {/* L'angle mort en haut à gauche reste vide et discret : il ne
+                  porte rien, il ne doit donc rien attirer. */}
+              <th scope="col" className="border-b border-rule bg-sunken" />
               {colonnesJours.map((jourColonne, i) => {
                 const nbSeances = lignesHeures.reduce((total, h) => {
                   const c = parCase.get(`${i}-${h}`);
                   return total + (c?.length ?? 0);
                 }, 0);
+                const estAujourdhui = memeJour(jourColonne, new Date());
                 return (
                   <th
                     key={i}
                     scope="col"
-                    style={{
-                      minWidth: "var(--size-0)",
-                      padding: "var(--s-3)",
-                      border: "var(--rule-width) solid var(--rule)",
-                      background: "var(--sunken)",
-                      textAlign: "left",
-                      fontWeight: "var(--weight-semibold)",
-                    }}
+                    className={[
+                      "min-w-0 border-b border-l border-rule px-3 py-3 text-left align-top",
+                      // AUJOURD'HUI SE DISTINGUE PAR LE FOND, PAS PAR UNE
+                      // COULEUR D'ACCENT. La colonne du jour est celle qu'on
+                      // cherche en premier vingt fois par jour ; la teinter en
+                      // teal la ferait concurrencer les cartes, qui codent déjà
+                      // la famille de consultation.
+                      estAujourdhui ? "bg-teal-50" : "bg-sunken",
+                    ].join(" ")}
                   >
-                    <div
-                      style={{
-                        fontSize: "var(--text-label-size)",
-                        lineHeight: "var(--text-label-leading)",
-                        letterSpacing: "var(--text-label-tracking)",
-                        color: "var(--ink-900)",
-                        overflowWrap: "anywhere",
-                      }}
-                    >
-                      {FORMAT_JOUR_ABREGE.format(jourColonne)} {FORMAT_JOUR_NUMERO.format(jourColonne)}
-                    </div>
-                    <div
-                      style={{
-                        marginTop: "var(--s-1)",
-                        fontSize: "var(--text-label-size)",
-                        lineHeight: "var(--text-label-leading)",
-                        fontWeight: "var(--weight-regular)",
-                        color: "var(--ink-500)",
-                      }}
-                    >
-                      {nbSeances} {fr.agenda.semaine.seances}
+                    <div className="flex flex-col gap-1">
+                      <span
+                        className={[
+                          "font-ui text-label font-semibold tracking-label break-words",
+                          estAujourdhui ? "text-teal-700" : "text-ink-900",
+                        ].join(" ")}
+                      >
+                        {FORMAT_JOUR_ABREGE.format(jourColonne)}{" "}
+                        {FORMAT_JOUR_NUMERO.format(jourColonne)}
+                      </span>
+                      <span
+                        className={[
+                          "font-ui text-label font-regular tabular-nums",
+                          // Un jour chargé se lit d'un coup d'œil ; un jour vide
+                          // s'efface au lieu de répéter « 0 séances » en noir.
+                          nbSeances === 0 ? "text-ink-300" : "text-ink-500",
+                        ].join(" ")}
+                      >
+                        {nbSeances}{" "}
+                        {nbSeances > 1 ? fr.agenda.semaine.seances : fr.agenda.semaine.seance}
+                      </span>
                     </div>
                   </th>
                 );
@@ -280,19 +283,13 @@ export function GrilleSemaine({
               <tr key={h}>
                 <th
                   scope="row"
-                  style={{
-                    minWidth: "var(--size-0)",
-                    padding: "var(--s-2) var(--s-3)",
-                    border: "var(--rule-width) solid var(--rule)",
-                    background: "var(--sunken)",
-                    textAlign: "left",
-                    fontWeight: "var(--weight-medium)",
-                    fontFamily: "var(--font-num)",
-                    fontVariantNumeric: "tabular-nums",
-                    color: "var(--ink-700)",
-                    fontSize: "var(--text-num-size)",
-                    lineHeight: "var(--text-num-leading)",
-                  }}
+                  className={[
+                    "min-w-0 border-t border-rule bg-sunken px-3 py-2 text-left align-top",
+                    // L'heure est en chasse fixe et tabulaire : la colonne des
+                    // heures doit s'aligner au pixel sur toute la hauteur,
+                    // sinon l'œil ne peut pas la suivre verticalement.
+                    "font-num text-num font-medium tabular-nums text-ink-500",
+                  ].join(" ")}
                 >
                   {String(h).padStart(2, "0")}:00
                 </th>
@@ -301,16 +298,15 @@ export function GrilleSemaine({
                   const cle = `${i}-${h}`;
                   const casesOccupees = parCase.get(cle) ?? [];
                   const debutCreneau = creneau(jourColonne, h);
+                  const estAujourdhui = memeJour(jourColonne, new Date());
 
                   return (
                     <td
                       key={i}
-                      style={{
-                        minWidth: "var(--size-0)",
-                        verticalAlign: "top",
-                        padding: "var(--s-1)",
-                        border: "var(--rule-width) solid var(--rule)",
-                      }}
+                      className={[
+                        "min-w-0 border-l border-t border-rule p-1 align-top",
+                        estAujourdhui ? "bg-teal-50" : "",
+                      ].join(" ")}
                     >
                       {casesOccupees.length === 0 ? (
                         <CelluleLibre
@@ -318,7 +314,7 @@ export function GrilleSemaine({
                           {...(onCreneauLibre === undefined ? {} : { onCreneauLibre })}
                         />
                       ) : (
-                        <div style={{ display: "flex", flexDirection: "column", gap: "var(--s-1)" }}>
+                        <div className="flex flex-col gap-1">
                           {casesOccupees.map((entree) => (
                             <CarteRendezVous key={entree.id} entree={entree} />
                           ))}
@@ -345,30 +341,31 @@ function CelluleLibre({
   readonly debut: Date;
   readonly onCreneauLibre?: (debut: Date) => void;
 }): React.JSX.Element {
-  const commun = {
-    display: "flex" as const,
-    alignItems: "center" as const,
-    justifyContent: "center" as const,
-    minHeight: "var(--target-comfort)",
-    width: "var(--size-full)",
-    minWidth: "var(--size-0)",
-    borderRadius: "var(--r-sm)",
-    border: "var(--rule-width) dashed var(--rule)",
-    background: "transparent",
-    color: "var(--ink-300)",
-    fontSize: "var(--text-label-size)",
-    lineHeight: "var(--text-label-leading)",
-  };
+  // UN CRÉNEAU LIBRE DOIT SE FAIRE OUBLIER. C'est la majorité des cellules
+  // d'une semaine ; écrit en pleine encre, « libre » répété soixante-dix fois
+  // devient le motif dominant de l'écran et noie les cinq cartes qui comptent.
+  // Le mot n'apparaît donc qu'au survol quand la case est cliquable, et reste
+  // en `ink-300` sinon.
+  const commun = [
+    "flex w-full min-w-0 items-center justify-center rounded-sm",
+    "min-h-target border border-dashed border-transparent",
+    "font-ui text-label text-ink-300",
+  ].join(" ");
 
   if (onCreneauLibre === undefined) {
-    return <div style={commun}>{fr.agenda.semaine.libre}</div>;
+    return <div className={commun}>{fr.agenda.semaine.libre}</div>;
   }
 
   return (
     <button
       type="button"
       onClick={() => onCreneauLibre(debut)}
-      style={{ ...commun, cursor: "pointer", font: "inherit" }}
+      className={[
+        commun,
+        "cursor-pointer transition duration-quick ease-soft",
+        "hover:border-teal-400 hover:bg-teal-50 hover:text-teal-700",
+        "outline-none focus-visible:outline focus-visible:outline-teal-600 focus-visible:outline-offset",
+      ].join(" ")}
     >
       {fr.agenda.semaine.libre}
     </button>
@@ -387,122 +384,101 @@ function CarteRendezVous({ entree }: { readonly entree: AgendaEntry }): React.JS
   return (
     <Link
       href={`/agenda/${entree.id}`}
-      style={{
-        display: "flex",
-        alignItems: "flex-start",
-        gap: "var(--s-2)",
-        minHeight: "var(--target-comfort)",
-        minWidth: "var(--size-0)",
-        padding: "var(--s-2) var(--s-2) var(--s-2) var(--s-3)",
-        borderRadius: "var(--r-sm)",
-        borderLeft: `var(--kind-accent-width) solid ${jetons.accent}`,
-        background: jetons.fond,
-        color: "var(--ink-900)",
-        textDecoration: "none",
-        overflowWrap: "anywhere",
-      }}
+      // LA CARTE EST L'OBJET LE PLUS LU DU PRODUIT. Sa hiérarchie est donc
+      // fixée par ce qu'on cherche, dans l'ordre : l'heure (« qu'est-ce qui
+      // vient ? »), le nom (« qui ? »), le type (« pour quoi ? »), la
+      // praticienne (« chez qui ? »). Trois niveaux d'encre suffisent à rendre
+      // cet ordre lisible sans lire.
+      //
+      // Le liseré de famille reste à gauche : c'est le seul repère qui survit à
+      // la vision périphérique quand on balaie une semaine entière.
+      className={[
+        "group flex min-h-target min-w-0 flex-col gap-1 rounded-sm py-2 pl-3 pr-2",
+        "border-l-kind no-underline",
+        // Pas de translation au survol : une carte qui se soulève déplace la
+        // cible qu'on vise, et sur une grille dense on vise beaucoup.
+        "transition duration-quick ease-soft hover:shadow-lift2",
+        "outline-none focus-visible:outline focus-visible:outline-teal-600 focus-visible:outline-offset",
+      ].join(" ")}
+      style={{ borderLeftColor: jetons.accent, background: jetons.fond }}
     >
+      {/* L'HEURE D'ABORD, en chasse fixe et tabulaire : empilées, deux cartes
+          doivent aligner leurs chiffres pour qu'on lise la succession sans
+          relire chaque ligne. */}
+      <span className="font-num text-label font-medium tabular-nums text-ink-700">
+        {quand ?? fr.etats.texteAbsent}
+      </span>
+
+      {/* PAS DE MONOGRAMME ICI, ET C'EST DÉLIBÉRÉ. Une colonne de semaine fait
+          environ 140 px ; la pastille en consommait 32, soit près d'un quart,
+          au profit d'une seule lettre déjà présente au début du nom juste à
+          côté. Mesuré à l'écran : « DE TEST DEUX Patient » tombait sur trois
+          lignes. Le nom est ce qu'on lit, il prend toute la largeur.
+          Le monogramme garde son sens sur la fiche et les listes, où la place
+          existe et où il sert de point d'ancrage vertical. */}
       <span
-        aria-hidden="true"
-        style={{
-          display: "inline-flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexShrink: "var(--size-0)",
-          width: "var(--s-6)",
-          height: "var(--s-6)",
-          borderRadius: "var(--r-full)",
-          background: "var(--card)",
-          color: jetons.accent,
-          fontSize: "var(--text-label-size)",
-          fontWeight: "var(--weight-semibold)",
-        }}
+        className={[
+          "min-w-0 font-ui text-body font-semibold break-words",
+          nom === null ? "text-ink-300" : "text-ink-900",
+        ].join(" ")}
       >
-        {monogramme(nom)}
+        {nom ?? fr.agenda.patientNonRattache}
       </span>
 
-      <span style={{ display: "flex", flexDirection: "column", gap: "var(--s-1)", minWidth: "var(--size-0)" }}>
-        <span
-          style={{
-            fontSize: "var(--text-label-size)",
-            lineHeight: "var(--text-label-leading)",
-            fontFamily: "var(--font-num)",
-            fontVariantNumeric: "tabular-nums",
-            color: "var(--ink-500)",
-          }}
-        >
-          {quand ?? fr.etats.texteAbsent}
-        </span>
-        <span
-          style={{
-            fontSize: "var(--text-body-size)",
-            lineHeight: "var(--text-body-leading)",
-            fontWeight: "var(--weight-semibold)",
-            color: nom === null ? "var(--ink-300)" : "var(--ink-900)",
-          }}
-        >
-          {nom ?? fr.agenda.patientNonRattache}
-        </span>
-        <span
-          style={{
-            fontSize: "var(--text-label-size)",
-            lineHeight: "var(--text-label-leading)",
-            color: "var(--ink-500)",
-          }}
-        >
-          {libelleType(entree.kind)}
-        </span>
-
-        {/* La praticienne n'apparaît que si la base l'a rendue. Sur l'agenda du
-            cabinet, deux séances au même créneau appartiennent souvent à deux
-            praticiennes : sans cette ligne, la pile se lit comme un conflit
-            d'horaire alors qu'il n'y en a aucun. La cloison ADR-003 fait que ce
-            champ est déjà NULL quand il ne doit pas se voir — rien n'est décidé
-            ici (I4/§6). */}
-        {entree.practitionerName === null ? null : (
-          <span
-            style={{
-              fontSize: "var(--text-label-size)",
-              lineHeight: "var(--text-label-leading)",
-              color: "var(--ink-300)",
-            }}
-          >
-            {entree.practitionerName}
-          </span>
-        )}
-
-        {/* LE STATUT NE S'AFFICHE QUE QUAND IL SORT DE L'ORDINAIRE.
-            `confirmed` est le cas normal d'un agenda : l'écrire sur chaque carte
-            ajouterait une ligne de bruit à toutes, et noierait précisément celles
-            qui demandent une réaction. Un patient arrivé, en séance ou non
-            présenté, lui, doit se voir depuis l'autre bout de la pièce.
-
-            Le statut est écrit en TOUTES LETTRES, jamais porté par la seule
-            couleur de la carte — celle-ci code déjà la famille de consultation,
-            et un même signal ne peut pas dire deux choses (§4 règle 4). */}
-        {entree.status === "confirmed" ? null : (
-          <span
-            style={{
-              fontSize: "var(--text-label-size)",
-              lineHeight: "var(--text-label-leading)",
-              letterSpacing: "var(--text-label-tracking)",
-              fontWeight: "var(--weight-medium)",
-              // `--attention` pour ce qui réclame un geste, jamais `--critical` :
-              // le rouge est un budget réservé au disque critique et à la perte
-              // de données (§4 règle 1). Un patient non présenté n'en fait pas
-              // partie, même si la journée est mal partie.
-              color:
-                entree.status === "no_show" || entree.status === "requested"
-                  ? "var(--attention)"
-                  : "var(--ink-700)",
-            }}
-          >
-            {fr.agenda.statuts[entree.status]}
-          </span>
-        )}
+      <span className="font-ui text-label text-ink-500 break-words">
+        {libelleType(entree.kind)}
       </span>
+
+      {/* La praticienne n'apparaît que si la base l'a rendue. Sur l'agenda du
+          cabinet, deux séances au même créneau appartiennent souvent à deux
+          praticiennes : sans cette ligne, la pile se lit comme un conflit
+          d'horaire alors qu'il n'y en a aucun. La cloison ADR-003 fait que ce
+          champ est déjà NULL quand il ne doit pas se voir — rien n'est décidé
+          ici (I4/§6). */}
+      {entree.practitionerName === null ? null : (
+        <span className="font-ui text-label text-ink-300 break-words">
+          {entree.practitionerName}
+        </span>
+      )}
+
+      {/* LE STATUT NE S'AFFICHE QUE QUAND IL SORT DE L'ORDINAIRE.
+          `confirmed` est le cas normal d'un agenda : l'écrire sur chaque carte
+          ajouterait une ligne de bruit à toutes, et noierait précisément celles
+          qui demandent une réaction. Un patient arrivé, en séance ou non
+          présenté, lui, doit se voir depuis l'autre bout de la pièce.
+
+          Le statut est écrit en TOUTES LETTRES, jamais porté par la seule
+          couleur de la carte — celle-ci code déjà la famille de consultation,
+          et un même signal ne peut pas dire deux choses (§4 règle 4). */}
+      {entree.status === "confirmed" ? null : (
+        <span className="mt-1">
+          <Badge ton={tonStatut(entree.status)}>{fr.agenda.statuts[entree.status]}</Badge>
+        </span>
+      )}
     </Link>
   );
+}
+
+/**
+ * Ton d'une pastille de statut.
+ *
+ * `attention` pour ce qui réclame un geste, jamais `critical` : le rouge est un
+ * budget réservé au disque critique et à la perte de données (§4 règle 1). Un
+ * patient non présenté n'en fait pas partie, même si la journée est mal partie.
+ */
+export function tonStatut(statut: AppointmentStatus): TonBadge {
+  switch (statut) {
+    case "no_show":
+    case "requested":
+      return "attention";
+    case "in_session":
+    case "arrived":
+      return "information";
+    case "completed":
+      return "positif";
+    default:
+      return "neutre";
+  }
 }
 
 function Legende(): React.JSX.Element {
@@ -515,36 +491,18 @@ function Legende(): React.JSX.Element {
   ];
 
   return (
-    <ul
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        gap: "var(--s-5)",
-        margin: "var(--size-0)",
-        padding: "var(--size-0)",
-        listStyle: "none",
-      }}
-    >
+    // La légende est une note de bas de grille, pas un titre : encre secondaire
+    // et taille de libellé. On la consulte les premiers jours, puis les couleurs
+    // se retiennent d'elles-mêmes — elle ne doit pas continuer à peser ensuite.
+    <ul className="m-0 flex list-none flex-wrap gap-5 p-0">
       {familles.map((f) => (
-        <li key={f} style={{ display: "inline-flex", alignItems: "center", gap: "var(--s-2)" }}>
+        <li key={f} className="inline-flex items-center gap-2">
           <span
             aria-hidden="true"
-            style={{
-              width: "var(--s-2)",
-              height: "var(--s-2)",
-              borderRadius: "var(--r-full)",
-              background: JETONS_FAMILLE[f].accent,
-            }}
+            className="h-2 w-2 shrink-0 rounded-full"
+            style={{ background: JETONS_FAMILLE[f].accent }}
           />
-          <span
-            style={{
-              fontSize: "var(--text-label-size)",
-              lineHeight: "var(--text-label-leading)",
-              color: "var(--ink-700)",
-            }}
-          >
-            {fr.agenda.familles[f]}
-          </span>
+          <span className="font-ui text-label text-ink-500">{fr.agenda.familles[f]}</span>
         </li>
       ))}
     </ul>

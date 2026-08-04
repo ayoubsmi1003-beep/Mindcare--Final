@@ -82,17 +82,54 @@ function isRawDbError(value: unknown): value is RawDbError {
  *
  * On reconnaît donc le cas sans importer le type : aucune réponse HTTP
  * exploitable (`status` absent OU nul) et un nom d'erreur de transport.
+ *
+ * ⚠️ SECOND ÉCART, MÊME FAMILLE, MESURÉ À L'ÉCRAN LE 2026-08-04 — cette fois sur
+ * le chemin POSTGREST, qui porte tous les écrans métier.
+ *
+ * `postgrest-js@2.110.9`, `src/PostgrestBuilder.ts:443-455` : quand `fetch`
+ * échoue, il ne lève pas non plus, il retourne
+ *   `{ message: "TypeError: Failed to fetch", details, hint: "", code: "" }`
+ * avec `status: 0`. Deux pièges d'un coup :
+ *   · `code` vaut la CHAÎNE VIDE, pas `undefined` — la sortie `raw.code !==
+ *     undefined` renvoyait donc `false` immédiatement, et la branche hors-ligne
+ *     était INATTEIGNABLE pour tout appel de données ;
+ *   · l'objet n'a AUCUN champ `name` — le nom du transport est préfixé dans
+ *     `message`.
+ * Résultat constaté : coupure du Wi-Fi en pleine semaine d'agenda → « Une
+ * erreur inattendue s'est produite », c'est-à-dire le message qui fait croire
+ * à une panne du système au moment précis où il faut dire « le réseau est
+ * coupé, rien n'est perdu » (I20).
+ *
+ * Le test ne peut donc pas se fier au seul `name`. Il reste néanmoins étroit :
+ * une VRAIE erreur PostgREST porte toujours un code non vide (`PGRST116`,
+ * `42501`, `23505`…), donc « pas de code exploitable ET pas de statut HTTP »
+ * ne peut désigner qu'un échec de transport.
+ *
+ * Comme les deux fois précédentes : relire la bibliothèque installée, jamais sa
+ * documentation.
  */
+const NOMS_TRANSPORT = [
+  "AuthRetryableFetchError",
+  "TypeError",
+  "NetworkError",
+  "AbortError",
+  "FetchError",
+] as const;
+
 function isNetworkFailure(raw: RawDbError): boolean {
-  if (raw.code !== undefined) return false;
+  // Chaîne vide == absence de code. Voir l'encadré ci-dessus.
+  if (raw.code !== undefined && raw.code !== "") return false;
   if (raw.status !== undefined && raw.status !== 0) return false;
+
   const name = raw.name;
-  return (
-    name === "AuthRetryableFetchError" ||
-    name === "TypeError" ||
-    name === "NetworkError" ||
-    name === "AbortError"
-  );
+  if (name !== undefined) {
+    return (NOMS_TRANSPORT as readonly string[]).includes(name);
+  }
+
+  // Pas de `name` : postgrest-js préfixe le nom du transport dans `message`.
+  const message = raw.message;
+  if (message === undefined) return false;
+  return (NOMS_TRANSPORT as readonly string[]).some((n) => message.startsWith(`${n}:`));
 }
 
 /**

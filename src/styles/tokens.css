@@ -265,6 +265,19 @@
     --grid-main-max: 1120px;
     --grid-context-width: 340px;
 
+    /* Largeur MINIMALE d'une colonne de jour dans la grille d'agenda.
+     *
+     * Mesurée à l'écran le 2026-08-04, et pas choisie à vue : sous cette
+     * largeur, « DE TEST DEUX Patient » se brisait à une lettre par ligne et la
+     * page d'agenda atteignait 7458 px de haut sur un écran de 390 px. La
+     * grille ne RÉTRÉCIT donc plus au-delà — elle défile horizontalement dans
+     * son conteneur, ce que le §4 règle 9 autorise explicitement pour un
+     * tableau, la PAGE ne défilant jamais latéralement.
+     *
+     * Une séance illisible est une séance manquée : mieux vaut faire défiler
+     * que compresser. */
+    --grid-day-min: 132px;
+
     /* ------------------------------------------------------------------
      * CIBLES DE POINTAGE — WORKING-CONTEXT §4 règle 4
      *

@@ -47,7 +47,21 @@ import {
   versIso,
   versSaisieLocale,
 } from "@/components/AgendaPieces";
-import { BandeauHorsLigne, BlocErreur, Champ } from "@/components/EtatsEcran";
+import {
+  BandeauHorsLigne,
+  BarreActions,
+  BlocErreur,
+  Bouton,
+  Carte,
+  Champ,
+  ChampSelection,
+  ChampTexte,
+  ChampZoneTexte,
+  EnTetePage,
+  EtatVide,
+  GrilleChamps,
+  LienBouton,
+} from "@/components/ui";
 import { useSessionEcran } from "@/components/useSessionEcran";
 import { fr } from "@/i18n/fr";
 import {
@@ -267,51 +281,33 @@ export default function PageRendezVous(): React.JSX.Element {
       {horsLigne || horsLigneSession ? <BandeauHorsLigne /> : null}
 
       {rdv === null ? (
-        <>
+        <div className="flex flex-col gap-6">
           {messageErreur !== undefined && !horsLigne ? (
             <BlocErreur message={messageErreur} />
           ) : (
-            <p style={{ color: "var(--ink-500)", fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)" }}>
-              {fr.agenda.introuvable}
-            </p>
+            <EtatVide
+              message={fr.agenda.introuvable}
+              action={<LienBouton href="/agenda">{fr.agenda.retourALAgenda}</LienBouton>}
+            />
           )}
-          <p style={{ marginTop: "var(--s-4)" }}>
-            <Link href="/agenda" style={{ color: "var(--teal-700)", fontSize: "var(--text-body-size)" }}>
-              {fr.agenda.retourALAgenda}
-            </Link>
-          </p>
-        </>
+        </div>
       ) : (
-        <>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "var(--s-4)", flexWrap: "wrap" }}>
-            <h1
-              style={{
-                fontSize: "var(--text-display-size)",
-                lineHeight: "var(--text-display-leading)",
-                letterSpacing: "var(--text-display-tracking)",
-                fontWeight: "var(--weight-semibold)",
-                color: "var(--ink-900)",
-                margin: "var(--size-0)",
-                overflowWrap: "anywhere",
-              }}
-            >
-              {nomPatient(rdv.lastName, rdv.firstName) ?? fr.agenda.patientNonRattache}
-            </h1>
-            <Statut statut={rdv.status} />
-          </div>
+        <div className="flex flex-col gap-8">
+          <EnTetePage
+            titre={nomPatient(rdv.lastName, rdv.firstName) ?? fr.agenda.patientNonRattache}
+            actions={<Statut statut={rdv.status} />}
+            {...(() => {
+              const j = jourComplet(rdv.startsAt);
+              return j === null ? {} : { surTitre: j };
+            })()}
+          />
 
+          {/* Une confirmation est un FAIT ACQUIS : ton positif, `role="status"`
+              pour qu'un lecteur d'écran l'annonce sans couper la parole. */}
           {confirmation !== undefined ? (
             <p
               role="status"
-              style={{
-                marginTop: "var(--s-4)",
-                padding: "var(--s-3) var(--s-4)",
-                borderRadius: "var(--r-md)",
-                background: "var(--positive-bg)",
-                color: "var(--positive)",
-                fontSize: "var(--text-body-size)",
-                lineHeight: "var(--text-body-leading)",
-              }}
+              className="rounded-md border border-positive bg-positive-bg px-4 py-3 font-ui text-body text-positive"
             >
               {confirmation}
             </p>
@@ -321,33 +317,26 @@ export default function PageRendezVous(): React.JSX.Element {
 
           {/* ── Lecture ──────────────────────────────────────────────────── */}
           {!edition ? (
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: `repeat(auto-fit, minmax(var(--card-column-min), 1fr))`,
-                gap: "var(--s-5)",
-                marginTop: "var(--s-6)",
-                padding: "var(--s-5)",
-                borderRadius: "var(--r-lg)",
-                border: "var(--rule-width) solid var(--rule)",
-                background: "var(--card)",
-              }}
-            >
-              <Champ libelle={fr.agenda.date} valeur={jourComplet(rdv.startsAt)} />
-              <Champ libelle={fr.agenda.heure} valeur={plage(rdv.startsAt, rdv.endsAt)} />
-              <Champ
-                libelle={fr.agenda.duree}
-                valeur={`${rdv.durationMinutes} ${fr.agenda.dureeUnite}`}
-              />
-              <Champ libelle={fr.agenda.praticienne} valeur={rdv.practitionerName} />
-              <Champ libelle={fr.patients.numeroDossier} valeur={rdv.recordNumber} />
-              <Champ
-                libelle={fr.agenda.typeConsultation}
-                valeur={rdv.kind === null ? null : fr.agenda.types[rdv.kind]}
-              />
-              <Champ libelle={fr.agenda.origine} valeur={fr.agenda.origines[rdv.source]} />
-              <Champ libelle={fr.agenda.notesAdministratives} valeur={rdv.notesAdmin} />
-            </div>
+            <Carte>
+              <div className="p-6">
+                <GrilleChamps>
+                  <Champ libelle={fr.agenda.date} valeur={jourComplet(rdv.startsAt)} />
+                  <Champ libelle={fr.agenda.heure} valeur={plage(rdv.startsAt, rdv.endsAt)} />
+                  <Champ
+                    libelle={fr.agenda.duree}
+                    valeur={`${rdv.durationMinutes} ${fr.agenda.dureeUnite}`}
+                  />
+                  <Champ libelle={fr.agenda.praticienne} valeur={rdv.practitionerName} />
+                  <Champ libelle={fr.patients.numeroDossier} valeur={rdv.recordNumber} />
+                  <Champ
+                    libelle={fr.agenda.typeConsultation}
+                    valeur={rdv.kind === null ? null : fr.agenda.types[rdv.kind]}
+                  />
+                  <Champ libelle={fr.agenda.origine} valeur={fr.agenda.origines[rdv.source]} />
+                  <Champ libelle={fr.agenda.notesAdministratives} valeur={rdv.notesAdmin} />
+                </GrilleChamps>
+              </div>
+            </Carte>
           ) : null}
 
           {/* ── Modification ─────────────────────────────────────────────── */}
@@ -357,97 +346,48 @@ export default function PageRendezVous(): React.JSX.Element {
                 event.preventDefault();
                 enregistrer();
               }}
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "var(--s-5)",
-                maxWidth: "var(--width-form)",
-                marginTop: "var(--s-6)",
-              }}
+              className="flex max-w-form flex-col gap-5"
             >
-              <div style={{ display: "flex", flexDirection: "column", gap: "var(--s-2)" }}>
-                <label htmlFor="debut" style={libelleStyle}>
-                  {fr.agenda.date} · {fr.agenda.heure}
-                </label>
-                <input
-                  id="debut"
-                  type="datetime-local"
-                  value={debutLocal}
-                  onChange={(event) => setDebutLocal(event.target.value)}
-                  style={champStyle}
-                />
-              </div>
+              <ChampTexte
+                libelle={`${fr.agenda.date} · ${fr.agenda.heure}`}
+                type="datetime-local"
+                valeur={debutLocal}
+                onChange={setDebutLocal}
+              />
 
-              <div style={{ display: "flex", flexDirection: "column", gap: "var(--s-2)" }}>
-                <label htmlFor="duree" style={libelleStyle}>
-                  {fr.agenda.duree} ({fr.agenda.dureeUnite})
-                </label>
-                <input
-                  id="duree"
-                  type="number"
-                  min={5}
-                  max={240}
-                  step={5}
-                  value={duree}
-                  onChange={(event) => setDuree(event.target.value)}
-                  style={{ ...champStyle, fontVariantNumeric: "tabular-nums", fontFamily: "var(--font-num)" }}
-                />
-              </div>
+              <ChampTexte
+                libelle={`${fr.agenda.duree} (${fr.agenda.dureeUnite})`}
+                type="number"
+                valeur={duree}
+                onChange={setDuree}
+              />
 
-              <div style={{ display: "flex", flexDirection: "column", gap: "var(--s-2)" }}>
-                <label htmlFor="kind" style={libelleStyle}>
-                  {fr.agenda.typeConsultation}
-                </label>
-                <select
-                  id="kind"
-                  value={kind}
-                  onChange={(event) => setKind(event.target.value as ConsultationKind | "")}
-                  style={champStyle}
-                >
-                  <option value="">{fr.etats.texteAbsent}</option>
-                  {TYPES_ORDONNES.map((valeur) => (
-                    <option key={valeur} value={valeur}>
-                      {fr.agenda.types[valeur]}
-                    </option>
-                  ))}
-                </select>
-              </div>
+              <ChampSelection
+                libelle={fr.agenda.typeConsultation}
+                valeur={kind}
+                onChange={(v) => setKind(v as ConsultationKind | "")}
+                options={[
+                  { valeur: "", libelle: fr.etats.texteAbsent },
+                  ...TYPES_ORDONNES.map((valeur) => ({
+                    valeur,
+                    libelle: fr.agenda.types[valeur],
+                  })),
+                ]}
+              />
 
-              <div style={{ display: "flex", flexDirection: "column", gap: "var(--s-2)" }}>
-                <label htmlFor="notes" style={libelleStyle}>
-                  {fr.agenda.notesAdministratives}
-                </label>
-                <textarea
-                  id="notes"
-                  rows={3}
-                  value={notes}
-                  onChange={(event) => setNotes(event.target.value)}
-                  style={{ ...champStyle, minHeight: "var(--target-comfort)", resize: "vertical" }}
-                />
-              </div>
+              <ChampZoneTexte
+                libelle={fr.agenda.notesAdministratives}
+                valeur={notes}
+                onChange={setNotes}
+                lignes={3}
+              />
 
-              <div style={{ display: "flex", gap: "var(--s-4)", flexWrap: "wrap" }}>
-                <button
-                  type="submit"
-                  disabled={envoi}
-                  style={{
-                    minHeight: "var(--target-min)",
-                    padding: "var(--s-2) var(--s-5)",
-                    borderRadius: "var(--r-md)",
-                    border: "none",
-                    background: envoi ? "var(--teal-400)" : "var(--teal-600)",
-                    color: "var(--card)",
-                    fontSize: "var(--text-body-size)",
-                    lineHeight: "var(--text-body-leading)",
-                    fontWeight: "var(--weight-semibold)",
-                    fontFamily: "var(--font-ui)",
-                    cursor: envoi ? "default" : "pointer",
-                  }}
-                >
+              <BarreActions>
+                <Bouton type="submit" rang="principal" disabled={envoi}>
                   {fr.actions.enregistrerLeRendezVous}
-                </button>
-                <button
-                  type="button"
+                </Bouton>
+                <Bouton
+                  rang="discret"
                   onClick={() => {
                     setEdition(false);
                     setDebutLocal(versSaisieLocale(rdv.startsAt));
@@ -455,22 +395,10 @@ export default function PageRendezVous(): React.JSX.Element {
                     setNotes(rdv.notesAdmin ?? "");
                     setKind(rdv.kind ?? "");
                   }}
-                  style={{
-                    minHeight: "var(--target-min)",
-                    padding: "var(--s-2) var(--s-5)",
-                    borderRadius: "var(--r-md)",
-                    border: "var(--rule-width) solid var(--rule)",
-                    background: "var(--card)",
-                    color: "var(--ink-700)",
-                    fontSize: "var(--text-body-size)",
-                    lineHeight: "var(--text-body-leading)",
-                    fontFamily: "var(--font-ui)",
-                    cursor: "pointer",
-                  }}
                 >
                   {fr.actions.annuler}
-                </button>
-              </div>
+                </Bouton>
+              </BarreActions>
             </form>
           ) : null}
 
@@ -481,75 +409,34 @@ export default function PageRendezVous(): React.JSX.Element {
                 event.preventDefault();
                 annulerLeRendezVous();
               }}
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "var(--s-3)",
-                maxWidth: "var(--width-form)",
-                marginTop: "var(--s-6)",
-                padding: "var(--s-5)",
-                borderRadius: "var(--r-lg)",
-                border: "var(--rule-width) solid var(--attention)",
-                background: "var(--attention-bg)",
-              }}
+              className="max-w-form rounded-lg border border-attention bg-attention-bg p-6"
             >
-              <label htmlFor="motif" style={libelleStyle}>
-                {fr.agenda.motifAnnulation}
-              </label>
-              {/* On DIT que ce texte est visible de l'assistante. Sans cette
-                  phrase, un motif clinique finirait dans un champ administratif
-                  — ADR-017 protège la colonne, pas la discipline de saisie. */}
-              <p style={{ margin: "var(--size-0)", color: "var(--ink-700)", fontSize: "var(--text-label-size)", lineHeight: "var(--text-label-leading)" }}>
-                {fr.agenda.motifAnnulationIndication}
-              </p>
-              <input
-                id="motif"
-                type="text"
-                value={motif}
-                onChange={(event) => setMotif(event.target.value)}
-                style={champStyle}
-              />
-              <div style={{ display: "flex", gap: "var(--s-4)", flexWrap: "wrap" }}>
-                <button
-                  type="submit"
-                  disabled={envoi}
-                  style={{
-                    minHeight: "var(--target-min)",
-                    padding: "var(--s-2) var(--s-5)",
-                    borderRadius: "var(--r-md)",
-                    border: "none",
-                    background: "var(--attention)",
-                    color: "var(--card)",
-                    fontSize: "var(--text-body-size)",
-                    lineHeight: "var(--text-body-leading)",
-                    fontWeight: "var(--weight-semibold)",
-                    fontFamily: "var(--font-ui)",
-                    cursor: envoi ? "default" : "pointer",
-                  }}
-                >
-                  {fr.actions.annulerLeRendezVous}
-                </button>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setAnnulationOuverte(false);
-                    setMotif("");
-                  }}
-                  style={{
-                    minHeight: "var(--target-min)",
-                    padding: "var(--s-2) var(--s-5)",
-                    borderRadius: "var(--r-md)",
-                    border: "var(--rule-width) solid var(--rule)",
-                    background: "var(--card)",
-                    color: "var(--ink-700)",
-                    fontSize: "var(--text-body-size)",
-                    lineHeight: "var(--text-body-leading)",
-                    fontFamily: "var(--font-ui)",
-                    cursor: "pointer",
-                  }}
-                >
-                  {fr.actions.annuler}
-                </button>
+              <div className="flex flex-col gap-4">
+                {/* On DIT que ce texte est visible de l'assistante. Sans cette
+                    phrase, un motif clinique finirait dans un champ
+                    administratif — ADR-017 protège la colonne, pas la
+                    discipline de saisie. */}
+                <ChampTexte
+                  libelle={fr.agenda.motifAnnulation}
+                  valeur={motif}
+                  onChange={setMotif}
+                  indication={fr.agenda.motifAnnulationIndication}
+                />
+
+                <BarreActions>
+                  <Bouton type="submit" retrait disabled={envoi}>
+                    {fr.actions.annulerLeRendezVous}
+                  </Bouton>
+                  <Bouton
+                    rang="discret"
+                    onClick={() => {
+                      setAnnulationOuverte(false);
+                      setMotif("");
+                    }}
+                  >
+                    {fr.actions.annuler}
+                  </Bouton>
+                </BarreActions>
               </div>
             </form>
           ) : null}
@@ -563,79 +450,32 @@ export default function PageRendezVous(): React.JSX.Element {
               font pas ce qu'elles disent. */}
           {!edition && !annulationOuverte
             && rdv.status !== "cancelled" && rdv.status !== "completed" ? (
-            <div style={{ display: "flex", gap: "var(--s-4)", flexWrap: "wrap", marginTop: "var(--s-6)" }}>
+            <BarreActions>
               {/* L'approbation n'apparaît QUE sur une demande en attente. Sur
                   tout autre état, la porte `app.confirm_appointment` lève — et
                   proposer un bouton qui va échouer apprend à la praticienne que
                   les commandes de cet écran ne font pas ce qu'elles disent. */}
               {rdv.status === "requested" ? (
-                <button
-                  type="button"
-                  onClick={approuver}
-                  disabled={envoi}
-                  style={{
-                    minHeight: "var(--target-min)",
-                    padding: "var(--s-2) var(--s-5)",
-                    borderRadius: "var(--r-md)",
-                    border: "none",
-                    background: envoi ? "var(--teal-400)" : "var(--teal-600)",
-                    color: "var(--card)",
-                    fontSize: "var(--text-body-size)",
-                    lineHeight: "var(--text-body-leading)",
-                    fontWeight: "var(--weight-semibold)",
-                    fontFamily: "var(--font-ui)",
-                    cursor: envoi ? "default" : "pointer",
-                  }}
-                >
+                <Bouton rang="principal" onClick={approuver} disabled={envoi}>
                   {fr.agenda.approuver}
-                </button>
+                </Bouton>
               ) : null}
 
-              <button
-                type="button"
-                onClick={() => setEdition(true)}
-                style={{
-                  minHeight: "var(--target-min)",
-                  padding: "var(--s-2) var(--s-5)",
-                  borderRadius: "var(--r-md)",
-                  border: "var(--rule-width) solid var(--rule)",
-                  background: "var(--card)",
-                  color: "var(--ink-900)",
-                  fontSize: "var(--text-body-size)",
-                  lineHeight: "var(--text-body-leading)",
-                  fontFamily: "var(--font-ui)",
-                  cursor: "pointer",
-                }}
-              >
+              <Bouton rang="secondaire" onClick={() => setEdition(true)}>
                 {fr.actions.modifierLeRendezVous}
-              </button>
-              <button
-                type="button"
-                onClick={() => setAnnulationOuverte(true)}
-                style={{
-                  minHeight: "var(--target-min)",
-                  padding: "var(--s-2) var(--s-5)",
-                  borderRadius: "var(--r-md)",
-                  border: "var(--rule-width) solid var(--attention)",
-                  background: "var(--card)",
-                  color: "var(--attention)",
-                  fontSize: "var(--text-body-size)",
-                  lineHeight: "var(--text-body-leading)",
-                  fontFamily: "var(--font-ui)",
-                  cursor: "pointer",
-                }}
-              >
+              </Bouton>
+              <Bouton retrait onClick={() => setAnnulationOuverte(true)}>
                 {fr.actions.annulerLeRendezVous}
-              </button>
-            </div>
+              </Bouton>
+            </BarreActions>
           ) : null}
 
-          <p style={{ marginTop: "var(--s-8)" }}>
-            <Link href="/agenda" style={{ color: "var(--teal-700)", fontSize: "var(--text-body-size)" }}>
+          <div>
+            <LienBouton href="/agenda" rang="discret">
               {fr.agenda.retourALAgenda}
-            </Link>
-          </p>
-        </>
+            </LienBouton>
+          </div>
+        </div>
       )}
     </AppShell>
   );

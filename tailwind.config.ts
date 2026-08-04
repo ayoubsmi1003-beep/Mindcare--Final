@@ -112,11 +112,27 @@ const config: Config = {
       slow: "var(--d-slow)",
       scene: "var(--d-scene)",
     },
-    // Aucune animation par défaut n'est spécifiée par 04-DESIGN-SYSTEM à ce
-    // jour : on ferme l'accès à `animate-spin`/`animate-pulse` etc. sans
-    // inventer de remplacement tant que rien n'est demandé.
-    keyframes: {},
-    animation: {},
+    // UNE SEULE animation, et seulement parce qu'un squelette de chargement en
+    // a besoin. L'échelle reste fermée : pas de `animate-spin`, pas de
+    // `animate-bounce`. Un écran clinique n'a rien qui doive tourner.
+    //
+    // `respire` ne déplace rien et ne change aucune couleur — il fait varier la
+    // seule opacité d'un bloc `sunken`, entre les deux valeurs déjà ouvertes par
+    // l'échelle `opacity` du bas de ce fichier (1 et .5). Une donnée affichée ne
+    // bouge jamais (§4 règle 5) ; un squelette n'est pas une donnée, c'est
+    // l'aveu qu'il n'y en a pas encore.
+    //
+    // `prefers-reduced-motion: reduce` est déjà respecté globalement par
+    // src/styles/tokens.css, qui ramène toute animation à une durée nulle.
+    keyframes: {
+      respire: {
+        "0%, 100%": { opacity: "1" },
+        "50%": { opacity: ".5" },
+      },
+    },
+    animation: {
+      respire: "respire var(--d-scene) var(--e-soft) infinite",
+    },
     // Échelle typographique §3 — taille/interligne/interlettrage par rôle de
     // texte, jamais par valeur libre (`text-xl`, `text-[15px]` fermés).
     // Source unique : src/styles/tokens.css (T1.2). Ce fichier ne fixe AUCUNE
@@ -257,6 +273,10 @@ const config: Config = {
     minWidth: {
       target: "36px",
       "target-lg": "44px",
+      // Pas une exception : `--card-column-min` est un jeton déclaré dans
+      // tokens.css. Il donne au tableau de l'agenda une largeur en dessous de
+      // laquelle il défile au lieu d'écraser ses colonnes.
+      card: "var(--card-column-min)",
     },
     minHeight: {
       target: "36px",
@@ -265,6 +285,21 @@ const config: Config = {
     maxHeight: {
       none: "none",
       full: "100%",
+    },
+    // Grilles fluides — aucune valeur littérale, `--card-column-min` est déjà
+    // le jeton nommé pour la largeur minimale d'une colonne de carte (il
+    // existait pour sortir ce `240px` d'un `minmax()` en dur).
+    //
+    // `auto-fit` plutôt qu'un nombre de colonnes figé assorti de points de
+    // rupture : la même grille rend quatre colonnes sur le poste du cabinet
+    // (1920), deux sur un portable, une sur un écran étroit, sans qu'aucun
+    // champ ne passe jamais sous sa largeur lisible. Un point de rupture de
+    // moins est une occasion de moins de le régler pour un seul écran.
+    gridTemplateColumns: {
+      fiche: "repeat(auto-fit, minmax(var(--card-column-min), 1fr))",
+      // La coquille : navigation fixe + contenu fluide. En dessous de la
+      // rupture `tablet`, l'écran repasse à UNE colonne (cf. AppShell).
+      app: "var(--grid-nav-width) minmax(0, 1fr)",
     },
     // Largeurs de grille §3 — source unique tokens.css, aucune valeur ici.
     maxWidth: {
@@ -284,6 +319,9 @@ const config: Config = {
       0: "0px",
       DEFAULT: "1px",
       2: "2px",
+      // Jeton déclaré, pas une valeur libre : `--kind-accent-width` existe pour
+      // le liseré gauche d'une carte de rendez-vous, distinct de `--rule-width`.
+      kind: "var(--kind-accent-width)",
     },
     extend: {},
   },

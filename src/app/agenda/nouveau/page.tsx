@@ -36,7 +36,17 @@ import { useEffect, useState } from "react";
 
 import { AppShell } from "@/components/AppShell";
 import { versIso } from "@/components/AgendaPieces";
-import { BandeauHorsLigne, BlocErreur } from "@/components/EtatsEcran";
+import {
+  BandeauHorsLigne,
+  BarreActions,
+  BlocErreur,
+  Bouton,
+  ChampSelection,
+  ChampTexte,
+  ChampZoneTexte,
+  EnTetePage,
+  LienBouton,
+} from "@/components/ui";
 import { useSessionEcran } from "@/components/useSessionEcran";
 import { fr } from "@/i18n/fr";
 import { createAppointment, type ConsultationKind } from "@/services/appointments";
@@ -204,35 +214,19 @@ export default function PageNouveauRendezVous(): React.JSX.Element {
       nomComplet={utilisateur?.fullName ?? ""}
       onDeconnexion={deconnecter}
     >
-      <h1
-        style={{
-          fontSize: "var(--text-display-size)",
-          lineHeight: "var(--text-display-leading)",
-          letterSpacing: "var(--text-display-tracking)",
-          fontWeight: "var(--weight-semibold)",
-          color: "var(--ink-900)",
-          margin: "var(--size-0)",
-        }}
-      >
-        {fr.agenda.nouveau}
-      </h1>
+      <div className="flex flex-col gap-8">
+        <EnTetePage titre={fr.agenda.nouveau} />
 
-      {horsLigne || horsLigneSession ? <BandeauHorsLigne /> : null}
-      {messageErreur !== undefined && !horsLigne ? <BlocErreur message={messageErreur} /> : null}
+        {horsLigne || horsLigneSession ? <BandeauHorsLigne /> : null}
+        {messageErreur !== undefined && !horsLigne ? <BlocErreur message={messageErreur} /> : null}
 
-      <form
-        onSubmit={(event) => {
-          event.preventDefault();
-          enregistrer();
-        }}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "var(--s-5)",
-          maxWidth: "var(--width-form)",
-          marginTop: "var(--s-6)",
-        }}
-      >
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            enregistrer();
+          }}
+          className="flex max-w-form flex-col gap-5"
+        >
         {/* ── Patient ─────────────────────────────────────────────────────── */}
         <fieldset style={{ border: "none", margin: "var(--size-0)", padding: "var(--size-0)", display: "flex", flexDirection: "column", gap: "var(--s-2)" }}>
           <label htmlFor="recherche-patient" style={libelleStyle}>
@@ -258,54 +252,30 @@ export default function PageNouveauRendezVous(): React.JSX.Element {
                   }}
                   style={champStyle}
                 />
-                <button
-                  type="button"
-                  onClick={() => setRequetePatient(saisiePatient.trim())}
-                  style={{
-                    minHeight: "var(--target-min)",
-                    padding: "var(--s-2) var(--s-5)",
-                    borderRadius: "var(--r-md)",
-                    border: "var(--rule-width) solid var(--rule)",
-                    background: "var(--card)",
-                    color: "var(--ink-700)",
-                    fontSize: "var(--text-body-size)",
-                    lineHeight: "var(--text-body-leading)",
-                    fontFamily: "var(--font-ui)",
-                    whiteSpace: "nowrap",
-                    cursor: "pointer",
-                  }}
-                >
+                <Bouton onClick={() => setRequetePatient(saisiePatient.trim())}>
                   {fr.patients.rechercher}
-                </button>
+                </Bouton>
               </div>
 
               {resultats !== undefined && resultats.length === 0 ? (
-                <p style={{ color: "var(--ink-500)", fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)" }}>
+                <p className="font-ui text-body text-ink-500">
                   {requetePatient === "" ? fr.patients.listeVide : fr.patients.rechercheSansResultat}
                 </p>
               ) : null}
 
               {resultats !== undefined && resultats.length > 0 ? (
-                <ul style={{ listStyle: "none", margin: "var(--size-0)", padding: "var(--size-0)", display: "flex", flexDirection: "column", gap: "var(--s-1)" }}>
+                <ul className="m-0 flex list-none flex-col gap-1 p-0">
                   {resultats.map((p) => (
                     <li key={p.id}>
                       <button
                         type="button"
                         onClick={() => setPatient(p)}
-                        style={{
-                          width: "var(--size-full)",
-                          minHeight: "var(--target-min)",
-                          padding: "var(--s-2) var(--s-4)",
-                          borderRadius: "var(--r-md)",
-                          border: "var(--rule-width) solid var(--rule)",
-                          background: "var(--card)",
-                          color: "var(--ink-900)",
-                          fontSize: "var(--text-body-size)",
-                          lineHeight: "var(--text-body-leading)",
-                          fontFamily: "var(--font-ui)",
-                          textAlign: "left",
-                          cursor: "pointer",
-                        }}
+                        className={[
+                          "w-full min-h-target rounded-md border border-rule bg-card px-4 py-2 text-left",
+                          "font-ui text-body text-ink-900 cursor-pointer",
+                          "transition duration-quick ease-soft hover:border-teal-400 hover:bg-teal-50",
+                          "outline-none focus-visible:outline focus-visible:outline-teal-600 focus-visible:outline-offset",
+                        ].join(" ")}
                       >
                         {p.lastName} {p.firstName} · {p.recordNumber}
                       </button>
@@ -315,156 +285,81 @@ export default function PageNouveauRendezVous(): React.JSX.Element {
               ) : null}
             </>
           ) : (
-            <div style={{ display: "flex", alignItems: "center", gap: "var(--s-3)", flexWrap: "wrap" }}>
-              <span style={{ fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)", fontWeight: "var(--weight-medium)", color: "var(--ink-900)", overflowWrap: "anywhere" }}>
+            /* Patient choisi : la sélection est un FAIT ACQUIS, elle se lit
+               comme tel — surface teal discrète, et un seul geste pour revenir
+               en arrière. */
+            <div className="flex flex-wrap items-center gap-3 rounded-md border border-teal-100 bg-teal-50 px-4 py-3">
+              <span className="min-w-0 flex-auto font-ui text-body font-medium text-ink-900 break-words">
                 {patient.lastName} {patient.firstName} · {patient.recordNumber}
               </span>
-              <button
-                type="button"
+              <Bouton
+                rang="discret"
                 onClick={() => {
                   setPatient(undefined);
                   setResultats(undefined);
                   setRequetePatient(undefined);
                 }}
-                style={{
-                  minHeight: "var(--target-min)",
-                  padding: "var(--s-1) var(--s-3)",
-                  borderRadius: "var(--r-md)",
-                  border: "var(--rule-width) solid var(--rule)",
-                  background: "var(--card)",
-                  color: "var(--ink-700)",
-                  fontSize: "var(--text-label-size)",
-                  lineHeight: "var(--text-label-leading)",
-                  fontFamily: "var(--font-ui)",
-                  cursor: "pointer",
-                }}
               >
                 {fr.patients.rechercher}
-              </button>
+              </Bouton>
             </div>
           )}
         </fieldset>
 
-        {/* ── Praticienne ─────────────────────────────────────────────────── */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "var(--s-2)" }}>
-          <label htmlFor="praticienne" style={libelleStyle}>
-            {fr.agenda.praticienne}
-          </label>
-          <select
-            id="praticienne"
-            value={praticienneId}
-            onChange={(event) => setPraticienneId(event.target.value)}
-            style={champStyle}
-          >
-            {praticiennes.map((p) => (
-              <option key={p.id} value={p.id}>
-                {p.fullName}
-              </option>
-            ))}
-          </select>
-        </div>
+        <ChampSelection
+          libelle={fr.agenda.praticienne}
+          valeur={praticienneId}
+          onChange={setPraticienneId}
+          options={praticiennes.map((p) => ({ valeur: p.id, libelle: p.fullName }))}
+        />
 
-        {/* ── Date et heure ───────────────────────────────────────────────── */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "var(--s-2)" }}>
-          <label htmlFor="debut" style={libelleStyle}>
-            {fr.agenda.date} · {fr.agenda.heure}
-          </label>
-          <input
-            id="debut"
-            type="datetime-local"
-            value={debutLocal}
-            onChange={(event) => setDebutLocal(event.target.value)}
-            style={champStyle}
-          />
-        </div>
+        <ChampTexte
+          libelle={`${fr.agenda.date} · ${fr.agenda.heure}`}
+          type="datetime-local"
+          valeur={debutLocal}
+          onChange={setDebutLocal}
+        />
 
-        {/* ── Durée ───────────────────────────────────────────────────────── */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "var(--s-2)" }}>
-          <label htmlFor="duree" style={libelleStyle}>
-            {fr.agenda.duree} ({fr.agenda.dureeUnite})
-          </label>
-          <input
-            id="duree"
-            type="number"
-            min={5}
-            max={240}
-            step={5}
-            value={duree}
-            onChange={(event) => setDuree(event.target.value)}
-            style={{ ...champStyle, fontVariantNumeric: "tabular-nums", fontFamily: "var(--font-num)" }}
-          />
-        </div>
+        <ChampTexte
+          libelle={`${fr.agenda.duree} (${fr.agenda.dureeUnite})`}
+          type="number"
+          valeur={duree}
+          onChange={setDuree}
+        />
 
-        {/* ── Type de consultation ────────────────────────────────────────── */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "var(--s-2)" }}>
-          <label htmlFor="kind" style={libelleStyle}>
-            {fr.agenda.typeConsultation}
-          </label>
-          <select
-            id="kind"
-            value={kind}
-            onChange={(event) => setKind(event.target.value as ConsultationKind | "")}
-            style={champStyle}
-          >
-            {/* Option vide EN PREMIER et sélectionnée par défaut : le champ est
-                facultatif, et pré-cocher « Première consultation » écrirait un
-                type que personne n'a choisi. */}
-            <option value="">{fr.etats.texteAbsent}</option>
-            {TYPES_ORDONNES.map((valeur) => (
-              <option key={valeur} value={valeur}>
-                {fr.agenda.types[valeur]}
-              </option>
-            ))}
-          </select>
-        </div>
+        {/* Option vide EN PREMIER et sélectionnée par défaut : le champ est
+            facultatif, et pré-cocher « Première consultation » écrirait un
+            type que personne n'a choisi. */}
+        <ChampSelection
+          libelle={fr.agenda.typeConsultation}
+          valeur={kind}
+          onChange={(v) => setKind(v as ConsultationKind | "")}
+          options={[
+            { valeur: "", libelle: fr.etats.texteAbsent },
+            ...TYPES_ORDONNES.map((valeur) => ({
+              valeur,
+              libelle: fr.agenda.types[valeur],
+            })),
+          ]}
+        />
 
-        {/* ── Notes administratives ───────────────────────────────────────── */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "var(--s-2)" }}>
-          <label htmlFor="notes" style={libelleStyle}>
-            {fr.agenda.notesFacultatives}
-          </label>
-          <textarea
-            id="notes"
-            rows={3}
-            value={notes}
-            onChange={(event) => setNotes(event.target.value)}
-            style={{ ...champStyle, minHeight: "var(--target-comfort)", resize: "vertical" }}
-          />
-        </div>
+        <ChampZoneTexte
+          libelle={fr.agenda.notesFacultatives}
+          valeur={notes}
+          onChange={setNotes}
+          lignes={3}
+        />
 
-        <div style={{ display: "flex", alignItems: "center", gap: "var(--s-4)", flexWrap: "wrap" }}>
-          <button
-            type="submit"
-            disabled={envoi}
-            style={{
-              minHeight: "var(--target-min)",
-              padding: "var(--s-2) var(--s-5)",
-              borderRadius: "var(--r-md)",
-              border: "none",
-              background: envoi ? "var(--teal-400)" : "var(--teal-600)",
-              color: "var(--card)",
-              fontSize: "var(--text-body-size)",
-              lineHeight: "var(--text-body-leading)",
-              fontWeight: "var(--weight-semibold)",
-              fontFamily: "var(--font-ui)",
-              cursor: envoi ? "default" : "pointer",
-            }}
-          >
+        <BarreActions>
+          <Bouton type="submit" rang="principal" disabled={envoi}>
             {fr.actions.enregistrerLeRendezVous}
-          </button>
-
-          <Link
-            href="/agenda"
-            style={{
-              color: "var(--teal-700)",
-              fontSize: "var(--text-body-size)",
-              lineHeight: "var(--text-body-leading)",
-            }}
-          >
+          </Bouton>
+          <LienBouton href="/agenda" rang="discret">
             {fr.agenda.retourALAgenda}
-          </Link>
-        </div>
-      </form>
+          </LienBouton>
+          </BarreActions>
+        </form>
+      </div>
     </AppShell>
   );
 }

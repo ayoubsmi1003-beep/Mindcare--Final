@@ -39,8 +39,17 @@ import { useCallback, useEffect, useState } from "react";
 
 import { AppShell } from "@/components/AppShell";
 import { heure, jour, jourComplet, nomPatient, Statut } from "@/components/AgendaPieces";
-import { BandeauHorsLigne, BlocErreur } from "@/components/EtatsEcran";
 import { GrilleSemaine, repartition } from "@/components/GrilleSemaine";
+import {
+  BandeauHorsLigne,
+  BlocErreur,
+  Chiffre,
+  EnTetePage,
+  EtatVide,
+  LienBouton,
+  Section,
+  Squelette,
+} from "@/components/ui";
 import { useSessionEcran } from "@/components/useSessionEcran";
 import { fr } from "@/i18n/fr";
 import {
@@ -192,127 +201,87 @@ export default function PageAgenda(): React.JSX.Element {
       nomComplet={utilisateur?.fullName ?? ""}
       onDeconnexion={deconnecter}
     >
-      <header style={{ display: "flex", flexDirection: "column", gap: "var(--s-1)" }}>
-        <h1
-          style={{
-            fontSize: "var(--text-display-size)",
-            lineHeight: "var(--text-display-leading)",
-            letterSpacing: "var(--text-display-tracking)",
-            fontWeight: "var(--weight-semibold)",
-            color: "var(--ink-900)",
-            margin: "var(--size-0)",
-          }}
-        >
-          {fr.agenda.titre}
-        </h1>
-        <p
-          style={{
-            margin: "var(--size-0)",
-            color: "var(--ink-500)",
-            fontSize: "var(--text-body-size)",
-            lineHeight: "var(--text-body-leading)",
-          }}
-        >
-          {jourComplet(new Date().toISOString()) ?? fr.etats.texteAbsent}
-        </p>
-      </header>
+      {/* L'écran respire par blocs de `--s-8` : titre, barre de période, grille,
+          file d'attente. C'est l'espace, pas des traits, qui sépare des sujets
+          différents — un filet de plus sur un agenda déjà quadrillé ajoute une
+          ligne à lire pour rien. */}
+      <div className="flex flex-col gap-8">
+        <EnTetePage
+          titre={fr.agenda.titre}
+          sousTitre={jourComplet(new Date().toISOString()) ?? fr.etats.texteAbsent}
+          actions={
+            <LienBouton href="/agenda/nouveau" rang="principal">
+              {fr.agenda.nouveau}
+            </LienBouton>
+          }
+        />
 
-      {/* ── Barre de période, chiffres et action ──────────────────────────── */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: "var(--s-4)",
-          flexWrap: "wrap",
-          marginTop: "var(--s-6)",
-        }}
-      >
-        <div style={{ display: "flex", alignItems: "center", gap: "var(--s-4)", flexWrap: "wrap" }}>
-          <h2
-            style={{
-              margin: "var(--size-0)",
-              fontSize: "var(--text-title-size)",
-              lineHeight: "var(--text-title-leading)",
-              letterSpacing: "var(--text-title-tracking)",
-              fontWeight: "var(--weight-semibold)",
-              color: "var(--ink-900)",
-            }}
-          >
-            {vue === "semaine"
-              ? `${fr.agenda.semaine.titre} ${jour(debut.toISOString()) ?? ""} ${fr.agenda.semaine.au} ${jour(finSemaine.toISOString()) ?? ""}`
-              : fr.agenda.aujourdhui}
-          </h2>
+        {/* ── Période, chiffres, navigation ──────────────────────────────── */}
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-wrap items-center gap-4">
+            <h2 className="font-ui text-title font-semibold text-ink-900">
+              {vue === "semaine"
+                ? `${fr.agenda.semaine.titre} ${jour(debut.toISOString()) ?? ""} ${fr.agenda.semaine.au} ${jour(finSemaine.toISOString()) ?? ""}`
+                : fr.agenda.aujourdhui}
+            </h2>
 
-          <Chiffre valeur={placees.length} libelle={fr.agenda.semaine.seancesCetteSemaine} />
-          <Chiffre
-            valeur={Math.max(0, creneauxTotal - creneauxOccupes)}
-            libelle={fr.agenda.semaine.creneauxLibres}
-          />
-          <Chiffre
-            valeur={enAttente.length}
-            libelle={fr.agenda.semaine.demandesEnAttente}
-            attention={enAttente.length > 0}
-          />
+            <Chiffre valeur={placees.length} libelle={fr.agenda.semaine.seancesCetteSemaine} />
+            <Chiffre
+              valeur={Math.max(0, creneauxTotal - creneauxOccupes)}
+              libelle={fr.agenda.semaine.creneauxLibres}
+            />
+            <Chiffre
+              valeur={enAttente.length}
+              libelle={fr.agenda.semaine.demandesEnAttente}
+              attention={enAttente.length > 0}
+            />
+          </div>
+
+          {/* Naviguer dans le temps et changer d'échelle sont deux gestes
+              différents : ils sont donc dans deux groupes séparés, et non dans
+              une file de cinq boutons identiques où l'on vise au jugé. */}
+          <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-2">
+              <BoutonPeriode onClick={() => decaler(-JOURS_SEMAINE)} libelle={fr.agenda.semaine.semainePrecedente} />
+              <BoutonPeriode onClick={() => setAncre(lundiDe(new Date()))} libelle={fr.agenda.semaine.cetteSemaine} />
+              <BoutonPeriode onClick={() => decaler(JOURS_SEMAINE)} libelle={fr.agenda.semaine.semaineSuivante} />
+            </div>
+
+            <div className="inline-flex gap-1 rounded-md border border-rule bg-sunken p-1">
+              <BoutonPeriode
+                onClick={() => setVue("semaine")}
+                libelle={fr.agenda.semaine.vueSemaine}
+                actif={vue === "semaine"}
+              />
+              <BoutonPeriode
+                onClick={() => setVue("jour")}
+                libelle={fr.agenda.semaine.vueJour}
+                actif={vue === "jour"}
+              />
+            </div>
+          </div>
         </div>
 
-        <Link
-          href="/agenda/nouveau"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            minHeight: "var(--target-min)",
-            padding: "var(--s-2) var(--s-5)",
-            borderRadius: "var(--r-md)",
-            background: "var(--teal-600)",
-            color: "var(--card)",
-            fontSize: "var(--text-body-size)",
-            lineHeight: "var(--text-body-leading)",
-            fontWeight: "var(--weight-semibold)",
-            textDecoration: "none",
-          }}
-        >
-          {fr.agenda.nouveau}
-        </Link>
-      </div>
+        {horsLigne || horsLigneSession ? <BandeauHorsLigne /> : null}
+        {messageErreur !== undefined && !horsLigne ? <BlocErreur message={messageErreur} /> : null}
 
-      {/* ── Navigation de période ─────────────────────────────────────────── */}
-      <div style={{ display: "flex", alignItems: "center", gap: "var(--s-2)", flexWrap: "wrap", marginTop: "var(--s-4)" }}>
-        <BoutonPeriode onClick={() => decaler(-JOURS_SEMAINE)} libelle={fr.agenda.semaine.semainePrecedente} />
-        <BoutonPeriode onClick={() => setAncre(lundiDe(new Date()))} libelle={fr.agenda.semaine.cetteSemaine} />
-        <BoutonPeriode onClick={() => decaler(JOURS_SEMAINE)} libelle={fr.agenda.semaine.semaineSuivante} />
+        {/* Le squelette occupe la place de la grille : le contenu, en arrivant,
+            ne décale rien — et c'est exactement l'instant où l'on clique. */}
+        {chargement ? <Squelette lignes={8} /> : null}
 
-        <span style={{ display: "inline-flex", gap: "var(--s-1)", marginLeft: "var(--s-4)" }}>
-          <BoutonPeriode
-            onClick={() => setVue("semaine")}
-            libelle={fr.agenda.semaine.vueSemaine}
-            actif={vue === "semaine"}
-          />
-          <BoutonPeriode
-            onClick={() => setVue("jour")}
-            libelle={fr.agenda.semaine.vueJour}
-            actif={vue === "jour"}
-          />
-        </span>
-      </div>
-
-      {horsLigne || horsLigneSession ? <BandeauHorsLigne /> : null}
-      {messageErreur !== undefined && !horsLigne ? <BlocErreur message={messageErreur} /> : null}
-
-      {chargement ? (
-        <p style={{ marginTop: "var(--s-6)", color: "var(--ink-500)", fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)" }}>
-          {fr.etats.chargement}
-        </p>
-      ) : null}
-
-      {!chargement && entrees !== undefined ? (
-        <div style={{ marginTop: "var(--s-6)" }}>
-          {liste.length === 0 ? (
-            /* État vide : une phrase --ink-500, aucune illustration (§4 règle 7).
-               La phrase dit « rien de VISIBLE par vous », jamais « rien ». */
-            <p style={{ color: "var(--ink-500)", fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)" }}>
-              {vue === "semaine" ? fr.agenda.semaine.semaineVide : fr.agenda.journeeVide}
-            </p>
+        {!chargement && entrees !== undefined ? (
+          <div>
+            {liste.length === 0 ? (
+              /* État vide : une phrase --ink-500, aucune illustration (§4 règle 7).
+                 La phrase dit « rien de VISIBLE par vous », jamais « rien ». */
+              <EtatVide
+                message={vue === "semaine" ? fr.agenda.semaine.semaineVide : fr.agenda.journeeVide}
+                action={
+                  <LienBouton href="/agenda/nouveau" rang="principal">
+                    {fr.agenda.nouveau}
+                  </LienBouton>
+                }
+              />
           ) : null}
 
           <GrilleSemaine
@@ -325,110 +294,42 @@ export default function PageAgenda(): React.JSX.Element {
         </div>
       ) : null}
 
-      {/* ── Demandes en attente d'approbation ─────────────────────────────── */}
-      <section style={{ marginTop: "var(--s-10)" }}>
-        <h2
-          style={{
-            margin: "var(--size-0)",
-            fontSize: "var(--text-heading-size)",
-            lineHeight: "var(--text-heading-leading)",
-            letterSpacing: "var(--text-heading-tracking)",
-            fontWeight: "var(--weight-semibold)",
-            color: "var(--ink-900)",
-          }}
-        >
-          {fr.agenda.semaine.demandesEnAttente}
-        </h2>
-
-        {enAttente.length === 0 ? (
-          <p style={{ marginTop: "var(--s-3)", color: "var(--ink-500)", fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)" }}>
-            {fr.agenda.semaine.aucuneDemande}
-          </p>
-        ) : (
-          <ul style={{ listStyle: "none", margin: "var(--s-4) var(--size-0)", padding: "var(--size-0)", display: "flex", flexDirection: "column", gap: "var(--s-2)" }}>
-            {enAttente.map((entree) => (
-              <li key={entree.id}>
-                <Link
-                  href={`/agenda/${entree.id}`}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "var(--s-4)",
-                    minHeight: "var(--target-comfort)",
-                    padding: "var(--s-3) var(--s-4)",
-                    borderRadius: "var(--r-md)",
-                    border: "var(--rule-width) solid var(--attention)",
-                    background: "var(--attention-bg)",
-                    color: "var(--ink-900)",
-                    textDecoration: "none",
-                  }}
-                >
-                  <span style={{ fontFamily: "var(--font-num)", fontVariantNumeric: "tabular-nums", minWidth: "var(--target-comfort)" }}>
-                    {heure(entree.startsAt) ?? fr.etats.texteAbsent}
-                  </span>
-                  <span style={{ flex: "1 1 auto", minWidth: "var(--size-0)", overflowWrap: "anywhere" }}>
-                    {nomPatient(entree.lastName, entree.firstName) ?? fr.agenda.patientNonRattache}
-                    {" · "}
-                    {jour(entree.startsAt) ?? fr.etats.texteAbsent}
-                  </span>
-                  <Statut statut={entree.status} />
-                </Link>
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
+        {/* ── Demandes en attente d'approbation ───────────────────────────── */}
+        <Section titre={fr.agenda.semaine.demandesEnAttente}>
+          {enAttente.length === 0 ? (
+            <EtatVide message={fr.agenda.semaine.aucuneDemande} />
+          ) : (
+            <ul className="m-0 flex list-none flex-col gap-2 p-0">
+              {enAttente.map((entree) => (
+                <li key={entree.id}>
+                  <Link
+                    href={`/agenda/${entree.id}`}
+                    className={[
+                      "flex min-h-target-lg items-center gap-4 rounded-md border px-4 py-3",
+                      // Ton `attention` : ces lignes attendent un geste. Jamais
+                      // `critical` — rien n'est perdu (§4 règle 1).
+                      "border-attention bg-attention-bg text-ink-900 no-underline",
+                      "transition duration-quick ease-soft hover:shadow-lift2",
+                      "outline-none focus-visible:outline focus-visible:outline-teal-600 focus-visible:outline-offset",
+                    ].join(" ")}
+                  >
+                    <span className="min-w-target font-num text-num font-medium tabular-nums text-ink-700">
+                      {heure(entree.startsAt) ?? fr.etats.texteAbsent}
+                    </span>
+                    <span className="min-w-0 flex-auto font-ui text-body break-words">
+                      {nomPatient(entree.lastName, entree.firstName) ?? fr.agenda.patientNonRattache}
+                      {" · "}
+                      {jour(entree.startsAt) ?? fr.etats.texteAbsent}
+                    </span>
+                    <Statut statut={entree.status} />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </Section>
+      </div>
     </AppShell>
-  );
-}
-
-/**
- * Un chiffre d'en-tête. `tabular-nums` obligatoire : ces valeurs changent à
- * chaque navigation, et sans chasse fixe elles sautillent d'un pixel à l'autre,
- * ce qui attire l'œil sur du bruit.
- */
-function Chiffre({
-  valeur,
-  libelle,
-  attention = false,
-}: {
-  readonly valeur: number;
-  readonly libelle: string;
-  readonly attention?: boolean;
-}): React.JSX.Element {
-  return (
-    <span
-      style={{
-        display: "inline-flex",
-        alignItems: "baseline",
-        gap: "var(--s-2)",
-        padding: "var(--s-2) var(--s-4)",
-        borderRadius: "var(--r-full)",
-        border: "var(--rule-width) solid var(--rule)",
-        background: attention ? "var(--attention-bg)" : "var(--card)",
-      }}
-    >
-      <strong
-        style={{
-          fontFamily: "var(--font-num)",
-          fontVariantNumeric: "tabular-nums",
-          fontSize: "var(--text-body-size)",
-          fontWeight: "var(--weight-semibold)",
-          color: attention ? "var(--attention)" : "var(--teal-700)",
-        }}
-      >
-        {valeur}
-      </strong>
-      <span
-        style={{
-          fontSize: "var(--text-label-size)",
-          lineHeight: "var(--text-label-leading)",
-          color: "var(--ink-500)",
-        }}
-      >
-        {libelle}
-      </span>
-    </span>
   );
 }
 
@@ -448,19 +349,16 @@ function BoutonPeriode({
       /* L'état sélectionné est porté par `aria-pressed` ET par le contraste,
          jamais par la seule couleur (§4 règle 4). */
       aria-pressed={actif}
-      style={{
-        minHeight: "var(--target-min)",
-        padding: "var(--s-2) var(--s-4)",
-        borderRadius: "var(--r-md)",
-        border: "var(--rule-width) solid var(--rule)",
-        background: actif ? "var(--teal-600)" : "var(--card)",
-        color: actif ? "var(--card)" : "var(--ink-700)",
-        fontSize: "var(--text-label-size)",
-        lineHeight: "var(--text-label-leading)",
-        fontFamily: "var(--font-ui)",
-        fontWeight: actif ? "var(--weight-semibold)" : "var(--weight-regular)",
-        cursor: "pointer",
-      }}
+      className={[
+        "min-h-target cursor-pointer rounded-md border px-4 py-2",
+        "font-ui text-label",
+        "transition duration-quick ease-soft",
+        "outline-none focus-visible:outline focus-visible:outline-teal-600 focus-visible:outline-offset",
+        actif
+          ? // Sélectionné : fond plein et graisse. Deux signaux, pas un.
+            "border-teal-600 bg-teal-600 font-semibold text-paper shadow-lift1"
+          : "border-rule bg-card font-regular text-ink-700 hover:border-ink-300 hover:bg-sunken",
+      ].join(" ")}
     >
       {libelle}
     </button>
