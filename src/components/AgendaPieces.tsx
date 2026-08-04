@@ -45,6 +45,22 @@ export function heure(iso: string): string | null {
   return d === null ? null : FORMAT_HEURE.format(d);
 }
 
+/**
+ * `14:30 – 16:00`. Une seule définition pour la carte de la grille et pour la
+ * fiche du rendez-vous : la fiche portait cette composition en ligne, la carte
+ * n'affichait que l'heure de début, et la grille range par heure PLEINE. Une
+ * séance de 14:30 à 16:00 se lisait donc « 14:30 » dans une case « 14:00 »,
+ * sans que rien ne dise jusqu'à quand la praticienne était prise.
+ *
+ * Si l'une des deux bornes est illisible, on rend `null` plutôt qu'une plage
+ * tronquée : `14:30 – ` affirmerait une fin qu'on ne connaît pas.
+ */
+export function plage(debutIso: string, finIso: string): string | null {
+  const d = heure(debutIso);
+  const f = heure(finIso);
+  return d === null || f === null ? null : `${d} ${fr.agenda.separateurPlage} ${f}`;
+}
+
 export function jour(iso: string): string | null {
   const d = versDate(iso);
   return d === null ? null : FORMAT_JOUR.format(d);

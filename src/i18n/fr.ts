@@ -190,6 +190,8 @@ export const fr = {
     praticienne: "Praticienne",
     date: "Date",
     heure: "Heure",
+    /** Tiret demi-cadratin encadré d'espaces — une plage horaire, pas un trait d'union. */
+    separateurPlage: "–",
     duree: "Durée",
     dureeUnite: "min",
     origine: "Origine du rendez-vous",

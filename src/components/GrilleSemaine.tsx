@@ -13,7 +13,7 @@
 
 import Link from "next/link";
 
-import { heure, nomPatient } from "@/components/AgendaPieces";
+import { heure, nomPatient, plage } from "@/components/AgendaPieces";
 import { fr } from "@/i18n/fr";
 import type { AgendaEntry, ConsultationKind } from "@/services/appointments";
 
@@ -74,6 +74,76 @@ function ajouterJours(base: Date, n: number): Date {
 }
 
 /**
+ * Ce que la grille va RÉELLEMENT rendre : les entrées placées, et les bornes
+ * horaires nécessaires pour toutes les contenir.
+ *
+ * Exporté parce que l'écran affiche des compteurs au-dessus de la grille
+ * (« N séances cette semaine », « N créneaux libres »). Ces compteurs se
+ * calculaient jadis à part, sur la liste brute et sur une plage horaire figée ;
+ * ils annonçaient donc six séances au-dessus d'une grille qui en montrait
+ * quatre. Un chiffre que l'écran contredit juste en dessous est pire qu'aucun
+ * chiffre : il fait douter de l'écran entier.
+ *
+ * Une seule fonction décide, deux affichages la lisent.
+ */
+export function repartition(
+  entrees: readonly AgendaEntry[],
+  debutSemaine: Date,
+  jours: number,
+  heureDebut: number,
+  heureFin: number,
+): {
+  readonly colonnesJours: readonly Date[];
+  readonly lignesHeures: readonly number[];
+  readonly parCase: ReadonlyMap<string, readonly AgendaEntry[]>;
+  readonly placees: readonly AgendaEntry[];
+} {
+  // Rendez-vous annulé : jamais dans la grille, même si l'appelant en a laissé
+  // passer un (défense en profondeur, cf. entête du fichier).
+  const visibles = entrees.filter((e) => e.status !== "cancelled");
+  const colonnesJours = Array.from({ length: jours }, (_, i) => ajouterJours(debutSemaine, i));
+
+  const parCase = new Map<string, AgendaEntry[]>();
+  const placees: AgendaEntry[] = [];
+  const heuresOccupees: number[] = [];
+
+  for (const entree of visibles) {
+    const debut = new Date(Date.parse(entree.startsAt));
+    if (Number.isNaN(debut.getTime())) continue;
+    const iJour = colonnesJours.findIndex((j) => memeJour(j, debut));
+    if (iJour === -1) continue;
+
+    const cle = `${iJour}-${debut.getHours()}`;
+    const liste = parCase.get(cle);
+    if (liste === undefined) parCase.set(cle, [entree]);
+    else liste.push(entree);
+    placees.push(entree);
+    heuresOccupees.push(debut.getHours());
+  }
+
+  // LA PLAGE HORAIRE S'ÉTEND POUR COUVRIR CE QU'IL Y A À MONTRER.
+  //
+  // `heureDebut`/`heureFin` décrivent la journée de travail HABITUELLE, pas une
+  // autorisation d'affichage. La version antérieure ne rendait que les heures de
+  // cette plage : un rendez-vous à 21:47 ne trouvait aucune cellule et
+  // DISPARAISSAIT — sans erreur, sans compteur, avec un en-tête de colonne
+  // affichant « 0 séances » sur un lundi qui en portait deux. Mesuré à l'écran
+  // le 2026-08-04 : six séances annoncées, quatre rendues.
+  //
+  // Masquer une séance, c'est manquer un patient ou provoquer un double
+  // booking. La plage s'élargit donc à la demande, et reste à la journée de
+  // travail quand rien n'en sort.
+  const borneBasse = Math.min(heureDebut, ...heuresOccupees);
+  const borneHaute = Math.max(heureFin, ...heuresOccupees.map((h) => h + 1));
+  const lignesHeures = Array.from(
+    { length: Math.max(0, borneHaute - borneBasse) },
+    (_, i) => borneBasse + i,
+  );
+
+  return { colonnesJours, lignesHeures, parCase, placees };
+}
+
+/**
  * Le créneau `h` du jour donné, en heure locale.
  *
  * On POSE l'heure au lieu de l'additionner : `debutSemaine` n'est pas garanti à
@@ -85,6 +155,15 @@ function creneau(jour: Date, h: number): Date {
   const d = new Date(jour);
   d.setHours(h, 0, 0, 0);
   return d;
+}
+
+/** Deux instants tombent-ils le même jour civil, en heure locale ? */
+function memeJour(a: Date, b: Date): boolean {
+  return (
+    a.getFullYear() === b.getFullYear() &&
+    a.getMonth() === b.getMonth() &&
+    a.getDate() === b.getDate()
+  );
 }
 
 /** Famille d'affichage d'une entrée. `kind === null` → administratif neutre. */
@@ -110,35 +189,15 @@ export function GrilleSemaine({
   entrees,
   onCreneauLibre,
 }: GrilleSemaineProps): React.JSX.Element {
-  // Rendez-vous annulé : jamais dans la grille, même si l'appelant en a laissé
-  // passer un (défense en profondeur, cf. entête du fichier).
-  const entreesVisibles = entrees.filter((e) => e.status !== "cancelled");
-
-  const colonnesJours = Array.from({ length: jours }, (_, i) => ajouterJours(debutSemaine, i));
-  const lignesHeures = Array.from(
-    { length: Math.max(0, heureFin - heureDebut) },
-    (_, i) => heureDebut + i,
+  // Le placement, les bornes horaires et le comptage sortent d'UNE fonction,
+  // que l'écran appelle lui aussi pour ses compteurs (cf. `repartition`).
+  const { colonnesJours, lignesHeures, parCase } = repartition(
+    entrees,
+    debutSemaine,
+    jours,
+    heureDebut,
+    heureFin,
   );
-
-  // Regroupement par jour (index de colonne) puis par heure (index de ligne) :
-  // plusieurs séances au même créneau doivent s'empiler, jamais s'écraser
-  // (règle 12 — masquer une séance ferait manquer un patient).
-  const parCase = new Map<string, AgendaEntry[]>();
-  for (const entree of entreesVisibles) {
-    const debut = new Date(Date.parse(entree.startsAt));
-    if (Number.isNaN(debut.getTime())) continue;
-    const iJour = colonnesJours.findIndex(
-      (j) =>
-        j.getFullYear() === debut.getFullYear() &&
-        j.getMonth() === debut.getMonth() &&
-        j.getDate() === debut.getDate(),
-    );
-    if (iJour === -1) continue;
-    const cle = `${iJour}-${debut.getHours()}`;
-    const liste = parCase.get(cle);
-    if (liste === undefined) parCase.set(cle, [entree]);
-    else liste.push(entree);
-  }
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "var(--s-4)" }}>
@@ -320,7 +379,10 @@ function CarteRendezVous({ entree }: { readonly entree: AgendaEntry }): React.JS
   const famille = familleDe(entree.kind);
   const jetons = JETONS_FAMILLE[famille];
   const nom = nomPatient(entree.lastName, entree.firstName);
-  const debut = heure(entree.startsAt);
+  // La plage, pas l'instant : la case porte l'heure PLEINE, la carte doit dire
+  // le vrai début ET la vraie fin. Repli sur le seul début si la fin est
+  // illisible — mieux vaut une information partielle qu'aucune.
+  const quand = plage(entree.startsAt, entree.endsAt) ?? heure(entree.startsAt);
 
   return (
     <Link
@@ -369,7 +431,7 @@ function CarteRendezVous({ entree }: { readonly entree: AgendaEntry }): React.JS
             color: "var(--ink-500)",
           }}
         >
-          {debut ?? fr.etats.texteAbsent}
+          {quand ?? fr.etats.texteAbsent}
         </span>
         <span
           style={{
@@ -390,6 +452,24 @@ function CarteRendezVous({ entree }: { readonly entree: AgendaEntry }): React.JS
         >
           {libelleType(entree.kind)}
         </span>
+
+        {/* La praticienne n'apparaît que si la base l'a rendue. Sur l'agenda du
+            cabinet, deux séances au même créneau appartiennent souvent à deux
+            praticiennes : sans cette ligne, la pile se lit comme un conflit
+            d'horaire alors qu'il n'y en a aucun. La cloison ADR-003 fait que ce
+            champ est déjà NULL quand il ne doit pas se voir — rien n'est décidé
+            ici (I4/§6). */}
+        {entree.practitionerName === null ? null : (
+          <span
+            style={{
+              fontSize: "var(--text-label-size)",
+              lineHeight: "var(--text-label-leading)",
+              color: "var(--ink-300)",
+            }}
+          >
+            {entree.practitionerName}
+          </span>
+        )}
 
         {/* LE STATUT NE S'AFFICHE QUE QUAND IL SORT DE L'ORDINAIRE.
             `confirmed` est le cas normal d'un agenda : l'écrire sur chaque carte

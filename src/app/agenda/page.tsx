@@ -40,7 +40,7 @@ import { useCallback, useEffect, useState } from "react";
 import { AppShell } from "@/components/AppShell";
 import { heure, jour, jourComplet, nomPatient, Statut } from "@/components/AgendaPieces";
 import { BandeauHorsLigne, BlocErreur } from "@/components/EtatsEcran";
-import { GrilleSemaine } from "@/components/GrilleSemaine";
+import { GrilleSemaine, repartition } from "@/components/GrilleSemaine";
 import { useSessionEcran } from "@/components/useSessionEcran";
 import { fr } from "@/i18n/fr";
 import {
@@ -167,16 +167,24 @@ export default function PageAgenda(): React.JSX.Element {
   const finSemaine = new Date(debut);
   finSemaine.setDate(finSemaine.getDate() + nbJours - 1);
 
-  // Créneaux libres : ce que la grille montre réellement, pas une estimation.
-  // Compter autrement afficherait un chiffre que l'écran contredit juste en
-  // dessous.
-  const creneauxTotal = (HEURE_FIN - HEURE_DEBUT) * nbJours;
-  const creneauxOccupes = new Set(
-    liste.map((e) => {
-      const d = new Date(Date.parse(e.startsAt));
-      return `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}-${d.getHours()}`;
-    }),
-  ).size;
+  // Les compteurs sortent de la MÊME fonction que la grille.
+  //
+  // Ils étaient calculés à part : « séances » comptait la liste brute et les
+  // créneaux se basaient sur une plage horaire figée. L'écran annonçait donc
+  // six séances au-dessus d'une grille qui en montrait quatre, et un commentaire
+  // affirmait juste au-dessus que ce chiffre était « ce que la grille montre
+  // réellement ». Une garantie fausse en commentaire est ce qui empêche le
+  // relecteur suivant de regarder — la garantie tient maintenant parce qu'une
+  // seule fonction produit les deux.
+  const { lignesHeures, parCase, placees } = repartition(
+    liste,
+    debut,
+    nbJours,
+    HEURE_DEBUT,
+    HEURE_FIN,
+  );
+  const creneauxTotal = lignesHeures.length * nbJours;
+  const creneauxOccupes = parCase.size;
 
   return (
     <AppShell
@@ -236,7 +244,7 @@ export default function PageAgenda(): React.JSX.Element {
               : fr.agenda.aujourdhui}
           </h2>
 
-          <Chiffre valeur={liste.length} libelle={fr.agenda.semaine.seancesCetteSemaine} />
+          <Chiffre valeur={placees.length} libelle={fr.agenda.semaine.seancesCetteSemaine} />
           <Chiffre
             valeur={Math.max(0, creneauxTotal - creneauxOccupes)}
             libelle={fr.agenda.semaine.creneauxLibres}

@@ -40,9 +40,9 @@ import { useEffect, useState } from "react";
 
 import { AppShell } from "@/components/AppShell";
 import {
-  heure,
   jourComplet,
   nomPatient,
+  plage,
   Statut,
   versIso,
   versSaisieLocale,
@@ -334,14 +334,7 @@ export default function PageRendezVous(): React.JSX.Element {
               }}
             >
               <Champ libelle={fr.agenda.date} valeur={jourComplet(rdv.startsAt)} />
-              <Champ
-                libelle={fr.agenda.heure}
-                valeur={
-                  heure(rdv.startsAt) === null
-                    ? null
-                    : `${heure(rdv.startsAt) ?? ""} – ${heure(rdv.endsAt) ?? ""}`
-                }
-              />
+              <Champ libelle={fr.agenda.heure} valeur={plage(rdv.startsAt, rdv.endsAt)} />
               <Champ
                 libelle={fr.agenda.duree}
                 valeur={`${rdv.durationMinutes} ${fr.agenda.dureeUnite}`}
