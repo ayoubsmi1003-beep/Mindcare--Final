@@ -1,6 +1,6 @@
 # STATE — MindCare OS
-Dernière mise à jour : 2026-08-04 · **jalon S4 LIVRÉ**, `checkpoint-s4` VERT 25 · **pas encore
-vérifié à l'écran** — voir §« Ce qui reste à faire sur S4 »
+Dernière mise à jour : 2026-08-04 · **jalon S5 CLOS**, `checkpoint-s5` VERT 29,
+**vérifié à l'écran (26 contrôles)** · **prochain jalon : S6 Jarvis**
 
 ## Fait & vert
 - 5cd3d3e T1.2 jetons CSS, i18n FR, durcissement I10 → VERT
@@ -15,11 +15,15 @@ vérifié à l'écran** — voir §« Ce qui reste à faire sur S4 »
 - 0a695c9 **S4b** — service rendez-vous sur `DbPort`
 - 63fadd1 **S4c** — agenda : vue jour, création, modification, annulation
 - 1017734 **S4d** — vue semaine, 13 types de consultation (024), approbation (025)
+- 8a63ac3 **S5a** — neuf portes séance/note en base (026), `checkpoint-s5`
+- 7f81443 **S5b** — service `consultations.ts` sur `DbPort`
+- e309246 **S5c** — espace de travail clinique, SOAP, signature, amendement
 
-## Portes, toutes rejouées le 2026-08-03 après S4
-`preflight` · `typecheck` · `lint` · `build` · **`checkpoint-s4` VERT 21** ·
+## Portes, toutes rejouées le 2026-08-04 après S5
+`preflight` · `typecheck` · `lint` · `build` · **`checkpoint-s5` VERT 29** ·
+**`checkpoint-s4` VERT 25** ·
 **`checkpoint-adr019` VERT 24** · `checkpoint-j1a` VERT 14 · `checkpoint-s2` VERT 15 ·
-`verify-migrations` VERT 7. Aucune régression sur S1–S3.
+`verify-migrations` VERT. **Aucune régression sur S1–S4.**
 
 **La couche sécurité est gelée.** ADR-019 tient sur `app_gatekeeper` : sans `BYPASSRLS`, membre
 de `authenticated` **avec `INHERIT TRUE`**, propriétaire des trois portes. Les policies de `004`
@@ -38,13 +42,140 @@ détail · **13 types de consultation** · statuts · sélecteur de praticienne 
 Postgres** (ADR-021) · déclencheur de transitions · `useSessionEcran` extrait.
 **Aucune ADR réécrite, aucune policy de 006 modifiée, `DbPort` inchangé.**
 
-## Ce qui reste à faire sur S4
-- 🔴 **VÉRIFICATION À L'ÉCRAN NON FAITE — c'est le seul point qui bloque la clôture.**
-  Le chemin de données est prouvé par 25 contrôles ; le RENDU ne l'est pas. S3 a été validé à
-  l'écran et c'est là qu'ont surgi quatre défauts que les portes n'avaient pas vus. Serveur :
-  `pnpm dev` → `/agenda`. À regarder en priorité : la grille semaine avec plusieurs RDV le même
-  jour, un nom de patient très long, un créneau à deux séances, la coupure réseau en cours de
-  saisie.
+## Ce que S5 livre, et qui fonctionne
+**Mode séance** (`/consultation/[id]`) · chronomètre · **notes brutes** enregistrées au fil de la
+frappe · **éditeur SOAP** · **signature** · **fenêtre de correction de 15 minutes avec décompte** ·
+**verrouillage** · **amendement visible sous la note** · fil de séance et aide à la décision posés
+et honnêtement vides (I19) · entrée « Démarrer / Reprendre la séance » depuis la fiche rendez-vous.
+**Aucune ADR réécrite, aucune policy de 004/007/008 modifiée, `DbPort` inchangé.**
+
+Trois pièces ajoutées dans `src/components/ui/` — pas dans l'écran : `EspaceTravail`,
+`SectionPliable`, `IndicateurEnregistrement`. `EspaceTravail` consomme enfin
+`--grid-context-width`, déclaré à T1.2 et sans consommateur depuis. **La page est la disposition
+DÉFINITIVE de l'espace clinique** : transcription (semaine 2), analyse de séance (S6), ordonnances
+et documents (S7) s'ajoutent comme des `SectionPliable`, sans redécoupage.
+
+### 🔴 La faille de S5, trouvée en RELECTURE et non par un contrôle
+`start_consultation` acceptait un rendez-vous NULL avec un `p_patient_id` libre, pour couvrir le
+patient reçu sans créneau. Or **le `WITH CHECK` de `consultations_clinical` (007) ne porte que sur
+`practitioner_id`** — il ne dit rien de `patient_id`. Une praticienne pouvait donc ouvrir une
+séance, **puis y écrire une note**, sur le dossier d'une patiente de sa consœur.
+
+Aucune identité ne fuyait : `patients_clinical` (004) masque la ligne et la jointure de
+`get_consultation` revenait vide. Mais **ADR-003 n'interdit pas seulement de LIRE** le dossier
+d'une consœur — il n'y a pas de patient partagé, donc pas d'écriture non plus. Une note signée par
+la mauvaise praticienne est un faux, et l'immuabilité de 008 la rendrait **ineffaçable**.
+
+Le garde ne pouvait pas être « vérifier que le patient est visible » : `SELECT` sur `app.patients`
+est révoqué à `authenticated` depuis 017, et la porte est `SECURITY INVOKER`. **Le rendez-vous est
+donc devenu obligatoire** — c'est lui qui prouve l'appartenance du dossier. Contrôle 16.
+
+**Leçon : une policy qui protège une colonne ne protège pas les colonnes voisines.** Chercher, pour
+chaque nouvelle table écrite, ce que le `WITH CHECK` ne dit PAS.
+
+### Deux pièges de MESURE payés dans `checkpoint-s5.sh`
+Aucun des deux n'était un défaut du code — et c'est ce qui les rend coûteux : **un checkpoint qui
+rougit à tort envoie corriger ce qui marche**, ce qui est aussi nuisible qu'un checkpoint qui
+verdit à tort.
+- **Une écriture faite par une fonction appelée DANS une instruction n'est pas visible du `SELECT`
+  qui l'englobe** — ni depuis un CTE, dont toutes les branches partagent le même instantané.
+  Quatre contrôles rendaient 0 sur des portes parfaitement fonctionnelles. L'identifiant transite
+  désormais par une table temporaire, et l'appel est toujours une instruction séparée de sa
+  relecture.
+- **Un checkpoint ne doit pas dépendre de l'état ambiant.** `one_open_consult` n'autorise qu'une
+  séance ouverte par praticienne : une séance laissée ouverte par un essai à l'écran faisait
+  échouer SEPT contrôles d'un coup. Chaque transaction referme maintenant les séances ouvertes au
+  départ — et elle est annulée, donc rien ne persiste.
+
+### Un DROP de plus, et pourquoi celui-là est sans danger
+Retirer un défaut de paramètre impose un `DROP FUNCTION` : `CREATE OR REPLACE` répond « cannot
+remove parameter defaults ». `start_consultation` est `SECURITY INVOKER`, donc son propriétaire
+n'a **aucun effet de sécurité** — contrairement à 018 et 024/025, où le DROP d'une porte
+`SECURITY DEFINER` la réattribuait à `postgres` (`rolbypassrls`) et faisait tomber la cloison avec
+une migration VERTE. **Ne pas recopier ce motif sur `app.get_consultation`.**
+
+## S5 — vérification à l'écran : FAITE le 2026-08-04, 26 contrôles VERTS
+**Constaté, non déduit** : ouverture de séance depuis l'agenda · notes brutes survivant à un
+rechargement · quatre champs SOAP · signature · décompte des 15 minutes · **`lock_after` reculé en
+base, puis refus constaté À L'ÉCRAN** avec passage en lecture seule et disparition du bouton
+Signer · amendement enregistré, visible, **note d'origine intacte mot pour mot** · « 1 amendement »
+au singulier · 1920 · 1280 · **390 sans défilement horizontal, page de 3740px** (contre 7458px en
+S4) · **coupure réseau en pleine rédaction : le texte survit verbatim, aucune éjection vers la
+connexion** · aucune exception JavaScript.
+
+## Reste ouvert sur S5, non bloquant
+- **Pas de séance sans rendez-vous.** Décision de sécurité assumée (ci-dessus) : le patient reçu
+  sans créneau demande d'abord un rendez-vous, soit un clic dans l'agenda. Si le cabinet veut la
+  séance directe, il faudra une policy `consultations` qui contraigne `patient_id` — pas un
+  assouplissement de la porte.
+- **Aucune persistance locale.** Une coupure réseau conserve le texte À L'ÉCRAN et le dit
+  (`IndicateurEnregistrement` en état d'échec), mais fermer l'onglet perd la saisie non envoyée.
+  Ne jamais écrire dans l'interface qu'une saisie est « conservée localement » tant que ce n'est
+  pas vrai.
+- `transcript_segments` et `live_insights` : tables prêtes, aucune écriture, panneaux vides.
+- La base de développement porte désormais des séances et des notes de vérification synthétiques.
+
+## S4 — vérification à l'écran : FAITE le 2026-08-04 (commits 3dfaf0d, 3ce96bc)
+Playwright est désormais en `devDependency` et fait partie du processus : les portes prouvent un
+chemin de données, jamais un rendu. **Constaté, non déduit** : semaine · jour · création · fiche ·
+nom très long · deux séances au même créneau · 1920 · 1280 · 390 · vide · hors ligne · erreur.
+
+Empilement au même créneau : aucune séance masquée. Créneau sans dossier : « Aucun dossier
+rattaché ». **Coupure réseau en pleine saisie : la session TIENT, le texte déjà tapé survit
+verbatim, aucune éjection vers la connexion.**
+
+### 🔴 Le défaut de S4, celui que 25 contrôles ne pouvaient pas voir
+**La grille MASQUAIT des séances.** Elle rangeait chaque entrée dans une case `jour-heure` puis ne
+rendait que les heures de la journée de travail (08–19). Un rendez-vous à 21:47 ne trouvait aucune
+cellule et DISPARAISSAIT : pas d'erreur, pas de compteur, et un en-tête de colonne affichant
+« 0 séances » sur un lundi qui en portait deux. Mesuré : **six séances annoncées, quatre rendues.**
+Masquer une séance, c'est manquer un patient ou provoquer un double booking.
+
+Les compteurs se calculaient à part, **sous un commentaire affirmant qu'ils montraient « ce que la
+grille montre réellement »** — la garantie fausse en commentaire, encore. Placement, bornes et
+comptage sortent maintenant d'UNE fonction, `repartition()`, lue par la grille ET par l'écran.
+
+### Trois autres défauts trouvés à l'écran, aucun visible au lint
+- **`1 séances`** — le français accorde à partir de deux ; « 0 séance » reste au singulier.
+- **Mobile inutilisable** — nav à 248px FIXES à toute largeur : sur 390px la grille se brisait à
+  une lettre par ligne, page de 7458px. Coquille à une colonne sous 1024px + grille défilante
+  (2739px après). ⚠️ **Écart assumé** avec §3 « nav → icônes » : aucun jeu d'icônes n'existe.
+- **Le nom sur trois lignes** — le monogramme mangeait un quart d'une colonne de 140px pour une
+  lettre déjà présente à côté. Retiré de la grille, gardé sur la fiche.
+
+### 🔴 Troisième occurrence du piège « lire la bibliothèque, pas la doc »
+**Une coupure réseau s'annonçait « Une erreur inattendue s'est produite ».**
+`postgrest-js@2.110.9` `src/PostgrestBuilder.ts:443-455` retourne `code: ""` — la **chaîne vide**,
+pas `undefined` — et **aucun champ `name`** (le transport est préfixé dans `message`). La sortie
+`raw.code !== undefined` rendait la branche hors-ligne **inatteignable pour tout appel de
+données**, c'est-à-dire tous les écrans métier. Après `status = 0` sur auth-js, c'est le même piège
+sur un autre champ. **Toute nouvelle détection d'erreur se vérifie dans `node_modules`.**
+
+## Design system — posé, l'Agenda est l'implémentation de référence
+`src/components/ui/` : `Bouton`/`LienBouton`/`BarreActions` · `Carte`/`Section`/`EnTetePage`/
+`PanneauInfo`/`GrilleChamps` · `Badge`/`Chiffre` · `ChampTexte`/`ChampSelection`/`ChampZoneTexte` ·
+`BandeauHorsLigne`/`BlocErreur`/`EtatVide`/`Squelette`/`Champ`. Import unique `@/components/ui`.
+
+**S5 et la suite COMPOSENT à partir de ces pièces.** Une pièce qui manque s'ajoute LÀ, jamais dans
+l'écran qui en a besoin. `ChampZoneTexte` porte déjà `clinique` (échelle `notes`, 15/1.7) pour les
+champs SOAP.
+
+**Classes Tailwind, pas styles en ligne** : survol, focus et transition n'existent pas en style en
+ligne, et **le préflight 6 ter n'admet qu'UNE feuille CSS dans tout le dépôt** (`tokens.css`) —
+ne pas en créer une seconde. Jetons ajoutés : `--grid-day-min`, `min-w-card`, `border-kind`,
+`grid-cols-app`/`grid-cols-fiche`, animation `respire`. **Aucune valeur littérale** : le lint
+refuse les valeurs arbitraires Tailwind (`transition-[…]` a été rejeté, `transition` l'a remplacé).
+
+⚠️ **Un changement de `tailwind.config.ts` exige un redémarrage du serveur de dev** — sans quoi une
+nouvelle clé de thème n'est pas générée et le correctif paraît sans effet à l'écran.
+
+## Reste ouvert sur S4, non bloquant
+- La grille place à l'heure PLEINE : une séance de 14:30 n'occupe pas deux lignes et ne s'étale pas
+  sur sa durée. La carte affiche la plage `14:30 – 15:00`, donc rien n'est faux ni caché — mais le
+  placement à la minute reste à faire le jour où le cabinet le demandera.
+- `.env` porte **DEUX** lignes `DEV_ACCOUNT_PASSWORD` (12 et 32 caractères). `dev-account.sh`
+  prend délibérément la DERNIÈRE non vide (`tail -n 1`). Tout outil qui prend la première se voit
+  refuser la connexion sans que rien ne dise pourquoi. À élaguer.
 - **La file « Demandes en attente » est VIDE, et c'est exact.** `create_appointment` écrit
   `confirmed` : un rendez-vous saisi au cabinet est approuvé par le geste qui le crée. L'état
   `requested` vient de l'accueil QR, non construit. **Décision d'organisation en attente :** si le
@@ -144,15 +275,22 @@ consultation, aucune note, aucun document, aucun paiement, aucun Jarvis. Dix des
 §5 ne sont pas construits — la coquille les affiche inertes et marqués « Écran à venir » (I19),
 pas en liens morts.
 
-## Prochain jalon — S5
-**Consultation** (`/consultation/[id]`, tables `consultations` + `clinical_notes`), praticienne
-seule. ⚠️ À relire AVANT d'écrire une ligne : I15 — note signée immuable, brouillon 15 min puis
-verrou par déclencheur, correction = amendement visible. **Aucun bypass, jamais.** Et I7 : l'IA
-décrit, elle ne conclut pas.
+## Prochain jalon — S6
+**Jarvis texte + analyse de séance** — périmètre exact : `docs/JARVIS-DEMO-SPEC.md`, **9 outils,
+pas un de plus**. Priorité absolue : `analyze_session`, le seul outil qui fait gagner de vraies
+minutes ce mois-ci.
 
-Ce que S4 a appris et qui vaut pour S5 : la première voie d'écriture d'une table Tier 0/1
-rencontre le garde-fou `is_synthetic` d'ADR-016. Le prévoir, et **dériver** la valeur de
-`app.is_cloud_dev()` — jamais l'écrire en dur.
+Ce que S5 lui laisse, et qui doit être utilisé tel quel :
+- **`app.consultations.raw_notes`** est la source de lecture d'`analyze_session`. Elle ÉCRIT dans
+  `app.clinical_notes` par `app.save_note` — jamais dans `raw_notes`, sinon elle écrase la source
+  qu'elle vient de lire. C'est la raison de la séparation.
+- **`app.sign_note` n'entre dans AUCUNE allowlist Jarvis**, aujourd'hui ni plus tard.
+  `sign_clinical_note` est un outil interdit : seule une humaine signe, la signature porte sa
+  responsabilité médicale. Le contrôle 2 de `checkpoint-s5` le vérifie déjà.
+- **Le panneau « Aide à la décision » existe** dans la colonne de contexte, avec le disclaimer
+  d'I7 déjà affiché. S6 le remplit, il ne redessine pas la page.
+- I7 : l'IA décrit, elle ne conclut pas. Toute sortie reste une SUGGESTION et n'entre au dossier
+  que si la praticienne la reprend dans sa note (I6).
 
 Deux dettes d'écran ouvertes par S3, à traiter quand un besoin réel les justifie, pas avant :
 le tableau de bord n'existe pas (la racine redirige vers Patients), et la troisième colonne de
