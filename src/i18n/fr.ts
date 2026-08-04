@@ -187,6 +187,11 @@ export const fr = {
 
     patient: "Patient",
     patientNonRattache: "Aucun dossier rattaché",
+    /** Rendue à la place du bouton « Démarrer la séance » quand la praticienne
+     * connectée n'est pas celle du rendez-vous. Ne dit rien qui ne soit déjà
+     * vrai en base (`app.start_consultation` refuserait de toute façon) —
+     * c'est de l'honnêteté d'interface, pas une deuxième barrière. */
+    seanceReserveeAutrePraticien: "Séance réservée au praticien du rendez-vous.",
     praticienne: "Praticienne",
     date: "Date",
     heure: "Heure",
@@ -328,6 +333,10 @@ export const fr = {
        redéclarer donnerait deux sources pour un même libellé, et le jour où
        l'une change, deux écrans nomment le même geste différemment. */
     reprendre: "Reprendre la séance",
+    /** Titre du bandeau de rappel dans la coquille — pas un `eyebrow` de plus,
+     * un fait affiché tant qu'une séance reste ouverte ailleurs que sur son
+     * propre écran. */
+    seanceEnCours: "Séance en cours",
     /* Le geste est irréversible côté dossier : le rendez-vous passe à
        « terminé » et les notes de travail se figent. On le dit avant, pas après. */
     confirmerCloture:

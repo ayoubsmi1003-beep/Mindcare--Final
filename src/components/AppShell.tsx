@@ -34,6 +34,8 @@ import Link from "next/link";
 import { fr } from "@/i18n/fr";
 import type { UserRole } from "@/services/authz";
 
+import { BandeauSeanceEnCours } from "./BandeauSeanceEnCours";
+
 export interface AppShellProps {
   readonly role: UserRole;
   readonly nomComplet: string;
@@ -291,6 +293,7 @@ export function AppShell({
           cher que la colonne manquante. Le jeton `--grid-context-width` existe
           et attend l'écran qui en aura besoin. */}
       <div style={{ display: "flex", flexDirection: "column" }}>
+        <BandeauSeanceEnCours role={role} />
         <main
           style={{
             flex: "1 1 auto",

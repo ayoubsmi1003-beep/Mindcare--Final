@@ -504,7 +504,13 @@ export default function PageRendezVous(): React.JSX.Element {
                   qu'éviter de proposer un bouton qui va échouer — elle ne
                   protège rien, et la base refuserait de toute façon.
                   Un rendez-vous sans dossier rattaché n'ouvre pas de séance :
-                  il n'y aurait pas de patient à qui rattacher la note. */}
+                  il n'y aurait pas de patient à qui rattacher la note.
+
+                  ⚠️ LES DEUX CAUSES D'ABSENCE SONT DISTINGUÉES, PAS TAISÉES.
+                  Un bouton simplement absent est indistinguable d'une
+                  fonctionnalité manquante. `utilisateur === undefined` (session
+                  pas encore tranchée) ne rend RIEN — afficher « réservée à un
+                  autre praticien » pendant le chargement serait faux. */}
               {rdv.patientId !== null && rdv.practitionerId === utilisateur?.id ? (
                 <Bouton
                   rang={rdv.status === "requested" ? "secondaire" : "principal"}
@@ -515,7 +521,15 @@ export default function PageRendezVous(): React.JSX.Element {
                     ? fr.consultation.reprendre
                     : fr.actions.demarrerLaSeance}
                 </Bouton>
-              ) : null}
+              ) : rdv.patientId === null ? (
+                <span className="font-ui text-label text-ink-500">
+                  {fr.agenda.patientNonRattache}
+                </span>
+              ) : utilisateur === undefined ? null : (
+                <span className="font-ui text-label text-ink-500">
+                  {fr.agenda.seanceReserveeAutrePraticien}
+                </span>
+              )}
 
               <Bouton rang="secondaire" onClick={() => setEdition(true)}>
                 {fr.actions.modifierLeRendezVous}
