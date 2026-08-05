@@ -63,6 +63,27 @@ function resolveModel(): string {
 }
 
 /**
+ * Plafond de tokens de SORTIE — trouvé nécessaire en vérification locale, pas
+ * en relecture. Sans `max_tokens` explicite, OpenRouter facture la requête au
+ * plafond PAR DÉFAUT du modèle (64 000 pour Claude Sonnet 4.5), quel que soit
+ * ce que la réponse va réellement contenir — et une requête refusée en 402
+ * (« crédits insuffisants ») avant même de générer un seul jeton rendrait
+ * `analyze_session` inutilisable sur tout compte OpenRouter à solde modeste,
+ * alors que la réponse réelle est un petit JSON borné (§3.4 n°6 : au plus
+ * `MAX_ENTREES` entrées de `MAX_LONGUEUR_ENTREE` caractères chacune, plus les
+ * quatre champs SOAP). 2000 tokens est une marge large pour cette forme : un
+ * appel réel à `analyze_session`, en local le 2026-08-05, sur un dossier de
+ * test complet (SOAP + 5 lignes d'évolution + 6 points non explorés), a
+ * produit une réponse conforme largement sous ce plafond — la mesure exacte
+ * en jetons n'a pas pu être journalisée cette fois-là (voir STATE.md, le
+ * franchissement n'a pas atteint `audit.boundary_crossings` à cause d'un
+ * défaut de résolution DNS propre à l'environnement Docker local, sans
+ * rapport avec ce plafond). Le chiffre 2000 reste donc une marge choisie,
+ * pas une mesure exacte à ce jour.
+ */
+const MAX_OUTPUT_TOKENS = 2000;
+
+/**
  * Table de tarifs constante, USD pour un million de tokens. `estimated_cost_usd`
  * (§3.4 n°10) en dérive ; un modèle absent de cette table rend `null`, jamais
  * un chiffre inventé. Valeurs approximatives au moment de l'écriture — à tenir
@@ -120,6 +141,7 @@ export const openRouterProvider: LlmProvider = {
         body: JSON.stringify({
           model: req.model,
           messages: req.messages,
+          max_tokens: MAX_OUTPUT_TOKENS,
         }),
         signal: controller.signal,
       });

@@ -31,6 +31,19 @@
 BEGIN;
 
 -- ---------------------------------------------------------------------------
+-- 0 · Privilège nécessaire au transfert de propriété, retiré au §3
+-- ---------------------------------------------------------------------------
+-- ⚠️ TROUVÉ EN VÉRIFICATION LOCALE (Docker), PAS EN RELECTURE. `ALTER FUNCTION
+-- ... OWNER TO app_gatekeeper` exige que LE NOUVEAU PROPRIÉTAIRE possède
+-- CREATE sur le schéma qui porte l'objet — pas seulement que l'exécutant de la
+-- migration soit superutilisateur. 026 §3 accorde ce privilège PUIS le retire
+-- à son §8, DANS LA MÊME TRANSACTION que son propre `ALTER ... OWNER TO`. 027
+-- est une migration séparée : sans ce GRANT, elle hérite d'un `app_gatekeeper`
+-- déjà refermé par 026, et l'ALTER OWNER plus bas échoue en 42501 — constaté
+-- en rejouant 001→028 sur une base locale neuve, migration verte jusque-là.
+GRANT CREATE ON SCHEMA app TO app_gatekeeper;
+
+-- ---------------------------------------------------------------------------
 -- 1 · La porte de lecture — SECURITY DEFINER, comme app.get_consultation
 -- ---------------------------------------------------------------------------
 -- MÊME FORME QUE `app.get_consultation` (026 §6), volontairement : une
@@ -112,6 +125,15 @@ GRANT EXECUTE ON FUNCTION app.get_previous_note(uuid, uuid) TO authenticated;
 
 -- `app.get_previous_note` s'exécute sous `app_gatekeeper`, qui a déjà EXECUTE
 -- sur `audit.log_read` depuis 020 §2 — aucun GRANT supplémentaire à poser ici.
+
+-- ---------------------------------------------------------------------------
+-- 3 · Refermer
+-- ---------------------------------------------------------------------------
+-- Symétrique du §0 et de 026 §8, pour la même raison : la propriété de la
+-- porte est acquise, CREATE sur le schéma n'a plus lieu d'être. Un rôle qui
+-- peut créer des objets dans `app` pourrait y planter une fonction masquant
+-- une fonction du catalogue dans le `search_path` figé des portes.
+REVOKE CREATE ON SCHEMA app FROM app_gatekeeper;
 
 -- PostgREST met son cache de schéma à jour sur notification.
 NOTIFY pgrst, 'reload schema';

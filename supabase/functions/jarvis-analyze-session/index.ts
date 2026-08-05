@@ -61,6 +61,28 @@ function deduplique(entrees: readonly string[]): readonly string[] {
 }
 
 /**
+ * Retire un bloc de code Markdown (```json ... ``` ou ``` ... ```) qui
+ * envelopperait la réponse.
+ *
+ * ⚠️ TROUVÉ EN VÉRIFICATION LOCALE, PAS EN RELECTURE. Le prompt système
+ * demande une réponse « STRICTEMENT en JSON, sans aucun texte avant ou
+ * après » — le modèle l'a quand même enveloppée dans une clôture de code au
+ * premier appel réel constaté. Sans ce nettoyage, un JSON par ailleurs
+ * PARFAITEMENT VALIDE et cliniquement correct échouait au parsing, brûlait la
+ * seule reformulation autorisée (§3.4 n°9), puis renvoyait « Assistant
+ * indisponible » — l'échec le plus coûteux qui soit : un vrai résultat, jeté.
+ * Ne PAS élargir au-delà de cette forme précise : accepter n'importe quel
+ * texte autour du JSON reviendrait à abandonner la contrainte de forme que le
+ * prompt impose.
+ */
+function retirerCloture(texte: string): string {
+  const nettoye = texte.trim();
+  const motif = /^```(?:json)?\s*\n([\s\S]*?)\n?```$/i;
+  const trouve = motif.exec(nettoye);
+  return trouve?.[1] !== undefined ? trouve[1].trim() : nettoye;
+}
+
+/**
  * Rend `null` si la réponse ne satisfait pas les règles cliniques, même quand
  * le JSON est syntaxiquement valide. `null` déclenche la reformulation unique
  * de l'appelant (§3.4 n°9) — jamais une boucle.
@@ -68,7 +90,7 @@ function deduplique(entrees: readonly string[]): readonly string[] {
 function validerEtNettoyer(brut: string): ReponseValidee | null {
   let json: unknown;
   try {
-    json = JSON.parse(brut);
+    json = JSON.parse(retirerCloture(brut));
   } catch {
     return null;
   }

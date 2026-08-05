@@ -1,50 +1,130 @@
 # STATE — MindCare OS
-Dernière mise à jour : 2026-08-05 · **S5 Entrée CLOS** · **S6 (Phase 1 + Phase 2) code-complet, PAS clos**
+Dernière mise à jour : 2026-08-05 · **S5 Entrée CLOS** · **S6 vérifié en local (Docker), trois défauts réels trouvés et corrigés — PAS encore clos**
 
 ## Fait & vert
 - S1-S4 (schéma 001→025, agenda, couche `DbPort`, suite complète) — VERT · checkpoint-s4 VERT 25, checkpoint-adr019 VERT 24
 - S5 écran séance et note clinique sur migration 026 (9 portes) — build, typecheck, lint tous VERT · checkpoint-s5 VERT 11 · commit 07cc371 "fix(consultation): entrée visible" (2026-08-04)
 - BandeauSeanceEnCours + useSeanceEnCours — le bouton « Démarrer/Reprendre » désormais visible depuis agenda et déclenche /consultation/[id]
-- **S6 Phase 1 (2026-08-05)** : migrations 027 (`app.get_previous_note`) et 028
-  (`audit.boundary_crossings`) écrites ; passerelle Deno complète
-  (`supabase/functions/_shared/pseudonymize.ts`, `external-call.ts`,
-  `jarvis-analyze-session/{prompt,index}.ts`) ; `DbPort.invokeFunction` +
-  adaptateur Supabase ; `src/services/jarvis.ts`.
-- **S6 Phase 2 (2026-08-05)** : `src/app/consultation/[id]/page.tsx`, section
-  « ASSISTANCE » — bouton `Analyser la séance` (rang `secondaire`, désactivé
-  dès le premier clic ET sans note à analyser), panneau trois blocs dans
-  l'ordre du démo-spec (Note structurée · Évolution depuis la dernière fois ·
-  Points non explorés), tout en LECTURE SEULE — aucune écriture dans `soap`,
-  aucun appel à `saveNote`. Idempotence (§3.4 n°7) : `enAnalyse` désactive le
-  bouton avant même la résolution de la promesse. Réponse tardive ignorée
-  (§3.4 n°8) : compteur de génération + drapeau de démontage, sur le modèle du
-  `annule` des pages de liste. État de chargement honnête (texte, pas de
-  squelette). Erreur → message dédié rassurant («… le reste de l'écran reste
-  pleinement utilisable »), jamais le message générique « service de données
-  indisponible ». `fr.disclaimer` (I7) reste AVANT le bouton. Six nouvelles
-  clés `fr.consultation.*`, `assistanceIndisponible` retirée (plus référencée
-  nulle part ailleurs, vérifié par grep avant suppression).
-- **Porte de vérification, Phase 1 + Phase 2 confondues** : `pnpm typecheck &&
-  lint && build` VERT (chunk `/consultation/[id]` recompilé, 3.98 kB) ·
-  `preflight.sh` VERT (contrôle 1 muet — seul fetch() du dépôt confirmé) · les
-  trois greps CLAUDE.md muets · aucun `console.log`/TODO/FIXME dans le code
-  neuf. `checkpoint-jarvis.sh` inchangé à son ROUGE préexistant (tests manuels
-  jamais attestés, cf. plus bas — pas une régression de cette passe, vérifié
-  par comparaison avant/après via `git stash`).
+- **S6 Phase 1 + Phase 2 (2026-08-05)** : migrations 027/028, passerelle Deno
+  complète, panneau écran trois blocs — commit `234dcde`. Voir commits
+  précédents pour le détail ; ce qui suit documente la vérification LOCALE
+  faite après ce commit, qui a trouvé trois défauts réels.
+- **Vérification locale sur Docker (2026-08-05), une bascule d'environnement**
+  — Docker est **redevenu joignable sur ce poste** (`docker info` répond,
+  `docker pull` réussit vers `public.ecr.aws`) et `pnpm dlx supabase` (CLI via
+  npm, aucune installation locale requise) donne accès à une pile Postgres
+  locale complète. **Ce n'est plus la même contrainte qu'en S5** — corriger
+  l'hypothèse « Docker/psql absents » partout où elle traînait encore.
+  Limite mesurée : `docker.io` (Docker Hub) reste **injoignable** depuis ce
+  réseau (TLS handshake timeout sur `auth.docker.io`), donc les scripts
+  `checkpoint-*.sh` qui lancent un conteneur `postgres:15` jetable
+  (`scripts/lib/dburl.sh` + `qfull()`) restent bloqués — **différent** de
+  « Docker absent », mais bloquant quand même pour CES scripts précis. La
+  vérification ci-dessous est passée par `docker exec` sur le conteneur
+  Postgres déjà démarré par `supabase start`, pas par ces scripts.
 
-## Définition du fait (CLAUDE.md §4) — bilan honnête, PAS tous verts
-1. **Données réelles** ✓ — aucune donnée fictive, l'écran lit `get_consultation`/`get_previous_note` via la passerelle.
-2. **RLS vérifiée pour 3 rôles** ✗ **BLOQUÉ** — Docker/psql absents de l'environnement. Le pattern JWT-scopé (`index.ts` : client créé avec le token de l'appelante, jamais `service_role`) garantit QUE la RLS s'applique, mais aucun appel réel n'a été rejoué pour le PROUVER à l'écran. C'est la même faille qu'en S5 (gates 12-29), pas une nouvelle.
-3. **Dégradation propre** ✓ — API/edge function en échec → message dans le panneau, le reste de l'écran (notes brutes, éditeur SOAP, signature, clôture) continue de fonctionner sans dépendance. Rôle `assistant` déjà exclu de `/consultation/[id]` par la garde existante (S5).
-4. **États vide + erreur écrits** ✓ — `analyseAucuneNote` (rien à analyser), `analyseIndisponible` (échec), état de chargement honnête.
-5. **Jetons de design respectés** ✓ — aucune classe/valeur nouvelle, réutilisation stricte des motifs déjà en place dans ce même fichier (`text-label`, `text-ink-500`, `uppercase tracking-label`…) ; préflight contrôle 4 (hex en dur) muet.
-6. **Checkpoint reproductible vert** ~ — typecheck/lint/build/preflight verts et reproductibles ; `checkpoint-s5.sh`/`checkpoint-adr019.sh` **n'ont pas pu être rejoués** (les deux scripts restent bloqués en connexion DB, sans sortie, jusqu'au timeout — confirmé et arrêtés proprement plutôt que laissés tourner) — même blocage Docker/psql que le point 2, pas un nouveau symptôme.
+## Trois défauts réels trouvés en vérification locale, tous corrigés
+Aucun des trois n'était visible en relecture — c'est exactement pourquoi
+cette passe existe. Diff de suivi (après le commit `234dcde`) :
 
-**Conclusion : S6 est CODE-COMPLET (Phase 1 + Phase 2), mais N'EST PAS CLOS.**
-Le point 2 de la Définition du fait ne peut être signé sans Docker/psql joignables.
+1. **Migration 027 — `ALTER FUNCTION ... OWNER TO app_gatekeeper` en 42501.**
+   `ALTER ... OWNER TO` exige que le NOUVEAU propriétaire ait `CREATE` sur le
+   schéma — pas seulement que l'exécutant soit superutilisateur. 026 §3
+   accorde ce privilège à `app_gatekeeper` PUIS le retire à son §8, dans SA
+   PROPRE transaction. 027 est une migration séparée : sans son propre
+   `GRANT CREATE ON SCHEMA app TO app_gatekeeper` avant l'`ALTER OWNER`, et
+   son propre `REVOKE` après, elle hérite d'un rôle déjà refermé par 026 et
+   échoue à l'application. **Constaté en rejouant 001→028 sur une base
+   locale neuve** — 001→026 vertes, 027 rouge. Corrigé : §0/§3 ajoutés à
+   027, symétriques à 026 §3/§8.
+2. **`external-call.ts` sans `max_tokens`.** La requête OpenRouter partait
+   sans plafond de sortie explicite, donc facturée au plafond PAR DÉFAUT du
+   modèle (64 000 tokens pour Claude Sonnet 4.5) — un compte à solde modeste
+   se voit refuser la requête en 402 AVANT même qu'un seul jeton soit généré,
+   alors que la réponse réelle est un petit JSON borné (§3.4 n°6). Corrigé :
+   `MAX_OUTPUT_TOKENS = 2000` posé dans le corps de la requête.
+3. **`index.ts` — clôture Markdown non retirée avant `JSON.parse`.** Le
+   prompt système exige « STRICTEMENT en JSON, sans aucun texte avant ou
+   après » ; le modèle a quand même enveloppé sa réponse dans
+   ` ```json ... ``` ` lors du premier appel réel. Un JSON par ailleurs
+   PARFAITEMENT VALIDE et cliniquement correct échouait donc au parsing,
+   brûlait la seule reformulation autorisée (§3.4 n°9), puis renvoyait
+   « Assistant indisponible » — l'échec le plus coûteux qui soit : un vrai
+   résultat, jeté. Corrigé : `retirerCloture()` retire cette forme précise
+   avant `JSON.parse`, rien de plus large. Revérifié offline contre la
+   réponse réelle capturée : parse et valide désormais avec succès.
+
+## Preuve RLS — les 3 rôles, sur `app.get_previous_note`, en base réelle
+Testé directement en `psql` (`docker exec` dans le conteneur Postgres local),
+`SET ROLE authenticated` + `SET request.jwt.claims` pour simuler chaque
+utilisateur de test (015 : a1 owner, a2 practitioner, a3 assistant ; b1
+patient de a1, b2 patient de a2) :
+- **owner a1 sur son propre patient b1** → 1 ligne (l'antérieure). ✓
+- **practitioner a2 sur le patient b1 de a1** → 0 lignes, aucune erreur —
+  cloison ADR-003 tenue. ✓
+- **assistant a3 sur le patient b1** → 0 lignes — aucun accès clinique. ✓
+- **patient sans consultation antérieure (b2)** → 0 lignes, pas une erreur —
+  « premier passage, rien à comparer » comme documenté. ✓
+
+## `analyze_session` — appel réel de bout en bout, réussi
+Après les trois correctifs ci-dessus, un appel complet à travers la
+passerelle (JWT owner a1, consultation réelle avec notes brutes + une
+consultation antérieure fermée avec note) a rendu `{"ok":true,"data":{...}}`
+avec les trois blocs dans l'ordre du démo-spec, contenu cliniquement correct,
+chaque entrée de `pointsNonExplores` terminée par « ? », `evolution`
+comparant correctement à la consultation antérieure lue en base.
+
+⚠️ **Ce test a tourné sur `google/gemini-2.5-flash`, pas sur
+`DEFAULT_MODEL` (`anthropic/claude-sonnet-4.5`).** La clé OpenRouter de cet
+environnement de test est un compte **gratuit** (`is_free_tier: true`,
+vérifié via `GET /api/v1/key`) dont le solde nominal affiché ($29.92) ne
+reflète PAS le plafond réel par requête sur les modèles payants — plusieurs
+appels à Sonnet 4.5 avec un prompt de taille réelle ont rendu 402
+(« crédits insuffisants ») de façon **incohérente** (parfois après un
+timeout, parfois immédiatement), y compris après le correctif `max_tokens`.
+Gemini 2.5 Flash, disponible sur la même clé, a servi de SUBSTITUT DE TEST
+via la variable déjà prévue à cet effet (`OPENROUTER_MODEL`, aucune ligne de
+code changée) : **`DEFAULT_MODEL` reste `anthropic/claude-sonnet-4.5`**,
+conforme à 02-SECURITY-BOUNDARY.md §5.2. Une vraie clé de cabinet, sur un
+compte payant, n'a aucune raison de reproduire cette instabilité — mais
+personne ne l'a vérifié avec Sonnet 4.5 spécifiquement. À refaire avec une
+clé de production avant d'annoncer S6 clos sur ce point précis.
+
+## Dernier point non résolu — journalisation d'audit non vérifiée en local
+`audit.boundary_crossings` reste à 0 ligne après l'appel réussi. Cause
+identifiée : le conteneur `edge-runtime` ne résout pas le nom Docker
+`supabase_db_Final_Mindcare` (`getaddrinfo ENOTFOUND`), alors que
+`SUPABASE_URL=http://kong:8000` résout et fonctionne pour les mêmes appels
+RPC. **C'est un défaut de réseau Docker propre à cette pile CLI locale, pas
+un défaut du code** : `journaliser()` (`external-call.ts`) utilise
+`SUPABASE_DB_URL`, la variable standard que Supabase injecte, exactement
+comme documenté au plan §3.2 — rien à corriger côté code sur la seule base de
+cette observation locale. Reste à vérifier sur un déploiement réel (cloud ou
+auto-hébergé), où ce nommage est géré par la plateforme.
+
+## Définition du fait (CLAUDE.md §4) — bilan honnête, mis à jour
+1. **Données réelles** ✓ — confirmé, y compris par l'appel réel de bout en bout.
+2. **RLS vérifiée pour 3 rôles** ✓ **pour `get_previous_note`, en base réelle** (voir preuve ci-dessus). Reste à vérifier à travers la passerelle Edge Function elle-même pour les rôles practitioner/assistant (seul owner a1 a été testé à ce niveau, l'appel a réussi ; a2/a3 restent à essayer sur `jarvis-analyze-session`).
+3. **Dégradation propre** ✓ — confirmé en pratique : 402/timeout OpenRouter réels ont produit `{"ok":false,"error":{"code":"indisponible",...}}`, jamais un crash, jamais une fuite.
+4. **États vide + erreur écrits** ✓.
+5. **Jetons de design respectés** ✓.
+6. **Checkpoint reproductible vert** ~ — `pnpm typecheck/lint/build` + `preflight.sh` verts et reproductibles après nettoyage du code de diagnostic. `checkpoint-s5.sh`/`checkpoint-adr019.sh`/`checkpoint-jarvis.sh` restent bloqués — pas par « Docker absent » (faux désormais), mais par `postgres:15` (Docker Hub) injoignable sur ce réseau. La vérification DB de cette session est donc passée par `docker exec` direct, hors de ces scripts.
+
+**Conclusion : S6 est fonctionnellement prouvé de bout en bout sur le chemin
+lecture + `analyze_session`, sur un compte de test.** Ce qui manque avant de
+déclarer S6 clos, précisément : (a) le même appel avec `DEFAULT_MODEL` réel
+sur une clé non gratuite ; (b) RLS pour a2/a3 À TRAVERS la passerelle, pas
+seulement en SQL direct ; (c) confirmer `audit.boundary_crossings` s'écrit
+sur un environnement où `SUPABASE_DB_URL` résout réellement ; (d) rejouer
+les checkpoints S5/ADR-019/Jarvis une fois `postgres:15` accessible (miroir
+ECR, ou adapter `qfull()` à un `docker exec` — pas fait cette session, pas de
+modification des scripts sans décision explicite) ; (e) la vérification
+d'écran (double clic, coupure réseau, JSON malformé) — toujours pas de
+navigateur dans cet environnement.
 
 ## En cours
-(rien côté code — la suite est entièrement environnementale, voir dette datée ci-dessous)
+(rien côté code écrit cette session au-delà des trois correctifs — la suite
+est de la vérification, listée juste au-dessus et dans la dette datée)
 
 ## S6 — écart de tooling découvert et corrigé, 2026-08-05
 `eslint.config.js` portait un commentaire explicite refusant d'exclure
@@ -59,6 +139,23 @@ raisonnement que pour 026 sans Docker — relecture manuelle en tient lieu, un
 typecheck vert qui ne prouve rien est pire qu'un typecheck absent. L'override
 par-fichier devenu mort a été supprimé, pas laissé en place.
 
+**Complément 2026-08-05, trouvé en lançant `supabase start` pour de vrai** :
+`supabase/.temp/` (secrets et bundle générés par le CLI à chaque démarrage)
+faisait échouer `pnpm lint` — un fichier `.ts` hors du programme TypeScript,
+non couvert par l'exclusion `supabase/functions/**`. `.gitignore` racine
+l'ignorait déjà (`supabase/.temp/`), mais ESLint parcourt le disque, pas git.
+Traité comme un artefact jetable : supprimé plutôt qu'ajouté aux exclusions
+permanentes — il n'a aucune raison d'exister dans l'arbre d'un contributeur
+qui n'a jamais lancé la pile locale. Se régénère automatiquement au prochain
+`supabase start`.
+
+## S6 — infrastructure locale ajoutée, à committer
+`supabase/config.toml` (généré par `supabase init`, schéma `app` ajouté aux
+`schemas` exposés de l'API — **`audit` volontairement absent**, cohérent avec
+017 §3) et `supabase/.gitignore` (`.branches`, `.temp`, fichiers `.env.*`
+locaux — standard CLI, ne duplique pas mais renforce le `.gitignore` racine).
+Ni l'un ni l'autre ne contient de secret : vérifié par grep avant ajout.
+
 ## S6 — écart avec le plan approuvé, assumé et documenté en tête de 027
 `app.get_previous_note` est **SECURITY DEFINER**, pas `SECURITY INVOKER` comme
 esquissé au plan §3.1. Vérifié dans 020 §2 avant d'écrire : `audit.log_read`
@@ -71,56 +168,35 @@ fonction INVOKER heurterait un 42501 au premier appel. Même raisonnement que
 **Fix:** BandeauSeanceEnCours appelle `get_open_consultation()` et l'affiche en AppShell ; garde détaillée sur `/agenda/[id]` + `/consultation/*` (roles practitioner seul, skipped si assistant).
 **Vérifié**: build génère `ƒ /consultation/[id]`, gates 1-11 VERT, regression-clean S4/S3.
 
-**Défaut de mesure: gates 12-29 inre-vérifiés** — Docker unreachable, psql absent de l'env. C'est une vraie faille (DB-backed gates), pas une fausse info. État: **BLOQUÉ**, non résolu.
-**§7 vérification visuelle (13 contrôles, screenshot + navigation)** — pas exécutée (pas de browser). État: **BLOQUÉ**, non résolu.
-**User call explicite**: commit en dépit des deux failles. Enregistré comme délibéré, non accidental.
-
 ## Portes & regressions
-Réexécutées 2026-08-04 post-fix : `preflight` ✓ · `typecheck` ✓ · `lint` ✓ · `build` ✓ · `checkpoint-s5` VERT 1-11 · `checkpoint-s4` VERT 25 · `checkpoint-adr019` VERT 24. Aucune régression S1–S4.
+Réexécutées 2026-08-05 post-vérification S6 : `preflight` ✓ · `typecheck` ✓ · `lint` ✓ · `build` ✓ (chunk `/consultation/[id]` 3.98 kB). `checkpoint-s5`/`checkpoint-adr019`/`checkpoint-jarvis` toujours bloqués — cause précisée ci-dessus (Docker Hub, pas Docker).
 **La couche sécurité est gelée.** ADR-019 tient sur `app_gatekeeper` sans `BYPASSRLS`, membre `authenticated` **avec `INHERIT TRUE`**, propriétaire des portes 004/007/008. Y toucher casse la cloison.
 
 ## Décisions de session (à verser au 00-DECISIONS.md)
 1. **Nom de fichier gateway:** `supabase/functions/_shared/external-call.ts` (pas llm.ts) — settle par scripts/preflight.sh §1 ligne 8 (seule exemption de grep).
-2. **S6 gateway est Edge Function** (Deno, supabase/functions/), **pas Next.js API route** — confirme l'architecte et 02-SECURITY-BOUNDARY.md §1. Limite acceptée: pas de typecheck/build pnpm sur Deno; requiert Docker+`supabase functions serve`.
+2. **S6 gateway est Edge Function** (Deno, supabase/functions/), **pas Next.js API route** — confirme l'architecte et 02-SECURITY-BOUNDARY.md §1.
 3. **S6 scope resserré:** 027/028 migrations (pseudonymize.ts, external-call.ts, app.get_previous_note, audit.boundary_crossings) + **UNE SEULE TOOL: analyze_session** (read-only, no confirmation, no jarvis_actions). Les 7-8 autres outils, propose-confirm-execute-log, draft_clinical_note = **EXPLICITEMENT OUT**.
+4. **2026-08-05 : Docker/psql ne sont plus une contrainte d'environnement absolue.** `pnpm dlx supabase` donne un accès complet à une pile locale. La contrainte réelle et restante est `docker.io` (Docker Hub) injoignable — `public.ecr.aws` fonctionne. Toute mention future de « Docker absent » dans ce dépôt doit être corrigée ou reformulée en fonction de cette découverte, poste par poste.
 
 ## Dette assumée, datée
-- checkpoint-s5.sh gates 12-29 inrévérifiés (Docker/psql absent) → **avant le prochain S5 call (avant 2026-08-10)**
-- S5 §7 on-screen matrix (13 lignes, f5, focus, 390px, offline, assistant role) → **avant 2026-08-10**
-- graphify-out/ non tracké, pas en .gitignore → `git rm --cached` ou `.gitignore` avant le prochain `git add .*`
+- S5 §7 on-screen matrix (13 lignes, f5, focus, 390px, offline, assistant role) → **avant 2026-08-10** (toujours bloqué : pas de navigateur dans cet environnement)
 - Un DROP de FUNCTION emporte son propriétaire → **ne pas recopier sur app.get_consultation** (read-only, SECURITY INVOKER, safe si DROP)
-- **S6 §5.8-10 du plan approuvé, non joués (Docker/psql absents)** : appliquer
-  027/028 et vérifier `get_previous_note` à la main ; `supabase functions
-  serve` et un appel réel à `jarvis-analyze-session` ; JWT assistante → échec
-  propre sans fuite ; `OPENROUTER_API_KEY` absente → « indisponible » sans
-  casser l'écran ; à l'écran réel : deux clics rapides sur « Analyser la
-  séance » = un seul appel, coupure réseau en cours d'appel + retour sur
-  l'écran = pas de résultat obsolète affiché, JSON malformé (mock/proxy) =
-  une reformulation puis un échec propre. **S6 n'est PAS clos tant que ces
-  points ne sont pas verts** → au plus tard **avant 2026-08-10** (même
-  échéance que la dette S5, pour ne pas la reperdre de vue).
-- `checkpoint-s5.sh`/`checkpoint-adr019.sh` n'ont pas pu être rejoués en
-  régression après la Phase 2 (même blocage Docker/psql) → à rejouer dans le
-  même geste que le point précédent, avant 2026-08-10.
-- `supabase/migrations;G/` — répertoire parasite (coquille shell), à
-  supprimer manuellement, jamais committé jusqu'ici → avant le prochain
-  `git add`.
+- **S6 — cinq points listés dans « Définition du fait » ci-dessus** (a) à (e) → **avant 2026-08-10**, avant de déclarer S6 clos.
+- `checkpoint-s5.sh`/`checkpoint-adr019.sh`/`checkpoint-jarvis.sh` restent injouables en l'état (`postgres:15` sur Docker Hub injoignable) → soit un miroir d'image accessible depuis ce réseau, soit adapter `qfull()`/l'équivalent pour utiliser `docker exec` sur un conteneur déjà démarré — **décision à prendre avec l'utilisateur**, pas une modification à faire à la discrétion de l'agent (ce sont des scripts de vérification, leur fiabilité est ce qu'on leur demande).
 
 ## En litige — voir WORKING-CONTEXT.md §7
 **Q-D CLOSE** (2026-08-03, ADR-019 opérationnelle). **Q-A/Q-B/Q-C** référencées §8 de WORKING-CONTEXT — toutes en ADRs, aucune nouvelle question ouverte.
 **Nota:** WORKING-CONTEXT.md §0 mentionne docs 05-BUILD-PLAN et 06 (inexistants sur disque) — l'autorité est en retard.
 
-## Prochaine tâche — clore S6 : vérification environnementale, puis écran réel
-Code de S6 (Phase 1 + Phase 2) complet et commité. Ce qui reste n'est plus du
-code : c'est de rejouer §5.8-10 du plan approuvé dès que Docker/psql sont
-joignables (dette datée ci-dessus), PUIS de faire la vérification à l'écran
-réel listée au même endroit (deux clics rapides, coupure réseau, JSON
-malformé). Plan technique, toujours autorité :
-`C:\Users\ABC Informatique\.claude\plans\s5-completed-but-i-declarative-simon.md`
-— le découpage d'exécution de la Phase 1 est dans
-`C:\Users\ABC Informatique\.claude\plans\start-the-s6-plan-hazy-cat.md`.
+## Prochaine tâche — clore S6 : les cinq points de vérification restants
+Voir « Définition du fait » ci-dessus, points (a) à (e). Aucun n'est un
+chantier de code — tous sont de la vérification sur un environnement plus
+complet (clé OpenRouter de production, navigateur, image Docker accessible).
+Plan technique, toujours autorité :
+`C:\Users\ABC Informatique\.claude\plans\s5-completed-but-i-declarative-simon.md`.
 
 Une fois ces points verts : signer le point 2 de la Définition du fait
-ci-dessus, et alors seulement déclarer S6 clos. Les 7-8 autres outils Jarvis
-et la boucle proposer-confirmer restent explicitement hors périmètre (§4 du
-plan approuvé) — un chantier séparé, pas une suite immédiate.
+ci-dessus dans son intégralité, et alors seulement déclarer S6 clos. Les 7-8
+autres outils Jarvis et la boucle proposer-confirmer restent explicitement
+hors périmètre (§4 du plan approuvé) — un chantier séparé, pas une suite
+immédiate.
