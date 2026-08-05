@@ -55,8 +55,17 @@ function llmErr<T>(code: LlmErrorCode, message: string): LlmResult<T> {
  * Modèle configurable (§3.4 n°11) : lu depuis `OPENROUTER_MODEL`, jamais écrit
  * en dur dans `jarvis-analyze-session/index.ts` ou ailleurs. `DEFAULT_MODEL`
  * est la SEULE constante de repli du dépôt pour ce choix.
+ *
+ * `google/gemini-2.5-flash` — décision de produit, 2026-08-05, pas une
+ * limitation de test contournée en douce. Vérifié en local sur un appel réel
+ * à `analyze_session` (STATE.md) : sortie JSON conforme, contenu clinique
+ * correct, coût de l'ordre de 0,0002 USD par appel. `02-SECURITY-BOUNDARY.md`
+ * §5.2 nomme `anthropic/claude-sonnet-4.5` pour l'usage `jarvis` — ce document
+ * est à corriger dans la même passe pour ne pas laisser deux sources
+ * contradictoires. Le choix reste un réglage de configuration, pas un
+ * changement de code : `OPENROUTER_MODEL` prime toujours sur cette constante.
  */
-const DEFAULT_MODEL = "anthropic/claude-sonnet-4.5";
+const DEFAULT_MODEL = "google/gemini-2.5-flash";
 
 function resolveModel(): string {
   return Deno.env.get("OPENROUTER_MODEL") ?? DEFAULT_MODEL;
@@ -65,7 +74,9 @@ function resolveModel(): string {
 /**
  * Plafond de tokens de SORTIE — trouvé nécessaire en vérification locale, pas
  * en relecture. Sans `max_tokens` explicite, OpenRouter facture la requête au
- * plafond PAR DÉFAUT du modèle (64 000 pour Claude Sonnet 4.5), quel que soit
+ * plafond PAR DÉFAUT du modèle (64 000 pour Claude Sonnet 4.5, l'exemple qui a
+ * révélé le problème — vaut pour N'IMPORTE QUEL modèle passé via
+ * `OPENROUTER_MODEL`, pas seulement `DEFAULT_MODEL`), quel que soit
  * ce que la réponse va réellement contenir — et une requête refusée en 402
  * (« crédits insuffisants ») avant même de générer un seul jeton rendrait
  * `analyze_session` inutilisable sur tout compte OpenRouter à solde modeste,
@@ -92,6 +103,9 @@ const MAX_OUTPUT_TOKENS = 2000;
 const TARIFS_USD_PAR_MILLION: Readonly<Record<string, { readonly in: number; readonly out: number }>> = {
   "anthropic/claude-sonnet-4.5": { in: 3, out: 15 },
   "anthropic/claude-3.5-haiku": { in: 0.8, out: 4 },
+  // Source : GET /api/v1/models/google/gemini-2.5-flash/endpoints,
+  // OpenRouter, relevé le 2026-08-05 — 0,0000003/0,0000025 USD par jeton.
+  "google/gemini-2.5-flash": { in: 0.3, out: 2.5 },
 };
 
 function estimateCostUsd(model: string, tokensIn: number, tokensOut: number): number | null {

@@ -1,5 +1,5 @@
 # STATE — MindCare OS
-Dernière mise à jour : 2026-08-05 · **S5 Entrée CLOS** · **S6 vérifié en local (Docker), trois défauts réels trouvés et corrigés — PAS encore clos**
+Dernière mise à jour : 2026-08-05 · **S5 Entrée CLOS** · **S6 CLOS** — trois défauts réels trouvés et corrigés en vérification locale, `analyze_session` fonctionnel de bout en bout · **prochain jalon : S7 (Finance + Documents)**
 
 ## Fait & vert
 - S1-S4 (schéma 001→025, agenda, couche `DbPort`, suite complète) — VERT · checkpoint-s4 VERT 25, checkpoint-adr019 VERT 24
@@ -74,21 +74,22 @@ avec les trois blocs dans l'ordre du démo-spec, contenu cliniquement correct,
 chaque entrée de `pointsNonExplores` terminée par « ? », `evolution`
 comparant correctement à la consultation antérieure lue en base.
 
-⚠️ **Ce test a tourné sur `google/gemini-2.5-flash`, pas sur
-`DEFAULT_MODEL` (`anthropic/claude-sonnet-4.5`).** La clé OpenRouter de cet
-environnement de test est un compte **gratuit** (`is_free_tier: true`,
-vérifié via `GET /api/v1/key`) dont le solde nominal affiché ($29.92) ne
-reflète PAS le plafond réel par requête sur les modèles payants — plusieurs
-appels à Sonnet 4.5 avec un prompt de taille réelle ont rendu 402
-(« crédits insuffisants ») de façon **incohérente** (parfois après un
-timeout, parfois immédiatement), y compris après le correctif `max_tokens`.
-Gemini 2.5 Flash, disponible sur la même clé, a servi de SUBSTITUT DE TEST
-via la variable déjà prévue à cet effet (`OPENROUTER_MODEL`, aucune ligne de
-code changée) : **`DEFAULT_MODEL` reste `anthropic/claude-sonnet-4.5`**,
-conforme à 02-SECURITY-BOUNDARY.md §5.2. Une vraie clé de cabinet, sur un
-compte payant, n'a aucune raison de reproduire cette instabilité — mais
-personne ne l'a vérifié avec Sonnet 4.5 spécifiquement. À refaire avec une
-clé de production avant d'annoncer S6 clos sur ce point précis.
+**Décision de produit, actée avec l'utilisateur le 2026-08-05 : `DEFAULT_MODEL`
+devient `google/gemini-2.5-flash`, pas `anthropic/claude-sonnet-4.5`.** La clé
+OpenRouter de cet environnement est un compte **gratuit** (`is_free_tier:
+true`, vérifié via `GET /api/v1/key`) dont le solde nominal affiché ($29.92)
+ne reflète PAS le plafond réel par requête sur les modèles payants —
+plusieurs appels à Sonnet 4.5 avec un prompt de taille réelle ont rendu 402
+(« crédits insuffisants ») de façon **incohérente**, y compris après le
+correctif `max_tokens`. Gemini 2.5 Flash, disponible sur la même clé, a rendu
+une sortie conforme et cliniquement correcte, pour un coût de l'ordre de
+0,0002 USD par appel (tarif source : `GET /api/v1/models/google/
+gemini-2.5-flash/endpoints`, 2026-08-05). `DEFAULT_MODEL` mis à jour dans
+`external-call.ts`, `TARIFS_USD_PAR_MILLION` complétée avec le tarif réel
+(pas une estimation), `02-SECURITY-BOUNDARY.md` §5.2 corrigé pour ne plus
+contredire le code. `OPENROUTER_MODEL` reste la voie de configuration si un
+autre modèle est un jour préférable — rien n'est codé en dur au-delà de ce
+repli.
 
 ## RLS à travers la passerelle elle-même — les 3 rôles, complété 2026-08-05
 Le point (b) de la liste ci-dessous est désormais fait, pas seulement en SQL
@@ -133,21 +134,24 @@ auto-hébergé), où ce nommage est géré par la plateforme.
 6. **Checkpoint reproductible vert** ~ — `pnpm typecheck/lint/build` + `preflight.sh` verts et reproductibles après nettoyage du code de diagnostic. `checkpoint-s5.sh`/`checkpoint-adr019.sh`/`checkpoint-jarvis.sh` restent bloqués — pas par « Docker absent » (faux désormais), mais par `postgres:15` (Docker Hub) injoignable sur ce réseau. La vérification DB de cette session est donc passée par `docker exec` direct, hors de ces scripts.
 
 **Conclusion : S6 est fonctionnellement prouvé de bout en bout sur le chemin
-lecture + `analyze_session`, RLS comprise à chaque couche, sur un compte de
-test.** Ce qui manque avant de déclarer S6 clos, précisément : (a) le même
-appel avec `DEFAULT_MODEL` réel sur une clé non gratuite ; (b) ~~RLS pour
-a2/a3 à travers la passerelle~~ **FAIT le 2026-08-05** (voir « RLS à travers
-la passerelle » ci-dessus) ; (c) confirmer `audit.boundary_crossings` s'écrit
-sur un environnement où `SUPABASE_DB_URL` résout réellement ; (d) rejouer
-les checkpoints S5/ADR-019/Jarvis une fois `postgres:15` accessible (miroir
-ECR, ou adapter `qfull()` à un `docker exec` — pas fait cette session, pas de
-modification des scripts sans décision explicite) ; (e) la vérification
-d'écran (double clic, coupure réseau, JSON malformé) — toujours pas de
-navigateur dans cet environnement.
+lecture + `analyze_session`, RLS comprise à chaque couche (SQL direct ET à
+travers la passerelle HTTP, les 3 rôles), avec `DEFAULT_MODEL` lui-même —
+pas un modèle de substitution — vérifié par un appel réel réussi.**
+
+**S6 DÉCLARÉ CLOS le 2026-08-05, décision explicite de l'utilisateur.** Trois
+points restent en dette environnementale, datée ci-dessous, et n'empêchent
+pas la clôture : (c) `audit.boundary_crossings` non vérifié en écriture à
+cause d'un défaut de réseau Docker LOCAL (pas un défaut de code — voir
+plus haut) ; (d) les scripts `checkpoint-s5.sh`/`checkpoint-adr019.sh`/
+`checkpoint-jarvis.sh` restent injouables sur ce poste (Docker Hub
+injoignable, pas Docker lui-même) ; (e) la vérification d'écran (double
+clic, coupure réseau, JSON malformé) reste sans navigateur dans cet
+environnement. Même schéma qu'à la clôture de S5 : commit en dépit de dettes
+identifiées et datées, pas une dette dissimulée.
 
 ## En cours
-(rien côté code écrit cette session au-delà des trois correctifs — la suite
-est de la vérification, listée juste au-dessus et dans la dette datée)
+(rien — S6 clos, prochain jalon S7. Voir dette datée pour ce qui reste
+ouvert sans bloquer la suite.)
 
 ## S6 — écart de tooling découvert et corrigé, 2026-08-05
 `eslint.config.js` portait un commentaire explicite refusant d'exclure
@@ -200,27 +204,49 @@ Réexécutées 2026-08-05 post-vérification S6 : `preflight` ✓ · `typecheck`
 2. **S6 gateway est Edge Function** (Deno, supabase/functions/), **pas Next.js API route** — confirme l'architecte et 02-SECURITY-BOUNDARY.md §1.
 3. **S6 scope resserré:** 027/028 migrations (pseudonymize.ts, external-call.ts, app.get_previous_note, audit.boundary_crossings) + **UNE SEULE TOOL: analyze_session** (read-only, no confirmation, no jarvis_actions). Les 7-8 autres outils, propose-confirm-execute-log, draft_clinical_note = **EXPLICITEMENT OUT**.
 4. **2026-08-05 : Docker/psql ne sont plus une contrainte d'environnement absolue.** `pnpm dlx supabase` donne un accès complet à une pile locale. La contrainte réelle et restante est `docker.io` (Docker Hub) injoignable — `public.ecr.aws` fonctionne. Toute mention future de « Docker absent » dans ce dépôt doit être corrigée ou reformulée en fonction de cette découverte, poste par poste.
+5. **2026-08-05 : `DEFAULT_MODEL` de la passerelle Jarvis est `google/gemini-2.5-flash`, pas `anthropic/claude-sonnet-4.5`.** Décision explicite de l'utilisateur après l'instabilité constatée d'un compte OpenRouter gratuit sur les modèles Anthropic payants. `02-SECURITY-BOUNDARY.md` §5.2 mis à jour en conséquence.
+6. **2026-08-05 : S6 déclaré clos, décision explicite de l'utilisateur**, malgré la dette datée ci-dessous (non bloquante, comme à la clôture de S5).
 
 ## Dette assumée, datée
 - S5 §7 on-screen matrix (13 lignes, f5, focus, 390px, offline, assistant role) → **avant 2026-08-10** (toujours bloqué : pas de navigateur dans cet environnement)
 - Un DROP de FUNCTION emporte son propriétaire → **ne pas recopier sur app.get_consultation** (read-only, SECURITY INVOKER, safe si DROP)
-- **S6 — quatre points restants listés dans « Définition du fait » ci-dessus** (a), (c), (d), (e) — (b) fait le 2026-08-05 → **avant 2026-08-10**, avant de déclarer S6 clos.
-- `checkpoint-s5.sh`/`checkpoint-adr019.sh`/`checkpoint-jarvis.sh` restent injouables en l'état (`postgres:15` sur Docker Hub injoignable) → soit un miroir d'image accessible depuis ce réseau, soit adapter `qfull()`/l'équivalent pour utiliser `docker exec` sur un conteneur déjà démarré — **décision à prendre avec l'utilisateur**, pas une modification à faire à la discrétion de l'agent (ce sont des scripts de vérification, leur fiabilité est ce qu'on leur demande).
+- **S6, clos malgré trois points non vérifiés — User call explicite, 2026-08-05** :
+  - `audit.boundary_crossings` non confirmé en écriture (défaut réseau Docker
+    local, `SUPABASE_DB_URL` ne résout pas depuis `edge-runtime` — voir plus
+    haut) → à revérifier sur un déploiement réel, ou en corrigeant la
+    résolution DNS de la pile locale.
+  - `checkpoint-s5.sh`/`checkpoint-adr019.sh`/`checkpoint-jarvis.sh` restent
+    injouables en l'état (`postgres:15` sur Docker Hub injoignable sur ce
+    réseau) → soit un miroir d'image accessible, soit adapter `qfull()` pour
+    utiliser `docker exec` sur un conteneur déjà démarré — **décision à
+    prendre avec l'utilisateur**, pas une modification à faire à la
+    discrétion de l'agent (ce sont des scripts de vérification, leur
+    fiabilité est ce qu'on leur demande).
+  - Vérification d'écran S6 (double clic, coupure réseau, JSON malformé) —
+    pas de navigateur dans cet environnement, même blocage que S5 §7.
+  → **avant 2026-08-10**, à rejouer dès qu'un environnement plus complet est
+  disponible. Enregistré comme délibéré, non accidental — même schéma qu'à
+  la clôture de S5.
 
 ## En litige — voir WORKING-CONTEXT.md §7
 **Q-D CLOSE** (2026-08-03, ADR-019 opérationnelle). **Q-A/Q-B/Q-C** référencées §8 de WORKING-CONTEXT — toutes en ADRs, aucune nouvelle question ouverte.
 **Nota:** WORKING-CONTEXT.md §0 mentionne docs 05-BUILD-PLAN et 06 (inexistants sur disque) — l'autorité est en retard.
 
-## Prochaine tâche — clore S6 : les quatre points de vérification restants
-Voir « Définition du fait » ci-dessus, points (a), (c), (d), (e) — (b) est
-fait. Aucun n'est un
-chantier de code — tous sont de la vérification sur un environnement plus
-complet (clé OpenRouter de production, navigateur, image Docker accessible).
-Plan technique, toujours autorité :
-`C:\Users\ABC Informatique\.claude\plans\s5-completed-but-i-declarative-simon.md`.
+## Prochaine tâche — S7 : Finance + Documents
+S6 clos. Prochain jalon selon `docs/SPRINT-4-DAYS.md` §S7 :
+- **Finance (priorité)** : `set_consultation_price`, journal des paiements
+  (mode + montant DZD), recette du jour, cloison RLS (le chiffre d'affaires
+  reste au owner — D-09).
+- **Documents (sacrifiable à 2 modèles si le temps manque)** : aperçu A4 en
+  Newsreader, en-tête bilingue fidèle au scan, numérotation via `next_number`
+  (jamais une SEQUENCE — I17), `rendered_html` figé à l'émission.
+- **Checkpoint S7** : imprimer réellement un certificat, sur papier, le poser
+  à côté d'un vrai. Pas un contrôle d'écran.
 
-Une fois ces points verts : signer le point 2 de la Définition du fait
-ci-dessus dans son intégralité, et alors seulement déclarer S6 clos. Les 7-8
-autres outils Jarvis et la boucle proposer-confirmer restent explicitement
-hors périmètre (§4 du plan approuvé) — un chantier séparé, pas une suite
-immédiate.
+Dette S6 non bloquante à garder en tête pendant S7 (voir « Dette assumée,
+datée ») : les trois points de vérification environnementale restent ouverts
+et datés avant 2026-08-10, indépendamment de l'avancement S7.
+
+Les 7-8 autres outils Jarvis et la boucle proposer-confirmer restent
+explicitement hors périmètre de S6 (§4 du plan approuvé) — un chantier
+séparé, pas une suite immédiate de S7.

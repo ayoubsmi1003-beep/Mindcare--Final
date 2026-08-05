@@ -233,11 +233,18 @@ const MODEL_FOR = {
   live_insight:  'anthropic/claude-3.5-haiku',   // latence prioritaire
   note_draft:    'anthropic/claude-sonnet-4.5',  // qualité prioritaire
   intake_triage: 'anthropic/claude-3.5-haiku',
-  jarvis:        'anthropic/claude-sonnet-4.5',
+  jarvis:        'google/gemini-2.5-flash',      // décision S6, 2026-08-05
 };
 ```
 > **Config, pas code.** Le jour du GPU, cette table pointe vers un endpoint local. Rien d'autre ne bouge.
 > C'est exactement la promesse « thin client, fat server ».
+>
+> **`jarvis` (le seul purpose implémenté à ce jour, S6) tourne sur
+> `google/gemini-2.5-flash`**, pas Sonnet 4.5 — décision de produit actée avec
+> l'utilisateur le 2026-08-05, après un appel réel à `analyze_session` vérifié
+> en local (sortie JSON conforme, coût de l'ordre de 0,0002 USD par appel).
+> `live_insight`, `note_draft` et `intake_triage` restent non implémentés :
+> leurs entrées ci-dessus sont toujours indicatives, pas des décisions prises.
 
 ### 5.3 En-têtes de confidentialité OpenRouter
 ```
