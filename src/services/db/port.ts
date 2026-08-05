@@ -96,4 +96,14 @@ export interface DbPort {
   readonly signIn: (credentials: SignInCredentials) => Promise<Result<SessionInfo>>;
   readonly signOut: () => Promise<Result<void>>;
   readonly getSession: () => Promise<Result<SessionInfo | null>>;
+
+  /**
+   * Appel d'une Edge Function — S6. Seule voie vers la passerelle Jarvis
+   * (`supabase/functions/`) : ADR-019 et ADR-020 valent pour ce chemin comme
+   * pour `rpc()`, un seul point d'entrée qu'on peut auditer et faire évoluer.
+   * `body` voyage tel quel en JSON ; la fonction cible répond `{ ok, data |
+   * error }` (même convention que `Result<T>`), et l'adaptateur la traduit ici
+   * — l'appelant ne voit jamais la forme brute de la réponse HTTP.
+   */
+  readonly invokeFunction: <T>(name: string, body: unknown) => Promise<Result<T>>;
 }

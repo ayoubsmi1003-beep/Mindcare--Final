@@ -33,10 +33,15 @@
  * fabriquée. Un panneau vide qui annonce son absence est une information ; un
  * panneau rempli de faux est un mensonge qu'on découvre devant un patient.
  *
- * ⚠️ AUCUN APPEL À UNE IA DANS CE FICHIER, aujourd'hui. Le jour où l'analyse de
- * séance arrivera, elle proposera et la praticienne décidera (I6) : la sortie
- * n'entre au dossier que si elle la reprend dans sa note. Le disclaimer d'I7
- * est déjà affiché sur le panneau qui l'accueillera.
+ * ⚠️ S6 — `analyze_session` EST LE SEUL APPEL LLM DE CE FICHIER, ET IL NE FAIT
+ * QUE PROPOSER. `analyzeSession()` (`src/services/jarvis.ts`) n'appelle qu'une
+ * Edge Function, qui pseudonymise avant tout envoi (02-SECURITY-BOUNDARY.md
+ * §3) et ne renvoie qu'un BROUILLON en lecture seule — rien ici n'écrit dans
+ * `soap`, n'appelle `saveNote`, ni ne pose de ligne `jarvis_actions`
+ * (`write: false`, `03-JARVIS-TOOLS.md` §3). La praticienne reprend ce qu'elle
+ * veut À LA MAIN dans l'éditeur SOAP ci-contre — c'est ce qui la fait décider
+ * (I6). Le disclaimer d'I7 reste affiché AVANT le bouton, pas seulement après
+ * un résultat.
  */
 
 "use client";
@@ -84,6 +89,7 @@ import {
   type ChampSoap,
   type Consultation,
 } from "@/services/consultations";
+import { analyzeSession, type AnalyseSeance } from "@/services/jarvis";
 
 /**
  * Délai d'inactivité avant enregistrement d'une saisie longue.
@@ -200,6 +206,18 @@ export default function PageConsultation(): React.JSX.Element {
   const [motif, setMotif] = useState("");
   const [corps, setCorps] = useState("");
 
+  // ── S6 — analyse de séance (Jarvis, `analyze_session`) ──────────────────
+  const [analyse, setAnalyse] = useState<AnalyseSeance | null>(null);
+  const [enAnalyse, setEnAnalyse] = useState(false);
+  const [erreurAnalyse, setErreurAnalyse] = useState<string | undefined>(undefined);
+  // Compteur de génération (§3.4 n°8, plan S6 approuvé) : la même logique que
+  // le drapeau `annule` des pages de liste, adaptée à un appel déclenché par
+  // clic plutôt qu'un effet. Un second clic avant la première réponse — ou un
+  // démontage pendant l'appel — fait jeter silencieusement la réponse devenue
+  // obsolète au lieu d'écraser un état plus récent.
+  const generationAnalyse = useRef(0);
+  const demonte = useRef(false);
+
   // L'horloge de l'écran. Un seul intervalle pour le chronomètre ET le décompte
   // de verrouillage : deux horloges pour un même écran finiraient par afficher
   // deux heures différentes, et l'une des deux porte sur une pièce juridique.
@@ -269,6 +287,13 @@ export default function PageConsultation(): React.JSX.Element {
     () => () => {
       if (minuteurBrut.current !== undefined) clearTimeout(minuteurBrut.current);
       if (minuteurSoap.current !== undefined) clearTimeout(minuteurSoap.current);
+    },
+    [],
+  );
+
+  useEffect(
+    () => () => {
+      demonte.current = true;
     },
     [],
   );
@@ -471,6 +496,46 @@ export default function PageConsultation(): React.JSX.Element {
       setCorps("");
       setConfirmation(fr.consultation.amendementEnregistre);
       charger(false);
+    });
+  }
+
+  /**
+   * `analyze_session` — S6, `write: false`. Ne pose aucune ligne
+   * `jarvis_actions`, n'écrit rien dans la note SOAP : c'est un BROUILLON en
+   * lecture seule, que la praticienne reprend à la main si elle le souhaite.
+   *
+   * Idempotence (§3.4 n°7) : le bouton se désactive DÈS le premier clic, via
+   * `enAnalyse`, avant même que la promesse ne se résolve — un second clic
+   * rapide ne peut pas déclencher un second appel tant que le premier est en
+   * cours.
+   */
+  function analyserSeance(): void {
+    setErreurAnalyse(undefined);
+    setEnAnalyse(true);
+    generationAnalyse.current += 1;
+    const generation = generationAnalyse.current;
+
+    void analyzeSession(id).then((result) => {
+      // Réponse tardive ignorée (§3.4 n°8) : la page a démonté, ou un appel
+      // plus récent a déjà pris la main. On ne touche à AUCUN état.
+      if (demonte.current || generation !== generationAnalyse.current) return;
+
+      setEnAnalyse(false);
+      if (!result.ok) {
+        // Message dédié (T6, §10 de 03-JARVIS-TOOLS.md) plutôt que le message
+        // générique « service de données indisponible » : celui-ci dirait la
+        // même chose pour une panne Jarvis que pour une panne de la base, et
+        // laisserait croire que le dossier lui-même est en cause. Exception
+        // pour `regle-metier` (aucune note à analyser) : son message est déjà
+        // précis, pas la peine de le remplacer.
+        setErreurAnalyse(
+          result.error.code === "regle-metier"
+            ? result.error.message
+            : fr.consultation.analyseIndisponible,
+        );
+        return;
+      }
+      setAnalyse(result.data);
     });
   }
 
@@ -734,11 +799,93 @@ export default function PageConsultation(): React.JSX.Element {
 
             <SectionPliable titre={fr.consultation.assistance}>
               <div className="flex flex-col gap-4">
-                <EtatVide message={fr.consultation.assistanceIndisponible} />
                 {/* I7 — mention permanente, jamais masquée, sur toute surface
-                    d'aide à la décision. Elle est là AVANT la fonctionnalité :
-                    le jour où une suggestion s'affiche, elle est déjà encadrée. */}
+                    d'aide à la décision. AVANT le bouton, pas seulement après
+                    un résultat : elle est déjà là pour la fonctionnalité vide,
+                    elle ne bouge pas pour la fonctionnalité pleine. */}
                 <p className="font-ui text-label text-ink-500">{fr.disclaimer}</p>
+
+                <div>
+                  <Bouton
+                    rang="secondaire"
+                    onClick={analyserSeance}
+                    disabled={enAnalyse || brut.trim() === ""}
+                  >
+                    {fr.consultation.analyserLaSeance}
+                  </Bouton>
+                </div>
+
+                {brut.trim() === "" && !enAnalyse && analyse === null ? (
+                  <EtatVide message={fr.consultation.analyseAucuneNote} />
+                ) : null}
+
+                {/* État de chargement HONNÊTE : un texte qui dit ce qui se
+                    passe, jamais un squelette qui imiterait un contenu que
+                    personne n'a encore produit. */}
+                {enAnalyse ? <PanneauInfo>{fr.consultation.analyseEnCours}</PanneauInfo> : null}
+
+                {erreurAnalyse === undefined ? null : (
+                  <PanneauInfo ton="attention">{erreurAnalyse}</PanneauInfo>
+                )}
+
+                {/* Trois blocs, dans l'ordre exact du démo-spec (§2 bis),
+                    entièrement en LECTURE SEULE — aucun champ ici n'écrit dans
+                    `soap` ni n'appelle `saveNote`. Reprendre un fragment dans
+                    l'éditeur SOAP ci-contre reste un geste manuel de la
+                    praticienne (I6) ; `draft_clinical_note`, un outil distinct
+                    et hors périmètre de cette passe, est ce qui préremplirait
+                    un jour l'éditeur lui-même. */}
+                {analyse === null ? null : (
+                  <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-3">
+                      <p className="font-ui text-label font-medium uppercase tracking-label text-ink-500">
+                        {fr.consultation.noteStructureeTitre}
+                      </p>
+                      <div className="flex flex-col gap-4">
+                        {CHAMPS_SOAP.map((champ) => (
+                          <Champ
+                            key={champ}
+                            libelle={LIBELLES_SOAP[champ].titre}
+                            valeur={analyse.noteStructuree[champ]}
+                          />
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col gap-3">
+                      <p className="font-ui text-label font-medium uppercase tracking-label text-ink-500">
+                        {fr.consultation.evolutionTitre}
+                      </p>
+                      {analyse.evolution.length === 0 ? (
+                        <EtatVide message={fr.consultation.evolutionAucune} />
+                      ) : (
+                        <ul className="flex list-disc flex-col gap-2 pl-5 font-ui text-body text-ink-900">
+                          {/* `key={ligne}` : ces entrées sont dédoublonnées côté
+                              passerelle (index.ts, §3.4 n°6) — le texte lui-même
+                              est une clé stable, pas un index de position. */}
+                          {analyse.evolution.map((ligne) => (
+                            <li key={ligne}>{ligne}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+
+                    <div className="flex flex-col gap-3">
+                      <p className="font-ui text-label font-medium uppercase tracking-label text-ink-500">
+                        {fr.consultation.pointsNonExploresTitre}
+                      </p>
+                      {analyse.pointsNonExplores.length === 0 ? (
+                        <EtatVide message={fr.consultation.pointsNonExploresAucun} />
+                      ) : (
+                        <ul className="flex list-disc flex-col gap-2 pl-5 font-ui text-body text-ink-900">
+                          {analyse.pointsNonExplores.map((ligne) => (
+                            <li key={ligne}>{ligne}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  </div>
+                )}
               </div>
             </SectionPliable>
           </>

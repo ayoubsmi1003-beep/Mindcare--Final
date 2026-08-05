@@ -25,7 +25,9 @@
 import { createClient } from "@supabase/supabase-js";
 
 import { getClientEnv } from "@/lib/env";
+import { fr } from "@/i18n/fr";
 
+import type { AppErrorCode } from "../errors";
 import { toAppError } from "../errors";
 import { err, ok, type Result } from "../result";
 import type { DbPort, RpcArgs, SelectSpec, SessionInfo, SignInCredentials } from "./port";
@@ -166,4 +168,64 @@ export const supabaseDbPort: DbPort = {
       return err(toAppError(cause));
     }
   },
+
+  async invokeFunction<T>(name: string, body: unknown): Promise<Result<T>> {
+    try {
+      // `functions.invoke` rend `any` — même traitement qu'en `rpc()` : capturé
+      // en `unknown`, décomposé par vérification, sans assertion (I9).
+      // `body` traverse tel quel : c'est un objet JSON-sérialisable construit
+      // par l'appelant (voir `src/services/jarvis.ts`), jamais un flux binaire.
+      const response: unknown = await getClient().functions.invoke(name, {
+        body: body as Record<string, unknown>,
+      });
+      if (typeof response !== "object" || response === null) {
+        return err(toAppError(response));
+      }
+
+      const transportError = "error" in response ? response.error : null;
+      if (transportError !== null && transportError !== undefined) {
+        // Panne de transport (réseau, fonction introuvable) — jamais le
+        // contrat applicatif `{ ok, data | error }` de la fonction elle-même,
+        // qui répond toujours en HTTP 200 (voir jarvis-analyze-session/index.ts).
+        return err(toAppError(transportError));
+      }
+
+      const envelope = ("data" in response ? response.data : null) as
+        | { readonly ok: unknown; readonly data?: unknown; readonly error?: { readonly code?: unknown } }
+        | null;
+      if (envelope === null || typeof envelope !== "object") {
+        return err(toAppError(undefined));
+      }
+
+      if (envelope.ok === true) {
+        return ok(envelope.data as T);
+      }
+
+      const edgeCode = typeof envelope.error?.code === "string" ? envelope.error.code : undefined;
+      const code = classifyEdgeErrorCode(edgeCode);
+      const message = fr.erreurs[code];
+      return err(edgeCode === undefined ? { code, message } : { code, message, technical: edgeCode });
+    } catch (cause) {
+      return err(toAppError(cause));
+    }
+  },
 };
+
+/**
+ * Traduit le `code` métier renvoyé par une Edge Function (voir
+ * `jarvis-analyze-session/index.ts`) vers `AppErrorCode`. Bornée à ce que S6
+ * peut produire aujourd'hui ; un code non reconnu tombe sur `indisponible` —
+ * jamais `inattendu`, parce qu'une Edge Function qui répond en échec est
+ * TOUJOURS un cas de dégradation gracieuse (I20), pas une panne à investiguer
+ * à l'écran.
+ */
+function classifyEdgeErrorCode(code: string | undefined): AppErrorCode {
+  switch (code) {
+    case "non-authentifie":
+      return "non-authentifie";
+    case "regle-metier":
+      return "regle-metier";
+    default:
+      return "indisponible";
+  }
+}

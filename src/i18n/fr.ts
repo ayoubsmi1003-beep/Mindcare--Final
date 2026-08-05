@@ -398,8 +398,21 @@ export const fr = {
     filSeanceIndisponible:
       "La transcription automatique n'est pas disponible ce mois-ci. Les notes de séance ci-contre se saisissent à la main.",
     assistance: "Aide à la décision",
-    assistanceIndisponible:
-      "L'analyse de séance n'est pas encore construite. Aucune suggestion n'est produite.",
+    /* S6 — `analyze_session`, seul outil Jarvis de cette passe. `write: false`
+       dans les deux specs (03-JARVIS-TOOLS.md §3, JARVIS-DEMO-SPEC.md §2) :
+       un simple bouton, sans carte de confirmation. Le résultat est un
+       BROUILLON en lecture seule — rien ne l'insère dans la note SOAP, qui
+       reste le geste de la praticienne (I6). */
+    analyserLaSeance: "Analyser la séance",
+    analyseEnCours: "Analyse en cours…",
+    analyseAucuneNote: "Aucune note de séance à analyser pour l'instant.",
+    analyseIndisponible:
+      "Assistant indisponible. Le reste de l'écran reste pleinement utilisable — notes, note clinique et signature ne dépendent pas de Jarvis.",
+    noteStructureeTitre: "Note structurée",
+    evolutionTitre: "Évolution depuis la dernière fois",
+    evolutionAucune: "Aucune consultation antérieure à comparer.",
+    pointsNonExploresTitre: "Points non explorés",
+    pointsNonExploresAucun: "Aucun point signalé.",
 
     enregistrement: "Enregistrement…",
     enregistre: "Enregistré",

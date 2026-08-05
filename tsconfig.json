@@ -31,5 +31,15 @@
     "**/*.cts",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules",
+    // S6 — code Deno (supabase/functions/), incompatible avec ce projet TS :
+    // `Deno` global et spécificateurs `npm:...` n'existent pas sous
+    // `moduleResolution: "bundler"`. Décision actée avec l'utilisateur (plan
+    // S6 approuvé §2, STATE.md) : ni `pnpm typecheck` ni `pnpm build` ne
+    // couvrent ce code, au même titre que les portes 026 sans Docker
+    // joignable — un blocage déjà connu, pas un nouveau. La relecture
+    // manuelle en tient lieu jusqu'à ce que `deno check` soit disponible.
+    "supabase/functions"
+  ]
 }

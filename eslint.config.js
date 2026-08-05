@@ -246,9 +246,26 @@ const typeAssertionSyntax = [
 
 const config = [
   {
-    // supabase/functions/** N'EST PAS exclu : c'est le code qui touche
-    // SERVICE_ROLE et les API externes, il doit être le plus vérifié, pas le moins.
-    ignores: [".next/**", "node_modules/**"],
+    // S6 — REVIREMENT ASSUMÉ SUR `supabase/functions/**`, écrit ici pour ne
+    // pas rejouer le débat en relecture. L'intention d'origine (ne PAS
+    // exclure ce code, « le plus vérifié, pas le moins ») tenait tant que le
+    // dossier était vide. Il porte maintenant du code DENO réel — `Deno`
+    // global, spécificateurs `npm:...` — et `parserOptions.project` plus bas
+    // pointe le tsconfig NEXT.JS, dont `moduleResolution: "bundler"` ne sait
+    // résoudre ni l'un ni l'autre. Deux choix, un seul honnête :
+    //   (a) déclarer des types ambiants pour `Deno` et pour chaque paquet
+    //       `npm:` utilisé (zod, postgres, supabase-js), en les inventant à
+    //       la main ;
+    //   (b) exclure, et relire ce code à la main comme les portes 026 sans
+    //       Docker joignable.
+    // (a) fabrique un typage FAUX qui rendrait un `pnpm typecheck` vert sans
+    // rien prouver — un garde-fou qui ment est pire qu'un garde-fou absent
+    // (c'est le principe qui a fermé ROUGE 6 et ROUGE 9 ailleurs dans ce
+    // fichier). (b) est le choix actif, acté avec l'utilisateur dans le plan
+    // S6 approuvé §2 : ni `pnpm typecheck` ni `pnpm build` ne couvrent le
+    // code Deno, la relecture manuelle en tient lieu jusqu'à ce que `deno
+    // check`/`deno lint` soient outillés séparément.
+    ignores: [".next/**", "node_modules/**", "supabase/functions/**"],
   },
   {
     linterOptions: {
@@ -483,16 +500,12 @@ const config = [
       "local/no-supabase-resolution": "off",
     },
   },
-  {
-    // Le code serveur qui touche SERVICE_ROLE et les API externes n'a pas
-    // besoin d'accéder à Supabase depuis src/services (il n'est pas dans src/),
-    // mais node:module doit y rester autorisé (Deno edge functions).
-    files: ["supabase/functions/**/*.ts"],
-    rules: {
-      "no-restricted-imports": "off",
-      "local/no-supabase-resolution": "off",
-    },
-  },
+  // L'override qui vivait ici pour `supabase/functions/**/*.ts` (node:module
+  // et l'import Supabase autorisés) est devenu mort : le dossier entier est
+  // maintenant dans les `ignores` globaux ci-dessus (S6), pour la raison qui
+  // y est écrite. Un override sur un chemin qu'ESLint ne visite plus ne fait
+  // que confirmer une fausse impression de couverture — supprimé plutôt que
+  // laissé en place.
   // ROUGE 6 (5ᵉ passe de revue) — I10 COULEUR sur les fichiers de configuration
   // RACINE. Trou prouvé par exécution : `designTokenSyntax` était attaché à
   // `src/**/*.ts(x)`, et le contrôle 4 de preflight.sh ne voit ni
