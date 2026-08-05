@@ -90,6 +90,28 @@ compte payant, n'a aucune raison de reproduire cette instabilité — mais
 personne ne l'a vérifié avec Sonnet 4.5 spécifiquement. À refaire avec une
 clé de production avant d'annoncer S6 clos sur ce point précis.
 
+## RLS à travers la passerelle elle-même — les 3 rôles, complété 2026-08-05
+Le point (b) de la liste ci-dessous est désormais fait, pas seulement en SQL
+direct (voir plus haut) mais **à travers `jarvis-analyze-session` en HTTP
+réel**, JWT signé par rôle, sur la même consultation de test (patient b1,
+praticienne a1) :
+- **owner a1** → `ok:true`, les trois blocs (déjà documenté ci-dessus).
+- **practitioner a2** (consœur, RLS doit bloquer) → `{"ok":false,"error":
+  {"code":"regle-metier","message":"Aucune note à analyser pour cette
+  séance."}}`.
+- **assistant a3** (aucun accès clinique) → **message identique, mot pour
+  mot**, à celui de a2.
+- **`consultationId` inexistant**, appelé par owner a1 → **même message
+  encore**, indiscernable des deux cas précédents.
+
+Les quatre cas rendent le MÊME message générique : aucune fuite ne distingue
+« ce dossier existe mais n'est pas le vôtre » de « ce dossier n'existe pas »
+— exactement le principe déjà tenu par `app.get_consultation` (026 §6) et
+répété en tête de `src/app/consultation/[id]/page.tsx`. RLS est donc prouvée
+tenue à CHAQUE couche de ce chemin : SQL direct (`get_previous_note`) et HTTP
+réel à travers la passerelle (`get_consultation` + le comportement de
+`analyze_session` qui en découle).
+
 ## Dernier point non résolu — journalisation d'audit non vérifiée en local
 `audit.boundary_crossings` reste à 0 ligne après l'appel réussi. Cause
 identifiée : le conteneur `edge-runtime` ne résout pas le nom Docker
@@ -104,17 +126,18 @@ auto-hébergé), où ce nommage est géré par la plateforme.
 
 ## Définition du fait (CLAUDE.md §4) — bilan honnête, mis à jour
 1. **Données réelles** ✓ — confirmé, y compris par l'appel réel de bout en bout.
-2. **RLS vérifiée pour 3 rôles** ✓ **pour `get_previous_note`, en base réelle** (voir preuve ci-dessus). Reste à vérifier à travers la passerelle Edge Function elle-même pour les rôles practitioner/assistant (seul owner a1 a été testé à ce niveau, l'appel a réussi ; a2/a3 restent à essayer sur `jarvis-analyze-session`).
+2. **RLS vérifiée pour 3 rôles** ✓ **complet** — en SQL direct sur `get_previous_note` ET à travers `jarvis-analyze-session` en HTTP réel (owner : accès ; practitioner et assistant : même refus générique que sur un `consultationId` inexistant, aucune fuite). Voir preuve ci-dessus.
 3. **Dégradation propre** ✓ — confirmé en pratique : 402/timeout OpenRouter réels ont produit `{"ok":false,"error":{"code":"indisponible",...}}`, jamais un crash, jamais une fuite.
 4. **États vide + erreur écrits** ✓.
 5. **Jetons de design respectés** ✓.
 6. **Checkpoint reproductible vert** ~ — `pnpm typecheck/lint/build` + `preflight.sh` verts et reproductibles après nettoyage du code de diagnostic. `checkpoint-s5.sh`/`checkpoint-adr019.sh`/`checkpoint-jarvis.sh` restent bloqués — pas par « Docker absent » (faux désormais), mais par `postgres:15` (Docker Hub) injoignable sur ce réseau. La vérification DB de cette session est donc passée par `docker exec` direct, hors de ces scripts.
 
 **Conclusion : S6 est fonctionnellement prouvé de bout en bout sur le chemin
-lecture + `analyze_session`, sur un compte de test.** Ce qui manque avant de
-déclarer S6 clos, précisément : (a) le même appel avec `DEFAULT_MODEL` réel
-sur une clé non gratuite ; (b) RLS pour a2/a3 À TRAVERS la passerelle, pas
-seulement en SQL direct ; (c) confirmer `audit.boundary_crossings` s'écrit
+lecture + `analyze_session`, RLS comprise à chaque couche, sur un compte de
+test.** Ce qui manque avant de déclarer S6 clos, précisément : (a) le même
+appel avec `DEFAULT_MODEL` réel sur une clé non gratuite ; (b) ~~RLS pour
+a2/a3 à travers la passerelle~~ **FAIT le 2026-08-05** (voir « RLS à travers
+la passerelle » ci-dessus) ; (c) confirmer `audit.boundary_crossings` s'écrit
 sur un environnement où `SUPABASE_DB_URL` résout réellement ; (d) rejouer
 les checkpoints S5/ADR-019/Jarvis une fois `postgres:15` accessible (miroir
 ECR, ou adapter `qfull()` à un `docker exec` — pas fait cette session, pas de
@@ -181,15 +204,16 @@ Réexécutées 2026-08-05 post-vérification S6 : `preflight` ✓ · `typecheck`
 ## Dette assumée, datée
 - S5 §7 on-screen matrix (13 lignes, f5, focus, 390px, offline, assistant role) → **avant 2026-08-10** (toujours bloqué : pas de navigateur dans cet environnement)
 - Un DROP de FUNCTION emporte son propriétaire → **ne pas recopier sur app.get_consultation** (read-only, SECURITY INVOKER, safe si DROP)
-- **S6 — cinq points listés dans « Définition du fait » ci-dessus** (a) à (e) → **avant 2026-08-10**, avant de déclarer S6 clos.
+- **S6 — quatre points restants listés dans « Définition du fait » ci-dessus** (a), (c), (d), (e) — (b) fait le 2026-08-05 → **avant 2026-08-10**, avant de déclarer S6 clos.
 - `checkpoint-s5.sh`/`checkpoint-adr019.sh`/`checkpoint-jarvis.sh` restent injouables en l'état (`postgres:15` sur Docker Hub injoignable) → soit un miroir d'image accessible depuis ce réseau, soit adapter `qfull()`/l'équivalent pour utiliser `docker exec` sur un conteneur déjà démarré — **décision à prendre avec l'utilisateur**, pas une modification à faire à la discrétion de l'agent (ce sont des scripts de vérification, leur fiabilité est ce qu'on leur demande).
 
 ## En litige — voir WORKING-CONTEXT.md §7
 **Q-D CLOSE** (2026-08-03, ADR-019 opérationnelle). **Q-A/Q-B/Q-C** référencées §8 de WORKING-CONTEXT — toutes en ADRs, aucune nouvelle question ouverte.
 **Nota:** WORKING-CONTEXT.md §0 mentionne docs 05-BUILD-PLAN et 06 (inexistants sur disque) — l'autorité est en retard.
 
-## Prochaine tâche — clore S6 : les cinq points de vérification restants
-Voir « Définition du fait » ci-dessus, points (a) à (e). Aucun n'est un
+## Prochaine tâche — clore S6 : les quatre points de vérification restants
+Voir « Définition du fait » ci-dessus, points (a), (c), (d), (e) — (b) est
+fait. Aucun n'est un
 chantier de code — tous sont de la vérification sur un environnement plus
 complet (clé OpenRouter de production, navigateur, image Docker accessible).
 Plan technique, toujours autorité :
