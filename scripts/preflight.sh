@@ -75,7 +75,7 @@ out=$(find . -name "*.webm" -o -name "*.wav" -o -name "*.ogg" 2>/dev/null | grep
 # Raffiner ce motif n'est donc PAS le correctif de secours par défaut : élargir
 # la classe de contexte ferait revenir le faux positif `#1234`, que la 4ᵉ passe
 # a déjà payé une fois.
-src_files=$(find . \( -path ./node_modules -o -path ./.git -o -path ./.next \) -prune -o \
+src_files=$(find . \( -path ./node_modules -o -path ./.git -o -path ./.next -o -path ./.kilo \) -prune -o \
               -type f \( -iname "*.ts" -o -iname "*.tsx" -o -iname "*.css" -o -iname "*.json" \
                          -o -iname "*.js" -o -iname "*.jsx" -o -iname "*.mjs" -o -iname "*.cjs" \
                          -o -iname "*.mts" -o -iname "*.cts" \) -print 2>/dev/null \
@@ -127,7 +127,7 @@ mask_env_values() {
   }'
 }
 
-env_templates=$(find . \( -path ./node_modules -o -path ./.git -o -path ./.next \) -prune -o \
+env_templates=$(find . \( -path ./node_modules -o -path ./.git -o -path ./.next -o -path ./.kilo \) -prune -o \
                 -type f \( -name ".env.example" -o -name ".env.sample" -o -name ".env.template" \) -print 2>/dev/null)
 
 # Itération par `read -r` et NON par `for f in $env_templates` : la forme non
@@ -174,7 +174,7 @@ out=$(find src -type d -name ".*" 2>/dev/null)
 #      dans la liste. → liste élargie à tout ce que PostCSS/Next sait charger.
 #   c) `-name` est sensible à la casse alors que le système de fichiers de
 #      Windows ne l'est pas. → `-iname`.
-out=$(find . \( -path ./node_modules -o -path ./.git -o -path ./.next \) -prune -o \
+out=$(find . \( -path ./node_modules -o -path ./.git -o -path ./.next -o -path ./.kilo \) -prune -o \
         -type f \( -iname "*.css" -o -iname "*.scss" -o -iname "*.sass" -o -iname "*.less" \
                    -o -iname "*.pcss" -o -iname "*.postcss" -o -iname "*.styl" -o -iname "*.stylus" \) -print 2>/dev/null \
       | grep -viE "^\./src/styles/tokens\.css$")
@@ -224,7 +224,7 @@ out=$(find src -type f -name "*.*" 2>/dev/null \
 # en une seule ligne, la cécité même qui avait produit la corruption de
 # `page.tsx`. → énumération par `find`, suivis ET non suivis. `git ls-files`
 # reste ajouté pour attraper un fichier suivi qui aurait disparu du disque.
-out=$( { find . \( -path ./node_modules -o -path ./.git -o -path ./.next \) -prune -o \
+out=$( { find . \( -path ./node_modules -o -path ./.git -o -path ./.next -o -path ./.kilo \) -prune -o \
            -type f \( -iname "*.ts" -o -iname "*.tsx" -o -iname "*.js" -o -iname "*.mjs" \
                       -o -iname "*.cjs" -o -iname "*.css" -o -iname "*.json" -o -iname "*.md" \
                       -o -iname "*.sh" -o -iname "*.yaml" -o -iname "*.yml" \) -print 2>/dev/null \
