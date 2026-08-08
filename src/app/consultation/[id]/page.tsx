@@ -51,6 +51,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import { AppShell } from "@/components/AppShell";
 import { heure, jourComplet, nomPatient } from "@/components/AgendaPieces";
+import { BlocTarif } from "@/components/BlocTarif";
 import {
   Badge,
   BandeauHorsLigne,
@@ -952,6 +953,13 @@ export default function PageConsultation(): React.JSX.Element {
         )}
 
         {contenu}
+
+        {/* ADR-010 : le tarif se saisit EN FIN DE SÉANCE, donc juste au-dessus
+            du bouton qui la termine. Le bloc reste visible après la clôture —
+            une séance close dont le tarif n'a pas été fixé est précisément le
+            cas où l'oubli coûte. Aucune décision de rôle ici : la porte 029
+            refuse la séance d'une consœur, et c'est elle qui a raison. */}
+        {seance == null ? null : <BlocTarif consultationId={seance.id} />}
 
         {seance == null ? null : (
           <BarreActions>
