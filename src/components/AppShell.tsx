@@ -67,7 +67,7 @@ interface GroupeNav {
  * S4 y ajoute `agenda`. La liste est la SEULE chose à toucher ici quand un
  * écran est livré : la navigation elle-même ne change pas.
  */
-const ECRANS_CONSTRUITS: readonly EcranKey[] = ["patients", "agenda"];
+const ECRANS_CONSTRUITS: readonly EcranKey[] = ["patients", "agenda", "finances"];
 
 /**
  * Composition COMPLÈTE — praticienne (`owner`/`practitioner`). Les deux rôles

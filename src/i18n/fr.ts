@@ -422,6 +422,41 @@ export const fr = {
   },
 
   /**
+   * S7a — Finance. Le tarif en fin de séance et la recette du jour.
+   *
+   * `perimetreCabinet` / `perimetrePraticienne` recopient ce que la BASE a
+   * réellement filtré (029 §4 rend la colonne `perimetre`). Ce ne sont pas deux
+   * étiquettes au choix de l'écran : afficher « cabinet » à qui ne voit que sa
+   * part serait un chiffre faux avec un mot juste.
+   */
+  finances: {
+    titre: "Finances",
+    recetteDuJour: "Recette du jour",
+    perimetreCabinet: "Toutes les séances du cabinet",
+    perimetrePraticienne: "Vos séances uniquement",
+    seances: "Séances",
+    enAttente: "Encaissements en attente",
+    paiementsDuJour: "Paiements du jour",
+    numeroRecu: "Reçu",
+    encaisser: "Encaisser",
+    encaisse: "Encaissé",
+    encaissementEnregistre: "Encaissement enregistré.",
+    /** Aucune donnée fictive dans un écran livré (règle 8) : un vide honnête. */
+    aucunPaiement:
+      "Aucun encaissement aujourd'hui. Les tarifs fixés en fin de séance apparaissent ici.",
+
+    /* Le bloc de saisie en fin de séance. */
+    tarifTitre: "Tarif de la séance",
+    tarifIndication: "Dinars entiers. Le montant est enregistré, pas imprimé.",
+    tarifMontant: "Montant",
+    tarifDejaEncaisse: "Encaissé — le montant ne se modifie plus.",
+    tarifDejaEncaisseIndication:
+      "Une somme encaissée est une pièce comptable. La corriger se fait hors de cet écran.",
+    tarifSeanceIntrouvable:
+      "Cette séance n'a pas pu être retrouvée. Le tarif n'a pas été enregistré.",
+  },
+
+  /**
    * Les cinq états que tout composant doit gérer (I11).
    * `texteAbsent` couvre le champ vide ou non renseigné — jamais un tiret nu,
    * qui se confond avec une valeur.
