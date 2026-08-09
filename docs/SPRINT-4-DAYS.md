@@ -168,14 +168,29 @@ Dont **T6 : couper la clé OpenRouter → l'application reste entièrement utili
 
 ### S7 — FINANCE + DOCUMENTS · `feature-builder` · sonnet
 > Deux modules en une session. **C'est le point de rupture du plan.** Finance d'abord.
+
+> 🔵 **DÉCOUPÉ EN S7a PUIS S7b — 2026-08-05, décision de l'utilisateur.**
+> Le point de rupture annoncé ci-dessus s'est confirmé, mais pas par manque de temps :
+> **les prérequis du §5 de ce document n'ont pas été fournis**, et ce sont exactement
+> ceux que le §5 marque « bloque S7 » (scan de l'en-tête, arbitrage « Pychiaterie »,
+> logo SVG, les 7 fontes `.woff2`). S'y ajoute un constat fait en relisant le dépôt :
+> **les 4 `document_templates` de la liste S1 n'ont jamais été semés** — `015` ne pose
+> que le compteur `document`.
+>
+> - **S7a — Finance** → `docs/S7A-FINANCE.md`. Plan gelé, rien ne le bloque.
+> - **S7b — Documents** → `docs/S7B-DOCUMENTS.md`. Plan gelé, **bloqué sur ces actifs**.
+>
+> La case DOCUMENTS ci-dessous reste écrite telle quelle : elle n'est pas annulée, elle
+> est déplacée. **Le checkpoint papier reste le seul qui clôt Documents.**
+
 ```
-FINANCE (priorité)
+FINANCE (priorité)  →  S7a, docs/S7A-FINANCE.md
 [ ] set_consultation_price
 [ ] Journal des paiements, mode + montant DZD
 [ ] Recette du jour — lisible en une demi-seconde
 [ ] Cloison RLS : le chiffre d'affaires reste au owner
 
-DOCUMENTS (sacrifiable à 2 modèles)
+DOCUMENTS (sacrifiable à 2 modèles)  →  S7b, docs/S7B-DOCUMENTS.md — BLOQUÉ sur §5
 [ ] Aperçu A4 en Newsreader, en-tête bilingue fidèle au scan
 [ ] Numérotation via next_number — jamais une SEQUENCE
 [ ] rendered_html figé à l'émission
@@ -209,7 +224,10 @@ Tout le reste fonctionne, et vos données ne quittent pas ce PC. »*
 - [ ] **Les 7 fontes `.woff2`** : Geist Sans 400/500/600 · Geist Mono 500 · Newsreader 400 · IBM Plex Sans Arabic 400/500/600
 - [ ] **Logo SVG**
 - [ ] **Liste des ~60 médicaments** (texte brut) → bloque le seed de S1
-- [ ] **Scan de l'en-tête** + arbitrage « Pychiaterie » → bloque S7
+- [ ] **Scan de l'en-tête** + arbitrage « Pychiaterie » → bloque S7 · **🔴 TOUJOURS PAS FOURNI au 2026-08-05 — bloque S7b (B1.1, B1.2)**
+- [ ] **Logo SVG** → **🔴 seul `lOGO.JPG.jpg` (raster) existe — bloque S7b (B1.3)**
+- [ ] **Les 7 fontes `.woff2`** → **🔴 aucune dans le dépôt — bloque S7b (B1.4)**
+- [ ] **Contenu des 4 modèles de documents** → **🔴 jamais semés (`015` ne pose que le compteur) — bloque S7b (B1.5)**
 - [ ] WSL2 + Docker Desktop téléchargés → bloque S0
 
 ---
