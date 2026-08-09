@@ -1,5 +1,5 @@
 # STATE — MindCare OS
-Dernière mise à jour : 2026-08-08 · **S7a CLOS** (checkpoint VERT 32 contrôles, 3 défauts réels trouvés et corrigés)
+Dernière mise à jour : 2026-08-09 · **S7b PHASE 1 livrée — jalon OUVERT** (mécanique seule, contrôle papier en attente)
 
 
 ## Fait & vert
@@ -7,6 +7,21 @@ Dernière mise à jour : 2026-08-08 · **S7a CLOS** (checkpoint VERT 32 contrôl
 - S5 écran séance et note clinique sur migration 026 (9 portes) — build, typecheck, lint tous VERT · checkpoint-s5 VERT 11 · commit 07cc371 "fix(consultation): entrée visible" (2026-08-04)
 - **S6 CLOS le 2026-08-05** — `analyze_session` fonctionnel de bout en bout, RLS vérifiée aux 3 rôles à chaque couche (SQL direct ET HTTP à travers la passerelle), `DEFAULT_MODEL = google/gemini-2.5-flash`. Trois défauts réels trouvés et corrigés en vérification locale Docker. Voir historique complet plus bas pour le détail.
 - **S7a CLOS le 2026-08-08** — migration 029 (4 portes finances + `next_number`) + finance.ts + écran recettes · checkpoint-s7 VERT 32 contrôles (001→029 rejeu complet, 22 contrôles métier, 3 portes CLAUDE.md, 4 statiques) · 3 défauts réels trouvés et corrigés · 5 commits · 45814cd
+- **S7b PHASE 1 livrée le 2026-08-09 — jalon NON CLOS.** Migration 030 (portes
+  `issue_document`/`get_document`/`list_patient_documents`/`mark_document_printed`,
+  moteur de rendu SQL + échappement, verrouillage de table par trigger) +
+  `documents.ts` + `checkpoint-s7b.sh` · **VERT 30 contrôles** (001→030 rejeu
+  complet, 19 contrôles du contrat gelé + 4 ajouts trouvés en revue, 3 portes
+  CLAUDE.md, 4 statiques). **8 défauts réels trouvés et corrigés** sur trois
+  passes de revue adversariale (voir « Défauts trouvés à l'implémentation »,
+  `docs/S7B-DOCUMENTS.md`) : lecture non auditée de `app.patients`, RPC public
+  exposant l'identité sans trace, table écrivable en direct malgré l'absence de
+  portes update/delete, asymétrie owner/assistant manquante, séance d'un autre
+  patient rattachable, valeurs de variables vides/nulles acceptées, fuseau
+  horaire du numéro de document (UTC serveur au lieu d'Alger),
+  `is_synthetic` absent des colonnes protégées par trigger. **Aucun modèle
+  semé, aucune fonte câblée, aucun écran livré** — B1.1→B1.5 restent absents du
+  disque. **Seul le contrôle papier (§B7) clôt S7b, et il reste inexécutable.**
 
 ## Décisions de session S7a (à verser au 00-DECISIONS.md)
 12. **2026-08-08 : `checkpoint-s7.sh` accède à la base par `docker exec` sur le
@@ -24,7 +39,11 @@ Dernière mise à jour : 2026-08-08 · **S7a CLOS** (checkpoint VERT 32 contrôl
     Additive, INVOKER, ne nomme personne, aucune permission nouvelle.
 
 ## En cours
-**S7b** reste bloqué sur les actifs B1.1→B1.5 (scan de l'en-tête, arbitrage « Psychiatrie », logo SVG, 7 fontes `.woff2`, contenu des 4 modèles de certificat) — inchangé.
+**S7b phase 2** reste bloquée sur les actifs B1.1→B1.5 (scan de l'en-tête, arbitrage
+« Psychiatrie », logo SVG, 7 fontes `.woff2`, contenu des 4 modèles de certificat) —
+inchangé. La phase 1 (mécanique) est livrée et vérifiée ; restent : câblage des
+fontes, seed des modèles, aperçu A4, écran d'émission, liste au dossier patient, et
+le contrôle papier qui seul clôt le jalon.
 
 ## Dette assumée, datée (inchangée depuis S6, reportée telle quelle)
 - S5 §7 on-screen matrix → avant 2026-08-10, toujours bloqué (pas de navigateur)
