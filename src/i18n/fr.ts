@@ -324,6 +324,13 @@ export const fr = {
     titre: "Consultation",
     surTitreSeance: "SÉANCE EN COURS",
     surTitreClose: "SÉANCE CLOSE",
+    /**
+     * V1.3 — une séance close dont `endedAt` est `null` (clôture administrative
+     * d'une orpheline, migration 032, option C) n'a pas de durée connue. Ne
+     * jamais afficher un chiffre qui continuerait de courir sur une séance
+     * fermée : c'est exactement le symptôme `125:44:26` que V1.3 corrige.
+     */
+    dureeInconnue: "durée inconnue",
     introuvable:
       "Cette séance est introuvable. Rien n'a été modifié. Vérifiez le lien, ou revenez à l'agenda.",
 
@@ -557,6 +564,14 @@ export const fr = {
    */
   disclaimer:
     "Aide à la décision — le jugement clinique appartient au praticien.",
+
+  /**
+   * V1.5 — au-delà de 10 s sans réponse, un CHARGEMENT bascule en ERREUR
+   * (05-UX-CONTRACT.md §2 : « le spinner sans fin est interdit »). Le mot
+   * « délai » y figure toujours — c'est ce que le checkpoint relit.
+   */
+  delaiDepasse:
+    "Le délai de réponse a été dépassé. Aucune donnée n'a été modifiée. Réessayez.",
 } as const;
 
 export type Fr = typeof fr;

@@ -16,6 +16,7 @@
 
 import type { NoteSoap } from "./consultations";
 import { db } from "./db";
+import { logFieldsFor } from "./errors";
 import { log } from "./log";
 import { err, ok, type Result } from "./result";
 
@@ -52,7 +53,7 @@ export async function analyzeSession(consultationId: string): Promise<Result<Ana
   });
 
   if (!result.ok) {
-    log.error("jarvis.analyseSeance", { code: result.error.code });
+    log.error("jarvis.analyseSeance", logFieldsFor(result.error));
     return err(result.error);
   }
 

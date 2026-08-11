@@ -68,6 +68,16 @@ const JOURS_SEMAINE = 7;
 
 type Vue = "semaine" | "jour";
 
+/**
+ * V1.5 — au-delà de ce délai sans réponse, l'écran bascule en ERREUR avec le
+ * mot « délai » (05-UX-CONTRACT.md §2) : aucune attente n'est infinie, et un
+ * squelette qui respire pour toujours est un spinner sans fin déguisé.
+ *
+ * La requête sous-jacente n'est pas annulée — les services ne l'exposent pas —
+ * mais le drapeau `annule` de l'effet fait ignorer sa réponse tardive.
+ */
+const DELAI_CHARGEMENT_MS = 10_000;
+
 /** Minuit local, décalé de `n` jours. */
 function minuit(n: number): Date {
   const d = new Date();
@@ -87,7 +97,12 @@ function lundiDe(d: Date): Date {
 }
 
 export default function PageAgenda(): React.JSX.Element {
-  const { utilisateur, horsLigne: horsLigneSession, deconnecter } = useSessionEcran();
+  const {
+    utilisateur,
+    sessionTranchee,
+    horsLigne: horsLigneSession,
+    deconnecter,
+  } = useSessionEcran();
 
   const [vue, setVue] = useState<Vue>("semaine");
   const [ancre, setAncre] = useState<Date>(() => lundiDe(new Date()));
@@ -110,12 +125,26 @@ export default function PageAgenda(): React.JSX.Element {
   // journalise CHAQUE appel, et lancer la requête pour un visiteur qu'on est en
   // train de rediriger écrirait une ligne d'audit pour une consultation qui n'a
   // pas eu lieu.
+  //
+  // V1.5 — le garde est `sessionTranchee`, PAS `utilisateur` : c'est
+  // `getSession()` qui tranche la session ; le profil (I12, navigation seule)
+  // part maintenant en parallèle de cette lecture au lieu de la précéder.
   useEffect(() => {
-    if (utilisateur === undefined) return;
+    if (sessionTranchee !== true) return;
     let annule = false;
     setChargement(true);
 
+    const minuteur = setTimeout(() => {
+      if (annule) return;
+      // Bascule en ERREUR « délai » : le squelette ne respire pas sans fin.
+      setHorsLigne(false);
+      setMessageErreur(fr.delaiDepasse);
+      setEntrees(undefined);
+      setChargement(false);
+    }, DELAI_CHARGEMENT_MS);
+
     void listAgenda({ from: debutIso, to: finIso, statuts: STATUTS_AGENDA }).then((result) => {
+      clearTimeout(minuteur);
       if (annule) return;
       if (!result.ok) {
         setHorsLigne(result.error.code === "hors-ligne");
@@ -132,14 +161,15 @@ export default function PageAgenda(): React.JSX.Element {
 
     return () => {
       annule = true;
+      clearTimeout(minuteur);
     };
-  }, [utilisateur, debutIso, finIso]);
+  }, [sessionTranchee, debutIso, finIso]);
 
   // La file d'attente d'approbation, sur une fenêtre volontairement plus large
   // que la grille : une demande pour dans trois semaines doit se voir
   // aujourd'hui, sinon elle est approuvée la veille.
   useEffect(() => {
-    if (utilisateur === undefined) return;
+    if (sessionTranchee !== true) return;
     let annule = false;
     void listAgenda({
       from: minuit(0).toISOString(),
@@ -154,7 +184,7 @@ export default function PageAgenda(): React.JSX.Element {
     return () => {
       annule = true;
     };
-  }, [utilisateur]);
+  }, [sessionTranchee]);
 
   const decaler = useCallback((jours: number) => {
     setAncre((a) => {
@@ -164,10 +194,43 @@ export default function PageAgenda(): React.JSX.Element {
     });
   }, []);
 
-  if (utilisateur === undefined) {
+  // V1.5 — LA SESSION TRANCHÉE NÉGATIVEMENT A SA PROPRE SORTIE.
+  //
+  // Défaut trouvé et corrigé dans la session qui a introduit `sessionTranchee` :
+  // le garde de RENDU ci-dessous teste `utilisateur === undefined`, alors que le
+  // garde d'EFFET teste `sessionTranchee !== true`. Hors ligne, `getSession()`
+  // échoue → `sessionTranchee = false` ET `utilisateur = null` : le rendu passait
+  // le premier garde, l'effet ne partait jamais, et `chargement` restait à `true`.
+  // Le squelette respirait alors SANS FIN — l'attente infinie que V1.5 supprime
+  // (05-UX-CONTRACT.md §2). Motif repris de /finances et /consultation, qui
+  // portaient déjà leur branche et n'ont donc jamais eu le défaut.
+  //
+  // ⚠️ La condition est `sessionTranchee === false`, PAS `utilisateur === null` :
+  // les deux ne disent pas la même chose. Session lue mais PROFIL illisible
+  // (`sessionTranchee === true`, `utilisateur === null`) doit continuer à
+  // afficher l'agenda avec la navigation la plus étroite — c'est le « défaut
+  // sûr » documenté plus bas, et le bloquer ici cacherait un écran qui marche.
+  if (sessionTranchee === false) {
     return (
-      <main style={{ padding: "var(--s-8)", fontFamily: "var(--font-ui)", color: "var(--ink-500)" }}>
-        {fr.etats.chargement}
+      <main className="flex flex-col gap-4 p-8">
+        {horsLigneSession ? <BandeauHorsLigne /> : null}
+        <BlocErreur
+          message={horsLigneSession ? fr.erreurs["hors-ligne"] : fr.erreurs["non-authentifie"]}
+          action={<LienBouton href="/connexion">{fr.actions.seConnecter}</LienBouton>}
+        />
+      </main>
+    );
+  }
+
+  if (utilisateur === undefined) {
+    // V1.5 — squelette, pas un texte (05-UX-CONTRACT.md §2) : l'écran répond
+    // avec la FORME de ce qui arrive (l'en-tête, puis la grille), pas avec un
+    // mot d'attente qui sera remplacé par une mise en page entièrement
+    // différente — c'est ce décalage-là qu'on paie au moment du clic.
+    return (
+      <main className="flex flex-col gap-8 p-8">
+        <Squelette lignes={2} />
+        <Squelette lignes={8} />
       </main>
     );
   }

@@ -31,6 +31,7 @@
 import { fr } from "@/i18n/fr";
 
 import { db } from "./db";
+import { logFieldsFor } from "./errors";
 import { log } from "./log";
 import { err, ok, type Result } from "./result";
 
@@ -230,7 +231,7 @@ export async function listAgenda(
   });
 
   if (!result.ok) {
-    log.error("agenda.liste", { code: result.error.code });
+    log.error("agenda.liste", logFieldsFor(result.error));
     return err(result.error);
   }
 
@@ -245,7 +246,7 @@ export async function getAppointment(id: string): Promise<Result<AgendaEntry | n
     // Pas d'identifiant patient ici : règle 1 et I5. La trace nominative légale
     // est dans `audit.log`, écrite par la porte avant même que cette erreur ne
     // survienne.
-    log.error("agenda.detail", { code: result.error.code });
+    log.error("agenda.detail", logFieldsFor(result.error));
     return err(result.error);
   }
 
@@ -274,7 +275,7 @@ export async function createAppointment(
   });
 
   if (!result.ok) {
-    log.error("agenda.creation", { code: result.error.code });
+    log.error("agenda.creation", logFieldsFor(result.error));
     return err(result.error);
   }
 
@@ -321,7 +322,7 @@ export async function updateAppointment(
   });
 
   if (!result.ok) {
-    log.error("agenda.modification", { code: result.error.code });
+    log.error("agenda.modification", logFieldsFor(result.error));
     return err(result.error);
   }
 
@@ -343,7 +344,7 @@ export async function confirmAppointment(id: string): Promise<Result<boolean>> {
   const result = await db().rpc<string>("confirm_appointment", { p_id: id });
 
   if (!result.ok) {
-    log.error("agenda.approbation", { code: result.error.code });
+    log.error("agenda.approbation", logFieldsFor(result.error));
     return err(result.error);
   }
 
@@ -362,7 +363,7 @@ export async function cancelAppointment(
   });
 
   if (!result.ok) {
-    log.error("agenda.annulation", { code: result.error.code });
+    log.error("agenda.annulation", logFieldsFor(result.error));
     return err(result.error);
   }
 

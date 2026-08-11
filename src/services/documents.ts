@@ -26,6 +26,7 @@
  */
 
 import { db } from "./db";
+import { logFieldsFor } from "./errors";
 import { log } from "./log";
 import { err, ok, type Result } from "./result";
 
@@ -120,7 +121,7 @@ export async function issueDocument(
   if (!result.ok) {
     // Ni identifiant patient, ni variables : règle 1 et I5. Un nom ou une date
     // de naissance dans un journal, c'est une donnée patiente hors machine.
-    log.error("documents.emission", { code: result.error.code });
+    log.error("documents.emission", logFieldsFor(result.error));
     return err(result.error);
   }
 
@@ -140,7 +141,7 @@ export async function getDocument(documentId: string): Promise<Result<Document |
   const result = await db().rpc<DocumentRow>("get_document", { p_id: documentId });
 
   if (!result.ok) {
-    log.error("documents.lecture", { code: result.error.code });
+    log.error("documents.lecture", logFieldsFor(result.error));
     return err(result.error);
   }
 
@@ -165,7 +166,7 @@ export async function listPatientDocuments(
   });
 
   if (!result.ok) {
-    log.error("documents.dossier", { code: result.error.code });
+    log.error("documents.dossier", logFieldsFor(result.error));
     return err(result.error);
   }
 
@@ -184,7 +185,7 @@ export async function markDocumentPrinted(documentId: string): Promise<Result<nu
   const result = await db().rpc<number>("mark_document_printed", { p_id: documentId });
 
   if (!result.ok) {
-    log.error("documents.impression", { code: result.error.code });
+    log.error("documents.impression", logFieldsFor(result.error));
     return err(result.error);
   }
 

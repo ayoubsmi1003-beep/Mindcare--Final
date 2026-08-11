@@ -1,65 +1,82 @@
 # MODULE-MAP.md
-**Où vit chaque module. Une ligne par module. C'est tout ce qu'un agent doit lire.**
-v1 — 2026-08-02 · remplace `Features.md`
+**Où vit chaque module. Une ligne par module.**
+v2 — 2026-08-09 · réécrit autour des 6 écrans de la v1 · remplace v1 du 2026-08-02
 
 > Un agent lit **sa ligne**, pas le fichier entier.
-> Statut : 🟢 livré · 🟡 sprint 4 jours · ⚪ semaine 2 · ⬜ mois 2+
+> Statut : 🟢 livré · 🔵 les 6 sessions v1 · ⚪ semaine 2 · ⬜ mois 2+
 
 ---
 
-## 1. LA CARTE
+## 1. LES 6 ÉCRANS DE LA v1
 
-| # | Module | Statut | Route | Tables | Agent | Rôles |
-|---|---|---|---|---|---|---|
-| 00 | Jetons + i18n | 🟢 | — | — | — | — |
-| 00b | Supabase auto-hébergé | 🟡 S0 | — | — | — | — |
-| 01 | Auth & rôles | 🟡 S2 | `/connexion` | `profiles`, `cabinets` | feature-builder | tous |
-| 02 | Coquille & nav | 🟡 S2 | `/` | — | ui-builder | tous |
-| 03 | **Patients** | 🟡 S3 | `/patients` | `patients`, `patient_contacts`, `patient_merges` | feature-builder | owner, practitioner |
-| 04 | **Agenda** | 🟡 S4 | `/agenda` | `appointments` | feature-builder | practitioner (front assistante → sem. 2, D-08) |
-| 05 | **Consultation** | 🟡 S5 | `/consultation/[id]` | `consultations`, `clinical_notes` | feature-builder | practitioner seul |
-| 06 | **Jarvis texte** | 🟡 S6 | overlay global | `jarvis_actions` | jarvis-tooler | owner, practitioner |
-| 07 | **Documents** | 🟡 S7 (sacrifiable à 2 modèles) | `/documents` | `documents`, `document_templates`, `counters` | feature-builder | practitioner |
-| 08 | Tableau de bord | ⚪ | `/` | vues d'agrégat | feature-builder | owner |
-| 09 | Transcription | ⚪ | dans 05 | `transcript_segments` | jarvis-tooler | practitioner |
-| 10 | Analyse en direct | ⚪ | dans 05 | `live_insights` | jarvis-tooler | practitioner |
-| 11 | Accueil QR | ⚪ | app séparée | `pending_patients` | feature-builder | intake_writer |
-| 12 | **Finance** | 🟡 S7 | `/finance` | `payments` | feature-builder | owner (D-09) |
-| 13 | Traitements | ⬜ | `/traitements` | `prescriptions`, `medications` | — | practitioner |
-| 14 | Échelles | ⬜ | dans 03 | `scales`, `scale_administrations` | — | practitioner |
-| 15 | Aftercare | ⬜ | portail séparé | `checkins` | — | patient |
-| 16 | Journal d'audit | ⬜ | `/journal` | `audit.log` | — | owner |
+Ce sont les seuls écrans qui doivent être **complets** avant que la Dr. Larbi saisisse
+de vrais patients. Tout le reste attend.
 
-**Front assistante = semaine 2 (D-08).** Mais son rôle, ses policies RLS et la vue `appointments_admin`
-sont créés **en base dès S1**. La sécurité s'installe maintenant ou jamais — l'écran peut attendre.
+| # | Écran | Session | Route | Tables / portes | Agent |
+|---|---|---|---|---|---|
+| 1 | **Tableau de bord** | 🔵 V4 | `/` | `app.dashboard_today()` | feature-builder |
+| 2 | **Patients** | 🔵 V5 | `/patients` | `patients` · `search_patients` · `get_patient` | feature-builder |
+| 3 | **Agenda** | 🔵 V5 | `/agenda` | `appointments` · portes `022` | feature-builder |
+| 4 | **Jarvis** | 🔵 V2 | panneau global (⌘K) | `jarvis_actions` | jarvis-tooler |
+| 5 | **Dossiers & Notes** | 🔵 V1/V6 | `/consultation/[id]` · `/documents` | `consultations` · `clinical_notes` · `documents` · portes `030` | feature-builder |
+| 6 | **Finances** | 🔵 V6 | `/finance` | `payments` · portes `029` | feature-builder |
+
+**Transversal, sans écran propre :** design system (V3) · états d'écran (`05-UX-CONTRACT.md`) ·
+budget de performance (`06-PERF-BUDGET.md`).
 
 ---
 
-## 2. LES TROIS MURS — à vérifier dans chaque module
+## 2. LES ENTRÉES « BIENTÔT » — visibles, assumées
+
+Décision de l'utilisateur (Q12) : **elles restent affichées**, pour que la praticienne
+sache ce qui arrive. Elles ne sont pas grisées comme un défaut : elles portent une
+pastille calme « bientôt ».
+
+| Module | Quand | Pourquoi pas maintenant |
+|---|---|---|
+| Messages | ⚪ semaine 2 | Aftercare non ouvert ce mois-ci |
+| Traitements | ⬜ mois 2 | Modèle d'ordonnance manquant (ADR-011) |
+| Suivi | ⬜ mois 2 | Portail patient, ADR-015 |
+| Statistiques | ⚪ semaine 2 | Sans valeur avant d'avoir un mois de données réelles |
+| Agents | ⬜ mois 2 | Un seul agent existe : Jarvis |
+| Journal d'activité | ⚪ semaine 2 | `audit.log` est rempli depuis S1, il lui manque un écran |
+| Paramètres | ⚪ semaine 2 | Sauf la saisie du profil praticienne, requise en V6 |
+| Transcription · Analyse en direct · Accueil QR | ⚪ semaine 2 | D-04, D-10, ADR-006 |
+
+> ⚠️ Une entrée « bientôt » ne mène **jamais** à un écran cassé ni à une page blanche.
+> Elle mène à une phrase qui dit ce que ce module fera et quand. Sinon elle ment.
+
+---
+
+## 3. LES TROIS MURS — à vérifier dans chaque module
 
 **Mur 1 — l'assistante.**
-Ne voit jamais : notes cliniques · transcriptions · diagnostics · contenu d'ordonnance · **motif de consultation**.
-⚠️ Le motif est une **colonne**, pas une ligne. La RLS ne le protège pas.
-Le front assistante interroge **la vue `appointments_admin`**, jamais la table `appointments`.
-C'est le piège n°1 du projet. Il se vérifie au module 04 et se re-vérifie à chaque revue.
+Ne voit jamais : notes cliniques · transcriptions · diagnostics · contenu d'ordonnance ·
+**motif de consultation**.
+⚠️ Le motif a sa propre table `app.appointment_reasons`, **sans policy assistant**
+(ADR-017). La RLS filtre des lignes, pas des colonnes — c'est pour ça que la vue seule
+ne suffisait pas. C'est le piège n°1 du projet, et il est fermé en base.
+**D-13 : l'assistante n'encaisse pas au mois 1.** `011` ne lui donne que `SELECT`.
 
 **Mur 2 — entre praticiens.**
-Aucun patient partagé. Dr #2 ne voit ni les patients, ni les notes, ni le chiffre d'affaires d'autrui.
-Mis en place maintenant même s'il n'y a qu'une praticienne — se rattrape très mal plus tard.
+Aucun patient partagé. La Dr. #2 ne voit ni les patients, ni les notes, ni le chiffre
+d'affaires d'autrui (ADR-003, D-14). En place depuis S1, même s'il n'y a qu'une
+praticienne — ça se rattrape très mal plus tard.
 
 **Mur 3 — Jarvis.**
-Un agent n'a jamais plus de droits que l'humain qui l'a déclenché.
+Un agent n'a jamais plus de droits que l'humain qui l'a déclenché (L3).
 Aucune écriture sans `confirmed_at`. Aucun outil hors allowlist.
+**ADR-023 :** il répond sur la connaissance clinique, jamais sur un patient nommé.
+**ADR-024 :** la voix passe par un flag, jamais par le navigateur.
 
 ---
 
-## 3. LES POINTS D'ANCRAGE — pourquoi l'extension future est facile
+## 4. LES POINTS D'ANCRAGE — pourquoi l'extension future reste facile
 
 Toute clé étrangère future pointe vers l'une de ces trois tables :
 ```
 patients · consultations · appointments
 ```
-Ce sont les tables les plus stables du système. Elles ne bougent plus.
 
 | Module futur | Se rattache par | Impact schéma |
 |---|---|---|
@@ -69,20 +86,26 @@ Ce sont les tables les plus stables du système. Elles ne bougent plus.
 | Échelles | `scale_administrations.consultation_id` | idem |
 | Aftercare | `checkins.patient_id` | idem |
 | Consentement | `consents.patient_id` | idem |
-| Mémoire agents | `agent_memory` (`scope` + `owner_id`) | table isolée |
+| Ordonnance | `+ 'ordonnance'` dans l'enum `app.doc_type` | une valeur d'enum, un modèle |
 | 2ᵉ praticien | `appointments.practitioner_id` | **une colonne**, pas une refonte |
 | 2ᵉ cabinet | `clinic_id` déjà présent partout | policies RLS à ajouter |
-| Notes structurées | `note_sections.note_id` | `content` reste du texte libre |
+| Enveloppe Electron | second adaptateur de `DbPort` (ADR-020) | **aucun service touché** |
+| Voix locale | `VOICE_PROVIDER=local` (ADR-024) | **une variable d'environnement** |
 
-**Aucune table vide n'est créée aujourd'hui.** Une table vide créée maintenant serait redessinée
-dans six semaines. La stabilité des ancrages suffit.
+**Aucune table vide n'est créée aujourd'hui.** Une table vide créée maintenant serait
+redessinée dans six semaines. La stabilité des ancrages suffit.
 
 ---
 
-## 4. CE QU'ON N'AJOUTE JAMAIS
+## 5. CE QU'ON N'AJOUTE JAMAIS
 
 - Une colonne clinique à `patients` (antécédents, allergies, sommeil, consommations…)
-  → ce sont des **modules séparés**. Une table `patients` obèse devient impossible à sécuriser finement.
+  → ce sont des **modules séparés**. Une table `patients` obèse devient impossible à
+  sécuriser finement.
 - Une seconde table de configuration. `settings` suffit. Pas de `feature_flags`.
 - Une table qui duplique une information existante.
-- `patient_timeline` en table → c'est une **vue**. Extension future = un `UNION ALL` de plus, zéro migration.
+- `patient_timeline` en table → c'est une **vue**. Extension future = un `UNION ALL`
+  de plus, zéro migration.
+- Un accès direct à `app.patients` : la lecture passe par `search_patients` et
+  `get_patient`, qui journalisent (ADR-019). Le chemin non audité est **fermé**, pas
+  déconseillé.

@@ -13,6 +13,7 @@
  */
 
 import { db } from "./db";
+import { logFieldsFor } from "./errors";
 import { log } from "./log";
 import { ok, type Result } from "./result";
 
@@ -37,7 +38,7 @@ export async function getDeploymentEnvironment(): Promise<Result<DeploymentEnvir
   });
 
   if (!result.ok) {
-    log.warn("deployment.lecture-impossible", { code: result.error.code });
+    log.warn("deployment.lecture-impossible", logFieldsFor(result.error));
     return ok("cloud-dev");
   }
 

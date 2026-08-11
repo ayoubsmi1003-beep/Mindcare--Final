@@ -20,7 +20,7 @@
 
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { AppShell } from "@/components/AppShell";
 import { useSessionEcran } from "@/components/useSessionEcran";
@@ -48,6 +48,25 @@ import {
 } from "@/services/finance";
 
 /**
+ * Les états de l'écran (05-UX-CONTRACT.md §1) — EXCLUSIFS, jamais superposés.
+ *
+ * C'est cette machine à états qui manquait avant V1.4, pas la logique de
+ * chargement elle-même : l'écran gardait DEUX signaux séparés (`recette` et
+ * `paiements`), et un échec sur l'un pouvait laisser l'autre affiché — une
+ * erreur ET un vide en même temps, exactement le défaut que
+ * `05-UX-CONTRACT.md` §1 a été écrit pour interdire.
+ */
+type EtatFinances = "chargement" | "hors-ligne" | "erreur" | "contenu";
+
+/**
+ * Au-delà de ce délai sans réponse, on bascule en ERREUR avec le mot
+ * « délai » (05-UX-CONTRACT.md §2) — jamais un squelette qui attend
+ * indéfiniment. La requête sous-jacente n'est pas annulée (les services ne le
+ * permettent pas) ; `generation` ignore sa réponse si elle arrive après coup.
+ */
+const DELAI_CHARGEMENT_MS = 10_000;
+
+/**
  * La journée à afficher, au format `AAAA-MM-JJ`.
  *
  * C'est un ARGUMENT DE LECTURE, pas une source de temps : il choisit la journée
@@ -68,37 +87,60 @@ function jourLocal(maintenant: Date): string {
 }
 
 export default function FinancesPage(): React.JSX.Element {
-  const { utilisateur, horsLigne: horsLigneSession, deconnecter } = useSessionEcran();
+  const {
+    utilisateur,
+    sessionTranchee,
+    horsLigne: horsLigneSession,
+    deconnecter,
+  } = useSessionEcran();
 
-  const [recette, setRecette] = useState<RecetteDuJour | null | undefined>(undefined);
+  const [etat, setEtat] = useState<EtatFinances>("chargement");
+  const [recette, setRecette] = useState<RecetteDuJour | null>(null);
   const [paiements, setPaiements] = useState<readonly Paiement[]>([]);
-  const [horsLigne, setHorsLigne] = useState(false);
   const [messageErreur, setMessageErreur] = useState<string | undefined>(undefined);
   const [confirmation, setConfirmation] = useState<string | undefined>(undefined);
   const [envoi, setEnvoi] = useState<string | undefined>(undefined);
 
+  // Compteur de génération, même motif que `generationAnalyse` en
+  // consultation : un rechargement déclenché pendant qu'un précédent est en
+  // vol (retour d'onglet, double clic sur Réessayer) doit voir le PLUS
+  // RÉCENT gagner, jamais une réponse tardive écraser un état plus frais.
+  const generation = useRef(0);
+
   const charger = useCallback(async () => {
+    const gen = (generation.current += 1);
     const jour = jourLocal(new Date());
 
+    // Contenu déjà affiché : rechargement SILENCIEUX (après un encaissement),
+    // aucun retour au squelette. Sinon (premier chargement, ou nouvel essai
+    // depuis une erreur) : l'écran redevient CHARGEMENT, un état à la fois.
+    setEtat((precedent) => (precedent === "contenu" ? precedent : "chargement"));
+
+    const minuteur = setTimeout(() => {
+      if (generation.current !== gen) return;
+      setEtat("erreur");
+      setMessageErreur(fr.delaiDepasse);
+    }, DELAI_CHARGEMENT_MS);
+
     const [r, l] = await Promise.all([getDayRevenue(jour), listDayPayments(jour)]);
+    clearTimeout(minuteur);
+    if (generation.current !== gen) return; // un appel plus récent a pris le relais
 
     if (!r.ok) {
-      setHorsLigne(r.error.code === "hors-ligne");
+      setEtat(r.error.code === "hors-ligne" ? "hors-ligne" : "erreur");
       setMessageErreur(r.error.message);
-      setRecette(null);
       return;
     }
     if (!l.ok) {
-      setHorsLigne(l.error.code === "hors-ligne");
+      setEtat(l.error.code === "hors-ligne" ? "hors-ligne" : "erreur");
       setMessageErreur(l.error.message);
-      setRecette(r.data);
       return;
     }
 
-    setHorsLigne(false);
     setMessageErreur(undefined);
     setRecette(r.data);
     setPaiements(l.data);
+    setEtat("contenu");
   }, []);
 
   useEffect(() => {
@@ -106,9 +148,14 @@ export default function FinancesPage(): React.JSX.Element {
     // trace `liste` en base, et journaliser une lecture pour un écran qui va
     // rediriger vers la connexion serait une trace fausse. Même raisonnement
     // qu'en tête de l'écran de séance.
-    if (utilisateur === undefined) return;
+    //
+    // V1.5 — on attend `sessionTranchee`, PAS `utilisateur` : c'est
+    // `getSession()` qui tranche la session, et le profil (I12, navigation
+    // seule) part désormais en parallèle de cette lecture au lieu de la
+    // précéder. La trace `liste` reste conditionnée à une session existante.
+    if (sessionTranchee !== true) return;
     void charger();
-  }, [utilisateur, charger]);
+  }, [sessionTranchee, charger]);
 
   const encaisser = useCallback(
     async (paiement: Paiement) => {
@@ -120,7 +167,7 @@ export default function FinancesPage(): React.JSX.Element {
       setEnvoi(undefined);
 
       if (!result.ok) {
-        setHorsLigne(result.error.code === "hors-ligne");
+        setEtat(result.error.code === "hors-ligne" ? "hors-ligne" : "erreur");
         setMessageErreur(result.error.message);
         return;
       }
@@ -167,6 +214,11 @@ export default function FinancesPage(): React.JSX.Element {
       ? fr.finances.perimetreCabinet
       : fr.finances.perimetrePraticienne;
 
+  // hors-ligne SESSION (useSessionEcran) et hors-ligne DONNÉES (cet écran)
+  // sont deux signaux distincts qui affichent le MÊME bandeau — l'un ou
+  // l'autre suffit à le déclencher, sans dupliquer l'état.
+  const horsLigne = horsLigneSession || etat === "hors-ligne";
+
   return (
     <AppShell
       role={utilisateur.role}
@@ -174,92 +226,102 @@ export default function FinancesPage(): React.JSX.Element {
       onDeconnexion={deconnecter}
     >
       <div className="flex flex-col gap-8">
-        {horsLigne || horsLigneSession ? <BandeauHorsLigne /> : null}
+        {horsLigne ? <BandeauHorsLigne /> : null}
 
         <EnTetePage
           titre={fr.finances.titre}
-          {...(recette === null || recette === undefined ? {} : { sousTitre: perimetre })}
+          {...(etat === "contenu" && recette !== null ? { sousTitre: perimetre } : {})}
         />
 
         {confirmation === undefined ? null : (
           <PanneauInfo ton="positif">{confirmation}</PanneauInfo>
         )}
 
-        {messageErreur === undefined ? null : (
+        {/* 05-UX-CONTRACT.md §1 : un SEUL état à la fois. ERREUR remplace le
+            contenu — elle ne s'affiche jamais au-dessus d'un vide ou d'une
+            recette obsolète. CHARGEMENT et HORS-LIGNE sont chacun rendus une
+            fois, jamais empilés avec CONTENU. */}
+        {etat === "chargement" ? (
+          <Squelette lignes={3} />
+        ) : etat === "erreur" ? (
           <BlocErreur
-            message={messageErreur}
+            message={messageErreur ?? fr.erreurs.inattendu}
             action={<Bouton onClick={() => void charger()}>{fr.actions.reessayer}</Bouton>}
           />
-        )}
+        ) : etat === "hors-ligne" && recette === null ? (
+          // Hors ligne dès le premier chargement : rien n'a encore été lu, il
+          // n'y a donc rien de « déjà chargé » à garder affiché — le bandeau
+          // suffit (05-UX-CONTRACT.md §5).
+          null
+        ) : (
+          <>
+            {recette === null ? null : (
+              <Carte>
+                <div className="flex flex-col gap-2">
+                  <p className="font-ui text-eyebrow uppercase tracking-eyebrow text-ink-500">
+                    {fr.finances.recetteDuJour}
+                  </p>
+                  {/* Le chiffre que la praticienne doit lire en une
+                      demi-seconde, avec un patient qui parle (test n°2,
+                      CLAUDE.md). */}
+                  <p className="font-num text-display tabular-nums text-ink-900">
+                    {formaterDzd(recette.totalDzd)}
+                  </p>
+                  <p className="font-ui text-label text-ink-500">
+                    {recette.seances} {fr.finances.seances} · {fr.finances.enAttente}{" "}
+                    <span className="font-num tabular-nums">{recette.attenteNombre}</span>{" "}
+                    ({formaterDzd(recette.attenteDzd)})
+                  </p>
+                </div>
+              </Carte>
+            )}
 
-        {recette === undefined ? (
-          <Squelette lignes={3} />
-        ) : recette === null ? null : (
-          <Carte>
-            <div className="flex flex-col gap-2">
-              <p className="font-ui text-eyebrow uppercase tracking-eyebrow text-ink-500">
-                {fr.finances.recetteDuJour}
-              </p>
-              {/* Le chiffre que la praticienne doit lire en une demi-seconde,
-                  avec un patient qui parle (le test n°2 de CLAUDE.md). */}
-              <p className="font-num text-display tabular-nums text-ink-900">
-                {formaterDzd(recette.totalDzd)}
-              </p>
-              <p className="font-ui text-label text-ink-500">
-                {recette.seances} {fr.finances.seances} · {fr.finances.enAttente}{" "}
-                <span className="font-num tabular-nums">
-                  {recette.attenteNombre}
-                </span>{" "}
-                ({formaterDzd(recette.attenteDzd)})
-              </p>
-            </div>
-          </Carte>
+            <Section titre={fr.finances.paiementsDuJour}>
+              {paiements.length === 0 ? (
+                <EtatVide message={fr.finances.aucunPaiement} />
+              ) : (
+                <div className="flex flex-col gap-3">
+                  {paiements.map((p) => (
+                    <Carte key={p.id}>
+                      <div className="flex flex-wrap items-center justify-between gap-4">
+                        <div className="flex flex-col gap-1">
+                          <p className="font-ui text-body text-ink-900">
+                            {[p.patientPrenom, p.patientNom].filter(Boolean).join(" ") ||
+                              fr.etats.texteAbsent}
+                          </p>
+                          <p className="font-ui text-label text-ink-500">
+                            {fr.finances.numeroRecu} {p.receiptNumber}
+                            {p.practitionerName === null ? "" : ` · ${p.practitionerName}`}
+                          </p>
+                        </div>
+                        <div className="flex items-center gap-4">
+                          <span className="font-num text-num tabular-nums text-ink-900">
+                            {formaterDzd(p.montantDzd)}
+                          </span>
+                          {p.collectedAt === null ? (
+                            <BarreActions>
+                              <Bouton
+                                rang="principal"
+                                onClick={() => void encaisser(p)}
+                                disabled={envoi !== undefined}
+                              >
+                                {fr.finances.encaisser}
+                              </Bouton>
+                            </BarreActions>
+                          ) : (
+                            <span className="font-ui text-label text-positive">
+                              {fr.finances.encaisse}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    </Carte>
+                  ))}
+                </div>
+              )}
+            </Section>
+          </>
         )}
-
-        <Section titre={fr.finances.paiementsDuJour}>
-          {paiements.length === 0 ? (
-            <EtatVide message={fr.finances.aucunPaiement} />
-          ) : (
-            <div className="flex flex-col gap-3">
-              {paiements.map((p) => (
-                <Carte key={p.id}>
-                  <div className="flex flex-wrap items-center justify-between gap-4">
-                    <div className="flex flex-col gap-1">
-                      <p className="font-ui text-body text-ink-900">
-                        {[p.patientPrenom, p.patientNom].filter(Boolean).join(" ") ||
-                          fr.etats.texteAbsent}
-                      </p>
-                      <p className="font-ui text-label text-ink-500">
-                        {fr.finances.numeroRecu} {p.receiptNumber}
-                        {p.practitionerName === null ? "" : ` · ${p.practitionerName}`}
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <span className="font-num text-num tabular-nums text-ink-900">
-                        {formaterDzd(p.montantDzd)}
-                      </span>
-                      {p.collectedAt === null ? (
-                        <BarreActions>
-                          <Bouton
-                            rang="principal"
-                            onClick={() => void encaisser(p)}
-                            disabled={envoi !== undefined}
-                          >
-                            {fr.finances.encaisser}
-                          </Bouton>
-                        </BarreActions>
-                      ) : (
-                        <span className="font-ui text-label text-positive">
-                          {fr.finances.encaisse}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                </Carte>
-              ))}
-            </div>
-          )}
-        </Section>
       </div>
     </AppShell>
   );

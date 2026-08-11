@@ -19,6 +19,7 @@
  */
 
 import { db } from "./db";
+import { logFieldsFor } from "./errors";
 import { log } from "./log";
 import { err, ok, type Page, type Result } from "./result";
 
@@ -91,7 +92,7 @@ export async function searchPatients(
   });
 
   if (!result.ok) {
-    log.error("patients.recherche", { code: result.error.code });
+    log.error("patients.recherche", logFieldsFor(result.error));
     return err(result.error);
   }
 
@@ -112,7 +113,7 @@ export async function getPatient(id: string): Promise<Result<Patient | null>> {
     // Pas de `patientId` ici : règle 1 et I5. L'événement et le code suffisent
     // à diagnostiquer ; la trace nominative légale est dans `audit.log`, écrite
     // par `app.get_patient` avant même que cette erreur ne survienne.
-    log.error("patients.fiche", { code: result.error.code });
+    log.error("patients.fiche", logFieldsFor(result.error));
     return err(result.error);
   }
 

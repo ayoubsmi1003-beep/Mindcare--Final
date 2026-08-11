@@ -14,6 +14,7 @@
 
 import { db } from "./db";
 import type { SessionInfo } from "./db/port";
+import { logFieldsFor } from "./errors";
 import { log } from "./log";
 import { err, ok, type Result } from "./result";
 
@@ -32,7 +33,7 @@ export interface SignInInput {
 export async function signIn(input: SignInInput): Promise<Result<SessionInfo>> {
   const result = await db().signIn({ email: input.email, password: input.password });
   if (!result.ok) {
-    log.error("auth.signIn", { code: result.error.code });
+    log.error("auth.signIn", logFieldsFor(result.error));
     return err(result.error);
   }
   log.info("auth.signIn", { code: "ok" });
@@ -43,7 +44,7 @@ export async function signIn(input: SignInInput): Promise<Result<SessionInfo>> {
 export async function signOut(): Promise<Result<void>> {
   const result = await db().signOut();
   if (!result.ok) {
-    log.error("auth.signOut", { code: result.error.code });
+    log.error("auth.signOut", logFieldsFor(result.error));
     return err(result.error);
   }
   log.info("auth.signOut", { code: "ok" });

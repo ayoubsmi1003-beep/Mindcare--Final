@@ -41,6 +41,26 @@ export interface SessionEcran {
    * n'a pas eu lieu.
    */
   readonly utilisateur: CurrentUser | null | undefined;
+  /**
+   * V1.5 — LE FEU VERT DE LECTURE, distinct du profil.
+   *
+   * `undefined` tant que `getSession()` n'a pas répondu ; `true` dès qu'une
+   * session existe ; `false` si la réponse est indéterminée (hors ligne,
+   * erreur de transport — on reste sur place, cf. l'encadré ci-dessus).
+   *
+   * POURQUOI IL EXISTE. Les écrans attendaient `utilisateur !== undefined`,
+   * c'est-à-dire la FIN de `getCurrentUser()`, avant leur première requête
+   * métier : trois allers-retours en séquence avant le premier contenu, sur
+   * tous les écrans, alors que la donnée métier ne dépend pas du profil.
+   * `getCurrentUser` ne sert qu'à composer la navigation (I12).
+   *
+   * ⚠️ CE QUI NE CHANGE PAS, ET C'EST LE POINT : la garantie d'I4 tient
+   * toujours. Aucune porte journalisante n'est appelée avant que la session
+   * soit tranchée — et c'est `getSession()` qui la tranche, pas le profil.
+   * Attendre le profil en plus n'ajoutait aucune garantie, seulement un
+   * aller-retour.
+   */
+  readonly sessionTranchee: boolean | undefined;
   readonly horsLigne: boolean;
   readonly deconnecter: () => void;
 }
@@ -48,6 +68,7 @@ export interface SessionEcran {
 export function useSessionEcran(): SessionEcran {
   const router = useRouter();
   const [utilisateur, setUtilisateur] = useState<CurrentUser | null | undefined>(undefined);
+  const [sessionTranchee, setSessionTranchee] = useState<boolean | undefined>(undefined);
   const [horsLigne, setHorsLigne] = useState(false);
 
   useEffect(() => {
@@ -57,13 +78,21 @@ export function useSessionEcran(): SessionEcran {
       if (!result.ok) {
         // Réponse indéterminée : on reste sur place et on le dit.
         setHorsLigne(result.error.code === "hors-ligne");
+        setSessionTranchee(false);
         setUtilisateur(null);
         return;
       }
       if (result.data === null) {
+        // Redirection en cours : la session est tranchée NÉGATIVEMENT. On ne
+        // pose surtout pas `true` — un écran qui interrogerait ici écrirait
+        // une trace d'audit pour une consultation qui n'aura pas lieu.
+        setSessionTranchee(false);
         router.replace("/connexion");
         return;
       }
+      // Le feu vert est donné ICI, avant le profil : la lecture métier de
+      // l'écran et `getCurrentUser` partent désormais en parallèle.
+      setSessionTranchee(true);
       void getCurrentUser().then((profil) => {
         if (annule) return;
         setUtilisateur(profil.ok ? profil.data : null);
@@ -83,5 +112,5 @@ export function useSessionEcran(): SessionEcran {
     });
   }
 
-  return { utilisateur, horsLigne, deconnecter };
+  return { utilisateur, sessionTranchee, horsLigne, deconnecter };
 }

@@ -20,6 +20,7 @@
  */
 
 import { db } from "./db";
+import { logFieldsFor } from "./errors";
 import { log } from "./log";
 import { err, ok, type Result } from "./result";
 
@@ -54,7 +55,7 @@ export async function listPractitioners(): Promise<Result<readonly Practitioner[
   });
 
   if (!result.ok) {
-    log.error("praticiennes.liste", { code: result.error.code });
+    log.error("praticiennes.liste", logFieldsFor(result.error));
     return err(result.error);
   }
 

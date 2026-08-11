@@ -327,5 +327,27 @@ out=$(sed -e 's|//.*$||' -e '/^[[:space:]]*\*/d' -e '/^[[:space:]]*\/\*/d' \
 out=$(grep -rnE "log\.(info|warn|error)\([^)]*patientId" --include="*.ts" --include="*.tsx" src/ 2>/dev/null)
 [ -n "$out" ] && { echo "🔴 I5 : patientId passé à un appel de journalisation :"; echo "$out"; fail=1; }
 
+# 10 — V1.1 : "inattendu" n'est un code terminal nulle part hors de sa
+# déclaration. Il vit légitimement dans `src/services/errors.ts` (le type
+# `AppErrorCode` et le dernier recours interne de `toAppError`) et dans
+# `src/i18n/fr.ts` (la traduction). Ailleurs, c'est un aveu, pas un
+# diagnostic — SPRINT-V1 §V1.1.
+#
+# Un grep littéral à zéro occurrence est impossible : le mot existe dans les
+# deux fichiers autorisés. Le contrôle exécutable est donc « zéro occurrence
+# EN CODE hors des deux fichiers autorisés » — dépouillé des commentaires,
+# même raison qu'au contrôle 9d : deux commentaires de prose (`finance.ts`,
+# `db/supabase.ts`) mentionnent le mot sans jamais l'utiliser comme valeur.
+out=$(find src -type f \( -iname "*.ts" -o -iname "*.tsx" \) 2>/dev/null \
+      | grep -v "^src/services/errors\.ts$" \
+      | grep -v "^src/i18n/fr\.ts$" \
+      | while IFS= read -r f; do
+          sed -e 's|//.*$||' -e '/^[[:space:]]*\*/d' -e '/^[[:space:]]*\/\*/d' "$f" 2>/dev/null \
+            | grep -nE '"inattendu"' | sed "s|^|$f:|"
+        done)
+[ -n "$out" ] && {
+  echo "🔴 V1.1 : \"inattendu\" utilisé comme code hors de errors.ts/fr.ts :"; echo "$out"
+  echo "   Chaque échec porte sa cause réelle (technical + context), jamais un aveu générique."; fail=1; }
+
 [ $fail -eq 0 ] && echo "✅ preflight vert"
 exit $fail

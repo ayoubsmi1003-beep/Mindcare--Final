@@ -1,178 +1,212 @@
-# CLAUDE.md
-**MindCare OS — Cabinet Dr. Larbi N., Alger**
-Read this file completely before writing any code. Every session. No exceptions.
+# CLAUDE.md — MindCare OS
+
+> Tu construis le logiciel de gestion d'un cabinet de psychiatrie à Alger, utilisé
+> quotidiennement par une médecin, avec de vraies données patients, sous la loi 18-07.
+> Lis ce fichier entièrement avant toute action.
+
+**v2 — 2026-08-09.** Remplace la v1, qui décrivait Fastify · React/Vite · Postgres natif ·
+routes `/v1/` — une pile qui n'a jamais existé dans ce dépôt. Si tu lis un document qui
+parle d'API REST versionnée ou d'ORM, **tu lis un fichier archivé** : arrête-toi et
+ouvre `DOC-AUTHORITY.md` §2.
 
 ---
 
-## WHAT THIS IS
+## 1. LES DIX RÈGLES ABSOLUES
 
-A clinical system for a solo psychiatric practice in Algiers. Real patients, real medical records, real legal exposure under Algerian **Loi 18-07**.
+Elles ne se discutent pas et ne se contournent jamais.
+⚠️ **Les numéros 1, 4 et 8 sont cités par ADR-019, D-14 et S7B. Ne les renumérote pas.**
 
-This is not a demo, not a prototype, not a portfolio piece. A bug here can misstate a dose, expose a psychiatric record, or destroy the legal value of a medical file.
+**1 — Aucune donnée identifiante patient ne quitte la machine.**
+Ni vers un cloud, ni dans un log, ni dans une requête de télémétrie, ni dans un message
+d'erreur affiché. Tout appel externe passe par `_shared/external-call.ts`, **point de
+sortie unique**, après pseudonymisation. Un `fetch('https://…')` ailleurs n'est pas une
+entorse de style : c'est l'architecture qui tombe.
 
-**When speed and safety conflict, safety wins. Always. Without asking.**
+**2 — Aucune clé, aucun secret dans le code ni côté client.**
+Variables d'environnement serveur uniquement. `NEXT_PUBLIC_` devant une clé d'API est
+interdit, sans cas particulier. Contrôle : `grep -r "OPENROUTER\|GROQ\|ELEVENLABS" .next/static/`
+doit rendre 0.
+
+**3 — Aucun `DELETE` sur une donnée clinique ou financière.**
+`deleted_at`. Et aucun `UPDATE` sur une note dont `locked_at` n'est pas nul : la base
+le refuse (ADR-004), ne tente pas de contourner.
+
+**4 — La sécurité vit en base, jamais en JavaScript.**
+Le filtrage par rôle, le cloisonnement par praticien, les transitions d'état : RLS,
+contraintes, déclencheurs, portes SQL. Un `if (role === …)` dans un service est un
+**bug de conception**, pas une précaution supplémentaire. Le front-end n'est jamais
+une frontière de sécurité.
+
+**5 — Une écriture métier = une transaction.**
+Changement d'état + trace d'audit dans la **même** transaction, écrite en fonction
+Postgres. PostgREST n'expose pas de transaction multi-requêtes : une atomicité promise
+côté client serait fausse, ce qui est pire que son absence (ADR-020).
+
+**6 — La lecture d'un dossier patient passe par une porte qui journalise.**
+`app.search_patients` et `app.get_patient`. Le `SELECT` direct sur `app.patients` est
+**révoqué** (ADR-019). Lire un dossier sans laisser de trace n'est pas un manque de
+rigueur, c'est un `permission denied`.
+
+**7 — Jarvis propose, l'humain confirme, la base journalise.**
+Aucune écriture sans `confirmed_at`, écrit **avant** l'exécution. Aucun outil hors
+allowlist. Jarvis hérite des permissions de l'utilisateur, il ne les élève jamais.
+La sécurité par le prompt n'existe pas.
+
+**8 — Aucune donnée fictive dans une fonctionnalité livrée.**
+Ni patient d'exemple, ni chiffre plausible, ni graphique décoratif, ni certificat
+approximatif. Une fixture de test vit **dans la transaction du checkpoint**, jamais
+dans un seed livré. Un écran sans donnée affiche son état vide.
+
+**9 — Ne jamais modifier une migration déjà appliquée.**
+Créer `0NN_nom.sql`. Et ne jamais créer une table, une colonne, un type ou une valeur
+d'enum absents de `01-SCHEMA.md` ou des ADR. Si tu penses qu'il en manque un :
+**arrête-toi et demande.**
+
+**10 — Ne jamais dépasser le périmètre de la tâche demandée.**
+Pas de refactor spontané, pas de fonctionnalité bonus, pas de « tant qu'on y est ».
+Une idée hors périmètre se note dans `STATE.md`, elle ne se code pas.
 
 ---
 
-## THE DOCUMENTS
+## 2. STACK RÉELLE
 
-| File | Contains |
+| Couche | Choix |
 |---|---|
-| `00-DECISIONS.md` | Locked decisions + ADRs. **The document wins over your judgment.** |
-| `01-SCHEMA.md` | DDL, RLS, triggers, migrations, acceptance tests |
-| `02-SECURITY-BOUNDARY.md` | Data tiers, pseudonymization gateway, secrets |
-| `03-JARVIS-TOOLS.md` | Tool allowlist, execution contract, clinical guardrails |
-| `04-DESIGN-SYSTEM.md` | Tokens, type, motion, components, French UI copy |
-| `05-BUILD-PLAN.md` | Hour-by-hour plan, checkpoints, sacrifice order |
+| Framework | **Next.js 15, App Router**, React 19 |
+| Langage | TypeScript strict (`strict`, `noUncheckedIndexedAccess`) |
+| Écritures | **Server Actions** — aucune API REST versionnée (ADR-003) |
+| Base | **Supabase** — Postgres 15, RLS, Auth, Storage |
+| Accès données | **`DbPort`** (`query`, `rpc`, `paginate`) — ADR-020 |
+| Adaptateur | `src/services/db/supabase.ts` — **seul fichier autorisé à importer `@supabase/supabase-js`** |
+| SQL | Écrit à la main, dans les migrations. **Pas d'ORM.** |
+| Validation | Zod, sur chaque entrée |
+| Style | Tailwind + jetons de `src/styles/tokens.css` |
+| Fontes | `next/font` — auto-hébergées au build, zéro réseau à l'exécution |
+| Paquets | pnpm |
 
-Working on a domain → read its file first. Don't reconstruct decisions from memory.
+**Pourquoi pas d'ORM.** Le schéma contient des déclencheurs, des contraintes, du RLS et
+des portes `SECURITY DEFINER`. Un ORM les masque et génère des requêtes qui les violent.
 
----
-
-## THE TEN HARD RULES
-
-**1. Patient-identifying data never leaves the machine.**
-Names, DOB, phone, address, ID numbers, `patient_id`. Not to a cloud API, not to a log, not to an error message, not to a chat.
-
-**2. One exit door.**
-External calls go through `_shared/external-call.ts` only. If you write `fetch('https://…')` anywhere else, you broke the architecture. CI catches it — don't make CI the first line of defense.
-
-**3. No secrets client-side.**
-`SERVICE_ROLE_KEY`, `GROQ_API_KEY`, `OPENROUTER_API_KEY` live in server env. `ANON_KEY` is the only key that reaches the browser. A key that appeared in a commit or a chat is compromised — revoke it, no debate.
-
-**4. Security lives in the database.**
-RLS on every patient table, `FORCE ROW LEVEL SECURITY`. Never filter permissions in JavaScript. If you write `if (role === 'assistant')` to hide clinical data, that's a design bug — fix the policy instead.
-
-**5. Signed notes are immutable.**
-15-minute draft window, then locked by trigger. Corrections are amendments. Never add a bypass, never add an admin override, never "just this once."
-
-**6. Jarvis proposes, humans decide.**
-Every write shows a confirmation card and waits for a click. `state='executed'` without `confirmed_at` is a constraint violation by design. Don't route around it.
-
-**7. Audio is never written to disk.**
-RAM → Groq → text → freed. No temp files, no IndexedDB, no "cache for retry."
-
-**8. No fake data in shipped features.**
-An empty state is honest. Mock data in a delivered screen is a lie that will be discovered in front of a patient.
-
-**9. Everything degrades.**
-API down → the app still works. She can run a consultation, write a note, print a certificate with zero AI. Jarvis is an accelerator, never a dependency.
-
-**10. Red checkpoint = stop.**
-Fix it. Don't proceed, don't work around it, don't leave a TODO.
+**Pourquoi `DbPort`.** Le jour du passage à l'auto-hébergé, puis à Electron, on branche
+un second adaptateur sans toucher un service. Garanti par `no-restricted-imports`, donc
+par une erreur de compilation — pas par une consigne.
 
 ---
 
-## ROLES — MEMORIZE THIS
+## 3. STRUCTURE
 
-| Role | Sees | Never sees |
+```
+src/
+  app/                     routes App Router, Server Actions
+  services/
+    db/supabase.ts         SEUL import de @supabase/supabase-js
+    db/port.ts             l'interface DbPort
+    <domaine>.ts           patients, agenda, consultations, finance, documents, jarvis
+    log.ts                 journal — porte toujours la cause, jamais un nom
+  components/              primitives partagées
+  styles/tokens.css        SEUL endroit où vit une couleur
+  i18n/                    aucune chaîne en dur ailleurs
+supabase/migrations/       001 … NNN — jamais modifiées
+docs/                      les documents d'architecture
+docs/archive/              INTERDIT à tout agent (guard-bash.sh)
+scripts/                   provisionnement et checkpoints
+```
+
+**Dépendances vers l'intérieur uniquement.** Un composant appelle un service ; un service
+appelle `DbPort` ; `DbPort` appelle une porte SQL. Jamais l'inverse, jamais en travers.
+
+---
+
+## 4. CONVENTIONS
+
+| Élément | Convention | Exemple |
 |---|---|---|
-| `owner` (Dr. Larbi) | Everything, all practitioners, all revenue | — |
-| `practitioner` (Dr. #2) | Own patients, own notes, **own revenue only** | Other practitioners' anything |
-| `assistant` | Identity, contact, appointments, payment amount + status | **Clinical notes, transcripts, diagnoses, prescriptions, consultation reason** |
-| `patient` | Own aftercare data | Everything else |
+| Tables, colonnes | `snake_case`, pluriel | `clinical_notes` |
+| Portes SQL | `app.<verbe>_<objet>` | `app.issue_document` |
+| Fonctions, variables | `camelCase` | `confirmAppointment` |
+| Types, composants | `PascalCase` | `PatientCard` |
+| Fichiers TS | `kebab-case` | `patient-service.ts` |
+| Migrations | `0NN_sujet.sql` | `031_seed_document_templates.sql` |
 
-**Strict walls.** No shared patients between practitioners. No exceptions in code.
+**Dates :** `timestamptz`. Toute borne de journée se calcule en **`Africa/Algiers`** —
+Postgres tourne en UTC, une recette « du jour » calculée en UTC est fausse une heure par nuit.
 
-⚠️ **The `reason` column trap.** RLS filters rows, not columns. The assistant front-end queries the view `appointments_admin` — **never** the table `appointments`. Check this in every review.
+**Montants :** `integer amount_dzd`, dinars **entiers**. Aucun centime, aucun flottant (ADR-018).
+
+**Langue :** interface intégralement en français. Aucune chaîne en dur, y compris les
+messages d'erreur et les états vides (ADR-008).
 
 ---
 
-## FORBIDDEN — DO NOT BUILD
+## 5. LE PATRON D'ÉCRITURE — en base, pas en TypeScript
+
+Toute opération qui modifie l'état est une **fonction Postgres**, appelée par `rpc`.
+
+```sql
+CREATE FUNCTION app.<action>(…) RETURNS … AS $$
+BEGIN
+  -- 1. valider les arguments et le périmètre
+  -- 2. SELECT … FOR UPDATE   → sérialiser les appels concurrents
+  -- 3. vérifier la transition d'état (déclencheur ou test explicite)
+  -- 4. écrire
+  -- 5. tracer via trg_audit (013) — jamais un mécanisme parallèle
+END $$;
+```
+
+**Cinq éléments, toujours : périmètre · verrou · transition · écriture · trace.**
+
+**Ce que la fonction ne fait jamais :**
+- tester un rôle applicatif — **la RLS décide** (règle 4) ;
+- accepter `cabinet_id` ou `practitioner_id` de l'appelant — ils viennent de
+  `app.current_cabinet()` et `auth.uid()` ;
+- distinguer « introuvable » de « hors périmètre » dans son message d'erreur : les deux
+  rendent la même chose, sinon on a fabriqué un oracle d'existence (ADR-003).
+
+---
+
+## 6. NUMÉROTATION SANS TROU
+
+`app.next_number(cabinet, type, periode)` — table compteur, **jamais** une `SEQUENCE`.
+Une séquence Postgres saute un numéro à chaque rollback : sur un reçu ou un certificat,
+un trou est une anomalie comptable. La période se calcule en `Africa/Algiers`.
+
+---
+
+## 7. AVANT DE DIRE « TERMINÉ »
 
 ```
-execute_sql              → bypasses RLS
-delete_clinical_note     → ADR-004
-sign_clinical_note       → only a human signs; it carries her medical liability
-send_message_to_patient  → no automated messages to psychiatric patients
-export_patient_data      → exfiltration in one call
-modify_permissions       → privilege escalation
-read_file / write_file / run_command → system access
+1. Fonctionne avec des données réelles, pas un jeu d'essai
+2. RLS vérifiée pour les 3 rôles — même ceux dont le front n'existe pas encore
+3. Se dégrade proprement si le réseau tombe
+4. Les 5 états de 05-UX-CONTRACT.md sont écrits ET déclenchables à la demande
+5. Jetons du design system respectés — aucun hex hors tokens.css
+6. Budget de 06-PERF-BUDGET.md tenu, mesuré en build
+7. Checkpoint vert reproductible par script
 ```
 
-If one of these seems necessary, the requirement was misunderstood. Ask.
+---
+
+## 8. LES QUATRE SIGNAUX D'ARRÊT
+
+Arrête la session immédiatement si :
+1. **Le même test échoue trois fois.** Le problème n'est pas où tu cherches. `/handoff`.
+2. **Tu réexpliques une règle déjà écrite.** Elle manque ici ou dans le prompt de l'agent.
+3. **Un sous-agent rend plus de 30 lignes.** Son prompt est trop vague.
+4. **Tu es tenté d'ajouter une fonctionnalité non listée.** Note-la dans `STATE.md`.
 
 ---
 
-## CLINICAL LANGUAGE
+## 9. ORDRE DE LECTURE, ET RIEN D'AUTRE
 
-Jarvis describes. It never concludes.
-
-| ❌ Never | ✅ Always |
-|---|---|
-| "Le patient est dépressif." | "Éléments évoquant une symptomatologie dépressive — à évaluer." |
-| "Prescrire de la sertraline." | "Aucun ISRS dans l'historique." |
-| "Risque suicidaire élevé." | "Mention d'idées noires à 12:34 — exploration suggérée." |
-
-Permanent disclaimer on live insights: *« Aide à la décision — le jugement clinique appartient au praticien. »*
-
-🔴 **Intake and aftercare questions must never suggest a side effect.** It biases self-reporting. This is a clinical requirement from the doctor herself. Every new question gets human review against this rule.
-
----
-
-## UI RULES
-
-- **French everywhere.** No hardcoded strings — i18n from day one.
-- **Arabic** for transcript output. Real font (`IBM Plex Sans Arabic`), `dir="rtl"`, line-height 1.8.
-- **Tokens only.** No invented hex values, no invented durations. `04-DESIGN-SYSTEM.md` §3 and §8.
-- **Glass on floating chrome only.** Never on data surfaces. §4 of the design system — this one is a safety rule, not taste.
-- **Red is a budget.** Disk critical and data loss only. A cancelled appointment is not red.
-- **Fonts bundled locally.** The cabinet's Wi-Fi drops.
-- **Buttons name their action.** `Signer la note` → toast `Note signée.` Same verb throughout. Never `Soumettre` or `OK`.
-
----
-
-## WORKFLOW
-
-1. **Plan mode first.** Show the plan. Wait for approval.
-2. **One task, one commit.** `feat(patients): liste + recherche trigram`
-3. **Every task ends with a copy-pasteable checkpoint** producing green or red. Never "looks good."
-4. **Done means all six** (§9 of `05-BUILD-PLAN.md`): real data · RLS verified for 3 roles · degrades cleanly · empty + error states written · design tokens respected · reproducible green checkpoint.
-5. **Push back.** If an instruction conflicts with these rules, say so before writing code. Being right at 2am is worth more than being agreeable.
-
----
-
-## BEFORE EVERY COMMIT
-
-```bash
-# no external calls outside the gateway
-grep -rn "fetch(['\"]https://" --include="*.ts" --include="*.tsx" src/ supabase/ \
-  | grep -v "_shared/external-call.ts"
-
-# no secrets client-side
-grep -rn "SERVICE_ROLE\|GROQ_API_KEY\|OPENROUTER_API_KEY" src/
-
-# no audio on disk
-find . -name "*.webm" -o -name "*.wav" -o -name "*.ogg"
 ```
-All three return nothing. Any output = do not commit.
+CLAUDE.md → DOC-AUTHORITY.md → STATE.md → le contrat de la session
+```
+
+`DOC-AUTHORITY.md` §2 liste les documents **interdits**. Ils contredisent le schéma
+actif et coûtent des sessions entières en reprise. Ne les ouvre pas, même par curiosité,
+même pour vérifier.
 
 ---
 
-## CURRENT STATE
-
-**Month 1 — deliberate compromises, documented, time-boxed:**
-- STT via Groq (no GPU on the machine) — flips local via `STT_PROVIDER`
-- LLM via OpenRouter — flips local via the model routing table
-- Prescriptions recorded, **not printed** — she writes by hand
-- Consents on paper
-- Vidal not yet imported (~60 medications seeded manually)
-
-**Not built yet:** voice Jarvis · aftercare · communications · external agents · public site · pgvector memory
-
-**Month 2, on GPU arrival:** local Whisper, local LLM, long-term memory. **Config change, not a rebuild.** Keep it that way.
-
----
-
-## THE TEST
-
-Before shipping any screen, ask:
-
-1. Does this help her treat, or help us impress? The second one gets removed.
-2. Can she read this value in half a second, with a patient talking?
-3. If the network dies right now, does she lose work?
-4. Would this record hold up in front of a judge?
-
----
-
-*If something here contradicts what you were just asked to do — stop and say so.*
+*Si un choix technique contredit ce fichier, ce fichier gagne — sauf face à une migration
+appliquée, qui gagne sur tout.*

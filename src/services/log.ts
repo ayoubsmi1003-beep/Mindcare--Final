@@ -39,6 +39,21 @@ export interface LogFields {
   readonly durationMs?: number;
   /** Nombre de lignes rendues. Un compte, jamais un contenu. */
   readonly count?: number;
+  /**
+   * Code technique d'origine (SQLSTATE ou code PostgREST) — V1.1. `code`
+   * ci-dessus reste le code APPLICATIF grossier (`"interdit"`, `"conflit"`…) ;
+   * celui-ci est ce que Postgres a réellement rendu (`42501`, `23505`…), sans
+   * quoi un refus de permission et un vrai conflit sont indiscernables au
+   * journal.
+   */
+  readonly technical?: string;
+  /** Où l'appel a échoué (ex. `"rpc:day_revenue"`). Jamais une donnée de ligne. */
+  readonly context?: string;
+  /**
+   * `.name` de la cause d'origine (`Error.cause`), JAMAIS `.message` — un
+   * message Postgres porte la valeur qui a déclenché l'erreur (I5, règle 1).
+   */
+  readonly causeName?: string;
 }
 
 type LogLevel = "info" | "warn" | "error";
@@ -54,6 +69,9 @@ function emit(level: LogLevel, event: string, fields: LogFields): void {
   if (fields.code !== undefined) payload["code"] = fields.code;
   if (fields.durationMs !== undefined) payload["durationMs"] = fields.durationMs;
   if (fields.count !== undefined) payload["count"] = fields.count;
+  if (fields.technical !== undefined) payload["technical"] = fields.technical;
+  if (fields.context !== undefined) payload["context"] = fields.context;
+  if (fields.causeName !== undefined) payload["causeName"] = fields.causeName;
 
   console[level](JSON.stringify(payload));
 }

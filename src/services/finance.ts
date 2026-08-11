@@ -28,6 +28,7 @@
  */
 
 import { db } from "./db";
+import { logFieldsFor } from "./errors";
 import { log } from "./log";
 import { err, ok, type Result } from "./result";
 
@@ -199,7 +200,7 @@ export async function setConsultationPrice(
   if (!result.ok) {
     // Ni identifiant patient, ni montant : règle 1 et I5. Un montant dans un
     // journal, c'est une donnée de cabinet qui sort de la machine.
-    log.error("finance.tarif", { code: result.error.code });
+    log.error("finance.tarif", logFieldsFor(result.error));
     return err(result.error);
   }
 
@@ -228,7 +229,7 @@ export async function getConsultationPayment(
   );
 
   if (!result.ok) {
-    log.error("finance.tarifLecture", { code: result.error.code });
+    log.error("finance.tarifLecture", logFieldsFor(result.error));
     return err(result.error);
   }
 
@@ -262,7 +263,7 @@ export async function recordPaymentCollected(
   });
 
   if (!result.ok) {
-    log.error("finance.encaissement", { code: result.error.code });
+    log.error("finance.encaissement", logFieldsFor(result.error));
     return err(result.error);
   }
 
@@ -285,7 +286,7 @@ export async function getDayRevenue(jour: string): Promise<Result<RecetteDuJour 
   const result = await db().rpc<RecetteRow>("day_revenue", { p_day: jour });
 
   if (!result.ok) {
-    log.error("finance.recette", { code: result.error.code });
+    log.error("finance.recette", logFieldsFor(result.error));
     return err(result.error);
   }
 
@@ -300,7 +301,7 @@ export async function listDayPayments(jour: string): Promise<Result<readonly Pai
   const result = await db().rpc<PaiementRow>("list_day_payments", { p_day: jour });
 
   if (!result.ok) {
-    log.error("finance.journee", { code: result.error.code });
+    log.error("finance.journee", logFieldsFor(result.error));
     return err(result.error);
   }
 

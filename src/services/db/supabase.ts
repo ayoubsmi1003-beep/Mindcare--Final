@@ -27,10 +27,26 @@ import { createClient } from "@supabase/supabase-js";
 import { getClientEnv } from "@/lib/env";
 import { fr } from "@/i18n/fr";
 
-import type { AppErrorCode } from "../errors";
+import type { AppError, AppErrorCode } from "../errors";
 import { toAppError } from "../errors";
 import { err, ok, type Result } from "../result";
 import type { DbPort, RpcArgs, SelectSpec, SessionInfo, SignInCredentials } from "./port";
+
+/**
+ * V1.2 — plafond CLIENT sur l'appel d'une Edge Function.
+ *
+ * 15 s, délibérément AU-DESSUS des 10 s de `_shared/external-call.ts` : ce
+ * plafond est un filet contre une fonction qui ne répond pas du tout, pas un
+ * concurrent de la passerelle. Si les deux étaient au même chiffre, le client
+ * abandonnerait parfois avant la passerelle et remplacerait un message qui
+ * explique la panne par un message qui dit seulement « délai ».
+ *
+ * ⚠️ Les 10 s de la passerelle viennent de `03-JARVIS-TOOLS.md` §10 (rang 4).
+ * `SPRINT-V1.md` §V1.2 écrit 30 s (rang 5) : par `DOC-AUTHORITY.md` §1 le rang
+ * 4 gagne, et l'arbitrage utilisateur du 2026-08-11 l'a confirmé. Aucun
+ * document d'autorité n'a été modifié, aucune valeur de passerelle non plus.
+ */
+const PLAFOND_INVOKE_MS = 15_000;
 
 function createAppClient() {
   const env = getClientEnv();
@@ -98,12 +114,12 @@ export const supabaseDbPort: DbPort = {
       }
 
       const { data, error } = await query;
-      if (error !== null) return err(toAppError(error));
+      if (error !== null) return err(toAppError(error, `select:${spec.relation}`));
       return ok(asRows<T>(data));
     } catch (cause) {
       // Une panne réseau lève au lieu de rendre `error`. Sans ce filet, elle
       // remonterait jusqu'à un composant — donc jusqu'à l'écran (I20).
-      return err(toAppError(cause));
+      return err(toAppError(new Error("échec select", { cause }), `select:${spec.relation}`));
     }
   },
 
@@ -117,13 +133,13 @@ export const supabaseDbPort: DbPort = {
       // variable typée et interroger ses membres.
       const response: unknown = await getClient().rpc(name, args);
       if (typeof response !== "object" || response === null) {
-        return err(toAppError(response));
+        return err(toAppError(new Error("réponse rpc absente"), `rpc:${name}`));
       }
       const error = "error" in response ? response.error : null;
-      if (error !== null && error !== undefined) return err(toAppError(error));
+      if (error !== null && error !== undefined) return err(toAppError(error, `rpc:${name}`));
       return ok(asRows<T>("data" in response ? response.data : null));
     } catch (cause) {
-      return err(toAppError(cause));
+      return err(toAppError(new Error("échec rpc", { cause }), `rpc:${name}`));
     }
   },
 
@@ -136,65 +152,102 @@ export const supabaseDbPort: DbPort = {
         email: credentials.email,
         password: credentials.password,
       });
-      if (error !== null) return err(toAppError(error));
+      if (error !== null) return err(toAppError(error, "signIn"));
       // Cas sans erreur ET sans utilisateur : le SDK ne le documente pas, mais
       // rendre une session vide comme un succès ferait croire à l'écran qu'il
       // est connecté. On le traite en échec explicite plutôt que de repasser
       // `error` — qui vaut `null` ici, et donnerait un diagnostic trompeur.
-      if (data.user === null) return err(toAppError(undefined));
+      if (data.user === null) {
+        return err(toAppError(new Error("auth:session-vide"), "signIn"));
+      }
       return ok({ userId: data.user.id });
     } catch (cause) {
-      return err(toAppError(cause));
+      return err(toAppError(new Error("échec signIn", { cause }), "signIn"));
     }
   },
 
   async signOut(): Promise<Result<void>> {
     try {
       const { error } = await getClient().auth.signOut();
-      if (error !== null) return err(toAppError(error));
+      if (error !== null) return err(toAppError(error, "signOut"));
       return ok(undefined);
     } catch (cause) {
-      return err(toAppError(cause));
+      return err(toAppError(new Error("échec signOut", { cause }), "signOut"));
     }
   },
 
   async getSession(): Promise<Result<SessionInfo | null>> {
     try {
       const { data, error } = await getClient().auth.getSession();
-      if (error !== null) return err(toAppError(error));
+      if (error !== null) return err(toAppError(error, "getSession"));
       if (data.session === null) return ok(null);
       return ok({ userId: data.session.user.id });
     } catch (cause) {
-      return err(toAppError(cause));
+      return err(toAppError(new Error("échec getSession", { cause }), "getSession"));
     }
   },
 
   async invokeFunction<T>(name: string, body: unknown): Promise<Result<T>> {
+    // V1.2 — PLAFOND CLIENT. Une Edge Function muette (processus tué, relais
+    // Supabase qui ne répond jamais) laissait « Analyse en cours… » tourner
+    // indéfiniment : le défaut nommément interdit par 05-UX-CONTRACT.md §2.
+    //
+    // Le plafond est ici, PAS dans la passerelle : `_shared/external-call.ts`
+    // garde ses 10 s (03-JARVIS-TOOLS.md §10, rang 4 de DOC-AUTHORITY §1 —
+    // arbitrage utilisateur du 2026-08-11, `SPRINT-V1.md` §V1.2 qui écrit 30 s
+    // n'a pas été appliqué et le document d'autorité n'a pas été modifié).
+    // Ce plafond-ci lui est DÉLIBÉRÉMENT SUPÉRIEUR : il ne doit se déclencher
+    // que si la fonction ne répond pas du tout, jamais à la place de la
+    // passerelle, qui elle sait dire pourquoi elle a renoncé.
+    const controleur = new AbortController();
+    let expire = false;
+    const minuteur = setTimeout(() => {
+      expire = true;
+      controleur.abort();
+    }, PLAFOND_INVOKE_MS);
+
     try {
       // `functions.invoke` rend `any` — même traitement qu'en `rpc()` : capturé
       // en `unknown`, décomposé par vérification, sans assertion (I9).
       // `body` traverse tel quel : c'est un objet JSON-sérialisable construit
       // par l'appelant (voir `src/services/jarvis.ts`), jamais un flux binaire.
+      //
+      // `signal` est passé, pas `timeout` : les deux existent dans la version
+      // installée (`@supabase/functions-js@2.110.9`, `types.d.ts:115-120`,
+      // lu dans `node_modules` et non dans la documentation), mais avec
+      // `timeout` l'abandon revient sous la forme d'un `FunctionsFetchError`
+      // que `isNetworkFailure` ne reconnaît pas — il retomberait donc sur le
+      // code d'aveu que V1.1 vient précisément de fermer. Avec notre
+      // propre signal, c'est NOUS qui nommons l'expiration, ci-dessous.
       const response: unknown = await getClient().functions.invoke(name, {
         body: body as Record<string, unknown>,
+        signal: controleur.signal,
       });
       if (typeof response !== "object" || response === null) {
-        return err(toAppError(response));
+        return err(toAppError(new Error("réponse edge absente"), `invokeFunction:${name}`));
       }
 
       const transportError = "error" in response ? response.error : null;
       if (transportError !== null && transportError !== undefined) {
+        // L'abandon revient par ce chemin (la bibliothèque enveloppe l'échec
+        // de `fetch` en `FunctionsFetchError`). C'est nous qui savons POURQUOI
+        // il a été abandonné : on le dit, au lieu de laisser classer un
+        // dépassement de délai comme une panne réseau — l'écran afficherait un
+        // bandeau « hors ligne » sur une connexion parfaitement valide.
+        if (expire) return err(erreurDelaiInvoke(name, transportError));
         // Panne de transport (réseau, fonction introuvable) — jamais le
         // contrat applicatif `{ ok, data | error }` de la fonction elle-même,
         // qui répond toujours en HTTP 200 (voir jarvis-analyze-session/index.ts).
-        return err(toAppError(transportError));
+        return err(toAppError(transportError, `invokeFunction:${name}`));
       }
 
       const envelope = ("data" in response ? response.data : null) as
         | { readonly ok: unknown; readonly data?: unknown; readonly error?: { readonly code?: unknown } }
         | null;
       if (envelope === null || typeof envelope !== "object") {
-        return err(toAppError(undefined));
+        return err(
+          toAppError(new Error("edge:enveloppe-absente"), `invokeFunction:${name}`),
+        );
       }
 
       if (envelope.ok === true) {
@@ -204,12 +257,40 @@ export const supabaseDbPort: DbPort = {
       const edgeCode = typeof envelope.error?.code === "string" ? envelope.error.code : undefined;
       const code = classifyEdgeErrorCode(edgeCode);
       const message = fr.erreurs[code];
-      return err(edgeCode === undefined ? { code, message } : { code, message, technical: edgeCode });
+      return err(
+        edgeCode === undefined
+          ? { code, message, context: `invokeFunction:${name}` }
+          : { code, message, technical: edgeCode, context: `invokeFunction:${name}` },
+      );
     } catch (cause) {
-      return err(toAppError(cause));
+      if (expire) return err(erreurDelaiInvoke(name, cause));
+      return err(toAppError(new Error("échec invokeFunction", { cause }), `invokeFunction:${name}`));
+    } finally {
+      clearTimeout(minuteur);
     }
   },
 };
+
+/**
+ * L'erreur d'expiration du plafond client (V1.2).
+ *
+ * `indisponible` et non `hors-ligne` : la connexion fonctionne, c'est la
+ * fonction qui n'a pas répondu. Les confondre ferait afficher le bandeau
+ * « Connexion perdue » à quelqu'un dont le réseau va très bien, et l'enverrait
+ * chercher la panne du mauvais côté.
+ *
+ * Le message porte le mot « délai » (05-UX-CONTRACT.md §2). `technical` reste
+ * un repère de code : il n'identifie personne (règle 1, I5).
+ */
+function erreurDelaiInvoke(name: string, cause: unknown): AppError {
+  return {
+    code: "indisponible",
+    message: fr.delaiDepasse,
+    technical: "client:delai-depasse",
+    context: `invokeFunction:${name}`,
+    cause,
+  };
+}
 
 /**
  * Traduit le `code` métier renvoyé par une Edge Function (voir

@@ -27,6 +27,7 @@ import { fr } from "@/i18n/fr";
 
 import type { ConsultationKind } from "./appointments";
 import { db } from "./db";
+import { logFieldsFor } from "./errors";
 import { log } from "./log";
 import { err, ok, type Result } from "./result";
 
@@ -255,7 +256,7 @@ export async function startConsultation(
   });
 
   if (!result.ok) {
-    log.error("consultation.ouverture", { code: result.error.code });
+    log.error("consultation.ouverture", logFieldsFor(result.error));
     return err(result.error);
   }
 
@@ -277,7 +278,7 @@ export async function getOpenConsultation(): Promise<Result<string | null>> {
   const result = await db().rpc<string>("get_open_consultation", {});
 
   if (!result.ok) {
-    log.error("consultation.encours", { code: result.error.code });
+    log.error("consultation.encours", logFieldsFor(result.error));
     return err(result.error);
   }
 
@@ -291,7 +292,7 @@ export async function getConsultation(id: string): Promise<Result<Consultation |
     // Aucun identifiant patient ici : règle 1 et I5. La trace nominative légale
     // est écrite par la porte, AVANT la lecture, donc elle existe même quand cet
     // appel échoue.
-    log.error("consultation.lecture", { code: result.error.code });
+    log.error("consultation.lecture", logFieldsFor(result.error));
     return err(result.error);
   }
 
@@ -319,7 +320,7 @@ export async function saveRawNotes(id: string, texte: string): Promise<Result<bo
   });
 
   if (!result.ok) {
-    log.error("consultation.brouillon", { code: result.error.code });
+    log.error("consultation.brouillon", logFieldsFor(result.error));
     return err(result.error);
   }
 
@@ -331,7 +332,7 @@ export async function closeConsultation(id: string): Promise<Result<boolean>> {
   const result = await db().rpc<string>("close_consultation", { p_id: id });
 
   if (!result.ok) {
-    log.error("consultation.cloture", { code: result.error.code });
+    log.error("consultation.cloture", logFieldsFor(result.error));
     return err(result.error);
   }
 
@@ -372,7 +373,7 @@ export async function saveNote(
   });
 
   if (!result.ok) {
-    log.error("note.brouillon", { code: result.error.code });
+    log.error("note.brouillon", logFieldsFor(result.error));
     return err(result.error);
   }
 
@@ -390,7 +391,7 @@ export async function signNote(noteId: string): Promise<Result<boolean>> {
   const result = await db().rpc<string>("sign_note", { p_id: noteId });
 
   if (!result.ok) {
-    log.error("note.signature", { code: result.error.code });
+    log.error("note.signature", logFieldsFor(result.error));
     return err(result.error);
   }
 
@@ -411,7 +412,7 @@ export async function amendNote(
   });
 
   if (!result.ok) {
-    log.error("note.amendement", { code: result.error.code });
+    log.error("note.amendement", logFieldsFor(result.error));
     return err(result.error);
   }
 
@@ -424,7 +425,7 @@ export async function listAmendments(noteId: string): Promise<Result<readonly Am
   const result = await db().rpc<AmendmentRow>("list_amendments", { p_note_id: noteId });
 
   if (!result.ok) {
-    log.error("note.amendements", { code: result.error.code });
+    log.error("note.amendements", logFieldsFor(result.error));
     return err(result.error);
   }
 

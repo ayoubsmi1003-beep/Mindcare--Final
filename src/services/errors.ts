@@ -36,6 +36,18 @@ export interface AppError {
    * diagnostic. Un code n'identifie personne — un message, si.
    */
   readonly technical?: string;
+  /**
+   * Où l'appel a échoué (ex. `"rpc:day_revenue"`, `"select"`, `"signIn"`). Un
+   * repère de code, jamais une donnée de ligne — V1.1.
+   */
+  readonly context?: string;
+  /**
+   * La cause d'origine, jamais affichée : réservée à `log.ts`, qui n'en
+   * retiendra que `.name` (V1.1 — `LogFields` reste fermée, jamais `message`).
+   * Peut être une `Error` avec sa propre chaîne `.cause`, ou l'objet brut
+   * rendu par Supabase.
+   */
+  readonly cause?: unknown;
 }
 
 /**
@@ -187,20 +199,97 @@ function classify(code: string | undefined): AppErrorCode {
   }
 }
 
-export function toAppError(raw: unknown): AppError {
-  if (!isRawDbError(raw)) {
-    return { code: "inattendu", message: fr.erreurs.inattendu };
+/**
+ * Suit la chaîne `Error.cause` jusqu'à trouver l'objet porteur de l'échec
+ * réel (celui qui a un `.code` PostgREST/SQLSTATE exploitable), ou jusqu'à
+ * épuiser la chaîne.
+ *
+ * N'INTERVIENT QU'EN AMONT de `isNetworkFailure` et `classify` — ni l'un ni
+ * l'autre n'est modifié. Pour un `raw` qui n'est pas une `Error` (le cas
+ * d'origine, un objet PostgREST brut), la boucle ne s'exécute jamais et cette
+ * fonction rend `raw` inchangé : le comportement antérieur est préservé à
+ * l'identique sur ce chemin.
+ */
+function unwrapCause(value: unknown): unknown {
+  let courant = value;
+  const vus = new Set<unknown>();
+  while (courant instanceof Error && courant.cause !== undefined && !vus.has(courant)) {
+    vus.add(courant);
+    courant = courant.cause;
+  }
+  return courant;
+}
+
+/**
+ * `context` situe l'appel dans le code (ex. `"rpc:day_revenue"`), jamais une
+ * valeur de ligne. `cause` porte `raw` tel quel, réservé à `log.ts` — qui n'en
+ * lira que `.name` (V1.1, jamais `.message`, jamais une donnée patient).
+ */
+export function toAppError(raw: unknown, context?: string): AppError {
+  const source = unwrapCause(raw);
+
+  if (!isRawDbError(source)) {
+    return {
+      code: "inattendu",
+      message: fr.erreurs.inattendu,
+      ...(context !== undefined && { context }),
+      ...(raw !== undefined && { cause: raw }),
+    };
   }
 
-  if (isNetworkFailure(raw)) return offlineError();
+  if (isNetworkFailure(source)) {
+    return {
+      ...offlineError(),
+      ...(context !== undefined && { context }),
+      ...(raw !== undefined && { cause: raw }),
+    };
+  }
 
-  const technical = raw.code;
+  const technical = source.code;
   const code = classify(technical);
   const message = fr.erreurs[code];
 
-  return technical === undefined
-    ? { code, message }
-    : { code, message, technical };
+  return {
+    code,
+    message,
+    ...(technical !== undefined && { technical }),
+    ...(context !== undefined && { context }),
+    ...(raw !== undefined && { cause: raw }),
+  };
+}
+
+/**
+ * Le `.name` de `AppError.cause`, pour `log.ts` — JAMAIS `.message`. Centralisé
+ * ici plutôt que répété à chaque site d'appel de service, pour qu'aucun ne
+ * soit tenté de lire autre chose que le nom (I5, règle 1).
+ */
+export function causeName(erreur: AppError): string | undefined {
+  const cause = erreur.cause;
+  return cause instanceof Error ? cause.name : undefined;
+}
+
+/**
+ * Les champs `LogFields` (`log.ts`) qu'un site d'appel de service doit
+ * transmettre pour un échec — V1.1. UNE SEULE fonction, appelée à chaque
+ * `log.error`/`log.warn` de service, pour que le SQLSTATE (`technical`) et le
+ * contexte n'atteignent plus jamais un journal par hasard à un site et pas à
+ * l'autre. La forme correspond à `LogFields` sans l'importer : `log.ts`
+ * n'importe rien d'`errors.ts`, et cette fonction ne porte que `code` (déjà
+ * dans `LogFields`), `technical`, `context`, `causeName`.
+ */
+export function logFieldsFor(erreur: AppError): {
+  readonly code: string;
+  readonly technical?: string;
+  readonly context?: string;
+  readonly causeName?: string;
+} {
+  const nom = causeName(erreur);
+  return {
+    code: erreur.code,
+    ...(erreur.technical !== undefined && { technical: erreur.technical }),
+    ...(erreur.context !== undefined && { context: erreur.context }),
+    ...(nom !== undefined && { causeName: nom }),
+  };
 }
 
 /**

@@ -67,8 +67,32 @@ else note "2 · au moins une policy par table app" "vert"; fi
 # --- 3 · SECURITY DEFINER toujours avec un search_path figé ---------------------
 # Une fonction SECURITY DEFINER sans search_path explicite est une escalade de
 # privilèges classique : l'appelant choisit le schéma, donc le code exécuté.
-defs=$(grep -ciE "SECURITY DEFINER" "$SQL")
-paths=$(grep -A3 -iE "SECURITY DEFINER" "$SQL" | grep -ciE "SET[[:space:]]+search_path")
+#
+# ⚠️ LE PIÈGE DE L'EN-TÊTE S'EST ROUVERT PAR UN AUTRE CHEMIN, corrigé ici.
+# L'en-tête de ce fichier explique qu'on dépouille les commentaires `--` avant
+# de chercher `SECURITY DEFINER`, sinon le contrôle mord sur les commentaires
+# qui PARLENT de SECURITY DEFINER. Exact — mais insuffisant depuis S7b : `030`
+# écrit `SECURITY DEFINER` à l'intérieur de LITTÉRAUX SQL, dans ses
+# `COMMENT ON FUNCTION` (030:647, 758, 824). Ces trois-là ne sont pas des
+# déclarations, ne peuvent pas porter de `search_path`, et faisaient donc
+# compter 29 déclarations pour 26 `search_path` — un ROUGE PERMANENT sur un
+# corpus sain, dont le verdict est « ne rien appliquer avant correction ».
+#
+# C'est le défaut que l'en-tête redoute nommément : « un contrôle qui crie au
+# loup […] finit désactivé, donc protège moins ». Vérifié à la main avant de
+# corriger : les 26 déclarations réelles portent TOUTES leur `search_path` à la
+# ligne suivante ; les 3 surnuméraires sont bien les 3 littéraux de 030.
+#
+# On dépouille donc AUSSI les littéraux entre apostrophes — mais UNIQUEMENT
+# pour ce contrôle-ci, sur une copie séparée. Surtout pas pour tout le
+# fichier : le contrôle 6 cherche des NOMS, qui vivent précisément dans les
+# littéraux des `INSERT` de seed. Le dépouiller globalement rendrait aveugle le
+# seul contrôle qui ait déjà trouvé une identité réelle dans `015`.
+SQL_NOSTR=$(mktemp)
+trap 'rm -f "$SQL" "$SQL_NOSTR"' EXIT
+sed -e "s/'[^']*'//g" "$SQL" > "$SQL_NOSTR"
+defs=$(grep -ciE "SECURITY DEFINER" "$SQL_NOSTR")
+paths=$(grep -A3 -iE "SECURITY DEFINER" "$SQL_NOSTR" | grep -ciE "SET[[:space:]]+search_path")
 if [ "$defs" -gt 0 ] && [ "$paths" -lt "$defs" ]; then
   bad "3 · SECURITY DEFINER + search_path figé" "$defs déclaration(s), $paths search_path"
 else note "3 · SECURITY DEFINER + search_path figé ($defs)" "vert"; fi

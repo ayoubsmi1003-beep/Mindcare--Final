@@ -103,6 +103,16 @@ import { analyzeSession, type AnalyseSeance } from "@/services/jarvis";
  */
 const DELAI_ENREGISTREMENT_MS = 2000;
 
+/**
+ * V1.5 — plafond de LECTURE de la séance. Au-delà, l'écran bascule en ERREUR
+ * avec le mot « délai » (05-UX-CONTRACT.md §2), jamais un squelette perpétuel.
+ *
+ * Distinct de `DELAI_ENREGISTREMENT_MS` ci-dessus, qui est une fenêtre
+ * d'inactivité avant d'écrire — les deux nombres n'ont rien à voir, et les
+ * confondre ferait enregistrer une note toutes les dix secondes.
+ */
+const DELAI_LECTURE_MS = 10_000;
+
 /** Une seconde : le pas du chronomètre et du décompte de verrouillage. */
 const PAS_HORLOGE_MS = 1000;
 
@@ -124,6 +134,29 @@ function chrono(depuisIso: string, jusqua: number): string {
   const s = secondes % 60;
   const pad = (v: number): string => String(v).padStart(2, "0");
   return `${pad(h)}:${pad(m)}:${pad(s)}`;
+}
+
+/**
+ * Ce que le bandeau de durée affiche pour une séance.
+ *
+ * V1.3 — une séance `status==='closed'` FIGE TOUJOURS son affichage, qu'elle
+ * porte ou non un `endedAt`. Avant cette fonction, seul `endedAt===null`
+ * décidait si l'horloge tournait : une clôture administrative d'une séance
+ * orpheline (migration 032, option C — `ended_at` reste `NULL` plutôt que
+ * d'inventer une durée) aurait donc laissé le chronomètre courir
+ * indéfiniment sur une séance déjà fermée — exactement le symptôme
+ * `125:44:26` du 09/08 que cette session corrige. Une durée manquante se dit,
+ * elle ne se déguise pas en horloge qui tourne encore.
+ */
+function dureeAffichee(
+  close: boolean,
+  startedAt: string,
+  endedAt: string | null,
+  maintenant: number,
+): string {
+  if (!close) return chrono(startedAt, maintenant);
+  if (endedAt === null) return fr.consultation.dureeInconnue;
+  return chrono(startedAt, Date.parse(endedAt));
 }
 
 /**
@@ -178,7 +211,12 @@ export default function PageConsultation(): React.JSX.Element {
   const params = useParams<{ id: string }>();
   const id = params.id;
 
-  const { utilisateur, horsLigne: horsLigneSession, deconnecter } = useSessionEcran();
+  const {
+    utilisateur,
+    sessionTranchee,
+    horsLigne: horsLigneSession,
+    deconnecter,
+  } = useSessionEcran();
 
   const [seance, setSeance] = useState<Consultation | null | undefined>(undefined);
   const [amendements, setAmendements] = useState<readonly Amendment[]>([]);
@@ -186,6 +224,18 @@ export default function PageConsultation(): React.JSX.Element {
   const [confirmation, setConfirmation] = useState<string | undefined>(undefined);
   const [horsLigne, setHorsLigne] = useState(false);
   const [envoi, setEnvoi] = useState(false);
+  /**
+   * V1.4 — ÉCHEC DE LECTURE ≠ séance introuvable. Avant cette distinction,
+   * `charger` posait `seance = null` sur TOUT échec (réseau, délai, serveur),
+   * ce qui affichait « Cette séance est introuvable » sur une simple coupure
+   * réseau — un mensonge, et sur un rechargement en cours de séance, une
+   * régression pire : une séance réellement ouverte disparaissait de l'écran.
+   * `seance === null` reste réservé au SEUL cas légitime d'ADR-003
+   * (introuvable et hors périmètre, volontairement indiscernables) ; un échec
+   * de transport passe par `echecLecture` et REMPLACE le contenu par
+   * `BlocErreur` (05-UX-CONTRACT.md §1), sans jamais toucher `seance`.
+   */
+  const [echecLecture, setEchecLecture] = useState(false);
 
   // Saisies. Elles vivent dans l'état de l'écran et NON dans `seance` : un
   // rechargement de la séance pendant la frappe écraserait ce qui est en train
@@ -227,16 +277,46 @@ export default function PageConsultation(): React.JSX.Element {
   const minuteurBrut = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const minuteurSoap = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
+  /**
+   * V1.5 — compteur de génération sur la LECTURE de la séance, même motif que
+   * `generationAnalyse` et que l'écran Finances. Il sert au plafond de délai :
+   * une réponse arrivée APRÈS la bascule en « délai » ne doit pas ressusciter
+   * silencieusement l'écran par-dessus l'erreur affichée.
+   */
+  const generationLecture = useRef(0);
+
   const charger = useCallback(
     (avecSaisies: boolean): void => {
+      const gen = (generationLecture.current += 1);
+
+      // Aucune attente n'est infinie (05-UX-CONTRACT.md §2). Au-delà du
+      // plafond, on bascule en ERREUR avec le mot « délai ». `seance` n'est
+      // PAS touché : sur un rechargement en cours de séance, une lenteur
+      // réseau ne fait pas disparaître une séance déjà lue — c'est la
+      // distinction V1.4 entre échec de lecture et séance introuvable.
+      const minuteur = setTimeout(() => {
+        if (generationLecture.current !== gen) return;
+        setHorsLigne(false);
+        setMessageErreur(fr.delaiDepasse);
+        setEchecLecture(true);
+      }, DELAI_LECTURE_MS);
+
       void getConsultation(id).then((result) => {
+        clearTimeout(minuteur);
+        if (generationLecture.current !== gen) return;
         if (!result.ok) {
           setHorsLigne(result.error.code === "hors-ligne");
           setMessageErreur(result.error.message);
-          setSeance(null);
+          setEchecLecture(true);
+          // `seance` N'EST PAS TOUCHÉ : un échec de transport ne doit ni
+          // fabriquer un « introuvable » (ADR-003 reste réservée au cas où la
+          // porte a réellement répondu zéro ligne) ni faire disparaître une
+          // séance déjà chargée pendant un rechargement en cours de travail.
           return;
         }
         setHorsLigne(false);
+        setEchecLecture(false);
+        setMessageErreur(undefined);
         setSeance(result.data);
         if (result.data === null) return;
 
@@ -271,10 +351,14 @@ export default function PageConsultation(): React.JSX.Element {
   // ouverture de dossier À CHAQUE APPEL, et interroger pour un visiteur qu'on
   // redirige écrirait une trace `fiche` pour une consultation qui n'a pas eu
   // lieu. La preuve I4 de S3 doit rester vraie.
+  //
+  // V1.5 — le garde est `sessionTranchee`, PAS `utilisateur` : c'est
+  // `getSession()` qui tranche la session, et la trace `fiche` reste
+  // conditionnée à une session existante. Le profil (I12) part en parallèle.
   useEffect(() => {
-    if (utilisateur === undefined) return;
+    if (sessionTranchee !== true) return;
     charger(true);
-  }, [utilisateur, charger]);
+  }, [sessionTranchee, charger]);
 
   useEffect(() => {
     const t = setInterval(() => setMaintenant(Date.now()), PAS_HORLOGE_MS);
@@ -565,12 +649,29 @@ export default function PageConsultation(): React.JSX.Element {
   }
 
   const contenu = ((): React.JSX.Element => {
+    // V1.4 — ERREUR remplace le contenu, elle ne se superpose ni à VIDE ni à
+    // CHARGEMENT (05-UX-CONTRACT.md §1). Testé avant `seance === undefined` :
+    // un rechargement qui échoue en cours de séance doit basculer en erreur,
+    // pas revenir à un squelette qui ne se résoudra jamais.
+    if (echecLecture) {
+      return (
+        <BlocErreur
+          message={messageErreur ?? fr.erreurs.indisponible}
+          action={<Bouton onClick={() => charger(false)}>{fr.actions.reessayer}</Bouton>}
+        />
+      );
+    }
+
     if (seance === undefined) return <Squelette lignes={6} />;
 
     if (seance === null) {
+      // SEUL cas légitime de VIDE ici : la porte a répondu zéro ligne.
+      // ADR-003 impose que « introuvable » et « hors périmètre » restent
+      // indiscernables — mais un échec de transport n'est PLUS mélangé à ce
+      // message depuis la branche `echecLecture` ci-dessus.
       return (
         <EtatVide
-          message={messageErreur ?? fr.consultation.introuvable}
+          message={fr.consultation.introuvable}
           action={<LienBouton href="/agenda">{fr.agenda.retourALAgenda}</LienBouton>}
         />
       );
@@ -926,12 +1027,10 @@ export default function PageConsultation(): React.JSX.Element {
             ) : (
               <div className="flex flex-wrap items-center gap-4">
                 {/* Le chronomètre s'arrête à la clôture : une séance close
-                    affiche sa durée réelle, pas un compteur qui continue. */}
+                    affiche sa durée réelle si elle est connue, ou le dit
+                    honnêtement sinon (V1.3) — jamais un compteur qui continue. */}
                 <span className="font-num text-num tabular-nums text-ink-900">
-                  {chrono(
-                    seance.startedAt,
-                    seance.endedAt === null ? maintenant : Date.parse(seance.endedAt),
-                  )}
+                  {dureeAffichee(seanceClose, seance.startedAt, seance.endedAt, maintenant)}
                 </span>
                 <LienBouton href="/agenda" rang="discret">
                   {fr.agenda.retourALAgenda}
@@ -945,7 +1044,14 @@ export default function PageConsultation(): React.JSX.Element {
           <PanneauInfo ton="positif">{confirmation}</PanneauInfo>
         )}
 
-        {messageErreur === undefined || seance === null ? null : (
+        {/* V1.4 — un échec de LECTURE (chargement/rechargement de la séance)
+            est rendu par `contenu` lui-même, qui REMPLACE l'espace de travail
+            (05-UX-CONTRACT.md §1). Ce bloc-ci ne reste que pour une erreur
+            D'ACTION (enregistrement, signature, amendement) sur une séance
+            déjà chargée et affichée — un cas légitimement différent, où le
+            travail clinique visible ne doit pas disparaître pour un
+            enregistrement qui a échoué. */}
+        {messageErreur === undefined || seance === null || echecLecture ? null : (
           <BlocErreur
             message={messageErreur}
             action={<Bouton onClick={() => charger(false)}>{fr.actions.reessayer}</Bouton>}

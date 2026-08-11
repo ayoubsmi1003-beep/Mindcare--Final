@@ -35,6 +35,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { AppShell } from "@/components/AppShell";
+import { Squelette } from "@/components/ui";
 import { fr } from "@/i18n/fr";
 import { getSession, signOut } from "@/services/auth";
 import { getCurrentUser, type CurrentUser } from "@/services/authz";
@@ -47,9 +48,25 @@ function monogramme(prenom: string, nom: string): string {
   return initiales.trim() === "" ? "?" : initiales;
 }
 
+/**
+ * V1.5 — au-delà de ce délai sans réponse, l'écran bascule en ERREUR avec le
+ * mot « délai » (05-UX-CONTRACT.md §2). Aucune attente n'est infinie : un
+ * squelette qui respire pour toujours est un spinner sans fin déguisé.
+ *
+ * La requête n'est pas annulée (les services ne l'exposent pas) ; le drapeau
+ * `annule` de l'effet fait ignorer une réponse arrivée après coup.
+ */
+const DELAI_CHARGEMENT_MS = 10_000;
+
 export default function PagePatients(): React.JSX.Element {
   const router = useRouter();
   const [utilisateur, setUtilisateur] = useState<CurrentUser | null | undefined>(undefined);
+  // V1.5 — le feu vert de LECTURE, distinct du profil : c'est `getSession()`
+  // qui tranche la session, et la recherche n'a pas besoin du profil (qui ne
+  // sert qu'à composer la navigation, I12). Les deux partent en parallèle au
+  // lieu de s'enchaîner. La garantie d'audit ne bouge pas : `search_patients`
+  // n'est appelée qu'une fois la session tranchée POSITIVEMENT.
+  const [sessionTranchee, setSessionTranchee] = useState<boolean | undefined>(undefined);
   const [saisie, setSaisie] = useState("");
   const [requete, setRequete] = useState("");
   const [page, setPage] = useState<Page<PatientListItem> | undefined>(undefined);
@@ -76,13 +93,18 @@ export default function PagePatients(): React.JSX.Element {
       if (!result.ok) {
         // Réponse indéterminée : on reste sur place et on le dit.
         setHorsLigne(result.error.code === "hors-ligne");
+        setSessionTranchee(false);
         setUtilisateur(null);
         return;
       }
       if (result.data === null) {
+        // Tranchée NÉGATIVEMENT : surtout pas `true`. Interroger ici écrirait
+        // une ligne d'audit pour une consultation qui n'aura pas lieu.
+        setSessionTranchee(false);
         router.replace("/connexion");
         return;
       }
+      setSessionTranchee(true);
       void getCurrentUser().then((profil) => {
         if (annule) return;
         setUtilisateur(profil.ok ? profil.data : null);
@@ -98,12 +120,22 @@ export default function PagePatients(): React.JSX.Element {
   // pour rien, et la porte `search_patients` journalise CHAQUE appel — on
   // écrirait donc une ligne d'audit pour une consultation qui n'a pas eu lieu.
   useEffect(() => {
-    if (utilisateur === undefined) return;
+    if (sessionTranchee !== true) return;
     let annule = false;
     setChargement(true);
+
+    const minuteur = setTimeout(() => {
+      if (annule) return;
+      setHorsLigne(false);
+      setMessageErreur(fr.delaiDepasse);
+      setPage(undefined);
+      setChargement(false);
+    }, DELAI_CHARGEMENT_MS);
+
     // Propriété OMISE plutôt que passée à `undefined` : sous
     // `exactOptionalPropertyTypes`, les deux ne sont pas la même chose.
     void searchPatients(requete === "" ? {} : { query: requete }).then((result) => {
+      clearTimeout(minuteur);
       if (annule) return;
       if (!result.ok) {
         setHorsLigne(result.error.code === "hors-ligne");
@@ -119,8 +151,9 @@ export default function PagePatients(): React.JSX.Element {
     });
     return () => {
       annule = true;
+      clearTimeout(minuteur);
     };
-  }, [requete, utilisateur]);
+  }, [requete, sessionTranchee]);
 
 
   // Fermeture de session depuis l'interface. `replace` et pas `push` : le
@@ -132,10 +165,44 @@ export default function PagePatients(): React.JSX.Element {
     });
   }
 
-  if (utilisateur === undefined) {
+  // V1.5 — LA SESSION TRANCHÉE NÉGATIVEMENT A SA PROPRE SORTIE.
+  //
+  // Défaut trouvé et corrigé dans la session qui a introduit `sessionTranchee` :
+  // le garde de RENDU ci-dessous teste `utilisateur === undefined`, alors que le
+  // garde d'EFFET teste `sessionTranchee !== true`. Hors ligne, `getSession()`
+  // échoue → `sessionTranchee = false` ET `utilisateur = null` : le rendu passait
+  // le premier garde, la recherche ne partait jamais, et `chargement` restait à
+  // `true`. Le squelette respirait alors SANS FIN — l'attente infinie que V1.5
+  // supprime (05-UX-CONTRACT.md §2).
+  //
+  // ⚠️ La condition est `sessionTranchee === false`, PAS `utilisateur === null` :
+  // session lue mais PROFIL illisible (`sessionTranchee === true`,
+  // `utilisateur === null`) doit continuer à afficher la liste avec la
+  // navigation la plus étroite — c'est le « défaut sûr » documenté plus bas.
+  if (sessionTranchee === false) {
     return (
-      <main style={{ padding: "var(--s-8)", fontFamily: "var(--font-ui)", color: "var(--ink-500)" }}>
-        {fr.etats.chargement}
+      <main style={{ display: "flex", flexDirection: "column", gap: "var(--s-4)", padding: "var(--s-8)" }}>
+        {horsLigne ? (
+          <p role="status" style={{ padding: "var(--s-3) var(--s-4)", borderRadius: "var(--r-md)", background: "var(--sunken)", color: "var(--ink-700)", fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)" }}>
+            {fr.etats.horsLigne}
+          </p>
+        ) : null}
+        <div role="alert" style={{ padding: "var(--s-3) var(--s-4)", borderRadius: "var(--r-md)", background: "var(--attention-bg)", color: "var(--ink-700)", fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)" }}>
+          <strong style={{ display: "block", color: "var(--attention)", fontSize: "var(--text-label-size)", lineHeight: "var(--text-label-leading)", letterSpacing: "var(--text-label-tracking)" }}>
+            {fr.erreur.titre}
+          </strong>
+          {horsLigne ? fr.erreurs["hors-ligne"] : fr.erreurs["non-authentifie"]}
+        </div>
+      </main>
+    );
+  }
+
+  if (utilisateur === undefined) {
+    // V1.5 — squelette, pas un texte (05-UX-CONTRACT.md §2) : l'écran répond
+    // sous les 100 ms avec la FORME du contenu réel, pas un message d'attente.
+    return (
+      <main style={{ padding: "var(--s-8)" }}>
+        <Squelette lignes={6} />
       </main>
     );
   }
@@ -228,11 +295,11 @@ export default function PagePatients(): React.JSX.Element {
         </div>
       ) : null}
 
-      {chargement ? (
-        <p style={{ color: "var(--ink-500)", fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)" }}>
-          {fr.etats.chargement}
-        </p>
-      ) : null}
+      {/* V1.5 — squelette, jamais un mot d'attente (05-UX-CONTRACT.md §2) : il
+          occupe la place des lignes de la liste, de sorte que l'arrivée des
+          dossiers ne décale rien. Un « Chargement… » d'une ligne, remplacé par
+          six lignes de résultats, déplace l'écran à l'instant du clic. */}
+      {chargement ? <Squelette lignes={6} /> : null}
 
       {!chargement && page !== undefined && page.rows.length === 0 ? (
         /* État vide : une phrase --ink-500, aucune illustration (§4 règle 7).
