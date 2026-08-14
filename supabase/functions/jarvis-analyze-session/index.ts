@@ -15,6 +15,7 @@ import { createClient } from "npm:@supabase/supabase-js@2";
 import { z } from "npm:zod@3";
 
 import { assertSafe, BoundaryViolation, pseudonymize, rehydrate } from "../_shared/pseudonymize.ts";
+import { enTetesCors, reponsePrealable } from "../_shared/cors.ts";
 import { llm } from "../_shared/external-call.ts";
 import { getPromptHash, PROMPT_VERSION, SYSTEM_PROMPT_V1 } from "./prompt.ts";
 
@@ -152,31 +153,34 @@ function estCorpsValide(valeur: unknown): valeur is CorpsRequete {
   );
 }
 
-function reponseEchec(code: string, message: string): Response {
+function reponseEchec(req: Request, code: string, message: string): Response {
   return new Response(JSON.stringify({ ok: false, error: { code, message } }), {
     status: 200,
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", ...enTetesCors(req) },
   });
 }
 
 Deno.serve(async (req) => {
+  const prealable = reponsePrealable(req);
+  if (prealable !== null) return prealable;
+
   if (req.method !== "POST") {
-    return reponseEchec("methode-invalide", "Méthode non supportée.");
+    return reponseEchec(req, "methode-invalide", "Méthode non supportée.");
   }
 
   const authorization = req.headers.get("Authorization");
   if (authorization === null) {
-    return reponseEchec("non-authentifie", "Assistant indisponible.");
+    return reponseEchec(req, "non-authentifie", "Assistant indisponible.");
   }
 
   let corps: unknown;
   try {
     corps = await req.json();
   } catch {
-    return reponseEchec("requete-invalide", "Requête invalide.");
+    return reponseEchec(req, "requete-invalide", "Requête invalide.");
   }
   if (!estCorpsValide(corps)) {
-    return reponseEchec("requete-invalide", "Requête invalide.");
+    return reponseEchec(req, "requete-invalide", "Requête invalide.");
   }
 
   // ── Étape 2 : client scopé au JWT de l'appelant — JAMAIS le service role. ──
@@ -187,7 +191,7 @@ Deno.serve(async (req) => {
   const supabaseUrl = Deno.env.get("SUPABASE_URL");
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY");
   if (supabaseUrl === undefined || supabaseAnonKey === undefined) {
-    return reponseEchec("configuration", "Assistant indisponible.");
+    return reponseEchec(req, "configuration", "Assistant indisponible.");
   }
 
   const client = createClient(supabaseUrl, supabaseAnonKey, {
@@ -199,7 +203,7 @@ Deno.serve(async (req) => {
     p_id: corps.consultationId,
   });
   if (erreurConsultation !== null) {
-    return reponseEchec("indisponible", "Assistant indisponible.");
+    return reponseEchec(req, "indisponible", "Assistant indisponible.");
   }
 
   const consultation = (consultationRows as readonly ConsultationRow[] | null)?.[0];
@@ -208,7 +212,7 @@ Deno.serve(async (req) => {
 
   // ── Étape 3 : sans patient ou sans notes, pas d'appel LLM sur du vide. ──
   if (patientId === null || rawNotes === null || rawNotes.trim() === "") {
-    return reponseEchec("regle-metier", "Aucune note à analyser pour cette séance.");
+    return reponseEchec(req, "regle-metier", "Aucune note à analyser pour cette séance.");
   }
 
   const { data: previousRows } = await client.rpc("get_previous_note", {
@@ -249,7 +253,7 @@ Deno.serve(async (req) => {
     assertSafe(bloqueSans, identites);
   } catch (cause) {
     if (cause instanceof BoundaryViolation) {
-      return reponseEchec("frontiere", "Assistant indisponible.");
+      return reponseEchec(req, "frontiere", "Assistant indisponible.");
     }
     throw cause;
   }
@@ -272,7 +276,7 @@ Deno.serve(async (req) => {
   });
 
   if (!premierAppel.ok) {
-    return reponseEchec(premierAppel.error.code, premierAppel.error.message);
+    return reponseEchec(req, premierAppel.error.code, premierAppel.error.message);
   }
 
   let validee = validerEtNettoyer(premierAppel.data);
@@ -290,13 +294,13 @@ Deno.serve(async (req) => {
     });
 
     if (!reformulation.ok) {
-      return reponseEchec(reformulation.error.code, reformulation.error.message);
+      return reponseEchec(req, reformulation.error.code, reformulation.error.message);
     }
     validee = validerEtNettoyer(reformulation.data);
   }
 
   if (validee === null) {
-    return reponseEchec("indisponible", "Assistant indisponible.");
+    return reponseEchec(req, "indisponible", "Assistant indisponible.");
   }
 
   // ── Réhydratation — les jetons redeviennent les identités d'origine. ──
@@ -313,6 +317,6 @@ Deno.serve(async (req) => {
 
   return new Response(JSON.stringify({ ok: true, data: resultat }), {
     status: 200,
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", ...enTetesCors(req) },
   });
 });

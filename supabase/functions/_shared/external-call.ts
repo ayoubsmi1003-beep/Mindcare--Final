@@ -1,5 +1,7 @@
 /**
- * `external-call.ts` — LE SEUL FICHIER DU DÉPÔT QUI APPELLE OPENROUTER.
+ * `external-call.ts` — LE SEUL FICHIER DU DÉPÔT QUI APPELLE UN SERVICE EXTERNE.
+ * (OpenRouter pour le texte ; depuis V2, Groq pour la transcription et
+ * ElevenLabs pour la synthèse — voir §VOIX en bas de fichier.)
  *
  * `scripts/preflight.sh` §1 n'exempte que ce chemin LITTÉRAL du grep
  * anti-fetch. Ne pas renommer ce fichier, même si `02-SECURITY-BOUNDARY.md`
@@ -15,6 +17,18 @@
 
 // deno-lint-ignore-file no-explicit-any
 import postgres from "npm:postgres@3";
+
+/**
+ * Motif du franchissement de frontière. Fermé, et fermé DEUX FOIS : ici par le
+ * type, et en base par `boundary_crossings_purpose_check` (034). Le type seul
+ * ne suffirait pas — il disparaît à la compilation, la contrainte non.
+ *
+ * `voix-entree` et `voix-sortie` ne sont pas une seule valeur `voix` parce que
+ * les deux sens ne portent pas le même risque : à l'entrée sort de l'AUDIO, que
+ * rien ne sait pseudonymiser ; à la sortie sort du TEXTE déjà composé. 034
+ * développe le raisonnement.
+ */
+export type BoundaryPurpose = "jarvis" | "voix-entree" | "voix-sortie";
 
 export type LlmRole = "system" | "user";
 
@@ -36,6 +50,43 @@ export interface LlmProvider {
     readonly model: string;
     readonly timeoutMs: number;
   }): Promise<{ readonly text: string; readonly tokensIn: number; readonly tokensOut: number }>;
+}
+
+/**
+ * Transcription — audio vers texte. Séparée de `LlmProvider` et non greffée
+ * dessus : `complete()` prend des messages et rend du texte, `transcribe()`
+ * prend des octets et rend du texte. Les réunir derrière une seule interface
+ * obligerait chaque implémentation à porter des champs qui ne la concernent
+ * pas, et c'est ainsi qu'un fournisseur de texte finit par recevoir de l'audio.
+ *
+ * `audio` est un `Uint8Array` EN MÉMOIRE. Il n'existe aucun chemin d'écriture
+ * disque dans ce fichier — ni `Deno.writeFile`, ni `Deno.makeTempFile`, ni
+ * flux vers `/tmp`. ADR-009 l'exige et c'est vérifiable par lecture : le seul
+ * usage d'`audio` est le corps du `fetch`.
+ */
+export interface SttProvider {
+  readonly name: string;
+  transcribe(req: {
+    readonly audio: Uint8Array;
+    readonly mimeType: string;
+    readonly language: string;
+    readonly model: string;
+    readonly timeoutMs: number;
+  }): Promise<{ readonly text: string }>;
+}
+
+/**
+ * Synthèse — texte vers audio. L'audio rendu ne touche pas davantage le disque :
+ * il remonte à l'appelant, qui le renvoie au navigateur et l'oublie.
+ */
+export interface TtsProvider {
+  readonly name: string;
+  synthesize(req: {
+    readonly text: string;
+    readonly voiceId: string;
+    readonly model: string;
+    readonly timeoutMs: number;
+  }): Promise<{ readonly audio: Uint8Array; readonly mimeType: string }>;
 }
 
 export type LlmResult<T> =
@@ -200,7 +251,9 @@ function estTransitoire(cause: unknown): boolean {
 }
 
 export interface LlmRequest {
-  readonly purpose: "jarvis";
+  /** Toujours `"jarvis"` pour un appel de texte. Les deux autres motifs sont
+   *  réservés à la voix et passent par `stt()` / `tts()`. */
+  readonly purpose: Extract<BoundaryPurpose, "jarvis">;
   /** §3.4 n°1 — le numéro de version du prompt système, jamais deviné à l'audit. */
   readonly promptVersion: string;
   /** Hash du prompt système, calculé une fois dans `prompt.ts`, jamais recalculé ici. */
@@ -222,7 +275,7 @@ const TIMEOUT_MS_DEFAUT = 10_000;
  * réussir faussement — elle est seulement avalée, jamais remontée à l'appelant.
  */
 async function journaliser(entree: {
-  readonly purpose: "jarvis";
+  readonly purpose: BoundaryPurpose;
   readonly provider: string;
   readonly model: string;
   readonly promptVersion: string;
@@ -325,4 +378,361 @@ export async function llm(
     return llmErr("configuration", "Assistant indisponible.");
   }
   return llmErr("indisponible", "Assistant indisponible.");
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// VOIX — ADR-024. Deux sens, deux motifs, un seul point de sortie.
+// ═══════════════════════════════════════════════════════════════════════════
+//
+// CE QUE CETTE SECTION NE FAIT PAS, ET POURQUOI C'EST LE POINT DÉLICAT.
+// Elle ne pseudonymise rien, dans aucun des deux sens, et ce n'est pas un
+// oubli — c'est le constat central d'ADR-024 :
+//   · à l'ENTRÉE, ce qui sort est du SON. « Ouvre le dossier de Belkacem » part
+//     avec le nom dedans. `pseudonymize.ts` traite le texte PRODUIT par la
+//     transcription : il arrive une étape trop tard, par construction. Il
+//     n'existe aucune façon de pseudonymiser un son.
+//   · à la SORTIE, le texte nomme délibérément la patiente — « Karim Belkacem,
+//     jeudi 15 h ». Le pseudonymiser ferait dire « P1, jeudi 15 h » à la
+//     synthèse : la fonctionnalité disparaîtrait sans que le risque change de
+//     nature, puisque c'est précisément ce nom que la praticienne demande à
+//     entendre.
+//
+// LA VOIX CLOUD N'EST DONC PAS SÛRE EN SOI. Elle est légitime à une SEULE
+// condition, celle qu'ADR-024 reprend d'ADR-016 : la base ne contient que des
+// données synthétiques. Une transcription de données synthétiques ne franchit
+// ni R1 ni la loi 18-07, parce qu'il n'y a rien à protéger.
+//
+// CETTE CONDITION EST DONC VÉRIFIÉE, PAS SUPPOSÉE. `garderVoix()` interroge
+// `app.is_cloud_dev()` — la fonction que le déclencheur
+// `assert_synthetic_when_cloud` (016) consulte lui-même — avant chaque appel.
+// Le jour de la bascule au cabinet, `app.deployment` passe à `self-hosted`, et
+// la voix cloud cesse de fonctionner d'elle-même, sans qu'on ait à se souvenir
+// de la débrancher. Une checklist qu'on peut oublier n'est pas une frontière ;
+// une porte qui refuse en est une.
+//
+// Deux verrous, donc, et il faut les DEUX :
+//   1. `VOICE_PROVIDER=cloud`      — le choix explicite de l'exploitant ;
+//   2. `app.is_cloud_dev() = true` — l'état réel de la base.
+
+const TIMEOUT_VOIX_MS_DEFAUT = 15_000;
+
+/** Groq, `whisper-large-v3-turbo` par défaut (ADR-024). Surchargeable. */
+const STT_MODEL_DEFAUT = "whisper-large-v3-turbo";
+/** ElevenLabs. `multilingual` : la voix française est un CHOIX de voix, pas de modèle. */
+const TTS_MODEL_DEFAUT = "eleven_multilingual_v2";
+
+/**
+ * Les deux verrous d'ADR-024. Rend `null` si la voix est autorisée, sinon
+ * l'erreur typée à renvoyer telle quelle.
+ *
+ * ⚠️ AUCUN REPLI SILENCIEUX. Si `VOICE_PROVIDER` vaut `local`, cette fonction
+ * REFUSE au lieu d'appeler le cloud : le mode local est une INSTALLATION
+ * (whisper.cpp + Piper), pas un chemin de code de ce fichier. Se rabattre sur
+ * le cloud « en attendant » serait exactement la fuite qu'ADR-024 interdit, et
+ * elle serait invisible.
+ */
+async function garderVoix(): Promise<LlmResult<never> | null> {
+  const mode = Deno.env.get("VOICE_PROVIDER");
+  if (mode !== "cloud") {
+    return llmErr(
+      "configuration",
+      "Voix indisponible : le mode vocal cloud n'est pas activé.",
+    );
+  }
+
+  const dsn = Deno.env.get("SUPABASE_DB_URL");
+  if (dsn === undefined || dsn === "") {
+    // Impossible de vérifier l'état de la base : on REFUSE. Le défaut sûr est
+    // celui dont la conséquence est réparable — un refus se corrige, une fuite
+    // ne se rattrape pas. Même sens de défaut que `getDeploymentEnvironment`.
+    return llmErr("configuration", "Voix indisponible : état du déploiement invérifiable.");
+  }
+
+  const sql = postgres(dsn, { max: 1 });
+  try {
+    const lignes = await sql<{ cloud: boolean }[]>`SELECT app.is_cloud_dev() AS cloud`;
+    if (lignes[0]?.cloud !== true) {
+      return llmErr(
+        "frontiere",
+        "Voix indisponible : la base n'est pas en mode développement synthétique.",
+      );
+    }
+    return null;
+  } catch {
+    return llmErr("configuration", "Voix indisponible : état du déploiement invérifiable.");
+  } finally {
+    await sql.end({ timeout: 1 });
+  }
+}
+
+/**
+ * Groq — transcription. Multipart, parce que l'API l'exige ; l'audio ne
+ * transite que par ce `FormData`, jamais par un fichier.
+ */
+export const groqSttProvider: SttProvider = {
+  name: "groq",
+
+  async transcribe(req) {
+    const clef = Deno.env.get("GROQ_API_KEY");
+    if (clef === undefined || clef === "") {
+      throw new Error("configuration: GROQ_API_KEY absente");
+    }
+
+    const controller = new AbortController();
+    const minuteur = setTimeout(() => controller.abort(), req.timeoutMs);
+
+    try {
+      const form = new FormData();
+      // Le nom de fichier est une exigence de forme du multipart, pas un
+      // fichier : rien n'est créé sur le disque. Il est CONSTANT et anodin —
+      // y mettre un nom de patiente ferait fuir une identité par les
+      // métadonnées de la requête, ce que personne ne penserait à relire.
+      form.append("file", new Blob([req.audio], { type: req.mimeType }), "audio");
+      form.append("model", req.model);
+      form.append("language", req.language);
+      form.append("response_format", "json");
+
+      const reponse = await fetch("https://api.groq.com/openai/v1/audio/transcriptions", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${clef}` },
+        body: form,
+        signal: controller.signal,
+      });
+
+      if (!reponse.ok) {
+        const transitoire = reponse.status >= 500 || reponse.status === 429;
+        throw new Error(transitoire ? `transitoire: HTTP ${reponse.status}` : `permanent: HTTP ${reponse.status}`);
+      }
+
+      const corps: unknown = await reponse.json();
+      const texte = (corps as { text?: unknown } | null)?.text;
+      if (typeof texte !== "string") {
+        throw new Error("permanent: réponse Groq sans transcription");
+      }
+
+      return { text: texte };
+    } catch (cause) {
+      if (controller.signal.aborted) throw new Error("transitoire: timeout");
+      if (cause instanceof TypeError) throw new Error("transitoire: réseau");
+      throw cause;
+    } finally {
+      clearTimeout(minuteur);
+    }
+  },
+};
+
+/** ElevenLabs — synthèse. Rend les octets audio, qui ne sont jamais persistés. */
+export const elevenLabsTtsProvider: TtsProvider = {
+  name: "elevenlabs",
+
+  async synthesize(req) {
+    const clef = Deno.env.get("ELEVENLABS_API_KEY");
+    if (clef === undefined || clef === "") {
+      throw new Error("configuration: ELEVENLABS_API_KEY absente");
+    }
+
+    const controller = new AbortController();
+    const minuteur = setTimeout(() => controller.abort(), req.timeoutMs);
+
+    try {
+      const reponse = await fetch(
+        `https://api.elevenlabs.io/v1/text-to-speech/${encodeURIComponent(req.voiceId)}`,
+        {
+          method: "POST",
+          headers: {
+            "xi-api-key": clef,
+            "Content-Type": "application/json",
+            Accept: "audio/mpeg",
+          },
+          body: JSON.stringify({ text: req.text, model_id: req.model }),
+          signal: controller.signal,
+        },
+      );
+
+      if (!reponse.ok) {
+        const transitoire = reponse.status >= 500 || reponse.status === 429;
+        throw new Error(transitoire ? `transitoire: HTTP ${reponse.status}` : `permanent: HTTP ${reponse.status}`);
+      }
+
+      const octets = new Uint8Array(await reponse.arrayBuffer());
+      if (octets.byteLength === 0) {
+        throw new Error("permanent: réponse ElevenLabs vide");
+      }
+
+      return { audio: octets, mimeType: "audio/mpeg" };
+    } catch (cause) {
+      if (controller.signal.aborted) throw new Error("transitoire: timeout");
+      if (cause instanceof TypeError) throw new Error("transitoire: réseau");
+      throw cause;
+    } finally {
+      clearTimeout(minuteur);
+    }
+  },
+};
+
+export interface SttRequest {
+  readonly audio: Uint8Array;
+  readonly mimeType: string;
+  /** `fr` par défaut — ADR-024 : la praticienne parle français. */
+  readonly language?: string;
+  /** uuid aléatoire par appel — JAMAIS le patient_id. Même règle que `LlmRequest`. */
+  readonly sessionToken: string;
+  readonly timeoutMs?: number;
+}
+
+export interface TtsRequest {
+  readonly text: string;
+  readonly voiceId: string;
+  readonly sessionToken: string;
+  readonly timeoutMs?: number;
+}
+
+/**
+ * Transcription — point d'entrée unique. Même patron que `llm()` : deux
+ * verrous, un seul retry sur échec transitoire, journalisation best-effort,
+ * erreur typée.
+ *
+ * ⚠️ `charsOut` PORTE LA LONGUEUR DE LA TRANSCRIPTION, JAMAIS SON CONTENU, et
+ * `tokensIn`/`tokensOut` restent NULL : Groq ne facture pas au jeton sur ce
+ * point de terminaison, et inventer un chiffre serait pire que l'absence. Un
+ * compteur documente le franchissement ; un extrait le reproduirait dans la
+ * table même qui existe pour l'éviter (028).
+ */
+export async function stt(
+  req: SttRequest,
+  provider: SttProvider = groqSttProvider,
+): Promise<LlmResult<string>> {
+  const refus = await garderVoix();
+  if (refus !== null) return refus;
+
+  const model = Deno.env.get("STT_MODEL") ?? STT_MODEL_DEFAUT;
+  const timeoutMs = req.timeoutMs ?? TIMEOUT_VOIX_MS_DEFAUT;
+  const depart = Date.now();
+
+  let derniereErreur: unknown;
+  for (let tentative = 0; tentative < 2; tentative++) {
+    try {
+      const resultat = await provider.transcribe({
+        audio: req.audio,
+        mimeType: req.mimeType,
+        language: req.language ?? "fr",
+        model,
+        timeoutMs,
+      });
+
+      await journaliser({
+        purpose: "voix-entree",
+        provider: provider.name,
+        model,
+        promptVersion: "n/a",
+        promptHash: "n/a",
+        sessionToken: req.sessionToken,
+        charsOut: resultat.text.length,
+        tokensIn: null,
+        tokensOut: null,
+        estimatedCostUsd: null,
+        outcome: "ok",
+        latencyMs: Date.now() - depart,
+      });
+
+      return llmOk(resultat.text);
+    } catch (cause) {
+      derniereErreur = cause;
+      if (tentative === 0 && estTransitoire(cause)) continue;
+      break;
+    }
+  }
+
+  return await echecVoix("voix-entree", provider.name, model, req.sessionToken, depart, derniereErreur,
+    "Transcription indisponible.");
+}
+
+/**
+ * Synthèse — point d'entrée unique. `charsOut` compte les caractères ENVOYÉS,
+ * ce qui est exactement le chiffre qu'on voudra le jour de la bascule locale :
+ * combien de texte nommant des patientes a quitté la machine.
+ */
+export async function tts(
+  req: TtsRequest,
+  provider: TtsProvider = elevenLabsTtsProvider,
+): Promise<LlmResult<{ readonly audio: Uint8Array; readonly mimeType: string }>> {
+  const refus = await garderVoix();
+  if (refus !== null) return refus;
+
+  const model = Deno.env.get("TTS_MODEL") ?? TTS_MODEL_DEFAUT;
+  const timeoutMs = req.timeoutMs ?? TIMEOUT_VOIX_MS_DEFAUT;
+  const depart = Date.now();
+
+  let derniereErreur: unknown;
+  for (let tentative = 0; tentative < 2; tentative++) {
+    try {
+      const resultat = await provider.synthesize({
+        text: req.text,
+        voiceId: req.voiceId,
+        model,
+        timeoutMs,
+      });
+
+      await journaliser({
+        purpose: "voix-sortie",
+        provider: provider.name,
+        model,
+        promptVersion: "n/a",
+        promptHash: "n/a",
+        sessionToken: req.sessionToken,
+        charsOut: req.text.length,
+        tokensIn: null,
+        tokensOut: null,
+        estimatedCostUsd: null,
+        outcome: "ok",
+        latencyMs: Date.now() - depart,
+      });
+
+      return llmOk(resultat);
+    } catch (cause) {
+      derniereErreur = cause;
+      if (tentative === 0 && estTransitoire(cause)) continue;
+      break;
+    }
+  }
+
+  return await echecVoix("voix-sortie", provider.name, model, req.sessionToken, depart, derniereErreur,
+    "Synthèse vocale indisponible.");
+}
+
+/**
+ * Journalise un échec de voix et rend l'erreur typée. Factorisé parce que les
+ * deux sens échouent de la même façon — pas pour économiser des lignes, mais
+ * pour qu'une correction de la classification des pannes n'ait pas à être
+ * faite deux fois, ce qui est la façon habituelle de n'en corriger qu'une.
+ */
+async function echecVoix<T>(
+  purpose: Extract<BoundaryPurpose, "voix-entree" | "voix-sortie">,
+  provider: string,
+  model: string,
+  sessionToken: string,
+  depart: number,
+  cause: unknown,
+  message: string,
+): Promise<LlmResult<T>> {
+  const texte = cause instanceof Error ? cause.message : "";
+  const estTimeout = texte.includes("timeout");
+  const estConfiguration = texte.startsWith("configuration:");
+
+  await journaliser({
+    purpose,
+    provider,
+    model,
+    promptVersion: "n/a",
+    promptHash: "n/a",
+    sessionToken,
+    charsOut: null,
+    tokensIn: null,
+    tokensOut: null,
+    estimatedCostUsd: null,
+    outcome: estTimeout ? "timeout" : "error",
+    latencyMs: Date.now() - depart,
+  });
+
+  return estConfiguration ? llmErr("configuration", message) : llmErr("indisponible", message);
 }

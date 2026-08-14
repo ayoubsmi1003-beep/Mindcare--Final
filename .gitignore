@@ -41,3 +41,10 @@ Thumbs.db
 
 # Supabase local dev
 supabase/.temp/
+
+# Rapports de mesure au navigateur (V2). Un ARTEFACT DE MESURE N'EST PAS UN
+# LIVRABLE : il ne vaut que pour l'arbre, le HEAD et l'heure où il a été pris,
+# et `checkpoint-v2.sh` le refuse dès que l'un des trois a bougé. Committé, il
+# ferait croire à un vert qui voyage avec le dépôt — exactement le « souvenir »
+# que ce mécanisme existe pour empêcher.
+scripts/.mesures/

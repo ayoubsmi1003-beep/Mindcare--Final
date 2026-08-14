@@ -312,6 +312,10 @@
      * garde-fou n'est pas une preuve de conformité, c'est un filet.
      * ------------------------------------------------------------------ */
     --size-0: 0;
+    /* Plan du panneau Jarvis. Un seul calque, nommé : un `zIndex: 50` écrit
+       dans un composant est un chiffre que personne ne peut arbitrer face au
+       suivant. V2. */
+    --z-panneau: 50;
     --size-full: 100%;
     --size-viewport: 100vh;
 

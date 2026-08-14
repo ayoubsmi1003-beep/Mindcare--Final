@@ -572,6 +572,61 @@ export const fr = {
    */
   delaiDepasse:
     "Le délai de réponse a été dépassé. Aucune donnée n'a été modifiée. Réessayez.",
+
+  /**
+   * V2 — Jarvis. Chaque message dit ce qui s'est passé, ce qui n'a PAS été
+   * modifié, et quoi faire ensuite. Aucun ne cite une valeur de ligne (règle 1),
+   * et aucun ne distingue « introuvable » de « hors périmètre » (ADR-003).
+   */
+  jarvis: {
+    titre: "Jarvis",
+    ouvrir: "Ouvrir Jarvis",
+    fermer: "Fermer",
+    invite: "Posez une question, ou dictez-la.",
+
+    /** V2.2 — l'indisponibilité ne bloque JAMAIS le reste de l'application. */
+    indisponible:
+      "Jarvis est indisponible. Toutes les fonctions restent accessibles.",
+
+    argumentsInvalides:
+      "Cette demande n'a pas pu être interprétée de façon sûre. Rien n'a été modifié. Reformulez-la.",
+    propositionIntrouvable:
+      "Cette proposition n'est plus disponible. Rien n'a été modifié.",
+    actionSansEffet:
+      "L'action n'a pas pu être effectuée : la cible est introuvable ou hors de votre périmètre. Rien n'a été modifié.",
+
+    /**
+     * DÉSAMBIGUÏSATION — V2.2. Jarvis ne choisit jamais entre deux homonymes.
+     * La phrase est une QUESTION, pas une annonce : elle rend le choix à
+     * l'humaine au lieu de lui présenter un résultat déjà tranché.
+     */
+    plusieursPatients: "Plusieurs dossiers correspondent. Lequel ouvrir ?",
+    aucunPatient: "Aucun dossier ne correspond à cette recherche.",
+
+    /** V2.3 / ADR-023 — le refus est cadré et propose une suite, jamais sec. */
+    refusCasIndividuel:
+      "Je ne conclus pas sur une patiente ou un patient nommé. Je peux relever les éléments du dossier et les points à explorer — la conclusion vous appartient.",
+    registreConnaissance:
+      "Connaissance générale — pas ce dossier. Aide-mémoire, non vérifié : le Vidal reste la référence.",
+
+    /** V2.5 — la carte de confirmation. */
+    carte: {
+      confirmer: "Confirmer",
+      annuler: "Annuler",
+      /** Le bouton reste inactif 400 ms : anti-clic réflexe, pas une animation. */
+      patienter: "Confirmer…",
+      creerRendezVous: "Créer un rendez-vous",
+      fixerTarif: "Fixer le tarif de la séance",
+    },
+
+    /** V2.4 — la voix. Coupée, le panneau reste utilisable au clavier. */
+    voix: {
+      parler: "Maintenir pour parler",
+      ecoute: "À l'écoute…",
+      transcription: "Transcription…",
+      indisponible: "La voix est indisponible. Le clavier reste utilisable.",
+    },
+  },
 } as const;
 
 export type Fr = typeof fr;

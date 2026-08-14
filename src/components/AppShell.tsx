@@ -35,6 +35,7 @@ import { fr } from "@/i18n/fr";
 import type { UserRole } from "@/services/authz";
 
 import { BandeauSeanceEnCours } from "./BandeauSeanceEnCours";
+import { PanneauJarvis } from "./PanneauJarvis";
 
 export interface AppShellProps {
   readonly role: UserRole;
@@ -306,6 +307,17 @@ export function AppShell({
           {children}
         </main>
       </div>
+
+      {/* V2 — LE PANNEAU JARVIS. Monté ici et nulle part ailleurs : une seule
+          instance pour toute l'application, donc une seule conversation, donc
+          des propositions regroupées dans `app.jarvis_actions`. Le monter par
+          écran en créerait une par page.
+
+          Il ne reçoit AUCUNE prop : la coquille reste présentationnelle et ne
+          connaît toujours aucun service. Le panneau est autonome, et son
+          indisponibilité n'atteint rien de ce qui l'entoure — le retirer est
+          une suppression de ligne, pas une reprise. */}
+      <PanneauJarvis />
     </div>
   );
 }

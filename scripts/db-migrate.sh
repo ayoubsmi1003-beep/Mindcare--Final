@@ -133,10 +133,55 @@ psql_run() {
 }
 
 # --- 2 · migrations déjà appliquées ---------------------------------------------
-applied=$(psql_run -qtAX -c "\"SELECT version FROM app.schema_migrations\"" 2>/dev/null \
-          | grep -E '^[0-9]{3}_' || true)
+#
+# ⚠️ « JE N'AI PAS PU LIRE » N'EST PAS « RIEN N'EST APPLIQUÉ ».
+# Cette lecture avalait son erreur (`2>/dev/null … || true`). Un échec passager
+# du pooler rendait donc `applied` vide, et le script en concluait que la base
+# était VIERGE : il proposait de rejouer 001 sur une base vivante. Observé ici
+# même, deux exécutions à une minute d'écart — « 0 déjà en base, 33 à
+# appliquer » puis « 26 déjà en base, 7 à appliquer ». L'intermittence est ce
+# qui rend ce défaut dangereux : il passe inaperçu jusqu'au jour où il frappe.
+#
+# On distingue donc les trois cas, au lieu de les confondre en un seul :
+#   · lecture réussie, lignes trouvées  → on saute ce qui est déjà appliqué ;
+#   · lecture réussie, zéro ligne       → base réellement vierge, on applique ;
+#   · lecture IMPOSSIBLE                → ON S'ARRÊTE. Ne pas savoir n'autorise
+#     rien : appliquer à l'aveugle est irréversible, refuser ne coûte qu'un
+#     nouvel essai.
+sortie_versions=$(psql_run -qtAX -c "\"SELECT version FROM app.schema_migrations\"" 2>&1)
+rc_versions=$?
+applied=$(printf '%s\n' "$sortie_versions" | grep -E '^[0-9]{3}_' || true)
+
+# Une base RÉELLEMENT vierge n'a pas encore la table : c'est 001 qui la crée.
+# Ce cas-là doit passer, sinon le script ne pourrait jamais amorcer une base
+# neuve. On le reconnaît au SQLSTATE 42P01 — la table absente — et à rien
+# d'autre : surtout pas à « la lecture n'a rien rendu », qui est justement la
+# confusion qu'on vient de supprimer.
+if [ $rc_versions -ne 0 ] && printf '%s' "$sortie_versions" | grep -qE '42P01|does not exist|n.existe pas'; then
+  echo "Base vierge : app.schema_migrations n'existe pas encore (001 la créera)."
+  rc_versions=0
+  applied=""
+fi
+
+if [ $rc_versions -ne 0 ]; then
+  echo "ROUGE — impossible de lire app.schema_migrations."
+  echo
+  printf '%s\n' "$sortie_versions" | grep -viE 'postgres(ql)?://' | head -5 | sed 's/^/      /'
+  echo
+  echo "  L'état de la base est INCONNU. Rien n'a été appliqué, délibérément :"
+  echo "  une lecture impossible n'est pas une base vide, et rejouer 001 sur une"
+  echo "  base vivante ne se défait pas. Vérifier la connexion, puis relancer."
+  echo "VERDICT : ROUGE — arrêt avant toute écriture."
+  exit 1
+fi
+
 if [ -n "$applied" ]; then
-  echo "Déjà en base : $(printf '%s' "$applied" | wc -l | tr -d ' ') migration(s)"
+  # `grep -c` et non `wc -l` : `printf '%s'` n'émet pas de saut de ligne final,
+  # donc `wc -l` perdait la dernière migration. L'écran affichait « 25 » en
+  # haut et « 26 » dans le verdict, pour la même base et au même instant.
+  echo "Déjà en base : $(printf '%s\n' "$applied" | grep -c .) migration(s)"
+else
+  echo "Déjà en base : aucune — la table existe et ne contient aucune ligne."
 fi
 
 # --- 3 · application ------------------------------------------------------------

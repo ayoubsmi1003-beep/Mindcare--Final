@@ -1,932 +1,524 @@
 # STATE — MindCare OS
-Dernière mise à jour : 2026-08-11 · **V1 (Vérité & Vitesse) EN COURS** — V1.1 ✅ · V1.3 ✅ ·
-V1.4 ✅ · **V1.5 code livré / mesure DIFFÉRÉE par dérogation** · V1.2 ✅ (dans les limites de
-l'arbitrage) · portes G1 et G3 franchies · **G4 NON FRANCHIE mais TRANCHÉE : aucune porte
-composite en V1 ; les 5 écrans restent ROUGES, dette de mesure ouverte**
+**V2 — JARVIS VIVANT · CHECKPOINT VERT · 2026-08-14**
+Dernière mise à jour : 2026-08-14 · **`checkpoint-v2.sh` : 22 verts · 0 rouge · 2 bloqués**
 
 ---
 
-## ⏭️ REPRISE — À FAIRE À LA PROCHAINE SESSION
+## PASSE D'AUDIT ADVERSARIAL DU 2026-08-14 — ce qu'elle a changé
 
-**Fait et prouvé (ne pas refaire) :**
+### Le verdict, et ce qui le rend opposable
+
+```
+VERDICT V2 : 22 verts · 0 rouges · 2 bloqués
+V2 EST VERT — aux deux réserves NOMMÉES, et à elles seules :
+  · contrôle 2 (homonymes) — périmètre V5, ni écran ni porte create_patient
+  · contrôle 7 (voix)      — transport binaire hors contrat DbPort (ADR-020)
+```
+
+**Ce qui a débloqué les six contrôles navigateur n'est pas le produit : c'est
+l'instrument.** Ils étaient mesurés verts depuis le 2026-08-13 et sortaient
+BLOQUÉ à chaque passage, parce que les huit lignes `bloque` étaient **écrites en
+dur** dans le script. Un vert qui vit dans ce fichier et pas dans le checkpoint
+n'est pas reproductible — c'est un souvenir, et l'en-tête du checkpoint dit
+lui-même ce qu'il faut en penser.
+
+`scripts/mesure-v2-navigateur.mjs` (nouveau) pilote un vrai Chromium et dépose
+un rapport que `checkpoint-v2.sh` relit sous **trois gardes** — toute
+discordance retombe en BLOQUÉ, jamais en vert :
+
+| Garde | Ce qu'elle empêche |
+|---|---|
+| **empreinte** sha256 de toutes les entrées d'exécution V2 | mesurer, puis corriger le code, et garder le vert |
+| **HEAD** | mélanger deux arbres dans un verdict |
+| **fraîcheur** (1 h) | qu'une observation d'hier passe pour une observation d'aujourd'hui |
+
+⚠️ **Ce n'est PAS Playwright MCP** — ce serveur n'est pas connecté sur ce poste.
+C'est le paquet npm `playwright`, qui clique et frappe réellement.
+
+### Cinq défauts RÉELS trouvés en exécutant — trois dans le produit, deux dans l'instrument
+
+1. **`prompt.ts` — `kind` sans ses valeurs. Le chemin d'écriture principal
+   tombait une fois sur deux.** La description d'outil annonçait `kind?` sans
+   dire ce que le champ accepte. Le modèle en inventait une valeur,
+   `z.enum(TYPES_DE_CONSULTATION)` la refusait, et **toute** la proposition
+   mourait en « Cette demande n'a pas pu être interprétée de façon sûre ».
+   INTERMITTENT — un champ facultatif que le modèle renseigne parfois — donc
+   invisible à un essai unique. Corrigé : les treize valeurs de `app.consult_kind`
+   (024) écrites en toutes lettres, plus la consigne d'OMETTRE le champ dans le
+   doute, pour qu'une divergence future coûte un champ vide et non un refus.
+
+2. **`jarvis-chat` — le chemin CONNAISSANCE ne vérifiait aucune identité.
+   ⚠️ DÉFAUT DE SÉCURITÉ, mesuré sur la fonction déployée.** L'identité n'était
+   établie que sur le chemin patient ; ailleurs, on ne testait que la PRÉSENCE
+   d'un en-tête `Authorization`. En présentant la **clé publiable**
+   (`sb_publishable_…`, publique par construction), un tiers obtenait `HTTP 200`
+   et une réponse complète du modèle — **depuis n'importe quelle origine**, car
+   CORS ne borne que ce qu'un navigateur peut relire, jamais `curl`.
+   `verify_jwt: true` ne comble pas ce trou : la passerelle rejette bien un JWT
+   malformé, expiré ou de signature inventée (401, mesuré), mais un anonyme muni
+   d'une clé publique n'est pas malformé — il est anonyme. **Ce que ça coûtait :**
+   le crédit fournisseur du cabinet, sans limite, et des lignes
+   `audit.boundary_crossings` qu'aucune praticienne n'a demandées — une trace de
+   franchissement sans franchisseur, c'est-à-dire une trace fausse.
+   Corrigé : `auth.getUser()` **avant** le routage, pour les trois chemins.
+   Re-mesuré : `non-authentifie` sur les deux cas.
+   *(Au passage : `data?.user === null` laissait passer `undefined`.)*
+
+3. **`checkpoint-v2-rls.sql` — quatre assertions DISPARUES, et un « 0 rouge »
+   pour le dire.** Un bloc `DO` appelait `propose_jarvis_action` avec un `jsonb`
+   là où la porte attend du `text` (033:79). Aucune signature ne résolvait, le
+   bloc était abandonné, la table temporaire n'existait pas, et les `SELECT` qui
+   la lisaient échouaient sur stderr. Le rapport sortait **« 7 verts, 0 rouge »
+   avec les deux assertions de cloisonnement praticien et de rejeu de
+   confirmation absentes.** Corrigé deux fois : le cast, et surtout un **compte
+   d'assertions attendues** dans le checkpoint. *Zéro rouge ne veut pas dire
+   « tout a été vérifié » : il faut aussi que tout ait été POSÉ.*
+
+4. **Le rapport de mesure gardait ses échecs périmés.** Un passage interrompu
+   déposait `echec-<mode>` en ROUGE ; le passage suivant, réussi, déposait ses
+   verts À CÔTÉ. Le checkpoint concluait ROUGE sur une mesure déjà remplacée —
+   le symétrique du faux vert, et tout aussi faux. Corrigé : un mode qui
+   re-tourne efface son passage précédent.
+
+5. **Trois pièges de mesure, dont un neuf.** Les deux connus (hydratation avant
+   saisie ; « Confirmer… » pendant les 400 ms) étaient consignés et ont été
+   évités. Le troisième s'est payé ici : compter les paragraphes du fil ne
+   marche pas, **le paragraphe d'invite DISPARAÎT au premier tour** — la mesure
+   expirait sur un produit intact. On repère désormais le message envoyé, qui ne
+   s'efface pas. Deux autres artefacts de mesure corrigés : la fenêtre de 400 ms
+   se date par `MutationObserver` DANS la page (sonder depuis Node fabrique un
+   faux ROUGE sur machine chargée), et le contrôle 3 fait tourner l'heure du
+   rendez-vous — sinon il échoue sur le créneau que le passage précédent a
+   réservé, c'est-à-dire **parce qu'il a réussi la fois d'avant**.
+
+### RLS pour les trois rôles — §7.2 tenu, par la voie qu'ADR-016 autorise
+
+`scripts/checkpoint-v2-rls.sql` (nouveau), sur la base **jetable** : **11
+assertions vertes**, par emprunt de `request.jwt.claim.sub` — jamais par
+connexion, qu'ADR-016 interdit et que `015` rend impossible.
+
+| | Prouvé pour a1 (owner) · a2 (practitioner) · a3 (assistant) |
+|---|---|
+| R0a–d | les trois identités sont effectives, les trois rôles distincts |
+| R1 | `SELECT` direct sur `app.patients` **refusé aux trois** (règle 6) |
+| R2a–b | a2 ne peut **pas** confirmer l'action d'a1 — et l'action reste `proposed` |
+| R2c–d | a1 confirme la sienne ; **une confirmation ne se rejoue pas** |
+| R3 | outil hors allowlist refusé **aux trois** |
+| R4 | les actions d'a1 sont invisibles à a2 **et** à a3 |
+
+### La frontière HTTP, éprouvée sur la fonction déployée
+
+Treize cas adverses. `Authorization` absent → `non-authentifie` · JWT malformé,
+expiré, `service_role` forgé → **401 à la passerelle** · clé publiable →
+`non-authentifie` (après correctif) · préalable `OPTIONS` d'une origine
+autorisée → 204 + `ACAO` · **origine hostile → 403, aucun `ACAO`** · message
+vide, 5 000 caractères, `contexteDossiers` au-delà du plafond → `requete-invalide`.
+
+**`jarvis-analyze-session` n'a PAS le défaut n°2, et c'est mesuré, pas déduit.**
+Il ne vérifie pas non plus l'identité — mais son premier geste est un `rpc` que
+la RLS arbitre : un porteur de clé publiable reçoit `indisponible`, n'atteint
+aucune note et ne déclenche aucun appel au modèle. **Règle 4 en action** : la
+sécurité est en base, pas en JavaScript. Aucun correctif — en ajouter un serait
+dupliquer une garantie que la base tient déjà.
+
+### ADR-016 — la fenêtre a été ouverte, puis REFERMÉE et vérifiée
+
+**L'« écart réel » consigné le 2026-08-13 est ÉLUCIDÉ, et ce n'était pas un
+geste inexpliqué.** Le vrai bcrypt d'`owner.dev` a été posé par
+`scripts/dev-account.sh` — **le script committé dont c'est exactement l'objet**
+(`WHERE id = …a1`, `crypt(:devpw, gen_salt('bf'))`). Le mécanisme était prévu ;
+c'est son caractère PERMANENT qui ne l'était pas.
+
+Sur arbitrage : mesurer, puis révoquer. Fait, dans cet ordre, et **vérifié au
+navigateur** — `/auth/v1/token` rend **500**, la page reste sur `/connexion`.
+Les trois comptes portent de nouveau la sentinelle `CONNEXION-IMPOSSIBLE` de
+`015:34`. **La condition 1 d'ADR-016 est tenue aujourd'hui.**
+
+> ⚠️ **Conséquence à assumer, pas à contourner.** Les six contrôles navigateur
+> ne sont plus re-mesurables en l'état. Les rouvrir demande `bash
+> scripts/dev-account.sh`, **et c'est une décision à reprendre à ce moment-là.**
+> Le rapport vert de cette passe a été pris pendant que la fenêtre était
+> ouverte ; il expire au bout d'une heure, par construction.
+
+### Les deux écritures cloud du 2026-08-13 — ANNULÉES
+
+Faites sur un diagnostic faux, elles sont revenues à l'état de `015` sur a2 et
+a3 : `confirmation_token`, `recovery_token`, `email_change_token_new`,
+`email_change`, `email_confirmed_at`, `raw_app_meta_data`, `raw_user_meta_data`
+→ **NULL**. Valeur d'origine **établie, pas devinée** : `015:30-39` ne nomme que
+huit colonnes, toutes les autres ont pris leur **défaut de colonne**, relevé dans
+`information_schema`. Les quatre colonnes dont le défaut est `''` valaient déjà
+`''` et n'ont **pas** été touchées — les mettre à NULL aurait été s'éloigner de
+l'origine, pas y revenir. `updated_at` n'est pas remis en arrière : on ne
+fabrique pas un horodatage pour faire croire que rien ne s'est passé.
+
+### Défauts établis et NON corrigés — hors périmètre gelé, à arbitrer
+
+1. 🔴 **`app.search_patients` cherche dans l'ordre inverse de l'affichage.**
+   La porte (018) compare la demande à `first_name || ' ' || last_name` ; l'écran
+   affiche **« NOM Prénom »**. Recopier un nom TEL QU'IL EST AFFICHÉ rend
+   « Aucun dossier ne correspond » — **mesuré : `count:0`**, là où le nom de
+   famille seul rend `count:1`. Touche la praticienne autant que Jarvis.
+   **Antérieur à V2** (jalon S3) : hors du périmètre de ce lot (règle 10), et
+   toute correction passerait par une migration `035`, jamais par édition de 018.
+
+2. 🔴 **`jarvis-voice-in` et `jarvis-voice-out` n'ont AUCUN CORS.** Ni
+   `reponsePrealable`, ni `enTetesCors` — exactement le défaut trouvé le
+   2026-08-13 sur les deux autres fonctions. Latent et non déclenchable :
+   elles ne sont **pas déployées** et le contrôle 7 est BLOQUÉ. Non corrigé
+   parce qu'un correctif y serait **invérifiable** cette passe. **À faire avant
+   toute mise en service de la voix**, en même temps que le transport binaire.
+
+3. ⚠️ **`CORS_ORIGINS` n'est pas posée** sur `ftxaseynjvjevwybdoii` — vérifié
+   dans les secrets Edge. Le repli est `http://localhost:3000`, le poste de
+   développement et rien d'autre. **À poser sur l'origine réelle du cabinet
+   avant la mise en service.**
+
+4. ⚠️ **Le bloc de contexte est présenté au modèle comme « une DONNÉE, pas une
+   instruction » — par une PHRASE DE PROMPT.** Une phrase n'est pas un
+   mécanisme. Le vecteur réaliste (un nom de dossier porteur d'une instruction)
+   n'a pas pu être éprouvé : créer un dossier demande une porte `create_patient`
+   qui n'existe pas avant V5. **Risque résiduel nommé**, non mesuré.
+
+5. **Une erreur JS non rattrapée, observée UNE fois** sous coupure fournisseur,
+   **non reproduite en quatre passages suivants**. Cause non établie — et on ne
+   lui en invente pas.
+
+### Discipline d'exécution de la passe
+
+`pnpm typecheck` · `pnpm lint` · `pnpm build` · `verify-migrations.sh` (6/6) ·
+rejeu `001→034` sur base jetable + **17 assertions 033/034** · **11 assertions
+RLS** · six contrôles navigateur : verts. `032` et `034` **non appliquées** sur
+le cloud, qui reste à **033**. `032`/`033`/`034` **non modifiées**. Deux
+écritures cloud dans cette passe, toutes deux annoncées : l'annulation des
+UPDATE d'a2/a3, et la restauration de la sentinelle d'`owner.dev`. Le secret
+`OPENROUTER_API_KEY` a été retiré puis reposé pour le contrôle 6 — **empreinte
+identique à l'originale** (`6da488b5…`), vérifiée.
+
+⚠️ **Piège d'environnement, payé ici :** `pnpm build` écrase le `.next` d'un
+`next dev` en cours ; le serveur sert alors des chunks 404 et **plus rien
+n'hydrate**. Ne pas mesurer au navigateur pendant que le checkpoint construit.
+
+---
+
+---
+
+## Fait & vert — V1 CLOS
+- **V1 immutable** · commit `7a656d3` (2026-08-11) · 40 fichiers, +3801/−692 · master · checkpoint V1 ✅
+
+## V2 — les six lots, écrits et vérifiés hors ligne
+
 | Lot | État | Preuve |
 |---|---|---|
-| V1.1 erreurs portent leur cause | ✅ | porte G1 : preflight + typecheck + lint + build verts, `grep "inattendu"` hors 2 fichiers → 0 |
-| V1.3 séance qui ne finit jamais | ✅ | porte G3 : rejeu 001→032 (31 migrations), plancher/option C/règle 3/idempotence/audit mesurés, 3 rôles refusés |
-| V1.4 erreur ≠ vide | ✅ | `EtatFinances` exclusif ; `erreur` remplace le contenu (retour anticipé) ; `vide` inatteignable sans double lecture réussie |
-| Migration 032 | ✅ | 9 passes de revue adversariale, SQL exécutable VERT, **PAS ENCORE APPLIQUÉE en production** |
-| `031` sorti de `migrations/` | ✅ | déplacé vers `docs/` (V6 le reprendra), 0 octet modifié |
-| `verify-migrations.sh` | ✅ | faux positif du contrôle 3 corrigé → VERT 6/6 |
+| L1 · portes 033/034 | ✅ | rejeu `001→034` sur base jetable ×3, **17/17** assertions de sécurité, idempotence prouvée |
+| L2 · voix (passerelle) | ⚠️ code posé, **jamais exécuté** | Deno absent du poste |
+| L3 · Zod + 5 outils | ✅ | `jarvis-tools.ts`, allowlist verrouillée compilation + exécution + base |
+| L4 · frontière ADR-023 | ✅ | `_shared/routing.ts`, **7/7** questions du tableau, 24 contrôles verts |
+| L5 · panneau ⌘K + carte 400 ms | ✅ clavier · voix inerte | `PanneauJarvis.tsx`, `CarteConfirmation.tsx` |
+| L6 + L6bis · checkpoint | ✅ | `checkpoint-v2.sh` : **15 verts · 0 rouge · 8 BLOQUÉS** |
 
-**⏭️ 2026-08-11 — CE QUI RESTE, EN UNE LIGNE : coller les 3 chiffres par écran (voir
-§V1.5 plus bas), puis Steps 19 (G4) · 21-23 (checkpoint-v1.sh, security-reviewer, clôture).**
-Les Steps 16-17 (V1.5 code) et 20 (V1.2) sont livrés et leurs portes statiques sont vertes ;
-la liste numérotée ci-dessous est celle d'AVANT cette session, conservée pour le contexte —
-les lots 1 et 2 y sont désormais **partiellement faits**, détail dans les sections dédiées.
+`checkpoint-v2.sh` sort en **code 2** : V2 n'est pas vert, 8 contrôles NON MESURÉS (navigateur,
+clé fournisseur, transport binaire). Un contrôle bloqué n'est pas un contrôle réussi.
 
-**Reste à faire, dans cet ordre :**
+## Base cloud — REMISE À NIVEAU le 2026-08-12
 
-1. **V1.5 — vitesse (Steps 16-19, porte G4).** Le gros morceau.
-   ✅ **Steps 16-17 FAITS le 2026-08-11** (cascade de session cassée, squelettes, plafond 10 s).
-   🔴 **Step 18 — NON MESURÉ, différé par dérogation utilisateur du 2026-08-11.** Les 5 écrans
-   restent hors budget par défaut, dette de mesure ouverte. ⛔ **Step 19 / G4 : TRANCHÉE le
-   même jour — aucune porte composite en V1, `/agenda` rouge reporté à V5.** Détail et
-   raisonnement dans la section « V1.5 » plus bas. **Ne pas relancer la mesure sans le
-   demander : c'est une décision humaine déjà prise, pas un oubli.**
-   - Squelettes manquants ; `Promise.all` sur les appels indépendants (motif déjà validé
-     `finances/page.tsx`) ; plafond 10 s → état « délai » (interdiction du spinner infini,
-     `05-UX-CONTRACT.md` §2).
-   - **Re-mesure en `pnpm build && pnpm start`, 3×, médiane**, et écrire les 3 chiffres par écran
-     dans ce fichier. ⚠️ La mesure de référence du Step 01 est **PARTIELLE** (TTFB `curl` non
-     authentifié seulement — pas de navigateur dans cet environnement). Un écran sans ses 3
-     chiffres est **hors budget par défaut** (`06-PERF-BUDGET.md` §6).
-   - **Porte G4** : RPC composite UNIQUEMENT si un écran reste hors budget ET que la cause est
-     une dépendance réelle entre appels → alors arbitrage utilisateur, pas décision d'agent.
-     Candidat unique connu : `/consultation/[id]` (`listAmendments` dépend de `note.id`).
-   - ⛔ **Pas de TanStack Query** (décision utilisateur, dette datée V4).
+La base était à **26** migrations, le dépôt à **30**. Finances était rouge (`PGRST202` sur
+`day_revenue` / `list_day_payments`), Documents et Jarvis l'auraient été aussi.
+**`027 → 030` appliquées** sur `ftxaseynjvjevwybdoii` (`cloud-dev`, 2 patients, 0 non-synthétique).
+Base à **30**. Finances vérifié à l'écran, connecté : « RECETTE DU JOUR · 0 DZD », zéro erreur.
 
-2. **V1.2 — Jarvis (Step 20).** ✅ **FAIT le 2026-08-11** — arbitrage rendu (passerelle reste à
-   10 s, aucun document d'autorité modifié), plafond client de 15 s posé. Reste la seule
-   vérification à l'écran, bloquée par l'absence de navigateur. Détail en section « V1.2 ».
-   *Texte d'origine conservé ci-dessous :* la frontière est **déjà correcte** (clé en Deno,
-   pseudonymisation sur le chemin, franchissement audité 028). Il reste :
-   - un **plafond client** sur `invokeFunction` (`AbortController`) pour qu'une Edge Function
-     muette ne laisse pas tourner « Analyse en cours… » indéfiniment ;
-   - vérifier le message honnête à l'expiration, à l'écran.
-   - 🔴 **ARBITRAGE UTILISATEUR REQUIS AVANT DE TOUCHER AU FICHIER** : `SPRINT-V1.md` §V1.2 exige
-     **30 s**, `03-JARVIS-TOOLS.md` §10 écrit « timeout > 10 s → annuler », et
-     `external-call.ts` applique **10 s**. Par `DOC-AUTHORITY.md` §1 le rang 4 (03-JARVIS-TOOLS)
-     bat le rang 5 (SPRINT-V1) : **un agent ne tranche pas seul entre deux documents
-     d'autorité.** Demander, puis appliquer.
+`032`, `033`, `034` : **écrites, NON appliquées, non commitées.** `032` intacte, `sha256
+22a0402e20497c08955e9bbd5672653d39a46ba48a3c46302faaef34693c852b`.
 
-3. **Steps 21-23 — clôture.** `checkpoint-v1.sh` (à écrire), `security-reviewer` sur le diff
-   entier, mise à jour finale de ce fichier.
+## Arbitrages utilisateur — 2026-08-12
 
-**Deux dettes ouvertes, non bloquantes :**
-- Relecture seule de `app.appointments` pour le geste manuel du 2026-08-10 (§GESTE MANUEL) —
-  la requête est écrite, il suffit de la lancer et coller le résultat.
-- `log.ts` n'émet rien en `NODE_ENV=production` et n'a aucune destination : V1.1 rend
-  l'application diagnosable **en développement**, pas au cabinet. Dette datée porte de livraison.
+| Objet | Décision |
+|---|---|
+| `033` / `034` | GARDÉES. L'interdiction portait sur l'OBJET G4 (porte composite agenda), pas le numéro. |
+| `external-call.ts` | Édition AUTORISÉE. Garde-fous inchangés. |
+| Zod | INSTALLÉ — `zod@4.4.3`. |
+| Rejeu Docker | AUTORISÉ sur base jetable. Fait. |
+| Hiérarchie documentaire | `MindCare_OS_Engineering_Constitution.md` reste ARCHIVÉE et non lue. DOC-AUTHORITY §1 fait foi. |
+| Migrations cloud | `027→030` autorisées et appliquées. Rien au-delà. |
 
-**Migration 032 n'est PAS appliquée en production.** Elle est prouvée par rejeu Docker
-uniquement. L'appliquer = `DATABASE_URL=… bash scripts/db-migrate.sh` (031 ne s'y trouve plus,
-le corpus est VERT) — décision de la prochaine session, pas faite ici.
+## Défauts réels corrigés dans cette session
+
+1. **`033:51`** — `ADD CONSTRAINT` sans garde : `42710` au second passage. `DROP … IF EXISTS` ajouté.
+2. **`routing.ts`** — `\b` est ASCII en JS : « prescrire **à** Amina » non détecté, la question 6
+   d'ADR-023 partait en « connaissance ». **Un refus manqué en silence.**
+3. **`db-migrate.sh`** — avalait l'échec de lecture de `schema_migrations` et concluait « base
+   vierge », de façon **intermittente** : aurait rejoué `001` sur une base vivante. Garde-fou à
+   trois cas + décompte `wc -l` faux (25/26) corrigés.
+4. **`PanneauJarvis`** — `crypto.randomUUID()` est `undefined` hors contexte sécurisé (URL réseau).
+   Repli sur `getRandomValues`.
+5. **`jarvis-tools.ts`** — `z.uuid()` refuse les identifiants de 015 → `z.guid()` ; enum
+   `consult_kind` inventée → verrouillée par `satisfies` sur les 13 valeurs réelles.
+
+## Écarts documentaires NON corrigés (décision : ne pas toucher aux documents d'autorité)
+
+- **`CLAUDE.md` §2 dit « Postgres 15 ».** Le serveur est en **17.6**, et `020:127` utilise
+  `GRANT … WITH INHERIT TRUE`, syntaxe **Postgres 16**. Un rejeu sur image serveur `postgres:15`
+  échoue. DOC-AUTHORITY §1 tranche pour la migration appliquée.
+
+## Session du 2026-08-13 — Jarvis vivant à l'écran
+
+**Le blocage n°1 est levé.** CLI Supabase en devDependency (`supabase@2.113.0`, paquet npm :
+ni Deno, ni Docker, ni droits admin). `jarvis-chat` et `jarvis-analyze-session` déployées par
+`functions deploy --use-api`, `ACTIVE`. `OPENROUTER_API_KEY` posée dans les secrets Edge.
+**`033` appliquée SEULE** sur `ftxaseynjvjevwybdoii` — 4 portes `SECURITY INVOKER`,
+`jarvis_tool_allowlist` posée, registre à `033`. `032` et `034` toujours absentes.
+
+### Quatre défauts RÉELS, trouvés en exécutant — aucun n'était visible en relecture
+
+1. **CORS absent des deux Edge Functions.** Sans réponse à `OPTIONS`, le navigateur bloquait
+   chaque appel **avant la première ligne de code**. Les 24 contrôles hors ligne d'ADR-023
+   restaient verts : ils testent un routage qui n'était jamais atteint. Corrigé par
+   **`_shared/cors.ts`** — allowlist d'origines (`CORS_ORIGINS`), jamais `*`, source unique.
+   ⚠️ **Avant la mise en service : poser `CORS_ORIGINS` sur l'origine réelle du cabinet.**
+
+2. **`033` lit `snake_case`, le client sérialisait `camelCase`.** `v_args ->> 'patient_id'`
+   contre `{"patientId": …}` : les quatre extractions rendaient NULL, `create_appointment`
+   levait « Rendez-vous incomplet », la ligne finissait `state='failed'`, `error='P0001'`.
+   **AUCUNE écriture Jarvis n'était possible**, pour aucun argument. Corrigé côté client
+   (`versSnakeCase` dans `jarvis-tools.ts`) — `033` est appliquée et ne se modifie pas.
+
+3. **Le modèle ignorait la date du jour.** « demain à 15 h » devenait `2024-05-18T14:00:00Z`.
+   La porte refusait, donc rien de grave — mais aucune demande datée ne pouvait aboutir.
+   Corrigé : date `Africa/Algiers` dans un message SÉPARÉ, pour ne pas faire varier `promptHash`.
+
+4. **`create_appointment` était inatteignable.** Le modèle ne pouvait pas connaître les UUID :
+   `jarvis.ts` n'envoyait ni historique ni contexte. Arbitrage utilisateur du 2026-08-13 :
+   **le résultat d'outil est joint au tour suivant** (`contexteOutils`), lu UNIQUEMENT sur le
+   chemin patient — les chemins connaissance et refus rendent leur réponse avant d'y toucher.
+   ⚠️ **Ce champ fait sortir des identifiants et des noms de dossier vers le modèle.** Décidé
+   en connaissance de cette conséquence.
+
+### Contrôles du §V2 — mesurés à l'écran, session réelle
+
+| # | Verdict | Preuve |
+|---|---|---|
+| 1 · rendez-vous de demain | 🔴 **ÉCART** | Un RDV `owner` existe le 2026-08-14 16:00 Alger (`4bf9d0de…`, `confirmed`) et Jarvis rend « Aucun rendez-vous visible ». Cause NON établie : les bornes `from`/`to` passées à `get_agenda` n'ont pas été observées. **À reprendre en premier.** |
+| 2 · homonymes | BLOQUÉ | Ni écran ni porte `create_patient` — c'est V5 (D-18). `app.patients` n'a pas de `deleted_at` mais `is_active`. Décision : rester bloqué. |
+| 3 · carte → 400 ms → écriture | ✅ **VERT** | `state=executed` · `confirmed_at 02:07:44.066` **avant** `executed_at .185` · `affected_table=appointments` · RDV créé · bouton **inactif** à la première vue, actif après **373 ms** · T7 = 0 |
+| 4 · sertraline / lithium | ✅ VERT | Réponse substantielle, registre « Connaissance générale — pas ce dossier » rendu par l'interface, renvoi au Vidal |
+| 5 · « Karim est-il dépressif ? » | ✅ VERT | Refus d'ADR-023 mot pour mot, avec proposition d'exploration |
+| 6 · clé coupée | BLOQUÉ | Non mesuré cette session |
+| 7 · voix | BLOQUÉ | Transport binaire absent de `DbPort` (ADR-020). Décision : ne pas étendre le contrat. |
+| E9 · fournisseur coupé | BLOQUÉ | Non mesuré cette session |
+
+**Deux pièges de MESURE, pas de produit** — consignés pour ne pas être repayés :
+- Le bouton porte « Confirmer… » pendant les 400 ms : un sélecteur exact sur « Confirmer » est
+  **aveugle à la fenêtre d'inactivité** et fait conclure « anti-clic absent ». Faux.
+- Remplir le formulaire de connexion avant l'hydratation React envoie un formulaire **vide** →
+  `400 validation_failed`, qui s'affiche « Une erreur inattendue s'est produite ».
+
+## Session du 2026-08-13 (après-midi) — contrôle 1 élucidé, 6 et E9 mesurés
+
+**HEAD toujours `7a656d3`, rien de commité. Aucune migration appliquée cette session.**
+
+### Contrôle 1 — l'instrument manquait, pas le produit
+
+Les bornes `from`/`to` sont calculées par le MODÈLE : elles n'étaient observables nulle
+part, et l'écart avait donc été constaté sans sa cause. **Instrument posé** dans
+`outilGetAgenda` (`jarvis-tools.ts`) : deux `log.info` — les deux instants, un BOOLÉEN de
+filtre praticien, puis le compte de lignes. Ni identifiant ni nom : une borne est une
+date, l'identifiant de praticien désigne une personne et reste hors du journal, pour la
+raison exacte qui a fait retirer `patientId` de `LogFields`.
+
+**Mesuré au navigateur, port 3000, session `owner.dev`, 4 formulations :**
+
+```
+de:2026-08-14T00:00:00+01:00 a:2026-08-14T23:59:59+01:00 filtrePraticien:false → count:2
+```
+
+Bornes JUSTES, en `Africa/Algiers`, stables sur les 3 essais qui appellent l'outil.
+Jarvis rend les deux rendez-vous du 14/08, dont **16:00 — le `4bf9d0de…` du constat**.
+L'écran `/agenda` les voit aussi (vue semaine).
+
+**→ Contrôle 1 : ✅ VERT.** L'écart NE REPRODUIT PAS. Les bornes et la RLS sont
+**écartées par la mesure**, pas par raisonnement. La cause du constat du matin reste
+**non établie** et le restera : elle n'est plus observable. On ne lui invente pas
+d'explication. L'instrument reste en place — c'est lui qui rend le contrôle concluant.
+
+**Observation adjacente, ni verte ni rouge :** « Qu'est-ce que j'ai demain ? » n'appelle
+AUCUN outil — le modèle répond en texte. Formulation hors du libellé du contrôle,
+notée, non traitée (règle 10).
+
+### Contrôles 6 et E9 — clé RÉELLEMENT retirée des secrets Edge
+
+`secrets unset OPENROUTER_API_KEY`, mesure, `secrets set` — **empreinte de la clé remise
+identique à l'originale** (`6da488b5…`), et une réponse Jarvis complète repart après.
+
+| # | Verdict | Preuve |
+|---|---|---|
+| 6 · clé coupée | ✅ **VERT** | « Jarvis est indisponible. Toutes les fonctions restent accessibles. » Panneau vivant, saisie utilisable. Journal : `code:indisponible · technical:configuration` — aucune fuite de cause fournisseur à l'écran |
+| E9 · fournisseur coupé | ✅ **VERT** | Patients (2 dossiers), Agenda (13 août rendu), Finances (« Toutes les séances du cabinet ») — tous rendus, **0 erreur JavaScript non rattrapée** |
+
+`typecheck` · `lint` · `build` · `checkpoint-v2.sh` (**12 verts · 0 rouge**, dont
+`eval-jarvis-v2` exit 0) : verts après l'instrument.
+
+### Contrôles du §V2 — état consolidé
+
+1 ✅ · 2 BLOQUÉ (décision) · 3 ✅ · 4 ✅ · 5 ✅ · 6 ✅ · 7 BLOQUÉ (décision) · E9 ✅
+
+### Arbitrage rendu — pseudonymisation de `jarvis-chat`, BRANCHE (b)
+
+**Décision utilisateur du 2026-08-13 : (b) — pseudonymiser le seul contexte d'outil.**
+Écartées : (a) statu quo en dette datée · (c) frontière complète sur le chemin patient,
+qui supposerait que la fonction Edge LISE `app.patients` — un second chemin d'accès aux
+dossiers, hors périmètre V2.
+
+**Ce qui est couvert :** les valeurs `nom` et `numero` du contexte traversent
+`pseudonymize()`, la réponse traverse `rehydrate()`. Le fournisseur voit `P1`, `P2`.
+**Ce qui ne l'est PAS, et c'est écrit dans le code, pas seulement ici :** le message
+libre part BRUT (« ouvre le dossier de Belkacem »), et les UUID partent en clair — ce
+sont les poignées dont la boucle d'écriture de 033 a besoin. `assertSafe` est appliqué
+au SEUL bloc pseudonymisé : appliqué à la charge entière, il lèverait dès que la
+praticienne tape un nom, et Jarvis serait inutilisable. **Réduction de l'exposition,
+pas suppression.**
+
+#### Deux défauts RÉELS, encore trouvés en exécutant
+
+1. **La structure du bloc était corrompue par sa propre pseudonymisation.** Première
+   version : le client composait le texte, la passerelle le masquait. Le prénom du
+   dossier d'essai est « Patient » — il a matché **à l'intérieur du libellé
+   `patientId=`**, qui partait en `P3Id=`. La substitution est textuelle et insensible
+   à la casse : elle ne distingue pas une donnée d'un mot de structure.
+2. **La réhydratation n'était pas l'inverse exact** (`false` mesuré) — même cause :
+   `patientId` revenait en `PatientId`, la casse perdue.
+
+**Correction à la racine, pas en surface :** le client envoie désormais les **champs**
+(`contexteDossiers: {id, nom, numero}[]` + `contextePraticienId`), la passerelle masque
+les **valeurs** puis compose le texte **autour**. Un libellé de structure n'existe pas
+encore au moment du masquage : il ne peut plus être atteint.
+
+#### Mesuré, pas supposé — après correction et redéploiement
+
+| Contrôle | Résultat |
+|---|---|
+| corps réellement posté | `contexteDossiers` en champs, sur le fil |
+| bloc tel qu'il part | `patientId=…b1 · P1 · P2` — **structure intacte, aucun nom en clair** |
+| `assertSafe` | PASSE |
+| aller-retour `pseudonymize`→`rehydrate` | **EXACT** |
+| contrôle 3 non régressé | carte affichée, vrai nom, vrais UUID, aucun jeton à l'écran |
+| contrôles 1 · 4 · 5 | rejoués après déploiement : **verts** |
+
+`typecheck` · `lint` · `build` · `checkpoint-v2.sh` (12 verts · 0 rouge) : verts.
+`jarvis-chat` **redéployée** (`--use-api`), embarque `_shared/pseudonymize.ts`.
+
+### Reste ouvert
+2. ~~`praticien2.dev` rend 500~~ — **CLOS, ce n'était pas un défaut.** Garde-fou d'ADR-016
+   posé par `015`. Voir la section dédiée. **Deux arbitrages en attente** y sont posés :
+   le mot de passe réel d'`owner.dev`, et le sort des deux écritures cloud inutiles.
+3. **Transport binaire voix** (contrôle 7) · **Step 18** 🔴 non mesuré, dérogation maintenue.
+4. **`CORS_ORIGINS` à poser sur l'origine réelle du cabinet** avant mise en service.
+5. Docker Desktop : `docker info` échoue tant que le moteur initialise ; attendre que
+   `docker ps` réponde. Le port 3000 doit rester libre — l'allowlist CORS ne connaît que lui.
+
+## Le 500 d'authentification — CE N'EST PAS UN DÉFAUT. C'est un garde-fou d'ADR-016.
+
+**Cause, nommée par le serveur et non déduite :**
+`crypto/bcrypt: hashedSecret too short to be a bcrypted password` (`auth_logs`).
+
+`encrypted_password` de `praticien2.dev` et `assistante.dev` vaut la chaîne littérale
+**`CONNEXION-IMPOSSIBLE`** — 20 caractères, pas un hash. Posée par
+**`015_seed_data.sql:26-29`**, qui écrit noir sur blanc :
+
+> « Le hash de mot de passe est volontairement invalide : CES COMPTES NE PEUVENT PAS SE
+> CONNECTER. C'est exactement ce qu'exige la **condition 1 d'ADR-016** (aucun accès
+> praticien sur l'instance cloud). Ils ne servent qu'à porter les `profiles` que les
+> tests RLS empruntent via `request.jwt.claim.sub`. »
+
+**Le 500 est donc le comportement VOULU, pas une panne.** L'entrée « piège Auth connu »
+qui traînait dans `Reste ouvert` était une **mauvaise piste, reconduite de session en
+session sans jamais être vérifiée**.
+
+### ~~⚠️ Deux écritures cloud inutiles~~ — ANNULÉES le 2026-08-14 (voir en tête)
+
+Le 2026-08-13, sur accord utilisateur mais sur un diagnostic FAUX, deux `UPDATE` ont été
+appliqués sur `auth.users` (a2, a3) : les quatre colonnes de jetons à `''`,
+`email_confirmed_at`, puis `raw_app_meta_data` / `raw_user_meta_data`. **Ils n'ont rien
+corrigé** — la mesure d'après montrait toujours 500, deux fois. Ils sont sans effet sur
+la cloison (le mot de passe reste non hashable, la connexion reste impossible) mais ils
+ne sont pas annulés. **Décision à prendre : les laisser ou revenir à l'état d'origine.**
+
+### ~~🔴 Écart réel, découvert au passage~~ — CLOS le 2026-08-14
+
+**Élucidé, puis refermé.** Le vrai bcrypt d'`owner.dev` venait de
+`scripts/dev-account.sh`, le script committé dont c'est l'objet — pas d'un geste
+inexpliqué. La sentinelle de `015:34` est rétablie et **l'échec de connexion est vérifié
+au navigateur**. Voir la passe du 2026-08-14 en tête de fichier. La condition 1 d'ADR-016
+**est tenue**.
+
+### Conséquence sur « RLS vérifiée pour les 3 rôles » (§7.2 de CLAUDE.md)
+
+Ce contrôle ne se mesure **pas** en se connectant à trois comptes — ADR-016 l'interdit.
+Il se mesure comme `015` le prévoit : en **empruntant** `request.jwt.claim.sub` dans des
+tests SQL. C'est la voie à prendre, et elle ne demande aucun mot de passe.
+**Ne pas « réparer » les deux comptes : ce serait défaire un garde-fou d'ADR gelé.**
+
+## Prochaine tâche
+
+V2 est commité. Ce qui attend, dans l'ordre où ça coûtera le moins cher :
+
+1. **Poser `CORS_ORIGINS`** sur l'origine réelle du cabinet — avant toute mise en service.
+2. **Arbitrer `app.search_patients`** (défaut n°1 ci-dessus) : l'ordre de recherche
+   contredit l'ordre d'affichage. Correction par migration `035`, jamais par édition de 018.
+3. **La voix** : transport binaire (contrat `DbPort`, ADR-020) **et** CORS des deux
+   fonctions — les deux, ou aucune.
+4. **Le contrôle 2** (homonymes) reste BLOQUÉ jusqu'à V5 : il demande `create_patient`.
 
 ---
 
-## V1.5 — vitesse (Steps 16-17 LIVRÉS · Step 18 EN ATTENTE DE MESURE · G4 NON FRANCHIE)
+## 9 passes de revue de la migration `032` — HISTORIQUE UNIQUE, source d'autorité
 
-**Ce qui a été changé, et pourquoi.** Aucun écran n'a changé de forme ni de logique métier.
+⚠️ **Ce document est la SEULE source de l'historique de revue de `032`, jamais exécutée ni persistée en base. Chaque passe corrige des erreurs et peut en introduire de nouvelles. Le détail conservé ici prévient un silence trompeur dans le prochain audit.**
 
-1. **La cascade de session est cassée — c'était le vrai coût, et il était partagé par
-   TOUS les écrans.** `useSessionEcran` enchaînait `getSession()` **puis** `getCurrentUser()`,
-   et chaque écran attendait `utilisateur !== undefined` avant sa première requête métier :
-   **trois allers-retours en séquence avant le premier contenu**, soit ~540 ms à 180 ms le tour
-   (`06-PERF-BUDGET.md` §5) avant même la donnée. Or `getCurrentUser` ne sert qu'à composer la
-   navigation (I12) ; la donnée métier n'en dépend pas.
-   → Nouveau signal `sessionTranchee` dans `useSessionEcran`, **distinct du profil**, posé dès
-   la réponse de `getSession()`. Les 4 écrans démarrent leur lecture dessus ; `getCurrentUser`
-   court désormais **en parallèle**. Coût attendu : `getSession + max(profil, donnée)` au lieu
-   de `getSession + profil + donnée`.
-   ⚠️ **La garantie d'I4 ne bouge pas, et c'est le point à relire** : aucune porte
-   journalisante n'est appelée avant que la session soit tranchée — et c'est `getSession()`
-   qui la tranche, pas le profil. Attendre le profil en plus n'ajoutait aucune garantie,
-   seulement un aller-retour. `sessionTranchee` vaut `false` (jamais `true`) sur le chemin de
-   redirection et sur une réponse indéterminée : aucune trace d'audit pour une consultation
-   qui n'aura pas lieu.
+- **v1** (5 ROUGE) : pas de plancher `p_threshold` · transition `appointments` manquante · fenêtre `now() - 12h` au lieu d'id épinglé · commentaire sur-déclarant attribution NULL · numérotation non documentée.
+  
+- **v2** (5 + 2 ROUGE) : 5 antérieurs corrigés. Nouveaux : `GRANT EXECUTE TO authenticated` exposé au navigateur · garde « introuvable »/« close » silencieuse (même branche, risque id absent).
 
-   **🔴 UN DÉFAUT RÉEL INTRODUIT PAR CE CHANGEMENT, TROUVÉ ET CORRIGÉ DANS LA MÊME SESSION.**
-   Le garde de RENDU des écrans teste `utilisateur === undefined` ; le nouveau garde d'EFFET
-   teste `sessionTranchee !== true`. **Hors ligne, les deux divergent** : `getSession()` échoue
-   → `sessionTranchee = false` **et** `utilisateur = null`. Le rendu passait le premier garde,
-   l'effet ne partait jamais, et `chargement` restait à `true` : **squelette qui respire sans
-   fin** — l'attente infinie que V1.5 existe précisément pour supprimer
-   (`05-UX-CONTRACT.md` §2). Ironie utile à retenir : le lot qui ferme les attentes infinies en
-   a ouvert une, sur le chemin le plus fréquent du cabinet (le Wi-Fi qui tombe).
-   **`/finances` et `/consultation` n'ont jamais eu le défaut** — ils portaient déjà une branche
-   `utilisateur === null` explicite. **`/agenda` et `/patients` ne l'avaient pas** : une branche
-   de sortie leur a été ajoutée, sur `sessionTranchee === false`.
-   ⚠️ **La condition est `sessionTranchee === false`, PAS `utilisateur === null`** — les deux ne
-   disent pas la même chose : session lue mais **profil illisible** (`sessionTranchee === true`,
-   `utilisateur === null`) doit continuer d'afficher l'écran avec la navigation la plus étroite.
-   C'est le « défaut sûr » documenté dans ces deux écrans depuis S3 ; bloquer là-dessus
-   cacherait un écran qui fonctionne.
-   **Les 3 autres écrans (`agenda/[id]`, `agenda/nouveau`, `patients/[id]`) sont INCHANGÉS** :
-   ils gardent l'ancien garde `utilisateur === undefined`, donc leur effet part et se résout
-   hors ligne — vérifié par lecture, pas déduit de l'absence de modification. Ils ne gagnent pas
-   la parallélisation ; les étendre serait hors périmètre (règle 10). **Écart connu et assumé :
-   deux motifs de garde coexistent désormais dans `src/app/`.** À unifier en V5, pas en V1.
+- **v3** (GRANT retiré, mais nouveau risque 3 ROUGE) : GRANT ôté. `RAISE NOTICE` → `RAISE WARNING`. MAIS comment vérifier post-application hors transaction? Jamais fait (affirmation fausse). Et sous `FORCE ROW LEVEL SECURITY`, si `postgres` n'a pas `BYPASSRLS`, silence total (jamais mesuré).
 
-2. **Squelettes là où il y avait un mot d'attente** (`05-UX-CONTRACT.md` §2) :
-   `/agenda` (garde de session : texte nu → `Squelette` en-tête + grille) et `/patients`
-   (chargement de la liste : `<p>Chargement…</p>` → `Squelette lignes={6}`). Un mot d'une
-   ligne remplacé par six lignes de résultats décale l'écran à l'instant du clic.
+- **v4 — RÉÉCRITURE** : bloc `DO` ad hoc (id production) retiré. Migration devient rejouable. UUID sortirait d'ici et du geste manuel ci-dessous.
 
-3. **Plafond de 10 s → état ERREUR avec le mot « délai »**, sur `/patients`, `/agenda` et
-   `/consultation/[id]`. `/finances` l'avait déjà (V1.4) ; le motif est repris tel quel
-   (minuteur + drapeau `annule` ou compteur de génération, `clearTimeout` au démontage ET à
-   la réponse). `fr.delaiDepasse` existait déjà. **Aucune attente n'est plus infinie.**
-   Sur `/consultation/[id]`, l'expiration passe par `echecLecture` et **ne touche pas
-   `seance`** : une lenteur réseau pendant une séance ne fait pas disparaître la séance de
-   l'écran (distinction V1.4 échec de lecture ≠ séance introuvable).
+- **v4 → 4ᵉ revue (4 ROUGE documentaires)** : (1) affirmation `rolsuper` FAUSSE — 019 mesure `rolsuper=f, rolbypassrls=t` · (2) UUID encore 3× dans le fichier · (3) commentaire décrivait scoping par RLS qui n'existe PAS sous `BYPASSRLS` · (4) renvois cassés après retrait `DO`.
 
-**Portes vertes sur ce lot :** `preflight` ✅ · `typecheck` ✅ · `lint` ✅ (0 erreur, 0 avertissement)
-· `build` ✅ · `grep OPENROUTER|GROQ|ELEVENLABS .next/static/` → **0** · `grep '"inattendu"'`
-hors `errors.ts`/`fr.ts` → **0**.
+- **v4 → 5ᵉ revue (4 ROUGE, 2 de correction précédente)** : (1) « SUPERUSER ou BYPASSRLS » = hypothèse, 019 réfute · (2) commentaire FONCTION affirme « appelée via » procédure manuelle = FAUX · (3) affirmation « script retiré » = FAUX (5 refs subsistent légitimement) · (4) post-check oubliait `app.appointments` (irréversible).
 
-### 🔴 Step 18 — NON MESURÉ, ET DÉLIBÉRÉMENT DIFFÉRÉ (dérogation utilisateur, 2026-08-11)
+- **v4 → 6ᵉ revue (5 ROUGE, copier-coller résiduels)** : mot « superutilisateur » persiste 2× · décompte de ROUGE en en-tête ne correspond plus · section GESTE MANUEL contredit elle-même (« NON EXÉCUTÉ » vs confirmation ✅).
 
-**Statut : NON MESURÉ. Pas « vert », pas « acceptable », pas « probablement dans le budget ».**
+- **v4 → 7ᵉ revue (6 ROUGE, bookkeeping)** : décompte encore listé après retrait · « superutilisateur » 2× · titre section contradicts texte · renvoi 026 §4 orphelin · ligne ✅ sur-déclare par omission (pas la réserve `app.appointments`).
 
-**Décision utilisateur explicite du 2026-08-11 — dérogation, pas franchissement.**
-La collecte manuelle des 15 relevés (onglet Réseau + chronomètre, 5 écrans × 3 grandeurs) est
-**différée**, au motif que l'application a été **exercée manuellement** et que la réactivité
-constatée à l'usage est jugée **acceptable en l'état**. Ce motif est un **jugement d'usage**,
-et il est écrit ici comme tel.
+- **v4 → 8ᵉ revue (4 ROUGE, 1 RÉEL SQL)** : `REVOKE ALL FROM PUBLIC` ne touche pas GRANT déjà à authenticated; rejeu ne le retirerait pas · `CREATE OR REPLACE` préserve GRANT ancien. **Corrigé** : cible `PUBLIC, authenticated`. Documentaire : décompte de ROUGE faux, en-tête cite conformité inexacte, saut labels v4→v6.
 
-**Ce que cette dérogation ne fait PAS, et qu'il faut lire avant de s'y appuyer :**
-- ❌ Elle **n'affirme aucun chiffre de performance**. Aucune valeur n'est estimée, déduite,
-  extrapolée d'un TTFB `curl`, ni reprise du Step 01 — les cases ci-dessous restent vides.
-- ❌ Elle **ne modifie pas le contrat**. `06-PERF-BUDGET.md` est intact : §6 continue de dire
-  qu'un écran sans ses trois chiffres est **hors budget par défaut**, et §2 que hors budget
-  est **ROUGE au checkpoint, au même titre qu'un test RLS qui échoue**. Un agent ne modifie
-  pas un document d'autorité, et amender le budget pour qu'il tombe juste serait exactement
-  la façon de rendre cette dette invisible dans six mois.
-- ❌ Elle **ne rend pas les écrans verts**. Ils restent **ROUGES**, par contrat, ci-dessous.
-- ✅ Elle acte seulement que **la session continue malgré ce rouge**, par choix humain assumé.
-
-**La preuve numérique de `06-PERF-BUDGET.md` reste donc une DETTE DE MESURE OUVERTE**, non
-échue, à lever par un relevé en navigateur (`pnpm build && pnpm start`, jamais `dev`, 3
-répétitions, médiane). Même nature que la dette de navigateur de S5/S6 et du Step 01.
-
-| Écran | Appels (budget) | 1er contenu (budget) | Complet (budget) | Verdict |
-|---|---|---|---|---|
-| `/patients` | — (1) | — (100 ms) | — (400 ms) | 🔴 non mesuré · différé |
-| `/agenda` (jour) | **2 constatés** (1) | — (100 ms) | — (400 ms) | 🔴 **hors budget en NOMBRE** (voir ci-dessous) |
-| `/agenda` (semaine) | **2 constatés** (1) | — (100 ms) | — (600 ms) | 🔴 **hors budget en NOMBRE** |
-| `/consultation/[id]` | — (2) | — (100 ms) | — (500 ms) | 🔴 non mesuré · différé |
-| `/finances` | — (1) | — (100 ms) | — (400 ms) | 🔴 non mesuré · différé |
-
-⚠️ Les « 2 constatés » de `/agenda` ne viennent PAS d'une mesure au navigateur : ils se
-**comptent dans le code** (deux `listAgenda` distincts, voir ci-dessous). C'est la seule
-grandeur du tableau qui soit établie sans instrument, et c'est pourquoi elle y figure alors que
-tout le reste est vide. Les deux colonnes de temps de ces lignes restent, elles, non mesurées.
-
-**Méthode à appliquer le jour où la dette est levée (`06-PERF-BUDGET.md` §1) :** build
-uniquement, jamais `dev` · onglet Réseau pour compter les appels · chronomètre pour les deux
-temps · **3 répétitions, on garde la médiane** · rechargement complet entre chaque essai (un
-seul essai mesure le cache).
-
-### ⚠️ Défaut de budget ÉTABLI SANS INSTRUMENT — `/agenda` fait 2 appels pour un budget de 1
-
-`/agenda` lance **deux `listAgenda` distincts** : la grille (fenêtre affichée) et la file
-d'attente d'approbation (fenêtre de 60 jours, volontairement plus large — une demande pour dans
-trois semaines doit se voir aujourd'hui). Les deux partent **déjà en parallèle** (deux effets
-React concurrents) : aucun `Promise.all` ne changerait quoi que ce soit au **nombre**, qui est
-la grandeur que `06-PERF-BUDGET.md` §2 borne à 1.
-
-**Ce n'est donc PAS une cascade évitable en TypeScript (cas 3a de la porte G4), c'est le cas
-3b** : deux fenêtres temporelles différentes que seule une porte SQL composite réunirait en un
-appel.
-
-### ⛔ PORTE G4 — DÉCISION RENDUE le 2026-08-11 : AUCUNE PORTE COMPOSITE EN V1
-
-**G4 n'est pas franchie. Elle est TRANCHÉE, ce qui n'est pas la même chose**, et la distinction
-est écrite ici pour qu'aucune session ultérieure ne la lise à l'envers :
-
-- **Non franchie** — sa preuve est « 3 chiffres par écran écrits dans STATE.md ». Ils n'y sont
-  pas, et rien ne les remplace. Le volet « les écrans tiennent-ils leur budget de latence » est
-  **indécidable en l'état**, et le reste.
-- **Tranchée** — la porte a une seconde fonction : décider si une porte SQL composite s'écrit
-  en V1. **Celle-là se décide sans instrument, et la réponse est NON.**
-
-**Le raisonnement, en deux temps :**
-
-1. **La règle du plan est explicite et joue en faveur du non-agir** : « Aucune porte composite
-   n'est écrite sans ce chiffre en main » (plan §7, point 4). Pas de chiffre → pas de `033`.
-   La règle a été écrite précisément pour ce cas de figure ; l'invoquer n'est pas un
-   contournement de G4, c'est son application littérale.
-2. **Le seul candidat réel ne devient pas plus urgent sans mesure.** `/agenda` est hors budget
-   **en nombre d'appels** (2 pour 1), établi statiquement. Mais :
-   - les deux appels sont **déjà concurrents**, pas en cascade : leur coût est celui du plus
-     lent des deux, pas de leur somme ;
-   - une porte composite est une **migration `033` sur la couche agenda**, avec revue
-     `security-reviewer` obligatoire et rejeu — un chantier à risque non nul, engagé pour un
-     gain **dont personne ne peut aujourd'hui écrire l'ampleur** ;
-   - `06-PERF-BUDGET.md` §3 borne le nombre d'appels **parce que** les appels séquentiels
-     coûtent ~180 ms chacun. Deux appels concurrents ne reproduisent pas ce coût-là. Le budget
-     reste violé **à la lettre** — et c'est écrit rouge — mais la cause qu'il vise n'est pas
-     démontrée présente ici.
-
-**Conséquence, assumée et écrite comme telle** (plan §7, « Non corrigé en V1, et dit
-franchement ») : `/agenda` **reste ROUGE**, reporté à **V5** (session Patients & Agenda), où la
-porte composite se décidera avec une mesure en main. `/consultation/[id]` garde sa cascade
-légitime (`listAmendments` dépend de `note.id`), déjà écrite en dette V5 — inchangée.
-
-**Aucune migration `033` n'a été écrite. `supabase/migrations/` est inchangé cette session.**
-La migration `032` n'a pas été touchée, n'a pas été appliquée, et aucun rejeu Docker n'a été
-lancé : rien dans la séquence de portes de cette session ne l'exigeait.
-
-## V1.2 — Jarvis (Step 20) : LIVRÉ, dans les limites de l'arbitrage
-
-**Arbitrage utilisateur du 2026-08-11 — le timeout de la passerelle reste à 10 s.**
-`03-JARVIS-TOOLS.md` §10 (« > 10 s → annuler », rang 4) bat `SPRINT-V1.md` §V1.2 (30 s, rang 5)
-par `DOC-AUTHORITY.md` §1. **`_shared/external-call.ts` n'a pas été touché, et aucun document
-d'autorité n'a été modifié.** La contradiction documentaire reste ouverte : c'est
-`SPRINT-V1.md` qui devra être corrigé, par une main humaine.
-
-**Ce qui a été ajouté :** un **plafond client de 15 s** sur `db/supabase.ts::invokeFunction`,
-par `AbortController`. Il est délibérément **au-dessus** des 10 s de la passerelle : c'est un
-filet contre une Edge Function qui ne répond **pas du tout** (processus tué, relais muet), pas
-un concurrent de la passerelle — au même chiffre, le client abandonnerait parfois le premier et
-remplacerait un message qui explique la panne par un message qui dit seulement « délai ».
-C'est le défaut nommément constaté sur « Analyse en cours… », qui tournait indéfiniment.
-
-**Un piège trouvé et évité, à ne pas rouvrir.** `@supabase/functions-js@2.110.9` expose une
-option `timeout` native (`types.d.ts:115-120`, **lue dans `node_modules`, pas dans la
-documentation** — [[verifier-la-lib-installee]]). Elle n'a **pas** été utilisée : son abandon
-revient sous la forme d'un `FunctionsFetchError`, un nom absent de `NOMS_TRANSPORT`, que
-`isNetworkFailure` ne reconnaît donc pas — le classement retomberait sur le code d'aveu que
-V1.1 vient de fermer. Avec notre propre `signal`, c'est le code qui **nomme** l'expiration :
-`indisponible` + `fr.delaiDepasse` + `technical: "client:delai-depasse"`.
-**`indisponible` et non `hors-ligne`** : la connexion fonctionne, c'est la fonction qui n'a pas
-répondu ; les confondre afficherait « Connexion perdue » à quelqu'un dont le réseau va très
-bien, et l'enverrait chercher la panne du mauvais côté.
-
-⚠️ **Reste à vérifier À L'ÉCRAN, non fait** : que l'expiration produit bien la phrase honnête
-sur le panneau d'analyse de séance. Même dette de navigateur que ci-dessus.
-
-## Step 22 — revue de sécurité du diff entier : **FAITE le 2026-08-12 · 0 ROUGE · 7 RÉSERVES**
-
-**Historique, conservé délibérément.** Un premier lancement le 2026-08-11 (sous-agent
-`security-reviewer`) s'est arrêté sur une limite de session de l'API **sans rendre le moindre
-résultat, même partiel**. Il n'avait donc RIEN validé et RIEN infirmé. Cette phrase reste
-écrite pour qu'aucune session suivante ne prenne l'absence de rouge pour un vert.
-
-**Reprise le 2026-08-12, en relecture directe** (pas de sous-agent), sur le diff COMPLET :
-30 fichiers modifiés, 2 scripts neufs, `032` non suivi. Périmètre couvert :
-`db/supabase.ts` · frontière `external-call`/Jarvis · `useSessionEcran.ts` · les quatre écrans
-· `errors.ts`/`log.ts` et tous les services · `checkpoint-v1.sh` · `verify-migrations.sh` ·
-`preflight.sh`.
-
-### VERT — vérifié, pas supposé
-
-- **Règle 2.** Aucun `NEXT_PUBLIC_` hors URL + clé anon (`src/lib/env.ts`). Aucun
-  `OPENROUTER|GROQ|ELEVENLABS` dans `src/`.
-- **Règle 1, point de sortie unique.** `grep fetch("https` sur `src/` + `supabase/` ne rend que
-  `_shared/external-call.ts`.
-- **Règle 4.** Aucun `if (role === …)` dans un écran. `/agenda` et `/patients` rendent
-  `utilisateur?.role ?? "assistant"` — défaut **fermé** vers la navigation la plus étroite quand
-  le profil est illisible. La RLS décide toujours seule.
-- **`AppError.cause` — le risque le plus élevé du diff, et il ne fuit pas.** `toAppError`
-  attache désormais l'erreur Postgres brute, dont le `.message` peut porter
-  `Key (phone)=(0554…)`. Vérifié qu'elle ne sort jamais : `grep "use server"` sur `src/` ne rend
-  **rien** — aucun `AppError` ne traverse donc une frontière de sérialisation RSC ; les écrans
-  ne lisent que `.message` (français, `fr.ts`) ; `logFieldsFor` n'émet que
-  `code`/`technical`/`context`/`causeName`, et `causeName` est `.name`, jamais `.message`.
-  `LogFields` reste fermée. **I5 et règle 1 tiennent.**
-- **La classification hors-ligne survit à l'emballage V1.1.** Les `catch` de `db/supabase.ts`
-  enveloppent en `new Error(…, { cause })` ; `unwrapCause` remonte à l'original AVANT
-  `isNetworkFailure`/`classify`, avec un `Set` contre une chaîne cyclique. Un
-  `TypeError: Failed to fetch` levé se classe toujours `hors-ligne`, pas `inattendu`.
-- **La régression d'attente infinie est réellement fermée, sur les QUATRE écrans.** Les gardes
-  d'effet sont `sessionTranchee !== true` ; chaque écran a une sortie pour
-  `sessionTranchee === false` — `/agenda` et `/patients` la portent explicitement,
-  `/finances:200` et `/consultation:637` sont couverts par leur branche `utilisateur === null`,
-  que le même chemin hors ligne pose. Aucun écran ne peut atteindre un état où l'effet ne part
-  pas et où `chargement` reste `true`.
-- **Aucun écran n'interroge avant que la session soit établie.** Toute lecture métier est
-  derrière `sessionTranchee === true`, donc derrière un `getSession()` qui a rendu une session.
-  La garantie I4 est inchangée : le profil part en parallèle, et le profil n'a jamais conditionné
-  l'audit.
-- **AbortController.** Vérifié dans la bibliothèque INSTALLÉE, pas dans sa documentation :
-  `@supabase/functions-js@2.110.9`, `dist/module/types.d.ts:113-115` déclare
-  `signal?: AbortSignal`, et `FunctionsClient.js:238-262` le passe à `fetch`. Le commentaire du
-  code dit vrai. À l'expiration, `expire` est testé DANS LES DEUX chemins (erreur de transport
-  ET `catch`) : l'abandon est rendu `indisponible` + `fr.delaiDepasse`, jamais maquillé en
-  `hors-ligne`.
-- **Frontière Jarvis / délais.** Passerelle toujours `TIMEOUT_MS_DEFAUT = 10_000`
-  (`external-call.ts:214`) ; plafond client 15 s, délibérément au-dessus. Arbitrage du
-  2026-08-11 respecté, aucun document d'autorité modifié.
-- **Migrations.** `git status supabase/` ne rend qu'une entrée : `032` non suivi. Pas de `033`,
-  rien de modifié, pas de Docker, aucune écriture en production.
-
-### RÉSERVES — non bloquantes, écrites ici et NON codées (règle 10)
-
-1. Le second effet de `/agenda` (file d'approbation) n'a ni plafond de délai ni surface
-   d'erreur : un appel qui pend laisse la file silencieusement absente. Ce n'est pas une attente
-   infinie — c'est la grille principale qui gouverne l'état de l'écran.
-2. **Un commentaire qui sur-déclare.** `/agenda:203` écrit que le motif est « repris de
-   /finances et /consultation, qui portaient déjà leur branche ». Ces deux écrans ne portent
-   AUCUNE branche `sessionTranchee` : ils sont couverts par accident, parce que le même chemin
-   hors ligne pose aussi `utilisateur = null`. Résultat juste, mécanisme faux — et c'est le
-   mécanisme que le prochain lecteur croira.
-3. Sémantiques divergentes pour `sessionTranchee === true && utilisateur === null` : `/agenda`
-   et `/patients` continuent avec la navigation la plus étroite ; `/finances` et
-   `/consultation` affichent « non authentifié » + reconnexion. Les deux sont sûrs, les deux
-   choix sont opposés.
-4. `/finances` : un échec D'ACTION (`encaisser`) pose `etat = "erreur"`, ce qui REMPLACE
-   désormais la liste des paiements. `/consultation` évite exactement cela pour les erreurs
-   d'action. Défendable sous UX §1, mais les deux écrans se contredisent.
-5. **Risque de faux positif au checkpoint.** Les contrôles 9/11/12/13 de `checkpoint-v1.sh`
-   cherchent des NOMS (`DELAI_CHARGEMENT_MS`, `Squelette`, `type EtatFinances`,
-   `echecLecture`). Une constante déclarée mais jamais câblée les laisse VERTS. L'en-tête du
-   script est honnête sur sa nature statique ; la limite méritait d'être écrite.
-6. Le `sed "s/'[^']*'//g"` neuf de `verify-migrations.sh` travaille LIGNE À LIGNE : un
-   `COMMENT ON … IS '…'` sur plusieurs lignes ne serait pas dépouillé. Juste sur le corpus
-   d'aujourd'hui (6/6), fragile au prochain commentaire multi-ligne.
-7. Le chemin « aucune session » réelle affiche une image de « non authentifié » pendant que
-   `router.replace("/connexion")` est en vol. Cosmétique.
-
-**➜ Step 22 est CLOS. Aucun ROUGE, donc aucune correction avant commit.** Les 7 réserves
-vivent ici, pas dans le code.
-
-⚠️ **Ce que cette revue ne prouve pas** : le défaut réel de la session précédente (attente
-infinie hors ligne sur `/agenda` et `/patients`) avait été trouvé par relecture directe, pas
-par un sous-agent. Une revue verte ne prouve pas davantage l'absence d'un défaut qu'elle n'en
-prouve la présence — elle prouve seulement que les chemins listés ci-dessus ont été suivis.
-
-## Step 23 — état vérifié, portes rejouées le 2026-08-12
-
-```
-bash scripts/preflight.sh          →  ✅ preflight vert                    exit 0
-pnpm typecheck                     →  tsc --noEmit, 0 erreur              exit 0
-pnpm lint                          →  eslint ., 0 erreur / 0 avertissement exit 0
-pnpm build                         →  ✓ compilé en 9.7 s, 9 pages         exit 0
-bash scripts/verify-migrations.sh  →  VERT 6/6, SECURITY DEFINER 26/26    exit 0
-bash scripts/checkpoint-v1.sh      →  BLOQUÉ — 14 VERT · 1 BLOQUÉ         exit 2
-```
-
-`exit 2` est l'état ATTENDU, pas un échec : le contrôle 15 (les 3 chiffres par écran) est
-bloqué par construction tant que les 15 relevés en navigateur ne sont pas ici. Voir Step 18.
-
-**Rien n'est commité.** `supabase/` ne contient qu'une entrée non suivie — `032`, inchangée.
-Aucune migration ajoutée ni modifiée, aucun `033`, aucun fichier Docker, aucune écriture en
-production.
-
-**Dette ouverte, inchangée :** les 15 mesures navigateur du Step 18 (dérogation du
-2026-08-11). **Décision close, non rouverte :** G4 / Step 19 — pas de porte SQL composite,
-pas de migration `033`, `/agenda` reporté en V5.
-
-## Step 21 — `scripts/checkpoint-v1.sh` écrit · verdict **BLOQUÉ (14 VERT · 1 BLOQUÉ)**
-
-Nouveau, statique, **sans base et sans Docker** — V1.5 et V1.2 n'ont touché ni au schéma ni aux
-données ; rendre ce checkpoint dépendant d'un conteneur l'aurait rendu injouable sans rien
-prouver de plus. La preuve base de V1.3 reste dans son propre rejeu (Step 12).
-
-```
-1  aucun "inattendu" hors errors.ts / fr.ts                    VERT
-2  AppError porte context + cause (V1.1)                       VERT
-3  LogFields fermée : ni message, ni patientId, ni champ libre VERT
-4  un seul fetch externe (external-call.ts), règle 1           VERT
-5  aucun secret dans .next/static (règle 2)                    VERT
-6  aucun if (role === …) dans les écrans (règle 4)             VERT
-7  plafond client sur invokeFunction (AbortController)         VERT
-8  passerelle 10 s (rang 4) · plafond client supérieur (15 s)  VERT
-9  plafond de délai sur les 4 écrans (UX §2)                   VERT
-10 fr.delaiDepasse existe et porte le mot « délai »            VERT
-11 squelette de chargement sur les 4 écrans                    VERT
-12 /finances : machine à états exclusive (V1.4)                VERT
-13 /consultation : échec de lecture ≠ séance introuvable       VERT
-14 verify-migrations.sh : corpus applicable                    VERT
-15 3 chiffres par écran (06-PERF-BUDGET §6)                    BLOQUÉ  non mesuré
-```
-
-**Le contrôle 15 est BLOQUÉ PAR CONSTRUCTION, et c'est le cœur du fichier.** Il aurait été
-facile de ne pas l'écrire du tout — le checkpoint serait « VERT 14/14 ». C'est exactement ce
-que `06-PERF-BUDGET.md` §6 interdit : « une mesure absente n'est pas une mesure réussie ».
-**Le script ne tient délibérément aucun compte de la dérogation du 2026-08-11** : un waiver qui
-éteindrait son propre contrôle ne laisserait aucune trace exécutable de la dette. Code de
-sortie **2** — ce n'est pas un vert, et aucune modification du script ne doit le rendre vert :
-seuls les 15 relevés en navigateur le peuvent.
-
-**Deux faux positifs trouvés et corrigés PENDANT l'écriture du script — dans les contrôles, pas
-dans le code.** Les contrôles 3 et 6 sont d'abord sortis ROUGE en repérant de la **prose de
-commentaire** : `log.ts` porte la ligne « Jamais un message » (qui contient le mot interdit
-parce qu'elle l'interdit), et `agenda/nouveau/page.tsx:5` explique mot pour mot qu'il ne porte
-aucun `if (role === …)`. Vérifié à la main avant toute correction : les champs réels de
-`LogFields` sont `code · durationMs · count · technical · context · causeName`, et aucun écran
-ne teste de rôle. **Les deux contrôles dépouillent désormais les commentaires** (même idiome
-que `preflight.sh` §9d). C'est le troisième passage de ce piège dans le dépôt — un contrôle qui
-punit le commentaire qui le respecte apprend à supprimer les commentaires.
+- **v4 → 9ᵉ revue (3 ROUGE, 1 créé par correction v8)** : paragraphe v8 affirme « équivalent rempli checklist » FAUX (geste = 0 ligne). Deux citations `REVOKE` non mises à jour suite ajout `authenticated`, une persistée dans COMMENT.
+  
+**Arrêt après v9** : SQL exécutable VERT depuis v4. Passes 5-9 trouvaient QUE documentaire. Prochaine relecture = humaine.
 
 ---
 
-## V1 — en cours
+## Section GESTE MANUEL — fermeture orphelin (exécuté, 2026-08-10)
 
-**Step 01 — mesure de référence, PARTIELLE.** `pnpm build` VERT (55s, 0 erreur typecheck/lint),
-`pnpm start` lancé en arrière-plan (port 3000). Mesuré : TTFB serveur par `curl`, 3×, médiane,
-non authentifié (redirige vers `/connexion` — HTML de coquille seul, pas la donnée) :
-```
-/                      médiane 0.021s
-/agenda                médiane 0.029s
-/finances              médiane 0.011s
-/patients              médiane 0.005s
-/consultation/[id]     médiane 0.030s (1er essai 0.62s = cold start Next, écarté)
-```
-⚠️ **Ce n'est PAS la mesure de `06-PERF-BUDGET.md` §1** (appels réseau au chargement + premier
-contenu + complet, au navigateur, authentifié contre Supabase réel). Aucun navigateur dans cet
-environnement — même dette que S5/S6 (« pas de navigateur dans cet environnement », voir
-Historique S1-S6 plus bas). Ce qui est prouvé ici : la coquille HTML répond en <50ms, cohérent
-avec l'exigence squelette <100ms de `05-UX-CONTRACT.md` §2. Ce qui reste NON mesuré : nombre
-d'appels réseau réels vers Supabase, temps jusqu'au contenu utile, temps complet. **Dette
-explicite, à lever avant de déclarer le checkpoint 7 de V1 vert.**
+✅ **EXÉCUTÉ SUR `app.consultations` · ⚠️ `app.appointments` NON RECONTRÔLÉ** (lecture seule).
 
-**Step 02 — `grep OPENROUTER .next/static/` → 0 occurrence.** VERT, sur le build de référence.
+Consultation `1c4ea86f-e432-4693-b615-130af53d665d` (orpheline, `started_at` 6 jours antérieur). Rôle: `postgres` (`DATABASE_URL`), `rolsuper=f, rolbypassrls=t` (019:13-14).
 
-**Step 03-07 — V1.1 (erreurs) LIVRÉE, PORTE G1 VERTE.**
-- `errors.ts` : `AppError` porte désormais `context` et `cause` (non affichés — réservés au
-  journal). `toAppError(raw, context?)` remonte la chaîne `Error.cause` (`unwrapCause`) pour
-  retrouver un objet porteur d'un `.code` PostgREST/SQLSTATE avant de classer, sans toucher
-  `isNetworkFailure` ni `NOMS_TRANSPORT` (pièges déjà payés). Nouveau `causeName()` et
-  `logFieldsFor()` — un seul point qui décide ce qu'un service journalise.
-- `log.ts` : `LogFields` élargie de façon FERMÉE — `technical`, `context`, `causeName`. Toujours
-  aucun `message`, toujours aucun `patientId` (I5 inchangée).
-- `db/supabase.ts` : les 8 `catch` enveloppent désormais la cause (`new Error(…, {cause})`) et
-  passent un `context` par appel (`select:<table>`, `rpc:<nom>`, `signIn`, `signOut`,
-  `getSession`, `invokeFunction:<nom>`). Les deux `toAppError(undefined)` muets sont remplacés
-  par des erreurs nommées (`"auth:session-vide"`, `"edge:enveloppe-absente"`).
-- **~31 sites** (finance, auth, appointments, practitioners, documents, consultations, patients,
-  jarvis, deployment) : `{ code: result.error.code }` → `logFieldsFor(result.error)` partout —
-  le SQLSTATE et le contexte atteignent désormais le journal, plus seulement le code applicatif
-  grossier. Un `42501` (cloison ADR-019 qui fonctionne) est maintenant distinguable d'un `23505`.
-- `scripts/preflight.sh` §10 (nouveau) : `"inattendu"` interdit comme code EN CODE hors de
-  `errors.ts`/`fr.ts` (commentaires dépouillés, même méthode que §9d). Deux faux positifs de
-  prose vérifiés (`finance.ts:104`, `db/supabase.ts:226`) — ni l'un ni l'autre n'est du code.
-- **PORTE G1 : preflight ✅ · typecheck ✅ · lint ✅ · build ✅ (21.8s, 0 erreur) · grep OPENROUTER
-  sur ce build → 0.** V1.1 est verrouillée ; V1.3→V1.5 peuvent commencer.
-- ⚠️ **Limite d'observabilité, non résolue et non dans le périmètre de V1** (voir plan §3.4bis) :
-  `log.ts` n'émet toujours rien en `NODE_ENV=production` et n'a aucune destination. V1.1 rend
-  l'application diagnosable EN DÉVELOPPEMENT, pas au cabinet. La cause voyage désormais dans
-  `AppError` au lieu d'être détruite — le jour où une destination est choisie, il n'y a qu'un
-  `emit()` à brancher. Dette datée, à trancher avant le premier patient réel (porte de livraison).
+**Procédure** (ICI SEULEMENT, jamais en `032`):
 
-**Step 08 — inventaire lecture seule (base Supabase Cloud réelle, session pooler, aucune
-écriture).** 1 seule consultation `status='open'` orpheline, `started_at` 2026-08-04 14:48:20
-UTC, soit ~6 jours au moment de la mesure (2026-08-10 13:13 UTC) — cohérent avec le symptôme
-`125:44:26` constaté le 09/08. Aucune contrainte SQL (`CHECK`, trigger) n'exige `ended_at NOT
-NULL` sur une ligne `status='closed'` (007, 026 relus) : `duration_seconds` est une colonne
-GÉNÉRÉE (`EXTRACT(EPOCH FROM (ended_at - started_at))`), elle devient simplement `NULL` si
-`ended_at` l'est.
+1. Pré-read : `SELECT status FROM app.consultations WHERE id = '1c4ea86f…'` → doit être `'open'`.
 
-**Step 09 — PORTE G2 FRANCHIE.** Décision utilisateur explicite : **option C** —
-`ended_at` reste `NULL`, seul `status` passe à `'closed'`. Aucune durée clinique inventée.
-Complément identifié pendant l'arbitrage, non prévu par le plan initial : `chrono()`
-(`consultation/[id]/page.tsx:931-934`) affiche `maintenant` tant que `endedAt===null` — sur une
-séance close avec `ended_at NULL`, le chrono continuerait de tourner à l'écran et
-reproduirait EXACTEMENT le symptôme corrigé. **Correctif ajouté au périmètre de V1.3e** : figer
-l'affichage sur tout `status==='closed'`, avec la durée réelle si `endedAt` existe, sinon la
-mention « durée inconnue » — jamais un chiffre qui continue de courir sur une séance fermée.
-
-**Step 10-11 — migration 032, PLUSIEURS passes de revue security-reviewer, PAS ENCORE APPLIQUÉE.**
-⚠️ Nombre de passes délibérément non compté ici en toutes lettres — un chiffre écrit à un
-endroit et jamais mis à jour à un autre a déjà causé une contradiction interne détectée en
-revue. Le détail complet, dans l'ordre, est ci-dessous ; c'est lui qui fait foi, pas un total.
-⚠️ **Note sur l'étiquetage** : les labels `v1`…`v4` ci-dessous désignent des versions RÉÉCRITES
-du fichier. À partir de `v4`, l'étiquetage change de nature : les entrées suivantes sont des
-PASSES DE REVUE sur cette même v4 (« v4 → 4ᵉ revue », « v4 → 5ᵉ revue », etc.), pas de nouvelles
-réécritures numérotées — il n'existe donc délibérément aucune entrée « v5 » : ce n'est pas un
-trou, c'est un changement de convention à cet endroit précis, qui reste ainsi jusqu'à la fin.
-- **v1** : 5 ROUGE trouvés — pas de plancher sur `p_threshold` (RPC exposé, fermait une
-  séance vivante) · pas de transition `appointments.status='completed'` en miroir de
-  `close_consultation` (l'agenda serait resté « En séance » indéfiniment) · fenêtre glissante
-  `now() - 12h` au lieu d'une clôture datée sur l'id réel · commentaire sur-déclarant une trace
-  d'audit attribuée alors que `actor_id`/`actor_role` sont NULL sous le rôle de migration ·
-  numérotation 031/032 non documentée.
-- **v2** : les 5 corrigés (plancher `GREATEST`, transition rendez-vous miroir de la fonction
-  `app.close_consultation` de 026 — 026 n'a pas de sections numérotées, un renvoi antérieur
-  « §4 » était orphelin et a été retiré partout, y compris dans la migration —, id
-  épinglé `1c4ea86f-e432-4693-b615-130af53d665d` trouvé par l'inventaire Step 08, commentaire
-  honnête sur l'attribution NULL, numérotation documentée). Re-revue : les 5 confirmés fermés,
-  MAIS 2 NOUVEAUX ROUGE trouvés — `GRANT EXECUTE TO authenticated` sur une fonction qu'aucun
-  service TypeScript n'appelle (chemin d'écriture irréversible exposé au navigateur pour rien) ·
-  la garde « ligne introuvable » et la garde « déjà close » utilisaient la même branche
-  silencieuse, un `id` absent (mauvaise base/faute de frappe) aurait inscrit `032` comme
-  appliquée sans avoir rien corrigé.
-- **v3** : GRANT à `authenticated` retiré (seul `REVOKE ALL FROM PUBLIC` reste — un script de
-  maintenance futur se connecte par `DATABASE_URL`, décrit à ce stade comme « superutilisateur »
-  — **FAUX, voir la mesure de 019 citée plus bas : `rolsuper=false`, `rolbypassrls=true`** —
-  sans besoin du GRANT) ·
-  `RAISE NOTICE` → `RAISE WARNING` sur « introuvable », avec commentaire explicite que le vert
-  du checkpoint ne prouve PAS que la ligne cible a été corrigée sur la base réelle — cette
-  preuve est une vérification externe, après application, hors de la transaction (`RAISE
-  EXCEPTION` écarté : casserait le replay Docker sur toute base qui n'est pas exactement celle
-  du 2026-08-10, y compris la future instance auto-hébergée). Troisième revue en cours.
-- **v3 → 3ᵉ revue : 3 NOUVEAUX ROUGE**, tous dans la partie DEVENUE ad hoc du fichier — (1) le
-  commentaire affirmait une vérification post-application « faite … (STATE.md, Step 12) » qui
-  n'a JAMAIS eu lieu (`grep "Step 12" STATE.md` → 0) ; (2) `RAISE WARNING` est en pratique aussi
-  invisible que le `NOTICE` qu'il remplaçait — le seul chemin d'application du dépôt
-  (`scripts/db-migrate.sh:158-167`) capture toute la sortie `psql` et ne l'affiche QUE si le
-  code de sortie est non nul, ce qu'un `WARNING` ne déclenche jamais ; (3) **sérieux** — sous
-  `FORCE ROW LEVEL SECURITY` (007), aucune policy ne couvre un rôle sans `BYPASSRLS`/statut
-  superutilisateur, hypothèse jamais vérifiée dans ce dépôt ; si fausse, le bloc `DO` aurait fait
-  un `UPDATE` de 0 ligne SILENCIEUSEMENT puis `COMMIT`, inscrivant `032` comme appliquée sans
-  avoir rien corrigé. Recommandation de la revue, retenue : **le geste ponctuel (id de
-  production) n'a pas sa place dans un fichier dont le contrat est « rejouable sur n'importe
-  quelle base » — le sortir entièrement résout les trois ROUGE ensemble.**
-- **v4 — RÉÉCRITURE.** Le bloc `DO` ad hoc (fermeture de l'id `1c4ea86f-…`) est **retiré de la
-  migration, IDENTIFIANT INCLUS** — une migration doit être rejouable sur n'importe quelle base ;
-  un id de production n'y a plus sa place, portable ou non. `032` ne contient plus que le
-  garde-fou portable (`app.close_stale_consultations`, `REVOKE`, `INSERT INTO schema_migrations`).
-- **⚠️ Écart au plan initial, décision explicite prise en session (pas un contournement) :**
-  automatiser le geste ponctuel par un script exécuté par l'agent (`scripts/close-orphan-*.sh`,
-  prévu au plan) a été **refusé par le classificateur de permissions de la session** — une
-  écriture non supervisée sur une donnée réelle de production. Décision saine, reprise plutôt que
-  contournée (CLAUDE.md, « Exécuter des actions avec soin »). **Le geste devient MANUEL**, et sa
-  procédure exacte vit **ICI, dans STATE.md, PAS dans la migration** — voir §"GESTE MANUEL" ci-dessous.
-- **v4 → 4ᵉ revue : 4 NOUVEAUX ROUGE**, aucun dans le mécanisme lui-même — tous dans la
-  cohérence documentaire du périmètre réduit : (1) le fichier affirmait `hors du problème FORCE
-  RLS` pour le rôle `DATABASE_URL`, FAUX — `FORCE` soumet le PROPRIÉTAIRE aux policies mais pas
-  un rôle `SUPERUSER`/`BYPASSRLS`, qui échappent à la RLS par définition ; (2) l'UUID de
-  production restait présent 3× dans le fichier alors qu'une ligne affirmait juste au-dessus
-  « aucun identifiant de production » ; (3) **sérieux** — le commentaire de
-  `close_stale_consultations` décrivait un scoping par praticienne/cabinet via la RLS de 007
-  « comme `close_consultation` », FAUX sous le SEUL chemin d'invocation documenté
-  (`DATABASE_URL`, décrit à ce stade comme « superutilisateur » — **FAUX, même mesure de 019** :
-  c'est `rolbypassrls=true`, pas `rolsuper`, qui échappe à la RLS) : ce rôle échappe à la RLS,
-  donc la fonction balaie EN RÉALITÉ toutes les séances orphelines de TOUS les cabinets —
-  comportement assumé, mais que le commentaire décrivait à l'envers ; (4) deux renvois de
-  section cassés (`§2 ci-dessous` inexistant,
-  `§1` = auto-référence circulaire) laissés par le retrait du bloc `DO`.
-- **v4 → CORRIGÉ (partiellement — voir 5ᵉ revue ci-dessous)** : (2) l'UUID a été retiré du
-  fichier ; (4) numérotation de section supprimée, renvois corrigés.
-- **v4 → 5ᵉ revue : 4 NOUVEAUX ROUGE**, dont DEUX nés des corrections de la 4ᵉ passe elle-même —
-  (1) **sérieux** : la reformulation « SUPERUSER ou BYPASSRLS » restait une hypothèse non
-  vérifiée présentée comme un fait, alors que `019_revert_definer_doors.sql` a DÉJÀ MESURÉ, sur
-  cette base, que `postgres` (le rôle de `DATABASE_URL`) a `rolsuper=false` MAIS
-  `rolbypassrls=true` — la migration citait un statut « superutilisateur » que 019 réfute
-  explicitement pour ce rôle ; (2) le `COMMENT ON FUNCTION` affirmait que la fonction est
-  « appelée UNIQUEMENT via » la procédure manuelle de `STATE.md` — FAUX : cette procédure
-  n'appelle jamais cette fonction, elle écrit directement sur un UUID unique ; les deux gestes
-  n'ont aucun rapport d'exécution ; (3) l'affirmation « toute référence à un «script» a été
-  retirée du fichier » (ligne 129 précédente, corrigée ci-dessous) était fausse : 5 occurrences
-  subsistent, légitimement — elles décrivent un futur script de MAINTENANCE hypothétique qui
-  pourrait un jour appeler `close_stale_consultations`, un concept distinct du script
-  d'automatisation du geste ponctuel qui, lui, a bien été abandonné ; (4) le post-check de la
-  procédure manuelle (étape 3) ne relisait que `app.consultations`, jamais `app.appointments` —
-  or c'est la transition de CETTE dernière table qui est irréversible (`022`, `'completed'`
-  terminal), pas celle de `consultations`.
-- **v4 → CORRIGÉ à nouveau** : (1) le commentaire cite maintenant la mesure de 019
-  (`rolsuper=f`, `rolbypassrls=t`) au lieu d'une hypothèse à deux branches ; (2) le
-  `COMMENT ON FUNCTION` explicite qu'aucun appelant actuel n'existe (`grep` → 0) et distingue
-  clairement cette fonction du geste manuel, sans lien d'exécution entre les deux ; (3) cette
-  ligne (celle que tu lis) remplace l'affirmation fausse — les références à un script de
-  maintenance FUTUR restent, à raison ; (4) le post-check de la procédure manuelle ci-dessous
-  inclut désormais `app.appointments`.
-- **v4 → 6ᵉ revue : 5 NOUVEAUX ROUGE**, tous des résidus de copier-coller laissés par la
-  correction précédente — le mot « superutilisateur » réfuté dans un bloc restait présent, mot
-  pour mot, dans deux autres blocs du même fichier (l'en-tête et le commentaire `REVOKE`) ; le
-  décompte de ROUGE par passe, écrit dans l'en-tête de la migration, ne correspondait plus au
-  détail réel documenté ici ; et CETTE section — « GESTE MANUEL » — affirmait encore
-  « NON EXÉCUTÉ » et « superutilisateur » alors que la confirmation ✅ plus bas dans le même
-  fichier disait l'inverse. **Corrigé : le mot erroné est purgé partout dans `032` (l'en-tête
-  cite désormais 019 une seule fois, comme référence unique) ; l'en-tête de `032` ne porte plus
-  de décompte de ROUGE par passe — ce fichier-ci (STATE.md) reste la seule source ; cette
-  section reflète maintenant l'état réel : geste exécuté et confirmé.**
-- **v4 → 7ᵉ revue : 6 NOUVEAUX ROUGE**, presque tous des résidus de bookkeeping documentaire —
-  le décompte de ROUGE que la correction précédente disait avoir retiré de `032` s'y trouvait
-  encore (l'en-tête l'annonçait retiré tout en le portant lui-même) ; le mot « superutilisateur »
-  réfuté à un endroit survivait, non réfuté sur place, à deux autres (`032`, ligne de l'en-tête
-  et du `REVOKE`) ; le titre de cette section STATE.md (« TROIS passes ») contredisait le
-  décompte réel documenté juste en dessous ; un renvoi `026 §4` s'est révélé orphelin — 026 n'a
-  aucune section numérotée ; et **la ligne « ✅ EXÉCUTÉ ET CONFIRMÉ » de la section GESTE MANUEL
-  sur-déclarait par omission** : elle ne portait pas la réserve sur `app.appointments`, présente
-  seulement 60 lignes plus bas.
-- **CORRIGÉ** : `032` a été RÉÉCRIT pour ne plus porter de décompte de ROUGE par passe ni de
-  label « ROUGE N de la Xᵉ revue » nulle part — y compris dans `COMMENT ON FUNCTION`, qui les
-  aurait persistés dans `pg_description` au-delà de toute future correction de ce fichier
-  source. Ce document (STATE.md) reste la SEULE source de l'historique de revue, précisément
-  parce qu'il n'est ni exécuté ni persisté en base — voir `DOC-AUTHORITY.md` §1 : « STATE.md —
-  périssable, jamais normatif ». Le renvoi `026 §4` est remplacé par une désignation de
-  fonction. Le titre de cette section ci-dessus ne porte plus de nombre. La ligne
-  « ✅ EXÉCUTÉ ET CONFIRMÉ » de GESTE MANUEL porte désormais sa réserve directement.
-- **v4 → 8ᵉ revue : 4 NOUVEAUX ROUGE** — un RÉEL dans le SQL exécutable (`REVOKE ALL … FROM
-  PUBLIC` ne révoque rien d'un GRANT déjà accordé à un autre rôle, et `CREATE OR REPLACE
-  FUNCTION` préserve les GRANT existants : rejouer ce fichier sur une base ayant un jour reçu
-  `GRANT EXECUTE TO authenticated` par une version antérieure n'aurait pas retiré ce GRANT) ;
-  trois documentaires (l'en-tête citait `SPRINT-V1.md §V1.3` en laissant croire à une conformité
-  totale du checklist alors qu'une ligne — la clôture par migration datée — n'est pas remplie
-  littéralement ; la toute première ligne de CE document contredisait son propre corps 22 lignes
-  plus bas ; la chaîne de labels de version sautait de « v4 » à « v6 » sans « v5 »).
-  **CORRIGÉ** : `REVOKE` cible désormais explicitement `FROM PUBLIC, authenticated` ; un
-  paragraphe honnête sur la portée réelle du checklist a été ajouté en tête de `032` ; l'en-tête
-  de ce document reflète l'état réel ; les labels « v6 » ont été renommés « v4 → 6ᵉ/7ᵉ revue ».
-- **v4 → 9ᵉ revue : 3 NOUVEAUX ROUGE**, tous des résidus — DONT UN INTRODUIT PAR LA CORRECTION DE
-  LA 8ᵉ PASSE ELLE-MÊME (le paragraphe ajouté affirmait que le checklist était « rempli par un
-  geste équivalent », alors que le geste manuel a rendu ZÉRO ligne modifiée : la consultation
-  était déjà dans l'état visé, par une cause NON tracée — ce n'est pas un geste équivalent, c'est
-  un état constaté sans preuve de origine) ; deux citations de `REVOKE ALL … FROM PUBLIC` dans
-  des commentaires n'avaient pas suivi l'ajout de `authenticated` à l'instruction réelle, dont
-  une persistée dans `COMMENT ON FUNCTION` — exactement le mécanisme que la refonte de la 8ᵉ
-  passe prétendait avoir éliminé. **Corrigé** : le paragraphe ne prétend plus qu'un geste
-  équivalent a rempli la case ; il dit que l'état constaté correspond au résultat visé SANS
-  preuve de cause, et que la case reste non cochée à la lettre. Les deux citations de `REVOKE`
-  suivent maintenant l'instruction réelle.
-- **Constat après 9 passes** : le corps SQL exécutable de `032` est VERT depuis la 4ᵉ passe et
-  reconfirmé indépendamment par les passes 8 et 9. Les passes 5 à 9 n'ont trouvé QUE des défauts
-  de commentaire/documentation — dont plusieurs introduits par la correction de la passe
-  précédente. Décision : ARRÊT de la boucle de revue automatique sur ce fichier après la 9ᵉ
-  passe. Toute correction documentaire résiduelle future se fait à la prochaine relecture
-  humaine, pas par une 10ᵉ passe automatisée.
-- **🔴 BLOCAGE DÉCOUVERT AU STEP 12, porte G3 — `031` EST DANS `supabase/migrations/`.**
-  En lançant `scripts/verify-migrations.sh` (statique, lecture seule) avant le replay Docker,
-  contrôle 3 est sorti ROUGE : 29 `SECURITY DEFINER` pour 26 `search_path`. **Faux positif**,
-  vérifié à la main : les 26 déclarations réelles portent toutes leur `search_path` ; les 3
-  surnuméraires sont des occurrences du texte « SECURITY DEFINER » **à l'intérieur de littéraux
-  SQL** dans les `COMMENT ON FUNCTION` de `030` (l. 647, 758, 824). C'est le piège que l'en-tête
-  du script dit avoir fermé pour les commentaires `--`, rouvert par un autre chemin depuis S7b.
-  **Corrigé** dans `scripts/verify-migrations.sh` : le contrôle 3 dépouille désormais aussi les
-  littéraux, sur une copie séparée — surtout PAS globalement, le contrôle 6 cherche des NOMS qui
-  vivent précisément dans les littéraux des `INSERT` de seed (c'est lui qui a trouvé l'identité
-  réelle dans `015`). Contrôle 3 : VERT (26/26).
-  **Ce faux positif en masquait un vrai** : le contrôle 5 sort maintenant ROUGE sur
-  `031_seed_document_templates` — « n'enregistre pas sa version ». Vérification directe :
-  ```
-  ls supabase/migrations/ | grep 031  →  031_seed_document_templates.sql   (IL EST LÀ)
-  ls docs/ | grep 031                 →  (rien)
-  git status                          →  ?? supabase/migrations/031_...    (non suivi)
-  git log (les deux chemins)          →  aucun commit
-  ```
-  L'en-tête de `032` affirmait exactement le contraire (« vit HORS de `supabase/migrations/` »),
-  et **deux passes de revue adversariale l'ont "confirmé" en prétendant avoir exécuté ce `ls`**.
-  Elles ne l'avaient pas fait. Corrigé dans `032`, avec la preuve rejouée.
-  **Conséquence réelle, et c'est elle le blocage :** `031` est du périmètre **V6** (seed des 4
-  modèles de certificats), porte `BEGIN;`/`COMMIT;` mais **n'inscrit pas sa version** et son
-  `INSERT INTO app.document_templates` (031:61) **n'a aucun `ON CONFLICT`**. `db-migrate.sh`
-  applique `ls migrations/*.sql | sort` en sautant ce qui est déjà inscrit → `031` serait
-  **réappliqué à chaque exécution**, redéposant ses 4 modèles à chaque fois, et il se trie
-  **AVANT** `032`. Lancer `db-migrate.sh` pour appliquer `032` entraînerait donc `031` avec lui.
-  **➜ `db-migrate.sh` N'A PAS ÉTÉ LANCÉ tant que le blocage tenait.**
-- **⚠️ 2026-08-11 — LE DÉPLACEMENT DE `031` A DÛ ÊTRE REFAIT. La ligne « BLOCAGE LEVÉ » du
-  2026-08-10 ci-dessous décrivait un état que le disque ne portait plus.**
-  En relançant `verify-migrations.sh` en fin de session V1.5 — par principe, pas sur un
-  soupçon — le contrôle 5 est ressorti **ROUGE** (« `031_seed_document_templates` n'enregistre
-  pas sa version »). Vérification directe, commandes réellement exécutées :
-  ```
-  ls supabase/migrations/ | grep 031  →  031_seed_document_templates.sql   (IL ÉTAIT REVENU)
-  ls docs/ | grep 031                 →  (rien)
-  ```
-  Le fichier était **de retour dans `supabase/migrations/`** et absent de `docs/` : déplacement
-  jamais abouti, ou défait depuis. La cause exacte n'est pas établie et n'a pas été cherchée
-  (hors périmètre V1) ; seul le fait observable a été inscrit.
-  **RÉTABLI le 2026-08-11 par l'utilisateur.** Contre-vérification par l'agent, commandes
-  relancées et sorties lues, jamais supposées :
-  ```
-  ls supabase/migrations/ | grep 031  →  (rien)
-  ls -l docs/ | grep 031              →  031_seed_document_templates.sql   10429 octets
-  git status --porcelain | grep 031   →  ?? docs/031_seed_document_templates.sql
-  bash scripts/verify-migrations.sh   →  VERT 6/6, contrôle 5 inclus
-  ```
-  **10429 octets, soit la taille exacte relevée au 2026-08-10 : aucun octet modifié.** Le
-  fichier reste non suivi par git, avant comme après — c'est V6 qui le reprendra (inscription
-  de version + `ON CONFLICT`).
-  **➜ La leçon, et c'est elle qui vaut d'être relue :** un état de fichier écrit dans `STATE.md`
-  n'est pas une garantie, c'est un relevé daté. Celui-ci a cessé d'être vrai entre deux
-  sessions **sans que rien ne le signale**. La porte qui l'a rattrapé est
-  `verify-migrations.sh`, lancée systématiquement — pas la relecture du document.
-- **✅ BLOCAGE LEVÉ — arbitrage utilisateur, 2026-08-10 : `031` sorti de `supabase/migrations/`.**
-  Déplacé vers `docs/031_seed_document_templates.sql` (emplacement que `032` croyait déjà être le
-  sien), **sans modification d'un seul octet** (10429 avant et après), fichier non suivi par git
-  avant comme après, aucun écrasement (la cible n'existait pas — vérifié avant le `mv`). V6 le
-  reprendra et le corrigera (inscription de version + `ON CONFLICT`) ; ce n'est pas du travail V1.
-  **`scripts/verify-migrations.sh` → VERT sur les 6 contrôles** : « le corpus peut être appliqué ».
-  L'en-tête de `032` porte désormais l'histoire réelle (il a été dans `migrations/`, il a été
-  déplacé, deux revues ont affirmé le contraire à tort), pas seulement l'état final.
-**Step 12 — REPLAY DOCKER + VÉRIFICATION COMPORTEMENTALE : VERT.** Base `v1fresh` neuve et
-dédiée, créée dans le conteneur de dev local (`supabase_db_Final_Mindcare`), schéma `auth`
-recopié, **jamais la base de production, jamais la base `postgres` du conteneur** ; supprimée
-après les tests. Rejeu **001→032 = 31 migrations, 0 erreur, 31 inscrites** dans
-`app.schema_migrations`.
-
-Contrôles de la fonction `app.close_stale_consultations`, **mesurés, pas déduits** :
-```
-prosecdef = f                          → SECURITY INVOKER confirmé (pas DEFINER)
-ACL = postgres=X/postgres              → AUCUN grant à authenticated/anon/PUBLIC
-SET ROLE anon         → appel         → ERROR: permission denied for function
-SET ROLE authenticated→ appel         → ERROR: permission denied for function
-SET ROLE service_role → appel         → ERROR: permission denied for function
-```
-`anon` et `service_role` sont refusés **alors que le `REVOKE` ne cite que `PUBLIC,
-authenticated`** : ils n'avaient d'accès que PAR `PUBLIC`, révoqué. La réserve de la 9ᵉ revue
-(« la convention du dépôt est `PUBLIC, anon, authenticated, service_role` ») est donc close
-empiriquement : aucun trou.
-
-Test comportemental sur 2 séances synthétiques (`is_synthetic=true`) — A orpheline
-(`practitioner`, `started_at` = −5 jours), B vivante (`owner`, −2 minutes) :
-```
-APPEL HOSTILE close_stale_consultations(interval '0 seconds')
-  → ferme A (0000c001) uniquement ; B reste 'open'     ← LE PLANCHER 12 h TIENT
-  → A : status='closed', ended_at IS NULL              ← OPTION C, aucune durée inventée
-  → 2 lignes avant, 2 lignes après                     ← RÈGLE 3, aucun DELETE
-2ᵉ appel immédiat                → 0 ligne             ← IDEMPOTENTE
-close_stale_consultations(NULL)  → 0 ligne             ← plancher tient sur NULL
-close_stale_consultations('-99 days') → 0 ligne        ← plancher tient sur négatif
-audit.log (table_name='consultations') → 3 lignes      ← RÈGLE 5, trg_audit a bien tracé
-```
-La séance vivante a survécu aux **trois** arguments hostiles. Le ROUGE 1 de la 1ʳᵉ revue
-(plancher absent, fermait une séance vivante) est prouvé fermé — plus seulement affirmé.
-
-**✅ PORTE G3 FRANCHIE** : corpus statique VERT (6/6), rejeu 001→032 VERT, RLS/ACL vérifiée aux
-3 rôles Postgres, aucune suppression, migration rejouable sans effet second. Reste hors G3 et
-non bloquant : la relecture seule de `app.appointments` pour le geste manuel (ci-dessous).
-
-### GESTE MANUEL — fermeture de la consultation orpheline (2026-08-10)
-
-**✅ EXÉCUTÉ ET CONFIRMÉ POUR `app.consultations`, 2026-08-10 — ⚠️ `app.appointments` NON
-recontrôlé** (lecture seule, non bloquant, détail en fin de section : ne pas lire cette ligne
-comme une confirmation des DEUX tables touchées par la procédure). Résultat complet du
-post-check en fin de section. Procédure lancée par l'utilisateur contre Supabase Cloud (psql,
-ou l'éditeur SQL du Dashboard),
-connecté avec le rôle `postgres` (`DATABASE_URL`, comme `scripts/db-migrate.sh`) — propriétaire
-du schéma, `rolsuper=false`, `rolbypassrls=true` (mesuré par `019_revert_definer_doors.sql:13-14`,
-PAS superutilisateur). Ce geste vit ICI et seulement ici — `032_close_orphan_consultations.sql` n'en contient et n'en
-connaît rien, par choix (revue adversariale, 3ᵉ passe, voir plus haut).
-
-Cible : consultation `1c4ea86f-e432-4693-b615-130af53d665d`, trouvée par l'inventaire lecture
-seule du Step 08 (`started_at` 2026-08-04 14:48:20 UTC, `status='open'`, `appointment_id` non
-NULL) — la séance orpheline à l'origine du symptôme `125:44:26`.
-
-**1. Pré-lecture** — confirmer l'état avant toute écriture :
-```sql
-SELECT status, appointment_id, started_at
-  FROM app.consultations
- WHERE id = '1c4ea86f-e432-4693-b615-130af53d665d';
-```
-Attendu : `status = 'open'`. Si déjà `'closed'` → rien à faire, ne pas continuer. Si aucune ligne
-→ mauvaise base, ne pas continuer.
-
-**2. Écriture** — une seule transaction, `ended_at` délibérément absent (option C, porte G2 —
-ne jamais inventer une durée clinique) :
+2. Écriture :
 ```sql
 BEGIN;
-
-UPDATE app.consultations
-   SET status = 'closed'
- WHERE id = '1c4ea86f-e432-4693-b615-130af53d665d'
-   AND status = 'open';
-
-UPDATE app.appointments a
-   SET status = 'completed', updated_at = now()
-  FROM app.consultations c
- WHERE c.id = '1c4ea86f-e432-4693-b615-130af53d665d'
-   AND a.id = c.appointment_id
-   AND a.status NOT IN ('completed', 'cancelled');
-
+UPDATE app.consultations SET status='closed' WHERE id='1c4ea86f…' AND status='open';
+UPDATE app.appointments a SET status='completed', updated_at=now()
+  FROM app.consultations c WHERE c.id='1c4ea86f…' AND a.id=c.appointment_id
+  AND a.status NOT IN ('completed','cancelled');
 COMMIT;
 ```
 
-**3. Post-vérification** — LA preuve, jamais une supposition. ⚠️ **Corrigée au 5ᵉ passage de
-revue** : la version précédente ne relisait que `app.consultations` — or la SEULE écriture
-IRRÉVERSIBLE de la transaction est celle sur `app.appointments` (`022`, `'completed'` est un
-état TERMINAL, `trg_appt_transition` refuse tout retour arrière). Le post-check doit couvrir
-les deux tables que l'étape 2 a touchées :
-```sql
-SELECT c.status AS consultation_status, c.ended_at,
-       a.status AS appointment_status
-  FROM app.consultations c
-  LEFT JOIN app.appointments a ON a.id = c.appointment_id
- WHERE c.id = '1c4ea86f-e432-4693-b615-130af53d665d';
-```
-Attendu : `consultation_status = 'closed'`, `ended_at` NULL, `appointment_status = 'completed'`
-(ou `'cancelled'` si déjà annulé avant ce geste — jamais `NULL` si un `appointment_id` existe).
-Si `consultation_status` reste `'open'` : l'écriture n'a pas pris — vérifier que la connexion
-est bien le rôle `postgres`/`DATABASE_URL` (`rolbypassrls=true`, mesuré par
-`019_revert_definer_doors.sql`), pas une session `authenticated` (RLS `FORCE` sur
-`app.consultations`, 007). Si `ended_at` est renseigné : une durée a été inventée quelque
-part — ne PAS continuer, violation de la règle 8.
+3. Post-vérif : `SELECT c.status, c.ended_at, a.status FROM app.consultations c LEFT JOIN app.appointments a ON a.id=c.appointment_id WHERE c.id='1c4ea86f…'`
+   → Attendu : `status='closed', ended_at NULL, a.status='completed'`.
 
-**Résultat du post-check : ✅ CONFIRMÉ, 2026-08-10, par l'utilisateur, POUR `app.consultations`.**
-Sur Supabase Cloud, `status='closed'`, `ended_at` NULL, sur `1c4ea86f-e432-4693-b615-130af53d665d`.
-**Étape 2 (écriture) n'a rendu AUCUNE ligne modifiée** : la consultation était déjà dans l'état
-final attendu au moment de l'exécution — cohérent avec le branchement « déjà `'closed'` → ne
-rien faire » prévu à l'étape 1 de cette procédure (une double exécution, ou une fermeture
-antérieure hors de cette procédure, ne réécrit rien).
-⚠️ **`app.appointments` non explicitement recontrôlé lors de cette confirmation** — la requête
-ci-dessus (avec la jointure) n'a pas encore été relancée. Puisqu'aucune écriture n'a eu lieu sur
-`app.consultations` (déjà `'closed'`), le rendez-vous associé était très probablement déjà
-`'completed'`/`'cancelled'` par un chemin antérieur légitime (ex. `close_consultation` normal) —
-mais ce n'est PAS vérifié, seulement plausible. Lecture seule, non bloquante, à faire dès que
-commode : **ne referme pas cette ligne tant que le résultat n'est pas collé ici.**
-**Le geste ponctuel (côté `consultations`) est clos.**
-
-## Fait & vert
-- S1-S4 (schéma 001→025, agenda, couche `DbPort`, suite complète) — VERT · checkpoint-s4 VERT 25, checkpoint-adr019 VERT 24
-- S5 écran séance et note clinique sur migration 026 (9 portes) — build, typecheck, lint tous VERT · checkpoint-s5 VERT 11 · commit 07cc371 "fix(consultation): entrée visible" (2026-08-04)
-- **S6 CLOS le 2026-08-05** — `analyze_session` fonctionnel de bout en bout, RLS vérifiée aux 3 rôles à chaque couche (SQL direct ET HTTP à travers la passerelle), `DEFAULT_MODEL = google/gemini-2.5-flash`. Trois défauts réels trouvés et corrigés en vérification locale Docker. Voir historique complet plus bas pour le détail.
-- **S7a CLOS le 2026-08-08** — migration 029 (4 portes finances + `next_number`) + finance.ts + écran recettes · checkpoint-s7 VERT 32 contrôles (001→029 rejeu complet, 22 contrôles métier, 3 portes CLAUDE.md, 4 statiques) · 3 défauts réels trouvés et corrigés · 5 commits · 45814cd
-- **S7b PHASE 1 livrée le 2026-08-09 — jalon NON CLOS.** Migration 030 (portes
-  `issue_document`/`get_document`/`list_patient_documents`/`mark_document_printed`,
-  moteur de rendu SQL + échappement, verrouillage de table par trigger) +
-  `documents.ts` + `checkpoint-s7b.sh` · **VERT 30 contrôles** (001→030 rejeu
-  complet, 19 contrôles du contrat gelé + 4 ajouts trouvés en revue, 3 portes
-  CLAUDE.md, 4 statiques). **8 défauts réels trouvés et corrigés** sur trois
-  passes de revue adversariale (voir « Défauts trouvés à l'implémentation »,
-  `docs/S7B-DOCUMENTS.md`) : lecture non auditée de `app.patients`, RPC public
-  exposant l'identité sans trace, table écrivable en direct malgré l'absence de
-  portes update/delete, asymétrie owner/assistant manquante, séance d'un autre
-  patient rattachable, valeurs de variables vides/nulles acceptées, fuseau
-  horaire du numéro de document (UTC serveur au lieu d'Alger),
-  `is_synthetic` absent des colonnes protégées par trigger. **Aucun modèle
-  semé, aucune fonte câblée, aucun écran livré** — B1.1→B1.5 restent absents du
-  disque. **Seul le contrôle papier (§B7) clôt S7b, et il reste inexécutable.**
-
-## Décisions de session S7a (à verser au 00-DECISIONS.md)
-12. **2026-08-08 : `checkpoint-s7.sh` accède à la base par `docker exec` sur le
-    conteneur de `supabase start`**, pas par le conteneur jetable `postgres:15` de
-    `scripts/lib/dburl.sh` (Docker Hub toujours injoignable sur ce réseau). Décision
-    utilisateur explicite. Débloque aussi potentiellement checkpoint-s5/adr019/jarvis
-    — non revérifiés cette session, à faire séparément.
-13. **2026-08-08 : les contrôles de concurrence (19/20/21) sont joués pour de vrai**,
-    deux sessions psql simultanées via FIFO/coproc, verrou mesuré par un délai
-    bloquant — pas deux appels séquentiels. Décision utilisateur explicite.
-14. **2026-08-08 : ajout au contrat gelé `docs/S7A-FINANCE.md`, remonté avant codage**
-    (comme le contrat l'exige lui-même) : porte `app.get_consultation_payment`
-    (029 §2bis), nécessaire pour que le bloc de tarif en fin de séance affiche un
-    tarif déjà fixé sans journaliser une fausse lecture à chaque ouverture d'écran.
-    Additive, INVOKER, ne nomme personne, aucune permission nouvelle.
-
-## En cours
-**S7b phase 2** reste bloquée sur les actifs B1.1→B1.5 (scan de l'en-tête, arbitrage
-« Psychiatrie », logo SVG, 7 fontes `.woff2`, contenu des 4 modèles de certificat) —
-inchangé. La phase 1 (mécanique) est livrée et vérifiée ; restent : câblage des
-fontes, seed des modèles, aperçu A4, écran d'émission, liste au dossier patient, et
-le contrôle papier qui seul clôt le jalon.
-
-## Dette assumée, datée (inchangée depuis S6, reportée telle quelle)
-- **🆕 2026-08-11 — preuve numérique de `06-PERF-BUDGET.md` : les 15 relevés (5 écrans × appels
-  réseau / premier contenu / complet) ne sont pas faits.** Différés par décision utilisateur
-  (réactivité jugée acceptable à l'usage). **Aucun chiffre n'est affirmé.** Sortie : un relevé
-  en navigateur, `pnpm build && pnpm start`, 3×, médiane. Échéance : **porte de livraison**, au
-  plus tard — un budget de performance jamais mesuré n'est pas un budget.
-  ⚠️ `DOC-AUTHORITY.md` §4 dit « une dette non écrite ici n'existe pas », et cette dette n'y
-  est PAS : elle est ici, dans un document de rang 6. **Y porter une ligne demande une main
-  humaine** — un agent ne modifie pas un document d'autorité.
-- S5 §7 on-screen matrix → avant 2026-08-10, toujours bloqué (pas de navigateur)
-- `audit.boundary_crossings` non confirmé en écriture (réseau Docker local)
-- `checkpoint-s5.sh`/`checkpoint-adr019.sh`/`checkpoint-jarvis.sh` — la décision 12
-  ci-dessus (docker exec) les débloque potentiellement, à revérifier
-- Vérification d'écran S6 — pas de navigateur dans cet environnement
-
-## En litige — voir WORKING-CONTEXT.md §7
-**Q-D CLOSE** (2026-08-03, ADR-019 opérationnelle). **Q-A/Q-B/Q-C** référencées §8 de WORKING-CONTEXT — toutes en ADRs, aucune nouvelle question ouverte.
-**Nota:** WORKING-CONTEXT.md §0 mentionne docs 05-BUILD-PLAN et 06 (inexistants sur disque) — l'autorité est en retard.
-
----
-
-## Trois défauts réels trouvés et corrigés en S7a
-
-1. **UUID `E2` malformé dans checkpoint-s7.sh** — test data UUID avait 11 caractères
-   hex au lieu de 12. Silencieusement rejeté par `INSERT`, cascadait sur 6 contrôles
-   en aval (indisponibilité de consultation pour lecture de tarif). **Corrigé** : UUID
-   régénéré `E2AABBCCDDEE`.
-
-2. **Migration 029 — `app.list_day_payments` déclarait pas les variables `v_debut`/`v_fin`.**
-   Contrairement à `app.day_revenue` (même porte, mêmes bornes de jour), `list_day_payments`
-   utilisait ces variables sans les déclarer — plantait à l'exécution pour owner/practitioner,
-   cassant l'écran recettes en production. **Corrigé** : déclaration + calcul ajoutés au
-   §3 de 029, même frontière `Africa/Algiers` que `day_revenue`.
-
-3. **Contrôles de concurrence (19/20/21) utilisaient `mkfifo` (named pipes).** Peu fiable
-   sous Windows/MSYS + Docker Desktop : lecteur pouvait mourir avant l'écriture, causant
-   SIGPIPE qui tuait le **script entier** (code 141) au lieu de faire échouer le seul contrôle.
-   **Corrigé** : remplacé par `coproc` (pipes anonymes gérés par bash). Ajouté `trap '' PIPE`
-   en filet de sécurité. Plus robuste et conforme à l'intention documentée en tête de script.
-
-**Détail supplémentaire :** `scripts/preflight.sh` scannait `.kilo/node_modules/` (outil
-local, gitignoré) et remontait faux positifs sur le contrôle « hex en dur hors tokens ».
-Exclu du `find`, comme `node_modules/`/`.git/`/`.next/`.
-
----
-
-## Historique S1-S6 détaillé (conservé pour référence)
-
-### Trois défauts réels trouvés en vérification locale S6, tous corrigés
-1. **Migration 027 — `ALTER FUNCTION ... OWNER TO app_gatekeeper` en 42501.**
-   `ALTER ... OWNER TO` exige que le NOUVEAU propriétaire ait `CREATE` sur le
-   schéma. 026 §3 accorde ce privilège PUIS le retire à son §8, dans SA PROPRE
-   transaction. 027 est une migration séparée : sans son propre GRANT/REVOKE,
-   elle hérite d'un rôle déjà refermé. **Corrigé : §0/§3 ajoutés à 027**, et le
-   même motif a été appliqué dès l'écriture de 029 cette session (§0/§6).
-2. **`external-call.ts` sans `max_tokens`** — corrigé, `MAX_OUTPUT_TOKENS = 2000`.
-3. **`index.ts` — clôture Markdown non retirée avant `JSON.parse`** — corrigé,
-   `retirerCloture()`.
-
-### Preuve RLS — les 3 rôles, `app.get_previous_note`, en base réelle et via HTTP
-owner a1 → accès complet ; practitioner a2 et assistant a3 → même refus générique,
-indiscernable d'un `consultationId` inexistant. Prouvé en SQL direct ET à travers
-`jarvis-analyze-session` en HTTP réel.
-
-### Portes & regressions (dernière vérification directe S6)
-`preflight` ✓ · `typecheck` ✓ · `lint` ✓ · `build` ✓. La couche sécurité est gelée :
-ADR-019 tient sur `app_gatekeeper` sans `BYPASSRLS`, membre `authenticated` avec
-`INHERIT TRUE`, propriétaire des portes 004/007/008/026/027/**029 (day_revenue,
-list_day_payments)**. Y toucher casse la cloison.
-
-### Décisions de session S1-S6 (récapitulatif, voir git log pour le détail complet)
-1-11 : nom du fichier gateway, S6 = Edge Function Deno, scope S6 resserré à
-`analyze_session` seul, Docker/psql redevenus disponibles (Docker Hub reste
-injoignable), `DEFAULT_MODEL = gemini-2.5-flash`, S6 clos malgré 3 dettes, S7
-découpé en S7a/S7b, l'assistante n'encaisse pas au mois 1, recette cloisonnée en
-base, notification payment_due écrite dès S7a, 5 renforcements d'ingénierie
-(transaction, verrous FOR UPDATE, trace financière via trg_audit, temps serveur,
-contrat de performance).
+**Résultat** : ✅ consultation confirmée `status='closed'`, `ended_at` NULL, 0 ligne modifiée (déjà clos). **`app.appointments` non vérifié depuis** — plausible déjà `'completed'` par chemin antérieur, non certifié.
