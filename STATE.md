@@ -1,6 +1,104 @@
 # STATE — MindCare OS
-**V2 — JARVIS VIVANT · CHECKPOINT VERT · 2026-08-14**
-Dernière mise à jour : 2026-08-14 · **`checkpoint-v2.sh` : 22 verts · 0 rouge · 2 bloqués**
+**V2 — JARVIS VIVANT · COMMITÉ `35010c9` · PORTE ROUGE DEPUIS, CRÉDIT FOURNISSEUR ÉPUISÉ**
+Dernière mise à jour : 2026-08-15
+
+---
+
+## ⛔ ÉTAT AU 2026-08-15 — LIRE AVANT TOUTE REPRISE
+
+**V2 est commité (`35010c9`), et il l'a été sur une porte verte : 22 verts · 0 rouge ·
+2 bloqués par décision, rapport de mesure frais à l'appui.** Cette porte n'est plus
+rejouable aujourd'hui, pour une raison EXTÉRIEURE au code.
+
+### Le blocage : le crédit OpenRouter, pas un défaut
+
+```
+HTTP 402 — "This request requires more credits, or fewer max_tokens.
+            You requested up to 2000 tokens, but can only afford 1903."
+```
+
+`MAX_OUTPUT_TOKENS = 2000` (`external-call.ts:146`) dépasse ce que la limite
+hebdomadaire de la clé permet encore. **Mesuré, pas supposé** : à `max_tokens=2000`
+la requête rend 402 ; à `1900` et `1000`, elle rend 200. Toute la journée du 14 l'a
+consommé en mesures.
+
+**Conséquence :** les contrôles **1, 3 et 4** (tout ce qui appelle le modèle) sont
+INOBSERVABLES. Le contrôle 5 (refus, aucun appel modèle) reste vert.
+
+⚠️ **NE PAS baisser `MAX_OUTPUT_TOKENS` pour faire passer la porte.** Ce serait
+changer le produit pour accommoder un solde, et dégrader silencieusement toutes les
+réponses. **Le geste juste est de recharger la clé, ou d'en relever la limite
+hebdomadaire.**
+
+Trois fausses pistes ont été écartées PAR LA MESURE avant d'arriver là, et elles sont
+écrites pour ne pas être repayées : ce n'était ni la clé absente (le journal client
+rend `technical:"indisponible"`, pas `"configuration"`), ni une limite de débit
+(6 appels d'affilée depuis le poste : 6× HTTP 200), ni la régression d'un correctif
+(la latence de 35-80 ms ressemblait à un échec avant réseau — elle était en fait un
+4xx immédiat, sans inférence).
+
+### La porte échoue désormais FERMÉE — c'est la vraie nouveauté du 2026-08-15
+
+`checkpoint-v2.sh` distingue maintenant DEUX espèces de BLOQUÉ, et `bloque()` — le nom
+court, celui qu'on écrit sans réfléchir — est **critique par défaut** :
+
+| Espèce | Effet |
+|---|---|
+| **BLOQUÉ critique** — non mesuré alors qu'il devait l'être (rapport absent, périmé, empreinte qui ne correspond plus, Docker injoignable) | **exit ≠ 0 · LIVRAISON INTERDITE** |
+| **bloqué¹ par décision** — la fonctionnalité N'EXISTE PAS, par choix écrit et daté (contrôles 2 et 7) | n'empêche pas la livraison, mais est **nommé à chaque passage** |
+
+Trois conditions, toutes nécessaires pour un exit 0 : zéro ROUGE · zéro bloqué
+critique · **exactement** deux reports par décision (ni plus — une décision non écrite,
+ni moins — un périmètre qui a bougé). *Ce qui n'est pas classé explicitement est
+traité comme bloquant : une porte qui laisse passer dans le doute ne protège rien.*
+
+### Verdict brut du 2026-08-15, état propre, HEAD `35010c9`
+
+```
+VERDICT V2 : 16 verts · 0 rouges · 6 bloqués critiques · 2 bloqués par décision
+V2 N'EST PAS VERT : 6 contrôle(s) NON MESURÉ(S) et exigés.
+LIVRAISON INTERDITE tant qu'ils ne sont pas observés.                  (exit 2)
+```
+
+Restent VERTS et rejoués ce soir, sans dépendre du fournisseur : preflight ·
+verify-migrations (6/6) · typecheck · lint · build · les 4 contrôles de frontière ·
+`eval-jarvis-v2` · rejeu `001→034` · **17 assertions 033/034** · **11 assertions RLS**.
+
+### Un défaut RÉEL trouvé ce soir, corrigé mais NON VÉRIFIÉ
+
+**Les bornes d'agenda pouvaient être calculées en journée UTC.** Mesuré au navigateur :
+pour « les rendez-vous de demain », le modèle a rendu
+`de:2026-08-15T22:00:00+01:00 à 2026-08-16T21:59:59+01:00` — une journée UTC repeinte
+au fuseau d'Alger, qui **commence deux heures trop tôt**. Un rendez-vous de 22 h 30 la
+veille y entrerait ; celui de 22 h 30 le jour demandé en sortirait. C'est exactement le
+défaut nommé au §4 de `CLAUDE.md`, sur le chemin où il se voit le moins — les bornes
+sont calculées PAR LE MODÈLE. Comportement **intermittent** : d'autres passages ont
+rendu des bornes justes pour la même question.
+
+Correctif écrit et déployé, **dans l'arbre de travail, NON COMMITÉ** : la règle de
+bornes est passée dans la description de `get_agenda` (`prompt.ts`), et le décalage
+d'Alger est calculé puis donné au modèle (`index.ts`).
+
+⚠️ **Il n'est pas vérifié**, et il ne peut pas l'être tant que le crédit manque. Deux
+enseignements en sont tirés, écrits dans le code :
+- une première version mettait la règle dans le message de date : le modèle a cessé
+  D'APPELER L'OUTIL, trois fois sur trois. **La consigne noyait la tâche.** La règle vit
+  donc là où elle s'applique — à côté des arguments qu'elle contraint.
+- `Intl.DateTimeFormat` avec `timeZoneName: "longOffset"` a fait LEVER la fonction dans
+  le runtime Deno déployé. Le décalage se calcule désormais par soustraction, avec
+  `toLocaleString`, dont le comportement est éprouvé dans ce fichier.
+
+### Ce qui est en attente dans l'arbre de travail (non commité)
+
+1. Le correctif de fuseau ci-dessus — **à vérifier avant de commiter**.
+2. `checkpoint-v2.sh` — la porte qui échoue fermée.
+3. `mesure-v2-navigateur.mjs` — diagnostics enrichis (la réponse rendue est citée
+   quand l'outil n'est pas appelé).
+
+**Rien de tout cela n'est commité, et c'est la règle qui le veut** : la porte est rouge,
+donc on ne livre pas. Y compris le durcissement de la porte elle-même.
+
+---
 
 ---
 

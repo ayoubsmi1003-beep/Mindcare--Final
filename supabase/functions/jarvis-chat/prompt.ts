@@ -89,7 +89,11 @@ export const DESCRIPTION_OUTILS = `Outils disponibles :
   correspondent, l'interface DEMANDE lequel — ne choisis pas.
 
 - get_agenda {from: ISO8601 avec fuseau, to: ISO8601 avec fuseau, practitionerId?: uuid}
-  Rendez-vous sur une période. Bornes de journée en Africa/Algiers.
+  Rendez-vous sur une période. Pour UNE journée, les deux bornes portent le
+  MÊME jour, de 00:00:00 à 23:59:59, en heure locale d'Alger :
+  from=AAAA-MM-JJT00:00:00+01:00 · to=AAAA-MM-JJT23:59:59+01:00
+  Jamais une journée UTC : elle commence la veille à 23:00 heure d'Alger et
+  manque la dernière heure du jour demandé.
 
 - analyze_session {consultationId: uuid}
   Note structurée à partir des notes brutes d'une séance.

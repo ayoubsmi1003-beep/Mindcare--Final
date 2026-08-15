@@ -21,10 +21,28 @@
 set -uo pipefail
 cd "$(dirname "$0")/.." || exit 1
 
-verts=0; rouges=0; bloques=0
+# ═══ LA PORTE ÉCHOUE FERMÉE ═══
+# Un BLOQUÉ n'est pas un verdict neutre : c'est l'aveu que PERSONNE N'A OBSERVÉ.
+# Il en existe pourtant deux espèces, et les confondre est ce qui transforme une
+# porte de livraison en formalité :
+#
+#   · BLOQUÉ CRITIQUE — non mesuré, et il aurait dû l'être. Rapport de mesure
+#     absent, périmé, empreinte qui ne correspond plus, Docker injoignable,
+#     build manquant. INTERDIT À LA LIVRAISON.
+#   · BLOQUÉ PAR DÉCISION — la fonctionnalité N'EXISTE PAS, par choix daté et
+#     écrit, hors du périmètre gelé. Il ne bloque pas la livraison, mais il est
+#     NOMMÉ dans le verdict, à chaque passage.
+#
+# `bloque()` — le nom court, celui qu'on écrit sans réfléchir — est CRITIQUE.
+# C'est délibéré : ce qui n'a pas été classé explicitement est traité comme
+# bloquant. Une porte qui, dans le doute, laisse passer ne protège rien.
+verts=0; rouges=0; bloques_critiques=0; bloques_decision=0
 vert()   { printf '  vert   | %-58s | %s\n' "$1" "${2:-}"; verts=$((verts+1)); }
 rouge()  { printf '  ROUGE  | %-58s | %s\n' "$1" "${2:-}"; rouges=$((rouges+1)); }
-bloque() { printf '  BLOQUÉ | %-58s | %s\n' "$1" "${2:-}"; bloques=$((bloques+1)); }
+bloque() { printf '  BLOQUÉ | %-58s | %s\n' "$1" "${2:-}"; bloques_critiques=$((bloques_critiques+1)); }
+bloque_decision() {
+  printf '  bloqué¹| %-58s | %s\n' "$1" "${2:-}"; bloques_decision=$((bloques_decision+1));
+}
 
 # `sans_commentaires` — INDISPENSABLE, ET DÉCOUVERT À L'EXÉCUTION.
 # Les fichiers de V2 NOMMENT les API interdites dans leurs commentaires, pour
@@ -318,38 +336,52 @@ echo "── BLOQUÉS PAR DÉCISION D'ARCHITECTURE — pas par manque d'outillag
 # Ces deux-là ne s'automatisent pas parce qu'ils N'EXISTENT PAS, et c'est une
 # décision, pas un oubli. Les faire passer demanderait d'élargir le périmètre
 # gelé de V2 — donc ils restent BLOQUÉS, nommément, avec leur raison.
-bloque "2 · deux homonymes → il DEMANDE, à l'écran" "ni écran ni porte create_patient — périmètre V5 (D-18)"
-bloque "7 · commande vocale → agenda correct" "transport binaire absent de DbPort (ADR-020) — contrat non étendu"
+bloque_decision "2 · deux homonymes → il DEMANDE, à l'écran" "ni écran ni porte create_patient — périmètre V5 (D-18)"
+bloque_decision "7 · commande vocale → agenda correct" "transport binaire absent de DbPort (ADR-020) — contrat non étendu"
 
 echo
 echo "════════════════════════════════════════════════════════════════════════"
-printf 'VERDICT V2 : %s verts · %s rouges · %s bloqués\n' "$verts" "$rouges" "$bloques"
+printf 'VERDICT V2 : %s verts · %s rouges · %s bloqués critiques · %s bloqués par décision\n' \
+  "$verts" "$rouges" "$bloques_critiques" "$bloques_decision"
+echo "  ¹ bloqué par décision — la fonctionnalité n'existe pas, par choix écrit."
+echo
+
+# ═══ LA PORTE ÉCHOUE FERMÉE — TROIS CONDITIONS, TOUTES NÉCESSAIRES ═══
+# Ce bloc décide si le lot peut être livré. Il n'existe AUCUN chemin par lequel
+# un contrôle non observé rende 0.
+
+# 1 · Un seul ROUGE suffit. Mesuré, non conforme : rien à arbitrer.
 if [ "$rouges" -gt 0 ]; then
-  echo "V2 EST ROUGE."
+  echo "V2 EST ROUGE — $rouges contrôle(s) mesuré(s) non conforme(s)."
+  echo "LIVRAISON INTERDITE. Corriger, puis rejouer la porte entière."
   exit 1
 fi
 
-# ═══ LE SCRIPT VÉRIFIE LUI-MÊME CE QU'IL RESTE BLOQUÉ ═══
-# Deux BLOQUÉS sont ATTENDUS (2 et 7, décisions d'architecture). Un troisième
-# signifie qu'un contrôle mesurable n'a pas été mesuré — le rapport manque, il
-# est périmé, ou son empreinte ne correspond plus à l'arbre. Compter « 2 » ne
-# suffit donc pas : si un contrôle navigateur retombait en BLOQUÉ pendant que
-# l'un des deux attendus disparaissait, le total resterait juste et le verdict
-# serait faux. C'est le total ET les deux lignes attendues qui sont vérifiés.
-BLOQUES_ATTENDUS=2
-if [ "$bloques" -gt "$BLOQUES_ATTENDUS" ]; then
-  echo "V2 N'EST PAS VERT : $bloques bloqués, $BLOQUES_ATTENDUS attendus."
-  echo "Un contrôle bloqué n'est pas un contrôle réussi — remesurer au navigateur."
-  exit 2
-fi
-if [ "$bloques" -lt "$BLOQUES_ATTENDUS" ]; then
-  echo "INCOHÉRENCE : moins de bloqués qu'attendu. Les contrôles 2 et 7 sont"
-  echo "BLOQUÉS PAR DÉCISION ; s'ils ne le sont plus, le périmètre a bougé."
+# 2 · Tout BLOQUÉ non classé est CRITIQUE. C'est ici que la porte échoue fermée :
+# un rapport de mesure absent, périmé, ou dont l'empreinte ne correspond plus à
+# l'arbre produit exactement ce cas — et il ne doit jamais rendre 0. « On l'avait
+# mesuré vert la dernière fois » est précisément ce que cette ligne refuse.
+if [ "$bloques_critiques" -gt 0 ]; then
+  echo "V2 N'EST PAS VERT : $bloques_critiques contrôle(s) NON MESURÉ(S) et exigés."
+  echo "Un contrôle bloqué n'est pas un contrôle réussi."
+  echo "LIVRAISON INTERDITE tant qu'ils ne sont pas observés."
   exit 2
 fi
 
-echo
-echo "V2 EST VERT — aux deux réserves NOMMÉES ci-dessus, et à elles seules :"
+# 3 · Les reports par décision sont NOMMÉS et DÉNOMBRÉS. S'il y en a plus, une
+# décision a été prise sans être écrite ici ; s'il y en a moins, le périmètre a
+# bougé sans que la porte le sache. Les deux cas se relisent, ils ne se passent pas.
+REPORTS_DECLARES=2
+if [ "$bloques_decision" -ne "$REPORTS_DECLARES" ]; then
+  echo "INCOHÉRENCE DE PÉRIMÈTRE : $bloques_decision report(s) par décision,"
+  echo "$REPORTS_DECLARES déclaré(s) dans ce script. Le périmètre gelé a bougé —"
+  echo "le relire avant de livrer quoi que ce soit."
+  exit 2
+fi
+
+echo "V2 EST VERT ET LIVRABLE."
+echo "Deux fonctionnalités restent ABSENTES par décision écrite, et le sont dites :"
 echo "  · contrôle 2 (homonymes) — périmètre V5, ni écran ni porte create_patient"
 echo "  · contrôle 7 (voix)      — transport binaire hors contrat DbPort (ADR-020)"
+echo "Aucune des deux n'est une régression, aucune des deux n'est mesurée verte."
 exit 0

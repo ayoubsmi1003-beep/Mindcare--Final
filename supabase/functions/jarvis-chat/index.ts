@@ -449,10 +449,49 @@ Deno.serve(async (req) => {
    *
    * `Africa/Algiers` et non UTC — même raison qu'au §4 de `CLAUDE.md` : une
    * journée calculée en UTC est fausse une heure par nuit.
+   *
+   * ⚠️ DONNER LA DATE NE SUFFIT PAS — MESURÉ. Avec la seule consigne
+   * « exprime-toi en ISO 8601 avec fuseau », le modèle a rendu, pour « les
+   * rendez-vous de demain », les bornes
+   *     de 2026-08-15T22:00:00+01:00 à 2026-08-16T21:59:59+01:00
+   * c'est-à-dire une journée UTC repeinte au fuseau d'Alger : elle commence
+   * DEUX HEURES TROP TÔT. Un rendez-vous de 22 h 30 la veille entrerait dans
+   * « demain », et celui de 22 h 30 demain en sortirait. C'est exactement le
+   * défaut que §4 de `CLAUDE.md` nomme, sur le chemin où il se voit le moins :
+   * les bornes sont calculées PAR LE MODÈLE, donc invisibles sans instrument.
+   *
+   * Le comportement est INTERMITTENT — d'autres passages ont rendu des bornes
+   * justes pour la même question. Une consigne que le modèle suit une fois sur
+   * deux n'est pas une consigne : on dit donc explicitement où commence et où
+   * finit une journée, et on donne le décalage à utiliser.
    */
   const maintenant = new Date().toLocaleString("sv-SE", {
     timeZone: "Africa/Algiers",
   });
+
+  /**
+   * Le décalage courant d'Alger, calculé et non écrit en dur : l'Algérie est à
+   * UTC+01:00 toute l'année aujourd'hui, mais une constante dans le code serait
+   * une affirmation qui survivrait à sa vérité.
+   *
+   * ⚠️ PAR SOUSTRACTION, ET NON PAR `timeZoneName: "longOffset"`. Cette option
+   * d'`Intl` a fait LEVER la fonction dans le runtime Deno déployé : le chemin
+   * patient rendait « Jarvis est indisponible » sur toute demande d'agenda.
+   * Diagnostiqué à l'écran — le symptôme accusait le modèle (« il n'appelle
+   * plus l'outil »), alors que rien n'atteignait le modèle. On n'utilise donc
+   * que ce qui est déjà employé ailleurs dans ce fichier : `toLocaleString`
+   * avec un fuseau, dont le comportement est éprouvé ici.
+   */
+  const decalageAlger = (() => {
+    const maintenantMs = Date.now();
+    const murAlger = Date.parse(`${maintenant.replace(" ", "T")}Z`);
+    const minutes = Math.round((murAlger - maintenantMs) / 60_000);
+    const signe = minutes < 0 ? "-" : "+";
+    const abs = Math.abs(minutes);
+    const hh = String(Math.floor(abs / 60)).padStart(2, "0");
+    const mm = String(abs % 60).padStart(2, "0");
+    return `${signe}${hh}:${mm}`;
+  })();
 
   /**
    * Le bloc de contexte, pseudonymisé — branche (b) de l'arbitrage du
@@ -489,10 +528,20 @@ Deno.serve(async (req) => {
     { role: "system", content: systeme },
     {
       role: "system",
+      /**
+       * ⚠️ CE MESSAGE EST RESTÉ COURT, ET C'EST UNE CORRECTION MESURÉE.
+       * Une version précédente y ajoutait cinq lignes sur les bornes de
+       * journée. Résultat, trois passages sur trois : le modèle cessait
+       * D'APPELER L'OUTIL et répondait en texte. La consigne noyait la tâche.
+       * La règle de bornes vit donc là où elle s'applique — dans la
+       * description de `get_agenda` (`prompt.ts`), à côté des arguments
+       * qu'elle contraint.
+       */
       content:
-        `Date et heure courantes, fuseau Africa/Algiers : ${maintenant}. ` +
+        `Date et heure courantes, fuseau Africa/Algiers : ${maintenant} ` +
+        `(décalage ${decalageAlger}). ` +
         "Toute date relative (« demain », « jeudi ») se calcule à partir " +
-        "d'elle, et s'exprime en ISO 8601 avec fuseau.",
+        `d'elle, et s'exprime en ISO 8601 avec le décalage ${decalageAlger}.`,
     },
     ...(contexte === undefined || contexte.length === 0 ? [] : [{
       role: "system",

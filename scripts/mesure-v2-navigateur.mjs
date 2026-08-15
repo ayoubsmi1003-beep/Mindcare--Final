@@ -274,16 +274,21 @@ const REGISTRE_ATTENDU = "Connaissance générale — pas ce dossier.";
  */
 async function controle1(page, journaux) {
   const avant = journaux.length;
-  await demander(page, "Quels sont les rendez-vous de demain ?");
+  const suite = await demander(page, "Quels sont les rendez-vous de demain ?");
 
   const nouveaux = journaux.slice(avant).filter((l) => l.includes("jarvis.outil.agenda"));
   const bornes = nouveaux.map((l) => JSON.parse(l)).find((o) => o.context !== undefined);
   const compte = nouveaux.map((l) => JSON.parse(l)).find((o) => o.count !== undefined);
 
   if (bornes === undefined) {
+    // On rapporte CE QUE JARVIS A RÉPONDU À LA PLACE. « L'outil n'a pas été
+    // appelé » ne dit pas s'il a refusé, s'il a répondu de mémoire, ou s'il a
+    // demandé une précision — trois causes, trois suites différentes.
     return {
       verdict: "ROUGE",
-      detail: "l'outil agenda n'a pas été appelé — aucune borne observable",
+      detail:
+        "l'outil agenda n'a pas été appelé — aucune borne observable · " +
+        `réponse rendue : ${JSON.stringify((suite[0] ?? "").slice(0, 200))}`,
     };
   }
 
