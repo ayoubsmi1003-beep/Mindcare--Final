@@ -539,6 +539,16 @@
     --size-full: 100%;
     --size-viewport: 100vh;
 
+    /* Largeur MINIMALE d'un graphique financier avant qu'il ne défile.
+     *
+     * En dessous, 31 barres quotidiennes tombent sous 3 px chacune : ce n'est
+     * plus une courbe, c'est un aplat. Le conteneur défile horizontalement
+     * plutôt que d'écraser les barres — ce que le §4 règle 9 autorise pour un
+     * tableau, la PAGE ne défilant jamais latéralement. Même raisonnement que
+     * `--grid-day-min` pour la grille d'agenda : mieux vaut faire défiler que
+     * compresser jusqu'à l'illisible. */
+    --chart-min-width: 480px;
+
     /* Largeur minimale d'une colonne de fiche avant repli : en dessous, une
      * étiquette et sa valeur se chevauchent sur un nom long. Valeur de design,
      * nommée ici parce qu'elle vivait en dur dans un `minmax()` — endroit

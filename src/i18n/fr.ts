@@ -472,6 +472,133 @@ export const fr = {
       "Une somme encaissée est une pièce comptable. La corriger se fait hors de cet écran.",
     tarifSeanceIntrouvable:
       "Cette séance n'a pas pu être retrouvée. Le tarif n'a pas été enregistré.",
+
+    /* ═══ V6-FINANCE — la période (D-23) ═══════════════════════════════════
+     *
+     * ⚠️ « FACTURÉ » N'EST PAS « ENCAISSÉ », ET C'EST LA CORRECTION CENTRALE
+     * DE CE LOT. L'écran affichait `day_revenue.total_dzd` — la somme de TOUS
+     * les tarifs de la journée, reçus ou non — sous le titre « Recette du
+     * jour », juste au-dessus d'une ligne « Encaissements en attente ». Une
+     * recette est de l'argent reçu. Le chiffre était juste, le mot était faux,
+     * et un mot faux sur une caisse se recopie dans un carnet.
+     *
+     * Les trois termes ne sont JAMAIS interchangeables :
+     *   Facturé  — les tarifs fixés sur la période, reçus ou non
+     *   Encaissé — l'argent réellement entré, fenêtre sur `collected_at`
+     *   En attente — facturé, pas encore reçu
+     */
+    incoherence:
+      "Les chiffres de cette période ne se recoupent pas. Aucune donnée n'a été modifiée. Réessayez ; si le problème persiste, signalez-le.",
+
+    periodes: {
+      legende: "Période affichée",
+      jour: "Aujourd'hui",
+      semaine: "Cette semaine",
+      mois: "Ce mois",
+      annee: "Cette année",
+      personnalise: "Personnalisé",
+      du: "Du",
+      au: "Au",
+      jours: "jours",
+      unJour: "1 jour",
+      appliquer: "Afficher cette période",
+      plageInvalide: "Période invalide : 366 jours au maximum, et la fin doit suivre le début.",
+    },
+
+    kpi: {
+      facture: "Facturé",
+      factureAide: "Les tarifs fixés sur la période, encaissés ou non.",
+      encaisse: "Encaissé",
+      encaisseAide: "L'argent réellement entré en caisse sur la période, y compris pour des séances plus anciennes.",
+      /**
+       * ⚠️ DEUX « ENCAISSÉ » COEXISTENT, ET ILS NE SE MÉLANGENT JAMAIS.
+       *
+       *   Encaissé (caisse)   — fenêtre sur `collected_at`. Ce qui est ENTRÉ.
+       *                         Peut dépasser le facturé : une séance de
+       *                         janvier encaissée en février compte en février.
+       *   dont / assiette     — fenêtre sur `created_at`. De ce qui a été
+       *                         FACTURÉ sur la période, ce qui a été reçu.
+       *
+       * Seul le second se soustrait du facturé (invariant I-1), et c'est donc
+       * lui — et lui seul — qui apparaît dans la décomposition ci-dessous et
+       * dans le graphique d'évolution. Les afficher sous le même mot ferait
+       * trois cartes qui ne s'additionnent pas, sans que rien ne l'explique.
+       */
+      decomposition: "dont {encaisse} encaissé · {attente} en attente",
+      attente: "En attente",
+      attenteAide: "Facturé sur cette période, pas encore encaissé.",
+      taux: "Taux d'encaissement",
+      tauxAide: "Part du facturé de la période déjà encaissée.",
+      revenuMoyen: "Revenu moyen par séance",
+      seancesTarifees: "séances tarifées",
+      /** Une séance sans tarif fixé n'est pas comptée — le mot le dit. */
+      seancesTarifeesAide: "Une séance dont le tarif n'a pas été fixé n'est pas comptée.",
+      absent: "—",
+      vsJours: "vs {n} jours précédents",
+      aucunPrecedent: "Rien sur la période comparable",
+      indisponible: "Comparaison indisponible",
+    },
+
+    graphiques: {
+      evolution: "Évolution",
+      evolutionAide: "Sur les séances de la période : encaissé et en attente se cumulent pour former le facturé.",
+      legendeEncaisse: "Encaissé sur ces séances",
+      legendeAttente: "En attente sur ces séances",
+      repartition: "D'où vient le revenu",
+      parPraticienne: "Par praticienne",
+      calendrier: "Calendrier",
+      calendrierAide: "Intensité du facturé, jour par jour.",
+      nonRattache: "Non rattaché",
+      nonRattacheAide:
+        "Paiements dont le type de consultation n'est pas renseigné. Ils comptent dans le total.",
+      aVenir: "À venir",
+      aucuneSeance: "aucune séance",
+      tableauDonnees: "Données du graphique",
+      grain: { jour: "par jour", semaine: "par semaine", mois: "par mois" },
+    },
+
+    attention: {
+      titre: "À votre attention",
+      "attente-elevee": "{n} séances restent à encaisser, soit {montant}.",
+      corrections: "{n} correction(s) de montant sur la période.",
+      "baisse-marquee": "Le facturé recule de {montant} par rapport à la période comparable.",
+      voirImpayes: "Voir les encaissements en attente",
+      ouvrirJournal: "Ouvrir le journal",
+      verifierCorrections: "Vérifier les corrections",
+    },
+
+    journal: {
+      titre: "Journal des paiements",
+      ouvrir: "Ouvrir le journal des paiements",
+      fermer: "Fermer le journal",
+      precedente: "Page précédente",
+      suivante: "Page suivante",
+      pageSur: "Page {n} sur {total}",
+      /** L'ouverture du journal écrit une trace de lecture (ADR-019). Le dire. */
+      traceAide: "L'ouverture du journal est enregistrée dans le journal d'accès.",
+      aucun: "Aucun paiement sur cette période.",
+    },
+
+    /**
+     * Le résumé est composé de ces fragments, par `resumerPeriode()`. Aucun
+     * modèle de langage n'intervient : chaque phrase nomme une métrique déjà
+     * affichée à l'écran.
+     */
+    resume: {
+      aucuneSeance: "Aucune séance tarifée sur cette période.",
+      uneSeance: "Une séance tarifée.",
+      nSeances: "{n} séances tarifées.",
+      seance: "séance",
+      seances: "séances",
+      toutEncaisse: "Tout est encaissé.",
+      resteAEncaisser: "{n} {mot} en attente d'encaissement.",
+      enHausse: "En hausse de {pct} % sur les {jours} jours comparables.",
+      enBaisse: "En baisse de {pct} % sur les {jours} jours comparables.",
+      aucunPrecedent: "Aucune période comparable.",
+    },
+
+    videPeriode:
+      "Aucune séance tarifée sur cette période. Les tarifs fixés en fin de séance apparaissent ici.",
   },
 
   /**

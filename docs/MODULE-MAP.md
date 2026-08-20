@@ -19,7 +19,7 @@ de vrais patients. Tout le reste attend.
 | 3 | **Agenda** | 🔵 V5 | `/agenda` | `appointments` · portes `022` | feature-builder |
 | 4 | **Jarvis** | 🔵 V2 | panneau global (⌘K) | `jarvis_actions` | jarvis-tooler |
 | 5 | **Dossiers & Notes** | 🔵 V1/V6 | `/consultation/[id]` · `/documents` | `consultations` · `clinical_notes` · `documents` · portes `030` | feature-builder |
-| 6 | **Finances** | 🔵 V6 | `/finance` | `payments` · portes `029` | feature-builder |
+| 6 | **Finances** | 🔵 V6 | `/finances` | `payments` · portes `029` + `036` | feature-builder |
 
 **Transversal, sans écran propre :** design system (V3) · états d'écran (`05-UX-CONTRACT.md`) ·
 budget de performance (`06-PERF-BUDGET.md`).

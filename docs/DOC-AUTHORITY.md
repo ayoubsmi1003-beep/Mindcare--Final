@@ -85,6 +85,7 @@ D-16 cinq renforcements d'ingénierie.
 | **D-20** | **ADR-023 · Jarvis répond en psychiatre sur la connaissance, jamais sur le patient.** La frontière passe entre le savoir général et le cas individuel, pas entre les sujets. Dès qu'un patient identifié entre dans la question, L4 s'applique intégralement. | Amende L4 de `03-JARVIS-TOOLS.md` |
 | **D-21** | **ADR-024 · la voix bascule par un flag.** `cloud` (Groq + ElevenLabs) en développement synthétique, `local` (whisper.cpp + Piper) dès le premier patient réel. L'API `SpeechRecognition` du navigateur est **interdite dans les deux modes** : elle envoie l'audio à Google et aucun flag ne peut l'éteindre. | Complète ADR-002 et ADR-009 |
 | **D-22** | **Les 4 certificats : fautes corrigées, logo refait.** Arbitrages A1→A10 tranchés « corriger » par la praticienne. Nouveau logo vectoriel. **Conséquence : le checkpoint papier change de nature** — ce n'est plus « reproduire son papier à l'identique » mais « établir son nouveau papier à en-tête ». Le critère devient : elle imprime, elle regarde, elle approuve. | `DOCUMENT-TEMPLATES.md`, migration `031` |
+| **D-23** | **V6-FINANCE est exécuté HORS RANG, avant V4 et V5.** D-18 impose V1→V6 ; l'écran Finances est repris maintenant. **V4 (tableau de bord) et V5 (patients & agenda) restent dus, entiers, et ne sont ni absorbés ni raccourcis par ce travail.** Ce que l'anticipation achète : la porte de période écrite ici rend `app.dashboard_today` (V4) plus simple, pas plus difficile — le bloc « recette du jour » du tableau de bord lira la même vérité. Ce qu'elle coûte : le tableau de bord reste l'écran manquant du matin une session de plus. **Périmètre gelé : revenus seuls.** Ni charges, ni résultat net, ni objectifs — voir les trois dettes datées au §4. Date : 2026-08-20. | Amende l'ordre de `SPRINT-V1.md` §1, sans annuler D-18 |
 
 ---
 
@@ -117,6 +118,11 @@ place, 3 passes de revue adversariale, 8 défauts corrigés. Le seed arrive par 
 | Consentements papier | Mois 2 | Table `consents` |
 | Front assistante absent | Semaine 2 | Vue `appointments_admin` + Realtime (D-08) |
 | Sauvegarde non testée | **porte de livraison** | `pg_dump` + restauration prouvée sur second dossier |
+| **Charges, dépenses, résultat net — AUCUNE TABLE** | arbitrage praticienne | `app.payments` est la SEULE table financière (ADR-010 : espèces, aucune facture). « Résultat net » n'a donc pas de source : l'afficher exigerait d'appeler « net » un chiffre qui est brut. Sortie : taxonomie des charges tranchée **avec la praticienne**, puis ADR-025 + table + portes + RLS. **Jamais une table inventée par un agent** (règle 9) |
+| **Objectifs financiers** | **ne pas rediscuter** | Tranché ABSENT par la praticienne (Q14, `SPRINT-V1.md` §V4 : « il est décoratif, donc absent »). Sortie : elle seule peut rouvrir Q14, par écrit |
+| **Vieillissement des impayés (aging)** | après **un mois réel** | Dérivable de `created_at`, mais des tranches 0-7/8-30/31-90/90+ sur une poignée de lignes décrivent le hasard, pas le cabinet. Mesuré le 2026-08-20 : **2 paiements en base, 0 en attente.** Sortie : le volume, pas le code |
+| **Remboursement · annulation de paiement** | mois 2+ | N'existent ni en colonne ni en enum. Une correction de montant n'est possible qu'AVANT encaissement (029 §2) et `trg_audit` la trace déjà. Sortie : colonnes `voided_at`/`void_reason` + porte + ADR — une décision comptable, pas un ajout de champ |
+| **Narration IA de la finance** | **rejetée, pas différée** | `finance.ts` refuse déjà d'écrire un montant dans un journal LOCAL (« une donnée de cabinet qui sort de la machine ») ; l'envoyer à OpenRouter est une sortie plus large, pas plus étroite. Et tout chiffre de l'écran est déterministe : il ne reste à un modèle que la paraphrase. Sortie : un ADR, si jamais la question se rouvre |
 
 **Règle :** une dette non écrite ici n'existe pas. Une dette écrite ici ne se rediscute
 pas avant son échéance.

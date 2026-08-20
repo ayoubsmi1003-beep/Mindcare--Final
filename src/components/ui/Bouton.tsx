@@ -87,6 +87,25 @@ export interface BoutonProps {
   readonly disabled?: boolean;
   /** Occupe toute la largeur disponible — formulaires étroits, tiroirs. */
   readonly pleineLargeur?: boolean;
+  /**
+   * Le bouton COMMANDE UN PANNEAU qu'il déplie et replie.
+   *
+   * ⚠️ CE N'EST PAS UN DÉTAIL D'HABILLAGE. Sans `aria-expanded`, un lecteur
+   * d'écran annonce « bouton » là où il devrait annoncer « bouton, replié » :
+   * l'utilisateur ne sait pas qu'il y a quelque chose à ouvrir, ni si son clic
+   * a produit un effet. Mesuré ROUGE au navigateur le 2026-08-20 sur le journal
+   * des paiements — l'attribut était posé sur `<Bouton>` mais la surface de
+   * props, volontairement fermée, ne le transmettait pas.
+   *
+   * Ajouté ICI plutôt que contourné par un `<button>` nu dans l'écran :
+   * `ui/index.ts` le dit en toutes lettres — « si une pièce manque, elle
+   * s'ajoute ICI, pas dans l'écran qui en a besoin ». Un second vocabulaire de
+   * bouton, c'est deux grammaires à relire.
+   *
+   * Laisser `undefined` quand le bouton ne commande aucun panneau : un
+   * `aria-expanded="false"` sur un bouton ordinaire ment tout autant.
+   */
+  readonly deploye?: boolean;
 }
 
 export function Bouton({
@@ -97,12 +116,14 @@ export function Bouton({
   onClick,
   disabled = false,
   pleineLargeur = false,
+  deploye,
 }: BoutonProps): React.JSX.Element {
   return (
     <button
       type={type}
       onClick={onClick}
       disabled={disabled}
+      aria-expanded={deploye}
       className={[
         SOCLE,
         retrait ? RETRAIT : RANGS[rang],

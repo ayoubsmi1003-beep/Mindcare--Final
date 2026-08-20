@@ -1,6 +1,169 @@
 # STATE — MindCare OS
-**V3 — DESIGN v2 · PORTE VERTE, NON COMMITÉ · `checkpoint-v3.sh` exit 0**
-Dernière mise à jour : 2026-08-20
+**V6-FINANCE VERT (D-23, hors rang) · V3 toujours vert · `checkpoint-v6-finance.sh` exit 0**
+Dernière mise à jour : 2026-08-21
+
+---
+
+## ✅ ÉTAT AU 2026-08-21 — V6-FINANCE, VERT ET MESURÉ
+
+**Périmètre : revenus seuls** (D-23). Ni charges, ni résultat net, ni objectifs —
+les cinq dettes correspondantes sont datées dans `DOC-AUTHORITY.md` §4.
+
+### Verdict brut — `bash scripts/checkpoint-v6-finance.sh`
+
+```
+VERDICT V6-FINANCE : 11 verts · 0 rouges · 0 bloqués critiques · 4 bloqués par décision
+V6-FINANCE EST VERT — aux QUATRE réserves NOMMÉES, et à elles seules.       (exit 0)
+
+  preflight · typecheck · lint
+  calendrier financier ......... 26 assertions (fuseau, bornes, bissextiles)
+  vérité en base ............... 54 contrôles, 3 rôles, fixtures ANNULÉES
+  écran /finances .............. 18 contrôles au navigateur réel
+  aucun test de rôle dans l'écran · aucun montant journalisé
+  checkpoint-v3 ................ 16 verts — le design v2 n'a PAS régressé
+  pnpm build ................... /finances 7.99 kB · 0 dépendance ajoutée
+```
+
+### LE DÉFAUT QUE CE LOT CORRIGE — un mot faux sur une caisse
+
+L'écran affichait `day_revenue.total_dzd` — la somme de TOUS les tarifs du jour,
+**encaissés ou non** — sous le titre **« Recette du jour »**, immédiatement au-dessus
+d'une ligne « Encaissements en attente ». Une recette est de l'argent reçu.
+
+Le chiffre était juste. Le mot était faux. Et un mot faux sur une caisse se recopie
+dans un carnet. Il y a désormais quatre chiffres NOMMÉS : **Facturé · Encaissé ·
+En attente · Taux d'encaissement**, et le contrôle au navigateur vérifie que
+« Recette du jour » a bien disparu de l'écran.
+
+### Deux « encaissé » coexistent, et les confondre était un second défaut
+
+Trouvé en écrivant les cartes, corrigé avant toute mesure :
+
+| | fenêtre | ce que ça répond |
+|---|---|---|
+| **Encaissé** (carte) | `collected_at` | ce qui est ENTRÉ en caisse, même pour des séances plus anciennes |
+| **dont … encaissé** | `created_at` | de ce qui a été FACTURÉ sur la période, ce qui a été reçu |
+
+Seul le second se soustrait du facturé (**I-1**). Il est donc affiché en
+DÉCOMPOSITION sur la carte « Facturé » dont il est la ventilation — et non comme une
+troisième carte voisine. Les poser côte à côte aurait donné trois grands chiffres qui
+ne s'additionnent pas, sans que rien à l'écran ne dise pourquoi.
+
+### Ce qui a été livré
+
+| Lot | État |
+|---|---|
+| `036_finance_period_gates.sql` — 2 portes + 1 fonction pure + 1 index partiel | ✅ appliquée |
+| `app.finance_overview(date,date)` — TOUT l'écran en UN appel (PERF §3) | ✅ |
+| `app.list_period_payments(…)` — journal paginé, trace bornée à la page | ✅ |
+| `app.finance_variation(…)` — `pourcentage` NULL quand le précédent est 0 | ✅ |
+| `payments_cabinet_collected` — `collected_at` n'était indexé NULLE PART | ✅ |
+| `finance-calendrier.ts` (pur, testable seul) + `finance-periode.ts` (Zod + invariants) | ✅ |
+| 8 composants sous `src/components/finance/` | ✅ |
+| Sélecteur de période — groupe radio, 5 options, URL synchronisée | ✅ |
+| 3 visualisations, chacune doublée d'un `<table>` légendé dans le DOM | ✅ |
+| `Bouton` gagne `deploye` → `aria-expanded` (primitive étendue, pas contournée) | ✅ |
+| `--chart-min-width` — jeton de dimension, pas une valeur arbitraire | ✅ |
+
+**Zéro dépendance ajoutée.** Aucune bibliothèque de graphiques : les barres sont des
+`<rect>`, les répartitions des `div` en pourcentage. Aucun lanceur de tests installé —
+le test unitaire compile avec le `tsc` déjà présent.
+
+### 🔴 DÉFAUT RÉEL TROUVÉ EN MESURANT — contraste 2.32:1 sur le calendrier
+
+`mesure-v3-navigateur.mjs` a relevé **« 13 » → 2.32:1**, blanc sur `--brand-400`.
+Ma première rampe posait `text-on-brand` dès le palier 3. Or `--brand-400` est le teal
+du LOGO, et `tokens.css` le disait déjà — « JAMAIS du texte sur blanc » ; la réciproque
+valait tout autant. Seul `--brand-600` porte du blanc (5.10:1). Les trois paliers clairs
+prennent `--ink-900` (~8:1).
+
+**C'est exactement la leçon de `--ink-300` et de `--attention` en V3** : une couleur
+« a l'air » lisible et ne l'est pas. Un contraste se calcule. L'instrument l'a attrapé,
+pas la relecture.
+
+### 🔴 TROIS FAUX VERDICTS FABRIQUÉS PAR MES PROPRES INSTRUMENTS
+
+Aucun n'était un défaut du produit. Tous les trois sont écrits ici parce qu'ils se
+refabriquent tout seuls à la session suivante.
+
+**1 · Faux ROUGE — « 0 trace d'audit écrite ».** Le contrôle comptait
+`SELECT count(*) FROM audit.log` **depuis le rôle testé**. Or `audit_read_owner` (013)
+ne donne le SELECT qu'à l'owner : sous …a2, le compte rendait 0 — non pas parce que la
+trace n'existait pas, mais parce que la praticienne **ne peut pas la lire**. La porte
+traçait correctement (1 trace pour 4 lignes / 1 patiente distincte). Corrigé par un
+compteur `SECURITY DEFINER` qui ne sert qu'à mesurer.
+→ *Un faux rouge se débusque plus mal qu'un faux vert : il inspire confiance.*
+
+**2 · Faux ROUGE — « la cloison a fuité en JavaScript ».** Le contrôle grepait
+`role ===` sans ôter les commentaires. Il comptait la ligne où l'écran ÉNONCE la règle
+qu'il respecte. La « correction » évidente aurait été d'effacer l'explication. Corrigé
+par le motif `sans_commentaires` de `checkpoint-v3.sh`. Même cause pour le préflight, qui
+comptait une valeur hexadécimale citée dans un commentaire expliquant un défaut de
+contraste : le commentaire nomme désormais le JETON.
+
+**3 · Faux ROUGE ET faux BLOQUÉ — deux exigences contradictoires dans `checkpoint-v3.sh`.**
+Sa mesure au navigateur EXIGE un serveur de développement vivant ; son `pnpm build` final
+EXIGE qu'aucun serveur n'écrive dans `.next`. V3 documente un seul sens (« le build casse
+le serveur »). **L'autre n'était écrit nulle part : un serveur vivant CASSE LE BUILD**,
+qui meurt sur `Cannot find module for page: /_not-found/page` — un message qui accuse une
+page que personne n'a touchée.
+
+```
+serveur vivant  → mesure verte, build ROUGE   (faux : le même build passe seul)
+serveur arrêté  → build vert, 6 écrans NON OBSERVÉS → exit 2  (faux aussi)
+```
+
+`checkpoint-v6-finance.sh` sépare donc les deux : **5a** lit les contrôles de V3 avec le
+serveur vivant, **5b** arrête le serveur puis construit. Chacun est mesuré dans la
+condition où sa mesure veut dire quelque chose. Ni l'un ni l'autre n'est « arrangé ».
+
+### Ce que la donnée réelle NE permet PAS de conclure — n = 2
+
+La base porte **deux paiements**, tous deux à …a1 (owner), 7 000 DZD, août 2026.
+Les dix contrôles de qualité sont propres (0 trou de numérotation, 0 incohérence de
+date, 0 ligne non synthétique). **Et ça ne prouve rien** :
+
+- **« Non rattaché » à 0,0 % est un accident, pas un résultat.** Deux paiements dont les
+  deux chaînes sont complètes ne disent rien de la troisième. La porte de décision du
+  plan (> 40 % ⇒ arrêt) a été franchie **sans avoir été éprouvée**. Le seau existe quand
+  même, et c'est lui qui fera tenir I-2 le jour où la chaîne cassera.
+- **Toute comparaison rend « — »** : aucune période antérieure n'a de paiement.
+- **`audit.log` ne porte aucune correction de montant** : le point d'attention
+  correspondant est constructible mais **jamais exercé** en l'état.
+- **La densité visuelle n'est pas jugeable.** « Est-ce lisible en cinq secondes ? »
+  demande un mois réel (`MODULE-MAP.md` §2). Ce qui EST validé : la vérité des chiffres,
+  la cloison, l'accessibilité, le budget. Pas l'esthétique d'une courbe à deux points.
+
+C'est pourquoi les invariants sont prouvés par des **fixtures posées DANS la transaction
+du checkpoint puis annulées** (règle 8) — mars 2025, cinq paiements, dont un couple qui
+encadre minuit à Alger. Aucun paiement de démonstration n'entre dans `015`.
+
+### La cloison, mesurée des deux côtés
+
+Le même écran, le même jour, deux rôles :
+
+```
+…a2 praticienne → « Vos séances uniquement » · aucune séance · état vide honnête
+…a1 owner       → « Toutes les séances du cabinet » · 7 000 DZD
+                  I-1 lu À L'ÉCRAN : 7000 = 7000 + 0
+…a3 assistante  → NULL, et AUCUNE exception (029 §4) — un écran vide, jamais un refus
+```
+
+### ADR-016 — fenêtre …a1 rouverte pour la mesure, puis REFERMÉE
+
+Ouverte par `dev-account.sh` (garde-fou `cloud-dev` vert) le temps de mesurer l'écran
+peuplé — les deux paiements lui appartiennent, une praticienne ne voit rien. Refermée par
+`dev-account-fermer.sh` : `…a1` porte de nouveau la sentinelle de `015:34`.
+**`…a2` reste OUVERT** — `checkpoint-v3.sh` mesure sous ce compte, le refermer bloquerait
+la base de non-régression.
+
+### Reste ouvert
+
+1. **V4 (tableau de bord) et V5 (patients & agenda) restent dus, entiers** — D-23 ne les
+   absorbe pas. `app.dashboard_today` lira la même vérité que `finance_overview`.
+2. **`035` reste réservé** au correctif d'ordre de `app.search_patients`. Ce lot a pris `036`.
+3. Le seau « Non rattaché » et les points d'attention attendent **un mois de données
+   réelles** pour être autre chose que du code non exercé.
 
 ---
 

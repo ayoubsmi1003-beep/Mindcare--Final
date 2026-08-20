@@ -355,6 +355,7 @@ const config: Config = {
       // tokens.css. Il donne au tableau de l'agenda une largeur en dessous de
       // laquelle il défile au lieu d'écraser ses colonnes.
       card: "var(--card-column-min)",
+      chart: "var(--chart-min-width)",
     },
     minHeight: {
       // ⚠️ `0` EST INDISPENSABLE, ET SON ABSENCE A COÛTÉ UNE ENQUÊTE.

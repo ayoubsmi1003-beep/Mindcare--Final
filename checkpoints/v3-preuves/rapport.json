@@ -1,5 +1,5 @@
 {
-  "empreinte": "ef73668d64f0fed9",
+  "empreinte": "ef10fddcaefe696c",
   "rapport": [
     {
       "chemin": "/connexion",
@@ -93,7 +93,7 @@
     {
       "chemin": "/agenda",
       "arrivee": "/agenda",
-      "total": 164,
+      "total": 167,
       "echecs": [],
       "mobilier": {
         "rail": {
@@ -126,7 +126,7 @@
     {
       "chemin": "/finances",
       "arrivee": "/finances",
-      "total": 41,
+      "total": 44,
       "echecs": [],
       "mobilier": {
         "rail": {
