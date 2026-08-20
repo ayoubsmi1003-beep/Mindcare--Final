@@ -247,14 +247,14 @@ export function GrilleSemaine({
                       // cherche en premier vingt fois par jour ; la teinter en
                       // teal la ferait concurrencer les cartes, qui codent déjà
                       // la famille de consultation.
-                      estAujourdhui ? "bg-teal-50" : "bg-sunken",
+                      estAujourdhui ? "bg-brand-50" : "bg-sunken",
                     ].join(" ")}
                   >
                     <div className="flex flex-col gap-1">
                       <span
                         className={[
                           "font-ui text-label font-semibold tracking-label break-words",
-                          estAujourdhui ? "text-teal-700" : "text-ink-900",
+                          estAujourdhui ? "text-brand-700" : "text-ink-900",
                         ].join(" ")}
                       >
                         {FORMAT_JOUR_ABREGE.format(jourColonne)}{" "}
@@ -265,7 +265,7 @@ export function GrilleSemaine({
                           "font-ui text-label font-regular tabular-nums",
                           // Un jour chargé se lit d'un coup d'œil ; un jour vide
                           // s'efface au lieu de répéter « 0 séances » en noir.
-                          nbSeances === 0 ? "text-ink-300" : "text-ink-500",
+                          nbSeances === 0 ? "text-ink-500" : "text-ink-700",
                         ].join(" ")}
                       >
                         {nbSeances}{" "}
@@ -305,7 +305,7 @@ export function GrilleSemaine({
                       key={i}
                       className={[
                         "min-w-0 border-l border-t border-rule p-1 align-top",
-                        estAujourdhui ? "bg-teal-50" : "",
+                        estAujourdhui ? "bg-brand-50" : "",
                       ].join(" ")}
                     >
                       {casesOccupees.length === 0 ? (
@@ -345,11 +345,16 @@ function CelluleLibre({
   // d'une semaine ; écrit en pleine encre, « libre » répété soixante-dix fois
   // devient le motif dominant de l'écran et noie les cinq cartes qui comptent.
   // Le mot n'apparaît donc qu'au survol quand la case est cliquable, et reste
-  // en `ink-300` sinon.
+  // en `ink-500` sinon.
+  //
+  // ⚠️ C'ÉTAIT `ink-300`, ET C'ÉTAIT ILLISIBLE — 2.43:1, mesuré au navigateur le
+  // 2026-08-20. L'intention (« se faire oublier ») était juste ; le jeton ne
+  // l'était pas. `ink-500` reste nettement plus calme que l'encre de contenu
+  // tout en tenant le plancher : on s'efface DANS la plage lisible.
   const commun = [
     "flex w-full min-w-0 items-center justify-center rounded-sm",
     "min-h-target border border-dashed border-transparent",
-    "font-ui text-label text-ink-300",
+    "font-ui text-label text-ink-500",
   ].join(" ");
 
   if (onCreneauLibre === undefined) {
@@ -363,8 +368,8 @@ function CelluleLibre({
       className={[
         commun,
         "cursor-pointer transition duration-quick ease-soft",
-        "hover:border-teal-400 hover:bg-teal-50 hover:text-teal-700",
-        "outline-none focus-visible:outline focus-visible:outline-teal-600 focus-visible:outline-offset",
+        "hover:border-brand-400 hover:bg-brand-50 hover:text-brand-700",
+        "outline-none focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset",
       ].join(" ")}
     >
       {fr.agenda.semaine.libre}
@@ -398,7 +403,7 @@ function CarteRendezVous({ entree }: { readonly entree: AgendaEntry }): React.JS
         // Pas de translation au survol : une carte qui se soulève déplace la
         // cible qu'on vise, et sur une grille dense on vise beaucoup.
         "transition duration-quick ease-soft hover:shadow-lift2",
-        "outline-none focus-visible:outline focus-visible:outline-teal-600 focus-visible:outline-offset",
+        "outline-none focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset",
       ].join(" ")}
       style={{ borderLeftColor: jetons.accent, background: jetons.fond }}
     >
@@ -419,7 +424,7 @@ function CarteRendezVous({ entree }: { readonly entree: AgendaEntry }): React.JS
       <span
         className={[
           "min-w-0 font-ui text-body font-semibold break-words",
-          nom === null ? "text-ink-300" : "text-ink-900",
+          nom === null ? "text-ink-500" : "text-ink-900",
         ].join(" ")}
       >
         {nom ?? fr.agenda.patientNonRattache}
@@ -436,7 +441,7 @@ function CarteRendezVous({ entree }: { readonly entree: AgendaEntry }): React.JS
           champ est déjà NULL quand il ne doit pas se voir — rien n'est décidé
           ici (I4/§6). */}
       {entree.practitionerName === null ? null : (
-        <span className="font-ui text-label text-ink-300 break-words">
+        <span className="font-ui text-label text-ink-500 break-words">
           {entree.practitionerName}
         </span>
       )}

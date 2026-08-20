@@ -35,7 +35,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { AppShell } from "@/components/AppShell";
-import { Squelette } from "@/components/ui";
+import { EnTeteEcran, Squelette } from "@/components/ui";
 import { fr } from "@/i18n/fr";
 import { getSession, signOut } from "@/services/auth";
 import { getCurrentUser, type CurrentUser } from "@/services/authz";
@@ -188,7 +188,7 @@ export default function PagePatients(): React.JSX.Element {
           </p>
         ) : null}
         <div role="alert" style={{ padding: "var(--s-3) var(--s-4)", borderRadius: "var(--r-md)", background: "var(--attention-bg)", color: "var(--ink-700)", fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)" }}>
-          <strong style={{ display: "block", color: "var(--attention)", fontSize: "var(--text-label-size)", lineHeight: "var(--text-label-leading)", letterSpacing: "var(--text-label-tracking)" }}>
+          <strong style={{ display: "block", color: "var(--attention-ink)", fontSize: "var(--text-label-size)", lineHeight: "var(--text-label-leading)", letterSpacing: "var(--text-label-tracking)" }}>
             {fr.erreur.titre}
           </strong>
           {horsLigne ? fr.erreurs["hors-ligne"] : fr.erreurs["non-authentifie"]}
@@ -218,18 +218,12 @@ export default function PagePatients(): React.JSX.Element {
       nomComplet={utilisateur?.fullName ?? ""}
       onDeconnexion={deconnecter}
     >
-      <h1
-        style={{
-          fontSize: "var(--text-display-size)",
-          lineHeight: "var(--text-display-leading)",
-          letterSpacing: "var(--text-display-tracking)",
-          fontWeight: "var(--weight-semibold)",
-          color: "var(--ink-900)",
-          margin: "var(--size-0)",
-        }}
-      >
-        {fr.patients.titre}
-      </h1>
+      {/* V3 — EN-TÊTE HÉROS. Admis ici parce que le titre est un nom de LIEU
+          (« Patients »), jamais celui d'un dossier : ADR-022 interdit un
+          dégradé derrière un nom de patient, et c'est cette frontière qui
+          décide lequel des deux en-têtes un écran reçoit. La fiche d'un
+          dossier, elle, garde `EnTetePage`, sobre et opaque. */}
+      <EnTeteEcran icone="patients" titre={fr.patients.titre} />
 
       <form
         onSubmit={(event) => {
@@ -267,7 +261,7 @@ export default function PagePatients(): React.JSX.Element {
             padding: "var(--s-2) var(--s-5)",
             borderRadius: "var(--r-md)",
             border: "none",
-            background: "var(--teal-600)",
+            background: "var(--brand-600)",
             color: "var(--card)",
             fontSize: "var(--text-body-size)",
             lineHeight: "var(--text-body-leading)",
@@ -288,7 +282,7 @@ export default function PagePatients(): React.JSX.Element {
 
       {messageErreur !== undefined && !horsLigne ? (
         <div role="alert" style={{ padding: "var(--s-3) var(--s-4)", borderRadius: "var(--r-md)", background: "var(--attention-bg)", color: "var(--ink-700)", fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)" }}>
-          <strong style={{ display: "block", color: "var(--attention)", fontSize: "var(--text-label-size)", lineHeight: "var(--text-label-leading)", letterSpacing: "var(--text-label-tracking)" }}>
+          <strong style={{ display: "block", color: "var(--attention-ink)", fontSize: "var(--text-label-size)", lineHeight: "var(--text-label-leading)", letterSpacing: "var(--text-label-tracking)" }}>
             {fr.erreur.titre}
           </strong>
           {messageErreur}
@@ -343,8 +337,8 @@ export default function PagePatients(): React.JSX.Element {
                       minWidth: "var(--target-min)",
                       minHeight: "var(--target-min)",
                       borderRadius: "var(--r-full)",
-                      background: "var(--teal-100)",
-                      color: "var(--teal-900)",
+                      background: "var(--brand-100)",
+                      color: "var(--brand-900)",
                       fontSize: "var(--text-label-size)",
                       fontWeight: "var(--weight-semibold)",
                     }}

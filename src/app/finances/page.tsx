@@ -30,7 +30,7 @@ import {
   BlocErreur,
   Bouton,
   Carte,
-  EnTetePage,
+  EnTeteEcran,
   EtatVide,
   LienBouton,
   PanneauInfo,
@@ -228,7 +228,8 @@ export default function FinancesPage(): React.JSX.Element {
       <div className="flex flex-col gap-8">
         {horsLigne ? <BandeauHorsLigne /> : null}
 
-        <EnTetePage
+        <EnTeteEcran
+          icone="finances"
           titre={fr.finances.titre}
           {...(etat === "contenu" && recette !== null ? { sousTitre: perimetre } : {})}
         />

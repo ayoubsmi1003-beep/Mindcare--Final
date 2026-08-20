@@ -1,0 +1,208 @@
+{
+  "empreinte": "7d7362e1e36febd5",
+  "rapport": [
+    {
+      "chemin": "/connexion",
+      "arrivee": "/connexion",
+      "total": 7,
+      "echecs": [],
+      "mobilier": {
+        "rail": {
+          "present": false
+        },
+        "actif": {
+          "present": false
+        },
+        "orbe": {
+          "trouve": false
+        },
+        "heros": {
+          "present": false
+        },
+        "fondPage": "rgba(0, 0, 0, 0)",
+        "fonteUi": "Geist, \"Geist Fallback\", \"Geist Sans\", system-ui, sans-serif"
+      },
+      "preuve": "checkpoints\\v3-preuves\\_connexion.png"
+    },
+    {
+      "chemin": "/",
+      "arrivee": "/patients",
+      "total": 42,
+      "echecs": [],
+      "mobilier": {
+        "rail": {
+          "present": true,
+          "fond": "linear-gradient(160deg, rgb(15, 46, 42) 0%, rgb(29, 92, 84) 55%, rgb(4",
+          "ombre": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0",
+          "largeur": 248,
+          "entrees": 12,
+          "bientot": 9
+        },
+        "actif": {
+          "present": true,
+          "libelle": "Patients",
+          "ombre": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0"
+        },
+        "orbe": {
+          "trouve": true,
+          "image": "radial-gradient(circle at 30% 30%, rgb(124, 181, 172) 0%, rg"
+        },
+        "heros": {
+          "present": true,
+          "fond": "linear-gradient(135deg, rgb(22, 68, 62) 0%, rgb(42, 122, 112) 48%, rgb",
+          "rayon": "20px"
+        },
+        "fondPage": "rgba(0, 0, 0, 0)",
+        "fonteUi": "Geist, \"Geist Fallback\", \"Geist Sans\", system-ui, sans-serif"
+      },
+      "preuve": "checkpoints\\v3-preuves\\_patients.png"
+    },
+    {
+      "chemin": "/patients",
+      "arrivee": "/patients",
+      "total": 42,
+      "echecs": [],
+      "mobilier": {
+        "rail": {
+          "present": true,
+          "fond": "linear-gradient(160deg, rgb(15, 46, 42) 0%, rgb(29, 92, 84) 55%, rgb(4",
+          "ombre": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0",
+          "largeur": 248,
+          "entrees": 12,
+          "bientot": 9
+        },
+        "actif": {
+          "present": true,
+          "libelle": "Patients",
+          "ombre": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0"
+        },
+        "orbe": {
+          "trouve": true,
+          "image": "radial-gradient(circle at 30% 30%, rgb(124, 181, 172) 0%, rg"
+        },
+        "heros": {
+          "present": true,
+          "fond": "linear-gradient(135deg, rgb(22, 68, 62) 0%, rgb(42, 122, 112) 48%, rgb",
+          "rayon": "20px"
+        },
+        "fondPage": "rgba(0, 0, 0, 0)",
+        "fonteUi": "Geist, \"Geist Fallback\", \"Geist Sans\", system-ui, sans-serif"
+      },
+      "preuve": "checkpoints\\v3-preuves\\_patients.png"
+    },
+    {
+      "chemin": "/agenda",
+      "arrivee": "/agenda",
+      "total": 164,
+      "echecs": [],
+      "mobilier": {
+        "rail": {
+          "present": true,
+          "fond": "linear-gradient(160deg, rgb(15, 46, 42) 0%, rgb(29, 92, 84) 55%, rgb(4",
+          "ombre": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0",
+          "largeur": 248,
+          "entrees": 12,
+          "bientot": 9
+        },
+        "actif": {
+          "present": true,
+          "libelle": "Agenda",
+          "ombre": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0"
+        },
+        "orbe": {
+          "trouve": true,
+          "image": "radial-gradient(circle at 30% 30%, rgb(124, 181, 172) 0%, rg"
+        },
+        "heros": {
+          "present": true,
+          "fond": "linear-gradient(135deg, rgb(22, 68, 62) 0%, rgb(42, 122, 112) 48%, rgb",
+          "rayon": "20px"
+        },
+        "fondPage": "rgba(0, 0, 0, 0)",
+        "fonteUi": "Geist, \"Geist Fallback\", \"Geist Sans\", system-ui, sans-serif"
+      },
+      "preuve": "checkpoints\\v3-preuves\\_agenda.png"
+    },
+    {
+      "chemin": "/finances",
+      "arrivee": "/finances",
+      "total": 44,
+      "echecs": [],
+      "mobilier": {
+        "rail": {
+          "present": true,
+          "fond": "linear-gradient(160deg, rgb(15, 46, 42) 0%, rgb(29, 92, 84) 55%, rgb(4",
+          "ombre": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0",
+          "largeur": 248,
+          "entrees": 12,
+          "bientot": 9
+        },
+        "actif": {
+          "present": true,
+          "libelle": "Finances",
+          "ombre": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0"
+        },
+        "orbe": {
+          "trouve": true,
+          "image": "radial-gradient(circle at 30% 30%, rgb(124, 181, 172) 0%, rg"
+        },
+        "heros": {
+          "present": true,
+          "fond": "linear-gradient(135deg, rgb(22, 68, 62) 0%, rgb(42, 122, 112) 48%, rgb",
+          "rayon": "20px"
+        },
+        "fondPage": "rgba(0, 0, 0, 0)",
+        "fonteUi": "Geist, \"Geist Fallback\", \"Geist Sans\", system-ui, sans-serif"
+      },
+      "preuve": "checkpoints\\v3-preuves\\_finances.png"
+    },
+    {
+      "chemin": "/agenda/nouveau",
+      "arrivee": "/agenda/nouveau",
+      "total": 43,
+      "echecs": [],
+      "mobilier": {
+        "rail": {
+          "present": true,
+          "fond": "linear-gradient(160deg, rgb(15, 46, 42) 0%, rgb(29, 92, 84) 55%, rgb(4",
+          "ombre": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0",
+          "largeur": 248,
+          "entrees": 12,
+          "bientot": 9
+        },
+        "actif": {
+          "present": true,
+          "libelle": "Agenda",
+          "ombre": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0"
+        },
+        "orbe": {
+          "trouve": true,
+          "image": "radial-gradient(circle at 30% 30%, rgb(124, 181, 172) 0%, rg"
+        },
+        "heros": {
+          "present": true,
+          "fond": "linear-gradient(135deg, rgb(22, 68, 62) 0%, rgb(42, 122, 112) 48%, rgb",
+          "rayon": "20px"
+        },
+        "fondPage": "rgba(0, 0, 0, 0)",
+        "fonteUi": "Geist, \"Geist Fallback\", \"Geist Sans\", system-ui, sans-serif"
+      },
+      "preuve": "checkpoints\\v3-preuves\\_agenda_nouveau.png"
+    }
+  ],
+  "mouvement": {
+    "vivantes": 0,
+    "exemples": []
+  },
+  "repli": {
+    "mesure": true,
+    "largeur": 72,
+    "present": true
+  },
+  "clavier": {
+    "arretsRail": 4,
+    "sansFocusVisible": 0,
+    "premier": "Patients",
+    "couleur": "rgb(255, 255, 255)"
+  }
+}

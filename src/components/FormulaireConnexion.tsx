@@ -69,10 +69,24 @@ export function FormulaireConnexion({
         borderRadius: "var(--r-xl)",
         maxWidth: "var(--width-form)",
         width: "var(--size-full)",
-        // Dégradé autorisé UNIQUEMENT ici et sur l'orbe Jarvis (§4.3). Sobre :
-        // deux teintes de la même rampe teal, pas de couleur étrangère.
-        background: "linear-gradient(180deg, var(--teal-050) 0%, var(--card) 60%)",
-        boxShadow: "var(--lift-2)",
+        /* ⚠️ CETTE CARTE EST OPAQUE, ET ELLE L'EST DEPUIS V3.
+         *
+         * Elle portait un dégradé composé ICI, à la main — un dégradé linéaire
+         * de 180deg allant de `--brand-050` à `--card`.
+         * Écrit avec des jetons, donc invisible à un contrôle qui ne cherche
+         * que des couleurs en dur — et pourtant c'était un QUATRIÈME dégradé,
+         * là où ADR-022 en ferme la liste à trois. Un dégradé composé de jetons
+         * légitimes reste un dégradé inventé : ce qui est fermé, c'est la
+         * liste, pas la provenance des couleurs.
+         *
+         * La couleur n'a pas disparu pour autant — elle a changé de plan. Le
+         * DÉGRADÉ EST DERRIÈRE, sur le fond d'écran (`--grad-auth`, au
+         * catalogue), et la carte se détache dessus en blanc franc. C'est le
+         * meilleur dessin des deux : les champs de saisie et leurs étiquettes
+         * reposent sur une surface opaque, donc à contraste constant, ce qu'un
+         * fond dégradé sous un formulaire ne garantit jamais. */
+        background: "var(--card)",
+        boxShadow: "var(--lift-3)",
         fontFamily: "var(--font-ui)",
       }}
     >
@@ -130,7 +144,7 @@ export function FormulaireConnexion({
               lineHeight: "var(--text-label-leading)",
               letterSpacing: "var(--text-label-tracking)",
               fontWeight: "var(--weight-semibold)",
-              color: "var(--attention)",
+              color: "var(--attention-ink)",
             }}
           >
             {fr.erreur.titre}
@@ -235,7 +249,20 @@ export function FormulaireConnexion({
             borderRadius: "var(--r-md)",
             border: "none",
             minHeight: "var(--target-comfort)",
-            background: enCours ? "var(--teal-400)" : "var(--teal-600)",
+            /* ⚠️ `--brand-500` PENDANT L'ENVOI, ET SURTOUT PAS `--brand-400`.
+             *
+             * L'ancienne palette employait ici son ton 400. Le renommage v2
+             * aurait donné `--brand-400` — le ton du LOGO, bien plus clair que
+             * son prédécesseur : le libellé blanc du bouton y tombe à ≈ 2.2:1,
+             * très en dessous du plancher de 4.5:1. Un bouton lisible au repos
+             * devenait illisible exactement pendant qu'il annonce « Connexion
+             * en cours… », c'est-à-dire au moment où on le lit.
+             *
+             * C'est le piège du renommage : un mappage 1:1 entre deux rampes
+             * qui n'ont pas la même clarté déplace des contrastes sans rien
+             * changer d'apparent dans le code. `--brand-500` tient le plancher
+             * et reste visiblement en retrait de l'état actif. */
+            background: enCours ? "var(--brand-500)" : "var(--action-600)",
             color: "var(--card)",
             fontSize: "var(--text-body-size)",
             lineHeight: "var(--text-body-leading)",

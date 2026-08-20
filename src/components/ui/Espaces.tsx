@@ -109,7 +109,7 @@ export function SectionPliable({
             "flex min-h-target items-center gap-3 rounded-md text-left",
             "cursor-pointer select-none bg-transparent",
             "transition duration-quick ease-soft",
-            "outline-none focus-visible:outline focus-visible:outline-teal-600 focus-visible:outline-offset",
+            "outline-none focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset",
           ].join(" ")}
         >
           {/* Un chevron dessiné en bordure : aucun jeu d'icônes n'existe dans

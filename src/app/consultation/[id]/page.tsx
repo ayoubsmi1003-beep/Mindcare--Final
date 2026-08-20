@@ -767,7 +767,7 @@ export default function PageConsultation(): React.JSX.Element {
                 )}
 
                 {note?.signedAt == null ? null : (
-                  <Carte discrete>
+                  <Carte niveau="clinique">
                     <div className="p-4">
                       <GrilleChamps>
                         <Champ
@@ -808,7 +808,7 @@ export default function PageConsultation(): React.JSX.Element {
                       dans le texte de la note : c'est ce qui distingue une
                       correction traçable d'une réécriture (ADR-004). */}
                   {amendements.map((a) => (
-                    <Carte key={a.id} discrete>
+                    <Carte key={a.id} niveau="clinique">
                       <div className="flex flex-col gap-3 p-4">
                         <div className="flex flex-wrap items-center gap-3">
                           <Badge>{a.reason}</Badge>

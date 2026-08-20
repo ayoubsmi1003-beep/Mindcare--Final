@@ -34,17 +34,74 @@ const config: Config = {
       card: "var(--card)",
       sunken: "var(--sunken)",
       rule: "var(--rule)",
-      teal: {
-        900: "var(--teal-900)",
-        700: "var(--teal-700)",
-        600: "var(--teal-600)",
-        400: "var(--teal-400)",
-        100: "var(--teal-100)",
-        50: "var(--teal-050)",
+      // ADR-022 — la rampe de marque a remplacé `teal.*`, dont le nom n'existe
+      // plus nulle part (contrôle 2 du checkpoint V3). Ce n'était pas un
+      // renommage cosmétique : `--teal-600` était une ESTIMATION du teal du
+      // logo, et elle était fausse.
+      brand: {
+        900: "var(--brand-900)",
+        800: "var(--brand-800)",
+        700: "var(--brand-700)",
+        600: "var(--brand-600)",
+        500: "var(--brand-500)",
+        400: "var(--brand-400)",
+        200: "var(--brand-200)",
+        100: "var(--brand-100)",
+        50: "var(--brand-050)",
+      },
+      // Jetons de RÔLE. Un composant écrit `text-ai-600`, jamais
+      // `text-violet-500` : la palette dit quelle couleur existe, le rôle dit à
+      // quoi elle sert. C'est cette couche qui rend un usage abusif visible en
+      // revue — voir le bloc « JETONS DE RÔLE » de tokens.css.
+      //
+      // `violet.*` et `azure.*` ne sont DÉLIBÉRÉMENT PAS exposés : les laisser
+      // disponibles permettrait d'écrire `bg-violet-500` sur une surface qui
+      // n'a rien à voir avec Jarvis, et la couche de rôle ne servirait plus à
+      // rien. Une contrainte contournable n'est pas une contrainte.
+      action: {
+        900: "var(--action-900)",
+        700: "var(--action-700)",
+        600: "var(--action-600)",
+        500: "var(--action-500)",
+        100: "var(--action-100)",
+        50: "var(--action-050)",
+      },
+      ai: {
+        600: "var(--ai-600)",
+        500: "var(--ai-500)",
+        100: "var(--ai-100)",
+        50: "var(--ai-050)",
+      },
+      info: {
+        600: "var(--info-600)",
+        400: "var(--info-400)",
+        100: "var(--info-100)",
+        50: "var(--info-050)",
+      },
+      // Encre posée SUR la marque : UNE SEULE, le blanc pur. Il n'existe
+      // délibérément pas de blanc atténué — sur la partie claire d'un dégradé
+      // de marque, aucun alpha inférieur à 1 ne passe 4.5:1. Le calcul est
+      // écrit dans tokens.css. La hiérarchie se fait à la taille et à la
+      // graisse, jamais en baissant le contraste.
+      "on-brand": {
+        DEFAULT: "var(--on-brand)",
+        surface: "var(--on-brand-surface)",
+        "surface-hover": "var(--on-brand-surface-hover)",
+      },
+      // Les couches de profondeur. `ambient` est le sol de la page : teinté,
+      // jamais blanc pur, c'est ce qui détache une carte sans bordure.
+      layer: {
+        ambient: "var(--layer-ambient)",
+        surface: "var(--layer-surface)",
+        raised: "var(--layer-raised)",
       },
       attention: {
+        // L'ACCENT — bordure, liseré, point de légende. Ne porte pas de texte
+        // sur `attention.bg` : mesuré à 3.34:1, sous le plancher. Voir
+        // `--attention-ink` dans tokens.css.
         DEFAULT: "var(--attention)",
         bg: "var(--attention-bg)",
+        ink: "var(--attention-ink)",
       },
       critical: {
         DEFAULT: "var(--critical)",
@@ -231,6 +288,27 @@ const config: Config = {
       lift1: "var(--lift-1)",
       lift2: "var(--lift-2)",
       lift3: "var(--lift-3)",
+      // La lueur, et ses trois usages : entrée de navigation active, orbe
+      // Jarvis, carte de confirmation. La liste est fermée — si tout brille,
+      // plus rien n'est spécial. Interdite derrière une valeur clinique au même
+      // titre qu'un dégradé : elle module le contraste.
+      "glow-brand": "var(--glow-brand)",
+      "glow-ai": "var(--glow-ai)",
+      // Le filet interne haut d'une surface élevée sur fond coloré : la lumière
+      // rasante qui donne l'épaisseur sans ajouter d'ombre.
+      sheen: "var(--layer-sheen)",
+    },
+    // LES TROIS DÉGRADÉS D'ADR-022, ET RIEN D'AUTRE.
+    //
+    // `backgroundImage` est remplacé, pas étendu : les dégradés utilitaires de
+    // Tailwind (`bg-gradient-to-*`, qui s'assortissent de `from-`/`via-`/`to-`)
+    // permettraient d'en composer un quatrième en trois classes, sans qu'aucune
+    // relecture ne le distingue d'un dégradé du système. La liste fermée
+    // d'ADR-022 ne tient que si l'outil ne sait pas en fabriquer d'autre.
+    backgroundImage: {
+      "grad-brand": "var(--grad-brand)",
+      "grad-orb": "var(--grad-orb)",
+      "grad-auth": "var(--grad-auth)",
     },
     // Le verre décore le mobilier, jamais la donnée (§4 règle 2). Ses valeurs
     // viennent de --glass-*, définies en T1.2 (04-DESIGN-SYSTEM §4.1).
@@ -256,7 +334,7 @@ const config: Config = {
       desktop: "1280px",
     },
     // Exception documentée : plancher d'accessibilité fixé explicitement par
-    // WORKING-CONTEXT §4.4 (`outline: 2px solid var(--teal-600); outline-
+    // WORKING-CONTEXT §4.4 (`outline: 2px solid var(--action-600); outline-
     // offset: 2px`), pas une valeur inventée par cet agent.
     outlineWidth: {
       DEFAULT: "2px",
@@ -279,6 +357,23 @@ const config: Config = {
       card: "var(--card-column-min)",
     },
     minHeight: {
+      // ⚠️ `0` EST INDISPENSABLE, ET SON ABSENCE A COÛTÉ UNE ENQUÊTE.
+      //
+      // Cette échelle REMPLACE celle de Tailwind : tant que `0` n'y figurait
+      // pas, la classe `min-h-0` n'existait pas — elle ne produisait AUCUNE
+      // règle CSS, en silence, sans avertissement de build ni erreur de type.
+      // Or `min-height: auto` est la valeur par défaut d'un enfant flex ou
+      // grille, et elle lui INTERDIT de descendre sous la hauteur de son
+      // contenu. Résultat mesuré le 2026-08-20 : la grille de l'agenda, plus
+      // haute que la fenêtre, faisait grandir sa colonne jusqu'à 1359 px — et
+      // le rail de navigation, à côté, la suivait. Le bouton « Se déconnecter »
+      // se retrouvait à 1342 px dans une fenêtre de 1080.
+      //
+      // Ce n'est pas une valeur de design : c'est la valeur nulle universelle,
+      // au même titre que `spacing.0` et `borderRadius.none`, tous deux déjà
+      // présents ici pour la même raison. Une classe qui n'existe pas est plus
+      // dangereuse qu'une classe fausse : rien ne la signale.
+      0: "0px",
       target: "36px",
       "target-lg": "44px",
     },
@@ -297,9 +392,11 @@ const config: Config = {
     // moins est une occasion de moins de le régler pour un seul écran.
     gridTemplateColumns: {
       fiche: "repeat(auto-fit, minmax(var(--card-column-min), 1fr))",
-      // La coquille : navigation fixe + contenu fluide. En dessous de la
-      // rupture `tablet`, l'écran repasse à UNE colonne (cf. AppShell).
+      // La coquille : navigation fixe + contenu fluide. Sous la rupture
+      // `tablet`, le rail se REPLIE en icônes (`app-compact`) au lieu de passer
+      // au-dessus du contenu — §3 enfin tenu, cf. `--grid-nav-compact`.
       app: "var(--grid-nav-width) minmax(0, 1fr)",
+      "app-compact": "var(--grid-nav-compact) minmax(0, 1fr)",
     },
     // Largeurs de grille §3 — source unique tokens.css, aucune valeur ici.
     maxWidth: {

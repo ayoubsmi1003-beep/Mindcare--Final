@@ -18,9 +18,12 @@ export type TonBadge = "neutre" | "attention" | "positif" | "information";
 
 const TONS: Readonly<Record<TonBadge, string>> = {
   neutre: "bg-sunken text-ink-700 border-rule",
-  attention: "bg-attention-bg text-attention border-attention",
+  attention: "bg-attention-bg text-attention-ink border-attention",
   positif: "bg-positive-bg text-positive border-positive",
-  information: "bg-teal-50 text-teal-700 border-teal-100",
+  // Le ton `information` prend le rôle INFO (azure), et non plus la marque :
+  // un badge d'information teinté de la couleur d'action se lisait comme une
+  // chose à faire. Le rôle existe pour trancher exactement ce genre de cas.
+  information: "bg-info-50 text-info-600 border-info-100",
 };
 
 export function Badge({
@@ -72,7 +75,7 @@ export function Chiffre({
       <span
         className={[
           "font-num text-num font-medium tabular-nums",
-          attention ? "text-attention" : "text-ink-900",
+          attention ? "text-attention-ink" : "text-ink-900",
         ].join(" ")}
       >
         {valeur}

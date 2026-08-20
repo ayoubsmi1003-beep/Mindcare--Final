@@ -1,6 +1,121 @@
 # STATE — MindCare OS
-**V2 — JARVIS VIVANT · COMMITÉ `35010c9` · PORTE ROUGE DEPUIS, CRÉDIT FOURNISSEUR ÉPUISÉ**
-Dernière mise à jour : 2026-08-15
+**V3 — DESIGN v2 · EN COURS, NON COMMITÉ · PORTE À 2 BLOQUÉS CRITIQUES**
+Dernière mise à jour : 2026-08-20
+
+---
+
+## ⛔ ÉTAT AU 2026-08-20 — V3 « DESIGN v2 »
+
+**HEAD `ff1303b`.** L'en-tête précédent de ce fichier décrivait un état ANTÉRIEUR à ce
+commit (il annonçait le correctif de fuseau « non commité » alors qu'il l'est) : corrigé
+ici. La section V2 ci-dessous reste valable pour tout le reste.
+
+### Verdict brut — `bash scripts/checkpoint-v3.sh`
+
+```
+VERDICT V3 : 14 verts · 0 rouges · 2 bloqués critiques · 3 bloqués par décision
+V3 N'EST PAS VERT : 2 contrôle(s) NON MESURÉ(S) et exigés.               (exit 2)
+```
+
+Verts : preflight · typecheck · lint · build · aucun hex hors `tokens.css` · aucun
+`teal-` résiduel · aucun blanc atténué · aucun 4ᵉ dégradé · exactement 3 dégradés
+déclarés · union discriminée de `Carte` intacte · `prefers-reduced-motion` déclaré ·
+**26 `.woff2` auto-hébergés** · 4 familles câblées · **0 URL Google dans le CSS émis**.
+
+### Ce que V3 a livré
+
+| Lot | État |
+|---|---|
+| Palette v2 ADR-022 (`--brand-*`, accents, 3 dégradés) | ✅ `teal-` → 0 occurrence |
+| Jetons de RÔLE (`--action-*`, `--ai-*`, `--info-*`) au-dessus de la palette | ✅ |
+| Fontes `next/font/google`, 4 familles, zéro réseau à l'exécution | ✅ mesuré |
+| Rail de navigation signature (`--grad-auth`, état actif, repli en icônes < 1024px) | ✅ écrit, **non observé** |
+| Jeu de 16 icônes dessinées à la main + mark du logo, **zéro dépendance** | ✅ |
+| `EnTeteEcran` héros + `PastilleIcone` + famille `Carte` à `niveau` | ✅ |
+| Orbe Jarvis (`--grad-orb`, `--glow-ai`), état vide composé | ✅ écrit, **non observé** |
+| `scripts/checkpoint-v3.sh` + `scripts/mesure-v3-navigateur.mjs` | ✅ |
+
+### 🔴 DÉFAUT RÉEL TROUVÉ EN MESURANT — `--attention` illisible, ANTÉRIEUR À V3
+
+`--attention` (#b8763a) sur `--attention-bg` rend **3.34:1**, sous le plancher de 4.5:1.
+Relevé au navigateur sur les cinq écrans à la fois : c'est le titre du bandeau
+« Données fictives », **le texte chargé de dire que les dossiers ne sont pas réels**.
+Sur blanc il ne fait pas mieux : **3.69:1**. Tous ses usages en TEXTE étaient donc sous
+le plancher, depuis `04-DESIGN-SYSTEM`, sans que personne l'ait jamais calculé.
+
+Les deux autres paires sémantiques ont été vérifiées dans la foulée et PASSENT :
+`--positive` 4.56:1, `--critical` 5.74:1. L'ambre était seul en cause.
+
+**Corrigé par ajout, pas par modification :** `--attention-ink: #8a5325` (5.67:1 sur
+`--attention-bg`, 6.28:1 sur blanc) porte le TEXTE ; `--attention` reste l'ACCENT
+(bordure, liseré, point de légende), donc la sémantique clinique d'ADR-022 est
+inchangée. Même patron que `--ai-600` face à `--ai-500`.
+
+### 🔴 QUATRIÈME DÉGRADÉ TROUVÉ — composé de jetons légitimes
+
+`FormulaireConnexion` composait à la main un dégradé `--brand-050 → --card` sous la
+carte de connexion. **Écrit avec des jetons, donc invisible au contrôle « aucun hex en
+dur »** — et pourtant un 4ᵉ dégradé, là où ADR-022 ferme la liste à trois.
+*Ce qui est fermé, c'est la LISTE, pas la provenance des couleurs.* Le contrôle 3 du
+checkpoint cherche désormais `gradient(`, pas une couleur.
+Corrigé : la carte est opaque, et `--grad-auth` est passé DERRIÈRE, sur le fond d'écran.
+
+### Trois faux verts fabriqués par mes propres instruments, et corrigés
+
+Consignés parce qu'ils se reproduiront autrement :
+
+1. **`pnpm build` réussit sans les fontes.** Le build du 2026-08-20 a rendu
+   `getaddrinfo ENOTFOUND fonts.gstatic.com`, a réessayé, et **aurait fini vert même en
+   échouant trois fois** — l'application serait retombée en silence sur les piles
+   système. Le checkpoint COMPTE donc les `.woff2` émis ; il ne lit pas le code de
+   sortie du build.
+2. **La mesure au navigateur rendait « vert » pour 4 écrans jamais vus.** Sans session,
+   `/patients` redirige — la sonde mesurait la page de connexion quatre fois. Le tell
+   était visible (7 nœuds de texte partout) mais un vert ne se relit pas. L'URL
+   d'arrivée est désormais vérifiée.
+3. **Vérifier l'URL ne suffisait pas.** `/agenda` et `/finances` ne redirigent PAS : ils
+   rendent leur squelette et restent sur leur adresse. La sonde y voyait 4 à 6 nœuds
+   conformes et rendait « vert » — **sans que le rail ni le contenu existent**. Elle
+   exige maintenant la présence du mobilier attendu.
+
+### Ce qui reste NON OBSERVÉ — et pourquoi
+
+Les **4 écrans authentifiés** (`/patients`, `/agenda`, `/agenda/nouveau`, `/finances`)
+n'ont jamais été rendus : il faut une session, donc `bash scripts/dev-account.sh`, donc
+**Docker — dont le démon est injoignable sur ce poste**. `/connexion` est mesuré vert
+(0 échec de contraste, `prefers-reduced-motion` éteint réellement tout mouvement).
+
+⚠️ **Le rail de navigation, l'orbe Jarvis et les en-têtes héros n'ont donc été vus par
+personne.** Ils sont écrits, typés et cohérents — ce n'est pas la même chose que
+mesurés. La porte le dit et refuse la livraison.
+
+### Décisions prises pendant la session
+
+| Objet | Décision |
+|---|---|
+| Bandeau « DONNÉES FICTIVES » | **NON supprimé**, contrairement au contrat §V3. Il est la surface visible de la condition 2 d'ADR-016, et `app.deployment` vaut toujours `cloud-dev` — le contrat dit « il n'a plus d'objet EN LOCAL », or on n'y est pas. Il s'efface déjà seul quand la base répond `self-hosted`. **Restylé, pas enlevé.** |
+| Primitive `Toast` | **Non créée** — aucun appelant dans `src/`. Reportée à V4. |
+| Primitive `Tableau` | **Écrite puis RETIRÉE** — aucun écran tabulaire ne peut la recevoir sans restructuration (la liste des paiements est une liste de cartes ; `GrilleSemaine` est une grille de calendrier). Reportée à V4, même raison que `Toast`. |
+| En-tête héros | Réservé aux écrans de **LIEU** (Patients, Agenda, Finances, Nouveau RDV). Les écrans de **PERSONNE** gardent `EnTetePage`, opaque : ADR-022 interdit un dégradé derrière un nom de patient. La règle de sécurité et le rythme visuel disent ici la même chose. |
+| Orbe Jarvis | **Ne respire pas.** §8.1 ferme le mouvement à 4 moments orchestrés ; une pulsation perpétuelle n'en fait pas partie, et bouge dans le coin de l'œil 8 h par jour. |
+| Icônes | **Jeu maison, zéro dépendance** — le dépôt en compte 5 au total, et une bibliothèque tierce donne les icônes de tout le monde. |
+| Tableau de bord hérosé | **Impossible en V3** : `/` est une redirection de 16 lignes, le tableau de bord est V4 (D-18). V3 livre la grammaire, V4 l'assemble. |
+
+### Écart refermé au passage
+
+`04-DESIGN-SYSTEM` §3 prescrit « < 1024px nav → icônes ». `AppShell` documentait depuis
+le 2026-08-04 qu'il ne pouvait pas s'y conformer, **faute de jeu d'icônes**. V3 les
+dessine : le rail se replie désormais en icônes au lieu de passer au-dessus du contenu.
+Les libellés sortent du flux visuel mais **restent dans l'arbre d'accessibilité**.
+
+### Reprise — dans cet ordre
+
+1. Démarrer Docker, `bash scripts/dev-account.sh` (fenêtre ADR-016, décision assumée le
+   2026-08-20), se connecter, puis `pnpm dev` et `node scripts/mesure-v3-navigateur.mjs`.
+2. Revue visuelle des 4 écrans authentifiés + parcours clavier du rail.
+3. Ne commiter qu'après : la porte est à exit 2.
+
+---
 
 ---
 
@@ -620,3 +735,27 @@ COMMIT;
    → Attendu : `status='closed', ended_at NULL, a.status='completed'`.
 
 **Résultat** : ✅ consultation confirmée `status='closed'`, `ended_at` NULL, 0 ligne modifiée (déjà clos). **`app.appointments` non vérifié depuis** — plausible déjà `'completed'` par chemin antérieur, non certifié.
+
+---
+
+## Jarvis — clé OpenRouter à zéro crédit, modèle gratuit en test (2026-08-16)
+
+**Panne diagnostiquée** : `jarvis-chat` répondait `indisponible` sur tout appel. Mesuré dans
+`audit.boundary_crossings` (projet `ftxaseynjvjevwybdoii`) : 25 franchissements consécutifs,
+tous `outcome='error'`, latence 26–336 ms — trop court pour une génération, signature d'un
+refus HTTP immédiat d'OpenRouter (402, crédits épuisés). Clé remplacée par l'utilisatrice
+et reposée en secret Supabase (`OPENROUTER_API_KEY`), hors dépôt.
+
+**Décision produit** : le cabinet ne rechargera le compte OpenRouter qu'à la fin de la
+construction — la doctoresse achètera les crédits une fois l'app finie. En attendant, la
+phase de test tourne sur un **modèle gratuit** (`openai/gpt-oss-20b:free` sur OpenRouter),
+fixé par le secret `OPENROUTER_MODEL` — **aucun changement de code** : `resolveModel()`
+([external-call.ts:121](supabase/functions/_shared/external-call.ts#L121)) lit déjà cette
+variable avant `DEFAULT_MODEL`.
+
+⚠️ **À faire avant toute démo/livraison à la doctoresse** : une fois les crédits achetés,
+retirer (`supabase secrets unset OPENROUTER_MODEL`) ou repointer ce secret vers
+`google/gemini-2.5-flash` — le modèle payant déjà décidé en production
+(`02-SECURITY-BOUNDARY.md` §5.2, arbitrage 2026-08-05). Un modèle `:free` est rate-limité
+(quelques dizaines d'appels/jour selon le compte) : suffisant pour tester, pas pour un
+usage clinique réel.

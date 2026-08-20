@@ -44,7 +44,7 @@ import {
   BandeauHorsLigne,
   BlocErreur,
   Chiffre,
-  EnTetePage,
+  EnTeteEcran,
   EtatVide,
   LienBouton,
   Section,
@@ -269,7 +269,8 @@ export default function PageAgenda(): React.JSX.Element {
           différents — un filet de plus sur un agenda déjà quadrillé ajoute une
           ligne à lire pour rien. */}
       <div className="flex flex-col gap-8">
-        <EnTetePage
+        <EnTeteEcran
+          icone="agenda"
           titre={fr.agenda.titre}
           sousTitre={jourComplet(new Date().toISOString()) ?? fr.etats.texteAbsent}
           actions={
@@ -373,7 +374,7 @@ export default function PageAgenda(): React.JSX.Element {
                       // `critical` — rien n'est perdu (§4 règle 1).
                       "border-attention bg-attention-bg text-ink-900 no-underline",
                       "transition duration-quick ease-soft hover:shadow-lift2",
-                      "outline-none focus-visible:outline focus-visible:outline-teal-600 focus-visible:outline-offset",
+                      "outline-none focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset",
                     ].join(" ")}
                   >
                     <span className="min-w-target font-num text-num font-medium tabular-nums text-ink-700">
@@ -416,10 +417,10 @@ function BoutonPeriode({
         "min-h-target cursor-pointer rounded-md border px-4 py-2",
         "font-ui text-label",
         "transition duration-quick ease-soft",
-        "outline-none focus-visible:outline focus-visible:outline-teal-600 focus-visible:outline-offset",
+        "outline-none focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset",
         actif
           ? // Sélectionné : fond plein et graisse. Deux signaux, pas un.
-            "border-teal-600 bg-teal-600 font-semibold text-paper shadow-lift1"
+            "border-brand-600 bg-brand-600 font-semibold text-paper shadow-lift1"
           : "border-rule bg-card font-regular text-ink-700 hover:border-ink-300 hover:bg-sunken",
       ].join(" ")}
     >

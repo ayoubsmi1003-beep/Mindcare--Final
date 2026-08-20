@@ -59,14 +59,24 @@ export function SyntheticDataBanner(): React.JSX.Element | null {
   return (
     <div
       role="status"
+      /* V3 — RESTYLÉ, PAS SUPPRIMÉ. Le contrat de session demandait son retrait
+       * (« il n'a plus d'objet en local ») : on n'est pas en local,
+       * `app.deployment` vaut toujours `cloud-dev`, et ce bandeau est la surface
+       * visible de la condition 2 d'ADR-016. Il s'efface DÉJÀ tout seul le jour
+       * où la base répond `self-hosted` — c'est le mécanisme prévu, et il n'y
+       * avait rien à retirer. Voir `src/app/layout.tsx`.
+       *
+       * Reste opaque, reste en `--attention`, ne prend NI verre NI dégradé : les
+       * trois règles de sécurité écrites en tête de ce fichier n'ont pas été
+       * assouplies pour l'occasion. Seuls le rythme et la graisse ont changé. */
       style={{
         display: "flex",
-        alignItems: "baseline",
+        alignItems: "center",
         gap: "var(--s-3)",
-        padding: "var(--s-3) var(--s-5)",
+        padding: "var(--s-2) var(--s-5)",
         background: "var(--attention-bg)",
-        color: "var(--attention)",
-        borderBottom: "var(--rule-width) solid var(--rule)",
+        color: "var(--attention-ink)",
+        borderBottom: "var(--rule-width) solid var(--attention)",
         fontFamily: "var(--font-ui)",
         fontSize: "var(--text-body-size)",
         lineHeight: "var(--text-body-leading)",

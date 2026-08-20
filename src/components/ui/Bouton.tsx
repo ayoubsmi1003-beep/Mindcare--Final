@@ -42,17 +42,21 @@ const SOCLE = [
   "font-ui text-body font-medium",
   "cursor-pointer select-none text-center",
   "transition duration-quick ease-soft",
-  "outline-none focus-visible:outline focus-visible:outline-teal-600 focus-visible:outline-offset",
+  "outline-none focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset",
   "disabled:cursor-not-allowed disabled:opacity-disabled disabled:shadow-none",
 ].join(" ");
 
 const RANGS: Readonly<Record<RangBouton, string>> = {
   // L'ombre s'accentue au survol au lieu de déplacer le bouton : un élément
   // qui se soulève sous le curseur déplace aussi la cible qu'on vise.
+  // Jetons de RÔLE, pas de palette : un bouton primaire est une ACTION, et
+  // c'est `--action-*` qui le dit. Les valeurs sont aujourd'hui celles de la
+  // marque ; le jour où l'action s'en détacherait, ce bouton suivrait sans
+  // qu'on ait à le retrouver.
   principal: [
-    "bg-teal-600 text-paper shadow-lift1",
-    "hover:bg-teal-700 hover:shadow-lift2",
-    "active:bg-teal-900 active:shadow-lift1",
+    "bg-action-600 text-paper shadow-lift1",
+    "hover:bg-action-700 hover:shadow-lift2",
+    "active:bg-action-900 active:shadow-lift1",
   ].join(" "),
   secondaire: [
     "bg-card text-ink-900 border border-rule shadow-lift1",
@@ -68,7 +72,7 @@ const RANGS: Readonly<Record<RangBouton, string>> = {
 
 /** Rang d'un geste qui retire quelque chose. `attention`, jamais `critical`. */
 const RETRAIT = [
-  "bg-card text-attention border border-attention shadow-lift1",
+  "bg-card text-attention-ink border border-attention shadow-lift1",
   "hover:bg-attention-bg hover:shadow-lift2",
   "active:bg-attention-bg active:shadow-lift0",
 ].join(" ");

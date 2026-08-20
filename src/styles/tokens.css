@@ -27,7 +27,27 @@
      * ------------------------------------------------------------------ */
     --ink-900: #0b1614;
     --ink-700: #23342f;
+    /* La plus claire des encres qui PORTE DU TEXTE — 5.70:1 sur blanc,
+     * 5.29:1 sur `--brand-050`. C'est elle, le « texte discret » du système. */
     --ink-500: #566b65;
+    /* ⚠️ `--ink-300` N'EST PAS UNE ENCRE DE TEXTE. MESURÉ : 2.43:1.
+     *
+     * Relevé au navigateur le 2026-08-20 sur `/agenda` — **84 occurrences sous
+     * le plancher sur un seul écran** : les compteurs « 0 séance », le mot
+     * « libre » des créneaux vides, et un NOM DE PRATICIENNE. L'intention était
+     * juste et bien argumentée dans le code (« un jour vide s'efface », « un
+     * créneau libre doit se faire oublier ») — mais s'effacer et devenir
+     * illisible ne sont pas la même chose, et à 2.43:1 c'est le second.
+     *
+     * Le défaut est ANTÉRIEUR à V3 : la grille de semaine l'employait ainsi
+     * depuis S4. Personne ne l'avait calculé, parce qu'un gris clair « a l'air »
+     * discret plutôt que cassé.
+     *
+     * Ce jeton reste utile, et il garde tous ses emplois NON TEXTUELS : filets
+     * au survol, pastille de puce, bordure de case à cocher, texte d'invite d'un
+     * champ vide. Pour du texte discret, `--ink-500` est le bon jeton, et il est
+     * VISIBLEMENT plus calme que `--ink-700` — la hiérarchie ne se perd pas, elle
+     * se fait dans la plage lisible. */
     --ink-300: #8fa39d;
     --ink-100: #d3deda;
 
@@ -43,12 +63,33 @@
        n'en a pas. Un trait est un trait. */
     --rule-width: 1px;
 
-    --teal-900: #0d3833;
-    --teal-700: #14544d;
-    --teal-600: #1b6b63; /* PRIMAIRE */
-    --teal-400: #4e958d;
-    --teal-100: #dcebe9;
-    --teal-050: #f0f7f6;
+    /* ── MARQUE — ADR-022, dérivée du VRAI logo ────────────────────────────
+     *
+     * ⚠️ CETTE RAMPE A REMPLACÉ `--teal-*`, ET CE N'ÉTAIT PAS UN CHANGEMENT DE
+     * GOÛT. `--teal-600: #1b6b63` était une ESTIMATION du teal de la marque.
+     * Le teal réel, pipetté sur le logo, est `#7CB5AC` — un vert d'eau bien
+     * plus clair. La palette était fausse depuis l'origine ; ADR-022 la corrige
+     * et les valeurs ci-dessous en sont la recopie exacte. Ne pas les
+     * réharmoniser « à l'œil » : elles sont appairées à des contrastes vérifiés.
+     *
+     * Le nom `teal` n'existe plus nulle part dans src/ — c'est un contrôle du
+     * checkpoint V3, pas une préférence. Deux noms pour une même couleur, c'est
+     * la pathologie qui a déjà coûté des sessions à ce dépôt. */
+    --brand-900: #0f2e2a;
+    --brand-800: #16443e;
+    --brand-700: #1d5c54;
+    --brand-600: #2a7a70; /* PRIMAIRE ACTION — 5.10:1 sur blanc, vérifié */
+    --brand-500: #4a9a8e;
+    --brand-400: #7cb5ac; /* LOGO — marque et dégradés. JAMAIS du texte sur blanc. */
+    --brand-200: #b4d8d1;
+    --brand-100: #dcede9;
+    --brand-050: #f1f8f6;
+
+    /* ── ACCENTS — agrégats et graphiques UNIQUEMENT (ADR-022) ─────────────
+     * Ils n'ont aucun sens clinique et ne doivent jamais en prendre un. */
+    --azure-600: #2563a8;
+    --azure-400: #5b92ce;
+    --violet-500: #7c6bd8; /* 3e série de graphique, pas davantage */
 
     --attention: #b8763a;
     --attention-bg: #fbf2e9;
@@ -56,6 +97,169 @@
     --critical-bg: #fbedec;
     --positive: #3e7a5e;
     --positive-bg: #edf5f1;
+
+    /* ⚠️ L'AMBRE NE PEUT PAS PORTER DE TEXTE SUR SON PROPRE FOND — MESURÉ.
+     *
+     * `--attention` sur `--attention-bg` donne **3.34:1**, sous le plancher de
+     * 4.5:1. Relevé au navigateur le 2026-08-20 par
+     * `scripts/mesure-v3-navigateur.mjs`, sur les cinq écrans à la fois : c'est
+     * le titre du bandeau « Données fictives », c'est-à-dire précisément le
+     * texte chargé de dire que les dossiers affichés ne sont pas réels.
+     *
+     * LE DÉFAUT EST ANTÉRIEUR À V3. La paire existait telle quelle depuis
+     * `04-DESIGN-SYSTEM`, et personne ne l'avait mesurée — elle « avait l'air »
+     * lisible, ce qui est exactement la raison pour laquelle un contraste se
+     * calcule au lieu de se juger. Les deux autres paires sémantiques ont été
+     * vérifiées dans la foulée et PASSENT : `--positive` 4.56:1,
+     * `--critical` 5.74:1. L'ambre était seul en cause.
+     *
+     * `--attention` n'est PAS modifié : c'est la couleur de l'ACCENT — bordure,
+     * liseré, point de légende — et ADR-022 laisse la sémantique clinique
+     * inchangée. On ajoute l'encre qui manquait, exactement comme `--ai-600`
+     * existe parce que `--ai-500` ne peut pas porter de texte. Une rampe a
+     * besoin d'un ton pour le fond ET d'un ton pour l'écrit ; n'en donner qu'un
+     * invite à employer celui qu'on a.
+     *
+     * `#8a5325` sur `--attention-bg` → **5.67:1**, calculé. */
+    --attention-ink: #8a5325;
+
+    /* ------------------------------------------------------------------
+     * JETONS DE RÔLE — la couche qui empêche « du violet parce que c'est joli »
+     *
+     * Un composant ne référence JAMAIS `--violet-500` ni `--azure-600`
+     * directement : il référence le RÔLE. La palette dit quelle couleur existe ;
+     * le rôle dit à quoi elle sert. Sans cette couche, la seule chose qui
+     * empêche un accent de dériver vers un usage qui n'est pas le sien est la
+     * vigilance du relecteur — et la vigilance ne se `grep` pas.
+     *
+     * ⚠️ CE N'EST PAS L'ALIAS QU'ON A REFUSÉ POUR `teal→brand`. Celui-là aurait
+     * donné deux noms au MÊME rôle, donc deux sources contradictoires. Ici la
+     * couche de rôle est au-DESSUS de la couche de palette : elle ajoute une
+     * information que la palette ne porte pas, et c'est elle qui rend un usage
+     * abusif visible en revue.
+     *
+     * Les couleurs SÉMANTIQUES (--attention/--critical/--positive) ne sont PAS
+     * reprises ici : elles portent un sens clinique et n'ont pas de second
+     * emploi décoratif. Leur donner un alias de rôle inviterait exactement le
+     * détournement que ce bloc existe pour empêcher.
+     * ------------------------------------------------------------------ */
+
+    /* ACTION — actions primaires, identité, confiance, état actif.
+     * La rampe descend jusqu'à 900 parce qu'un bouton primaire a TROIS états de
+     * fond (repos 600, survol 700, enfoncé 900) : sans le troisième, l'état
+     * enfoncé irait chercher `--brand-900` en direct et court-circuiterait la
+     * couche de rôle au seul endroit où on appuie vraiment. */
+    --action-900: var(--brand-900);
+    --action-700: var(--brand-700);
+    --action-600: var(--brand-600);
+    --action-500: var(--brand-500);
+    --action-100: var(--brand-100);
+    --action-050: var(--brand-050);
+
+    /* IA — Jarvis, intelligence, analyse, surfaces système. Rien d'autre.
+     * Le violet ne désigne jamais un état clinique ni une action métier. */
+    /* `--violet-500` donne 3.9:1 sur blanc : il ne peut PAS porter de texte.
+     * `--ai-600` est sa variante foncée, calculée pour ça — 6.47:1 sur blanc.
+     * C'est lui qu'on écrit, jamais `--ai-500`, qui reste un jeton de surface. */
+    --ai-600: #5b4bc4;
+    --ai-500: var(--violet-500);
+    --ai-100: #e7e3fa;
+    --ai-050: #f3f1fd;
+
+    /* INFO — information, états opératoires secondaires, accents de navigation. */
+    --info-600: var(--azure-600);
+    --info-400: var(--azure-400);
+    --info-100: #dbe8f6;
+    --info-050: #eef4fb;
+
+    /* ------------------------------------------------------------------
+     * PROFONDEUR EN TROIS COUCHES — ADR-022 appliqué
+     *
+     * Trois couches, pas davantage. Un système à cinq niveaux ne se tient pas :
+     * personne ne sait plus lequel choisir, et tout finit au niveau le plus
+     * haut, c'est-à-dire à plat.
+     *
+     *   ambiant  → le sol de la page. Teinté, jamais blanc pur.
+     *   surface  → les surfaces applicatives. Opaque.
+     *   élevé    → l'actif, l'important, l'interactif.
+     * ------------------------------------------------------------------ */
+    --layer-ambient: var(--brand-050);
+    --layer-surface: var(--card);
+    --layer-raised: var(--card);
+    /* Filet interne haut — la lumière rasante qui donne l'épaisseur d'une
+     * surface élevée sans lui ajouter d'ombre. Sur fond coloré uniquement. */
+    --layer-sheen: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    /* ------------------------------------------------------------------
+     * LUEUR — RÉSERVÉE À TROIS ENDROITS, ET LA LISTE EST FERMÉE
+     *
+     *   1. l'entrée de navigation active
+     *   2. l'orbe Jarvis
+     *   3. la carte de confirmation
+     *
+     * Si tout brille, plus rien n'est spécial — une lueur posée sur une
+     * quatrième surface ne rend pas cette surface importante, elle rend les
+     * trois autres ordinaires. Une lueur derrière une valeur clinique est
+     * interdite au même titre qu'un dégradé : elle module le contraste.
+     * ------------------------------------------------------------------ */
+    --glow-brand: 0 0 0 1px rgba(124, 181, 172, 0.28),
+      0 4px 16px -4px rgba(124, 181, 172, 0.45);
+    --glow-ai: 0 0 24px -4px rgba(124, 107, 216, 0.42),
+      0 8px 32px -8px rgba(124, 107, 216, 0.28);
+
+    /* ------------------------------------------------------------------
+     * DÉGRADÉS — LISTE FERMÉE (ADR-022). Il y en a TROIS.
+     *
+     * « Aucun autre dégradé n'existe. Un dégradé inventé dans un écran est un
+     * défaut de revue, pas une variation. » — ADR-022, mot pour mot.
+     * Le checkpoint V3 le vérifie : `gradient(` hors de ce fichier → 0.
+     *
+     * ⚠️ AUCUN DES TROIS NE PASSE DERRIÈRE UNE VALEUR. Un dégradé sous un
+     * chiffre change le contraste selon ce qui défile dessous ; sur `25 mg`
+     * contre `250 mg`, le coût d'une lecture ambiguë n'est pas esthétique.
+     * ------------------------------------------------------------------ */
+    --grad-brand: linear-gradient(135deg, #16443e 0%, #2a7a70 48%, #3e8fa8 100%);
+    --grad-orb: radial-gradient(
+      circle at 30% 30%,
+      #7cb5ac 0%,
+      #2a7a70 60%,
+      #16443e 100%
+    );
+    --grad-auth: linear-gradient(160deg, #0f2e2a 0%, #1d5c54 55%, #2a7a70 100%);
+
+    /* ── Encre POSÉE SUR la marque ─────────────────────────────────────────
+     *
+     * Nommées parce qu'elles étaient sinon destinées à être écrites en
+     * `rgba(255,255,255,…)` en dur dans chaque composant, chacune avec son
+     * propre alpha, donc chacune avec son propre contraste que personne ne
+     * mesure.
+     *
+     * ⚠️ IL N'Y A PAS DE « BLANC ATTÉNUÉ » ICI, ET C'EST LE RÉSULTAT D'UNE
+     * MESURE — LE CALCUL EST ÉCRIT POUR NE PAS ÊTRE REFAIT.
+     *
+     * Un jeton `--on-brand-muted` a existé le temps de le mesurer. À l'alpha
+     * qu'on écrit d'instinct pour « du blanc discret » (0.55), composé sur les
+     * arrêts de `--grad-brand` :
+     *     sur #16443e (arrêt sombre) → 4.50:1   tout juste
+     *     sur #2a7a70 (arrêt milieu) → 2.11:1   ÉCHEC FRANC
+     * Le monter n'a pas sauvé le jeton : à 0.85, l'arrêt clair donne encore
+     * 4.18:1. Sur la partie claire d'un dégradé de marque, SEUL LE BLANC PUR
+     * passe le plancher.
+     *
+     * La leçon est plus générale que ce jeton : **le contraste d'un texte posé
+     * sur un DÉGRADÉ varie le long du dégradé**, et le mesurer en un seul point
+     * ne prouve rien. Un jeton sûr sur certains fonds seulement n'est pas un
+     * jeton, c'est un piège — il sera un jour posé sur l'autre fond, et rien ne
+     * le signalera.
+     *
+     * D'où la règle, qui vaut pour toute surface de marque : **une seule encre,
+     * le blanc pur.** La hiérarchie s'y fait par la TAILLE, la GRAISSE et la
+     * pastille de fond — jamais en baissant le contraste. C'est d'ailleurs le
+     * meilleur dessin : un titre de groupe atténué se lit mal sur un écran de
+     * cabinet en fin de journée, atténué ou non. */
+    --on-brand: #ffffff;
+    --on-brand-surface: rgba(255, 255, 255, 0.14);
+    --on-brand-surface-hover: rgba(255, 255, 255, 0.08);
 
     /* ── FAMILLES DE CONSULTATION — agenda (migration 024) ──────────────────
      *
@@ -80,8 +284,8 @@
      *
      * `*-bg` sert au fond de la carte, `*-accent` au liseré de 3px et au point
      * de légende. Les deux sont appairés et vérifiés ensemble. */
-    --kind-suivi-accent: var(--teal-600);
-    --kind-suivi-bg: var(--teal-050);
+    --kind-suivi-accent: var(--brand-600);
+    --kind-suivi-bg: var(--brand-050);
 
     --kind-premiere-accent: #5b5bd6;
     --kind-premiere-bg: #eeeefb;
@@ -133,27 +337,32 @@
     /* ------------------------------------------------------------------
      * FAMILLES — WORKING-CONTEXT §3, valeurs recopiées telles quelles.
      *
-     * ⚠️ ÉTAT RÉEL AU 2026-08-01 : LES FONTES NE SONT PAS ENCORE BUNDLÉES.
-     * Aucun fichier .woff2 n'est présent dans le dépôt, `next/font/local` n'est
-     * câblé nulle part, et src/app/layout.tsx n'émet aucune variable de fonte.
-     * Concrètement, sur un poste où « Geist Sans » n'est pas installée — donc
-     * sur le poste du cabinet — c'est `system-ui` qui rend. La direction
-     * typographique du §3 n'est PAS tenue aujourd'hui.
+     * ✅ CÂBLÉES EN V3 (2026-08-20), PAR `next/font/google`, PAS PAR `local`.
+     * L'ancien état de ce commentaire — « aucun .woff2, lot bloqué en attente
+     * des 4 familles » — décrivait un blocage qui n'en était plus un : les
+     * quatre familles sont sur Google Fonts, et `next/font/google` les
+     * TÉLÉCHARGE AU BUILD puis les sert depuis notre propre origine. Le résultat
+     * est identique à `local` (zéro requête réseau à l'exécution, sur le poste
+     * du cabinet qui n'aura pas toujours de réseau) sans avoir à versionner
+     * sept binaires. Le réseau n'est requis qu'UNE fois, à la construction.
      *
-     * Ce n'est pas un oubli : le lot est bloqué en attente des 4 familles en
-     * .woff2 (Geist Sans 400/500/600 · Geist Mono 500 · Newsreader 400 ·
-     * IBM Plex Sans Arabic 400/500/600), à déposer dans src/styles/fonts/.
-     * Le câblage `next/font/local` et le repointage de ces 4 variables sont un
-     * lot distinct, à faire AVANT le premier écran.
+     * Les quatre `var(--font-*-emise)` sont posées par `src/app/layout.tsx`.
+     * Si ce fichier cessait de les émettre, chaque famille retomberait sur sa
+     * pile système : le texte resterait LISIBLE, jamais invisible (I20). C'est
+     * la raison d'être du repli, et il ne se retire pas une fois les fontes
+     * câblées — c'est précisément quand on croit une fonte acquise qu'on cesse
+     * de prévoir son absence.
      *
-     * La pile système reste en repli permanent après câblage : le texte doit
-     * rester lisible si une fonte ne charge pas, jamais invisible (I20).
-     * --font-doc est réservé aux APERÇUS DE DOCUMENTS. Jamais l'interface.
+     * --font-doc est réservé aux APERÇUS DE DOCUMENTS. Jamais l'interface,
+     * jamais un titre « parce que ça fait chic » : quand Newsreader apparaît,
+     * la praticienne sait qu'elle regarde quelque chose qui sera imprimé et
+     * signé. La typographie encode l'état juridique du contenu (§5).
      * ------------------------------------------------------------------ */
-    --font-ui: "Geist Sans", system-ui, sans-serif;
-    --font-doc: "Newsreader", Georgia, serif;
-    --font-ar: "IBM Plex Sans Arabic", "Noto Sans Arabic", sans-serif;
-    --font-num: "Geist Mono", ui-monospace, monospace;
+    --font-ui: var(--font-ui-emise), "Geist Sans", system-ui, sans-serif;
+    --font-doc: var(--font-doc-emise), "Newsreader", Georgia, serif;
+    --font-ar: var(--font-ar-emise), "IBM Plex Sans Arabic", "Noto Sans Arabic",
+      sans-serif;
+    --font-num: var(--font-num-emise), "Geist Mono", ui-monospace, monospace;
 
     /* ------------------------------------------------------------------
      * ÉCHELLE TYPOGRAPHIQUE — WORKING-CONTEXT §3
@@ -262,6 +471,17 @@
      * breakpoints étant résolus à la compilation CSS (var() y est inopérant).
      * ------------------------------------------------------------------ */
     --grid-nav-width: 248px;
+    /* Le rail REPLIÉ, sous la rupture `tablet`.
+     *
+     * Ce jeton referme un écart assumé depuis le 2026-08-04 : `04-DESIGN-SYSTEM`
+     * §3 prescrit « < 1024px nav → icônes », et `AppShell` documentait qu'il ne
+     * pouvait pas s'y conformer faute de jeu d'icônes — la navigation passait
+     * donc au-dessus du contenu, pleine largeur. V3 dessine les icônes, l'écart
+     * n'a plus de raison d'être.
+     *
+     * 72px = 40px de pastille + `--s-4` de part et d'autre. La cible de
+     * pointage reste très au-dessus du plancher de 36px. */
+    --grid-nav-compact: 72px;
     --grid-main-max: 1120px;
     --grid-context-width: 340px;
 
@@ -359,7 +579,14 @@
    * -------------------------------------------------------------------- */
 
   html {
-    background-color: var(--paper);
+    /* Le sol de l'application est TEINTÉ, jamais blanc pur — c'est ce qui fait
+     * qu'une carte blanche posée dessus se détache sans avoir besoin d'une
+     * bordure. Le dépôt livrait `--paper` (#fbfcfb, un blanc), donc des cartes
+     * blanches sur fond blanc, donc une bordure partout pour les distinguer :
+     * l'aspect « plat » venait de là autant que de l'absence de couleur.
+     * `--layer-ambient` reste très clair (#f1f8f6) — l'écran est lu 6-8 h par
+     * jour, un fond saturé fatiguerait. */
+    background-color: var(--layer-ambient);
     color: var(--ink-900);
     font-family: var(--font-ui);
     /* Pas de `font-size` sur la racine : la fixer à 14px écraserait la taille
@@ -390,7 +617,17 @@
    * Ne jamais poser `outline: none` sans remplacer par un focus au moins aussi
    * visible : au clavier, un focus invisible rend l'application inutilisable. */
   :focus-visible {
-    outline: 2px solid var(--teal-600);
+    outline: 2px solid var(--action-600);
+    outline-offset: 2px;
+  }
+
+  /* Le focus posé SUR la marque (rail de navigation, en-tête héros, écran de
+   * connexion) : `--action-600` y disparaîtrait, étant lui-même la marque.
+   * Le blanc est la seule encre qui tienne sur les trois arrêts du dégradé.
+   * Sans cette règle, la navigation au clavier devient invisible exactement là
+   * où le fond est le plus coloré — c'est-à-dire là où on regarde le moins. */
+  .sur-marque :focus-visible {
+    outline: 2px solid var(--on-brand);
     outline-offset: 2px;
   }
 

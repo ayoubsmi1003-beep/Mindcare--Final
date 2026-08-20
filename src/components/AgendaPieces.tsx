@@ -114,12 +114,12 @@ export function Statut({ statut }: { readonly statut: AppointmentStatus }): Reac
 
   const teintes: Readonly<Record<AppointmentStatus, readonly [string, string]>> = {
     requested: ["var(--sunken)", "var(--ink-700)"],
-    confirmed: ["var(--teal-100)", "var(--teal-900)"],
+    confirmed: ["var(--brand-100)", "var(--brand-900)"],
     arrived: ["var(--positive-bg)", "var(--positive)"],
     in_session: ["var(--positive-bg)", "var(--positive)"],
     completed: ["var(--sunken)", "var(--ink-500)"],
-    no_show: ["var(--attention-bg)", "var(--attention)"],
-    cancelled: ["var(--attention-bg)", "var(--attention)"],
+    no_show: ["var(--attention-bg)", "var(--attention-ink)"],
+    cancelled: ["var(--attention-bg)", "var(--attention-ink)"],
   };
   const [fond, encre] = teintes[statut];
 

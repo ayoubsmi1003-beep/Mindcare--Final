@@ -13,7 +13,41 @@
 export { Bouton, LienBouton, BarreActions } from "./Bouton";
 export type { RangBouton, BoutonProps } from "./Bouton";
 
-export { Carte, Section, EnTetePage, PanneauInfo, GrilleChamps } from "./Surfaces";
+export {
+  Carte,
+  PastilleIcone,
+  Section,
+  EnTeteEcran,
+  EnTetePage,
+  PanneauInfo,
+  GrilleChamps,
+} from "./Surfaces";
+export type {
+  CarteProps,
+  NiveauCarte,
+  NiveauDecor,
+  NiveauPorteur,
+} from "./Surfaces";
+
+export { Icone, MarqueMindCare } from "./Icones";
+export type { NomIcone, IconeProps } from "./Icones";
+
+/* ⚠️ NI `Tableau` NI `Toast` NE SONT ICI, ET C'EST LA MÊME RAISON.
+ *
+ * Le contrat de V3 liste sept primitives ; deux n'ont AUCUN appelant dans tout
+ * `src/`. Un `Toast` n'est déclenché nulle part. Un `Tableau` de données n'a
+ * pas d'écran : la liste des paiements est une liste de CARTES (chaque ligne
+ * porte une action), et `GrilleSemaine` compose une grille de calendrier, qui
+ * n'a de tableau que la balise.
+ *
+ * Une primitive sans appelant est du code non exercé, donc non vérifié, dans un
+ * dossier qui se veut vérifiable. `Tableau` a d'ailleurs été écrit puis retiré
+ * dans cette même session, une fois constaté qu'aucun écran ne pouvait le
+ * recevoir sans qu'on RESTRUCTURE cet écran — ce que le périmètre de V3
+ * interdit (règle 10 : appliquer le système, pas refaire l'architecture).
+ *
+ * Les deux sont reportés à V4, où le tableau de bord leur donnera enfin un
+ * consommateur réel. Reporté et écrit, pas oublié. */
 
 export { Badge, Chiffre } from "./Badge";
 export type { TonBadge } from "./Badge";

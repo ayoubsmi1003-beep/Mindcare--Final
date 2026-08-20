@@ -141,7 +141,7 @@ export function CarteConfirmation({
             padding: "0 var(--s-4)",
             borderRadius: "var(--r-md)",
             border: "none",
-            background: confirmerActif ? "var(--teal-600)" : "var(--ink-100)",
+            background: confirmerActif ? "var(--brand-600)" : "var(--ink-100)",
             color: confirmerActif ? "var(--paper)" : "var(--ink-300)",
             fontSize: "var(--text-body-size)",
             cursor: confirmerActif ? "pointer" : "default",

@@ -110,11 +110,19 @@ function llmErr<T>(code: LlmErrorCode, message: string): LlmResult<T> {
  * `google/gemini-2.5-flash` — décision de produit, 2026-08-05, pas une
  * limitation de test contournée en douce. Vérifié en local sur un appel réel
  * à `analyze_session` (STATE.md) : sortie JSON conforme, contenu clinique
- * correct, coût de l'ordre de 0,0002 USD par appel. `02-SECURITY-BOUNDARY.md`
- * §5.2 nomme `anthropic/claude-sonnet-4.5` pour l'usage `jarvis` — ce document
- * est à corriger dans la même passe pour ne pas laisser deux sources
- * contradictoires. Le choix reste un réglage de configuration, pas un
- * changement de code : `OPENROUTER_MODEL` prime toujours sur cette constante.
+ * correct, coût de l'ordre de 0,0002 USD par appel.
+ *
+ * ⚠️ CE COMMENTAIRE A DIT LE CONTRAIRE, ET C'ÉTAIT FAUX. Il annonçait que
+ * `02-SECURITY-BOUNDARY.md` §5.2 nommait `anthropic/claude-sonnet-4.5` pour
+ * l'usage `jarvis`, et réclamait sa correction. Vérification faite le
+ * 2026-08-16 : §5.2 attribue déjà `google/gemini-2.5-flash` à `jarvis`, avec
+ * le même arbitrage du 2026-08-05. Sonnet 4.5 y est associé à `note_draft`,
+ * un *purpose* non implémenté dont l'entrée reste indicative. Les deux sources
+ * concordent ; il n'y a rien à arbitrer. Une contradiction annoncée qui
+ * n'existe pas coûte la relecture de celui qui vient la vérifier.
+ *
+ * Le choix reste un réglage de configuration, pas un changement de code :
+ * `OPENROUTER_MODEL` prime toujours sur cette constante.
  */
 const DEFAULT_MODEL = "google/gemini-2.5-flash";
 

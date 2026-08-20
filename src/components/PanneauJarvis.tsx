@@ -393,20 +393,51 @@ export function PanneauJarvis(): React.JSX.Element {
         type="button"
         onClick={() => setOuvert(true)}
         aria-label={fr.jarvis.ouvrir}
+        /* V3 — L'ORBE. C'est le seul objet de l'interface qui porte
+         * `--grad-orb` et `--glow-ai`, et c'est ce qui en fait un repère : on
+         * le cherche du regard, on ne le lit pas.
+         *
+         * ⚠️ IL NE RESPIRE PAS, ET C'EST UN REFUS DÉLIBÉRÉ. Une pulsation
+         * perpétuelle aurait été le geste attendu pour « l'IA vivante » — mais
+         * §8.1 ferme la liste du mouvement à QUATRE moments orchestrés, et une
+         * animation permanente n'en fait pas partie. Sur un écran regardé six à
+         * huit heures par jour, dans une pièce où l'on écoute quelqu'un parler,
+         * un objet qui bouge sans arrêt dans le coin de l'œil est un coût, pas
+         * une qualité. La présence vient ici de la profondeur et de la lueur,
+         * toutes deux immobiles. Le mouvement est réservé au survol et à
+         * l'ouverture — c'est-à-dire à une intention de l'utilisatrice. */
         style={{
           position: "fixed",
-          right: "var(--s-4)",
-          bottom: "var(--s-4)",
-          minHeight: "var(--target-min)",
-          padding: "0 var(--s-4)",
+          right: "var(--s-6)",
+          bottom: "var(--s-6)",
+          display: "flex",
+          alignItems: "center",
+          gap: "var(--s-3)",
+          minHeight: "var(--target-comfort)",
+          padding: "var(--s-2) var(--s-5) var(--s-2) var(--s-2)",
           borderRadius: "var(--r-full)",
           border: "none",
-          background: "var(--teal-600)",
-          color: "var(--paper)",
+          background: "var(--card)",
+          color: "var(--ink-900)",
           fontSize: "var(--text-body-size)",
+          fontFamily: "var(--font-ui)",
+          fontWeight: "var(--weight-medium)",
+          boxShadow: "var(--lift-3)",
           cursor: "pointer",
+          zIndex: "var(--z-panneau)",
         }}
       >
+        <span
+          aria-hidden
+          style={{
+            display: "inline-flex",
+            width: "var(--s-8)",
+            height: "var(--s-8)",
+            borderRadius: "var(--r-full)",
+            background: "var(--grad-orb)",
+            boxShadow: "var(--glow-ai)",
+          }}
+        />
         {fr.jarvis.ouvrir} · ⌘K
       </button>
     );
@@ -438,9 +469,23 @@ export function PanneauJarvis(): React.JSX.Element {
           borderBottom: "var(--rule-width) solid var(--rule)",
         }}
       >
-        <strong style={{ color: "var(--ink-900)", fontSize: "var(--text-body-size)" }}>
-          {fr.jarvis.titre}
-        </strong>
+        <span style={{ display: "flex", alignItems: "center", gap: "var(--s-3)" }}>
+          {/* Le même orbe qu'au lanceur, en plus petit : c'est le fil qui relie
+              le bouton qu'on a cliqué au panneau qui s'ouvre. */}
+          <span
+            aria-hidden
+            style={{
+              display: "inline-flex",
+              width: "var(--s-6)",
+              height: "var(--s-6)",
+              borderRadius: "var(--r-full)",
+              background: "var(--grad-orb)",
+            }}
+          />
+          <strong style={{ color: "var(--ink-900)", fontSize: "var(--text-body-size)" }}>
+            {fr.jarvis.titre}
+          </strong>
+        </span>
         <button
           type="button"
           onClick={() => setOuvert(false)}
@@ -459,9 +504,42 @@ export function PanneauJarvis(): React.JSX.Element {
 
       <div style={{ flex: "1 1 auto", overflowY: "auto", padding: "var(--s-4)", display: "grid", gap: "var(--s-3)" }}>
         {tours.length === 0 && (
-          <p style={{ margin: "var(--size-0)", color: "var(--ink-500)", fontSize: "var(--text-body-size)" }}>
-            {fr.jarvis.invite}
-          </p>
+          /* L'ÉTAT VIDE — une phrase et rien d'autre (§9.8 : jamais une
+             illustration). L'orbe le compose, en grand : il n'ajoute aucune
+             information, il occupe l'espace que remplirait sinon un dessin
+             décoratif, et il le fait avec le seul objet qui appartienne déjà à
+             ce panneau. */
+          <div
+            style={{
+              display: "grid",
+              justifyItems: "center",
+              gap: "var(--s-4)",
+              padding: "var(--s-10) var(--s-4)",
+              textAlign: "center",
+            }}
+          >
+            <span
+              aria-hidden
+              style={{
+                display: "inline-flex",
+                width: "var(--s-16)",
+                height: "var(--s-16)",
+                borderRadius: "var(--r-full)",
+                background: "var(--grad-orb)",
+                boxShadow: "var(--glow-ai)",
+              }}
+            />
+            <p
+              style={{
+                margin: "var(--size-0)",
+                color: "var(--ink-700)",
+                fontSize: "var(--text-body-size)",
+                lineHeight: "var(--text-body-leading)",
+              }}
+            >
+              {fr.jarvis.invite}
+            </p>
+          </div>
         )}
 
         {tours.map((tour, index) => (
@@ -548,7 +626,7 @@ export function PanneauJarvis(): React.JSX.Element {
               borderRadius: "var(--r-md)",
               border: "var(--rule-width) solid var(--rule)",
               background: "var(--sunken)",
-              color: "var(--ink-300)",
+              color: "var(--ink-500)",
               fontSize: "var(--text-label-size)",
               cursor: "default",
             }}

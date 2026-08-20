@@ -64,7 +64,7 @@ export function BlocErreur({
       className="flex flex-col gap-3 rounded-md border border-attention bg-attention-bg p-4"
     >
       <div className="flex flex-col gap-1">
-        <strong className="font-ui text-label font-semibold uppercase tracking-label text-attention">
+        <strong className="font-ui text-label font-semibold uppercase tracking-label text-attention-ink">
           {fr.erreur.titre}
         </strong>
         <p className="font-ui text-body text-ink-700">{message}</p>
@@ -174,7 +174,7 @@ export function IndicateurEnregistrement({
   const encres = {
     encours: "text-ink-500",
     enregistre: "text-ink-500",
-    echec: "text-attention",
+    echec: "text-attention-ink",
   } as const;
 
   return (
@@ -227,7 +227,7 @@ export function Champ({
           // Un nom long ou une note d'une ligne entière ne doit ni déborder ni
           // pousser la colonne voisine (I11, cinquième état).
           "whitespace-pre-wrap break-words",
-          vide ? "text-ink-300" : "text-ink-900",
+          vide ? "text-ink-500" : "text-ink-900",
         ].join(" ")}
       >
         {vide ? fr.etats.texteAbsent : valeur}

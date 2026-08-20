@@ -56,7 +56,13 @@ export default function PageConnexion(): React.JSX.Element {
         justifyContent: "center",
         minHeight: "var(--size-viewport)",
         padding: "var(--s-6)",
-        background: "var(--paper)",
+        /* V3 — `--grad-auth`, au catalogue fermé d'ADR-022, qui nomme
+         * explicitement l'écran de connexion parmi les surfaces où la couleur
+         * est autorisée. Le dégradé est ICI, sur le fond, et non plus sous les
+         * champs de saisie : c'est le premier écran que voit la praticienne le
+         * matin, il doit dire la marque, mais aucune de ses valeurs ne repose
+         * dessus. La carte du formulaire est blanche et opaque par-dessus. */
+        background: "var(--grad-auth)",
         fontFamily: "var(--font-ui)",
       }}
     >

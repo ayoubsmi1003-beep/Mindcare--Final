@@ -44,7 +44,7 @@ import {
   ChampSelection,
   ChampTexte,
   ChampZoneTexte,
-  EnTetePage,
+  EnTeteEcran,
   LienBouton,
 } from "@/components/ui";
 import { useSessionEcran } from "@/components/useSessionEcran";
@@ -215,7 +215,7 @@ export default function PageNouveauRendezVous(): React.JSX.Element {
       onDeconnexion={deconnecter}
     >
       <div className="flex flex-col gap-8">
-        <EnTetePage titre={fr.agenda.nouveau} />
+        <EnTeteEcran icone="agenda" titre={fr.agenda.nouveau} />
 
         {horsLigne || horsLigneSession ? <BandeauHorsLigne /> : null}
         {messageErreur !== undefined && !horsLigne ? <BlocErreur message={messageErreur} /> : null}
@@ -273,8 +273,8 @@ export default function PageNouveauRendezVous(): React.JSX.Element {
                         className={[
                           "w-full min-h-target rounded-md border border-rule bg-card px-4 py-2 text-left",
                           "font-ui text-body text-ink-900 cursor-pointer",
-                          "transition duration-quick ease-soft hover:border-teal-400 hover:bg-teal-50",
-                          "outline-none focus-visible:outline focus-visible:outline-teal-600 focus-visible:outline-offset",
+                          "transition duration-quick ease-soft hover:border-brand-400 hover:bg-brand-50",
+                          "outline-none focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset",
                         ].join(" ")}
                       >
                         {p.lastName} {p.firstName} · {p.recordNumber}
@@ -288,7 +288,7 @@ export default function PageNouveauRendezVous(): React.JSX.Element {
             /* Patient choisi : la sélection est un FAIT ACQUIS, elle se lit
                comme tel — surface teal discrète, et un seul geste pour revenir
                en arrière. */
-            <div className="flex flex-wrap items-center gap-3 rounded-md border border-teal-100 bg-teal-50 px-4 py-3">
+            <div className="flex flex-wrap items-center gap-3 rounded-md border border-brand-100 bg-brand-50 px-4 py-3">
               <span className="min-w-0 flex-auto font-ui text-body font-medium text-ink-900 break-words">
                 {patient.lastName} {patient.firstName} · {patient.recordNumber}
               </span>

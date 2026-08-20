@@ -105,9 +105,20 @@ export const fr = {
    * nom d'écran supplémentaire.
    */
   coquille: {
-    /** Écran référencé dans la navigation mais pas encore construit (I19). */
+    /**
+     * Écran référencé dans la navigation mais pas encore construit (I19).
+     *
+     * Reste le libellé COMPLET, lu par les lecteurs d'écran et affiché en
+     * infobulle. La pastille visible dit « bientôt » — plus court, donc plus
+     * calme dans une colonne — mais « bientôt » seul ne dirait pas de QUOI il
+     * s'agit hors contexte visuel.
+     */
     ecranAVenir: "Écran à venir",
+    /** La pastille elle-même. Décision Q12 : assumée et visible, pas masquée. */
+    bientot: "bientôt",
     deconnexionCompte: "Compte connecté :",
+    /** Le rail lui-même, pour `aria-label` — distinct du groupe « MENU ». */
+    navigationPrincipale: "Navigation principale",
   },
 
   /**
@@ -630,3 +641,14 @@ export const fr = {
 } as const;
 
 export type Fr = typeof fr;
+
+/**
+ * Les douze écrans de la navigation.
+ *
+ * Extrait ici plutôt que redéclaré dans chaque consommateur : `AppShell` le
+ * calculait déjà pour lui seul, et V3 en a désormais un second usage — le jeu
+ * d'icônes, dont chaque nom d'écran DOIT avoir un tracé. Les deux dérivant du
+ * même objet, ajouter un écran à `fr.nav.ecrans` sans lui dessiner d'icône
+ * devient une erreur de compilation, et non un carré vide découvert à l'écran.
+ */
+export type NomEcran = keyof typeof fr.nav.ecrans;

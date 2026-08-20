@@ -60,7 +60,7 @@ export function BlocErreur({ message }: { readonly message: string }): React.JSX
       <strong
         style={{
           display: "block",
-          color: "var(--attention)",
+          color: "var(--attention-ink)",
           fontSize: "var(--text-label-size)",
           lineHeight: "var(--text-label-leading)",
           letterSpacing: "var(--text-label-tracking)",
@@ -105,7 +105,7 @@ export function Champ({
         style={{
           fontSize: "var(--text-body-size)",
           lineHeight: "var(--text-body-leading)",
-          color: vide ? "var(--ink-300)" : "var(--ink-900)",
+          color: vide ? "var(--ink-500)" : "var(--ink-900)",
           fontVariantNumeric: "tabular-nums",
           // Un nom long ou une note d'une ligne entière ne doit pas déborder ni
           // pousser la colonne voisine (I11, cinquième état).

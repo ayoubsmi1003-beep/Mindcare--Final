@@ -107,7 +107,9 @@ place, 3 passes de revue adversariale, 8 défauts corrigés. Le seed arrive par 
 | Données patient sur Supabase Cloud | **avant le 1er patient réel** | D-17, porte de livraison, 7 lignes de checklist |
 | Pas de transcription de séance | Semaine 2 | Groq → `analyze_session`, aucun changement de schéma |
 | Voix cloud, pas locale | Jour de la migration | `VOICE_PROVIDER=local`, whisper.cpp + Piper (D-21) |
-| Fontes locales absentes | **V3** | `next/font/google`, auto-hébergées au build (réponse Q18) |
+| ~~Fontes locales absentes~~ | ~~V3~~ | **ÉTEINTE le 2026-08-20.** 4 familles par `next/font/google`, 26 `.woff2` auto-hébergés au build, 0 URL Google dans le CSS émis — mesuré, pas supposé |
+| Primitives `Toast` et `Tableau` absentes | **V4** | Aucune n'a d'appelant dans `src/` ; livrer une primitive non exercée serait du code non vérifié. Le tableau de bord leur donnera un consommateur réel |
+| Porte V2 non rejouable — crédit fournisseur épuisé | **achat des crédits** | `secrets unset OPENROUTER_MODEL` (retour à `google/gemini-2.5-flash`) puis rejeu de `checkpoint-v2.sh`. Dette d'ENVIRONNEMENT, pas de code |
 | Aucun certificat imprimé de référence | **bloque le vert de V6** | Un tirage papier, une approbation de la praticienne |
 | Nom, n° d'ordre, téléphone absents de la base | **bloque V6** | Saisis dans `app.profiles` sur l'instance, **jamais** commités |
 | Modèle d'ordonnance | Mois 2 | `'ordonnance'` à ajouter à l'enum `app.doc_type` |

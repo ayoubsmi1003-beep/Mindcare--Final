@@ -21,7 +21,7 @@ const SOCLE_CHAMP = [
   "font-ui text-body text-ink-900",
   "placeholder:text-ink-300",
   "transition duration-quick ease-soft",
-  "outline-none focus-visible:outline focus-visible:outline-teal-600 focus-visible:outline-offset",
+  "outline-none focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset",
   "disabled:cursor-not-allowed disabled:bg-sunken disabled:opacity-disabled",
 ].join(" ");
 
@@ -69,7 +69,7 @@ function Habillage({
           id={idAide}
           className={[
             "font-ui text-label",
-            erreur === undefined ? "text-ink-500" : "text-attention",
+            erreur === undefined ? "text-ink-500" : "text-attention-ink",
           ].join(" ")}
         >
           {erreur ?? indication}

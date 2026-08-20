@@ -56,7 +56,7 @@ function Champ({ libelle, valeur }: { libelle: string; valeur: string | null }):
         style={{
           fontSize: "var(--text-body-size)",
           lineHeight: "var(--text-body-leading)",
-          color: valeur === null || valeur === "" ? "var(--ink-300)" : "var(--ink-900)",
+          color: valeur === null || valeur === "" ? "var(--ink-500)" : "var(--ink-900)",
           fontVariantNumeric: "tabular-nums",
         }}
       >
@@ -147,7 +147,7 @@ export default function PageFichePatient(): React.JSX.Element {
         display: "inline-flex",
         alignItems: "center",
         minHeight: "var(--target-min)",
-        color: "var(--teal-600)",
+        color: "var(--brand-600)",
         fontSize: "var(--text-body-size)",
         lineHeight: "var(--text-body-leading)",
       }}
@@ -172,7 +172,7 @@ export default function PageFichePatient(): React.JSX.Element {
 
       {messageErreur !== undefined && !horsLigne ? (
         <div role="alert" style={{ margin: "var(--s-4) var(--size-0)", padding: "var(--s-3) var(--s-4)", borderRadius: "var(--r-md)", background: "var(--attention-bg)", color: "var(--ink-700)", fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)" }}>
-          <strong style={{ display: "block", color: "var(--attention)", fontSize: "var(--text-label-size)", lineHeight: "var(--text-label-leading)", letterSpacing: "var(--text-label-tracking)" }}>
+          <strong style={{ display: "block", color: "var(--attention-ink)", fontSize: "var(--text-label-size)", lineHeight: "var(--text-label-leading)", letterSpacing: "var(--text-label-tracking)" }}>
             {fr.erreur.titre}
           </strong>
           {messageErreur}
@@ -204,8 +204,8 @@ export default function PageFichePatient(): React.JSX.Element {
                 minWidth: "var(--target-comfort)",
                 minHeight: "var(--target-comfort)",
                 borderRadius: "var(--r-full)",
-                background: "var(--teal-100)",
-                color: "var(--teal-900)",
+                background: "var(--brand-100)",
+                color: "var(--brand-900)",
                 fontSize: "var(--text-body-size)",
                 fontWeight: "var(--weight-semibold)",
               }}
@@ -235,7 +235,7 @@ export default function PageFichePatient(): React.JSX.Element {
                     padding: "var(--s-1) var(--s-3)",
                     borderRadius: "var(--r-full)",
                     background: "var(--attention-bg)",
-                    color: "var(--attention)",
+                    color: "var(--attention-ink)",
                     fontSize: "var(--text-label-size)",
                     lineHeight: "var(--text-label-leading)",
                     fontWeight: "var(--weight-medium)",
