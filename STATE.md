@@ -1,10 +1,10 @@
 # STATE — MindCare OS
-**V3 — DESIGN v2 · EN COURS, NON COMMITÉ · PORTE À 2 BLOQUÉS CRITIQUES**
+**V3 — DESIGN v2 · PORTE VERTE, NON COMMITÉ · `checkpoint-v3.sh` exit 0**
 Dernière mise à jour : 2026-08-20
 
 ---
 
-## ⛔ ÉTAT AU 2026-08-20 — V3 « DESIGN v2 »
+## ✅ ÉTAT AU 2026-08-20 — V3 « DESIGN v2 », VERT ET MESURÉ AU NAVIGATEUR
 
 **HEAD `ff1303b`.** L'en-tête précédent de ce fichier décrivait un état ANTÉRIEUR à ce
 commit (il annonçait le correctif de fuseau « non commité » alors qu'il l'est) : corrigé
@@ -13,9 +13,27 @@ ici. La section V2 ci-dessous reste valable pour tout le reste.
 ### Verdict brut — `bash scripts/checkpoint-v3.sh`
 
 ```
-VERDICT V3 : 14 verts · 0 rouges · 2 bloqués critiques · 3 bloqués par décision
-V3 N'EST PAS VERT : 2 contrôle(s) NON MESURÉ(S) et exigés.               (exit 2)
+VERDICT V3 : 16 verts · 0 rouges · 0 bloqué critique · 3 bloqués par décision
+V3 EST VERT — aux TROIS réserves NOMMÉES, et à elles seules.             (exit 0)
 ```
+
+**Les deux derniers bloqués ont été levés par la MESURE, pas par décret.** La fenêtre
+ADR-016 a été rouverte sur autorisation explicite (`bash scripts/dev-account.sh`,
+garde-fou `cloud-dev` vert), et `mesure-v3-navigateur.mjs` pilote désormais un vrai
+Chromium EN SESSION AUTHENTIFIÉE :
+
+```
+/connexion 7 · / 42 · /patients 42 · /agenda 164 · /finances 44 · /agenda/nouveau 43
+337 textes mesurés · 0 sous le plancher · 0 écran NON OBSERVÉ
+rail 248px · actif « Patients » avec lueur · orbe --grad-orb · héros --grad-brand
+repli < 1024 : rail 72px · Geist réellement appliquée
+prefers-reduced-motion : 0 animation vivante
+clavier : 4 arrêts dans le rail, 0 sans focus visible, anneau rgb(255,255,255)
+```
+
+Preuves : `checkpoints/v3-preuves/` — captures des 6 écrans + `rapport.json`.
+
+⚠️ **RIEN N'EST COMMITÉ.** L'arbre de travail porte V3 en entier.
 
 Verts : preflight · typecheck · lint · build · aucun hex hors `tokens.css` · aucun
 `teal-` résiduel · aucun blanc atténué · aucun 4ᵉ dégradé · exactement 3 dégradés
@@ -29,10 +47,10 @@ déclarés · union discriminée de `Carte` intacte · `prefers-reduced-motion` 
 | Palette v2 ADR-022 (`--brand-*`, accents, 3 dégradés) | ✅ `teal-` → 0 occurrence |
 | Jetons de RÔLE (`--action-*`, `--ai-*`, `--info-*`) au-dessus de la palette | ✅ |
 | Fontes `next/font/google`, 4 familles, zéro réseau à l'exécution | ✅ mesuré |
-| Rail de navigation signature (`--grad-auth`, état actif, repli en icônes < 1024px) | ✅ écrit, **non observé** |
+| Rail de navigation signature (`--grad-auth`, état actif, repli en icônes < 1024px) | ✅ **observé** — 248px, repli à 72px |
 | Jeu de 16 icônes dessinées à la main + mark du logo, **zéro dépendance** | ✅ |
 | `EnTeteEcran` héros + `PastilleIcone` + famille `Carte` à `niveau` | ✅ |
-| Orbe Jarvis (`--grad-orb`, `--glow-ai`), état vide composé | ✅ écrit, **non observé** |
+| Orbe Jarvis (`--grad-orb`, `--glow-ai`), état vide composé | ✅ **observé** au navigateur |
 | `scripts/checkpoint-v3.sh` + `scripts/mesure-v3-navigateur.mjs` | ✅ |
 
 ### 🔴 DÉFAUT RÉEL TROUVÉ EN MESURANT — `--attention` illisible, ANTÉRIEUR À V3
@@ -51,7 +69,63 @@ Les deux autres paires sémantiques ont été vérifiées dans la foulée et PAS
 (bordure, liseré, point de légende), donc la sémantique clinique d'ADR-022 est
 inchangée. Même patron que `--ai-600` face à `--ai-500`.
 
-### 🔴 QUATRIÈME DÉGRADÉ TROUVÉ — composé de jetons légitimes
+### 🔴 `--ink-300` N'EST PAS UNE ENCRE DE TEXTE — 2.43:1, 84 fois sur `/agenda`
+
+Trouvé **uniquement parce que la session authentifiée a enfin ouvert l'agenda**. Les
+compteurs « 0 séance », le mot « libre » des créneaux vides, et **un nom de
+praticienne**. Défaut ANTÉRIEUR à V3 (S4) : l'intention écrite dans le code (« un jour
+vide s'efface », « un créneau libre doit se faire oublier ») était juste — mais
+s'effacer et devenir illisible ne sont pas la même chose, et à 2.43:1 c'est le second.
+Personne ne l'avait calculé, parce qu'un gris clair *a l'air* discret plutôt que cassé.
+
+`--ink-500` (5.70:1) partout où le jeton portait du TEXTE. `--ink-300` garde tous ses
+emplois non textuels : filets au survol, pastille de puce, bordure de case, invite de
+champ vide. La hiérarchie se fait DANS la plage lisible.
+
+### 🔴 `min-h-0` N'EXISTAIT PAS — une classe inerte, en silence
+
+`tailwind.config.ts` REMPLACE l'échelle `minHeight` par les deux cibles
+d'accessibilité. `min-h-0` ne produisait donc **aucune règle CSS** — sans avertissement
+de build, sans erreur de type, sans rien. Or `min-height: auto` interdit à un enfant
+flex ou grille de descendre sous la hauteur de son contenu : la grille de l'agenda
+faisait grandir sa colonne, donc sa rangée, donc **le rail à 1359 px pour une fenêtre
+de 1080**, et « Se déconnecter » se retrouvait à 1342 — hors de vue.
+
+Trois correctifs plus naïfs ont échoué avant celui-ci (ancrer le bloc hors du
+défilement, `max-h-screen`, `grid-rows-1`) : tous butaient sur la même cause, qu'aucun
+ne touchait. **Une classe qui n'existe pas est plus dangereuse qu'une classe fausse :
+rien ne la signale.** `0: "0px"` ajouté à l'échelle, avec la raison écrite sur place.
+
+### 🔴 LE RENOMMAGE 1:1 CASSAIT UN CONTRASTE
+
+`--teal-400` → `--brand-400` aurait mis le libellé blanc du bouton de connexion à
+≈ 2.2:1 **pendant l'envoi** — lisible au repos, illisible exactement pendant qu'il
+annonce « Connexion en cours… ». Deux rampes de clartés différentes ne se mappent pas
+au numéro. Passé à `--brand-500`.
+
+### 🔴 LE BLANC ATTÉNUÉ EST IMPOSSIBLE SUR LA MARQUE
+
+Un jeton `--on-brand-muted` a existé le temps d'être mesuré le long de `--grad-brand` :
+**4.50:1 à l'arrêt sombre, 2.11:1 au milieu**. Même à 0.85, l'arrêt clair échoue
+(4.18:1). Jeton RETIRÉ. *Le contraste d'un texte sur un dégradé varie le long du
+dégradé ; le mesurer en un seul point ne prouve rien.* Sur la marque : une seule encre,
+le blanc pur — la hiérarchie se fait à la taille et à la graisse.
+
+### ⚠️ DEUX DÉFAUTS DE L'INSTRUMENT, pas du produit
+
+1. **« rail absent » sur un produit intact.** `waitForTimeout` au lieu d'attendre le
+   rail : la sonde tombait sur le squelette de chargement, qui ne rend qu'un `<main>`
+   nu. La capture prise 200 ms plus tard montrait le rail au complet.
+2. **`EXIT=0` faux** en lisant `$?` derrière un `| tail` — c'est le code de `tail`.
+
+### ⚠️ LES PASTILLES « BIENTÔT » CRIAIENT PLUS FORT QUE LES ÉCRANS QUI MARCHENT
+
+Neuf mentions en majuscules grasses sur pastille dominaient la navigation : l'œil y
+allait avant d'aller aux trois écrans utilisables. Contresens exact de la décision Q12,
+qui les veut visibles et ASSUMÉES, pas hurlantes. Calmées par la TAILLE et la GRAISSE
+(bas de casse, graisse normale, pas de pastille) — **jamais par le contraste**.
+
+### QUATRIÈME DÉGRADÉ TROUVÉ — composé de jetons légitimes
 
 `FormulaireConnexion` composait à la main un dégradé `--brand-050 → --card` sous la
 carte de connexion. **Écrit avec des jetons, donc invisible au contrôle « aucun hex en
@@ -60,9 +134,10 @@ dur »** — et pourtant un 4ᵉ dégradé, là où ADR-022 ferme la liste à tr
 checkpoint cherche désormais `gradient(`, pas une couleur.
 Corrigé : la carte est opaque, et `--grad-auth` est passé DERRIÈRE, sur le fond d'écran.
 
-### Trois faux verts fabriqués par mes propres instruments, et corrigés
+### Cinq faux verts fabriqués par mes propres instruments, et corrigés
 
-Consignés parce qu'ils se reproduiront autrement :
+Consignés parce qu'ils se reproduiront autrement. **Les deux derniers ont été trouvés
+PENDANT la clôture, sur une porte qui affichait déjà « V3 EST VERT ».**
 
 1. **`pnpm build` réussit sans les fontes.** Le build du 2026-08-20 a rendu
    `getaddrinfo ENOTFOUND fonts.gstatic.com`, a réessayé, et **aurait fini vert même en
@@ -77,17 +152,68 @@ Consignés parce qu'ils se reproduiront autrement :
    rendent leur squelette et restent sur leur adresse. La sonde y voyait 4 à 6 nœuds
    conformes et rendait « vert » — **sans que le rail ni le contenu existent**. Elle
    exige maintenant la présence du mobilier attendu.
+4. 🔴 **La porte AVALAIT un échec, et concluait vert.** L'instrument sortait en échec
+   sur un `net::ERR_ABORTED` ; la branche de classement cherchait `ROUGE` puis
+   `BLOQUÉ`, ne trouvait ni l'un ni l'autre — et n'imprimait **RIEN**. Le contrôle ne
+   passait ni n'échouait : il DISPARAISSAIT, et le verdict final annonçait
+   « V3 EST VERT ». *Un `else` muet est pire qu'un faux rouge : il ne laisse aucune
+   trace à débusquer.* La porte porte désormais un filet — échec non classé → BLOQUÉ.
+5. 🔴 **« 1 échec de contraste » qui n'en était pas un.** Une ERREUR DE NAVIGATION
+   était comptée dans le total des échecs de contraste. La cause réelle : `/` est une
+   redirection, et `waitUntil: "networkidle"` court après un réseau au repos sur une
+   navigation que le serveur annule. Deux correctifs : les erreurs sont comptées à
+   part et nommées, et `/` se charge en `domcontentloaded` puis attend le rail.
+   *Un chiffre qui désigne autre chose que ce qu'il nomme envoie la relecture suivante
+   chercher au mauvais endroit.*
 
-### Ce qui reste NON OBSERVÉ — et pourquoi
+### Ce qui a FINALEMENT été observé — le blocage était Docker, pas le produit
 
-Les **4 écrans authentifiés** (`/patients`, `/agenda`, `/agenda/nouveau`, `/finances`)
-n'ont jamais été rendus : il faut une session, donc `bash scripts/dev-account.sh`, donc
-**Docker — dont le démon est injoignable sur ce poste**. `/connexion` est mesuré vert
-(0 échec de contraste, `prefers-reduced-motion` éteint réellement tout mouvement).
+Le blocage décrit plus haut (« Docker injoignable, 4 écrans jamais rendus ») **est
+levé**. Docker relancé, fenêtre ADR-016 rouverte sur autorisation explicite, puis
+refermée. Les 6 écrans ont été rendus en session réelle, deux fois : sous `…a1`
+(owner) puis sous `…a2` (praticienne).
 
-⚠️ **Le rail de navigation, l'orbe Jarvis et les en-têtes héros n'ont donc été vus par
-personne.** Ils sont écrits, typés et cohérents — ce n'est pas la même chose que
-mesurés. La porte le dit et refuse la livraison.
+```
+/connexion · / · /patients · /agenda · /finances · /agenda/nouveau
+337 textes mesurés · 0 sous le plancher · 0 écran NON OBSERVÉ
+rail 248px · actif avec lueur · orbe --grad-orb · héros --grad-brand
+repli < 1024 : rail 72px · Geist réellement appliquée
+prefers-reduced-motion : 0 animation vivante
+clavier : 4 arrêts, 0 sans focus visible, anneau blanc
+```
+
+Preuves : `checkpoints/v3-preuves/` — captures + `rapport.json`.
+
+### ADR-016 — FENÊTRE …a1 REFERMÉE ET VÉRIFIÉE
+
+`…a1` porte de nouveau la sentinelle `CONNEXION-IMPOSSIBLE` de `015:34`.
+**Vérifié au navigateur, pas déduit d'une ligne** : `/auth/v1/token` → **500**, la
+page reste sur `/connexion`, tous les écrans NON OBSERVÉS.
+
+**`scripts/dev-account-fermer.sh` (nouveau)** — la fermeture était jusqu'ici un SQL
+improvisé de mémoire. `dev-account.sh` savait ouvrir et pas refermer : *une porte
+qu'on sait ouvrir mais pas refermer finit par rester ouverte.* Même garde-fou
+`cloud-dev` qu'à l'ouverture — une fermeture restreint, mais elle écrit quand même
+dans `auth.users`.
+
+### ⚠️ LE PIÈGE QUI A FAIT CROIRE À UNE APPLICATION CASSÉE
+
+Après un passage de `checkpoint-v3.sh`, l'application s'est affichée en **HTML brut** :
+sérif, aucune mise en page. Diagnostic : la page rend HTTP 200, mais
+`/_next/static/css/app/layout.css` rend **404 (9 octets, « Not Found »)**.
+
+Cause : `pnpm build` écrase le `.next` du `next dev` en cours. Le serveur survit, sert
+les pages, et perd ses feuilles de style. **Rien dans le code n'était cassé.**
+Correctif : relancer `pnpm dev`. Le checkpoint AVERTIT désormais en sortie quand un
+serveur écoute encore sur :3000 — c'est lui qui pose la mine, c'est à lui de le dire.
+
+### Dépôt publié sur GitHub — PRIVÉ, et sans secret
+
+Le 2026-08-20, hors session d'agent : commit `4bd0e4a`, `master` renommée `main`,
+poussée vers `github.com/ayoubsmi1003-beep/Mindcare--Final` (**privé**, confirmé).
+Vérifié : **`.env` n'est ni suivi ni poussé** (`.gitignore` couvre `.env`, `.env.*`,
+`supabase/.env`), aucun matériel de clé dans l'arbre, et les seules occurrences
+`NEXT_PUBLIC_*_KEY` sont des NOMS de variables à valeur vide. **Aucune fuite.**
 
 ### Décisions prises pendant la session
 
@@ -108,12 +234,35 @@ le 2026-08-04 qu'il ne pouvait pas s'y conformer, **faute de jeu d'icônes**. V3
 dessine : le rail se replie désormais en icônes au lieu de passer au-dessus du contenu.
 Les libellés sortent du flux visuel mais **restent dans l'arbre d'accessibilité**.
 
-### Reprise — dans cet ordre
+### COMPTE PRATICIENNE — ouvert le 2026-08-20, vérifié au navigateur
 
-1. Démarrer Docker, `bash scripts/dev-account.sh` (fenêtre ADR-016, décision assumée le
-   2026-08-20), se connecter, puis `pnpm dev` et `node scripts/mesure-v3-navigateur.mjs`.
-2. Revue visuelle des 4 écrans authentifiés + parcours clavier du rail.
-3. Ne commiter qu'après : la porte est à exit 2.
+`praticien2.dev@invalid.local` (`…a2`, rôle `practitioner`, cabinet synthétique) est
+connectable par `scripts/compte-praticienne.sh`. **Aucune identité n'a été inventée** :
+`015` semait déjà ce profil avec son rôle, son titre et son `cabinet_id` ; il lui
+manquait un mot de passe utilisable.
+
+⚠️ **Cela AMENDE ADR-016** — l'amendement du 2026-08-03 écrivait que `…a2` et `…a3`
+« restent inconnectables ». L'amendement du 2026-08-20 est écrit et daté dans
+`00-DECISIONS.md` ; il n'a pas été fait en douce. La condition 1 tient toujours :
+`…a2` est une identité SYNTHÉTIQUE, pas celle de la Dr. Larbi.
+
+**Le mot de passe vit dans `.env` (`DOCTOR_ACCOUNT_PASSWORD`), couvert par
+`.gitignore`. Il n'est écrit NI ici, NI dans un script, NI dans une migration.**
+
+| Contrôle | Résultat |
+|---|---|
+| Connexion `/connexion` → session | ✅ 6 écrans rendus, 0 NON OBSERVÉ |
+| Identité effective | ✅ « Praticienne 2 (données de test) » dans le rail |
+| Patients · Agenda · Finances · Nouveau RDV | ✅ rendus, 0 erreur d'autorisation |
+| Cloison finance (ADR-005 / D-14) | ✅ « **Vos séances uniquement** » — périmètre rendu par la BASE ; 0 DZD, les actes du jour étant ceux de Praticienne 1 |
+| `…a1` toujours fermé | ✅ dans le MÊME passage |
+
+*La cloison finance n'est pas un défaut : `practitioner → sa seule recette` est la
+règle de `029`, appliquée par `app.current_role()`. Une praticienne qui verrait la
+recette du cabinet serait le bug.*
+
+**Refermer :** `bash scripts/compte-praticienne.sh --fermer`. Ce compte disparaît à la
+migration ADR-001, comme le reste du synthétique.
 
 ---
 

@@ -1,5 +1,5 @@
 {
-  "empreinte": "7d7362e1e36febd5",
+  "empreinte": "ef73668d64f0fed9",
   "rapport": [
     {
       "chemin": "/connexion",
@@ -27,7 +27,7 @@
     {
       "chemin": "/",
       "arrivee": "/patients",
-      "total": 42,
+      "total": 39,
       "echecs": [],
       "mobilier": {
         "rail": {
@@ -60,7 +60,7 @@
     {
       "chemin": "/patients",
       "arrivee": "/patients",
-      "total": 42,
+      "total": 39,
       "echecs": [],
       "mobilier": {
         "rail": {
@@ -126,7 +126,7 @@
     {
       "chemin": "/finances",
       "arrivee": "/finances",
-      "total": 44,
+      "total": 41,
       "echecs": [],
       "mobilier": {
         "rail": {

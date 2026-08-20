@@ -218,6 +218,24 @@ Police : Times New Roman 14
 
 **Limite écrite, à ne pas enjoliver.** Quiconque a accès au démon Docker de ce poste peut lire le mot de passe pendant la vie du conteneur éphémère (`docker inspect`). Acceptable sur une machine de développement portant des données synthétiques ; inacceptable sur le serveur du cabinet — et c'est une raison de plus pour que ce script n'y tourne jamais.
 
+#### Amendement du 2026-08-20 — la PRATICIENNE …a2 devient connectable
+
+**Ce qui change.** `…a2` (`praticien2.dev@invalid.local`, rôle `practitioner`) devient connectable, par `scripts/compte-praticienne.sh`. `…a3` (assistante) reste inconnectable. `…a1` reste piloté séparément par `dev-account.sh` — les deux fenêtres sont indépendantes, et `…a1` est FERMÉ à la date de cet amendement.
+
+**Ce que cet amendement contredit, et il faut le dire.** L'amendement du 2026-08-03 écrit en toutes lettres que `…a2` et `…a3` « **restent inconnectables** ». Ouvrir `…a2` contredit ce texte. Présenter ce geste comme « ADR-016 inchangé » serait faux — d'où cet amendement, écrit et daté, plutôt qu'un script discret dans `scripts/`.
+
+**Pourquoi la condition 1 n'est toujours pas levée.** Elle interdit un compte **pour la Dr. Larbi** et toute démo sur cette instance. `…a2` porte une identité SYNTHÉTIQUE — « Praticienne 2 (données de test) », semée par `015`, sans nom réel, sans téléphone, sans numéro d'ordre. C'est exactement le raisonnement qui a justifié `…a1` : la condition 1 protège la donnée réelle et la praticienne, pas le mécanisme d'authentification. La base reste sous `assert_synthetic_when_cloud`.
+
+**Pourquoi `…a2` plutôt qu'un compte neuf.** `015` sème déjà trois profils liés au cabinet synthétique. Créer un `doctor@…` de plus aurait dupliqué une identité existante, et le doublon aurait divergé au premier changement de schéma. On n'invente pas une identité quand la bonne est déjà là.
+
+**Ce que ça change au périmètre visible, et ce n'est pas un défaut.** `…a2` est `practitioner`, pas `owner` : `app.day_revenue` lui rend SA seule recette (ADR-005, D-14), et l'écran affiche « Vos séances uniquement » — périmètre rendu par la BASE. Vérifié au navigateur le 2026-08-20.
+
+**Ce qui l'encadre.**
+- Le mot de passe n'entre **jamais** dans une migration, un script ou le dépôt : lu depuis `.env` (couvert par `.gitignore`) à l'exécution, comme pour `…a1` (I1).
+- Le script **refuse de s'exécuter** si `app.deployment` ne confirme pas exactement une ligne `cloud-dev`, et refuse aussi en cas de doute.
+- **Ce compte disparaît à la migration ADR-001**, au même titre que le reste des données synthétiques. Un compte praticien survivant sur la machine du cabinet serait un accès aux dossiers réels.
+- Refermable à tout moment : `bash scripts/compte-praticienne.sh --fermer`.
+
 ### ADR-017 — `reason` sort de `app.appointments` (résout Q-A)
 **Date.** 2026-08-02. **Remplace** la « solution » du §5.1 de `01-SCHEMA.md`.
 

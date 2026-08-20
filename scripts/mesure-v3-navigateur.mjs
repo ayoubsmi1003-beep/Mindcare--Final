@@ -97,14 +97,24 @@ async function attendreHydratation(page, selecteur) {
   );
 }
 
+/**
+ * Le compte mesuré. Par défaut celui d'ADR-016 (…a1) ; `MESURE_COMPTE=praticienne`
+ * bascule sur …a2, la praticienne de `015`. Un paramètre plutôt qu'un second
+ * script : deux instruments qui se connectent divergeraient, et c'est celui
+ * qu'on utilise le moins qui pourrirait en silence.
+ */
+const COMPTE = process.env["MESURE_COMPTE"] === "praticienne"
+  ? { email: "praticien2.dev@invalid.local", varMdp: "DOCTOR_ACCOUNT_PASSWORD" }
+  : { email: "owner.dev@invalid.local", varMdp: "DEV_ACCOUNT_PASSWORD" };
+
 async function seConnecter(page, env) {
   await page.goto(`${BASE}/connexion`, { waitUntil: "domcontentloaded" });
   await attendreHydratation(page, 'input[type="email"]');
   // `pressSequentially` et non `fill` : on FRAPPE les touches, ce qui déclenche
   // les `onChange` de React. `fill` pose la valeur d'un coup et peut la poser
   // avant que React n'écoute.
-  await page.locator('input[type="email"]').pressSequentially("owner.dev@invalid.local");
-  await page.locator('input[type="password"]').pressSequentially(env["DEV_ACCOUNT_PASSWORD"] ?? "");
+  await page.locator('input[type="email"]').pressSequentially(COMPTE.email);
+  await page.locator('input[type="password"]').pressSequentially(env[COMPTE.varMdp] ?? "");
   await page.locator('button[type="submit"]').click();
   await page.waitForURL(/\/patients/, { timeout: 60_000 });
 }
@@ -324,8 +334,8 @@ const SONDE_CLAVIER = async (page) => {
 if (!existsSync(PREUVES)) mkdirSync(PREUVES, { recursive: true });
 
 const env = lireEnv();
-if (!env["DEV_ACCOUNT_PASSWORD"]) {
-  console.error("BLOQUÉ — DEV_ACCOUNT_PASSWORD absent de .env. Aucune session possible.");
+if (!env[COMPTE.varMdp]) {
+  console.error(`BLOQUÉ — ${COMPTE.varMdp} absent de .env. Aucune session possible.`);
   process.exit(2);
 }
 
@@ -350,7 +360,12 @@ for (const ecran of ECRANS) {
     continue;
   }
   try {
-    await page.goto(`${BASE}${ecran.chemin}`, { waitUntil: "networkidle" });
+    // ⚠️ `domcontentloaded` ET NON `networkidle`. `/` est une REDIRECTION :
+    // Playwright attend un réseau au repos sur une navigation que le serveur
+    // annule aussitôt, et rend `net::ERR_ABORTED`. Mesuré le 2026-08-20 : cet
+    // ERR_ABORTED était compté comme un « échec de contraste », sur un redirect
+    // qui fonctionne. On attend le rail — c'est lui, le vrai signal.
+    await page.goto(`${BASE}${ecran.chemin}`, { waitUntil: "domcontentloaded" });
     // ⚠️ ATTENDRE LE RAIL, PAS UNE DURÉE. Un `waitForTimeout` généreux reste un
     // pari sur la vitesse de la machine : sous charge, la sonde tombe sur le
     // squelette de chargement — qui ne rend qu'un `<main>` nu, sans coquille —
@@ -442,12 +457,17 @@ await nav.close();
 
 console.log("═══ MESURE V3 — NAVIGATEUR RÉEL, SESSION AUTHENTIFIÉE ═══\n");
 let totalEchecs = 0;
+let totalErreurs = 0;
 let nonObserves = 0;
 
 for (const e of rapport) {
   if (e.erreur) {
+    // Comptée À PART. Une navigation qui échoue n'est pas un texte illisible :
+    // les mélanger a fait annoncer « 1 échec de contraste » sur un ERR_ABORTED,
+    // et un chiffre qui désigne autre chose que ce qu'il nomme envoie la
+    // relecture suivante chercher au mauvais endroit.
     console.log(`  ERREUR  ${e.chemin} — ${e.erreur}`);
-    totalEchecs += 1;
+    totalErreurs += 1;
     continue;
   }
   if (e.nonObserve) {
@@ -487,13 +507,22 @@ console.log(
 );
 
 console.log(
-  `\n  ${mouvement.vivantes === 0 ? "vert  " : "ROUGE "}  prefers-reduced-motion · ${mouvement.vivantes} animation(s) vivante(s)`,
+  `
+  ${mouvement.vivantes < 0 ? "BLOQUÉ" : mouvement.vivantes === 0 ? "vert  " : "ROUGE "}  prefers-reduced-motion · ${mouvement.vivantes < 0 ? "non mesuré (session absente)" : mouvement.vivantes + " animation(s) vivante(s)"}`,
 );
 if (mouvement.vivantes > 0) console.log(`            ex. ${mouvement.exemples.join(" · ")}`);
 
-const clavierOk = clavier.arretsRail > 0 && clavier.sansFocusVisible === 0;
+// ⚠️ `-1` SIGNIFIE « NON MESURÉ », PAS « ÉCHOUÉ ». Les confondre fabrique un faux
+// ROUGE : sans session, la sonde n'a rien observé, et un contrôle qu'on n'a pas
+// regardé n'est ni vert ni rouge. C'est la distinction que ce dépôt paie le plus
+// cher quand elle se perd — le faux rouge est le symétrique du faux vert, et il
+// est plus difficile à débusquer parce qu'un rouge inspire confiance.
+const clavierMesure = clavier.sansFocusVisible >= 0;
+const clavierOk = clavierMesure && clavier.arretsRail > 0 && clavier.sansFocusVisible === 0;
 console.log(
-  `  ${clavierOk ? "vert  " : "ROUGE "}  parcours clavier du rail · ${clavier.arretsRail} arrêts · ${clavier.sansFocusVisible} sans focus visible`,
+  clavierMesure
+    ? `  ${clavierOk ? "vert  " : "ROUGE "}  parcours clavier du rail · ${clavier.arretsRail} arrêts · ${clavier.sansFocusVisible} sans focus visible`
+    : "  BLOQUÉ  parcours clavier du rail · non mesuré (session absente)",
 );
 console.log(`            premier arrêt « ${clavier.premier} » · anneau ${clavier.couleur}`);
 
@@ -507,11 +536,16 @@ writeFileSync(
 );
 
 console.log(
-  `\n═══ ${totalEchecs} échec(s) de contraste · ${nonObserves} écran(s) NON OBSERVÉ(S) · empreinte ${empreinte} ═══`,
+  `
+═══ ${totalEchecs} échec(s) de contraste · ${totalErreurs} erreur(s) de navigation · ${nonObserves} écran(s) NON OBSERVÉ(S) · empreinte ${empreinte} ═══`,
 );
 if (nonObserves > 0) {
   console.log("  Un écran non observé n'est NI vert NI rouge. `bash scripts/dev-account.sh`.");
 }
 // La porte échoue fermée : un écran non observé empêche le vert, au même titre
 // qu'un échec mesuré.
-process.exit(totalEchecs === 0 && mouvement.vivantes === 0 && nonObserves === 0 && clavierOk ? 0 : 1);
+process.exit(
+  totalEchecs === 0 && totalErreurs === 0 && mouvement.vivantes === 0 && nonObserves === 0 && clavierOk
+    ? 0
+    : 1,
+);

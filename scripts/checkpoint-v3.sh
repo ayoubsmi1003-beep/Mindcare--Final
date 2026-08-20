@@ -182,7 +182,13 @@ else
   # ⚠️ NE PAS lancer pendant un `pnpm build` : le build écrase le `.next` du
   # serveur de développement, qui sert alors des chunks 404 et n'hydrate plus.
   # Piège déjà payé en V2, et il fabrique un ROUGE qui n'a rien de réel.
-  if node scripts/mesure-v3-navigateur.mjs > /tmp/mesure-v3.log 2>&1; then
+  # MESURE_COMPTE=praticienne : la porte mesure sous le compte ...a2, PAS sous
+  # ...a1. La fenetre ADR-016 d'...a1 est refermee et doit le rester ; une porte
+  # qui exigerait de la rouvrir a chaque passage transformerait un garde-fou en
+  # formalite qu'on desarme par habitude. ...a2 est l'identite praticienne
+  # synthetique de 015, ouverte par scripts/compte-praticienne.sh et refermable
+  # par --fermer. Voir l'amendement du 2026-08-20 dans docs/00-DECISIONS.md.
+  if MESURE_COMPTE=praticienne node scripts/mesure-v3-navigateur.mjs > /tmp/mesure-v3.log 2>&1; then
     vert "contraste · dégradés · mouvement réduit" "tous les écrans observés, 0 échec"
   else
     # L'instrument distingue lui-même l'échec MESURÉ de l'écran NON OBSERVÉ.
@@ -191,11 +197,29 @@ else
     # pour quatre écrans qu'il n'avait jamais vus.
     n_non_observes=$(grep -c 'BLOQUÉ' /tmp/mesure-v3.log || true)
     n_rouges_mesure=$(grep -c 'sous le plancher' /tmp/mesure-v3.log | head -1 || echo 0)
-    if grep -q 'ROUGE' /tmp/mesure-v3.log; then
-      rouge "contraste mesuré au navigateur" "voir /tmp/mesure-v3.log"
-    fi
+    # ⚠️ L'ORDRE COMPTE, ET IL A ÉTÉ FAUX. Cette porte a annoncé un ROUGE
+    # « contraste mesuré au navigateur » alors que les six écrans n'avaient
+    # simplement PAS ÉTÉ OUVERTS (fenêtre ADR-016 refermée). Un écran non
+    # observé n'est ni vert ni rouge ; le dire rouge est le symétrique exact du
+    # faux vert, et il se débusque plus mal parce qu'un rouge inspire confiance.
     if [ "${n_non_observes:-0}" -gt 0 ]; then
-      bloque "écrans NON OBSERVÉS" "$n_non_observes redirigé(s) — session ADR-016 requise"
+      bloque "écrans NON OBSERVÉS" "$n_non_observes non ouvert(s) — session ADR-016 requise"
+    elif grep -q 'ROUGE' /tmp/mesure-v3.log; then
+      rouge "contraste mesuré au navigateur" "voir /tmp/mesure-v3.log"
+    elif grep -q 'ERREUR' /tmp/mesure-v3.log; then
+      rouge "navigation échouée pendant la mesure" "voir /tmp/mesure-v3.log"
+    else
+      # ⚠️ LE FILET, ET IL A DÉJÀ SERVI.
+      # L'instrument est sorti EN ÉCHEC, mais aucune des formes reconnues plus
+      # haut n'apparaît dans son journal. Sans cette branche, la porte
+      # n'imprimait RIEN : le contrôle ne passait ni ne échouait, il
+      # DISPARAISSAIT — et le verdict final annonçait « V3 EST VERT » avec un
+      # échec avalé au passage. Mesuré le 2026-08-20 sur un `net::ERR_ABORTED`.
+      #
+      # Un `else` qui ne dit rien est le pire des cas : plus dangereux qu'un
+      # faux rouge, parce qu'il ne laisse aucune trace à débusquer. Dans le
+      # doute, on BLOQUE.
+      bloque "mesure navigateur — échec NON CLASSÉ" "exit non nul, forme inconnue — voir /tmp/mesure-v3.log"
     fi
   fi
   # ── Le parcours clavier, LU DANS LE RAPPORT et non plus « à l'œil ».
@@ -271,6 +295,23 @@ bloque_decision "primitive Tableau" "aucun écran tabulaire — reportée à V4"
 bloque_decision "tableau de bord hérosé" "l'écran n'existe pas — V4 (D-18)"
 
 echo
+# ⚠️ AVERTISSEMENT DE SORTIE — CE SCRIPT LAISSE UNE MINE DERRIÈRE LUI.
+#
+# `pnpm build` ci-dessus écrase le `.next` d'un `next dev` en cours. Le serveur
+# de développement continue de répondre HTTP 200 sur les PAGES, mais sert 404 sur
+# ses feuilles de style : l'application s'affiche alors en HTML brut, sérif, sans
+# aucune mise en page. Constaté le 2026-08-20 — et l'écran ressemble à s'y
+# méprendre à une application cassée, alors que rien dans le code ne l'est.
+#
+# Le dire ICI plutôt que dans un fichier d'état : c'est ce script qui pose la
+# mine, c'est donc à lui de prévenir, au moment exact où il vient de la poser.
+if netstat -ano 2>/dev/null | grep -q "LISTENING.*:3000"; then
+  echo
+  echo "⚠️  UN SERVEUR ÉCOUTE ENCORE SUR :3000 ET SON .next VIENT D'ÊTRE ÉCRASÉ."
+  echo "    Il servira des feuilles de style en 404 — écran sans style, non hydraté."
+  echo "    Le RELANCER avant toute observation :  pnpm dev"
+fi
+
 echo "═══════════════════════════════════════════════════════════════════════"
 printf 'VERDICT V3 : %d verts · %d rouges · %d bloqués critiques · %d bloqués par décision\n' \
   "$verts" "$rouges" "$bloques_critiques" "$bloques_decision"
