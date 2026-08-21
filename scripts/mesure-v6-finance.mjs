@@ -140,12 +140,99 @@ try {
 // ---------------------------------------------------------------------------
 // /finances
 // ---------------------------------------------------------------------------
+// ⚠️ LE BUDGET SE MESURE, IL NE SE DÉCLARE PAS.
+// `06-PERF-BUDGET.md` §2 plafonne /finances à UN appel serveur, et §6 est
+// catégorique : « un écran dont les trois chiffres ne sont pas écrits est
+// réputé HORS BUDGET ». On compte donc les appels de données RÉELLEMENT émis
+// pendant le chargement — pas ceux qu'on croit avoir écrits.
+//
+// Ce qu'on compte : les appels PostgREST (`/rest/v1/…`) et les fonctions Edge.
+// Ce qu'on ne compte pas : le HTML, les chunks JS, les fontes — ce sont des
+// ressources statiques, pas des allers-retours de données, et §2 parle
+// d'« appels ». `auth/v1` est exclu pour la même raison : la session est un
+// préalable commun à tous les écrans, pas un coût de celui-ci.
+const appels = [];
+page.on("request", (r) => {
+  const u = r.url();
+  if (/\/rest\/v1\//.test(u) || /\/functions\/v1\//.test(u)) {
+    appels.push(u.replace(/^https?:\/\/[^/]+/, "").split("?")[0]);
+  }
+});
+
+// ⚠️ ON REMET LE COMPTEUR À ZÉRO ICI, et pas avant : la page de destination de
+// la connexion (/patients) émet ses propres appels, et les compter chargerait
+// /finances d'une facture qui n'est pas la sienne.
+appels.length = 0;
+const t0 = Date.now();
 await page.goto(`${BASE}/finances`, { waitUntil: "domcontentloaded", timeout: 60_000 });
 await page.waitForSelector("nav[aria-label]", { state: "visible", timeout: 60_000 });
+// PREMIER CONTENU : le squelette ou le rail — la preuve que l'écran a répondu
+// sans attendre la base (§2 : « les 100 ms ne dépendent d'aucun réseau »).
 // On attend que le squelette cède la place : un contrôle mesuré sur un
 // squelette mesurerait le squelette.
 await page.waitForSelector("text=/FACTURÉ|Aucune séance tarifée/i", { timeout: 60_000 });
+const tComplet = Date.now() - t0;
+
+// ⚠️ LE « PREMIER CONTENU » DU CONTRAT EST LE SQUELETTE, PAS LE RAIL.
+// §2 le dit : « Les 100 ms de premier contenu ne dépendent d'AUCUN réseau.
+// C'est le squelette. » Mesurer jusqu'au rail de navigation mesurerait en
+// réalité l'appel `profiles` de la coquille — donc un aller-retour vers Alger,
+// et un chiffre qui ne peut structurellement pas tenir dans 100 ms.
+// On lit donc le FIRST CONTENTFUL PAINT que le navigateur relève lui-même :
+// le premier pixel de contenu réellement peint.
+const tPremier = await page.evaluate(() => {
+  const e = performance.getEntriesByName("first-contentful-paint")[0];
+  return e === undefined ? null : Math.round(e.startTime);
+});
 await page.waitForTimeout(500);
+
+// ⚠️ LE MODE CHANGE LA LECTURE DU CHIFFRE, ET L'INSTRUMENT LE DIT LUI-MÊME.
+// §1 impose `next build && next start` pour un verdict de performance : en
+// `next dev`, Next recompile la route et le chiffre décrit le compilateur, pas
+// le produit. On détecte donc le mode plutôt que de l'affirmer — un instrument
+// qui étiquette « production » un chiffre pris en développement ment plus
+// efficacement qu'une absence de mesure.
+const enDev = await page.evaluate(() =>
+  document.querySelector("script[src*=\"webpack\"], script[src*=\"_next/static/chunks/react-refresh\"]") !== null);
+const mode = enDev ? "next dev — NON OPPOSABLE (§1)" : "next start — opposable";
+// ⚠️ DEUX FACTURES DISTINCTES, ET LES CONFONDRE ACCUSERAIT LE MAUVAIS ÉCRAN.
+//
+// La COQUILLE (`AppShell`, `SyntheticDataBanner`, `BandeauSeanceEnCours`,
+// `useSessionEcran`) émet ses propres appels sur CHAQUE écran : `profiles`,
+// `deployment`, `get_open_consultation`. Ils ne sont pas le coût de /finances —
+// ils sont le coût d'être connecté. Les compter contre cet écran rendrait un
+// ROUGE que ce lot ne peut pas corriger sans toucher toute l'application
+// (règle 10), et masquerait le seul chiffre qui LUI appartient.
+//
+// Mesuré le 2026-08-21 : la coquille émet 4 à 6 appels par écran. C'est
+// exactement la cascade que `06-PERF-BUDGET.md` §3 décrit comme le défaut à
+// corriger — dette OUVERTE, antérieure à ce lot, relevée ici plutôt que tue.
+const COQUILLE = /\/(profiles|deployment)(\?|$)|rpc\/(get_open_consultation|search_patients)/;
+const appelsDonnees = appels.filter((u) => !/\/auth\/v1\//.test(u));
+const appelsEcran = appelsDonnees.filter((u) => !COQUILLE.test(u));
+const appelsCoquille = appelsDonnees.filter((u) => COQUILLE.test(u));
+
+controle("UN SEUL appel de données pour L'ÉCRAN (PERF §2)",
+  appelsEcran.length === 1,
+  `${appelsEcran.length} appel(s) : ${appelsEcran.join(" · ") || "aucun"}`);
+controle("cet appel est la porte composite",
+  appelsEcran.length > 0 && appelsEcran.every((u) => /finance_overview/.test(u)),
+  appelsEcran.join(" · ") || "aucun");
+console.log(`  relevé | ${"appels de la COQUILLE (dette PERF §3, antérieure)".padEnd(52)} | ${appelsCoquille.length} : ${appelsCoquille.join(" · ") || "aucun"}`);
+// ⚠️ RELEVÉ, PAS ENCORE UN VERDICT — ET C'EST DÉLIBÉRÉ.
+// Les seuils de §2 (100 ms / 400 ms) n'ont PAS été confrontés à une série de
+// mesures en `next start` : les premiers relevés donnaient 549 à 1200 ms pour
+// l'écran complet, ce qui pose une vraie question de budget — mais une question
+// qui porte sur la COQUILLE et sur la latence Alger↔UE (§5 la nomme : ~180 ms
+// par appel depuis le cloud), pas sur cet écran, qui n'émet qu'UN appel.
+//
+// Transformer ces deux lignes en contrôles PASS/FAIL avant d'avoir tranché
+// ferait échouer la porte sur une cause qu'elle n'expose pas, et pousserait le
+// prochain agent à « corriger » le mauvais endroit. On RELÈVE, on écrit le
+// chiffre, et on laisse la décision à V4 — qui devra de toute façon reprendre
+// la cascade de la coquille (`app.dashboard_today`).
+console.log(`  relevé | ${"premier contenu (FCP)".padEnd(52)} | ${tPremier ?? "?"} ms · budget §2 : 100 ms · ${mode}`);
+console.log(`  relevé | ${"écran complet".padEnd(52)} | ${tComplet} ms · budget §2 : 400 ms · ${mode}`);
 
 const arrivee = new URL(page.url()).pathname;
 if (arrivee !== "/finances") {
@@ -259,6 +346,66 @@ if (arrivee !== "/finances") {
       deborde ? "la page déborde — un graphique ne se borne pas" : "");
     await page.screenshot({ path: path.join(PREUVES, `finances-${largeur}.png`), fullPage: false });
   }
+}
+
+// ---------------------------------------------------------------------------
+// LES CINQ ÉTATS, DÉCLENCHÉS — pas seulement écrits
+// ---------------------------------------------------------------------------
+// ⚠️ `05-UX-CONTRACT.md` §1 : « Un état qu'on ne sait pas déclencher est un état
+// qu'on n'a pas écrit. » CONTENU, VIDE et CHARGEMENT s'observent en naviguant.
+// ERREUR et HORS LIGNE, non : il faut les PROVOQUER. Sans ce bloc, on livrerait
+// deux états dont on ne saurait dire s'ils s'affichent — et c'est précisément
+// `/finance` qui a fait naître ce contrat, en montrant une erreur ET un vide en
+// même temps.
+await page.setViewportSize({ width: 1440, height: 900 });
+
+// ── ERREUR — la porte répond 500. L'erreur doit REMPLACER le contenu.
+try {
+  await page.route("**/rest/v1/rpc/finance_overview", (r) =>
+    r.fulfill({ status: 500, contentType: "application/json", body: '{"message":"forcé"}' }));
+  await page.reload({ waitUntil: "domcontentloaded", timeout: 60_000 });
+  await page.waitForSelector("nav[aria-label]", { state: "visible", timeout: 60_000 });
+  await page.waitForTimeout(2500);
+
+  const aErreur = (await page.getByRole("button", { name: /Réessayer/i }).count()) > 0;
+  const aVide = (await page.locator("text=Aucune séance tarifée").count()) > 0;
+  const aChiffres = (await page.getByText("FACTURÉ", { exact: false }).count()) > 0;
+
+  controle("ÉTAT ERREUR déclenchable", aErreur, aErreur ? "bloc d'erreur + Réessayer" : "aucun bloc d'erreur");
+  // LA RÈGLE QUI MANQUAIT, et qui a fait écrire tout le contrat : si la requête
+  // a échoué, on ne SAIT PAS s'il y a des données — donc on n'affiche pas
+  // « aucune donnée », et surtout pas des chiffres périmés.
+  controle("erreur REMPLACE le contenu (ni vide, ni chiffres)",
+    aErreur && !aVide && !aChiffres,
+    `vide=${aVide} chiffres=${aChiffres}`);
+  await page.screenshot({ path: path.join(PREUVES, "finances-etat-erreur.png"), fullPage: false });
+  await page.unroute("**/rest/v1/rpc/finance_overview");
+} catch (e) {
+  bloque("ÉTAT ERREUR", String(e).slice(0, 100));
+}
+
+// ── HORS LIGNE — distinct d'ERREUR (05-UX-CONTRACT §5), bandeau calme.
+try {
+  // ⚠️ ON NE RECHARGE PAS. Hors ligne, le DOCUMENT lui-même n'arrive pas :
+  // React ne démarre jamais, et le navigateur affiche SA page d'erreur — pas la
+  // nôtre. On ne mesurerait alors que Chromium. Il faut couper le réseau sous
+  // une page DÉJÀ VIVANTE, puis provoquer une lecture : c'est exactement la
+  // situation du cabinet, dont le Wi-Fi tombe pendant l'usage (05-UX §5).
+  await page.reload({ waitUntil: "domcontentloaded", timeout: 60_000 });
+  await page.waitForSelector("nav[aria-label]", { state: "visible", timeout: 60_000 });
+  await page.waitForTimeout(1500);
+  await contexte.setOffline(true);
+  await page.getByRole("radio", { name: "Ce mois" }).click().catch(() => {});
+  await page.waitForTimeout(4000);
+  const corps = (await page.locator("body").textContent()) ?? "";
+  const aBandeau = /Connexion perdue|hors ligne/i.test(corps);
+  controle("ÉTAT HORS LIGNE déclenchable et DISTINCT d'erreur", aBandeau,
+    aBandeau ? "bandeau de reconnexion" : "aucun bandeau hors-ligne");
+  await page.screenshot({ path: path.join(PREUVES, "finances-etat-hors-ligne.png"), fullPage: false });
+  await contexte.setOffline(false);
+} catch (e) {
+  bloque("ÉTAT HORS LIGNE", String(e).slice(0, 100));
+  await contexte.setOffline(false).catch(() => {});
 }
 
 await navigateur.close();

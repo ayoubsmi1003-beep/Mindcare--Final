@@ -90,7 +90,14 @@ interface PaiementRow {
  * donnerait `NaN` au moindre changement de sérialisation. On convertit
  * explicitement, une fois, ici.
  */
-function versNombre(valeur: number | string): number {
+/**
+ * Exportée — et pas recopiée — parce que `finance-periode.ts` lit les mêmes
+ * `bigint` sérialisés en chaîne. C'est la leçon de `repartition()` en S4 et
+ * celle de `formaterDzd` juste en dessous : deux conversions pour une même
+ * vérité finissent par diverger, et ici elles divergeraient sur un MONTANT.
+ */
+export function versNombre(valeur: number | string | undefined): number {
+  if (valeur === undefined) return 0;
   const n = typeof valeur === "number" ? valeur : Number.parseInt(valeur, 10);
   return Number.isFinite(n) ? n : 0;
 }

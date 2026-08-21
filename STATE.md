@@ -138,6 +138,55 @@ C'est pourquoi les invariants sont prouvés par des **fixtures posées DANS la t
 du checkpoint puis annulées** (règle 8) — mars 2025, cinq paiements, dont un couple qui
 encadre minuit à Alger. Aucun paiement de démonstration n'entre dans `015`.
 
+### Budget de performance — ce qui est MESURÉ, et ce qui reste ouvert
+
+```
+APPELS DE DONNÉES DE L'ÉCRAN ....... 1   (budget §2 : 1)   ✅ vert, contrôlé
+  → /rest/v1/rpc/finance_overview, et rien d'autre
+```
+
+Le journal des paiements est un SECOND appel, mais §3 l'autorise nommément : il
+« dépend d'un choix de l'utilisatrice ». Il est replié au chargement et son ouverture
+écrit une trace d'audit — raison de plus pour qu'il ne parte jamais tout seul.
+
+**⚠️ LES DEUX DURÉES SONT RELEVÉES, PAS ENCORE JUGÉES.** Premiers relevés en
+`next start` : écran complet entre **549 et 1200 ms**, contre un budget §2 de 400 ms.
+Le chiffre pose une vraie question — mais elle ne porte PAS sur cet écran, qui n'émet
+qu'un appel. Elle porte sur la COQUILLE et sur la latence Alger↔UE que §5 nomme
+explicitement (~180 ms par aller-retour depuis le cloud). En faire un contrôle PASS/FAIL
+maintenant ferait échouer la porte sur une cause qu'elle n'expose pas, et pousserait le
+prochain agent à corriger le mauvais endroit. **Décision : relever, écrire, trancher en V4.**
+
+**DETTE ANTÉRIEURE RELEVÉE AU PASSAGE — la coquille émet 3 appels par écran**
+(`deployment`, `profiles`, `get_open_consultation` ; 6 en `next dev`, StrictMode
+doublant les effets). C'est exactement la cascade que `06-PERF-BUDGET.md` §3 décrit
+comme le défaut à corriger. Antérieure à ce lot, non corrigeable ici sans toucher toute
+l'application (règle 10). L'instrument SÉPARE les deux factures : un rouge global aurait
+accusé les finances d'un coût qui n'est pas le leur, et masqué le seul chiffre qui l'est.
+Sortie : `app.dashboard_today` (V4) + un contexte de session partagé.
+
+### Les CINQ états, DÉCLENCHÉS — pas seulement écrits
+
+`05-UX-CONTRACT.md` §1 : « un état qu'on ne sait pas déclencher est un état qu'on n'a pas
+écrit. » Les cinq sont provoqués par l'instrument et capturés :
+
+| État | Provoqué comment | Preuve |
+|---|---|---|
+| CHARGEMENT | premier rendu, avant la porte | squelette à la forme du contenu |
+| CONTENU | session owner, période peuplée | `finances-1440.png` |
+| VIDE | session praticienne — aucun paiement à elle | état vide honnête, jamais un refus |
+| ERREUR | porte forcée à répondre 500 | `finances-etat-erreur.png` |
+| HORS LIGNE | réseau coupé sous une page VIVANTE | `finances-etat-hors-ligne.png` |
+
+⚠️ **HORS LIGNE ne se mesure pas en rechargeant.** Hors ligne, le document n'arrive pas :
+React ne démarre jamais et le navigateur affiche SA page d'erreur — on ne mesurerait que
+Chromium. Il faut couper le réseau sous une page déjà vivante, puis provoquer une lecture.
+C'est aussi la situation réelle du cabinet, dont le Wi-Fi tombe **pendant** l'usage.
+
+Et le contrôle qui compte : **ERREUR REMPLACE le contenu** — ni état vide, ni chiffres
+périmés en dessous. C'est la capture d'écran de `/finance` qui a fait naître tout le
+contrat `05-UX-CONTRACT.md`. Elle ne se reproduit plus, et c'est mesuré.
+
 ### La cloison, mesurée des deux côtés
 
 Le même écran, le même jour, deux rôles :

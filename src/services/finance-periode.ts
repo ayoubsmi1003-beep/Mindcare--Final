@@ -45,7 +45,7 @@ import { db } from "./db";
 import { logFieldsFor, type AppError } from "./errors";
 import { log } from "./log";
 import { err, ok, type Result } from "./result";
-import type { Paiement, PerimetreRecette } from "./finance";
+import { versNombre, type Paiement, type PerimetreRecette } from "./finance";
 
 // ---------------------------------------------------------------------------
 // Le calendrier du cabinet — délégué, jamais recopié
@@ -355,13 +355,6 @@ interface LignePeriodeRow {
   readonly record_number: string | null;
   readonly practitioner_name: string | null;
   readonly total_count: number | string;
-}
-
-/** Les agrégats `bigint` arrivent en CHAÎNE par PostgREST (cf. `finance.ts`). */
-function versNombre(valeur: number | string | undefined): number {
-  if (valeur === undefined) return 0;
-  const n = typeof valeur === "number" ? valeur : Number.parseInt(valeur, 10);
-  return Number.isFinite(n) ? n : 0;
 }
 
 /**

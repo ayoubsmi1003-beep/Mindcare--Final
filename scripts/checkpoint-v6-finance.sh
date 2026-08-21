@@ -112,6 +112,21 @@ echo "── Contrôle 3 · l'écran /finances au NAVIGATEUR RÉEL ────�
 # ⚠️ CE BLOC APPELLE L'INSTRUMENT, IL NE RECOPIE PAS SON VERDICT (leçon V2 :
 # huit `bloque` avaient été écrits EN DUR alors que la mesure était verte depuis
 # deux jours). Pas de serveur en écoute → BLOQUÉ, jamais vert.
+#
+# ═══ PRÉREQUIS : LA FENÊTRE ADR-016 …a1, ET IL FAUT DIRE POURQUOI ═══════════
+# Contrairement à `checkpoint-v3.sh`, qui mesure sous …a2, CE contrôle exige
+# l'OWNER — et ce n'est pas un confort. Les deux paiements réels de la base
+# appartiennent tous deux à …a1 (mesuré le 2026-08-20). Sous …a2, la porte rend
+# donc un écran VIDE : c'est la cloison ADR-005 qui fonctionne, mais on ne peut
+# y observer ni la réconciliation I-1, ni les graphiques, ni la composition.
+# Un checkpoint qui se déclarerait vert sur cet écran-là serait vert sans avoir
+# rien regardé.
+#
+#   bash scripts/dev-account.sh           # ouvrir AVANT
+#   bash scripts/dev-account-fermer.sh    # REFERMER APRÈS, systématiquement
+#
+# La fenêtre se referme après la mesure. Une porte qui exigerait de la laisser
+# ouverte transformerait un garde-fou en formalité qu'on désarme par habitude.
 if ! curl -s -o /dev/null --max-time 6 http://localhost:3000/connexion 2>/dev/null; then
   bloque "écran /finances mesuré" "aucun serveur sur :3000 — lancer \`pnpm dev\`"
 else
@@ -120,7 +135,13 @@ else
     vert "écran /finances mesuré" "$n contrôles verts — voir checkpoints/v6-preuves/"
   else
     # L'instrument distingue lui-même l'échec MESURÉ de l'écran NON OBSERVÉ.
-    if grep -q 'BLOQUÉ' /tmp/v6-ecran.log; then
+    if grep -q 'BLOQUÉ | session' /tmp/v6-ecran.log; then
+      bloque "écran /finances" "session impossible — ouvrir : bash scripts/dev-account.sh"
+    elif grep -q 'période vide' /tmp/v6-ecran.log; then
+      # Le compte mesuré n'a aucun paiement : la cloison fonctionne, mais il n'y
+      # a RIEN à observer. Ni vert, ni rouge — non mesuré, et on dit lequel.
+      bloque "écran /finances" "compte sans paiement — mesurer sous …a1 (dev-account.sh)"
+    elif grep -q 'BLOQUÉ' /tmp/v6-ecran.log; then
       n=$(grep -c 'BLOQUÉ' /tmp/v6-ecran.log || true)
       bloque "écran /finances" "$n contrôle(s) NON MESURÉ(S) — voir /tmp/v6-ecran.log"
     elif grep -q 'ROUGE' /tmp/v6-ecran.log; then
