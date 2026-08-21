@@ -1,91 +1,90 @@
-/**
- * Finances — l'écran de pilotage financier du cabinet.
- *
- * ⚠️ AUCUNE DÉCISION DE RÔLE DANS CE FICHIER. On ne lira jamais ici
- * `if (role === 'owner')` pour choisir quel montant montrer : la cloison ADR-005
- * est décidée par `app.finance_overview` (036 §3), en SQL, par
- * `app.current_role()`. Le sous-titre de périmètre vient de la BASE (champ
- * `perimetre`), et `parPraticienne` arrive VIDE pour une praticienne parce que
- * la PORTE l'a vidé — pas parce que cet écran l'aurait filtré. Le contrôle C15
- * du checkpoint vérifie mécaniquement l'absence de ce motif ici.
- *
- * L'assistante reçoit `null` des deux portes, et voit donc l'état vide. Ce n'est
- * pas un message d'interdiction : lui dire « accès refusé » lui apprendrait
- * qu'il y a un chiffre à ne pas voir.
- *
- * ═══ « RECETTE DU JOUR » A DISPARU, ET C'EST UNE CORRECTION DE VÉRITÉ ═══════
- *
- * L'écran affichait `day_revenue.total_dzd` — la somme de TOUS les tarifs de la
- * journée, encaissés ou non — sous le titre « Recette du jour », juste au-dessus
- * d'une ligne « Encaissements en attente ». Une recette est de l'argent reçu.
- * Le chiffre était juste, le mot était faux, et un mot faux sur une caisse se
- * recopie dans un carnet. Il y a désormais QUATRE chiffres nommés :
- * Facturé · Encaissé · En attente · Taux d'encaissement.
- *
- * ═══ UN SEUL APPEL AU CHARGEMENT ═══════════════════════════════════════════
- *
- * `06-PERF-BUDGET.md` §2 plafonne cet écran à UN appel réseau. Tout vient de
- * `finance_overview`. Le journal nominatif est un SECOND appel, déclenché par
- * un clic — §3 l'autorise nommément, et il écrit une trace d'audit, donc il ne
- * part jamais tout seul.
- */
-
 "use client";
+
+/**
+ * /finances — LE TABLEAU DE BORD FINANCIER, en comptabilité de CAISSE.
+ *
+ * ═══ CE QUE CET ÉCRAN DOIT RÉPONDRE, SANS DÉFILEMENT ═══════════════════════
+ *
+ * Combien ai-je encaissé aujourd'hui, cette semaine, ce mois ? Combien ai-je de
+ * charges ? Quel est mon résultat net ? Qu'est-ce qui reste impayé ? Comment la
+ * situation évolue-t-elle ? D'où vient l'argent, où part-il ? Qu'est-ce qui
+ * demande un geste ?
+ *
+ * L'onglet « Vue d'ensemble » répond à TOUT cela SANS QU'ON OUVRE UN AUTRE
+ * ONGLET. Les onglets servent la PROFONDEUR (le détail des charges, la liste
+ * nominative des séances), jamais à découper l'histoire principale.
+ *
+ * ═══ UNE SEULE REQUÊTE PAR ONGLET ══════════════════════════════════════════
+ *
+ * ⚠️ La vue d'ensemble appelle `app.get_finance_overview` UNE FOIS, et rien
+ * d'autre — pas « une, plus un petit appel pour les charges ». Chaque appel
+ * supplémentaire est un aller-retour vers Alger sur une liaison qui n'est pas
+ * toujours bonne, et deux appels peuvent rendre deux instants différents : deux
+ * chiffres à l'écran qui ne se recoupent pas.
+ *
+ * L'onglet Charges et l'onglet Séances ont chacun LEUR porte, chargée
+ * seulement quand on l'ouvre. Celui des séances NOMME des patientes et écrit
+ * donc une trace d'audit : ouvrir les finances ne doit pas produire une lecture
+ * de dossiers (règle 6).
+ *
+ * ═══ AUCUNE ARITHMÉTIQUE FINANCIÈRE ICI ════════════════════════════════════
+ *
+ * Pas de `.reduce`, pas de `.filter().length`, pas de `/ 100`. Chaque nombre
+ * affiché est arrivé de Postgres sous cette forme. Les seuls calculs de ce lot
+ * sont GÉOMÉTRIQUES (hauteur d'une barre, palier d'une cellule) et vivent dans
+ * les composants de graphique, où ils ne peuvent pas s'afficher comme un
+ * montant.
+ *
+ * ═══ LES CINQ ÉTATS, PAR PANNEAU ═══════════════════════════════════════════
+ *
+ * `EtatDonnees` est une union discriminée : un panneau est dans UN état, jamais
+ * dans deux. L'écran précédent pouvait afficher « erreur » ET « vide »
+ * simultanément — deux booléens indépendants. Ce n'est plus exprimable.
+ */
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { AppShell } from "@/components/AppShell";
-import { CalendrierFinancier } from "@/components/finance/CalendrierFinancier";
-import { CartesPulse } from "@/components/finance/CartesPulse";
-import { GraphiqueEvolution } from "@/components/finance/GraphiqueEvolution";
-import { GraphiqueRepartition } from "@/components/finance/GraphiqueRepartition";
-import { JournalPaiements, TAILLE_PAGE } from "@/components/finance/JournalPaiements";
-import { PointsAttention } from "@/components/finance/PointsAttention";
-import { SelecteurPeriode } from "@/components/finance/SelecteurPeriode";
 import { useSessionEcran } from "@/components/useSessionEcran";
 import {
   BandeauHorsLigne,
   BlocErreur,
-  Bouton,
   EnTeteEcran,
-  EtatVide,
   LienBouton,
-  PanneauInfo,
-  Section,
   Squelette,
 } from "@/components/ui";
+import { BandeCalendrier } from "@/components/finance/BandeCalendrier";
+import { PanneauEtat, type EtatDonnees } from "@/components/finance/EtatPanneau";
+import { PanneauAnatomie } from "@/components/finance/PanneauAnatomie";
+import { PanneauAttention } from "@/components/finance/PanneauAttention";
+import { PanneauEvolution } from "@/components/finance/PanneauEvolution";
+import { SelecteurPeriode } from "@/components/finance/SelecteurPeriode";
+import { TableauSeances } from "@/components/finance/TableauSeances";
+import { TuilesPulse } from "@/components/finance/TuilesPulse";
+import { ModaleCharge, TableauCharges } from "@/components/finance/TableauCharges";
 import { fr } from "@/i18n/fr";
-import { recordPaymentCollected, type Paiement } from "@/services/finance";
 import {
   aujourdHuiCabinet,
   bornesDePeriode,
+  createCharge,
+  deleteCharge,
+  getChargesList,
   getFinanceOverview,
-  listPeriodPayments,
+  getSessionsPaymentsList,
   periodeEstValide,
-  resumerPeriode,
-  type ApercuFinancier,
+  updateCharge,
+  type ApercuCaisse,
+  type LigneCharge,
+  type ListeCharges,
+  type ListeSeances,
   type Periode,
-} from "@/services/finance-periode";
+  type SaisieCharge,
+} from "@/services/finance-cash";
 
-/** Les états de l'écran (05-UX-CONTRACT.md §1) — EXCLUSIFS, jamais superposés. */
-type EtatFinances = "chargement" | "hors-ligne" | "erreur" | "contenu";
-
-/**
- * Au-delà de ce délai sans réponse, on bascule en ERREUR avec le mot « délai »
- * (05-UX-CONTRACT.md §2) — jamais un squelette qui attend indéfiniment.
- */
+const PERIODE_INITIALE = "mois" as const;
 const DELAI_CHARGEMENT_MS = 10_000;
 
-/**
- * La période affichée à l'ouverture.
- *
- * « Ce mois » plutôt qu'« Aujourd'hui » : cet écran a changé de nature. La
- * question de la journée — « qu'est-ce que j'ai encaissé aujourd'hui » — revient
- * au tableau de bord (V4), qui est l'écran du matin. Celui-ci répond à « comment
- * va le cabinet », et un seul jour ne permet ni tendance, ni composition, ni
- * comparaison. « Aujourd'hui » reste à un clic.
- */
-const PERIODE_INITIALE = "mois" as const;
+type Onglet = "apercu" | "charges" | "seances";
 
 /**
  * La période lue dans l'URL, pour qu'un rechargement et le bouton Précédent
@@ -93,9 +92,7 @@ const PERIODE_INITIALE = "mois" as const;
  *
  * ⚠️ `window.location`, PAS `useSearchParams`. Le hook de Next impose une
  * frontière `<Suspense>` au rendu statique, et l'oublier fait échouer le BUILD
- * avec un message qui parle de préfixation, jamais de finances. On lit l'URL
- * une fois, au montage, côté navigateur — cet écran est déjà `"use client"` et
- * n'a rien à pré-rendre.
+ * avec un message qui parle de préfixation, jamais de finances.
  */
 function periodeDepuisUrl(): Periode {
   const parDefaut = bornesDePeriode(PERIODE_INITIALE, aujourdHuiCabinet());
@@ -111,41 +108,35 @@ function periodeDepuisUrl(): Periode {
 export default function FinancesPage(): React.JSX.Element {
   const {
     utilisateur,
-    sessionTranchee,
     horsLigne: horsLigneSession,
     deconnecter,
   } = useSessionEcran();
 
   const [periode, setPeriode] = useState<Periode>(() => periodeDepuisUrl());
-  const [etat, setEtat] = useState<EtatFinances>("chargement");
-  const [apercu, setApercu] = useState<ApercuFinancier | null>(null);
-  const [messageErreur, setMessageErreur] = useState<string | undefined>(undefined);
-  const [confirmation, setConfirmation] = useState<string | undefined>(undefined);
-  const [envoi, setEnvoi] = useState<string | undefined>(undefined);
+  const [onglet, setOnglet] = useState<Onglet>("apercu");
 
-  // Le journal — replié par défaut, et son propre état de chargement : un échec
-  // de pagination ne doit pas effacer les quatre chiffres du haut.
-  const [journalOuvert, setJournalOuvert] = useState(false);
-  const [journalChargement, setJournalChargement] = useState(false);
-  const [journalLignes, setJournalLignes] = useState<readonly Paiement[]>([]);
-  const [journalTotal, setJournalTotal] = useState(0);
-  const [journalPage, setJournalPage] = useState(0);
+  const [apercu, setApercu] = useState<EtatDonnees<ApercuCaisse>>({ statut: "chargement" });
+  const [charges, setCharges] = useState<EtatDonnees<ListeCharges>>({ statut: "chargement" });
+  const [seances, setSeances] = useState<EtatDonnees<ListeSeances>>({ statut: "chargement" });
 
-  // Compteur de génération : un rechargement déclenché pendant qu'un précédent
-  // est en vol (changement rapide de période, double clic) doit voir le PLUS
-  // RÉCENT gagner, jamais une réponse tardive écraser un état plus frais.
+  // La modale de charge : `undefined` = fermée, `null` = création,
+  // un objet = modification. Trois états dans UNE variable, donc jamais
+  // « ouverte en création ET en modification ».
+  const [modale, setModale] = useState<LigneCharge | null | undefined>(undefined);
+  const [envoi, setEnvoi] = useState(false);
+  const [erreurModale, setErreurModale] = useState<string | undefined>(undefined);
+
+  // Un rechargement déclenché pendant qu'un précédent est en vol (changement
+  // rapide de période) doit voir le PLUS RÉCENT gagner.
   const generation = useRef(0);
 
-  const charger = useCallback(async (p: Periode) => {
+  const chargerApercu = useCallback(async (p: Periode) => {
     const gen = (generation.current += 1);
-
-    // Contenu déjà affiché : rechargement SILENCIEUX, aucun retour au squelette.
-    setEtat((precedent) => (precedent === "contenu" ? precedent : "chargement"));
+    setApercu((prec) => (prec.statut === "charge" ? prec : { statut: "chargement" }));
 
     const minuteur = setTimeout(() => {
       if (generation.current !== gen) return;
-      setEtat("erreur");
-      setMessageErreur(fr.delaiDepasse);
+      setApercu({ statut: "erreur", message: fr.delaiDepasse });
     }, DELAI_CHARGEMENT_MS);
 
     const r = await getFinanceOverview(p.du, p.au);
@@ -153,98 +144,99 @@ export default function FinancesPage(): React.JSX.Element {
     if (generation.current !== gen) return;
 
     if (!r.ok) {
-      setEtat(r.error.code === "hors-ligne" ? "hors-ligne" : "erreur");
-      setMessageErreur(r.error.message);
+      setApercu({ statut: "erreur", message: r.error.message });
       return;
     }
-
-    setMessageErreur(undefined);
-    setApercu(r.data);
-    setEtat("contenu");
+    // `null` = hors périmètre. Ce n'est pas une erreur, et surtout pas un
+    // « accès refusé » : le dire apprendrait qu'il y a un chiffre à ne pas voir.
+    if (r.data === null) {
+      setApercu({ statut: "vide" });
+      return;
+    }
+    setApercu({ statut: "charge", donnees: r.data });
   }, []);
 
-  const chargerJournal = useCallback(async (p: Periode, page: number) => {
-    setJournalChargement(true);
-    const r = await listPeriodPayments(p.du, p.au, TAILLE_PAGE, page * TAILLE_PAGE);
-    setJournalChargement(false);
+  const chargerCharges = useCallback(async (p: Periode) => {
+    setCharges({ statut: "chargement" });
+    const r = await getChargesList(p.du, p.au);
     if (!r.ok) {
-      setEtat(r.error.code === "hors-ligne" ? "hors-ligne" : "erreur");
-      setMessageErreur(r.error.message);
+      setCharges({ statut: "erreur", message: r.error.message });
       return;
     }
-    setJournalLignes(r.data.lignes);
-    setJournalTotal(r.data.total);
+    if (r.data === null) {
+      setCharges({ statut: "vide" });
+      return;
+    }
+    setCharges({ statut: "charge", donnees: r.data });
+  }, []);
+
+  const chargerSeances = useCallback(async (p: Periode) => {
+    setSeances({ statut: "chargement" });
+    const r = await getSessionsPaymentsList(p.du, p.au);
+    if (!r.ok) {
+      setSeances({ statut: "erreur", message: r.error.message });
+      return;
+    }
+    if (r.data === null) {
+      setSeances({ statut: "vide" });
+      return;
+    }
+    setSeances({ statut: "charge", donnees: r.data });
   }, []);
 
   useEffect(() => {
-    // On attend la session avant d'interroger : la porte du journal écrit une
-    // trace en base, et journaliser une lecture pour un écran qui va rediriger
-    // vers la connexion serait une trace fausse.
-    if (sessionTranchee !== true) return;
-    void charger(periode);
-  }, [sessionTranchee, periode, charger]);
+    void chargerApercu(periode);
+  }, [chargerApercu, periode]);
 
-  // L'URL suit la période, sans empiler d'entrées d'historique : changer de
-  // période n'est pas une navigation, c'est un réglage.
+  // Les onglets secondaires ne se chargent QU'À L'OUVERTURE.
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    const u = new URL(window.location.href);
-    u.searchParams.set("du", periode.du);
-    u.searchParams.set("au", periode.au);
-    window.history.replaceState(null, "", u.toString());
-  }, [periode]);
+    if (onglet === "charges") void chargerCharges(periode);
+    if (onglet === "seances") void chargerSeances(periode);
+  }, [chargerCharges, chargerSeances, onglet, periode]);
 
   const changerPeriode = useCallback((p: Periode) => {
-    if (!periodeEstValide(p.du, p.au)) {
-      // Bornes incomplètes pendant une saisie : on garde l'état à l'écran et on
-      // n'interroge pas. Le sélecteur affiche déjà la raison.
-      setPeriode(p);
-      return;
-    }
     setPeriode(p);
-    setConfirmation(undefined);
-    // Le journal repart à sa première page : la page 3 d'une autre période
-    // n'existe pas.
-    setJournalPage(0);
-    setJournalLignes([]);
-    setJournalTotal(0);
-    if (journalOuvert) void chargerJournal(p, 0);
-  }, [journalOuvert, chargerJournal]);
+    const url = new URL(window.location.href);
+    url.searchParams.set("du", p.du);
+    url.searchParams.set("au", p.au);
+    window.history.replaceState(null, "", url.toString());
+  }, []);
 
-  const basculerJournal = useCallback(() => {
-    const ouvre = !journalOuvert;
-    setJournalOuvert(ouvre);
-    if (ouvre) void chargerJournal(periode, journalPage);
-  }, [journalOuvert, periode, journalPage, chargerJournal]);
+  const enregistrerCharge = useCallback(
+    async (saisie: SaisieCharge) => {
+      setEnvoi(true);
+      setErreurModale(undefined);
+      const enCours = modale;
+      const r =
+        enCours === null || enCours === undefined
+          ? await createCharge(saisie)
+          : await updateCharge(enCours.id, saisie);
+      setEnvoi(false);
 
-  const changerPage = useCallback((page: number) => {
-    setJournalPage(page);
-    void chargerJournal(periode, page);
-  }, [periode, chargerJournal]);
-
-  const encaisser = useCallback(
-    async (paiement: Paiement) => {
-      setMessageErreur(undefined);
-      setConfirmation(undefined);
-      setEnvoi(paiement.id);
-
-      const result = await recordPaymentCollected(paiement.id);
-      setEnvoi(undefined);
-
-      if (!result.ok) {
-        setEtat(result.error.code === "hors-ligne" ? "hors-ligne" : "erreur");
-        setMessageErreur(result.error.message);
+      if (!r.ok) {
+        setErreurModale(r.error.message);
         return;
       }
-
-      if (result.data !== null) setConfirmation(fr.finances.encaissementEnregistre);
-      // Les quatre chiffres du haut CHANGENT avec l'encaissement : on relit les
-      // deux sources plutôt que de corriger l'état à la main. Une caisse
-      // rafistolée côté client finit par diverger de la base.
-      void charger(periode);
-      if (journalOuvert) void chargerJournal(periode, journalPage);
+      setModale(undefined);
+      // Les charges changent le RÉSULTAT NET : les deux vues se rechargent.
+      void chargerCharges(periode);
+      void chargerApercu(periode);
     },
-    [charger, chargerJournal, periode, journalOuvert, journalPage],
+    [chargerApercu, chargerCharges, modale, periode],
+  );
+
+  const desactiverCharge = useCallback(
+    async (c: LigneCharge) => {
+      if (!window.confirm(fr.finances.tableauCharges.confirmerDesactivation)) return;
+      const r = await deleteCharge(c.id);
+      if (!r.ok) {
+        setCharges({ statut: "erreur", message: r.error.message });
+        return;
+      }
+      void chargerCharges(periode);
+      void chargerApercu(periode);
+    },
+    [chargerApercu, chargerCharges, periode],
   );
 
   if (utilisateur === undefined) {
@@ -269,16 +261,12 @@ export default function FinancesPage(): React.JSX.Element {
     );
   }
 
-  const horsLigne = horsLigneSession || etat === "hors-ligne";
-  const perimetre =
-    apercu?.perimetre === "cabinet"
-      ? fr.finances.perimetreCabinet
-      : fr.finances.perimetrePraticienne;
-
-  // Une période sans aucune séance tarifée : un SEUL état vide pour tout le
-  // bloc analytique, jamais quatre cartes à « 0 DZD » suivies de trois
-  // graphiques plats. Quatre zéros ressemblent à une donnée ; ils n'en sont pas.
-  const vide = apercu !== null && apercu.pulse.seancesTarifees === 0;
+  const t = fr.finances.onglets;
+  const onglets: ReadonlyArray<readonly [Onglet, string]> = [
+    ["apercu", t.apercu],
+    ["charges", t.charges],
+    ["seances", t.seances],
+  ];
 
   return (
     <AppShell
@@ -286,114 +274,160 @@ export default function FinancesPage(): React.JSX.Element {
       nomComplet={utilisateur.fullName}
       onDeconnexion={deconnecter}
     >
-      <div className="flex flex-col gap-8">
-        {horsLigne ? <BandeauHorsLigne /> : null}
+      {/* `h-full` + `overflow-hidden` : la page NE DÉFILE PAS. Ce qui ne tient
+          pas se comprime (rangée 3) ou défile DANS son panneau (Anatomie). */}
+      <div className="flex h-full min-h-0 flex-col gap-3 overflow-hidden">
+        {horsLigneSession ? <BandeauHorsLigne /> : null}
 
-        <EnTeteEcran
-          icone="finances"
-          titre={fr.finances.titre}
-          {...(etat === "contenu" && apercu !== null ? { sousTitre: perimetre } : {})}
-        />
+        <div className="flex flex-wrap items-end justify-between gap-3">
+          <EnTeteEcran icone="finances" titre={fr.finances.titre} />
+          <SelecteurPeriode periode={periode} onChange={changerPeriode} />
+        </div>
 
-        <SelecteurPeriode
-          periode={periode}
-          onChange={changerPeriode}
-          desactive={etat === "chargement"}
-        />
+        <div role="tablist" aria-label={fr.finances.titre} className="flex gap-1 border-b border-rule">
+          {onglets.map(([cle, libelle]) => (
+            <button
+              key={cle}
+              role="tab"
+              type="button"
+              aria-selected={onglet === cle}
+              onClick={() => setOnglet(cle)}
+              className={[
+                "rounded-t-md px-4 py-2 font-ui text-body transition-colors",
+                "duration-quick ease-out",
+                "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
+                "focus-visible:outline-action-600",
+                onglet === cle
+                  ? "border-b-2 border-brand-600 font-medium text-ink-900"
+                  : "text-ink-500 hover:text-ink-700",
+              ].join(" ")}
+            >
+              {libelle}
+            </button>
+          ))}
+        </div>
 
-        {confirmation === undefined ? null : (
-          <PanneauInfo ton="positif">{confirmation}</PanneauInfo>
-        )}
+        {onglet === "apercu" ? (
+          <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-hidden">
+            <PanneauEtat
+              etat={apercu}
+              onReessayer={() => void chargerApercu(periode)}
+              lignesSquelette={6}
+            >
+              {(a) => (
+                <div className="flex h-full min-h-0 flex-col gap-3">
+                  <TuilesEtRangees apercu={a} />
+                </div>
+              )}
+            </PanneauEtat>
+          </div>
+        ) : null}
 
-        {/* 05-UX-CONTRACT.md §1 : un SEUL état à la fois. ERREUR remplace le
-            contenu — elle ne s'affiche jamais au-dessus d'un vide ou de
-            chiffres obsolètes. */}
-        {etat === "chargement" ? (
-          <Squelette lignes={6} />
-        ) : etat === "erreur" ? (
-          <BlocErreur
-            message={messageErreur ?? fr.erreurs.inattendu}
-            action={<Bouton onClick={() => void charger(periode)}>{fr.actions.reessayer}</Bouton>}
-          />
-        ) : etat === "hors-ligne" && apercu === null ? (
-          // Hors ligne dès le premier chargement : rien n'a encore été lu, il
-          // n'y a donc rien à garder affiché — le bandeau suffit.
-          null
-        ) : apercu === null ? (
-          // La porte a rendu `null` : hors périmètre (assistante). Un écran
-          // vide, jamais un refus.
-          <EtatVide message={fr.finances.videPeriode} />
-        ) : vide ? (
-          <EtatVide message={fr.finances.videPeriode} />
-        ) : (
-          <>
-            <CartesPulse pulse={apercu.pulse} />
-
-            {/* Le résumé, composé de fragments français à partir des SEULS
-                chiffres ci-dessus. Aucun modèle de langage : tout y est
-                déterministe, et les preuves sont la page elle-même. */}
-            <p className="font-ui text-body text-ink-700">{resumerPeriode(apercu)}</p>
-
-            <PointsAttention
-              points={apercu.points}
-              onOuvrirJournal={() => {
-                if (!journalOuvert) basculerJournal();
-              }}
-            />
-
-            <Section titre={fr.finances.graphiques.evolution}>
-              <GraphiqueEvolution
-                serie={apercu.serie}
-                grain={apercu.grain}
-                aujourdHui={aujourdHuiCabinet()}
-              />
-            </Section>
-
-            <Section titre={fr.finances.graphiques.repartition}>
-              <GraphiqueRepartition
-                groupes={apercu.parType}
-                total={apercu.pulse.factureDzd}
-                titreTableau={fr.finances.graphiques.repartition}
-              />
-            </Section>
-
-            {/* Vide pour une praticienne — décidé EN BASE (036 §3). Une
-                répartition à une seule ligne serait du bruit. */}
-            {apercu.parPraticienne.length > 1 ? (
-              <Section titre={fr.finances.graphiques.parPraticienne}>
-                <GraphiqueRepartition
-                  groupes={apercu.parPraticienne}
-                  total={apercu.pulse.factureDzd}
-                  titreTableau={fr.finances.graphiques.parPraticienne}
+        {onglet === "charges" ? (
+          <div className="min-h-0 flex-1 overflow-y-auto">
+            <PanneauEtat etat={charges} onReessayer={() => void chargerCharges(periode)}>
+              {(c) => (
+                <TableauCharges
+                  liste={c}
+                  onAjouter={() => {
+                    setErreurModale(undefined);
+                    setModale(null);
+                  }}
+                  onModifier={(l) => {
+                    setErreurModale(undefined);
+                    setModale(l);
+                  }}
+                  onDesactiver={(l) => void desactiverCharge(l)}
                 />
-              </Section>
-            ) : null}
+              )}
+            </PanneauEtat>
+          </div>
+        ) : null}
 
-            {/* Le calendrier n'a de sens qu'au grain « jour » : ailleurs, une
-                case ne correspond plus à une journée. */}
-            {apercu.grain === "jour" ? (
-              <Section titre={fr.finances.graphiques.calendrier}>
-                <CalendrierFinancier
-                  serie={apercu.serie}
-                  aujourdHui={aujourdHuiCabinet()}
+        {onglet === "seances" ? (
+          <div className="min-h-0 flex-1 overflow-y-auto">
+            <PanneauEtat etat={seances} onReessayer={() => void chargerSeances(periode)}>
+              {(s) => (
+                <TableauSeances
+                  liste={s}
+                  onRecu={() => undefined}
+                  onRelancer={() => undefined}
                 />
-              </Section>
-            ) : null}
-
-            <JournalPaiements
-              ouvert={journalOuvert}
-              onBasculer={basculerJournal}
-              chargement={journalChargement}
-              lignes={journalLignes}
-              total={journalTotal}
-              page={journalPage}
-              onPage={changerPage}
-              onEncaisser={encaisser}
-              envoiEnCours={envoi}
-            />
-          </>
-        )}
+              )}
+            </PanneauEtat>
+          </div>
+        ) : null}
       </div>
+
+      {modale === undefined ? null : (
+        <ModaleCharge
+          charge={modale}
+          enCours={envoi}
+          messageErreur={erreurModale}
+          onAnnuler={() => setModale(undefined)}
+          onEnregistrer={(s) => void enregistrerCharge(s)}
+        />
+      )}
     </AppShell>
+  );
+}
+
+/**
+ * Les trois rangées de la vue d'ensemble.
+ *
+ * ⚠️ LE BUDGET VERTICAL EST LE CONTRAT. À 1440×900, l'en-tête, les onglets et
+ * le sélecteur consomment ~140 px ; il reste ~760 px. Rangée 1 ~130,
+ * rangée 2 ~380, rangée 3 ~150, plus les gouttières : ça tient, et ça ne tient
+ * QUE parce que chaque rangée a une hauteur bornée. Un panneau qui grandit avec
+ * son contenu ferait réapparaître le défilement que ce lot supprime — c'est
+ * pourquoi Anatomie défile À L'INTÉRIEUR d'elle-même.
+ *
+ * À 1280×720, la rangée 3 passe en mode compact (`compact`) : mêmes cellules,
+ * hauteur réduite, sans numéro de jour. La rangée 1 ne se replie JAMAIS.
+ */
+function TuilesEtRangees({ apercu }: { readonly apercu: ApercuCaisse }): React.JSX.Element {
+  return (
+    <>
+      <div className="shrink-0">
+        <TuilesPulse pulse={apercu.pulse} />
+      </div>
+
+      {/* 40 / 32 / 28 — Évolution, Anatomie, Attention. `gridTemplateColumns`
+          en style INLINE parce que l'échelle Tailwind du dépôt ne porte pas de
+          gabarit à trois fractions inégales et que la syntaxe arbitraire est
+          interdite (I10). Une seule colonne sous 1280 : trois panneaux de
+          ~300 px côte à côte deviennent illisibles avant de devenir petits. */}
+      <div className="grid min-h-0 flex-1 grid-cols-un gap-3 desktop:grid-cols-finance">
+        <div className="min-h-0 rounded-lg bg-card p-4 shadow-lift1">
+          <PanneauEvolution serie={apercu.evolution} />
+        </div>
+        <div className="min-h-0 rounded-lg bg-card p-4 shadow-lift1">
+          <PanneauAnatomie
+            revenus={apercu.composition.revenus_par_type}
+            charges={apercu.composition.charges_par_categorie}
+          />
+        </div>
+        <div className="min-h-0 rounded-lg bg-card p-4 shadow-lift1">
+          <PanneauAttention
+            impayesTotal={apercu.attention.impayes_total}
+            impayesCount={apercu.attention.impayes_count}
+            plusAncienJours={apercu.attention.plus_ancien_impaye_jours}
+            echeances={apercu.attention.echeances_a_venir}
+          />
+        </div>
+      </div>
+
+      {/* Rangée 3. `hidden` sous 900 px de haut n'existe pas en CSS pur côté
+          Tailwind : on réduit la hauteur et on masque les numéros à la place,
+          ce qui garde l'information et supprime le débordement. */}
+      <div className="shrink-0 rounded-lg bg-card p-3 shadow-lift1">
+        <div className="hidden desktop:block">
+          <BandeCalendrier jours={apercu.calendrier} />
+        </div>
+        <div className="desktop:hidden">
+          <BandeCalendrier jours={apercu.calendrier} compact />
+        </div>
+      </div>
+    </>
   );
 }

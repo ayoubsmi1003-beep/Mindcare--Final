@@ -46,9 +46,11 @@
 import type { ReactNode } from "react";
 
 import {
+  Fraunces,
   Geist,
   Geist_Mono,
   IBM_Plex_Sans_Arabic,
+  Inter,
   Newsreader,
 } from "next/font/google";
 
@@ -105,6 +107,38 @@ const fonteAr = IBM_Plex_Sans_Arabic({
   display: "swap",
 });
 
+/**
+ * Interface — Inter. Remplace Geist comme fonte d'interface (arbitrage explicite
+ * de la médecin, qui prime sur le choix typographique d'ADR-022). Geist reste
+ * chargée : d'autres écrans s'y appuient encore, et les retypographier n'était
+ * pas le périmètre demandé.
+ */
+const fonteInter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-inter-emise",
+  display: "swap",
+});
+
+/**
+ * Chiffres financiers de grande taille — Fraunces. Réservée aux MONTANTS des
+ * tuiles Finances : c'est une fonte à fort contraste, excellente à 30 px et
+ * illisible à 12. L'employer comme fonte de texte courant annulerait le signal
+ * qu'elle porte — « ceci est un chiffre d'argent, pas une étiquette ».
+ *
+ * ⚠️ PAS D'`axes` ICI. next/font refuse `axes` dès qu'un `weight` explicite est
+ * donné — les deux s'excluent (« Axes can only be defined … when the weight
+ * property is nonexistent or set to `variable` »). On garde les DEUX graisses
+ * énumérées plutôt que l'axe optique : deux graisses figées pèsent moins qu'une
+ * fonte variable complète, et cet écran n'en emploie pas d'autre.
+ */
+const fonteDisplay = Fraunces({
+  subsets: ["latin"],
+  weight: ["500", "600"],
+  variable: "--font-display-emise",
+  display: "swap",
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -127,7 +161,7 @@ export default function RootLayout({
     <html
       lang="fr"
       suppressHydrationWarning
-      className={`${fonteUi.variable} ${fonteNum.variable} ${fonteDoc.variable} ${fonteAr.variable}`}
+      className={`${fonteUi.variable} ${fonteNum.variable} ${fonteDoc.variable} ${fonteAr.variable} ${fonteInter.variable} ${fonteDisplay.variable}`}
     >
       {/* ⚠️ COLONNE FLEX, ET CE N'EST PAS COSMÉTIQUE.
           Le bandeau ADR-016 précède la coquille. Tant que `<body>` était un bloc

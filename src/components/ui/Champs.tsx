@@ -92,7 +92,7 @@ export function ChampTexte({
 }: BaseProps & {
   readonly valeur: string;
   readonly onChange: (v: string) => void;
-  readonly type?: "text" | "email" | "password" | "number" | "datetime-local";
+  readonly type?: "text" | "email" | "password" | "number" | "date" | "datetime-local";
   readonly placeholder?: string;
 }): React.JSX.Element {
   const idChamp = useId();

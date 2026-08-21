@@ -27,7 +27,7 @@ import {
   periodeEstValide,
   type NomPeriode,
   type Periode,
-} from "@/services/finance-periode";
+} from "@/services/finance-cash";
 
 const PRESETS: readonly Exclude<NomPeriode, "personnalise">[] = [
   "jour",

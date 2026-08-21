@@ -1,6 +1,137 @@
 # STATE — MindCare OS
-**V6-FINANCE VERT (D-23, hors rang) · V3 toujours vert · `checkpoint-v6-finance.sh` exit 0**
+**V7-CAISSE VERT · le chemin d'écriture des Finances est réparé · V3 toujours vert**
 Dernière mise à jour : 2026-08-21
+
+---
+
+## ✅ 2026-08-21 — V7-CAISSE : le défaut d'écriture, les charges, l'écran
+
+### 1. LE DÉFAUT D'ÉCRITURE — pourquoi des séances n'atteignaient pas les Finances
+
+**Cause racine, trouvée en base, pas devinée.** `app.consultations` NE PORTE AUCUNE
+COLONNE DE PRIX. Une ligne de `app.payments` naît par UN SEUL chemin :
+`app.set_consultation_price` (029), appelée depuis le bloc tarif. Or
+`app.close_consultation` (026) ne regardait JAMAIS `app.payments` : **rien n'appariait
+la clôture au tarif**. Une séance close avant la saisie du tarif n'avait donc pas de
+paiement — et comme tout l'écran Finances lit `app.payments`, elle en était invisible
+**définitivement, sans qu'aucun écran ne signale l'omission**.
+
+Ce n'était donc pas aléatoire : ça dépendait de l'ordre des gestes.
+
+**Correctif — `037_close_requires_tarif.sql`.** `close_consultation` refuse la clôture
+sans ligne de paiement, en français, avec un renvoi au bloc tarif. On ne fabrique PAS
+un tarif par défaut (règle 8) : une séance offerte se saisit explicitement à **0**
+(ADR-018, `amount_dzd >= 0`).
+
+**⚠️ DEUX PISTES ÉCARTÉES APRÈS VÉRIFICATION**, à ne pas rouvrir :
+- `set_consultation_price` rend `NULL` hors périmètre — c'est **voulu** (ADR-003 : pas
+  d'oracle d'existence), et `BlocTarif` traite déjà ce `null` comme un échec lisible.
+  Y poser une exception FABRIQUERAIT la fuite que la porte évite.
+- `app.close_stale_consultations` (032) clôt en lot sans regarder les paiements. Elle
+  n'a **aucun appelant** dans le dépôt. Laissée telle quelle : la retoucher casserait
+  le garde-fou `one_open_consult` qu'elle existe pour desserrer. **Si un jour on
+  l'appelle, elle rouvrira le défaut.**
+
+**Preuve** : `scripts/test-chemin-ecriture-finance.sql` — 9 contrôles, transaction
+annulée. T1 clore sans tarif refusé · T2 refus atomique · T3 tarif puis clôture · T4a
+tarifée non encaissée = impayé et NON recette · T4b visible dans Séances & paiements ·
+T4c encaissée → recette du jour · T5 séance offerte à 0 clôturable · T6 séance inconnue
+→ NULL · T7 aucune fixture rémanente.
+
+### 2. COMPTABILITÉ DE CAISSE — un seul chiffre de recette
+
+Le cabinet est **au comptant**. V6 modélisait `facturé / encaissé / en attente / taux
+d'encaissement` sur deux fenêtres de dates : un cabinet qui facture puis se fait payer.
+**Cet axe n'existe pas ici** et occupait la moitié de l'écran. La recette est désormais
+`app.payments` fenêtrée sur `collected_at`, point. Les impayés restent des EXCEPTIONS :
+panneau Attention et onglet Séances & paiements, jamais un second total en tête d'écran.
+
+`app.finance_overview` et `app.list_period_payments` (036) sont **laissées en place et
+intactes** — l'écran ne les appelle plus. Les retirer est un ménage ultérieur.
+
+### 3. Migrations posées
+
+| # | Objet |
+|---|---|
+| `037_close_requires_tarif` | clore exige un tarif (le correctif ci-dessus) |
+| `038_charges` | table `app.charges`, 3 enums, RLS + audit, 3 portes CRUD, amorce **gated `is_cloud_dev()`** |
+| `039_finance_cash` | `get_finance_overview` · `get_charges_list` · `get_sessions_payments_list` |
+| `040_finance_cash_correctifs` | libellés de mois en français (`TMMon` suivait la locale serveur) ; `plus_ancien_impaye_jours` 0 au lieu de NULL |
+| `041_charges_recurrentes_comptees` | `pulse.nb_charges_recurrentes` compté en SQL |
+
+**Écarts assumés vs la commande, et pourquoi :**
+- `montant_dzd integer`, pas `numeric(12,2)` — ADR-018/CLAUDE.md §4 : dinars entiers,
+  aucun centime. La règle du dépôt prime sur la spec de la tâche.
+- L'amorce des 7 charges est **conditionnée à `app.is_cloud_dev()`** (règle 8) : une base
+  de production n'en reçoit aucune. Identité de la praticienne résolue par requête.
+- `cabinet_id` + `is_synthetic` ajoutés au schéma demandé, pour rester alignés sur le
+  reste de la base et le garde de 016.
+
+**Règle d'imputation des charges** (en SQL, commentée dans `charge_equivalent_mensuel`) :
+ponctuelle = entière sur la période de sa `date_charge` ; récurrente = part mensuelle
+normalisée (mensuelle ×1, trimestrielle ÷3, annuelle ÷12), proratisée au jour sur chaque
+mois traversé.
+
+### 4. QUATRE PIÈGES MESURÉS, qui coûteront cher à quiconque les réapprend
+
+**`tailwind.config.ts` REMPLACE les échelles du cœur, il ne les étend pas.** Une classe
+absente ne produit **aucune erreur** : elle ne fait simplement rien.
+- `grid-cols-1/2/3/5` n'existent pas → les cinq tuiles s'empilaient au lieu de former
+  une rangée. Ajoutés comme gabarits nommés : `un · deux · trois · pouls · finance`.
+- `h-px` / `w-px` n'existent pas → le masquage lecteur-d'écran ne masquait pas.
+
+**L'échelle `spacing` est fermée : 0·1·2·3·4·5·6·8·10·12·16.** Toute classe
+FRACTIONNAIRE — `h-1.5`, `gap-2.5`, `py-1.5`, `h-0.5` — ne produit **aucune
+règle**, en silence. Symptôme mesuré : les barres du panneau Anatomie avaient
+une hauteur nulle et étaient donc **totalement invisibles**, alors que le
+composant, le typecheck et le lint étaient verts. 23 occurrences ont été
+corrigées d'un coup dans le module Finances. **C'est la troisième fois que ce
+même piège casse silencieusement du travail dans ce lot** — après
+`grid-cols-*` et `h-px`. Avant d'écrire une classe d'espacement, vérifier
+qu'elle existe dans `tailwind.config.ts`.
+
+**`height` sur un `<table>` est un MINIMUM, pas un maximum.** Le tableau équivalent du
+calendrier (31 lignes) mesurait 856 px et rallongeait `<html>` de **761 px** : la page
+défilait alors que `<main>` tenait dans l'écran, et la cause était invisible puisque
+l'élément fautif est caché par construction. `CACHE_VISUELLEMENT` est désormais une
+**vraie classe CSS** (`.cache-visuellement`, tokens.css), à poser sur un `<div>` enveloppe.
+
+**Le conteneur qui défile est `<main>`, pas `documentElement`.** Un instrument qui ne
+mesure que le document rend vert sur un écran qui défile sous les yeux de la médecin.
+
+### 5. Ce qui a été mesuré — `node scripts/mesure-finances-caisse.mjs`
+
+```
+9 verts · 0 ROUGE · 0 BLOQUÉ         (build de PRODUCTION, compte owner …a1)
+  1440×900 ....... 0 px de débord vertical
+  1280×720 ....... 0 px vertical, 0 px horizontal
+  1 seul appel de données par onglet (3 onglets vérifiés)
+  aucun « facturé / encaissé / objectif » à l'écran · aucun NaN
+  période sans donnée → état vide propre
+```
+
+**Porte `get_finance_overview` mesurée en base : 59–94 ms** (round-trip pooler compris ;
+~80 ms sur une période de 366 jours). Budget de 400 ms **tenu**.
+Chargement complet de la page : ~1,0 s — session + coquille comprises, hors budget RPC.
+
+Autres portes : `preflight` vert · `typecheck` · `lint` · `test-finance-calendrier` 26 verts ·
+`checkpoint-v3` **16 verts, 0 rouge**.
+
+⚠️ `checkpoint-v3.sh` attendait **4** familles de fontes ; le seuil est passé à **6**
+(ajout d'**Inter** et **Fraunces**). C'est un **arbitrage explicite de la médecin qui
+prime sur ADR-022** — le seuil a été relevé, pas le contrôle contourné. Coût réel
+mesuré : 26 → **36 fichiers `.woff2`** auto-hébergés.
+
+### 6. Non fait, et pourquoi
+
+- **Les boutons « Reçu » et « Relancer »** de l'onglet Séances & paiements sont des
+  gestes **sans porte en base** : aucune n'existe pour émettre un reçu ni tracer une
+  relance. Ils sont câblés à vide plutôt que de simuler une action (règle 8). À ouvrir
+  comme lot propre.
+- **L'écran de séance n'empêche pas encore le geste** : c'est la BASE qui refuse la
+  clôture sans tarif, avec un message lisible que le chemin d'erreur existant affiche.
+  La barrière est au bon endroit (règle 4) ; l'ergonomie « bouton désactivé tant que le
+  tarif manque » demanderait de remonter l'état du paiement dans la page — hors périmètre.
 
 ---
 

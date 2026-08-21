@@ -16,6 +16,14 @@
  *
  * `clip-path` plutôt que `overflow:hidden` seul : un texte de plusieurs lignes
  * réduit à 1px déborderait sinon d'un pixel visible en haut de page.
+ *
+ * ⚠️ À POSER SUR UN `<div>` ENVELOPPE, JAMAIS DIRECTEMENT SUR UN `<table>`.
+ * MESURÉ : sur un élément `display: table`, `height` est traité par CSS comme
+ * un MINIMUM, pas comme un maximum — `h-px` ne réduit donc rien, et
+ * `overflow: hidden` ne s'applique pas davantage. Le tableau équivalent du
+ * calendrier (31 lignes) mesurait ainsi 856 px de haut et rallongeait `<html>`
+ * de 761 px : la page défilait alors que `<main>` ne débordait pas, et la
+ * cause était invisible dans le rendu — le tableau est visuellement caché.
+ * Enveloppé dans un `<div>`, tout rentre dans le pixel prévu.
  */
-export const CACHE_VISUELLEMENT =
-  "absolute h-px w-px overflow-hidden whitespace-nowrap border-0 p-0 [clip:rect(0,0,0,0)]";
+export const CACHE_VISUELLEMENT = "cache-visuellement";

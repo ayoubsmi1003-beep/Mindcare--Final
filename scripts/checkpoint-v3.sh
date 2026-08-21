@@ -274,10 +274,16 @@ else
     rouge "aucune fonte émise" "le build a réussi SANS télécharger les fontes"
   fi
 
-  if [ "$n_vars" -eq 4 ]; then
-    vert "les 4 familles sont câblées" "ui · num · doc · ar"
+  # SIX familles depuis le lot Finances (2026-08-21), et non plus quatre :
+  # `inter` (interface) et `display` (Fraunces, grands montants) s'ajoutent à
+  # ui · num · doc · ar. C'est un ARBITRAGE EXPLICITE de la médecin, qui prime
+  # sur le choix typographique d'ADR-022 ; le seuil est donc relevé ici plutôt
+  # que le contrôle contourné. Ce qu'il garde de son sens : le nombre est
+  # FERMÉ — une septième famille rendra ROUGE, comme prévu.
+  if [ "$n_vars" -eq 6 ]; then
+    vert "les 6 familles sont câblées" "ui · num · doc · ar · inter · display"
   else
-    rouge "familles câblées" "$n_vars sur 4"
+    rouge "familles câblées" "$n_vars sur 6"
   fi
 
   if [ "$n_ext" -eq 0 ]; then

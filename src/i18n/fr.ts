@@ -449,21 +449,12 @@ export const fr = {
    */
   finances: {
     titre: "Finances",
-    recetteDuJour: "Recette du jour",
-    perimetreCabinet: "Toutes les séances du cabinet",
-    perimetrePraticienne: "Vos séances uniquement",
-    seances: "Séances",
-    enAttente: "Encaissements en attente",
-    paiementsDuJour: "Paiements du jour",
-    numeroRecu: "Reçu",
-    encaisser: "Encaisser",
-    encaisse: "Encaissé",
-    encaissementEnregistre: "Encaissement enregistré.",
-    /** Aucune donnée fictive dans un écran livré (règle 8) : un vide honnête. */
-    aucunPaiement:
-      "Aucun encaissement aujourd'hui. Les tarifs fixés en fin de séance apparaissent ici.",
 
-    /* Le bloc de saisie en fin de séance. */
+    /* ═══ CONSULTATION — le bloc tarif, inchangé ═══════════════════════════
+     * Ces clés appartiennent à l'écran de SÉANCE, pas à /finances. Elles
+     * survivent au passage en comptabilité de caisse parce que la saisie du
+     * tarif, elle, n'a pas changé — et depuis 037 elle est même DEVENUE une
+     * condition de clôture. */
     tarifTitre: "Tarif de la séance",
     tarifIndication: "Dinars entiers. Le montant est enregistré, pas imprimé.",
     tarifMontant: "Montant",
@@ -472,23 +463,31 @@ export const fr = {
       "Une somme encaissée est une pièce comptable. La corriger se fait hors de cet écran.",
     tarifSeanceIntrouvable:
       "Cette séance n'a pas pu être retrouvée. Le tarif n'a pas été enregistré.",
+    numeroRecu: "Reçu",
 
-    /* ═══ V6-FINANCE — la période (D-23) ═══════════════════════════════════
-     *
-     * ⚠️ « FACTURÉ » N'EST PAS « ENCAISSÉ », ET C'EST LA CORRECTION CENTRALE
-     * DE CE LOT. L'écran affichait `day_revenue.total_dzd` — la somme de TOUS
-     * les tarifs de la journée, reçus ou non — sous le titre « Recette du
-     * jour », juste au-dessus d'une ligne « Encaissements en attente ». Une
-     * recette est de l'argent reçu. Le chiffre était juste, le mot était faux,
-     * et un mot faux sur une caisse se recopie dans un carnet.
-     *
-     * Les trois termes ne sont JAMAIS interchangeables :
-     *   Facturé  — les tarifs fixés sur la période, reçus ou non
-     *   Encaissé — l'argent réellement entré, fenêtre sur `collected_at`
-     *   En attente — facturé, pas encore reçu
-     */
     incoherence:
       "Les chiffres de cette période ne se recoupent pas. Aucune donnée n'a été modifiée. Réessayez ; si le problème persiste, signalez-le.",
+
+    /* ═══ COMPTABILITÉ DE CAISSE ═══════════════════════════════════════════
+     *
+     * ⚠️ IL N'Y A QU'UN SEUL CHIFFRE DE RECETTE : l'argent reçu.
+     *
+     * Le lot précédent nommait quatre grandeurs — Facturé, Encaissé, En
+     * attente, Taux d'encaissement — parce qu'il modélisait un cabinet qui
+     * facture puis se fait payer. Celui-ci est au COMPTANT : la patiente règle
+     * à la séance. « Facturé » et « encaissé » y désignaient la même chose à
+     * quelques exceptions près, et ces quatre mots occupaient la moitié de
+     * l'écran pour une distinction qui n'existe pas dans ce cabinet.
+     *
+     * Les impayés n'ont pas disparu — ils sont redevenus ce qu'ils sont : des
+     * EXCEPTIONS, qui vivent dans « À votre attention » et dans l'onglet
+     * Séances & paiements, jamais en tête d'écran comme un second total.
+     */
+    onglets: {
+      apercu: "Vue d'ensemble",
+      charges: "Charges",
+      seances: "Séances & paiements",
+    },
 
     periodes: {
       legende: "Période affichée",
@@ -498,107 +497,162 @@ export const fr = {
       annee: "Cette année",
       personnalise: "Personnalisé",
       du: "Du",
-      au: "Au",
+      au: "au",
       jours: "jours",
       unJour: "1 jour",
-      appliquer: "Afficher cette période",
-      plageInvalide: "Période invalide : 366 jours au maximum, et la fin doit suivre le début.",
+      appliquer: "Appliquer",
+      plageInvalide:
+        "Cette plage de dates n'est pas valide. Vérifiez que la fin suit le début, et que la période ne dépasse pas un an.",
     },
 
-    kpi: {
-      facture: "Facturé",
-      factureAide: "Les tarifs fixés sur la période, encaissés ou non.",
-      encaisse: "Encaissé",
-      encaisseAide: "L'argent réellement entré en caisse sur la période, y compris pour des séances plus anciennes.",
-      /**
-       * ⚠️ DEUX « ENCAISSÉ » COEXISTENT, ET ILS NE SE MÉLANGENT JAMAIS.
-       *
-       *   Encaissé (caisse)   — fenêtre sur `collected_at`. Ce qui est ENTRÉ.
-       *                         Peut dépasser le facturé : une séance de
-       *                         janvier encaissée en février compte en février.
-       *   dont / assiette     — fenêtre sur `created_at`. De ce qui a été
-       *                         FACTURÉ sur la période, ce qui a été reçu.
-       *
-       * Seul le second se soustrait du facturé (invariant I-1), et c'est donc
-       * lui — et lui seul — qui apparaît dans la décomposition ci-dessous et
-       * dans le graphique d'évolution. Les afficher sous le même mot ferait
-       * trois cartes qui ne s'additionnent pas, sans que rien ne l'explique.
-       */
-      decomposition: "dont {encaisse} encaissé · {attente} en attente",
-      attente: "En attente",
-      attenteAide: "Facturé sur cette période, pas encore encaissé.",
-      taux: "Taux d'encaissement",
-      tauxAide: "Part du facturé de la période déjà encaissée.",
-      revenuMoyen: "Revenu moyen par séance",
-      seancesTarifees: "séances tarifées",
-      /** Une séance sans tarif fixé n'est pas comptée — le mot le dit. */
-      seancesTarifeesAide: "Une séance dont le tarif n'a pas été fixé n'est pas comptée.",
+    pulse: {
+      aujourdhui: "Aujourd'hui",
+      aujourdhuiAide: "L'argent entré en caisse depuis minuit, heure d'Alger.",
+      semaine: "Cette semaine",
+      semaineAide: "L'argent entré en caisse depuis lundi.",
+      mois: "Ce mois",
+      moisAide: "L'argent entré en caisse depuis le 1er du mois.",
+      charges: "Charges",
+      chargesAide:
+        "Les charges imputées sur la période. Une charge trimestrielle compte pour un tiers par mois, une annuelle pour un douzième.",
+      resultatNet: "Résultat net",
+      resultatNetAide: "Recette de la période moins les charges de la période.",
+      seances: "{n} séances",
+      uneSeance: "1 séance",
+      aucuneSeance: "Aucune séance",
+      panierMoyen: "Panier moyen {montant}",
+      chargesRecurrentes: "{n} charges récurrentes",
+      uneChargeRecurrente: "1 charge récurrente",
       absent: "—",
-      vsJours: "vs {n} jours précédents",
-      aucunPrecedent: "Rien sur la période comparable",
-      indisponible: "Comparaison indisponible",
     },
 
-    graphiques: {
-      evolution: "Évolution",
-      evolutionAide: "Sur les séances de la période : encaissé et en attente se cumulent pour former le facturé.",
-      legendeEncaisse: "Encaissé sur ces séances",
-      legendeAttente: "En attente sur ces séances",
-      repartition: "D'où vient le revenu",
-      parPraticienne: "Par praticienne",
-      calendrier: "Calendrier",
-      calendrierAide: "Intensité du facturé, jour par jour.",
-      nonRattache: "Non rattaché",
-      nonRattacheAide:
-        "Paiements dont le type de consultation n'est pas renseigné. Ils comptent dans le total.",
-      aVenir: "À venir",
-      aucuneSeance: "aucune séance",
-      tableauDonnees: "Données du graphique",
-      grain: { jour: "par jour", semaine: "par semaine", mois: "par mois" },
+    evolution: {
+      titre: "Évolution",
+      legendeRevenu: "Recette",
+      legendeCharges: "Charges",
+      legendeNet: "Résultat net",
+      aide: "Six mois glissants, jusqu'au mois en cours.",
+      tableau: "Évolution mensuelle, en tableau",
+      colonneMois: "Mois",
+    },
+
+    anatomie: {
+      titre: "Anatomie",
+      revenus: "D'où vient l'argent",
+      charges: "Où part l'argent",
+      aucunRevenu: "Aucune recette sur la période.",
+      aucuneCharge: "Aucune charge sur la période.",
+      nonRattache: "Séance non rattachée",
+      part: "{pct} %",
     },
 
     attention: {
       titre: "À votre attention",
-      "attente-elevee": "{n} séances restent à encaisser, soit {montant}.",
-      corrections: "{n} correction(s) de montant sur la période.",
-      "baisse-marquee": "Le facturé recule de {montant} par rapport à la période comparable.",
-      voirImpayes: "Voir les encaissements en attente",
-      ouvrirJournal: "Ouvrir le journal",
-      verifierCorrections: "Vérifier les corrections",
+      impayes: "Impayés",
+      impayesDetail: "{n} séances",
+      impayeUn: "1 séance",
+      aucunImpaye: "Aucun impayé.",
+      plusAncien: "Le plus ancien remonte à {n} jours.",
+      plusAncienUn: "Le plus ancien remonte à 1 jour.",
+      echeances: "Prochaines échéances",
+      aucuneEcheance: "Aucune échéance à venir.",
+      dansJours: "dans {n} j",
+      demain: "demain",
+      aujourdhui: "aujourd'hui",
     },
 
-    journal: {
-      titre: "Journal des paiements",
-      ouvrir: "Ouvrir le journal des paiements",
-      fermer: "Fermer le journal",
-      precedente: "Page précédente",
-      suivante: "Page suivante",
-      pageSur: "Page {n} sur {total}",
-      /** L'ouverture du journal écrit une trace de lecture (ADR-019). Le dire. */
-      traceAide: "L'ouverture du journal est enregistrée dans le journal d'accès.",
-      aucun: "Aucun paiement sur cette période.",
+    calendrier: {
+      titre: "Calendrier",
+      aide: "Intensité de l'argent encaissé, jour par jour.",
+      cellule: "{date} · {montant} · {n} séances",
+      celluleImpaye: "{date} · {montant} · {n} séances · impayé",
+      moins: "moins",
+      plus: "plus",
     },
 
-    /**
-     * Le résumé est composé de ces fragments, par `resumerPeriode()`. Aucun
-     * modèle de langage n'intervient : chaque phrase nomme une métrique déjà
-     * affichée à l'écran.
-     */
-    resume: {
-      aucuneSeance: "Aucune séance tarifée sur cette période.",
-      uneSeance: "Une séance tarifée.",
-      nSeances: "{n} séances tarifées.",
-      seance: "séance",
-      seances: "séances",
-      toutEncaisse: "Tout est encaissé.",
-      resteAEncaisser: "{n} {mot} en attente d'encaissement.",
-      enHausse: "En hausse de {pct} % sur les {jours} jours comparables.",
-      enBaisse: "En baisse de {pct} % sur les {jours} jours comparables.",
-      aucunPrecedent: "Aucune période comparable.",
+    tableauCharges: {
+      intitule: "Intitulé",
+      categorie: "Catégorie",
+      montant: "Montant",
+      type: "Type",
+      frequence: "Fréquence",
+      echeance: "Prochaine échéance",
+      actions: "Actions",
+      /* ⚠️ DEUX TOTAUX, JAMAIS ADDITIONNÉS — un rythme mensuel et des dépenses
+       * ponctuelles ne sont pas la même unité. Les sommer donnerait un nombre
+       * sans signification sur lequel on déciderait quand même. */
+      totalRecurrent: "Récurrent mensuel",
+      totalPonctuel: "Ponctuel sur la période",
+      ajouter: "Ajouter une charge",
+      modifier: "Modifier",
+      desactiver: "Désactiver",
+      aucune: "Aucune charge enregistrée.",
+      recurrente: "Récurrente",
+      ponctuelle: "Ponctuelle",
+      sansEcheance: "—",
+      confirmerDesactivation:
+        "Désactiver cette charge ? Elle sortira des totaux à venir ; l'historique déjà produit reste lisible.",
+    },
+
+    formulaireCharge: {
+      titreCreer: "Nouvelle charge",
+      titreModifier: "Modifier la charge",
+      intitule: "Intitulé",
+      intitulePlaceholder: "Loyer du cabinet, abonnement, assurance…",
+      montant: "Montant (DZD)",
+      montantIndication: "Dinars entiers, supérieur à zéro.",
+      type: "Type",
+      frequence: "Fréquence",
+      frequenceDesactivee: "Une charge ponctuelle n'a pas de fréquence.",
+      categorie: "Catégorie",
+      date: "Date",
+      enregistrer: "Enregistrer la charge",
+      annuler: "Annuler",
+      champRequis: "Ce champ est requis.",
+    },
+
+    tableauSeances: {
+      date: "Date",
+      patient: "Patient",
+      type: "Type",
+      montant: "Montant",
+      mode: "Mode",
+      statut: "Statut",
+      action: "Action",
+      paye: "payé",
+      impaye: "impayé",
+      recu: "Reçu",
+      relancer: "Relancer",
+      badge: "{n} impayés · {montant}",
+      badgeUn: "1 impayé · {montant}",
+      aucunImpaye: "Aucun impayé",
+      aucune: "Aucune séance tarifée sur cette période.",
+    },
+
+    categories: {
+      local: "Local",
+      personnel: "Personnel",
+      outils: "Outils",
+      assurance: "Assurance",
+      autre: "Autre",
+    },
+
+    /* `app.payment_method` ne porte qu'une valeur (ADR-010 : espèces). La table
+       existe quand même : afficher la clé d'enum brute — « cash » — dans une
+       interface intégralement française serait une chaîne en dur anglaise. */
+    modes: {
+      cash: "Espèces",
+    },
+
+    frequences: {
+      mensuelle: "Mensuelle",
+      trimestrielle: "Trimestrielle",
+      annuelle: "Annuelle",
     },
 
     videPeriode:
-      "Aucune séance tarifée sur cette période. Les tarifs fixés en fin de séance apparaissent ici.",
+      "Aucun mouvement sur cette période. Les séances tarifées et les charges apparaissent ici.",
+    reessayer: "Réessayer",
   },
 
   /**

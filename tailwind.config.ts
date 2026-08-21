@@ -398,6 +398,23 @@ const config: Config = {
       // au-dessus du contenu — §3 enfin tenu, cf. `--grid-nav-compact`.
       app: "var(--grid-nav-width) minmax(0, 1fr)",
       "app-compact": "var(--grid-nav-compact) minmax(0, 1fr)",
+      // La rangée d'analyse des Finances : Évolution / Anatomie / Attention.
+      // Trois fractions INÉGALES, nommées ici plutôt qu'écrites en syntaxe
+      // arbitraire dans l'écran (I10). `minmax(0, …)` autorise chaque panneau
+      // à se comprimer sous la largeur de son contenu — sans lui, un tableau
+      // interne impose sa largeur et fait déborder la page.
+      finance: "minmax(0, 40fr) minmax(0, 32fr) minmax(0, 28fr)",
+      // warning: `gridTemplateColumns` est REMPLACE, pas etendu : `grid-cols-1`,
+      // `grid-cols-2`... de Tailwind N'EXISTENT PAS dans ce depot. Une classe
+      // absente ne produit aucune erreur — elle ne fait simplement RIEN, et la
+      // grille retombe en une colonne. C'est exactement le defaut mesure sur la
+      // rangee de tuiles des Finances : cinq tuiles empilees au lieu d'une
+      // rangee, et une page qui defilait de 761 px.
+      un: "minmax(0, 1fr)",
+      deux: "repeat(2, minmax(0, 1fr))",
+      trois: "repeat(3, minmax(0, 1fr))",
+      // Le pouls financier : cinq tuiles de largeur egale, jamais moins.
+      pouls: "repeat(5, minmax(0, 1fr))",
     },
     // Largeurs de grille §3 — source unique tokens.css, aucune valeur ici.
     maxWidth: {
