@@ -272,6 +272,9 @@ export default function DocumentsPage(): React.JSX.Element {
 
   const emettre = useCallback(async () => {
     if (dossier === null || envoi) return;
+    // Le bouton n'est pas rendu dans ce cas ; un bouton absent n'est pas une
+    // garantie, et c'est ici que part l'écriture.
+    if (dossier.birthDate === null) return;
 
     setEnvoi(true);
     setErreurEmission(undefined);
@@ -284,7 +287,13 @@ export default function DocumentsPage(): React.JSX.Element {
     setEnvoi(false);
 
     if (!r.ok) {
-      setErreurEmission(r.error.message);
+      // Un refus de RÈGLE MÉTIER dans cet écran a une cause dominante et
+      // vérifiable : une fiche patient incomplète. Le message générique
+      // renvoyait au journal d'activité — que personne n'ouvre entre deux
+      // patients. On nomme le geste, sans jamais relayer le texte de Postgres.
+      setErreurEmission(
+        r.error.code === "regle-metier" ? fr.documents.erreurs.emissionRefusee : r.error.message,
+      );
       return;
     }
     if (r.data === null) {
@@ -309,6 +318,21 @@ export default function DocumentsPage(): React.JSX.Element {
   //
   // `null` (liste sans HTML) n'est pas « troué » : c'est une ligne de liste,
   // qui n'a jamais prétendu porter la pièce.
+  // ⚠️ LE REFUS DE `043`, ANNONCÉ AVANT L'ALLER-RETOUR.
+  // Sans date de naissance, `age` et `birth_date_fr` sont NULL : la porte refuse
+  // d'émettre, et elle a raison — un certificat ne part pas avec un blanc. Mais
+  // son `P0001` arrive à l'écran en message générique (`errors.ts` n'expose
+  // jamais le texte de Postgres, I5), et la praticienne ne savait pas quoi
+  // corriger. L'écran a l'information : il le dit lui-même, et il le dit AVANT.
+  //
+  // ⚠️ CE CONTRÔLE EST INCOMPLET, ET C'EST ASSUMÉ. `043` exige AUSSI un sexe,
+  // que `get_patient` ne rend pas — l'ajouter à la porte changerait son type de
+  // retour, donc exigerait un DROP, qui réattribuerait la fonction et rouvrirait
+  // la cloison (défaut de 018). Le cas « sexe manquant » reste donc rattrapé par
+  // la base, avec le message de repli `emissionRefusee`. On ne double PAS la
+  // règle ici : la base reste seule juge, l'écran ne fait qu'anticiper.
+  const dossierIncomplet = dossier !== null && dossier.birthDate === null;
+
   const imprimable =
     ouvert !== null &&
     ouvert.renderedHtml !== null &&
@@ -425,7 +449,7 @@ export default function DocumentsPage(): React.JSX.Element {
                     // qu'il ait été pris en compte.
                     <EtatVide
                       message={fr.documents.vide.phrase}
-                      {...(emission
+                      {...(emission || dossierIncomplet
                         ? {}
                         : {
                             action: (
@@ -442,7 +466,7 @@ export default function DocumentsPage(): React.JSX.Element {
                         documentOuvert={ouvert === null ? null : ouvert.id}
                         onOuvrir={(id) => void ouvrir(id)}
                       />
-                      {emission ? null : (
+                      {emission || dossierIncomplet ? null : (
                         <Bouton rang="principal" onClick={ouvrirEmission}>
                           {fr.documents.emission.ouvrir}
                         </Bouton>
@@ -456,7 +480,24 @@ export default function DocumentsPage(): React.JSX.Element {
                 <BlocErreur message={erreurOuverture} />
               )}
 
-              {emission ? (
+              {/* ⚠️ POSÉ MÊME QUAND AUCUN DOCUMENT N'EXISTE, et donc en dehors
+                  du panneau de liste : c'est précisément sur un dossier vierge
+                  que la praticienne vient émettre, et c'est là qu'elle se
+                  heurtait au refus sans en connaître la cause. */}
+              {/* ⚠️ AUCUN BOUTON D'ACTION, ET C'EST DÉLIBÉRÉ. Le geste évident
+                  serait « Ouvrir la fiche du patient » — mais `/patients/[id]`
+                  AFFICHE la date de naissance sans permettre de la corriger, et
+                  aucun écran ne le permet aujourd'hui : la porte auditée
+                  `app.update_patient` (020) accepte bien `birth_date` et `sex`,
+                  simplement rien ne l'appelle encore côté service. Un bouton
+                  mènerait donc à une impasse, ce qui est pire qu'un message
+                  sans bouton. Le message dit l'état réel ; il sera à reprendre
+                  le jour où l'écran Patients saura écrire. */}
+              {dossierIncomplet ? (
+                <BlocErreur message={fr.documents.erreurs.dossierIncomplet} />
+              ) : null}
+
+              {emission && !dossierIncomplet ? (
                 <FormulaireEmission
                   type={type}
                   onChangerType={changerType}
@@ -473,7 +514,7 @@ export default function DocumentsPage(): React.JSX.Element {
 
             {/* Colonne droite : la feuille. */}
             <div className="flex min-h-0 flex-col gap-2 overflow-y-auto">
-              {emission ? (
+              {emission && !dossierIncomplet ? (
                 <>
                   <p className="font-ui text-label text-ink-500">
                     {fr.documents.emission.apercuAvertissement}

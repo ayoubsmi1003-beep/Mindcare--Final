@@ -574,6 +574,36 @@ export const fr = {
       preserveEmission: "Aucun certificat n'a été émis.",
       dossierIntrouvable: "Ce dossier n'est pas accessible.",
       /**
+       * ⚠️ LE DOSSIER INCOMPLET — REFUS PRÉVU PAR L'ÉCRAN, PAS SUBI.
+       *
+       * `043` refuse d'émettre si le dossier n'a ni sexe ni date de naissance :
+       * `civilite`, `age` et `birth_date_fr` en dérivent, et sans elles le
+       * certificat sortirait avec des marqueurs littéraux. Le refus est JUSTE.
+       *
+       * Mais il remonte en `P0001`, que `errors.ts` traduit — à bon droit — par
+       * un message générique : le texte brut de Postgres n'atteint jamais
+       * l'écran, parce qu'il porte régulièrement la valeur fautive (I5, règle
+       * 1). La praticienne lisait donc « refusé par une règle du dossier
+       * médical » sans savoir QUOI corriger, devant un formulaire qui lui
+       * paraissait complet.
+       *
+       * L'écran connaît déjà la date de naissance — il affiche « Non renseigné »
+       * dans l'aperçu. Il annonce donc le refus AVANT l'aller-retour, avec le
+       * geste à faire. Même principe que la validation de `champs.ts` : un refus
+       * qui n'a pas quitté la machine n'a rien coûté, et son message est écrit
+       * par nous plutôt que par un SQLSTATE.
+       */
+      dossierIncomplet:
+        "Ce dossier n'a pas de date de naissance : aucun certificat ne peut en être émis. La date et le sexe se saisissent dans le dossier du patient — l'écran Patients ne les modifie pas encore.",
+      /**
+       * Le filet, pour les refus que l'écran NE SAIT PAS prévoir — au premier
+       * rang desquels un sexe manquant, que `get_patient` ne rend pas. Nommer
+       * les deux causes vérifiables vaut mieux que renvoyer au journal
+       * d'activité, que la praticienne n'ouvrira pas entre deux patients.
+       */
+      emissionRefusee:
+        "L'émission a été refusée par une règle du dossier. Aucun certificat n'a été émis. Vérifiez que la fiche du patient porte bien une date de naissance ET un sexe, puis réessayez.",
+      /**
        * ⚠️ L'INVARIANT DE SORTIE. Un marqueur `{{…}}` sans valeur est laissé
        * LITTÉRAL par `app.render_template` (030 §1quater) — délibérément :
        * « un trou invisible dans un certificat est pire qu'un marqueur
