@@ -248,6 +248,26 @@ peut donc pas se déclencher sur un certificat sain.
 
 ### 6quater. LES MODÈLES v2 (045) — le texte approuvé, et la clé facultative
 
+> ✅ **045 EST APPLIQUÉE SUR L'INSTANCE** — `bash scripts/db-migrate.sh`, VERT le
+> 2026-08-22 : 43 migrations en base, 0 en attente.
+>
+> ⚠️ **ET ELLE NE L'ÉTAIT PAS AU MOMENT DU COMMIT — L'ÉCRAN A CASSÉ POUR ÇA.**
+> Le lot a été écrit, rejoué sur base jetable, mis au vert, puis COMMITÉ sans
+> être appliqué à l'instance vivante. L'écran envoyait donc `traitement_1` /
+> `traitement_2` à une porte qui attendait encore `traitement`, et
+> `issue_document` refusait — un `P0001` que le journal rendait fidèlement mais
+> qui ne dit rien de sa cause : « L'enregistrement a été refusé par une règle du
+> dossier médical ». Rien n'était cassé dans le code.
+>
+> **C'est la quatrième fois que ce dépôt marche dans ce trou**, et la mémoire du
+> projet le note déjà : « un écran buggé est souvent une migration jamais
+> appliquée ». La règle qui en sort, et qui vaut pour tous les lots à venir :
+> **un checkpoint vert sur base jetable ne dit RIEN de l'instance.** `db-migrate
+> --dry-run` doit être joué AVANT de croire un écran cassé, et AVANT de commiter
+> un lot qui change une porte.
+
+
+
 `docs/DOCUMENT-TEMPLATES-v2.md`, **approuvé de la main de la praticienne**, avec
 quatre maquettes (`docs/*.jpg`), est arrivé le 2026-08-22 et **supplante**
 `docs/DOCUMENT-TEMPLATES.md`, retiré du dépôt le même jour. Les quatre corps ont
