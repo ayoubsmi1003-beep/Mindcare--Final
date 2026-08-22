@@ -37,6 +37,44 @@ export type TypeDocument =
   | "certificat_medical"
   | "justification";
 
+/**
+ * Le jeu de champs EXACT attendu par `app.issue_document` pour chaque type.
+ *
+ * ⚠️ MIROIR D'UN CONTRAT GELÉ EN BASE (030 §2, ADR-011), PAS UNE SOURCE.
+ * La base refuse une clé en trop comme une clé manquante ; ce tableau ne fait
+ * que permettre au formulaire de demander les bons champs AVANT l'aller-retour.
+ * Il ne décide rien : si les deux divergent un jour, c'est la base qui a
+ * raison et l'écran qui tombe — pas l'inverse.
+ *
+ * ⚠️ `jours_lettres` EST DEMANDÉ PAR LA BASE MAIS N'EST PAS SAISI. 030 l'exige
+ * dans le jeu de clés ; 043 l'ÉCRASE au moment du rendu par le résultat de
+ * `app.nombre_en_lettres`. Ce qui s'imprime ne peut donc pas contredire le
+ * nombre en chiffres, quoi qu'envoie l'appelant. Le formulaire l'affiche en
+ * lecture seule, pour que la praticienne voie ce qui partira.
+ *
+ * ⚠️ DEPUIS 045, IL EXISTE UNE CLÉ FACULTATIVE, ET « FACULTATIF » NE VEUT PAS
+ * DIRE « OMISSIBLE ». `traitement_2` (certificat médical, seconde puce) peut
+ * partir VIDE, mais elle doit partir : le test d'ensemble reste exact, et une
+ * clé absente est toujours un refus. Pire, si la base l'acceptait absente, le
+ * marqueur resterait littéral sur le papier. L'écran envoie donc TOUJOURS les
+ * trois clés — voir la construction du payload dans `/documents`, qui les
+ * dérive du contrat plutôt que de ce que la praticienne a tapé.
+ */
+export const CHAMPS_PAR_TYPE: Readonly<Record<TypeDocument, readonly string[]>> = {
+  bonne_sante_mentale: ["id_document_number", "mairie"],
+  suivi_medical: ["jours", "jours_lettres", "date_debut"],
+  certificat_medical: ["date_naissance", "traitement_1", "traitement_2"],
+  justification: ["date_consultation"],
+};
+
+/** L'ordre d'affichage des types dans l'écran. Le plus courant en premier. */
+export const TYPES_DOCUMENT: readonly TypeDocument[] = [
+  "bonne_sante_mentale",
+  "suivi_medical",
+  "certificat_medical",
+  "justification",
+];
+
 export interface Document {
   readonly id: string;
   readonly docType: TypeDocument;
@@ -192,4 +230,29 @@ export async function markDocumentPrinted(documentId: string): Promise<Result<nu
   const compte = result.data[0] ?? null;
   log.info("documents.impression", { count: compte ?? 0 });
   return ok(compte);
+}
+
+/**
+ * Convertit un nombre de jours en toutes lettres — pour l'APERÇU du formulaire.
+ *
+ * ⚠️ CE N'EST PAS CETTE VALEUR QUI S'IMPRIME. Le certificat porte ce que
+ * `app.issue_document` recalcule à l'émission (043 §5bis), pas ce que l'écran
+ * a affiché. Appeler la même fonction Postgres ici garantit simplement que
+ * l'aperçu ne ment pas : une conversion écrite en TypeScript serait une
+ * SECONDE vérité, qui divergerait un jour sans que rien ne le signale.
+ *
+ * Rend `null` hors du domaine 1–999, où la base lève : le formulaire affiche
+ * alors sa propre borne plutôt qu'un message de Postgres.
+ */
+export async function nombreEnLettres(n: number): Promise<Result<string | null>> {
+  if (!Number.isInteger(n) || n < 1 || n > 999) return ok(null);
+
+  const result = await db().rpc<string>("nombre_en_lettres", { p_n: n });
+
+  if (!result.ok) {
+    log.error("documents.lettres", logFieldsFor(result.error));
+    return err(result.error);
+  }
+
+  return ok(result.data[0] ?? null);
 }

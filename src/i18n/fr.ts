@@ -440,6 +440,169 @@ export const fr = {
   },
 
   /**
+   * V8 — Documents. Émettre, relire, imprimer un certificat.
+   *
+   * ⚠️ AUCUNE DE CES PHRASES NE PROMET CE QUE LE CODE NE FAIT PAS.
+   *
+   * `impression.avertissementCompteur` en est l'exemple à ne pas défaire : le
+   * navigateur ne dit JAMAIS si la feuille est sortie ou si la boîte de
+   * dialogue a été annulée. `printed_count` compte donc des ENVOIS à
+   * l'impression, pas des tirages. Écrire « imprimé 2 fois » affirmerait une
+   * chose que le système ne peut pas savoir.
+   *
+   * `emission.apercuAvertissement` ferme l'autre piège : l'aperçu affiché
+   * AVANT l'émission est reconstitué par l'écran, alors que la pièce est rendue
+   * et figée par la base (030 §1quater). Les deux se ressemblent, ils ne sont
+   * pas le même document — et c'est le second qui engage la praticienne.
+   *
+   * ⚠️ `erreurs.dossierIntrouvable` sert AUSSI BIEN au dossier inexistant
+   * qu'au dossier d'une consœur, même raison que `patients.ficheIntrouvable` :
+   * la base rend NULL dans les deux cas (ADR-003) et deux phrases distinctes
+   * fabriqueraient un oracle d'existence.
+   */
+  documents: {
+    titre: "Documents",
+    sousTitre: "Certificats et attestations",
+
+    types: {
+      bonne_sante_mentale: "Certificat de bonne santé mentale",
+      suivi_medical: "Certificat de suivi médical",
+      certificat_medical: "Certificat médical",
+      justification: "Justification",
+    },
+
+    selecteur: {
+      titre: "Choisir un dossier",
+      rechercher: "Rechercher un patient",
+      indication: "Nom, téléphone ou numéro de dossier",
+      lancerRecherche: "Rechercher",
+      aucunResultat: "Aucun dossier visible dans votre périmètre.",
+      changer: "Changer de dossier",
+      dossier: "Dossier",
+    },
+
+    liste: {
+      titre: "Documents du dossier",
+      colonneType: "Type",
+      colonneDate: "Émis le",
+      colonneImpressions: "Impressions",
+      ouvrir: "Ouvrir",
+    },
+
+    emission: {
+      ouvrir: "Générer un certificat",
+      choisirType: "Type de document",
+      /* Le bouton qui SOUMET le formulaire. Distinct de « ouvrir » : les deux
+       * portaient le même libellé, donc deux gestes différents disaient la même
+       * chose — « ouvrir le formulaire » et « passer à la confirmation ». Un
+       * bouton nomme SON action (04-DESIGN-SYSTEM §5). */
+      verifier: "Vérifier le certificat",
+      apercuTitre: "Aperçu avant émission",
+      apercuAvertissement:
+        "Aperçu reconstitué. Le certificat définitif est rendu et figé par le serveur au moment de l'émission.",
+      confirmerTitre: "Émettre ce certificat ?",
+      confirmerCorps:
+        "Un certificat émis ne se modifie ni ne s'annule. Une erreur se corrige en émettant un nouveau certificat.",
+      confirmer: "Émettre le certificat",
+      annuler: "Annuler",
+      enCours: "Émission en cours…",
+      emis: "Certificat émis.",
+    },
+
+    champs: {
+      id_document_number: "Numéro de la pièce d'identité",
+      mairie: "Mairie de délivrance",
+      jours: "Nombre de jours d'arrêt",
+      jours_lettres: "En toutes lettres",
+      date_debut: "À compter du",
+      date_naissance: "Date de naissance",
+      /* DOCUMENT-TEMPLATES-v2 §3 : deux puces, la seconde facultative. */
+      traitement_1: "Traitement — 1re ligne",
+      traitement_2: "Traitement — 2e ligne (facultatif)",
+      date_consultation: "Date de la consultation",
+      aideJoursLettres: "Calculée par le serveur — non modifiable.",
+      aideDateNaissance: "Reprise du dossier. Vérifiez avant d'émettre.",
+      aideTraitement: "Texte libre, tel qu'il apparaîtra sur le certificat.",
+      /* Dire ce que le vide FAIT, pas seulement qu'il est permis : « laissez
+       * vide » sans la conséquence laisse craindre une puce blanche imprimée. */
+      aideTraitement2: "Laissez vide pour n'imprimer qu'une seule ligne.",
+      formatDate: "JJ/MM/AAAA",
+    },
+
+    /** Les libellés du bloc patient de l'en-tête, côté APERÇU seulement. */
+    enTete: {
+      date: "Date :",
+      nom: "Nom :",
+      prenom: "Prénom :",
+      age: "Age :",
+      ans: "ans",
+    },
+
+    apercu: {
+      /* Le bloc identité de l en-tête vit dans app.profiles, que l aperçu ne lit
+       * pas. On le DIT plutôt que d écrire un nom approximatif : un en-tête faux
+       * dans un aperçu est pire qu un en-tête absent, parce qu il rassure. */
+      enTetePraticienne: "En-tête de la praticienne — composé par le serveur à l’émission.",
+      corpsRenduParServeur:
+        "Le texte du certificat est celui du modèle du cabinet. Il est composé par le serveur ; voici les valeurs qui y seront insérées :",
+    },
+
+    impression: {
+      imprimer: "Imprimer",
+      envoyees: "Envois à l'impression :",
+      avertissementCompteur:
+        "Ce compteur mesure les envois à l'impression, pas les feuilles sorties.",
+    },
+
+    vide: {
+      phrase: "Aucun document émis pour ce patient.",
+      action: "Générer un certificat",
+      sansDossier: "Choisissez un dossier pour voir ses documents.",
+      /* La colonne de droite quand un dossier EST choisi mais qu’aucun document
+       * n’est ouvert. Distincte de sansDossier : afficher « choisissez un
+       * dossier » alors qu’un dossier est affiché en en-tête est une phrase que
+       * l’écran contredit lui-même, et une phrase fausse coûte plus qu’une
+       * phrase absente. */
+      aucunDocumentOuvert: "Aucun document ouvert.",
+    },
+
+    erreurs: {
+      chargementListe: "La liste des documents de ce dossier n'a pas pu être lue.",
+      chargementDocument: "Ce document n'a pas pu être ouvert.",
+      emission: "Le certificat n'a pas été émis.",
+      preserveListe: "Aucun document n'a été émis, et la liste existante est intacte.",
+      preserveEmission: "Aucun certificat n'a été émis.",
+      dossierIntrouvable: "Ce dossier n'est pas accessible.",
+      /**
+       * ⚠️ L'INVARIANT DE SORTIE. Un marqueur `{{…}}` sans valeur est laissé
+       * LITTÉRAL par `app.render_template` (030 §1quater) — délibérément :
+       * « un trou invisible dans un certificat est pire qu'un marqueur
+       * visible ». Vrai en base ; faux devant une imprimante. Sur le papier,
+       * un `{{praticien.full_name_ar}}` n'est plus un signal, c'est un
+       * certificat médico-légal abîmé remis à un notaire.
+       *
+       * L'écran refuse donc de composer et d'imprimer une pièce trouée. Il ne
+       * la répare pas et ne la masque pas : la ligne émise reste intacte et
+       * immuable en base, c'est le TIRAGE qui est bloqué. La cause est
+       * toujours la même — une valeur de `app.profiles` non saisie sur
+       * l'instance — et le message nomme le geste, pas le défaut.
+       */
+      marqueurNonResolu:
+        "Ce certificat ne peut pas être imprimé : l'en-tête du cabinet est incomplet.",
+      marqueurNonResoluAide:
+        "Une information de la praticienne manque dans les paramètres du cabinet. Complétez-la, puis émettez un nouveau certificat — celui-ci reste dans le dossier, il ne se modifie pas.",
+      champRequis: "Ce champ est obligatoire.",
+      joursHorsBornes: "Entre 1 et 365 jours.",
+      joursNonEntier: "Un nombre entier de jours est attendu.",
+      dateInvalide: "Date attendue au format JJ/MM/AAAA.",
+    },
+
+    horsLigne: {
+      emissionBloquee: "Émission indisponible hors ligne.",
+    },
+  },
+
+  /**
    * S7a — Finance. Le tarif en fin de séance et la recette du jour.
    *
    * `perimetreCabinet` / `perimetrePraticienne` recopient ce que la BASE a

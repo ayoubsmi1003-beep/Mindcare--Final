@@ -97,7 +97,12 @@ interface GroupeNav {
  * navigation elle-même ne change pas, et son icône existe déjà (le jeu d'icônes
  * couvre les douze écrans par construction de type).
  */
-const ECRANS_CONSTRUITS: readonly NomEcran[] = ["patients", "agenda", "finances"];
+const ECRANS_CONSTRUITS: readonly NomEcran[] = [
+  "patients",
+  "agenda",
+  "finances",
+  "documents",
+];
 
 /**
  * Composition COMPLÈTE — praticienne (`owner`/`practitioner`). Les deux rôles

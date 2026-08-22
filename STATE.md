@@ -1,6 +1,437 @@
 # STATE — MindCare OS
-**V7-CAISSE VERT · le chemin d'écriture des Finances est réparé · V3 toujours vert**
-Dernière mise à jour : 2026-08-21
+**V8-DOCUMENTS VERT AU CHECKPOINT · les 4 certificats v2 sortent propres, EN A5 · V7-CAISSE et V3 toujours verts**
+Dernière mise à jour : 2026-08-22
+
+---
+
+## ✅ 2026-08-22 — V8-DOCUMENTS : les 4 certificats, du modèle au papier
+
+> ⚠️ **VERT AU CHECKPOINT N'EST PAS VERT TOUT COURT.** Deux contrôles ne
+> s'automatisent pas et RESTENT OUVERTS : la saisie du profil réel sur
+> l'instance, et le tirage papier approuvé. Détail au §7. Ne pas lire ce titre
+> sans lire ce paragraphe.
+
+### 0. Numérotation — pourquoi V8 et pas V7
+
+`STATE.md` intitulait déjà « V7-CAISSE » le lot du 2026-08-21. Le module
+Documents prend donc **V8**. Les migrations 042-044 portent « V7 » dans leurs
+commentaires : elles ont été écrites et **appliquées** avant que la collision ne
+soit vue, et la règle 9 interdit de retoucher une migration appliquée — même un
+commentaire, puisque `COMMENT ON` est stocké en base et que le fichier doit
+rester le miroir exact de ce qui a tourné. **Ne pas « corriger » ce V7-là.**
+
+### 1. LE DÉFAUT PRINCIPAL — le seed et le moteur ne parlaient pas la même langue
+
+`docs/031_seed_document_templates.sql` existait depuis le 2026-08-11, complet,
+avec les dix arbitrages A1→A10 tranchés. Il n'a jamais été appliqué, **et c'est
+heureux** : ses marqueurs sont en français (`{{patient.nom}}`,
+`{{praticien.titre}}`, `{{vars.arret_jours}}`) alors que le contexte de rendu
+construit par `030 §2` est en anglais (`patient.last_name`, `praticien.title`,
+`vars.jours`).
+
+Tous passaient l'allowlist de `render_template` — **donc aucune erreur** — mais
+aucun n'avait de valeur, et un marqueur sans valeur est laissé LITTÉRAL,
+délibérément (030 §1quater : « un trou invisible dans un certificat est pire
+qu'un marqueur visible »). Semé tel quel, un certificat destiné à un notaire
+serait sorti avec `{{praticien.titre}}` imprimé dessus. Pire : les clés
+`arret_*` auraient de toute façon été refusées par la validation d'ensemble
+exact, rendant `suivi_medical` **inémettable**.
+
+**031 reste dans `docs/`, intact** (règle 9, et il garde la genèse des dix
+corrections). Le numéro 031 demeure vacant dans `supabase/migrations/`, sans
+ligne `schema_migrations` : inscrire une migration jamais exécutée serait une
+trace fausse. **031 et 035 : numéros brûlés.**
+
+### 2. Trois migrations
+
+| Migration | Objet | Contrôle qui la refuse si elle est fausse |
+|---|---|---|
+| `042_nombre_en_lettres` | `app.nombre_en_lettres(1..999)` | 16 cas dans la migration : 21, 71, 80, 81, 91, 100, 180, 200, 201… + les deux bornes |
+| `043_document_render_context` | `issue_document` : +`civilite`, +`age`, +`birth_date_fr`, +`full_name_ar`, +`vars.date_affichee`, `jours_lettres` **recalculée** | bloc de cloison (propriétaire, DEFINER, GRANT, BYPASSRLS) + empreinte md5 de `render_template` inchangée |
+| `044_seed_document_templates` | les 4 modèles v1, corrections A1→A10 annotées | liste blanche des 25 clés du contexte + jeu de `vars` par type |
+| `045_document_templates_v2` | les 4 modèles **v2** (approuvés) ; `traitement_2` devient une clé FACULTATIVE de `certificat_medical` | liste blanche rejouée + jeu de `vars` par type + **`<li>` collé à ses balises** + bloc de cloison complet |
+
+**Pourquoi `nombre_en_lettres` est EN BASE et pas en TypeScript.** `030` valide
+`jours_lettres` comme simple clé d'entrée — présente, scalaire, non vide, rien
+de plus. Une appelante pouvait donc soumettre
+`{"jours":"30","jours_lettres":"trois"}` et **la base n'y voyait rien** : un
+certificat d'arrêt de travail dont les chiffres et les lettres se contredisent
+est un faux exploitable devant un employeur. `043` ÉCRASE la valeur reçue au
+moment du rendu. La colonne `variables` continue de stocker la saisie — elle est
+la trace du geste, `rendered_html` est la pièce. **Les confondre ferait mentir
+l'une ou l'autre.**
+
+**Pourquoi `render_template` n'est PAS touchée.** La tentation était d'ajouter un
+préfixe `document.` à l'allowlist pour y loger la date. `030 §1quater` l'avait
+écrit d'avance : « chaque capacité ajoutée ici serait une capacité offerte à qui
+écrirait un modèle ». Passer par `vars` obtient le même résultat sans toucher
+une ligne du moteur. **Aucun `DROP FUNCTION` dans les trois migrations** — un
+DROP réattribue la fonction à `postgres` (`rolbypassrls`) et la cloison tombe
+pendant que la migration reste verte (défaut de 018).
+
+### 3. Le défaut de `030` qui n'en était pas un
+
+La mémoire du projet signalait un `CASE` sans `ELSE` dans `issue_document`,
+exploitable dès qu'une 5ᵉ valeur d'enum arriverait. **Il est déjà fermé**
+(`030:423-426`, `IF v_attendues IS NULL THEN RAISE`). Aucune migration n'était
+nécessaire. Le checkpoint le vérifie par lecture de `prosrc` — **contrôle
+faible, et déclaré tel** : on ne peut pas ajouter une valeur à `app.doc_type`
+pour l'éprouver sans violer la règle 9.
+
+### 4. DEUX FAUX VERTS TROUVÉS DANS LES INSTRUMENTS, PAS DANS LE PRODUIT
+
+C'est la leçon la plus coûteuse de la session, et elle s'est présentée **trois
+fois sous la même forme** : un instrument qui prend une erreur pour une valeur.
+
+**(a) `checkpoint-s7b.sh` — `q()` rendait le texte d'une erreur psql.**
+`docker exec … psql … | tail -1` prenait la dernière ligne de la sortie, y
+compris quand cette ligne appartenait à un message d'erreur. `doc1` valait alors
+`HINT: …` au lieu d'un uuid, et le contrôle 1 — qui ne teste que « non vide » —
+passait **VERT sur une émission qui venait d'échouer**. Les contrôles suivants
+héritaient de la chaîne, la glissaient dans un `WHERE id='…'` et rougissaient
+loin de la cause. Corrigé : `q()` rend `ERREUR`, qui ne vaut ni un uuid, ni
+« NULL », ni « 0 ».
+
+**(b) Le même `tail -1` sur une valeur MULTILIGNE.** `rendered_html` fait
+plusieurs lignes ; le contrôle d'échappement n'inspectait donc que la dernière,
+où la chaîne cherchée ne pouvait pas être. **ROUGE sur un produit sain.**
+Corrigé par `replace(…, chr(10), ' ')`.
+
+**(c) Le détecteur de mode de la mesure navigateur, faux DEUX FOIS.**
+1ʳᵉ version : `script[src*="webpack"]` — Next émet `webpack-<hash>.js` **en
+production aussi**, donc tout relevé était annoncé « next dev — NON OPPOSABLE ».
+2ᵉ version : `react-refresh` — ce chunk n'existe pas comme `<script src>` séparé
+en App Router, donc tout relevé était annoncé « next start » : **l'erreur
+inverse, et la pire des deux**, elle aurait fait passer un chiffre de
+développement pour un chiffre opposable. Les balises ont finalement été **lues**
+sur les deux serveurs : `app-pages-internals.js` n'apparaît qu'en développement.
+⚠️ `scripts/mesure-v6-finance.mjs` porte encore la 1ʳᵉ version de ce défaut —
+**dette ouverte**, ses relevés sont étiquetés « next dev » à tort.
+
+### 5. Le budget — MESURÉ, en `next start`, médiane de 3
+
+`06-PERF-BUDGET.md:44` — Documents : **2 appels · 100 ms · 500 ms**.
+
+| Chemin | Mesuré | Budget |
+|---|---|---|
+| `/documents?patient=…` — appels de l'écran | **2** (`list_patient_documents`, `get_patient`) | 2 ✅ |
+| premier contenu (FCP) | **76 ms** (72 · 76 · 152) | 100 ms ✅ |
+| écran complet | **391 ms** (329 · 391 · 622) | 500 ms ✅ |
+| `/documents` sans dossier | **0 appel** de lecture de dossier | règle 6 ✅ |
+
+⚠️ **RELEVÉ APRÈS LE PASSAGE EN A5 (2026-08-22), MÊME MÉTHODE : `next start`,
+médiane de 3.** Le lot précédent relevait 80 ms / 344 ms (76·80·120 · 321·344·479).
+L'écart sur l'écran complet — 344 → 391 ms — **n'est pas attribué au lot A5, et
+ne doit pas l'être** : les deux séries ont une dispersion de 150 à 300 ms, dominée
+par l'aller-retour vers la base hébergée, et les enveloppes se recouvrent
+largement. Ce qui est VRAIMENT comparable est le poids du client, qui ne dépend
+pas du réseau : `/documents` pèse **6,67 kB · 214 kB de premier chargement, avant
+comme après**, à l'octet près. Le lot n'a ajouté aucune requête et aucun
+JavaScript — il n'a touché que du CSS. Conclure « régression de 47 ms » sur trois
+tirages serait exactement l'erreur de méthode que §4 (c) a déjà coûtée.
+
+⚠️ **UN DÉPASSEMENT RÉEL A ÉTÉ TROUVÉ ET CORRIGÉ** : la 1ʳᵉ version attendait
+`get_patient` avant de lancer `list_patient_documents` — deux allers-retours
+**en série** vers Alger, **546 ms** relevés. Or la liste ne dépend pas du
+dossier : elle ne veut que l'identifiant, qui vient de l'URL. C'était une
+dépendance **imaginaire**, payée à chaque ouverture. Parallélisés : 546 → 344 ms.
+
+Relevé, non corrigé : la **coquille** émet 3 à 4 appels par écran
+(`deployment`, `profiles`, `get_open_consultation`). Dette PERF §3,
+**antérieure à ce lot**, hors périmètre (règle 10).
+
+### 6. Les cinq états — déclenchés, pas décrits
+
+`?etat=chargement|vide|erreur|horsligne`, **inerte en production** (garde
+`NODE_ENV`) : un paramètre d'URL qui vide l'écran serait, en cabinet, un moyen
+de faire croire à une praticienne qu'un dossier n'a aucun certificat. Les quatre
+sont **mesurés verts en `next dev`** et **déclarés NON MESURÉS en production** —
+une première version les annonçait ROUGE, ce qui accusait le produit d'un défaut
+qui était une précaution. Captures : `checkpoints/v8-preuves/`.
+
+### 6bis. LE PASSAGE EN A5 (2026-08-22) — et les trois défauts qu'il a révélés
+
+Le papier des quatre certificats est désormais **A5, 148 × 210 mm portrait**,
+déclaré dans `@page` : sans `size:`, le navigateur compose pour le format PAR
+DÉFAUT DE L'IMPRIMANTE — A4 partout — puis donne la page à un bac chargé en A5,
+qui la sort rognée à droite et en bas **sans rien signaler**.
+
+La mise en page n'a **pas** été réduite depuis l'A4 : elle a été recomposée.
+`tokens.css` porte maintenant une typographie de document en **points**
+(`--doc-texte: 10.5pt`), séparée des jetons `--text-*` de l'interface — ce qui
+s'imprime sur une pièce médico-légale ne doit pas changer de taille parce qu'une
+carte de l'agenda a été retouchée. Un **budget vertical** est écrit dans le
+fichier (120 × 184 mm utiles, dépensés en-tête / titre / corps / signature) : le
+modifier sans refaire l'addition est le chemin par lequel un certificat repart
+sur deux pages.
+
+Une **réserve de signature de 28 mm** (`--doc-signature`) est posée par la
+feuille de style, jamais dans `rendered_html`. Sur A4 le blanc du bas était
+acquis ; sur A5 il ne l'est plus, et un traitement un peu long mangeait la place
+du stylo.
+
+**Trois défauts trouvés en mesurant, pas en relisant :**
+
+**(a) `.doc-corps p` écrasait `.doc-entete p`.** Même spécificité (0,1,1), et
+`.doc-feuille` porte les deux classes : c'est l'ordre du fichier qui tranchait.
+Chacune des dix lignes de l'en-tête traînait une marge basse non voulue —
+**18 mm sur 184 mm de page utile**, assez pour envoyer deux des quatre
+certificats sur une seconde feuille. **Le défaut existait déjà en A4**, où
+297 mm de haut l'absorbaient sans qu'il se voie. Même piège sur
+`.doc-traitement`, dont le retrait était annulé de la même façon.
+
+**(b) `max-content` sur la colonne du bloc patient.** Elle laissait le bloc
+Date/Nom/Prénom/Âge réclamer la largeur de sa plus longue ligne, prise sur la
+colonne de gauche : avec un nom de patient long, l'en-tête du cabinet passait de
+51 à **89 mm**. La longueur du nom d'un patient ne doit pas pouvoir déformer
+l'en-tête de la praticienne — les proportions sont désormais fixées.
+
+**(c) L'instrument de mesure mesurait la fenêtre, pas le papier.** En média
+`print`, `.doc-feuille` passe en `width: auto` et prend la largeur de sa
+fenêtre. Mesurée dans la fenêtre par défaut de 1280 px, la colonne faisait
+339 mm : moins de lignes, hauteur flatteuse, et « tient sur une A5 » sortait
+**VERT sur un certificat que le PDF paginait sur DEUX pages**. C'est le
+désaccord entre les deux contrôles qui a révélé le défaut. **Quatrième
+occurrence de la même leçon que §4 : l'instrument avant le produit.**
+
+**Fidélité aux originaux**, relevée sur les photos du 14/07/2026 : nom et
+spécialité **centrés**, bloc arabe centré entre ses deux filets, « N° d'Ordre »
+et « Tel » au fer à gauche, bloc patient **aligné à gauche mais posé à droite**
+(la version A4 confondait les deux avec `text-align: right`), logo à hauteur du
+bloc arabe.
+
+**Nouvel instrument : `scripts/mesure-a5-documents.mjs`.** Il met en page le
+`rendered_html` **figé par la base** — jamais une substitution réécrite en
+JavaScript, qui serait la seconde vérité que `FeuilleDocument.tsx` refuse — avec
+la CSS du build et ses fontes auto-hébergées, sur **données hostiles** (nom
+composé de 27 lettres, prénom de 33, arrêt de 365 jours, traitement de
+4 lignes, 29 février). Il rend 22 contrôles, dont un **contrôle négatif** : on
+vide `signature_block`, et il exige de VOIR le marqueur littéral apparaître.
+Sans lui, un détecteur qui n'a jamais rien détecté serait indiscernable d'un
+détecteur qui ne cherche pas.
+
+| Certificat | Hauteur / 184 mm utiles | Pages PDF |
+|---|---|---|
+| bonne santé mentale | 172,8 mm | 1 ✅ |
+| suivi médical | 136,0 mm | 1 ✅ |
+| certificat médical | 166,8 mm | 1 ✅ |
+| justification | 127,5 mm | 1 ✅ |
+
+### 6ter. L'INVARIANT DE SORTIE — zéro marqueur sur le papier
+
+`030 §1quater` laisse **littéral** tout marqueur sans valeur, délibérément :
+« un trou invisible dans un certificat est pire qu'un marqueur visible ». Ce
+raisonnement est juste **en base**, où le marqueur est un signal lu par
+quelqu'un qui sait ce qu'il regarde. **Il ne l'est plus devant une imprimante** :
+sur le papier remis à un notaire, `{{praticien.full_name_ar}}` n'est plus un
+signal, c'est une pièce abîmée.
+
+L'écran est donc le dernier poste de contrôle. `contientMarqueurNonResolu()`
+garde **les trois chemins d'impression** — la colonne de droite, le portail vers
+`<body>`, et `window.print()` lui-même. Un écran qui masquerait la feuille mais
+laisserait le portail la poser dans `<body>` imprimerait quand même la pièce
+trouée, sans que rien ne se voie.
+
+⚠️ **CE N'EST PAS UNE RÉPARATION, ET IL NE FAUT PAS QUE ÇA LE DEVIENNE.**
+Substituer ici la valeur manquante, ou effacer le marqueur du HTML affiché,
+ferait diverger le papier de `rendered_html` : la pièce figée cesserait d'être
+la pièce imprimée, ce que l'immuabilité de `030` protège. La ligne émise reste
+**intacte** ; c'est le TIRAGE qui est refusé, et la seule sortie est d'émettre
+un nouveau certificat une fois le profil complété.
+
+Le test est volontairement grossier — la présence de `{{` — et non une liste des
+25 clés du contexte : une liste devrait suivre 043 et 044, et le jour où elle
+prendrait du retard elle laisserait passer justement le marqueur nouveau.
+`app.html_escape` échappant déjà `{` et `}`, un `{{` dans le HTML figé **ne peut
+pas** venir d'une donnée patiente — il vient forcément du modèle. La garde ne
+peut donc pas se déclencher sur un certificat sain.
+
+### 6quater. LES MODÈLES v2 (045) — le texte approuvé, et la clé facultative
+
+`docs/DOCUMENT-TEMPLATES-v2.md`, **approuvé de la main de la praticienne**, avec
+quatre maquettes (`docs/*.jpg`), est arrivé le 2026-08-22 et **supplante**
+`docs/DOCUMENT-TEMPLATES.md`, retiré du dépôt le même jour. Les quatre corps ont
+été réécrits ; la migration **045** sème la version 2 et désactive la version 1.
+
+⚠️ **LES MODÈLES v1 NE SONT PAS SUPPRIMÉS, SEULEMENT DÉSACTIVÉS.**
+`document_templates` porte l'historique des versions et `issue_document` prend
+« le modèle actif le plus récent ». Les certificats déjà émis gardent leur
+`rendered_html` figé : **un document de juillet ne devient pas rétroactivement un
+document v2.** C'est tout l'objet de l'immuabilité de 010.
+
+⚠️ **POURQUOI UNE MIGRATION A ÉTÉ NÉCESSAIRE — et elle l'était vraiment.**
+v2 §3 veut deux lignes de traitement en puces, « la seconde sans forcer deux
+lignes ». Or `issue_document` exige que **chaque** clé du jeu soit présente ET
+non vide : `traitement_2` vide était **refusée**. Aucun réglage d'écran ne
+contourne une porte SQL — et c'est bien son rôle. 045 introduit donc la notion
+de **clé facultative**, et rien d'autre.
+
+**Le corps de la fonction est repris mot pour mot de 043.** Diff des lignes de
+code, commentaires exclus, vérifié avant écriture : **quatre changements**, tous
+sur la validation des champs. Reprendre plutôt que retaper est délibéré — une
+fonction de 400 lignes recopiée à la main est une fonction dont plus personne ne
+peut prouver qu'elle n'a pas bougé ailleurs. Aucun `DROP FUNCTION`.
+
+⚠️ **« FACULTATIF » VEUT DIRE VIDE, JAMAIS ABSENT**, et les deux se ressemblent
+en JSON pour ne rien avoir à voir sur le papier :
+- clé **absente** → `#>>` rend NULL → le marqueur reste **LITTÉRAL** →
+  « {{vars.traitement_2}} » s'imprime sur un certificat médico-légal ;
+- clé **présente et vide** → `#>>` rend `''` → substitution réelle → `<li></li>`,
+  masqué par `li:empty`.
+
+La garantie tient donc sur **trois fichiers qui doivent rester d'accord**, et
+aucun ne suffit seul : 045 exige la clé et vérifie que le modèle écrit
+`<li>{{vars.traitement_2}}</li>` **collé à ses balises** (contrôle §3(d)) ;
+`tokens.css` masque `li:empty` ; `champs.ts` construit le payload **à partir du
+contrat** et non des touches frappées, pour que l'absence soit impossible.
+Le checkpoint éprouve **les deux faces** — vide accepté sans puce blanche,
+absent refusé.
+
+⚠️ **CE QUE v2 FAIT PERDRE, ET QUI N'EST PAS UN DÉTAIL.** `suivi_medical`
+n'imprime plus la durée **en toutes lettres**. v1 portait « 30 Jours (trente
+jours) », relevé sur le document Word d'origine. Les lettres étaient une
+protection **anti-falsification** : un « 30 » se rature en « 90 » au stylo sur un
+arrêt de travail présenté à un employeur ; « (trente jours) » à côté rend la
+retouche visible. **Cette protection est perdue sur le papier.** C'est le choix
+de la praticienne, appliqué tel quel — c'est son document et sa responsabilité
+devant un tiers — mais il est écrit ici et dans 045 pour que personne ne le
+redécouvre à ses dépens.
+
+Elle n'est pas perdue **en base** : `jours_lettres` reste exigée, reste
+recalculée et écrasée par `app.nombre_en_lettres` (043 §5bis), reste dans
+`variables`. `042` n'est pas devenue du code mort, et **rétablir les lettres au
+papier ne demandera qu'une ligne de modèle**. C'est pour cela que le jeu de clés
+de `suivi_medical` n'a pas été allégé.
+
+✅ **« Mlle » est revenue.** v1 dérivait `{{patient.civilite}}` du sexe, qui ne
+connaît que Mr et Mme (`app.sex`) — « Mlle » avait disparu, perte acquittée le
+2026-08-21. v2 revient au « Mr/Mme/Mlle » littéral de l'original. Le §7(4)
+ci-dessous est donc **clos**.
+
+⚠️ **UN CONTRÔLE DU CHECKPOINT A CHANGÉ DE NATURE, ET CE N'EST PAS UN
+AFFAIBLISSEMENT DÉGUISÉ.** Il cherchait « trente jours » dans la pièce pour
+prouver l'écrasement de 043 §5bis. v2 n'imprimant plus les lettres, cette
+vérification **n'est plus possible** — et continuer à la chercher aurait fait
+ROUGIR un produit sain. Il vérifie désormais ce qui reste vérifiable et qui est
+la vraie garantie : la valeur absurde de l'appelante **n'atteint jamais le
+papier**, et le nombre en chiffres imprimé est bien celui soumis. Le recalcul
+lui-même reste prouvé par le contrôle 26, sur la fonction.
+
+### 7. ⚠️ CE QUI RESTE OUVERT — V8 N'EST PAS CLOS
+
+**(1) Le profil réel n'est pas saisi sur l'instance. BLOQUANT.** Mesuré le
+2026-08-22 sur la base réelle : le profil `owner` a nom, titre, spécialités
+FR/AR, n° d'ordre et téléphone, mais **`signature_block.full_name_ar` est vide**.
+Le profil `practitioner` (…a2) est plus incomplet encore : ni spécialité arabe,
+ni n° d'ordre, ni téléphone. **À saisir sur l'instance, jamais commité**
+(ADR-016). C'est aussi là que se règle l'arbitrage **A1** (« Pychiaterie » →
+« Psychiatrie »), qui n'est PAS dans 044 : la spécialité vient de `app.profiles`.
+
+⚠️ **CE QUI A CHANGÉ LE 2026-08-22 : LA CONSÉQUENCE.** Avant, le certificat
+sortait avec `{{praticien.full_name_ar}}` imprimé sur l'en-tête — « visible
+plutôt que muet », et personne n'empêchait de l'imprimer. Depuis §6ter, l'écran
+**REFUSE le tirage** et affiche pourquoi. Tant que ce champ est vide, le module
+n'imprime rien du tout pour ce praticien. Ce n'est pas un durcissement gratuit :
+c'est le seul moyen de tenir l'invariant « zéro marqueur sur le papier » sans
+inventer un nom arabe, ce qui reste **interdit** (règle 8).
+
+⚠️ **NON REVÉRIFIÉ LE 2026-08-22 EN SÉANCE DE CLÔTURE.** Le connecteur Supabase
+était injoignable depuis le poste ; l'état ci-dessus est celui **relevé plus tôt
+dans la journée**, pas une mesure fraîche. À reprendre avant le tirage. Le
+contrôle négatif de `mesure-a5-documents.mjs` prouve en revanche, sur base
+jetable, **exactement** ce qui se produit si le champ est encore vide.
+
+**(2) Le tirage papier n'a pas eu lieu. BLOQUANT.** Les marges
+(`--doc-marge-v: 13mm` / `--doc-marge-h: 14mm`, tokens.css) sont une
+**hypothèse**, pas une mesure. Le contrôle est « poser le papier à côté du
+sien ».
+
+⚠️ **TROIS ÉTATS D'ACCEPTATION, QUI NE SE CONFONDENT PAS.**
+· **Valide au navigateur** — l'aperçu d'impression est juste. **ATTEINT** :
+  22/22 à `mesure-a5-documents.mjs`, PDF à 148 × 210 mm, une page par
+  certificat, sur données hostiles.
+· **Valide au papier** — le tirage A5 physique est juste. **NON ATTEINT.**
+  Aucune feuille n'est sortie d'une imprimante. Chromium ne dit rien des marges
+  non imprimables du bac ni de la mise à l'échelle du pilote.
+· **Valide en production** — le parcours complet avec le profil réel ET le
+  papier approuvé. **NON ATTEINT**, il dépend des deux précédents.
+
+**À vérifier physiquement, une feuille A5 en main, à côté d'un certificat de la
+praticienne :** que le bac soit bien réglé sur A5 et non sur « ajuster à la
+page » (une mise à l'échelle du pilote fausserait tout le reste) · que rien ne
+soit rogné à droite ni en bas · que les 13/14 mm de marge tombent comme sur son
+document · que le corps du texte se lise sans effort à taille réelle (10,5 pt) ·
+qu'il reste **assez de blanc en bas pour sa signature** · que l'en-tête arabe ne
+touche pas ses filets · que le bloc Date/Nom/Prénom/Âge soit là où elle
+l'attend. Chacun de ces points se corrige par **une ligne** de `tokens.css` :
+les jetons existent pour ça.
+
+**(3) Le logo n'est pas celui des certificats.** `public/marque-certificat.svg`
+est employé sur décision de la praticienne du 2026-08-21, alors que
+`DOCUMENT-TEMPLATES.md:41` établit que le logo d'origine est un autre dessin
+(cercle plein, arbre/cerveau dans une main), jamais fourni en fichier source.
+**Écart assumé, à redire de vive voix au contrôle papier** — un écart qu'on
+cesse de mentionner devient un fait acquis.
+
+✅ **BLOCAGE LEVÉ LE 2026-08-22 — PAR LA PRATICIENNE, PAS PAR UN ARBITRAGE
+D'AGENT.** Les quatre maquettes v2 qu'elle a approuvées portent **exactement**
+`public/marque-certificat.svg` — le cerveau de feuilles, dans son turquoise
+`#7bb5ac`. Vérifié en rendant le SVG et en le comparant aux `docs/*.jpg`. C'est
+donc elle qui a tranché, en composant ses modèles autour de ce fichier : il n'y a
+plus d'« autre logo » à réclamer, et le §14 du contrat de session est satisfait.
+
+Le côté a été porté à **18 mm** pour tenir la proportion des maquettes. **Ni le
+dessin ni la couleur n'ont été retouchés**, et il ne faut pas le faire : foncer
+le turquoise « pour que ça ressorte mieux » serait inventer une identité visuelle
+qu'elle n'a pas validée. S'il sort trop pâle au tirage, c'est un constat à lui
+rapporter — pas une valeur à corriger dans `tokens.css`.
+
+**(4) « Mlle » a disparu. ✅ CLOS LE 2026-08-22 par les modèles v2.** `app.sex`
+(002) est un enum à deux valeurs, donc `{{patient.civilite}}` ne pouvait rendre
+que Mr ou Mme. v2 revient au « Mr/Mme/Mlle » littéral de l'original et rend les
+trois. `patient.civilite` reste dans le contexte de rendu, simplement inutilisée
+par les modèles — on n'enlève rien au moteur (voir §6quater).
+
+**(5) `certificat_medical` demande toujours `date_naissance` en saisie** alors
+que la base la connaît (contrat gelé de `030`, non modifié par 045 — qui ne
+touche QUE ce que v2 rendait impossible). Le formulaire la **pré-remplit** depuis
+le dossier ; le papier imprime `{{patient.birth_date_fr}}`, et la valeur soumise
+reste dans `variables` comme confirmation explicite. Incohérence du contrat,
+signalée, **pas corrigée en douce**.
+
+**(6) Les reçus (`recu` dans `app.doc_type`) sont hors périmètre.** Décidé pour
+la phase suivante. L'ajouter à l'enum exigera son propre jeu de champs dans
+`issue_document`, faute de quoi le garde de `030` refusera d'émettre.
+
+### 8. Gotchas rencontrés, pour la prochaine session
+
+- **`preflight.sh` §6ter interdit TOUT `.css` hors `tokens.css`**, dans tout le
+  dépôt. Ce lot a créé un `print.css` ; le preflight l'a attrapé. Ce n'est pas
+  une convention d'organisation : ESLint ne parse pas le CSS, donc aucune règle
+  I10 ne s'y applique. La feuille de document vit désormais **dans tokens.css**.
+- **`next dev` et `next start` se disputent `.next/`.** Lancer un serveur de
+  développement pendant qu'un serveur de production tourne corrompt le build de
+  ce dernier : la mesure suivante échoue à l'hydratation, sans dire pourquoi.
+- **`TaskStop` ne tue pas le processus Node** qui tient le port : le shell meurt,
+  le serveur reste. `netstat -ano | grep :3000` puis `taskkill //PID … //F`.
+- **`scripts/guard-bash.sh` bloque `curl`** depuis le shell (règle 1). Pour
+  attendre qu'un serveur soit prêt, lire son journal, pas l'interroger.
+- **Le seed 015 laisse `sex` et `birth_date` vides sur b1/b2.** Sans conséquence
+  tant qu'aucun modèle n'en dérivait ; **bloquant depuis 043**. Les checkpoints
+  les complètent dans leur propre transaction, jamais dans un seed livré.
+- **Insérer un patient de fixture exige `is_synthetic = true`**
+  (`assert_synthetic_when_cloud`, ADR-016) **et** `practitioner_id` + `phone`,
+  tous deux `NOT NULL`. Le garde a bloqué la première version de la fixture A5 :
+  il fonctionne.
+- **Deux `pnpm build` simultanés se corrompent l'un l'autre.** Un lancé pendant
+  qu'un autre tourne rend ROUGE sans message utile, et laisse un `.next` partiel
+  qui casse aussi le serveur qui le servait. Bâtir **en série**, toujours.
+- **`.next` est partagé par le serveur qui tourne.** Reconstruire pendant qu'un
+  `next start` sert la même arborescence lui fait rendre des `MODULE_NOT_FOUND`
+  en 500. Arrêter le serveur, bâtir, relancer.
+- **`page.pdf({preferCSSPageSize:true})` est le SEUL contrôle qui lit `@page`.**
+  Une mesure du DOM, si soignée soit-elle, ne pagine pas : une régression
+  remettant `size: A4` passerait tous les contrôles DOM au vert.
 
 ---
 

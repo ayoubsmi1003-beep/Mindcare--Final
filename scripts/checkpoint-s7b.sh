@@ -111,15 +111,44 @@ if [ $reachable -eq 1 ]; then
 
   if [ $rejeu_ok -eq 1 ]; then
     n_mig=$(docker exec "$CONTAINER" psql -U postgres -d "$S7B_DB" -qtAX -c "SELECT count(*) FROM app.schema_migrations;")
-    [ "$n_mig" = "30" ] && green "rejeu 001→030 sur base neuve, migration 030 comprise" \
-                        || red "rejeu 001→030" "attendu 30 migrations, obtenu $n_mig"
+    # ⚠️ CE NOMBRE ÉTAIT GELÉ À 30, l'état du corpus le jour de S7b. Chaque
+    # migration ajoutée depuis (032 … 044) rendait donc ce contrôle ROUGE sur
+    # un rejeu parfaitement sain — un rouge permanent qu'on finit par lire
+    # comme du bruit, et c'est ainsi qu'un vrai rouge passe inaperçu. On
+    # compare désormais au nombre de fichiers RÉELLEMENT présents : ce que ce
+    # contrôle veut prouver, c'est que le corpus se rejoue INTÉGRALEMENT sur
+    # une base neuve, pas qu'il compte un nombre particulier de fichiers.
+    n_fichiers=$(ls supabase/migrations/*.sql 2>/dev/null | wc -l | tr -d ' ')
+    [ "$n_mig" = "$n_fichiers" ] && green "rejeu intégral du corpus sur base neuve ($n_fichiers migrations)" \
+                        || red "rejeu intégral du corpus" "attendu $n_fichiers migrations, obtenu $n_mig"
   else
     red "rejeu 001→030 sur base neuve" "${rejeu_err:-échec inconnu}"
     reachable=0
   fi
 fi
 
-q()    { docker exec "$CONTAINER" psql -U postgres -d "$S7B_DB" -qtAX -c "$1" 2>&1 | tail -1; }
+# ⚠️ DÉFAUT TROUVÉ EN V7, ET IL RENDAIT DES VERTS FAUX. `tail -1` prenait la
+# DERNIÈRE LIGNE de la sortie — y compris quand cette ligne appartenait à une
+# erreur psql. `doc1` valait alors « HINT: … » au lieu d'un uuid, et le
+# contrôle 1, qui ne teste que « non vide », passait VERT sur une émission qui
+# venait d'échouer. Les contrôles suivants héritaient de la chaîne, la
+# glissaient dans un `WHERE id='…'` et rougissaient LOIN de la cause, avec un
+# `^` de pointeur psql pour tout indice — trois contrôles accusaient la RLS
+# quand le vrai défaut était deux fixtures incomplètes.
+#
+# Une valeur et une erreur ne doivent pas se ressembler. On rend « ERREUR »,
+# qui ne vaut ni un uuid, ni « NULL », ni « 0 », ni un compteur : le contrôle
+# qui l'attrape rougit, au lieu de verdir ou de propager.
+q() {
+  local out rc
+  out=$(docker exec "$CONTAINER" psql -U postgres -d "$S7B_DB" -qtAX -v ON_ERROR_STOP=1 -c "$1" 2>&1)
+  rc=$?
+  if [ $rc -ne 0 ] || printf '%s\n' "$out" | grep -qiE '^(ERROR|ERREUR|FATAL)'; then
+    printf 'ERREUR'
+    return 0
+  fi
+  printf '%s\n' "$out" | tail -1
+}
 qfull(){ docker exec "$CONTAINER" psql -U postgres -d "$S7B_DB" -qtAX -c "$1" 2>&1; }
 refused(){ printf '%s\n' "$1" | grep -qiE 'ERROR|ERREUR'; }
 
@@ -165,10 +194,19 @@ else
   # avec DEUX pièges volontaires dans le corps : `{{secret.token}}` (hors
   # allowlist, contrôle 7) et une substitution du patient (contrôle 6, sur un
   # patient au nom hostile b9 créé plus bas).
+  # ⚠️ VERSION 99, ET C'EST UNE CORRECTION DE V7. Ce modèle était en version 1.
+  # Depuis que 044 sème les 4 modèles réels — eux aussi en version 1 — l'INSERT
+  # violait `UNIQUE (cabinet_id, doc_type, version)` (010), et son
+  # `ON CONFLICT (id)` ne rattrapait pas cette contrainte-là : la fixture
+  # n'était SILENCIEUSEMENT jamais créée. `issue_document` prenait alors le
+  # modèle semé, qui ne porte évidemment ni `{{secret.token}}` ni de nom de
+  # patient dans son corps, et les contrôles 6 et 7 rougissaient sans dire
+  # pourquoi. La version 99 gagne le `ORDER BY version DESC LIMIT 1` de
+  # `030 §2` : ce checkpoint teste bien SON modèle, pas celui du cabinet.
   qfull "INSERT INTO app.document_templates
       (id, cabinet_id, doc_type, version, title_fr, header_html, body_html, footer_html, is_active)
     VALUES
-      ('00000000-0000-0000-0000-0000000000f0', '$CAB', 'justification', 1,
+      ('00000000-0000-0000-0000-0000000000f0', '$CAB', 'justification', 99,
        'Justification (test)',
        '<h1>{{patient.first_name}} {{patient.last_name}}</h1>',
        '<p>Réf {{patient.record_number}} — {{vars.date_consultation}} — {{secret.token}}</p>',
@@ -178,12 +216,29 @@ else
   # Patient hostile, DÉDIÉ (b9, pas b1/b2) : b1/b2 restent ce que 015 en a fait,
   # aucune donnée de seed livrée n'est touchée.
   qfull "INSERT INTO app.patients (id, cabinet_id, practitioner_id, record_number,
-                                  first_name, last_name, phone, created_by, is_synthetic)
+                                  first_name, last_name, phone, created_by, is_synthetic,
+                                  sex, birth_date)
     VALUES ('00000000-0000-0000-0000-0000000000b9', '$CAB', '$OWNER', 'TEST-0009',
             'Patient', '<script>alert(1)</script> & O''Brien {{vars.x}}',
-            '0555000009', '$OWNER', true)
+            '0555000009', '$OWNER', true,
+            'M', '1985-06-02')
     ON CONFLICT (id) DO NOTHING;" >/dev/null
   PAT9='00000000-0000-0000-0000-0000000000b9'
+
+  # ── DOSSIERS COMPLETS — exigence apparue avec 043 ────────────────────────
+  # `issue_document` refuse depuis 043 d'émettre sur un dossier dont `sex` ou
+  # `birth_date` manque : `patient.civilite` et `patient.age` en dériveraient
+  # NULL, et `render_template` laisserait « {{patient.age}} » imprimé noir sur
+  # blanc sur le certificat. Le refus est le bon comportement — mais le seed 015
+  # laisse ces deux colonnes vides sur b1 et b2, ce qui était sans conséquence
+  # tant qu'aucun modèle n'était semé et qu'aucune clé n'en dérivait.
+  #
+  # On les complète ICI, dans la base JETABLE de ce checkpoint, et nulle part
+  # ailleurs : une fixture vit dans la transaction du contrôle, jamais dans un
+  # seed livré (règle 8). Les valeurs n'ont aucune importance, seule leur
+  # présence en a.
+  qfull "UPDATE app.patients SET sex = 'F', birth_date = '1990-03-14'
+          WHERE id IN ('$PAT1', '$PAT2') AND (sex IS NULL OR birth_date IS NULL);" >/dev/null
 
   VARS='{"date_consultation":"2026-08-09"}'
 

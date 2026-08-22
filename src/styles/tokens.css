@@ -576,6 +576,67 @@
      * (§3 : une ligne de formulaire ne gagne rien à s'étirer), assez large
      * pour un e-mail long sans troncature. */
     --width-form: 420px;
+
+    /* ── LA FEUILLE DE DOCUMENT — V8 ──────────────────────────────────────
+     * EN MILLIMÈTRES, ET C'EST LA RAISON D'ÊTRE DE CES JETONS. Le millimètre
+     * est la seule unité que l'écran et l'imprimante partagent : un aperçu en
+     * `rem` et un papier en `mm` divergent dès que la taille de police du
+     * navigateur change, et l'écart ne se voit qu'une fois la feuille sortie.
+     *
+     * ⚠️ LES MARGES SONT UNE HYPOTHÈSE, PAS UNE MESURE. Aucun certificat
+     * imprimé de référence n'existe (DOC-AUTHORITY §4, DOCUMENT-TEMPLATES §5) :
+     * le contrôle est « poser le papier à côté du sien », et il n'a pas eu
+     * lieu. Elles vivent ici précisément pour qu'un ajustement d'un millimètre
+     * après le premier tirage soit UNE LIGNE à changer, pas une chasse à
+     * travers une feuille de style. */
+    --doc-largeur: 148mm;
+    --doc-hauteur: 210mm;
+    --doc-marge-v: 13mm;
+    --doc-marge-h: 14mm;
+    /* Le côté du logo dans l'en-tête, et l'épaisseur des deux filets qui
+     * encadrent le bloc arabe. Relevés sur les documents d'origine, puis
+     * RAMENÉS À L'ÉCHELLE D'UNE PAGE A5. Sur les photos, le logo occupe un peu
+     * moins du huitième de la largeur de la page ; 22 mm — le relevé A4 — en
+     * ferait le septième d'une A5 et écraserait le bloc identité contre le
+     * bloc patient. 18 mm tient la proportion d'origine. */
+    --doc-marque: 18mm;
+    --doc-filet: 1px;
+
+    /* ── LA TYPOGRAPHIE DU DOCUMENT — EN POINTS, ET SÉPARÉE DE L'INTERFACE ──
+     * ⚠️ NE PAS REBRANCHER CES VALEURS SUR `--text-*`. Les jetons `--text-*`
+     * sont ceux de l'ÉCRAN, en `px`, et ils bougent quand le design system
+     * bouge. Ce qui est imprimé sur un certificat destiné à un notaire ne doit
+     * pas changer de taille parce qu'une carte de l'agenda a été retouchée.
+     * Le point est l'unité de l'imprimeur, et la seule qui reste stable entre
+     * l'aperçu navigateur et la feuille.
+     *
+     * ⚠️ CES TAILLES SONT COMPOSÉES POUR A5, PAS RÉDUITES DEPUIS A4. Les
+     * originaux sont en Times New Roman 14 pt sur A4 ; transposer 14 pt tel
+     * quel sur 120 mm de colonne utile donnerait ~40 signes par ligne et
+     * ferait déborder « bonne santé mentale » sur une seconde page. 10,5 pt
+     * sur 120 mm rend ~62 signes — la longueur de ligne d'un livre. */
+    --doc-texte: 10.5pt;
+    --doc-interligne: 1.5;
+    --doc-titre-taille: 15pt;
+    --doc-entete-taille: 9pt;
+    --doc-entete-nom: 11pt;
+
+    /* Les rythmes verticaux de la feuille. En millimètres pour la même raison
+     * que les marges : ce sont des distances SUR LE PAPIER. */
+    --doc-espace-para: 3mm;
+    --doc-espace-titre-avant: 9mm;
+    --doc-espace-titre-apres: 6mm;
+    --doc-alinea: 8mm;
+
+    /* ⚠️ LA RÉSERVE DE SIGNATURE. Les originaux ne portent AUCUN bloc de
+     * signature imprimé (DOCUMENT-TEMPLATES §1) : la praticienne signe dans le
+     * blanc du bas. Sur A4 ce blanc était acquis ; sur A5 il ne l'est plus, et
+     * une ligne de traitement un peu longue viendrait manger l'espace où va le
+     * stylo. Cette réserve est donc une CONTRAINTE DE MISE EN PAGE, pas une
+     * décoration : elle est posée par la feuille de style, jamais dans
+     * `rendered_html`, qui reste du contenu figé et ne doit rien savoir du
+     * format de papier. */
+    --doc-signature: 28mm;
   }
 
   /* --------------------------------------------------------------------
@@ -707,5 +768,400 @@
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
+  }
+}
+
+/* =============================================================================
+ * LA FEUILLE DE DOCUMENT — V8, l'écran /documents et le papier A5.
+ *
+ * ⚠️ POURQUOI CETTE SECTION VIT ICI ET PAS DANS UN `print.css` À PART.
+ * `scripts/preflight.sh` §6ter interdit toute feuille de style hors ce
+ * fichier, dans tout le dépôt. Ce n'est pas une préférence d'organisation :
+ * ESLint ne parse pas le CSS, donc aucune règle I10 ne s'applique à un `.css`,
+ * et un second fichier de style est le chemin exact par lequel une couleur ou
+ * une dimension en dur redevient invisible au lint. Le contrôle a déjà résisté
+ * à trois évasions documentées ; ce lot en a tenté une quatrième, et le
+ * preflight l'a attrapée. Ne pas la rouvrir.
+ *
+ * ═══ UNE SEULE FEUILLE, DEUX MÉDIAS ═══
+ * `.doc-feuille` sert à L'ÉCRAN ET AU PAPIER. Deux mises en page distinctes
+ * divergeraient au premier ajustement, et l'écart ne se verrait qu'une fois la
+ * feuille sortie de l'imprimante — trop tard, devant une patiente. Ce qui
+ * change entre les deux médias est ce qui n'a de sens que sur un écran :
+ * l'ombre portée, le fond autour, la coquille de l'application.
+ *
+ * ═══ EN MILLIMÈTRES ═══
+ * Le millimètre est la seule unité que l'écran et l'imprimante partagent. Un
+ * aperçu en `rem` suit la taille de police du navigateur ; le papier, non.
+ *
+ * ⚠️ LES MARGES SONT UNE HYPOTHÈSE. Aucun certificat imprimé de référence
+ * n'existe : le contrôle est « poser le papier à côté du sien », et il n'a pas
+ * eu lieu. `--doc-marge-v` / `--doc-marge-h` sont des jetons pour qu'un
+ * ajustement d'un millimètre après le premier tirage soit UNE ligne.
+ *
+ * ═══ A5, ET LE BUDGET VERTICAL QUI VA AVEC ═══
+ * 148 × 210 mm, moins 14 mm de marge horizontale et 13 mm de marge verticale
+ * de chaque côté : il reste 120 × 184 mm de colonne utile. C'est ce chiffre de
+ * 184 mm qui commande tout le reste de cette section, et il se dépense ainsi
+ * sur le plus long des quatre certificats (bonne santé mentale) :
+ *
+ *     en-tête (identité FR + arabe + 2 filets + ordre + tél)   ~34 mm
+ *     titre souligné, avec ses respirations                    ~21 mm
+ *     corps — 5 paragraphes, ~13 lignes à 10,5 pt / 1,5        ~85 mm
+ *     réserve de signature (--doc-signature)                    28 mm
+ *     ────────────────────────────────────────────────────────────────
+ *                                                             ~168 mm  ≤ 184
+ *
+ * ⚠️ CE BUDGET EST LA RAISON DES VALEURS, PAS UNE OBSERVATION APRÈS COUP.
+ * Toucher `--doc-texte`, `--doc-interligne` ou `--doc-espace-titre-avant` sans
+ * refaire cette addition est le chemin exact par lequel un certificat part sur
+ * deux pages — et une page 2 ne portant qu'une signature fait douter de la
+ * pièce entière. Les ~16 mm de reste sont la marge pour un nom long ou un
+ * `{{vars.mairie}}` qui passe à la ligne, PAS de la place libre à dépenser.
+ * ========================================================================== */
+
+/* ⚠️ A5 EST DÉCLARÉ ICI, EXPLICITEMENT, ET C'EST LE POINT DE LA RÈGLE.
+ * Sans `size:`, le navigateur prend le format PAR DÉFAUT DE L'IMPRIMANTE — A4
+ * dans la quasi-totalité des cabinets — et compose la feuille pour A4 avant de
+ * la donner à un bac chargé en A5 : la page sort rognée à droite et en bas,
+ * silencieusement. `size: A5 portrait` fait que l'aperçu du navigateur montre
+ * DÉJÀ le format qui sortira.
+ *
+ * `portrait` est explicite bien qu'il soit l'orientation par défaut d'A5 : les
+ * quatre certificats d'origine sont en portrait, et le dire ici évite qu'une
+ * feuille de style d'écran à venir ne le retourne sans qu'on le voie. */
+@page {
+  size: A5 portrait;
+  margin: var(--doc-marge-v) var(--doc-marge-h);
+}
+
+/* --- La feuille, à l'écran ------------------------------------------------- */
+
+.doc-feuille {
+  width: var(--doc-largeur);
+  min-height: var(--doc-hauteur);
+  max-width: 100%;
+  margin-inline: auto;
+  padding: var(--doc-marge-v) var(--doc-marge-h);
+  background: var(--card);
+  color: var(--ink-900);
+  /* --font-doc est RÉSERVÉE aux documents (tokens.css §fontes) : c'est ici,
+   * et seulement ici, qu'elle sert. */
+  font-family: var(--font-doc);
+  /* La taille de base de la feuille, en points : tout le document en hérite. */
+  font-size: var(--doc-texte);
+  line-height: var(--doc-interligne);
+  box-shadow: var(--lift-3);
+  border-radius: var(--r-md);
+}
+
+/* --- L'en-tête commun aux quatre certificats ------------------------------ */
+/* Trois colonnes : identité française et arabe · marque · bloc patient.
+ * Le gabarit est ici et non dans le HTML semé : `rendered_html` doit rester
+ * du contenu, pas une mise en page figée que 044 dupliquerait quatre fois. */
+
+/* ⚠️ TROIS COLONNES INÉGALES, ET C'EST CE QUE MONTRENT LES ORIGINAUX.
+ * `1fr auto 1fr` donnait deux colonnes latérales de même largeur ; sur les
+ * photos du 14/07/2026, le bloc identité (nom + spécialité + arabe) occupe la
+ * moitié gauche de l'en-tête, le logo un gros huitième, le bloc
+ * Date/Nom/Prénom/Âge le reste.
+ *
+ * ⚠️ ET SURTOUT : PAS DE `max-content` SUR LA COLONNE DE DROITE. C'était la
+ * deuxième version, et elle a été MESURÉE FAUSSE. `max-content` laisse le bloc
+ * patient réclamer la largeur de sa plus longue ligne — « Prénom :
+ * Abdelkrim-Mohammed Chérif El-Hadj » — et il la prend sur la colonne de
+ * gauche, qui n'a plus le choix que de céder. Le nom de la praticienne passait
+ * alors sur trois lignes, sa spécialité sur trois autres, le bloc arabe sur
+ * quatre : 89 mm d'en-tête sur 184 mm de page utile, et deux des quatre
+ * certificats partaient sur une seconde feuille. La longueur du nom d'un
+ * patient ne doit pas pouvoir déformer l'en-tête du cabinet ; les proportions
+ * sont donc FIXÉES, et c'est le texte qui passe à la ligne dans sa colonne. */
+.doc-entete {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 0.72fr);
+  gap: var(--doc-espace-para);
+  align-items: start;
+  color: var(--brand-700);
+  font-size: var(--doc-entete-taille);
+  line-height: 1.35;
+}
+
+/* ⚠️ DEUX CLASSES, ET C'EST LA CORRECTION D'UN DÉFAUT MESURÉ, PAS UN EXCÈS DE
+ * PRUDENCE. `.doc-entete p` et `.doc-corps p` ont la MÊME spécificité (0,1,1),
+ * et `.doc-feuille` porte les deux classes : c'est donc l'ordre du fichier qui
+ * tranchait, et `.doc-corps p { margin: 0 0 … }` — écrit plus bas — gagnait.
+ * Chacune des dix lignes de l'en-tête traînait ainsi une marge basse qui n'y
+ * était pas voulue : 18 mm sur 184 mm de page utile, assez pour envoyer deux
+ * des quatre certificats sur une seconde feuille. Le défaut existait déjà en
+ * A4, où 297 mm de haut l'absorbaient sans qu'il se voie. */
+.doc-feuille .doc-entete p {
+  margin: 0;
+}
+
+.doc-entete__identite {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* ⚠️ NOM ET SPÉCIALITÉ SONT CENTRÉS, « N° d'Ordre » ET « Tel » NE LE SONT PAS.
+ * Ce n'est pas une hésitation : c'est ce que montrent les quatre photos du
+ * 14/07/2026. Le nom de la praticienne est centré au-dessus de sa spécialité,
+ * le bloc arabe est centré entre ses deux filets, et les deux lignes de
+ * coordonnées reprennent le fer à gauche sous l'ensemble. Tout centrer ferait
+ * un bloc d'en-tête symétrique que la praticienne ne reconnaîtrait pas comme
+ * le sien ; tout aligner à gauche ferait perdre au nom sa place de titre. */
+.doc-entete__nom,
+.doc-entete__specialite {
+  text-align: center;
+}
+
+.doc-entete__nom {
+  font-weight: 600;
+  font-size: var(--doc-entete-nom);
+}
+
+/* Le bloc arabe est CENTRÉ sur les quatre originaux, sous le nom français et
+ * entre les deux filets. Aligné à gauche, il perdait sa symétrie avec le
+ * filet qui l'encadre.
+ *
+ * ⚠️ L'INTERLIGNE EST REPRIS ICI, ET C'EST DÉLIBÉRÉ. `--text-arabic-leading`
+ * vaut 1,8 : c'est le bon réglage pour de l'arabe DE LECTURE, où les hampes et
+ * les points diacritiques ont besoin d'air. Dans un en-tête de trois lignes sur
+ * une A5, il coûtait 25 mm pour ce que 1,45 rend lisible en 18 — sans jamais
+ * faire se toucher deux lignes, vérifié à la capture. */
+.doc-entete__ar {
+  text-align: center;
+  line-height: 1.45;
+}
+
+.doc-entete__filet {
+  border: none;
+  border-top: var(--doc-filet) solid var(--brand-700);
+  margin: var(--s-1) 0;
+  width: 100%;
+}
+
+.doc-entete__ar {
+  font-family: var(--font-ar);
+}
+
+/* La marque. Fond CSS plutôt qu'une balise dans `rendered_html` : l'inscrire
+ * dans le modèle la dupliquerait quatre fois par cabinet dans du HTML figé et
+ * rendrait la pièce illisible en base.
+ *
+ * ✅ ÉCART REFERMÉ LE 2026-08-22, ET IL FAUT DIRE COMMENT — parce que c'est un
+ * blocage d'acceptation qui a été LEVÉ, pas contourné.
+ *
+ * L'ancien `docs/DOCUMENT-TEMPLATES.md` (retiré du dépôt le même jour) décrivait
+ * un tout autre dessin pour les certificats — cercle plein, arbre/cerveau dans
+ * une main — jamais fourni en fichier source, et la marque employée ici était un
+ * pis-aller « en attendant ». Les quatre maquettes v2 déposées par la
+ * praticienne (docs/*.jpg, approuvées de sa main) portent EXACTEMENT
+ * `public/marque-certificat.svg` : le cerveau de feuilles, dans son turquoise.
+ * C'est donc elle qui a tranché, en composant ses modèles autour de ce fichier.
+ *
+ * ⚠️ NE PAS LE RECOLORER POUR « FAIRE PLUS SOUTENU ». Le turquoise pâle est
+ * celui de ses maquettes ; le foncer serait inventer une identité visuelle
+ * qu'elle n'a pas validée. S'il ressort trop clair au tirage, c'est un constat
+ * à lui rapporter, pas une valeur à corriger ici. */
+.doc-entete__marque {
+  width: var(--doc-marque);
+  height: var(--doc-marque);
+  /* Sur les quatre originaux, le logo est à hauteur du bloc arabe, pas collé
+   * en haut de l'en-tête. `align-items: start` de la grille le remonterait. */
+  align-self: center;
+  background-image: url("/marque-certificat.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ⚠️ LE TEXTE EST ALIGNÉ À GAUCHE, LE BLOC EST POSÉ À DROITE — les deux
+ * choses sont distinctes, et la version A4 les confondait avec
+ * `text-align: right`. Sur les quatre photos, « Date : », « Nom : »,
+ * « Prénom : », « Age : » forment une colonne d'étiquettes alignées entre
+ * elles à gauche ; en fer à droite, les deux-points partaient en escalier et
+ * le bloc ne ressemblait plus au document de la praticienne. */
+.doc-entete__patient {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+  text-align: left;
+  justify-self: end;
+  min-width: 0;
+  /* Un nom composé sans espace passe à la ligne DANS sa colonne au lieu de la
+   * pousser. Sans ça, `min-width: 0` seul ne suffit pas : le mot déborde. */
+  overflow-wrap: anywhere;
+}
+
+.doc-entete__patient span {
+  font-weight: 600;
+}
+
+/* --- Le corps -------------------------------------------------------------- */
+
+.doc-titre {
+  margin: var(--doc-espace-titre-avant) 0 var(--doc-espace-titre-apres);
+  text-align: center;
+  font-size: var(--doc-titre-taille);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.doc-corps p {
+  margin: 0 0 var(--doc-espace-para);
+  line-height: var(--doc-interligne);
+  /* Un nom de patient très long, un numéro de pièce d'identité sans espace :
+   * sur 120 mm, ce sont les cas qui poussent une ligne hors de la feuille. */
+  overflow-wrap: anywhere;
+}
+
+/* Les alinéas du certificat de bonne santé mentale, relevés sur l'original. */
+.doc-alinea {
+  text-indent: var(--doc-alinea);
+}
+
+/* ⚠️ LA RÉSERVE DE SIGNATURE — un bloc VIDE, et il doit le rester.
+ * Il n'imprime rien : il occupe. C'est la seule façon d'empêcher un corps de
+ * certificat un peu long de pousser son dernier paragraphe jusqu'au bord bas
+ * de l'A5, là où la praticienne signe. `break-inside: avoid` fait que, si la
+ * place manque vraiment, c'est la réserve qui bascule sur une seconde page
+ * AVEC de la matière au-dessus d'elle — jamais une page 2 portant une seule
+ * signature orpheline, qui ferait douter de l'intégrité de la pièce. */
+.doc-corps::after {
+  content: "";
+  display: block;
+  height: var(--doc-signature);
+  break-inside: avoid;
+}
+
+/* Le traitement est un champ libre multiligne : les retours à la ligne saisis
+ * par la praticienne doivent survivre au rendu HTML. */
+/* --- La liste de traitements — v2, certificat médical ---------------------- */
+/* DOCUMENT-TEMPLATES-v2 §3 : deux lignes de traitement en puces, la seconde
+ * facultative. */
+
+.doc-liste {
+  margin: 0 0 var(--doc-espace-para);
+  padding-inline-start: var(--doc-alinea);
+  list-style: disc;
+}
+
+.doc-liste li {
+  margin: 0;
+  line-height: var(--doc-interligne);
+  overflow-wrap: anywhere;
+}
+
+/* ⚠️ LA PUCE FACULTATIVE. `traitement_2` peut être une chaîne VIDE (045) : le
+ * marqueur se substitue alors pour de bon, et l'élément devient `<li></li>`.
+ * Sans cette règle, une puce blanche s'imprimerait sur un certificat
+ * médico-légal — un « • » suivi de rien, qui se lit comme un oubli du médecin.
+ *
+ * ⚠️ `:empty` NE TOLÈRE AUCUN CONTENU, PAS MÊME UNE ESPACE. C'est pourquoi la
+ * migration 045 §2.3 écrit `<li>{{vars.traitement_2}}</li>` collé à ses
+ * balises, et pourquoi son contrôle §3(d) le vérifie en base : les deux
+ * moitiés de cette garantie vivent dans deux fichiers différents, et aucune
+ * ne tient debout sans l'autre. */
+.doc-liste li:empty {
+  display: none;
+}
+
+/* ⚠️ MÊME PIÈGE DE SPÉCIFICITÉ QUE L'EN-TÊTE, ET IL AVAIT MORDU ICI AUSSI.
+ * `.doc-traitement` seul vaut (0,1,0), `.doc-corps p` vaut (0,1,1) : le
+ * raccourci `margin: 0 0 …` de la seconde écrasait le `margin-inline` de la
+ * première, et le bloc de traitement sortait au fer à gauche du corps au lieu
+ * d'être en retrait. Visible sur la capture A5, invisible à la relecture. */
+.doc-feuille .doc-traitement {
+  white-space: pre-wrap;
+  margin-inline: var(--doc-alinea);
+  /* Un traitement saisi en un seul mot très long (un nom de spécialité, une
+   * posologie collée) déborderait la colonne de 120 mm au lieu de passer à la
+   * ligne. Sur A5 la marge d'erreur est trop mince pour le laisser au hasard. */
+  overflow-wrap: anywhere;
+}
+
+/* Le portail d'impression. Invisible a l'ecran — la feuille est deja affichee
+ * dans la colonne de droite — et SEUL survivant sur le papier. Sans lui, la
+ * regle `body > *:not(.doc-racine)` n'aurait rien a epargner : tout element
+ * imbrique dans la coquille est masque a l'impression. */
+.ecran-cache {
+  display: none;
+}
+
+/* --- L'IMPRESSION ---------------------------------------------------------- */
+
+@media print {
+  /* 1 · Tout disparaît sauf la feuille : la coquille, le rail de navigation,
+   *     les boutons, les onglets. `.doc-racine` est un enfant DIRECT de
+   *     `<body>`, posé par un portail React : imbriqué dans la coquille, il
+   *     serait masqué par cette règle au lieu d'en être épargné. */
+  body > *:not(.doc-racine) {
+    display: none !important;
+  }
+
+  .doc-racine {
+    display: block;
+  }
+
+  /* Le portail reprend sa place : c'est lui qu'on imprime, pas la colonne. */
+  .ecran-cache {
+    display: block;
+  }
+
+  /* Tout ce qui est utile à l'écran et n'a rien à faire sur le papier. */
+  .impression-cachee {
+    display: none !important;
+  }
+
+  /* 2 · La feuille redevient du papier : pas d'ombre, pas d'arrondi, pas de
+   *     largeur imposée — c'est `@page` qui tient les marges. */
+  .doc-feuille {
+    width: auto;
+    min-height: 0;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    background: var(--card);
+  }
+
+  /* 3 · Ce qui ne doit jamais se couper entre deux pages. Un en-tête orphelin
+   *     en haut de page 2 rend le certificat suspect. */
+  .doc-entete {
+    break-inside: avoid;
+    break-after: avoid;
+  }
+
+  .doc-titre {
+    break-after: avoid;
+  }
+
+  .doc-corps p,
+  .doc-alinea,
+  .doc-traitement {
+    break-inside: avoid;
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* 4 · Le fond de la marque et l'encre verte doivent être IMPRIMÉS. Sans cela
+   *     les navigateurs escamotent les fonds par défaut, et l'en-tête sort
+   *     sans logo — sur un papier destiné à un notaire. */
+  .doc-entete,
+  .doc-entete__marque {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* 5 · Aucune URL en marge de page : les navigateurs ajoutent la cible d'un
+   *     lien après son texte à l'impression. Sur un certificat, c'est du
+   *     bruit qui ressemble à une mention légale. */
+  a[href]::after {
+    content: none;
   }
 }

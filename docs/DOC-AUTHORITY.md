@@ -20,7 +20,8 @@ v2 — 2026-08-09 · réécrit à l'ouverture de la phase v1
    04-DESIGN-SYSTEM.md            ← jetons visuels (amendé par ADR-022)
    05-UX-CONTRACT.md              ← états d'écran obligatoires
    06-PERF-BUDGET.md              ← budget de performance
-   DOCUMENT-TEMPLATES.md          ← contenu des certificats
+   DOCUMENT-TEMPLATES-v2.md       ← contenu des certificats (v2, 2026-08-22 ;
+                                     remplace DOCUMENT-TEMPLATES.md, retiré)
 5. SPRINT-V1.md                   ← quoi construire, dans quel ordre
    SESSION-CONTRACTS.md           ← comment ouvrir chaque session
    MODULE-MAP.md                  ← où vit chaque module

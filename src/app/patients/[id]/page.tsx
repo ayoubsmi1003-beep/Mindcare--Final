@@ -34,6 +34,7 @@ import { fr } from "@/i18n/fr";
 import { getSession, signOut } from "@/services/auth";
 import { getCurrentUser, type CurrentUser } from "@/services/authz";
 import { getPatient, type Patient } from "@/services/patients";
+import { SectionDocumentsPatient } from "@/components/documents/SectionDocumentsPatient";
 
 function Champ({ libelle, valeur }: { libelle: string; valeur: string | null }): React.JSX.Element {
   return (
@@ -265,6 +266,14 @@ export default function PageFichePatient(): React.JSX.Element {
             <Champ libelle={fr.patients.adresse} valeur={patient.address} />
             <Champ libelle={fr.patients.notesAdministratives} valeur={patient.notesAdmin} />
           </div>
+
+          {/* ⚠️ REPLIÉ PAR DÉFAUT, ET IL LE RESTE. La section ne lit rien tant
+              qu'on ne l'ouvre pas : app.list_patient_documents écrit une trace
+              de type liste dans audit.log AVANT de lire, et ouvrir une fiche ne
+              doit pas produire une lecture que la praticienne n'a pas demandée
+              (règle 6). Le budget de 2 appels de cet écran est la seconde
+              raison, pas la première. */}
+          <SectionDocumentsPatient patientId={patient.id} />
         </article>
       ) : null}
     </AppShell>

@@ -120,7 +120,7 @@ fonctionnement.
 |---|---|
 | Signer une note | **oui** — c'est irréversible (ADR-004) |
 | Annuler un rendez-vous | **oui** |
-| Émettre un certificat | **oui** — aperçu A4 avant émission |
+| Émettre un certificat | **oui** — aperçu A5 avant émission |
 | Toute action Jarvis en écriture | **oui** — carte, 400 ms (L2) |
 | Fixer un tarif | non — corrigeable |
 | Créer / modifier un patient | non — corrigeable |

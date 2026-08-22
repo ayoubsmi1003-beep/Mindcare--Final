@@ -172,7 +172,7 @@ contourné par une vérification en JavaScript qui ne serait qu'une convention d
 | | |
 |---|---|
 | **Agent** | `feature-builder` · **sonnet** · migration `031` par `db-migrator` · **opus** |
-| **Lit** | `SPRINT-V1.md` §V6 · `DOCUMENT-TEMPLATES.md` · `S7A-FINANCE.md` §recette |
+| **Lit** | `SPRINT-V1.md` §V6 · `DOCUMENT-TEMPLATES-v2.md` · `S7A-FINANCE.md` §recette |
 | **Prérequis** | `031_seed_document_templates.sql` appliquée · logo validé · nom, n° d'ordre et téléphone saisis dans `app.profiles` |
 | **Checkpoint** | `bash scripts/checkpoint-v6.sh` + **le contrôle papier** |
 
