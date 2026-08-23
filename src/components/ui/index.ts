@@ -52,6 +52,18 @@ export type { NomIcone, IconeProps } from "./Icones";
 export { Badge, Chiffre } from "./Badge";
 export type { TonBadge } from "./Badge";
 
+/* Patients V2 — les deux pièces qui manquaient au vocabulaire.
+ *
+ * Elles ont un appelant réel (l'espace de travail patient), condition posée
+ * plus haut pour toute primitive. `Onglets` porte le contrat clavier complet
+ * d'un `tablist` ; `Avatar` sort le monogramme des trois écrans qui le
+ * refabriquaient chacun à sa façon. */
+export { Onglets, PanneauOnglet } from "./Onglets";
+export type { Onglet } from "./Onglets";
+
+export { Avatar } from "./Avatar";
+export type { TailleAvatar } from "./Avatar";
+
 export { ChampTexte, ChampSelection, ChampZoneTexte } from "./Champs";
 
 export { EspaceTravail, SectionPliable } from "./Espaces";

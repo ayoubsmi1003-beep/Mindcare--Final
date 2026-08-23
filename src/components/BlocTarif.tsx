@@ -38,8 +38,19 @@ import { BarreActions, Bouton, ChampTexte, PanneauInfo, Section, Squelette } fro
 
 export function BlocTarif({
   consultationId,
+  onEtatTarif,
 }: {
   readonly consultationId: string;
+  /**
+   * Dit à l'écran de séance si un tarif EXISTE — rien d'autre, jamais le
+   * montant : l'argent reste dans ce bloc. `app.close_consultation` (037)
+   * REFUSE de clore sans ligne de paiement ; sans ce signal, l'écran proposait
+   * un bouton « Terminer la séance » qui ne pouvait que produire un refus
+   * opaque (P0001 traduit en message générique par `errors.ts`, à bon droit).
+   * `undefined` tant que la lecture n'a pas abouti : on ne conclut pas
+   * « pas de tarif » d'un chargement en cours ni d'une lecture en échec.
+   */
+  readonly onEtatTarif?: (present: boolean | undefined) => void;
 }): React.JSX.Element {
   const [paiement, setPaiement] = useState<Paiement | null | undefined>(undefined);
   const [saisie, setSaisie] = useState("");
@@ -55,11 +66,16 @@ export function BlocTarif({
       // écran d'argent est pire qu'une absence.
       setPaiement(null);
       setMessageErreur(result.error.message);
+      // Lecture en échec : on ne PRÉTEND pas savoir. L'écran de séance gardera
+      // son bouton, et c'est la base qui tranchera — un refus vaut mieux
+      // qu'une commande masquée sur une information qu'on n'a pas.
+      onEtatTarif?.(undefined);
       return;
     }
     setPaiement(result.data);
     setSaisie(result.data === null ? "" : String(result.data.montantDzd));
-  }, [consultationId]);
+    onEtatTarif?.(result.data !== null);
+  }, [consultationId, onEtatTarif]);
 
   useEffect(() => {
     void charger();

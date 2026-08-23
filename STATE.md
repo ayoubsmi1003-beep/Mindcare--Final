@@ -1,10 +1,213 @@
 # STATE — MindCare OS
-**V8-DOCUMENTS VERT AU CHECKPOINT · les 4 certificats v2 sortent propres, EN A5 · V7-CAISSE et V3 toujours verts**
-Dernière mise à jour : 2026-08-22
+**V10-PATIENTS VERT (SQL 37/37) · le dossier patient est un espace de travail · V9-COCKPIT et V8-DOCUMENTS restent verts**
+Dernière mise à jour : 2026-08-23
 
 ---
 
-## ✅ 2026-08-22 — V8-DOCUMENTS : les 4 certificats, du modèle au papier
+## ✅ 2026-08-23 — V10-PATIENTS : l'espace de travail clinique
+
+### 0. Ce que le lot livre
+
+`/patients` — annuaire clinique : avatar monogramme, nom, n° de dossier, date de
+naissance, téléphone. Recherche DÉBOUNCÉE à 250 ms (elle ne l'était pas : chaque
+frappe partait, et chaque appel écrit une trace `recherche`).
+
+`/patients/[id]` — six onglets : Vue d'ensemble · Chronologie · Clinique ·
+Traitements · Rendez-vous · Documents. Ouverture en UN appel de données
+(`get_patient_workspace`), le reste À LA DEMANDE onglet par onglet — motif
+`SectionDocumentsPatient` : ouvrir une fiche ne doit pas produire une lecture
+que la praticienne n'a pas demandée (règle 6).
+
+Modification du dossier sur `app.update_patient`, la porte existante. **Aucun
+second chemin d'écriture, aucune création de patient** (elle n'a pas de porte et
+`record_number` n'est généré par rien — reste à faire).
+
+**QUATRE COLONNES DORMAIENT.** `sex`, `emergency_contact`, `id_document_number`,
+`id_document_issuer` existent depuis 004 et `get_patient` les rendait déjà : seul
+le mapping TypeScript les jetait. Elles sont exposées sans une seule migration.
+
+### 1. Migrations 047 et 048 — appliquées et vérifiées
+
+| Objet | Forme |
+|---|---|
+| `get_patient_workspace(uuid)` | DEFINER `app_gatekeeper`, **VOLATILE**, jsonb à contrat EXPLICITE (jamais `to_jsonb`), champ `contrat` versionné, UNE trace `fiche` avant lecture |
+| `list_patient_timeline(uuid, timestamptz, uuid, int)` | DEFINER, VOLATILE, 8 sources en `UNION ALL`, **pagination KEYSET** `(occurred_at, event_id)`, bornée à 50 en base, UNE trace `liste` |
+| 6 × `GRANT SELECT` | diagnoses, prescriptions, prescription_lines, scale_administrations, scales, medications — **le porteur n'en avait AUCUN** |
+| `prescriptions_patient` | index `(patient_id, prescribed_at DESC)`, le seul manquant |
+
+**047 est une FAÇADE DE LECTURE, pas le Digital Twin.** Aucune projection, aucune
+vue matérialisée, aucun cache : une agrégation à la lecture, bornée. Le champ
+`contrat` porte la version de forme pour qu'une implémentation canonique puisse
+lui succéder sans rupture.
+
+### 2. Les six GRANT — pourquoi ils n'ouvrent rien
+
+`app_gatekeeper` n'avait jamais reçu `SELECT` sur les six tables cliniques.
+Sans eux la porte n'aurait pas rendu « zéro ligne » : elle aurait échoué en
+`42501`, à l'exécution. Quatre dispositifs, tous vérifiés au checkpoint (§A),
+font que la RLS s'applique intégralement sous ce rôle :
+non-propriétaire de toute table (§A3) · pas de BYPASSRLS (§A1) · FORCE RLS sur
+les six (§A4) · héritage de `authenticated`, dont aucune policy clinique n'a de
+clause assistante (§A2).
+
+### 3. « Pas le droit » ≠ « rien à montrer »
+
+La RLS seule NE DISTINGUE PAS les deux : dans les deux cas la sous-requête rend
+zéro ligne. `clinique` et `traitements` valent donc JSON `null` quand
+`app.can_see_clinical()` — le helper canonique de 003, déjà seconde barrière de
+`get_document` — rend faux, et un OBJET aux listes vides sinon.
+
+Ce n'est pas un test de rôle applicatif (règle 4) : il décide de la FORME, pas
+de l'accès. S'il se trompait en rendant vrai, la RLS filtrerait quand même les
+sous-requêtes. Le pire cas est un onglet inutile, jamais une divulgation.
+Contrôles C1/C2 contre B4b : les deux situations sont distinguables.
+
+### 4. Verdicts mesurés
+
+```
+checkpoint-patients-v2.sql ....... 37 verts · 0 ROUGE · 0 BLOQUÉ
+                                   (fixtures ANNULÉES, impersonation a1/a2/a3)
+  §A plateforme (9)  le porteur ne peut pas contourner la RLS
+  §B cloison (7)     praticienne / consœur → NULL / assistante / inexistant
+  §C forme (4)       « pas le droit » ≠ « rien à montrer » ; aucun champ interne
+  §D chronologie (5) ordre, keyset sans doublon, bornage, ZÉRO fuite clinique
+  §E audit (5)       1 trace par appel, y compris hors périmètre
+  §F écriture (5)    allowlist, coalesce, format, effacement
+
+tsc --noEmit ..................... 0 erreur
+eslint ........................... 0 erreur
+next build ....................... vert · /patients/[id] 8.02 kB · 222 kB First Load
+preflight.sh ..................... vert
+
+get_patient_workspace ............ 147 ms médiane · charge utile 1 233 octets
+list_patient_timeline (20 év.) ... 78 ms médiane
+                                   budget fiche patient : 2 appels, < 500 ms — tenu
+```
+
+### 5. Ce que le lot NE fait PAS
+
+Aftercare sous toute forme · création de patient · e-mail, adresse structurée,
+situation familiale, profession, allergies, antécédents (**aucune de ces
+colonnes n'existe** — elles ne sont pas affichées « Non renseigné », elles ne
+sont pas affichées du tout) · risque suicidaire · paiements du patient ·
+communications · résumé IA · statut médicamenteux (`prescription_lines` n'a ni
+`stopped_at` ni statut : l'écran dit « Dernière prescription », **jamais**
+« traitement en cours ») · graphique de tendance sous deux mesures.
+
+### 6. Trois pièges rencontrés, et ce qu'ils coûtent
+
+**`consultations.kind` N'EXISTE PAS.** 024 n'a ajouté `kind` qu'à
+`app.appointments` ; une consultation en hérite par son rendez-vous. 047 est
+passée VERTE malgré la faute : Postgres ne résout pas les identifiants du corps
+d'une fonction plpgsql à sa création, et la porte n'a échoué qu'au premier appel,
+au checkpoint. **Vert statique ≠ vert intégré** — une migration appliquée sans
+porte exercée ne prouve rien. Corrigé par 048, en `CREATE OR REPLACE` (un `DROP`
+aurait réattribué le propriétaire à `postgres`, `rolbypassrls`, et la porte
+aurait cessé silencieusement d'être filtrée).
+
+**Le garde ADR-016 s'applique aux fixtures de checkpoint.** Toute table portant
+`patient_id` refuse une insertion sans `is_synthetic = true` tant que le
+déploiement est en `cloud-dev`.
+
+**Une borne d'audit est un `max(id)`, pas un `count(*)`.** Les quatre contrôles
+§E sont d'abord sortis ROUGE sur un instrument qui comparait `id > count(*)` :
+les portes traçaient correctement depuis le début.
+
+### 7. Reste ouvert
+
+- **Création de patient** — aucune porte ; `app.next_number(cabinet,'patient_record',…)`
+  existe (010) et l'attend.
+- **Faille d'audit préexistante** — `diagnoses`, `prescriptions` et
+  `scale_administrations` restent lisibles DIRECTEMENT sous RLS par
+  `authenticated`, **sans trace de lecture**. V10 n'aggrave rien (elle lit par
+  des portes qui tracent) mais ne la referme pas : c'est un lot à part.
+- **Recherche phonétique** — les variantes algériennes (Mohamed / Mohammed /
+  M'hamed, Belkacem / Bel Kacem) ne sont pas couvertes ; un patient introuvable
+  devient un doublon de dossier.
+- **`phone LIKE '%…%'`** reste un *seq scan* : non indexable en l'état.
+- **Adresse structurée** — `address` est un `text` libre. Écart documenté.
+- Vérification navigateur en 3 rôles réels : **non faite dans cette session.**
+
+---
+
+## ✅ 2026-08-22 — V9-COCKPIT : le poste d'accueil de l'assistante
+
+### 0. Ce que le lot livre
+
+`/tableauDeBord` — composition SÉPARÉE par rôle (I12) : cockpit complet pour
+l'assistante, phrase honnête « livrée avec la session V4 » pour les praticiennes.
+Racine `/` intouchée. Frise du jour multi-praticiennes avec ligne « maintenant »,
+zone d'attention **plafonnée à 9 items** (priorité opérationnelle pure, `attention.ts`),
+arrivées/absents, boîte de paiements + tiroir d'encaissement (montant LECTURE
+SEULE, Espèces fixe, confirmation 400 ms, JAMAIS d'optimisme sur l'argent),
+centre de notifications, préparation/clôture, recherche éclair, clavier gardé
+(`N T / A P R` ; `Ctrl+K` reste Jarvis).
+
+**LIVE = POLLING BORNÉ.** Board 120 s · notifications 30 s · rafraîchi après
+chaque mutation · au retour sur l'onglet. AUCUN bouton Actualiser (contrôle au
+navigateur). Realtime explicitement hors périmètre v1 — aucune extension de `DbPort`.
+
+### 1. Migration 046_reception_gates.sql — appliquée et vérifiée
+
+| Objet | Forme |
+|---|---|
+| `mark_appointment_arrived` / `mark_appointment_no_show` | INVOKER, transitions nommées, rejeu sans réécriture d'horodatage |
+| `reception_board(date)` | DEFINER `app_gatekeeper` (sans BYPASSRLS), jsonb `{journee,demandes,paiements}`, UNE trace `liste`/appel |
+| `mark_notification_read` | INVOKER trivial |
+| policy `pay_assistant_encaissement` | ADDITIVE : UPDATE si cabinet+assistant+non encaissé+24 h ; WITH CHECK `collected_by=auth.uid()` |
+| déclencheur `trg_pay_guard` | BEFORE UPDATE : sous rôle assistant, colonnes tarif/rattachement GELÉES (la RLS filtre des lignes, pas des colonnes — leçon ADR-017 transposée) |
+
+La porte d'écriture reste `record_payment_collected` (029), inchangée.
+
+### 2. Verdicts mesurés
+
+```
+checkpoint-reception.sql ......... 34 verts · 0 ROUGE (fixtures ANNULÉES,
+                                   impersonation a1/a2/a3 via SET ROLE+jwt.sub)
+mesure-reception.mjs (next start)  13 verts · 0 ROUGE
+  RPC reception_board ............ 136 ms   (budget 500 ms)
+  écran complet .................. 488 ms   (budget §2 tenu ; coquille incluse)
+  appels de données de l'écran ... 2       (board + notifications ; coquille à part)
+  1440×900 ....................... 0 px de défilement (doc ET <main>)
+  attention ...................... ≤9 prouvé au DOM · aucun bouton refresh
+  fraîcheur sans rechargement .... prouvée par injection réseau (visibilitychange)
+preflight · typecheck · lint · pnpm build (/tableauDeBord 10,1 kB · 219 kB load)
+```
+
+Fenêtre …a3 ouverte pour la mesure via `scripts/compte-assistante.sh`
+(même garde ADR-016 que compte-praticienne), **refermée après** (sentinelle
+vérifiée). Le script bash existe pour les sessions suivantes ; cette session a
+exécuté sa séquence via docker/PowerShell direct — WSL n'a pas Docker Desktop
+en intégration.
+
+### 3. Quatre pièges qui coûteront cher à quiconque les réapprend
+
+- **La colonne de sortie d'une porte scalaire s'appelle comme la fonction.**
+  `FROM app.reception_board(d)` expose une colonne `reception_board`, PAS
+  `journee`. Passer par un accesseur (`pg_temp.board()`) et des `->'clé'`.
+- **Postgres ne garantit pas l'ordre d'évaluation des arguments.** Une sonde
+  « porte PUIS vérification » écrite en deux arguments d'un même appel peut
+  lire l'état AVANT la mutation → faux ROUGE. Séquencer dans un helper plpgsql.
+- **Les apostrophes de i18n sont DROITES.** Un sélecteur Playwright avec ’
+  (U+2019) ne trouve jamais « En salle d'attente ».
+- **RLS et instruments.** `notifications_mine` masque les notifications
+  assistant à une praticienne ; `audit.log` lui est fermé : tout compte
+  cross-rôle passe par un compteur SECURITY DEFINER dédié INSTRUMENT
+  (motif v6, étendu aux notifications).
+
+### 4. Restes ouverts
+
+1. `checkpoint-v3.sh` NON rejoué cette session (AppShell touché d'une seule
+   ligne : `ECRANS_CONSTRUITS += "tableauDeBord"`).
+2. Plafond ≤9 observé à 0 item sur la donnée synthétique du jour ; la preuve
+   de troncature tient dans `attention.ts` (slice(0,9)) + contrôle DOM.
+3. Drag-drop, waiting list, paiements partiels, méthodes alternatives,
+   Realtime, dashboard praticienne (V4) : hors périmètre, coutures documentées
+   dans le plan du lot.
+
+---
+
+## ✅ 2026-08-22 (antérieur) — V8-DOCUMENTS : les 4 certificats, du modèle au papier
 
 > ⚠️ **VERT AU CHECKPOINT N'EST PAS VERT TOUT COURT.** Deux contrôles ne
 > s'automatisent pas et RESTENT OUVERTS : la saisie du profil réel sur

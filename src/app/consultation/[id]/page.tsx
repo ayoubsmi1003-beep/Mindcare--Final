@@ -224,6 +224,14 @@ export default function PageConsultation(): React.JSX.Element {
   const [confirmation, setConfirmation] = useState<string | undefined>(undefined);
   const [horsLigne, setHorsLigne] = useState(false);
   const [envoi, setEnvoi] = useState(false);
+
+  /**
+   * Un tarif existe-t-il pour cette séance ? `undefined` = on ne sait pas
+   * encore (ou la lecture a échoué). `BlocTarif` le renseigne — l'écran ne
+   * relit pas la finance de son côté, l'argent reste dans un seul bloc.
+   * Sert UNIQUEMENT à ne pas proposer une clôture que 037 refusera.
+   */
+  const [tarifPresent, setTarifPresent] = useState<boolean | undefined>(undefined);
   /**
    * V1.4 — ÉCHEC DE LECTURE ≠ séance introuvable. Avant cette distinction,
    * `charger` posait `seance = null` sur TOUT échec (réseau, délai, serveur),
@@ -1065,7 +1073,20 @@ export default function PageConsultation(): React.JSX.Element {
             une séance close dont le tarif n'a pas été fixé est précisément le
             cas où l'oubli coûte. Aucune décision de rôle ici : la porte 029
             refuse la séance d'une consœur, et c'est elle qui a raison. */}
-        {seance == null ? null : <BlocTarif consultationId={seance.id} />}
+        {seance == null ? null : (
+          <BlocTarif consultationId={seance.id} onEtatTarif={setTarifPresent} />
+        )}
+
+        {/* 037 : sans ligne de paiement, la clôture est REFUSÉE. Le refus
+            arrivait en P0001, donc en message générique — la praticienne
+            relançait le même bouton sans savoir quoi corriger. On dit la règle
+            ici, et on retire le bouton plutôt que de le proposer pour le
+            refuser : le geste à faire est juste au-dessus. */}
+        {seance == null || seanceClose || tarifPresent !== false ? null : (
+          <PanneauInfo titre={fr.consultation.clotureSansTarifTitre} ton="attention">
+            <p className="font-ui text-body">{fr.consultation.clotureSansTarif}</p>
+          </PanneauInfo>
+        )}
 
         {seance == null ? null : (
           <BarreActions>
@@ -1078,7 +1099,7 @@ export default function PageConsultation(): React.JSX.Element {
                 {fr.actions.signerLaNote}
               </Bouton>
             ) : null}
-            {seanceClose ? null : (
+            {seanceClose || tarifPresent === false ? null : (
               <Bouton onClick={clore} disabled={envoi}>
                 {fr.actions.terminerLaSeance}
               </Bouton>

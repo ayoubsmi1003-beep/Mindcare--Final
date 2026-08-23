@@ -159,6 +159,169 @@ export const fr = {
     dossierInactif: "Dossier inactif",
     /** La liste ne montre que les dossiers actifs — le dire plutôt que le laisser croire. */
     listeActifsSeulement: "Seuls les dossiers actifs apparaissent dans cette liste.",
+
+    // ─── Patients V2 — l'espace de travail ─────────────────────────────────
+
+    /**
+     * ⚠️ « NON RENSEIGNÉE », JAMAIS « AUCUNE ». Le féminin est voulu : ces
+     * phrases qualifient une adresse, une donnée. Dire « Aucune allergie »
+     * quand la base ne sait rien serait une AFFIRMATION CLINIQUE fausse, tirée
+     * d'un champ vide. On dit ce qu'on sait : rien.
+     */
+    adresseAbsente: "Non renseignée",
+    contactUrgence: "Contact d'urgence",
+    contactUrgenceAbsent: "Non renseigné",
+    pieceIdentite: "Pièce d'identité",
+    pieceIdentiteEmetteur: "Délivrée par",
+    sexe: "Sexe",
+    sexeM: "Homme",
+    sexeF: "Femme",
+    age: "Âge",
+    ageAnnees: "ans",
+
+    /** Fraîcheur du plan de travail — une seule fois par écran, jamais par carte. */
+    actualiseA: "Actualisé à",
+
+    onglets: {
+      vueDEnsemble: "Vue d'ensemble",
+      chronologie: "Chronologie",
+      clinique: "Clinique",
+      traitements: "Traitements",
+      rendezVous: "Rendez-vous",
+      documents: "Documents",
+    },
+
+    sections: {
+      identite: "Identité & coordonnées",
+      contexteClinique: "Contexte clinique",
+      prochaineEcheance: "Prochaine échéance",
+      diagnostics: "Diagnostics",
+      diagnosticsActifs: "Diagnostics actifs",
+      diagnosticsResolus: "Antécédents résolus",
+      diagnosticPrincipal: "Diagnostic principal",
+      echelles: "Échelles d'évaluation",
+      dernierePrescription: "Dernière prescription",
+      historiquePrescriptions: "Historique des prescriptions",
+      prochainRendezVous: "Prochain rendez-vous",
+      dernierRendezVous: "Dernier rendez-vous",
+      derniereConsultation: "Dernière consultation",
+    },
+
+    actions: {
+      nouveauRendezVous: "Nouveau rendez-vous",
+      modifier: "Modifier le dossier",
+      chargerPlus: "Charger les événements précédents",
+    },
+
+    /**
+     * États vides. Chacun dit ce qui MANQUE, jamais ce qui est ABSENT au sens
+     * clinique : « aucun diagnostic enregistré » parle du dossier, pas de la
+     * patiente.
+     */
+    vide: {
+      diagnostics: "Aucun diagnostic enregistré.",
+      echelles: "Aucune mesure d'échelle disponible.",
+      prescriptions: "Aucune prescription enregistrée.",
+      rendezVousAVenir: "Aucun rendez-vous à venir.",
+      rendezVous: "Aucun rendez-vous enregistré.",
+      consultations: "Aucune consultation enregistrée.",
+      chronologie: "Aucun événement enregistré pour ce dossier.",
+      chronologieFin: "Début du dossier.",
+    },
+
+    /**
+     * Libellés de la chronologie. La base ne fabrique aucune phrase : elle rend
+     * une clé fermée (`label_key`), résolue ici. Un libellé formé en SQL est un
+     * endroit où du texte clinique finit par se glisser.
+     */
+    chronologie: {
+      consultationOuverte: "Consultation ouverte",
+      consultationClose: "Consultation terminée",
+      noteSignee: "Note clinique signée",
+      diagnosticPose: "Diagnostic posé",
+      diagnosticResolu: "Diagnostic résolu",
+      prescription: "Prescription",
+      echelle: "Échelle administrée",
+      rdv: "Rendez-vous",
+      document: "Document émis",
+    },
+
+    /**
+     * Traitements. ⚠️ AUCUN LIBELLÉ « EN COURS », « ACTIF » NI « ARRÊTÉ » : le
+     * schéma n'a ni `stopped_at` ni statut de ligne (009). Affirmer qu'un
+     * traitement est en cours serait inventer une donnée clinique.
+     */
+    traitements: {
+      manuscrite: "Ordonnance manuscrite",
+      lignes: "ligne(s)",
+      posologie: "Posologie",
+      parJour: "fois par jour",
+      duree: "Durée",
+      jours: "jour(s)",
+      /**
+       * Une fonction plutôt qu'une chaîne à trous : l'accord du pluriel est une
+       * décision de LANGUE, elle appartient à ce fichier. Concaténer « autre » et
+       * un « s » conditionnel dans un composant disperse le français dans le code
+       * et le rend introuvable le jour où il faut le corriger.
+       */
+      autresPrescriptions: (n: number): string =>
+        n === 1
+          ? "1 autre prescription figure au dossier. La chronologie en porte le détail daté."
+          : `${String(n)} autres prescriptions figurent au dossier. La chronologie en porte le détail daté.`,
+    },
+
+    echelle: {
+      dernierScore: "Dernier score",
+      scorePrecedent: "Score précédent",
+      evolution: "Écart",
+      /** Une seule mesure : on le DIT, plutôt que de laisser un écart vide. */
+      mesureUnique: "Une seule mesure : aucun écart calculable.",
+    },
+
+    prenom: "Prénom",
+    nom: "Nom",
+    /** L'indication reprend la contrainte réelle de la base, pas une approximation. */
+    formatTelephone: "8 à 20 caractères : chiffres, espaces et « + ».",
+    /* Dit à CÔTÉ DU CHAMP fautif ce que la contrainte `patients_phone_format`
+       (004) refuse. Le refus arrivait jusque-là de la base, en message
+       générique : la praticienne voyait « une valeur saisie n'est pas
+       acceptée » sans savoir laquelle. La ponctuation courante (tirets,
+       points, parenthèses) est ramenée à des espaces avant ce contrôle. */
+    telephoneRefuse:
+      "Ce numéro n'est pas enregistrable : 8 à 20 caractères, uniquement des chiffres, des espaces et « + ».",
+
+    modification: {
+      titre: "Modifier le dossier",
+      enregistrer: "Enregistrer",
+      annuler: "Annuler",
+      contactNom: "Nom du contact",
+      contactLien: "Lien avec le patient",
+      contactTelephone: "Téléphone du contact",
+    },
+
+    rendezVousTotal: (n: number): string =>
+      n === 1
+        ? "1 rendez-vous figure au dossier."
+        : `${String(n)} rendez-vous figurent au dossier.`,
+
+    documentsTotal: (n: number): string =>
+      n === 0
+        ? "Aucun document émis."
+        : n === 1
+          ? "1 document émis."
+          : `${String(n)} documents émis.`,
+
+    /** Le format est celui de la contrainte `patients_phone_format` (004). */
+    saisieInvalide:
+      "Cette saisie n'a pas été acceptée. Rien n'a été enregistré. Vérifiez le téléphone (8 à 20 chiffres) et les champs obligatoires.",
+
+    /**
+     * ⚠️ PAS « une erreur est survenue ». Une réponse qui ne respecte pas le
+     * contrat de la porte est un défaut NOMMÉ, et la praticienne doit savoir
+     * que rien n'a été perdu.
+     */
+    reponseIncoherente:
+      "Ce dossier n'a pas pu être affiché : la réponse du serveur ne correspond pas au format attendu. Aucune donnée n'a été modifiée. Réessayez, puis signalez-le si cela persiste.",
   },
 
   /**
@@ -359,6 +522,14 @@ export const fr = {
        « terminé » et les notes de travail se figent. On le dit avant, pas après. */
     confirmerCloture:
       "Terminer la séance ? Le rendez-vous passera à « Terminé » et les notes de travail ne seront plus modifiables.",
+
+    /* La clôture EXIGE un tarif depuis 037 : sans ligne de paiement, la séance
+       serait invisible aux Finances définitivement. Le refus remonte en P0001,
+       qu'`errors.ts` traduit — à bon droit — par un message générique. L'écran
+       dit donc la règle AVANT l'aller-retour, et nomme le geste exact. */
+    clotureSansTarifTitre: "Le tarif manque",
+    clotureSansTarif:
+      "Une séance ne se termine pas sans tarif : elle ne serait jamais comptée. Indiquez le montant ci-dessus, puis terminez la séance. Une séance offerte se saisit à 0.",
 
     duree: "Durée de la séance",
     debut: "Début",
@@ -1010,6 +1181,116 @@ export const fr = {
       ecoute: "À l'écoute…",
       transcription: "Transcription…",
       indisponible: "La voix est indisponible. Le clavier reste utilisable.",
+    },
+  },
+
+  /**
+   * Le poste d'accueil — cockpit de l'assistante (D-08).
+   *
+   * ⚠️ COMPOSITION SÉPARÉE (I12), pas un écran praticien amputé : aucune chaîne
+   * clinique n'y figure parce qu'aucune n'existe dans le contrat de lecture
+   * (`app.reception_board`, 046). Les verbes reprennent le glossaire :
+   * Enregistrer · Confirmer · Encaisser — jamais Soumettre, OK, Valider seul.
+   * Un montant s'affiche « à encaisser » ; il ne se modifie pas ici.
+   *
+   * SURFACE D'ATTENTION ≤ 9 (critère d'acceptation du lot) : au-delà, la zone
+   * principale affiche un débord honnête et renvoie aux files dédiées.
+   */
+  reception: {
+    titre: "Poste d'accueil",
+    /** Placeholder honnête du rôle praticien : V4 reste due, entière (D-23). */
+    placeholderPraticienne:
+      "Le tableau de bord praticienne sera livré avec la session V4. Aucun contenu n'est simulé ici.",
+
+    pulse: {
+      salleAttente: "En salle d'attente",
+      retards: "Retards",
+      aEncaisser: "À encaisser",
+      demandes: "Demandes en attente",
+    },
+
+    frise: {
+      titre: "Journée",
+      maintenant: "Maintenant",
+      praticienneFiltre: "Toutes les praticiennes",
+      creneauLibre: "Créneau libre",
+      nouveauRdv: "Nouveau rendez-vous",
+      videJournee: "Aucun rendez-vous aujourd'hui.",
+      selectionHint: "Sélectionnez un rendez-vous pour agir : A arrivé · P paiement · R déplacer.",
+    },
+
+    attention: {
+      titre: "Ce qui demande attention",
+      autres: "autres éléments — voir les files ci-dessous",
+      vide: "Tout est à jour. Rien ne réclame votre geste.",
+    },
+
+    arrivees: {
+      titre: "Arrivées",
+      marquerArrivee: "Marquer arrivé(e)",
+      marquerAbsent: "Non présenté(e)",
+      attenteDepuis: "attend depuis",
+      vide: "Personne n'attend pour le moment.",
+    },
+
+    paiements: {
+      titre: "Paiements",
+      ongletDues: "À encaisser",
+      ongletEncaisses: "Encaissés aujourd'hui",
+      videDues: "Aucun paiement en attente. Les tarifs fixés en fin de séance apparaissent ici.",
+      videEncaisses: "Aucun encaissement aujourd'hui.",
+      montantAEncaisser: "Montant à encaisser",
+      patiente: "Patiente / patient",
+      methode: "Méthode",
+      methodeEspeces: "Espèces",
+      encaisser: "Encaisser maintenant",
+      confirmerTitre: "Confirmer l'encaissement",
+      dejaEncaisse: "Déjà encaissé — rien à faire.",
+      recu: "Reçu",
+      praticienne: "Fixé par",
+    },
+
+    notifications: {
+      titre: "Notifications",
+      vide: "Aucune notification. Les tarifs fixés par la praticienne y arriveront.",
+      marquerLu: "Marquer comme lu",
+      paiementDue: "Nouveau paiement à encaisser",
+      consultationTerminee: "Consultation terminée",
+    },
+
+    demain: {
+      titre: "Préparation & clôture",
+      rdvConfirmes: "rendez-vous confirmés ce jour",
+      premierA: "Premier RDV à",
+      annulesDuJour: "Annulations du jour à replanifier",
+      annulesVide: "Aucune annulation à replanifier.",
+      replanifier: "Replanifier",
+      cloture: "Clôture du jour affiché",
+      paiementsRestants: "paiement(s) restant(s) à encaisser",
+    },
+
+    recherche: {
+      libelle: "Rechercher un patient",
+      indication: "Nom, téléphone ou numéro de dossier — touche /",
+      ouvrirFiche: "Ouvrir la fiche",
+      prochainRdv: "Prochain rendez-vous",
+      aucunRdvAVenir: "Aucun rendez-vous à venir.",
+    },
+
+    deplacement: {
+      titre: "Déplacer le rendez-vous",
+      apercuAvant: "Actuellement",
+      apercuApres: "Nouveau créneau",
+      duree: "Durée (minutes)",
+      enregistrer: "Enregistrer le déplacement",
+    },
+
+    feedback: {
+      paiementEncaisse: "Paiement encaissé.",
+      arriveeConfirmee: "Arrivée enregistrée.",
+      absentConfirme: "Absence enregistrée.",
+      rdvDeplace: "Rendez-vous déplacé.",
+      notificationLue: "Notification lue.",
     },
   },
 } as const;

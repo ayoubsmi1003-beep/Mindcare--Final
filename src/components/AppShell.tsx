@@ -98,6 +98,7 @@ interface GroupeNav {
  * couvre les douze écrans par construction de type).
  */
 const ECRANS_CONSTRUITS: readonly NomEcran[] = [
+  "tableauDeBord",
   "patients",
   "agenda",
   "finances",

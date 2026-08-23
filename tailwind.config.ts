@@ -415,6 +415,12 @@ const config: Config = {
       trois: "repeat(3, minmax(0, 1fr))",
       // Le pouls financier : cinq tuiles de largeur egale, jamais moins.
       pouls: "repeat(5, minmax(0, 1fr))",
+      // Le poste d'accueil (cockpit assistante) : frise du jour a gauche,
+      // files operationnelles a droite. Deux fractions INEGALES nommees ici
+      // plutot qu'en syntaxe arbitraire dans l'ecran (I10), meme motif que
+      // `finance`. `minmax(0, …)` autorise chaque colonne a se comprimer —
+      // sans lui, une carte large ferait deborder la grille.
+      cockpit: "minmax(0, 2fr) minmax(0, 1fr)",
     },
     // Largeurs de grille §3 — source unique tokens.css, aucune valeur ici.
     maxWidth: {

@@ -1,5 +1,5 @@
 /**
- * Liste Patients — recherche et accès aux fiches.
+ * Liste Patients — l'annuaire clinique du cabinet.
  *
  * ⚠️ TROIS PIÈGES DE PÉRIMÈTRE, TOUS PORTÉS PAR LA BASE, TOUS À RESPECTER ICI.
  *
@@ -22,6 +22,11 @@
  * `search_patients` ne rend que les dossiers `is_active`. L'écran le DIT
  * (`listeActifsSeulement`) au lieu de laisser croire qu'il montre tout.
  *
+ * ⚠️ AUCUN FILTRE « À REVOIR », « RDV AUJOURD'HUI », « NOUVEAU ». Ils
+ * figuraient au cahier des charges de V2 ; la porte ne les supporte pas, et
+ * trois d'entre eux n'ont aucune donnée derrière. Un filtre qui ne filtre rien
+ * est pire qu'un filtre absent : il fait croire que la liste a été restreinte.
+ *
  * AUCUNE DÉCISION D'AUTORISATION ICI. Pas un seul `if (role === …)`. Le rôle ne
  * sert qu'à composer la navigation (I12) ; ce qui est lisible est décidé par la
  * RLS, et chaque lecture est journalisée par la porte `app.search_patients`
@@ -30,23 +35,17 @@
 
 "use client";
 
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { AppShell } from "@/components/AppShell";
-import { EnTeteEcran, Squelette } from "@/components/ui";
+import { EnTeteAnnuaire, LignePatient } from "@/components/patients/LignePatient";
+import { BandeauHorsLigne, BlocErreur, EnTeteEcran, EtatVide, Squelette } from "@/components/ui";
 import { fr } from "@/i18n/fr";
 import { getSession, signOut } from "@/services/auth";
 import { getCurrentUser, type CurrentUser } from "@/services/authz";
 import { searchPatients, type PatientListItem } from "@/services/patients";
 import type { Page } from "@/services/result";
-
-/** Monogramme — jamais de photo (§4 règle 6). */
-function monogramme(prenom: string, nom: string): string {
-  const initiales = `${prenom.trim().charAt(0)}${nom.trim().charAt(0)}`.toUpperCase();
-  return initiales.trim() === "" ? "?" : initiales;
-}
 
 /**
  * V1.5 — au-delà de ce délai sans réponse, l'écran bascule en ERREUR avec le
@@ -57,6 +56,19 @@ function monogramme(prenom: string, nom: string): string {
  * `annule` de l'effet fait ignorer une réponse arrivée après coup.
  */
 const DELAI_CHARGEMENT_MS = 10_000;
+
+/**
+ * ⚠️ LE DÉBOUNCE N'EST PAS QU'UN CONFORT : CHAQUE APPEL ÉCRIT UNE LIGNE
+ * D'AUDIT. `app.search_patients` journalise une trace `recherche` par appel.
+ * Interroger à chaque frappe noierait `audit.log` sous une ligne par caractère
+ * — un journal légal illisible, ce qui revient à ne pas en avoir. 250 ms est
+ * sous le seuil de perception d'une pause pour une frappe courante, et
+ * regroupe un mot entier en un seul appel.
+ */
+const DEBOUNCE_MS = 250;
+
+/** Sous deux caractères, la recherche coûte plus qu'elle ne trie. */
+const LONGUEUR_MIN = 2;
 
 export default function PagePatients(): React.JSX.Element {
   const router = useRouter();
@@ -115,6 +127,19 @@ export default function PagePatients(): React.JSX.Element {
     };
   }, [router]);
 
+  // Le débounce — voir la constante. Une saisie plus courte que le seuil
+  // remet la liste complète plutôt que de laisser le dernier résultat à
+  // l'écran, ce qui ferait croire que la recherche est encore active.
+  useEffect(() => {
+    const t = saisie.trim();
+    const minuteur = setTimeout(() => {
+      setRequete(t.length >= LONGUEUR_MIN ? t : "");
+    }, DEBOUNCE_MS);
+    return () => {
+      clearTimeout(minuteur);
+    };
+  }, [saisie]);
+
   // Attend que la session soit tranchée avant d'interroger : lancer la
   // recherche pour un visiteur qu'on est en train de rediriger émet une requête
   // pour rien, et la porte `search_patients` journalise CHAQUE appel — on
@@ -155,7 +180,6 @@ export default function PagePatients(): React.JSX.Element {
     };
   }, [requete, sessionTranchee]);
 
-
   // Fermeture de session depuis l'interface. `replace` et pas `push` : le
   // bouton Retour ne doit pas ramener sur un écran de dossiers après une
   // déconnexion volontaire, sur un poste que le patient suivant voit.
@@ -168,10 +192,10 @@ export default function PagePatients(): React.JSX.Element {
   // V1.5 — LA SESSION TRANCHÉE NÉGATIVEMENT A SA PROPRE SORTIE.
   //
   // Défaut trouvé et corrigé dans la session qui a introduit `sessionTranchee` :
-  // le garde de RENDU ci-dessous teste `utilisateur === undefined`, alors que le
-  // garde d'EFFET teste `sessionTranchee !== true`. Hors ligne, `getSession()`
-  // échoue → `sessionTranchee = false` ET `utilisateur = null` : le rendu passait
-  // le premier garde, la recherche ne partait jamais, et `chargement` restait à
+  // le garde de RENDU testait `utilisateur === undefined`, alors que le garde
+  // d'EFFET teste `sessionTranchee !== true`. Hors ligne, `getSession()` échoue
+  // → `sessionTranchee = false` ET `utilisateur = null` : le rendu passait le
+  // premier garde, la recherche ne partait jamais, et `chargement` restait à
   // `true`. Le squelette respirait alors SANS FIN — l'attente infinie que V1.5
   // supprime (05-UX-CONTRACT.md §2).
   //
@@ -181,18 +205,11 @@ export default function PagePatients(): React.JSX.Element {
   // navigation la plus étroite — c'est le « défaut sûr » documenté plus bas.
   if (sessionTranchee === false) {
     return (
-      <main style={{ display: "flex", flexDirection: "column", gap: "var(--s-4)", padding: "var(--s-8)" }}>
-        {horsLigne ? (
-          <p role="status" style={{ padding: "var(--s-3) var(--s-4)", borderRadius: "var(--r-md)", background: "var(--sunken)", color: "var(--ink-700)", fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)" }}>
-            {fr.etats.horsLigne}
-          </p>
-        ) : null}
-        <div role="alert" style={{ padding: "var(--s-3) var(--s-4)", borderRadius: "var(--r-md)", background: "var(--attention-bg)", color: "var(--ink-700)", fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)" }}>
-          <strong style={{ display: "block", color: "var(--attention-ink)", fontSize: "var(--text-label-size)", lineHeight: "var(--text-label-leading)", letterSpacing: "var(--text-label-tracking)" }}>
-            {fr.erreur.titre}
-          </strong>
-          {horsLigne ? fr.erreurs["hors-ligne"] : fr.erreurs["non-authentifie"]}
-        </div>
+      <main className="flex flex-col gap-4 p-8">
+        {horsLigne ? <BandeauHorsLigne /> : null}
+        <BlocErreur
+          message={horsLigne ? fr.erreurs["hors-ligne"] : fr.erreurs["non-authentifie"]}
+        />
       </main>
     );
   }
@@ -201,7 +218,7 @@ export default function PagePatients(): React.JSX.Element {
     // V1.5 — squelette, pas un texte (05-UX-CONTRACT.md §2) : l'écran répond
     // sous les 100 ms avec la FORME du contenu réel, pas un message d'attente.
     return (
-      <main style={{ padding: "var(--s-8)" }}>
+      <main className="p-8">
         <Squelette lignes={6} />
       </main>
     );
@@ -225,14 +242,18 @@ export default function PagePatients(): React.JSX.Element {
           dossier, elle, garde `EnTetePage`, sobre et opaque. */}
       <EnTeteEcran icone="patients" titre={fr.patients.titre} />
 
+      {/* Plus de bouton « Rechercher » : la recherche part au débounce. Le
+          formulaire reste un `form` pour que `Entrée` fonctionne au clavier et
+          que le champ soit correctement étiqueté. */}
       <form
+        role="search"
         onSubmit={(event) => {
           event.preventDefault();
           setRequete(saisie.trim());
         }}
-        style={{ display: "flex", gap: "var(--s-3)", margin: "var(--s-6) var(--size-0)" }}
+        className="my-6"
       >
-        <label htmlFor="recherche-patients" style={{ position: "absolute", overflow: "hidden", width: "var(--size-0)", height: "var(--size-0)" }}>
+        <label htmlFor="recherche-patients" className="sr-only">
           {fr.patients.rechercher}
         </label>
         <input
@@ -241,122 +262,44 @@ export default function PagePatients(): React.JSX.Element {
           value={saisie}
           placeholder={fr.patients.rechercherIndication}
           onChange={(event) => setSaisie(event.target.value)}
-          style={{
-            flex: "1 1 auto",
-            minHeight: "var(--target-min)",
-            padding: "var(--s-2) var(--s-4)",
-            borderRadius: "var(--r-md)",
-            border: "var(--rule-width) solid var(--rule)",
-            background: "var(--card)",
-            color: "var(--ink-900)",
-            fontSize: "var(--text-body-size)",
-            lineHeight: "var(--text-body-leading)",
-            fontFamily: "var(--font-ui)",
-          }}
+          className="min-h-target-lg w-full rounded-md border border-rule bg-card px-4 font-ui text-body text-ink-900 placeholder:text-ink-500"
         />
-        <button
-          type="submit"
-          style={{
-            minHeight: "var(--target-min)",
-            padding: "var(--s-2) var(--s-5)",
-            borderRadius: "var(--r-md)",
-            border: "none",
-            background: "var(--brand-600)",
-            color: "var(--card)",
-            fontSize: "var(--text-body-size)",
-            lineHeight: "var(--text-body-leading)",
-            fontWeight: "var(--weight-semibold)",
-            fontFamily: "var(--font-ui)",
-            cursor: "pointer",
-          }}
-        >
-          {fr.patients.rechercher}
-        </button>
       </form>
 
-      {horsLigne ? (
-        <p role="status" style={{ padding: "var(--s-3) var(--s-4)", borderRadius: "var(--r-md)", background: "var(--sunken)", color: "var(--ink-700)", fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)" }}>
-          {fr.etats.horsLigne}
-        </p>
-      ) : null}
+      {horsLigne ? <BandeauHorsLigne /> : null}
 
       {messageErreur !== undefined && !horsLigne ? (
-        <div role="alert" style={{ padding: "var(--s-3) var(--s-4)", borderRadius: "var(--r-md)", background: "var(--attention-bg)", color: "var(--ink-700)", fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)" }}>
-          <strong style={{ display: "block", color: "var(--attention-ink)", fontSize: "var(--text-label-size)", lineHeight: "var(--text-label-leading)", letterSpacing: "var(--text-label-tracking)" }}>
-            {fr.erreur.titre}
-          </strong>
-          {messageErreur}
-        </div>
+        <BlocErreur message={messageErreur} />
       ) : null}
 
       {/* V1.5 — squelette, jamais un mot d'attente (05-UX-CONTRACT.md §2) : il
           occupe la place des lignes de la liste, de sorte que l'arrivée des
-          dossiers ne décale rien. Un « Chargement… » d'une ligne, remplacé par
-          six lignes de résultats, déplace l'écran à l'instant du clic. */}
+          dossiers ne décale rien. */}
       {chargement ? <Squelette lignes={6} /> : null}
 
       {!chargement && page !== undefined && page.rows.length === 0 ? (
-        /* État vide : une phrase --ink-500, aucune illustration (§4 règle 7).
-           Deux phrases distinctes selon qu'une recherche est en cours ou non —
+        /* Deux phrases distinctes selon qu'une recherche est en cours ou non —
            « rien ne correspond » et « rien n'est visible » ne disent pas la
            même chose, et les confondre ferait croire à un dossier manquant. */
-        <p style={{ color: "var(--ink-500)", fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)" }}>
-          {requete === "" ? fr.patients.listeVide : fr.patients.rechercheSansResultat}
-        </p>
+        <EtatVide
+          message={requete === "" ? fr.patients.listeVide : fr.patients.rechercheSansResultat}
+        />
       ) : null}
 
       {!chargement && page !== undefined && page.rows.length > 0 ? (
         <>
-          <p style={{ color: "var(--ink-500)", fontSize: "var(--text-label-size)", lineHeight: "var(--text-label-leading)", fontVariantNumeric: "tabular-nums" }}>
+          <p className="font-ui text-label tracking-label tabular-nums text-ink-500">
             {page.total} {fr.patients.comptage} · {fr.patients.listeActifsSeulement}
           </p>
-          <ul style={{ listStyle: "none", margin: "var(--s-4) var(--size-0)", padding: "var(--size-0)", display: "flex", flexDirection: "column", gap: "var(--s-2)" }}>
-            {page.rows.map((patient) => (
-              <li key={patient.id}>
-                <Link
-                  href={`/patients/${patient.id}`}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "var(--s-4)",
-                    minHeight: "var(--target-comfort)",
-                    padding: "var(--s-3) var(--s-4)",
-                    borderRadius: "var(--r-md)",
-                    border: "var(--rule-width) solid var(--rule)",
-                    background: "var(--card)",
-                    color: "var(--ink-900)",
-                    textDecoration: "none",
-                  }}
-                >
-                  <span
-                    aria-hidden="true"
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      minWidth: "var(--target-min)",
-                      minHeight: "var(--target-min)",
-                      borderRadius: "var(--r-full)",
-                      background: "var(--brand-100)",
-                      color: "var(--brand-900)",
-                      fontSize: "var(--text-label-size)",
-                      fontWeight: "var(--weight-semibold)",
-                    }}
-                  >
-                    {monogramme(patient.firstName, patient.lastName)}
-                  </span>
-                  <span style={{ display: "flex", flexDirection: "column", gap: "var(--s-1)" }}>
-                    <span style={{ fontSize: "var(--text-body-size)", lineHeight: "var(--text-body-leading)", fontWeight: "var(--weight-medium)" }}>
-                      {patient.lastName} {patient.firstName}
-                    </span>
-                    <span style={{ color: "var(--ink-500)", fontSize: "var(--text-label-size)", lineHeight: "var(--text-label-leading)", fontVariantNumeric: "tabular-nums" }}>
-                      {patient.recordNumber} · {patient.phone === "" ? fr.etats.texteAbsent : patient.phone}
-                    </span>
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
+
+          <div className="mt-4 rounded-lg border border-rule bg-card px-3 py-3">
+            <EnTeteAnnuaire />
+            <ul className="m-0 list-none p-0">
+              {page.rows.map((patient) => (
+                <LignePatient key={patient.id} patient={patient} />
+              ))}
+            </ul>
+          </div>
         </>
       ) : null}
     </AppShell>
