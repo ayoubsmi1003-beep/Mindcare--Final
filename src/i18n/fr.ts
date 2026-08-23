@@ -299,6 +299,148 @@ export const fr = {
       contactTelephone: "Téléphone du contact",
     },
 
+    /**
+     * Patients V3 — création d'un dossier. L'écran ne collecte QUE ce que le
+     * schéma porte (004) : pas d'e-mail, pas de profession, pas de situation
+     * familiale — ces colonnes n'existent pas, elles ne sont donc ni demandées
+     * ni affichées « Non renseigné ».
+     */
+    creation: {
+      surTitre: "Patients",
+      titre: "Nouveau dossier",
+      sousTitre:
+        "L'essentiel d'abord : prénom, nom et téléphone. Tout le reste se complète ensuite dans le dossier.",
+      obligatoires: "Champs obligatoires",
+      complementaires: "Informations complémentaires",
+      complementairesAide:
+        "Facultatif maintenant. Chaque champ se modifie plus tard dans le dossier.",
+      creer: "Créer le dossier",
+      annuler: "Annuler",
+      /** Dit à CÔTÉ DU CHAMP fautif, avant l'aller-retour (motif modification). */
+      champRequis: "Ce champ est obligatoire.",
+      praticienResponsable: "Praticien responsable",
+      praticienAide:
+        "Le dossier est rattaché à ce praticien : c'est elle qui en verra le contenu clinique.",
+      /**
+       * Le refus NOMMÉ du garde de doublon dur (`app.create_patient`,
+       * SQLSTATE 23505). La base reste l'autorité du refus ; le message,
+       * lui, est écrit ici — le texte brut de Postgres n'atteint jamais
+       * l'écran (I5), et un « conflit » générique ne dirait pas quel geste
+       * faire.
+       */
+      doublonRefuse:
+        "Un dossier avec ces mêmes coordonnées existe déjà. Rien n'a été créé. Consultez la liste des patients similaires ci-contre.",
+    },
+
+    /**
+     * Patients V3 — candidats doublons pendant la saisie. Protecteur, jamais
+     * obstructif : on montre QUI ressemble, POURQUOI, et comment ouvrir le
+     * dossier existant. Aucun score ni pourcentage : des raisons.
+     */
+    similaires: {
+      titre: "Patients similaires",
+      verification: "Vérification des doublons…",
+      aucun: "Aucun dossier similaire dans votre périmètre.",
+      raisonNom: "Nom proche",
+      raisonTelephone: "Même téléphone",
+      raisonNaissance: "Naissance identique",
+      ouvrir: "Ouvrir le dossier",
+      forteTitre: "Ce dossier semble correspondre à un patient existant.",
+      forteCorps:
+        "Si c'est bien la même personne, ouvrez son dossier plutôt que d'en créer un second.",
+      creerMalgreTout: "Créer malgré tout",
+    },
+
+    /**
+     * Patients V3 — bandeau « Aujourd'hui ». Données uniquement : la porte
+     * rend rendez_vous_du_jour ; une liste vide dit « aucun RDV aujourd'hui »
+     * et, si elle existe, la prochaine échéance. Rien d'inventé.
+     */
+    aujourdhui: {
+      titre: "Aujourd'hui",
+      aucun: "Aucun rendez-vous aujourd'hui",
+      prochain: "Prochain",
+    },
+
+    /**
+     * Patients V3 — Résumé du cas. ⚠️ L'IA ne bloque jamais l'écran et n'est
+     * JAMAIS la source de vérité : chaque item porte ses sources, la mention
+     * permanente du disclaimer s'applique, et l'échec laisse un Point de
+     * situation déterministe à la place.
+     */
+    resume: {
+      titre: "Résumé du cas",
+      surTitre: "Jarvis",
+      enBref: "En bref",
+      evolution: "Évolution récente",
+      dernierEtat: "Dernier état connu",
+      traitements: "Traitements documentés",
+      pointsAttention: "Points d'attention",
+      sources: "Sources",
+      pourquoi: "Pourquoi ?",
+      fermerPreuves: "Fermer les sources",
+      registreDocumente: "Documenté",
+      registreSynthese: "Synthèse IA",
+      aucuneSource: "Aucune source rattachée.",
+      generer: "Générer le résumé",
+      actualiser: "Actualiser",
+      generationEnCours: "Actualisation du résumé…",
+      aJour: "À jour",
+      modifieDepuis: "Données modifiées depuis ce résumé",
+      genereLe: "Généré le",
+      indisponibleTitre: "Résumé IA indisponible",
+      indisponibleCorps:
+        "La génération n'a pas abouti. Vos données restent entièrement utilisables.",
+      reessayer: "Réessayer",
+      videTitre: "Aucun résumé généré",
+      videCorps:
+        "Jarvis peut préparer une synthèse structurée à partir des faits documentés du dossier.",
+      pointSituationTitre: "Point de situation du dossier",
+      pointSituationSousTitre:
+        "Données directes du dossier — ce n'est pas un résumé IA.",
+      signaler: "Signaler une erreur",
+      signalerTitre: "Signaler une information incorrecte",
+      signalerMotif: "Qu'est-ce qui est inexact ?",
+      signalerMotifAide:
+        "Le motif est obligatoire ; il reste dans le cabinet.",
+      signalerEnvoyer: "Envoyer le signalement",
+      signaleOk: "Signalement envoyé. Le correctif passe par une nouvelle version.",
+      signalementInvalide:
+        "Le signalement exige un verdict et un motif. Rien n'a été envoyé.",
+      verdicts: {
+        incorrect: "Information incorrecte",
+        imprecis: "Information imprécise",
+        hors_sujet: "Hors sujet",
+      },
+    },
+
+    /**
+     * Patients V3 — « Depuis la dernière consultation ». Calcul déterministe
+     * côté écran depuis les données du workspace ; aucune inférence clinique.
+     */
+    depuis: {
+      titre: "Depuis la dernière consultation",
+      sansReference: "Premier passage documenté.",
+      rien: "Aucun nouvel élément documenté depuis",
+      toutAfficher: "Tout afficher",
+      reduire: "Réduire",
+    },
+
+    /**
+     * Patients V3 — Signaux du dossier. ⚠️ CE SONT DES SIGNAUX, PAS DES
+     * RECOMMANDATIONS : préfixe neutre « À vérifier — », jamais un verbe
+     * prescriptif. Chaque item porte sa raison factuelle et sa source.
+     */
+    signaux: {
+      titre: "Signaux du dossier",
+      prefixe: "À vérifier — ",
+      autres: (n: number): string =>
+        n === 1
+          ? "+1 autre signal visible dans le dossier."
+          : `+${String(n)} autres signaux visibles dans le dossier.`,
+      vide: "Aucun signal à examiner.",
+    },
+
     rendezVousTotal: (n: number): string =>
       n === 1
         ? "1 rendez-vous figure au dossier."
@@ -1136,6 +1278,16 @@ export const fr = {
    */
   jarvis: {
     titre: "Jarvis",
+
+    /**
+     * Patients V3 — contexte patient actif. Jamais une autorisation : une
+     * cible PRÉ-RESOLUE pour les outils, effacée à la navigation. La cloison
+     * reste en base (L3) ; l'écran rend le contexte évident, rien de plus.
+     */
+    contexte: {
+      patientActif: "Patient actif",
+      retirer: "Retirer le contexte patient",
+    },
     ouvrir: "Ouvrir Jarvis",
     fermer: "Fermer",
     invite: "Posez une question, ou dictez-la.",

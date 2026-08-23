@@ -374,6 +374,20 @@ const ESPACE_TRAVAIL = z.object({
     nombre: NOMBRE,
     dernier_emis_le: z.string().nullable(),
   }),
+  // Patients V3 — champs ADDITIFS (contrat INCHANGÉ à 1 : une clé optionnelle
+  // ne casse aucun consommateur existant). Absents des réponses d'avant 053.
+  rendez_vous_du_jour: z.array(RENDEZ_VOUS_RESUME).optional(),
+  resume: z
+    .object({
+      id: z.string(),
+      version: NOMBRE,
+      genere_le: z.string(),
+      genere_par: z.string().nullable(),
+      a_jour: z.boolean(),
+      contenu: z.unknown(),
+    })
+    .nullable()
+    .optional(),
 });
 
 export interface Diagnostic {
@@ -486,6 +500,128 @@ export interface PatientWorkspace {
   readonly documents: {
     readonly nombre: number;
     readonly dernierEmisLe: string | null;
+  };
+
+  /** RDV du jour, bornes Africa/Algiers — le bandeau « Aujourd'hui ». */
+  readonly rendezVousDuJour: readonly RendezVousResume[];
+
+  /** Dernière version valide du Résumé du cas ; null = aucune (ou hors droit). */
+  readonly resume: ResumeDernier | null;
+}
+
+// ---------------------------------------------------------------------------
+// Patients V3 — le Résumé du cas (contrat `content.schema: 1`)
+// ---------------------------------------------------------------------------
+// La vérité clinique reste en base. Chaque item porte ses SOURCES — la porte
+// `save_case_summary` refuse toute citation qui ne correspond pas à une ligne
+// réelle du patient, côté SQL ; ici on ne fait que donner une FORME lisible.
+
+export type TypeSourceResume =
+  | "diagnostic"
+  | "echelle"
+  | "prescription"
+  | "consultation"
+  | "rdv"
+  | "document";
+
+const TYPES_SOURCE: readonly TypeSourceResume[] = [
+  "diagnostic",
+  "echelle",
+  "prescription",
+  "consultation",
+  "rdv",
+  "document",
+];
+
+export interface SourceResume {
+  readonly t: TypeSourceResume;
+  readonly id: string;
+}
+
+export interface ItemResume {
+  readonly texte: string;
+  readonly sources: readonly SourceResume[];
+}
+
+/** Sections fermées — l'ensemble est verrouillé par la porte (053/055). */
+export interface ContenuResumeCas {
+  readonly schema: 1;
+  readonly enBref: readonly ItemResume[];
+  readonly evolutionRecente: readonly ItemResume[];
+  readonly aDiscuter: readonly ItemResume[];
+  readonly dernierEtat: Readonly<Record<string, unknown>> | null;
+  readonly traitementsDocumentes: readonly ItemResume[];
+  readonly pointsAttention: readonly ItemResume[];
+}
+
+export interface ResumeDernier {
+  readonly id: string;
+  readonly version: number;
+  readonly genereLe: string;
+  readonly generePar: string | null;
+  /** Calculé EN BASE : les faits couverts n'ont pas bougé depuis la génération. */
+  readonly aJour: boolean;
+  readonly contenu: ContenuResumeCas;
+}
+
+function versSources(brut: unknown): readonly SourceResume[] {
+  if (!Array.isArray(brut)) return [];
+  const out: SourceResume[] = [];
+  for (const s of brut) {
+    if (typeof s !== "object" || s === null) continue;
+    const t = (s as { t?: unknown }).t;
+    const id = (s as { id?: unknown }).id;
+    if (
+      typeof t === "string" &&
+      typeof id === "string" &&
+      (TYPES_SOURCE as readonly string[]).includes(t)
+    ) {
+      out.push({ t: t as TypeSourceResume, id });
+    }
+  }
+  return out;
+}
+
+function versItems(brut: unknown): readonly ItemResume[] {
+  if (!Array.isArray(brut)) return [];
+  const out: ItemResume[] = [];
+  for (const i of brut) {
+    if (typeof i !== "object" || i === null) continue;
+    const texte = (i as { texte?: unknown }).texte;
+    if (typeof texte !== "string" || texte.trim() === "") continue;
+    out.push({ texte, sources: versSources((i as { sources?: unknown }).sources) });
+  }
+  return out;
+}
+
+function versContenu(brut: unknown): ContenuResumeCas {
+  const o =
+    typeof brut === "object" && brut !== null
+      ? (brut as Record<string, unknown>)
+      : {};
+  return {
+    schema: 1,
+    enBref: versItems(o.en_bref),
+    evolutionRecente: versItems(o.evolution_recente),
+    aDiscuter: versItems(o.a_discuter),
+    dernierEtat:
+      typeof o.dernier_etat === "object" && o.dernier_etat !== null
+        ? (o.dernier_etat as Readonly<Record<string, unknown>>)
+        : null,
+    traitementsDocumentes: versItems(o.traitements_documentes),
+    pointsAttention: versItems(o.points_attention),
+  };
+}
+
+function versResume(brut: z.infer<typeof ESPACE_TRAVAIL>["resume"]): ResumeDernier | null {
+  if (!brut) return null;
+  return {
+    id: brut.id,
+    version: brut.version,
+    genereLe: brut.genere_le,
+    generePar: brut.genere_par,
+    aJour: brut.a_jour,
+    contenu: versContenu(brut.contenu),
   };
 }
 
@@ -612,6 +748,12 @@ function versEspaceTravail(brut: z.infer<typeof ESPACE_TRAVAIL>): PatientWorkspa
       nombre: brut.documents.nombre,
       dernierEmisLe: brut.documents.dernier_emis_le,
     },
+
+    rendezVousDuJour: (brut.rendez_vous_du_jour ?? []).flatMap((r) => {
+      const v = versRendezVous(r);
+      return v === null ? [] : [v];
+    }),
+    resume: versResume(brut.resume ?? null),
   };
 }
 
@@ -985,4 +1127,283 @@ async function getPatientOuErreur(id: string): Promise<Result<Patient>> {
     });
   }
   return ok(relu.data);
+}
+
+// ---------------------------------------------------------------------------
+// Patients V3 — la création, et les candidats doublons
+// ---------------------------------------------------------------------------
+// ⚠️ UNE SEULE PORTE D'ÉCRITURE DE CRÉATION : `app.create_patient` (050/052).
+// Elle numérote sans trou (`next_number('patient_record','ALL')`), porte la
+// garde de doublon dure au périmètre RLS de l'appelant (ERRCODE 23505),
+// valide le praticien responsable et laisse `trg_audit` tracer. Aucun
+// `insert` direct ici ni ailleurs : ce fichier ne connaît que des portes.
+
+/** Candidat doublon rendu par `app.find_similar_patients` (051). */
+export interface CandidatSimilaire {
+  readonly id: string;
+  readonly recordNumber: string;
+  readonly firstName: string;
+  readonly lastName: string;
+  readonly birthDate: string | null;
+  readonly phone: string;
+  readonly isActive: boolean;
+  /** Sert à CLASSER. Jamais affiché tel quel : l'écran montre des raisons. */
+  readonly score: number;
+  readonly raisonNom: boolean;
+  readonly raisonTelephone: boolean;
+  readonly raisonNaissance: boolean;
+}
+
+const SIMILAIRE = z.object({
+  id: z.string(),
+  record_number: z.string(),
+  first_name: z.string(),
+  last_name: z.string(),
+  birth_date: z.string().nullable(),
+  phone: z.string(),
+  is_active: z.boolean(),
+  score: NOMBRE,
+  raison_nom: z.boolean(),
+  raison_telephone: z.boolean(),
+  raison_naissance: z.boolean(),
+});
+
+export interface FiltresSimilaires {
+  readonly prenom?: string;
+  readonly nom?: string;
+  readonly telephone?: string;
+  readonly naissance?: string | null;
+}
+
+/**
+ * Les candidats doublons, pendant la saisie de création.
+ *
+ * ⚠️ CHAQUE APPEL ÉCRIT UNE TRACE `recherche` — l'écran débounce à 300 ms,
+ * comme la recherche de liste débounce à 250 ms (même raison : ne pas noyer
+ * `audit.log` d'une ligne par caractère).
+ *
+ * La porte borne sa limite à 8 EN BASE.
+ */
+export async function chercherPatientsSimilaires(
+  filtres: FiltresSimilaires,
+): Promise<Result<readonly CandidatSimilaire[]>> {
+  const result = await db().rpc<unknown>("find_similar_patients", {
+    p_prenom: filtres.prenom ?? null,
+    p_nom: filtres.nom ?? null,
+    p_telephone: filtres.telephone ?? null,
+    p_naissance: filtres.naissance ?? null,
+    p_limit: 8,
+  });
+
+  if (!result.ok) {
+    log.error("patients.similaires", logFieldsFor(result.error));
+    return err(result.error);
+  }
+
+  const analyse = z.array(SIMILAIRE).safeParse(result.data);
+  if (!analyse.success) {
+    log.error("patients.similaires", {
+      code: "regle-metier",
+      context: `zod:${cheminsZod(analyse.error)}`,
+    });
+    return err(erreurDeSchema("find_similar_patients"));
+  }
+
+  const candidats = analyse.data.map((c) => ({
+    id: c.id,
+    recordNumber: c.record_number,
+    firstName: c.first_name,
+    lastName: c.last_name,
+    birthDate: c.birth_date,
+    phone: c.phone,
+    isActive: c.is_active,
+    score: c.score,
+    raisonNom: c.raison_nom,
+    raisonTelephone: c.raison_telephone,
+    raisonNaissance: c.raison_naissance,
+  }));
+
+  log.info("patients.similaires", { count: candidats.length });
+  return ok(candidats);
+}
+
+/**
+ * Correspondance FORTE — le seul seuil qui exige une confirmation explicite
+ * (« Créer malgré tout »). Conjonction téléphone+naissance (la règle dure de
+ * 01-SCHEMA §3.1, vue côté conseil) ou nom quasi identique.
+ *
+ * ⚠️ CE SEUIL N'EST PAS AFFICHÉ : il pilote un geste, jamais un chiffre.
+ */
+export function doublonFort(c: CandidatSimilaire): boolean {
+  return (c.raisonTelephone && c.raisonNaissance) || c.score >= 0.62;
+}
+
+/** Le formulaire de création ne collecte QUE ce que le schéma porte (004). */
+export interface PatientACreer {
+  readonly firstName: string;
+  readonly lastName: string;
+  readonly phone: string;
+  readonly birthDate?: string | null;
+  readonly sex?: Sexe | null;
+  readonly phoneAlt?: string | null;
+  readonly address?: string | null;
+  readonly idDocumentNumber?: string | null;
+  readonly idDocumentIssuer?: string | null;
+  readonly emergencyContact?: EmergencyContact | null;
+  readonly notesAdmin?: string | null;
+  /** Facultatif : absent ⇒ la porte prend `auth.uid()` (le créateur praticien). */
+  readonly practitionerId?: string;
+}
+
+const CREATION = z.object({
+  firstName: z.string().trim().min(1),
+  lastName: z.string().trim().min(1),
+  phone: z.string().trim().regex(FORMAT_TELEPHONE),
+  birthDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).nullish(),
+  sex: z.enum(["M", "F"]).nullish(),
+  phoneAlt: z.string().trim().regex(FORMAT_TELEPHONE).nullish(),
+  address: z.string().nullish(),
+  idDocumentNumber: z.string().nullish(),
+  idDocumentIssuer: z.string().nullish(),
+  emergencyContact: z
+    .object({
+      name: z.string().nullable(),
+      relation: z.string().nullable(),
+      phone: z.string().nullable(),
+    })
+    .nullable()
+    .optional(),
+  notesAdmin: z.string().nullish(),
+  practitionerId: z.guid().optional(),
+});
+
+/**
+ * Créer un dossier. Passe par `app.create_patient` — charge sérialisée en
+ * CHAÎNE (`RpcArgs` scalaires ; la porte accepte les deux formes, leçon 049).
+ *
+ * Refus spécifique : le garde de doublon dur lève SQLSTATE `23505`. La base
+ * reste l'autorité du refus, mais le MESSAGE affiché est écrit ICI — le texte
+ * brut de Postgres n'atteint jamais l'écran (I5), et « conflit » générique ne
+ * dirait pas quel geste faire.
+ */
+export async function creerPatient(
+  donnees: PatientACreer,
+): Promise<Result<Patient>> {
+  const analyse = CREATION.safeParse(donnees);
+  if (!analyse.success) {
+    log.error("patients.creation", {
+      code: "regle-metier",
+      context: `zod:${cheminsZod(analyse.error)}`,
+    });
+    return err(erreurDeSaisie(cheminsZod(analyse.error)));
+  }
+
+  // Seules les clés réellement fournies partent ; les vides partent en `null`
+  // (effacer avant naissance = champ non renseigné, jamais une chaîne vide).
+  const d = analyse.data;
+  const charge: Record<string, unknown> = {
+    first_name: d.firstName,
+    last_name: d.lastName,
+    phone: d.phone,
+  };
+  if (d.birthDate) charge.birth_date = d.birthDate;
+  if (d.sex !== undefined && d.sex !== null) charge.sex = d.sex;
+  if (d.phoneAlt !== undefined && d.phoneAlt !== null && d.phoneAlt !== "") {
+    charge.phone_alt = d.phoneAlt;
+  }
+  if (d.address !== undefined && d.address !== null && d.address.trim() !== "") {
+    charge.address = d.address;
+  }
+  if (d.idDocumentNumber !== undefined && d.idDocumentNumber !== null && d.idDocumentNumber.trim() !== "") {
+    charge.id_document_number = d.idDocumentNumber;
+  }
+  if (d.idDocumentIssuer !== undefined && d.idDocumentIssuer !== null && d.idDocumentIssuer.trim() !== "") {
+    charge.id_document_issuer = d.idDocumentIssuer;
+  }
+  if (d.emergencyContact !== undefined && d.emergencyContact !== null) {
+    charge.emergency_contact = d.emergencyContact;
+  }
+  if (d.notesAdmin !== undefined && d.notesAdmin !== null && d.notesAdmin.trim() !== "") {
+    charge.notes_admin = d.notesAdmin;
+  }
+  if (d.practitionerId !== undefined) charge.practitioner_id = d.practitionerId;
+
+  const result = await db().rpc<PatientRow>("create_patient", {
+    p_charge: JSON.stringify(charge),
+  });
+
+  if (!result.ok) {
+    if (
+      result.error.technical === "23505" &&
+      result.error.context === "rpc:create_patient"
+    ) {
+      log.error("patients.creation", { code: "conflit", context: "rpc:create_patient" });
+      return err({
+        code: "conflit",
+        message: fr.patients.creation.doublonRefuse,
+        technical: "23505",
+        context: "rpc:create_patient",
+      });
+    }
+    log.error("patients.creation", logFieldsFor(result.error));
+    return err(result.error);
+  }
+
+  const row = result.data[0];
+  if (row === undefined) {
+    // La porte n'a rien rendu : hors périmètre. Un seul message, partout.
+    return err({
+      code: "introuvable",
+      message: fr.patients.ficheIntrouvable,
+      context: "rpc:create_patient",
+    });
+  }
+
+  log.info("patients.creation", { count: 1 });
+  return ok(versPatient(row));
+}
+
+// ---------------------------------------------------------------------------
+// Patients V3 — le signalement d'une information de résumé jugée fausse
+// ---------------------------------------------------------------------------
+
+export type VerdictSignalement = "incorrect" | "imprecis" | "hors_sujet";
+
+const VERDICTS: readonly VerdictSignalement[] = [
+  "incorrect",
+  "imprecis",
+  "hors_sujet",
+];
+
+/**
+ * Signaler une information du résumé jugée fausse — append-only
+ * (`app.flag_case_summary`, 053). Ne mute JAMAIS le résumé : le correctif est
+ * une RÉGÉNÉRATION, qui créera une nouvelle version.
+ */
+export async function signalerResume(
+  summaryId: string,
+  verdict: VerdictSignalement,
+  motif: string,
+): Promise<Result<null>> {
+  const net = motif.trim();
+  if (!(VERDICTS as readonly string[]).includes(verdict) || net === "") {
+    return err({
+      code: "regle-metier",
+      message: fr.patients.resume.signalementInvalide,
+      context: "rpc:flag_case_summary",
+    });
+  }
+
+  const result = await db().rpc("flag_case_summary", {
+    p_summary_id: summaryId,
+    p_verdict: verdict,
+    p_motif: net.slice(0, 1000),
+  });
+
+  if (!result.ok) {
+    log.error("patients.signalement", logFieldsFor(result.error));
+    return err(result.error);
+  }
+  log.info("patients.signalement", { count: 1 });
+  return ok(null);
 }

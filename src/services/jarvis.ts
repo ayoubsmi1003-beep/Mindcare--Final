@@ -127,6 +127,12 @@ export async function demanderAJarvis(
     readonly numero: string;
   }[],
   contextePraticienId?: string,
+  /**
+   * Patients V3 — le dossier OUVERT à l'écran, pré-résolution de CIBLE pour
+   * les outils. Jamais une autorisation (L3) : la passerelle le traite comme
+   * une donnée balisée pseudonymisée, et la RLS décide de tout le reste.
+   */
+  patientActif?: { readonly id: string; readonly nom: string; readonly numero: string },
 ): Promise<Result<ReponseJarvis>> {
   const result = await db().invokeFunction<ReponseJarvis>("jarvis-chat", {
     message,
@@ -134,6 +140,7 @@ export async function demanderAJarvis(
     ...(contexteDossiers === undefined || contexteDossiers.length === 0
       ? {}
       : { contexteDossiers, ...(contextePraticienId === undefined ? {} : { contextePraticienId }) }),
+    ...(patientActif === undefined ? {} : { contextePatientActif: patientActif }),
   });
 
   if (!result.ok) {

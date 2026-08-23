@@ -151,6 +151,12 @@ interface CorpsRequete {
    */
   readonly contexteDossiers?: readonly DossierContexte[];
   readonly contextePraticienId?: string;
+  /**
+   * Patients V3 - le dossier OUVERT a l'ecran (pre-resolution de cible).
+   * Jamais une autorisation : traite comme une donnee balyse, pseudonymisee,
+   * et la RLS decide de tout le reste sous le JWT de l'appelante.
+   */
+  readonly contextePatientActif?: DossierContexte;
 }
 
 function estDossierValide(v: unknown): v is DossierContexte {
@@ -179,6 +185,9 @@ function estCorpsValide(v: unknown): v is CorpsRequete {
   ) {
     return false;
   }
+
+  const actif = (v as { contextePatientActif?: unknown }).contextePatientActif;
+  if (actif !== undefined && !estDossierValide(actif)) return false;
 
   const dossiers = (v as { contexteDossiers?: unknown }).contexteDossiers;
   if (dossiers === undefined) return true;
@@ -503,7 +512,11 @@ Deno.serve(async (req) => {
   let contexte: string | undefined = undefined;
 
   if (dossiers.length > 0) {
-    const compose = composerContexte(dossiers, corps.contextePraticienId);
+    const listeComplete =
+      corps.contextePatientActif !== undefined && !dossiers.some((d) => d.id === corps.contextePatientActif.id)
+        ? [corps.contextePatientActif, ...dossiers]
+        : dossiers;
+    const compose = composerContexte(listeComplete, corps.contextePraticienId);
     carteTier0 = compose.map;
     contexte = compose.texte;
     const identites = compose.identites;

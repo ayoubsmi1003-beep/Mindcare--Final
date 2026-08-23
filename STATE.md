@@ -1,6 +1,156 @@
 # STATE — MindCare OS
 **V10-PATIENTS VERT (SQL 40/40 · vérifié à l'écran en 3 rôles) · le dossier patient est un espace de travail · V9-COCKPIT et V8-DOCUMENTS restent verts**
 Dernière mise à jour : 2026-08-23
+# STATE — MindCare OS
+**V3-PATIENTS 360 VERT (SQL 12/12 · eval 26/26 · build/lint/tsc/preflight verts) · création contrôlée + Résumé du cas + contexte Jarvis**
+Dernière mise à jour : 2026-08-23 (session V3)
+
+---
+Dernière mise à jour : 2026-08-23 (session V3)
+
+---
+
+## ▶ CONTRAT DE LA PROCHAINE SESSION — « V3-CLÔTURE » (à coller tel quel)
+
+> Tu reprends MindCare OS après le lot **V3-PATIENTS « Patient 360° »**, VERT
+> en base (checkpoint 12/12), eval IA (26/26), typecheck/lint/build/preflight.
+> Instance cloud à **57 migrations** (050→057 appliquées et tracées). RIEN
+> n'est déployé côté Edge pour le nouveau résumé. Rien n'est mesuré au
+> navigateur.
+>
+> PÉRIMÈTRE GELÉ : aucun nouveau schéma, aucune migration, aucune nouvelle
+> fonctionnalité. Cette session CLÔT V3 ou dit précisément pourquoi elle ne
+> peut pas.
+
+### T1 · Déployer la passerelle du résumé
+`supabase functions deploy jarvis-resume-cas --use-api`, puis contrôles HTTP :
+OPTIONS préflight 204 + ACAO ; POST sans jeton → `non-authentifie` ; POST avec
+clé publique seule → `non-authentifie` (leçon V2 défaut n°2) ; appel réel sous
+…a2 sur un dossier synthétique porteur d'un diagnostic + deux mesures → JSON
+`{ok:true,data:{resume,...}}` et une ligne dans `patient_case_summaries`.
+⚠️ Crédit OpenRouter : si HTTP 402, c'est la dette d'ENVIRONNEMENT connue —
+BLOQUÉ-par-environnement nommé ; surtout NE PAS baisser MAX_OUTPUT_TOKENS.
+
+### T2 · Mesure perf — `scripts/mesure-patients-v3.mjs`
+Patron `mesure-reception.mjs` : build de production (`next start`), médiane de
+3, appels réseau comptés SÉPARÉMENT coquille/écran. Budgets (06-PERF §2) :
+fiche patient **2 appels · 100 ms premier contenu · 500 ms complet** ;
+`/patients` 1 appel · 400 ms ; `/patients/nouveau` création complète ≤ 60 s.
+Chiffres écrits dans STATE.md, verdict par écran.
+
+### T3 · Vérification navigateur en 3 rôles (patron `mesure-v3-navigateur`)
+Fenêtres ADR-016 : …a2 via `compte-praticienne.sh` ; …a1 via `dev-account.sh`
+si nécessaire ; …a3 reste INCONNECTABLE — le rôle assistante se prouve par
+impersonation SQL (déjà vert au checkpoint C5/C6) ET par l'écran sous …a2
+(onglets cliniques absents = composition). Contrôles minimum :
+1. Création : trio requis → dossier créé → redirection fiche ; numéro P-nnnx.
+2. Doublon fort → panneau « Patients similaires » + case « Créer malgré
+   tout » obligatoire avant soumission.
+3. Fiche : bandeau Aujourd'hui fidèle aux RDV réels ; action dominante
+   correcte (RDV du jour ⇒ Démarrer la séance ; sinon Nouveau rendez-vous).
+4. Résumé : générer → sections + sources ; « Pourquoi ? » navigue vers
+   l'onglet porteur ; fraîcheur trois états ; Actualiser visible si modifié.
+5. Coupure OpenRouter → ancien résumé conservé OU Point de situation
+   (« données directes », jamais le mot résumé) ; page pleinement utilisable.
+6. Contamination Jarvis A→B : contexte effacé au changement de dossier ;
+   puce exacte ; « Karim est-il dépressif ? » toujours refusé (ADR-023).
+7. Assistante : ni onglets cliniques, ni carte résumé, ni Point de situation
+   clinique (composition sous …a2 restreinte + preuves base déjà vertes).
+8. 1280 px : rail contexte → tiroir, zéro débord horizontal ; clavier
+   complet ; `prefers-reduced-motion` : rien ne bouge.
+Captures dans `checkpoints/v3-preuves/`.
+
+### T4 · Clôture
+STATE.md : verdicts chiffrés par écran et par rôle, réserves NOMMÉES, rouges
+éventuels expliqués. Rapport final au gabarit : fichiers · tests · sécurité ·
+AI eval · perf · navigateur 3 rôles · design · limitations · VERDICT
+GREEN/RED/BLOCKED. Refermer les fenêtres ouvertes (`--fermer`) et vérifier les
+sentinelles.
+
+### Pièges déjà payés ici — ne pas repayer
+`bash`=WSL sans Docker (passer par PowerShell + `docker run postgres:15`) ·
+DNS flottant (épingler via nslookup 1.1.1.1 + `--add-host` ; IP ELB rotatives,
+boucler sur les trois) · `Get-Content` PS5.1 lit ANSI et `Set-Content` écrit
+CRLF ([IO.File]::WriteAllText UTF8-sans-BOM, LF) · échelles Tailwind
+REMPLACÉES (pas de `grid-cols-N`, `duration-300`, `sm:`) · `pnpm build` tue un
+serveur actif · fixtures = transaction annulée + `is_synthetic=true` · JAMAIS
+éditer une migration appliquée (correctif = N+1, méthode 048/052/055/057) ·
+messages Postgres mojibake internes 052-057 : connus, invisibles à l'écran,
+réalignement reporté.
+
+---
+
+
+## ✅ 2026-08-23 — V3-PATIENTS « Patient 360° »
+
+### 0. Livré
+Création de dossier : porte `app.create_patient` (050/052) — numérotation sans
+trou `P-nnnn` (`next_number('patient_record','ALL')`, I17), garde de doublon
+DURE téléphone+naissance+nom désaccentué au périmètre RLS (SQLSTATE 23505),
+praticien responsable validé (ADR-025 : paramètre accepté ET validé, jamais le
+scoping confié à l'appelant), `is_synthetic := app.is_cloud_dev()` (motif 023).
+Écran `/patients/nouveau` : trio requis + optionnels repliés, panneau
+« Patients similaires » débouncé 300 ms (UNE trace `recherche` par appel,
+limite 8 EN BASE), raisons affichées JAMAIS le score ; match fort ⇒ case
+« Créer malgré tout » obligatoire.
+
+Résumé du cas : tables append-only `patient_case_summaries` +
+`case_summary_feedback` (053), portes `save_case_summary` / 
+`flag_case_summary` — **AMENDEMENT A** : `practitioner_id` = générateur
+(provenance affichée), `patient_practitioner_id` = CLÉ DE VISIBILITÉ RLS
+(copie immuable de patients.practitioner_id, exclue de update_patient).
+Citations vérifiées DEUX FOIS : passerelle (`_shared/resume-cas.ts` filtre
+contre les faits réels, signaux ≤5 parmi candidats déterministes, en_bref ≤4
+phrases) puis porte SQL (toute citation doit exister pour CE patient).
+Workspace v2 ADDITIF (`contrat` reste 1) : `rendez_vous_du_jour` (bornes
+Africa/Algiers) + `resume` avec `a_jour` calculé EN BASE ; échelles portent
+désormais `dernier.id` (056/057). Purpose `'resume-cas'` ajouté à
+`boundary_crossings` (054). Edge `jarvis-resume-cas` : zéro Tier-0 sortant
+(identité expurgée + pseudonymize + assertSafe), purpose dédié journalisé.
+
+Contexte Jarvis : store minimal `services/patient-actif.ts` (pub/sub, ZÉRO
+persistance) ; l'écran publie, le cleanup React EFFACE au démontage/changement
+de patient ; puce visible dans le panneau ; champ `contextePatientActif`
+validé et pseudonymisé côté `jarvis-chat`. Jamais une autorisation (L3).
+
+### 1. Migrations appliquées et tracées
+050 create_patient · 051 find_similar_patients (+nom_recherche,
+trigram_similarite→public.similarity, vérifié sur l'instance) · 
+052 is_synthetic (règle 9 : correctif SÉPARÉ après sonde ADR-016) ·
+053 case_summaries · 054 purpose CHECK · 055 boucle sections de
+save_case_summary (règle 9) · 056 dernier.id échelles · 057 array_agg[1] —
+**max(uuid) n'existe pas**, trouvé par le checkpoint (leçon : vert statique ≠
+vert intégré, encore).
+
+### 2. Verdicts mesurés
+```
+checkpoint-patients-v3.sql ...... 12 verts · 0 rouge (fixtures annulées)
+  A plateforme · B création/doublons · C résumé (Amendement A prouvé :
+  owner génère → praticienne POSSESSEUR voit, genere_par affiché ;
+  assistante clinique NULL ET resume NULL ; SELECT direct 42501)
+eval-resume-cas ................. 26 verts · 0 rouge (hors ligne)
+typecheck / lint / build ........ 0 erreur (/patients/[id] 11.5 kB ·
+                                  228 kB load ; /patients/nouveau 3.4 kB)
+preflight ....................... vert
+```
+
+### 3. Reste ouvert (daté)
+- Vérification navigateur en 3 rôles réels : À FAIRE par l'utilisateur
+  (comptes …a2 ouvert, …a1/…a3 via scripts habituels).
+- Mesure perf `mesure-patients-v3.mjs` non exécutée cette session ; budget
+  fiche inchangé (2 appels / 100 ms / 500 ms) préservé PAR CONSTRUCTION
+  (ouverture = 1 appel, résumé asynchrone post-rendu).
+- Textes français des portes 052-057 doublement encodés EN BASE
+  (assemblage PowerShell Get-Content ANSI) — INVISIBLE à l'écran (errors.ts
+  ne montre jamais le texte Postgres) ; commentaires internes seulement.
+  Réalignement propre possible en recollant les corps depuis les sources de
+  ce dépôt lors d'un prochain lot.
+- Déviations assumées vs plan : icônes supplémentaires NON ajoutées (réutilisation
+  du jeu existant suffi) ; Toast toujours reportée V4.
+- 035 reste réservée au correctif d'ordre search_patients (intact, règle 10).
+
+---
+
 
 ---
 

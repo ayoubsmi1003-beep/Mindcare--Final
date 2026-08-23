@@ -22,6 +22,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { fr } from "@/i18n/fr";
 import { getSession } from "@/services/auth";
 import { demanderAJarvis, type ReponseJarvis } from "@/services/jarvis";
+import { abonnerPatientActif, effacerPatientActif, type PatientActif } from "@/services/patient-actif";
 import {
   confirmerAction,
   estOutilConnu,
@@ -138,6 +139,12 @@ export function PanneauJarvis(): React.JSX.Element {
     readonly { readonly id: string; readonly nom: string; readonly numero: string }[]
   >([]);
   const contextePraticienIdRef = useRef<string | null>(null);
+
+  // ── Patients V3 — le dossier ouvert à l'écran. ────────────────────────────
+  // Abonnement au store minimal ; l'écran EFFACE le contexte à son démontage
+  // (cleanup React), donc A→B ne peut jamais laisser A actif en silence.
+  const [patientActif, setPatientActif] = useState<PatientActif | null>(null);
+  useEffect(() => abonnerPatientActif(setPatientActif), []);
 
   // ── ⌘K / Ctrl+K ──────────────────────────────────────────────────────────
   useEffect(() => {
@@ -313,6 +320,7 @@ export function PanneauJarvis(): React.JSX.Element {
         obtenirConversationId(),
         contexteDossiersRef.current,
         contextePraticienIdRef.current ?? undefined,
+      patientActif ?? undefined,
       ),
       plafond,
     ]);
@@ -357,8 +365,7 @@ export function PanneauJarvis(): React.JSX.Element {
       await executerLecture(donnees.nom, donnees.args);
     }
     setEnAttente(false);
-  }, [ajouter, obtenirConversationId, enAttente, executerLecture, proposerEcriture, saisie]);
-
+  }, [ajouter, obtenirConversationId, enAttente, executerLecture, proposerEcriture, saisie, patientActif]);
   /** Confirmer PUIS exécuter — deux appels, jamais un seul. */
   const confirmer = useCallback(async (): Promise<void> => {
     if (ecriture === null) return;
@@ -501,6 +508,33 @@ export function PanneauJarvis(): React.JSX.Element {
           {fr.jarvis.fermer}
         </button>
       </header>
+        {/* Patients V3 - le contexte patient est EVIDENT, jamais devine. */}
+        {patientActif !== null && (
+          <div
+            role="status"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: "var(--s-3)",
+              padding: "var(--s-2) var(--s-4)",
+              background: "var(--ai-050)",
+              borderBottom: "1px solid var(--ai-100)",
+            }}
+          >
+            <span style={{ color: "var(--ai-600)", fontSize: "var(--text-label-size)" }}>
+              {fr.jarvis.contexte.patientActif} : {patientActif.nom}
+            </span>
+            <button
+              type="button"
+              onClick={() => effacerPatientActif()}
+              aria-label={fr.jarvis.contexte.retirer}
+              style={{ border: "none", background: "transparent", color: "var(--ink-500)", cursor: "pointer" }}
+            >
+              x
+            </button>
+          </div>
+        )});
 
       <div style={{ flex: "1 1 auto", overflowY: "auto", padding: "var(--s-4)", display: "grid", gap: "var(--s-3)" }}>
         {tours.length === 0 && (

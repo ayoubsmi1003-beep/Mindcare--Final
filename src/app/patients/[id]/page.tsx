@@ -1,56 +1,50 @@
 /**
- * Fiche patient — l'espace de travail clinique.
+ * Fiche patient — le poste 360°.
  *
  * ⚠️ INTROUVABLE ET HORS PÉRIMÈTRE SONT INDISCERNABLES, ET C'EST LE POINT LE
- * PLUS IMPORTANT DE CET ÉCRAN.
+ * PLUS IMPORTANT DE CET ÉCRAN. `app.get_patient_workspace` rend NULL dans les
+ * deux cas ; un seul message (`fr.patients.ficheIntrouvable`). Ne jamais
+ * « améliorer » ce comportement — distinguer fabriquerait un oracle
+ * d'existence (ADR-003).
  *
- * `app.get_patient_workspace` rend NULL dans les deux cas, et
- * `getPatientWorkspace` rend `ok(null)` sans distinguer lequel. L'interface ne
- * doit pas distinguer non plus : afficher « ce dossier ne vous est pas
- * accessible » confirmerait à une praticienne l'EXISTENCE d'un dossier chez sa
- * consœur — une fuite d'information par le message d'erreur, sans qu'aucune
- * donnée n'ait été lue. Un seul message, `fr.patients.ficheIntrouvable`, pour
- * les deux situations. Ne jamais « améliorer » ce comportement.
+ * I4 — la lecture est journalisée PAR LA BASE : la porte écrit sa trace
+ * `fiche` avant de retourner. Cet écran ne journalise rien lui-même.
  *
- * I4 — LA LECTURE EST JOURNALISÉE PAR LA BASE. La porte écrit dans `audit.log`
- * AVANT de retourner, dans la même transaction, y compris quand la RLS ne rend
- * rien : la TENTATIVE d'ouverture est tracée. Cet écran n'a rien à journaliser
- * lui-même, et ne doit surtout pas essayer — le journal applicatif n'est pas
- * l'audit légal.
+ * ═══ UN APPEL À L'OUVERTURE, LE RESTE À LA DEMANDE ════════════════════════
+ * L'ouverture coûte UN appel (`getPatientWorkspace`, budget PERF §2). La
+ * chronologie et les documents lisent à l'ouverture de LEUR onglet. La
+ * génération du résumé part APRÈS le rendu, sur geste explicite — l'IA ne
+ * bloque jamais l'écran et dispose d'un repli déterministe.
  *
- * ═══ UN ÉCRAN, UN APPEL — ET LE RESTE À LA DEMANDE ════════════════════════
+ * ═══ CONTEXTE JARVIS ══════════════════════════════════════════════════════
+ * Le dossier ouvert est publié dans `patient-actif` pour pré-résoudre la
+ * CIBLE des outils — jamais une autorisation (L3). Le cleanup React EFFACE le
+ * contexte au démontage : naviguer de A vers B ne laisse jamais A actif.
  *
- * L'ouverture ne coûte QU'UN appel de données (`getPatientWorkspace`), donc UNE
- * ligne d'audit `fiche`. La chronologie et les documents ne lisent qu'à
- * l'ouverture de leur onglet, et chacun écrit alors sa propre trace `liste`.
- *
- * Ce n'est pas d'abord une optimisation : ouvrir une fiche ne doit pas produire
- * une lecture que la praticienne n'a pas demandée (règle 6). C'est la raison
- * déjà écrite dans `SectionDocumentsPatient`, et elle vaut pour la chronologie.
- *
- * ═══ LES ONGLETS CLINIQUES PEUVENT MANQUER, ET CE N'EST PAS UN MASQUAGE ═══
- *
- * `espace.clinique` et `espace.traitements` valent `null` quand la base a
- * décidé que l'appelant ne voit pas le clinique (`can_see_clinical`, 003). On
- * ne monte alors pas ces onglets. Ce n'est PAS la frontière de sécurité — les
- * sous-requêtes sont de toute façon filtrées par la RLS et ne rendraient rien —
- * c'est une décision de COMPOSITION : proposer à l'accueil trois onglets
- * structurellement vides serait une mauvaise interface, pas une protection.
- * Il n'y a pas un seul `if (role === …)` dans ce fichier.
+ * Aucune décision d'autorisation ici : les onglets cliniques manquent quand
+ * la base rend null (décision de COMPOSITION), pas un seul `if (role === …)`.
  */
 
 "use client";
 
 import { useParams, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { AppShell } from "@/components/AppShell";
 import { SectionDocumentsPatient } from "@/components/documents/SectionDocumentsPatient";
+import { BandeauAujourdhui } from "@/components/patients/BandeauAujourdhui";
+import { CarteResumeCas, type ResumeEtat } from "@/components/patients/CarteResumeCas";
 import { CarteIdentite } from "@/components/patients/CarteIdentite";
 import { ChronologiePatient } from "@/components/patients/ChronologiePatient";
-import { EnTetePatient, RetourListe } from "@/components/patients/EnTetePatient";
+import {
+  ListeSignaux,
+  PointDeSituation,
+  SectionDepuisDerniere,
+} from "@/components/patients/SectionsDeterministes";
+import { EnTeteCollant, type ActionDominante } from "@/components/patients/EnTeteCollant";
+import { RetourListe } from "@/components/patients/EnTetePatient";
 import { FormulaireModification } from "@/components/patients/FormulaireModification";
-import { CarteContexteClinique, PanneauClinique } from "@/components/patients/PanneauClinique";
+import { PanneauClinique } from "@/components/patients/PanneauClinique";
 import {
   CarteProchaineEcheance,
   PanneauRendezVous,
@@ -68,6 +62,13 @@ import {
 import { fr } from "@/i18n/fr";
 import { getSession, signOut } from "@/services/auth";
 import { getCurrentUser, type CurrentUser } from "@/services/authz";
+import {
+  definirPatientActif,
+  effacerPatientActif,
+} from "@/services/patient-actif";
+import { genererResumeCas } from "@/services/resume-cas";
+import { startConsultation } from "@/services/consultations";
+import type { SourceResume } from "@/services/patients";
 import {
   getPatient,
   getPatientWorkspace,
@@ -94,18 +95,22 @@ export default function PageFichePatient(): React.JSX.Element {
   const [horsLigne, setHorsLigne] = useState(false);
   const [onglet, setOnglet] = useState<CleOnglet>("vueDEnsemble");
 
-  // La modification travaille sur `Patient`, la forme de la porte d'écriture —
-  // pas sur `PatientWorkspace`, qui est une VUE agrégée. Le dossier n'est relu
-  // sous cette forme qu'au moment où on ouvre le formulaire : le charger à
-  // l'ouverture de la fiche écrirait une seconde trace `fiche` pour un geste
-  // que la praticienne n'a pas encore demandé.
+  const [resumeEtat, setResumeEtat] = useState<ResumeEtat>({
+    resume: null,
+    generationEnCours: false,
+    indisponible: false,
+  });
+  // Le premier workspace portait-il un résumé ? Sert à ne PAS afficher
+  // « indisponible » avant toute tentative quand il n'y a simplement
+  // encore rien généré.
+  const [premierChargement, setPremierChargement] = useState(true);
+
   const [enModification, setEnModification] = useState<Patient | null>(null);
   const [erreurModification, setErreurModification] = useState<string | undefined>(undefined);
 
   // ⚠️ « ÉCHEC DE LECTURE DE LA SESSION » N'EST PAS « AUCUNE SESSION » — voir
-  // le commentaire détaillé dans `src/app/patients/page.tsx`. Hors ligne, le
-  // rafraîchissement de jeton échoue ; rediriger là-dessus éjecterait la
-  // praticienne de la fiche qu'elle est en train de lire (I20).
+  // patients/page.tsx. Hors ligne, rediriger éjecterait la praticienne du
+  // dossier qu'elle lit (I20).
   useEffect(() => {
     let annule = false;
     void getSession().then((result) => {
@@ -142,16 +147,33 @@ export default function PageFichePatient(): React.JSX.Element {
       setHorsLigne(false);
       setMessageErreur(undefined);
       setEspace(result.data);
+      setResumeEtat((s) => ({
+        ...s,
+        resume: result.data?.resume ?? null,
+        generationEnCours: false,
+      }));
     });
     return () => {
       annule = true;
     };
   }, [id]);
 
+  // ── Contexte patient actif — publication + effacement GARANTI. ──────────
+  useEffect(() => {
+    if (espace !== null && espace !== undefined) {
+      definirPatientActif({
+        id: espace.identite.id,
+        nom: `${espace.identite.lastName.toUpperCase()} ${espace.identite.firstName}`,
+        numero: espace.identite.recordNumber,
+      });
+    }
+    return () => {
+      effacerPatientActif();
+    };
+  }, [espace]);
+
   function deconnecter(): void {
-    // `replace` et pas `push` : le bouton Retour ne doit pas ramener sur un
-    // dossier après une déconnexion volontaire, sur un poste que le patient
-    // suivant voit.
+    effacerPatientActif();
     void signOut().then(() => {
       router.replace("/connexion");
     });
@@ -174,14 +196,68 @@ export default function PageFichePatient(): React.JSX.Element {
 
   function apresModification(): void {
     setEnModification(null);
-    // Relire l'espace complet : une modification d'identité change l'en-tête,
-    // l'âge et les coordonnées. Recomposer la vue à partir du `Patient` rendu
-    // par la porte d'écriture reconstruirait à la main ce que la porte de
-    // lecture sait faire — et les deux formes divergeraient au premier champ
-    // ajouté.
     void getPatientWorkspace(id).then((result) => {
-      if (result.ok) setEspace(result.data);
+      if (result.ok && result.data !== null) setEspace(result.data);
     });
+  }
+
+  // ── Génération du résumé — post-rendu, repli honnête sur échec. ─────────
+  const generer = useCallback((): void => {
+    void genererResumeCas(id).then((result) => {
+      if (result.ok) {
+        setResumeEtat({
+          resume: result.data.resume,
+          generationEnCours: false,
+          indisponible: false,
+        });
+      } else {
+        setResumeEtat((s) => ({ ...s, generationEnCours: false, indisponible: true }));
+      }
+    });
+  }, [id]);
+
+  // ── Action dominante — cartographie HONNÊTE des portes existantes. ──────
+  function dominante(espace: PatientWorkspace): ActionDominante | null {
+    const rdvDuJour = espace.rendezVousDuJour.find(
+      (r) => r.status === "confirmed" || r.status === "arrived" || r.status === "requested",
+    );
+    if (rdvDuJour !== undefined) {
+      return {
+        libelle: fr.actions.demarrerLaSeance,
+        onClick: () => {
+          void startConsultation({ patientId: id, appointmentId: rdvDuJour.id }).then((res) => {
+            if (res.ok) router.push(`/consultation/${res.data}`);
+            else setMessageErreur(res.error.message);
+          });
+        },
+      };
+    }
+    return {
+      libelle: fr.patients.actions.nouveauRendezVous,
+      href: `/agenda/nouveau?patient=${encodeURIComponent(id)}`,
+    };
+  }
+
+  /** Preuve → fait : bascule sur l'onglet qui porte la source citée. */
+  function ouvrirSource(source: SourceResume): void {
+    switch (source.t) {
+      case "diagnostic":
+      case "echelle":
+        setOnglet("clinique");
+        break;
+      case "prescription":
+        setOnglet("traitements");
+        break;
+      case "consultation":
+        setOnglet("chronologie");
+        break;
+      case "rdv":
+        setOnglet("rendezVous");
+        break;
+      case "document":
+        setOnglet("documents");
+        break;
+    }
   }
 
   if (utilisateur === undefined) {
@@ -195,14 +271,14 @@ export default function PageFichePatient(): React.JSX.Element {
   const contenu = ((): React.JSX.Element => {
     if (horsLigne && espace === undefined) return <BandeauHorsLigne />;
 
-    if (messageErreur !== undefined && espace !== undefined && espace === null) {
+    if (messageErreur !== undefined && espace === null) {
       return <BlocErreur message={messageErreur} />;
     }
 
     if (espace === undefined) return <Squelette lignes={8} />;
 
     if (espace === null) {
-      /* Dossier inexistant OU hors périmètre — un seul message, voir l'en-tête. */
+      /* Dossier inexistant OU hors périmètre — un seul message, voir en-tête. */
       return <EtatVide message={fr.patients.ficheIntrouvable} action={<RetourListe />} />;
     }
 
@@ -216,7 +292,6 @@ export default function PageFichePatient(): React.JSX.Element {
       );
     }
 
-    // Les onglets cliniques n'existent que si la base a rendu leur domaine.
     const onglets: readonly Onglet[] = [
       { cle: "vueDEnsemble", libelle: fr.patients.onglets.vueDEnsemble, icone: "patients" },
       ...(espace.clinique === null
@@ -238,17 +313,26 @@ export default function PageFichePatient(): React.JSX.Element {
       { cle: "documents", libelle: fr.patients.onglets.documents, icone: "documents" },
     ];
 
-    // Si l'onglet actif a disparu (rôle sans clinique), on retombe sur la vue
-    // d'ensemble plutôt que de rendre un panneau vide sans onglet sélectionné.
     const actif = onglets.some((o) => o.cle === onglet) ? onglet : "vueDEnsemble";
 
-    return (
-      <article className="flex flex-col gap-6">
-        <EnTetePatient espace={espace} onModifier={ouvrirModification} />
+    // Le Point de situation n'apparaît QUE si l'IA a échoué sans résumé
+    // valide à montrer — sinon c'est du bruit sur une page déjà complète.
+    const montrerPointSituation = resumeEtat.indisponible && resumeEtat.resume === null;
 
-        {erreurModification === undefined ? null : (
-          <BlocErreur message={erreurModification} />
-        )}
+    return (
+      <article className="flex flex-col gap-4">
+        <EnTeteCollant
+          espace={espace}
+          dominante={dominante(espace)}
+          onJarvis={() => {
+            window.dispatchEvent(
+              new KeyboardEvent("keydown", { key: "k", ctrlKey: true, bubbles: true }),
+            );
+          }}
+          onModifier={ouvrirModification}
+        />
+
+        <BandeauAujourdhui espace={espace} />
 
         <div>
           <Onglets
@@ -258,16 +342,33 @@ export default function PageFichePatient(): React.JSX.Element {
             etiquette={fr.patients.titre}
           />
 
-          {/* UN SEUL panneau monté à la fois. Monter les six et les masquer en
-              CSS ferait lire le dossier six fois — et écrirait six traces. */}
+          {/* UN SEUL panneau monté à la fois — chaque lecture doit avoir été
+              demandée (règle 6). */}
           <PanneauOnglet cle={actif}>
             {actif === "vueDEnsemble" ? (
-              <div className="grid grid-cols-fiche gap-6">
-                <CarteIdentite espace={espace} />
-                {espace.clinique === null ? null : (
-                  <CarteContexteClinique clinique={espace.clinique} />
-                )}
-                <CarteProchaineEcheance agenda={espace.agenda} documents={espace.documents} />
+              <div className="grid grid-cols-fiche items-start gap-6">
+                <div className="flex min-w-0 flex-col gap-6">
+                  <CarteResumeCas
+                    etat={{
+                      ...resumeEtat,
+                      resume:
+                        resumeEtat.resume ??
+                        espace.resume ?? 
+                        null,
+                    }}
+                    onEtatChange={setResumeEtat}
+                    onGenerer={generer}
+                    onOuvrirSource={ouvrirSource}
+                  />
+                  {montrerPointSituation ? <PointDeSituation espace={espace} /> : null}
+                  <SectionDepuisDerniere espace={espace} />
+                  <ListeSignaux espace={{ ...espace, resume: resumeEtat.resume ?? espace.resume }} />
+                </div>
+
+                <div className="flex min-w-0 flex-col gap-6">
+                  <CarteIdentite espace={espace} />
+                  <CarteProchaineEcheance agenda={espace.agenda} documents={espace.documents} />
+                </div>
               </div>
             ) : null}
 
@@ -298,10 +399,6 @@ export default function PageFichePatient(): React.JSX.Element {
       nomComplet={utilisateur?.fullName ?? ""}
       onDeconnexion={deconnecter}
     >
-      <div className="mb-4">
-        <RetourListe />
-      </div>
-
       {horsLigne ? (
         <div className="mb-4">
           <BandeauHorsLigne />

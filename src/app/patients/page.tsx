@@ -40,7 +40,14 @@ import { useEffect, useState } from "react";
 
 import { AppShell } from "@/components/AppShell";
 import { EnTeteAnnuaire, LignePatient } from "@/components/patients/LignePatient";
-import { BandeauHorsLigne, BlocErreur, EnTeteEcran, EtatVide, Squelette } from "@/components/ui";
+import {
+  BandeauHorsLigne,
+  BlocErreur,
+  EnTeteEcran,
+  EtatVide,
+  LienBouton,
+  Squelette,
+} from "@/components/ui";
 import { fr } from "@/i18n/fr";
 import { getSession, signOut } from "@/services/auth";
 import { getCurrentUser, type CurrentUser } from "@/services/authz";
@@ -239,8 +246,18 @@ export default function PagePatients(): React.JSX.Element {
           (« Patients »), jamais celui d'un dossier : ADR-022 interdit un
           dégradé derrière un nom de patient, et c'est cette frontière qui
           décide lequel des deux en-têtes un écran reçoit. La fiche d'un
-          dossier, elle, garde `EnTetePage`, sobre et opaque. */}
-      <EnTeteEcran icone="patients" titre={fr.patients.titre} />
+          dossier, elle, garde `EnTetePage`, sobre et opaque.
+          SPRINT-V1 §V5 : « Bouton Nouveau patient - visible, en haut à
+          droite, jamais caché dans un menu ». */}
+      <EnTeteEcran
+        icone="patients"
+        titre={fr.patients.titre}
+        actions={
+          <LienBouton href="/patients/nouveau" rang="principal">
+            {fr.patients.creation.titre}
+          </LienBouton>
+        }
+      />
 
       {/* Plus de bouton « Rechercher » : la recherche part au débounce. Le
           formulaire reste un `form` pour que `Entrée` fonctionne au clavier et

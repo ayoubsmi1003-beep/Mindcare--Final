@@ -28,7 +28,7 @@ import postgres from "npm:postgres@3";
  * rien ne sait pseudonymiser ; à la sortie sort du TEXTE déjà composé. 034
  * développe le raisonnement.
  */
-export type BoundaryPurpose = "jarvis" | "voix-entree" | "voix-sortie";
+export type BoundaryPurpose = "jarvis" | "voix-entree" | "voix-sortie" | "resume-cas";
 
 export type LlmRole = "system" | "user";
 
