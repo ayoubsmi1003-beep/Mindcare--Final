@@ -1,0 +1,41 @@
+{
+  "date": "2026-08-23T22:20:17.990Z",
+  "fonction": "jarvis-resume-cas",
+  "projet": "ftxaseynjvjevwybdoii",
+  "patientFixture": "00000000-0000-0000-0000-0000000000b2",
+  "controleD": {
+    "classe": "ECHEC",
+    "statutHttp": 200,
+    "codeApplicatif": "regle-metier",
+    "dureeMs": 783
+  },
+  "resultats": [
+    {
+      "verdict": "vert",
+      "label": "A · OPTIONS préflight → 204 + ACAO",
+      "detail": "status=204 ACAO=présente 2134ms"
+    },
+    {
+      "verdict": "vert",
+      "label": "B · POST sans Authorization → non-authentifie",
+      "detail": "status=200 code=non-authentifie"
+    },
+    {
+      "verdict": "vert",
+      "label": "C · POST clé publique seule → non-authentifie (leçon V2 n°2)",
+      "detail": "status=200 code=non-authentifie"
+    },
+    {
+      "verdict": "vert",
+      "label": "D0 · connexion GoTrue …a2",
+      "detail": "status=200"
+    },
+    {
+      "verdict": "ROUGE",
+      "label": "D · POST réel sous …a2 → {ok:true,data:{resume,…}}",
+      "detail": "status=200 code=regle-metier durée=783ms"
+    }
+  ],
+  "verts": 4,
+  "rouges": 1
+}

@@ -1,0 +1,75 @@
+{
+  "date": "2026-08-23T23:18:41.227Z",
+  "phase1": {
+    "resultats": [
+      {
+        "verdict": "vert",
+        "label": "C1 · création : trio requis → fiche + numéro P-nnnx",
+        "detail": "numéro=P-0005 · id=818e6360-7898-46de-b654-b0bda0ffdd81"
+      },
+      {
+        "verdict": "ROUGE",
+        "label": "C2 · doublon fort : panneau actif + « Créer malgré tout » obligatoire",
+        "detail": "bannière=false · case=false · bloqué-sans-case=false · débloqué=false"
+      },
+      {
+        "verdict": "ROUGE",
+        "label": "C3a · b2 (RDV du jour posé) : action dominante Démarrer la séance",
+        "detail": "bandeau=« AUJOURD'HUI Aucun rendez-vous aujourd'hui À jour »"
+      },
+      {
+        "verdict": "vert",
+        "label": "C3b · dossier sans RDV : action dominante Nouveau rendez-vous",
+        "detail": "bandeau=« AUJOURD'HUI Aucun rendez-vous aujourd'hui Aucun résumé généré »"
+      },
+      {
+        "verdict": "vert",
+        "label": "C6a · changement de dossier : contexte précédent effacé, puce exacte",
+        "detail": "puce A exacte=true · « AISSOU Yasmine » résiduel=false"
+      },
+      {
+        "verdict": "vert",
+        "label": "C6b · « Karim est-il dépressif ? » → refus ADR-023",
+        "detail": "refus rendu (« Je ne conclus pas sur une personne nommée : ce jugement vous… ») — libellé passerelle ≠ constante i18n : divergence NOMMÉE"
+      },
+      {
+        "verdict": "vert",
+        "label": "C7 · témoin positif : onglets COMPOSÉS depuis le workspace (…a2)",
+        "detail": "onglets=[Vue d'ensemble · Chronologie · Clinique · Traitements · Rendez-vous · Documents]"
+      },
+      {
+        "verdict": "ROUGE",
+        "label": "C8a · 1280 px : zéro débordement horizontal",
+        "detail": "doc=0px · main=8px · coupable: HEADER w=1048 > 1280 · classes=sticky top-0 z-10 -mx-4 px-4 py-3 tablet:-mx-8 tablet:px-8"
+      },
+      {
+        "verdict": "vert",
+        "label": "C8b · parcours clavier complet, focus toujours visible",
+        "detail": "38 arrêts · 0 sans anneau"
+      }
+    ],
+    "verts": 6,
+    "rouges": 3
+  },
+  "phase2": {
+    "resultats": [
+      {
+        "verdict": "vert",
+        "label": "C4c · source modifiée : fraîcheur bascule + « Actualiser » visible",
+        "detail": "badge=true · bouton=true"
+      },
+      {
+        "verdict": "vert",
+        "label": "C5b · coupure pendant Actualiser : ancien résumé conservé, page utilisable",
+        "detail": "ancien=true · crash=false · onglets=true"
+      },
+      {
+        "verdict": "vert",
+        "label": "C8c · prefers-reduced-motion : rien ne bouge",
+        "detail": "0 animation(s)"
+      }
+    ],
+    "verts": 3,
+    "rouges": 0
+  }
+}

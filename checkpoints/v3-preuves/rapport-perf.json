@@ -1,0 +1,97 @@
+{
+  "date": "2026-08-23T22:40:43.622Z",
+  "methode": "next start (production) · médiane de 3 · FCP via API Paint · appels coquille/écran séparés",
+  "budgets": "ACCEPTATION V3 : fiche 2 appels/100 ms FCP/500 ms · liste 1 appel/400 ms · création ≤ 60 s. La cible constitutionnelle Phase-1 (< 1 s ouverture dossier) reste INCHANGÉE et distincte.",
+  "liste": {
+    "fcpMediane": 104,
+    "completMediane": 956,
+    "ecran": [
+      "rpc/search_patients"
+    ],
+    "coquilleNb": 10,
+    "bruts": [
+      {
+        "fcp": 160,
+        "tComplet": 1050
+      },
+      {
+        "fcp": 72,
+        "tComplet": 939
+      },
+      {
+        "fcp": 104,
+        "tComplet": 956
+      }
+    ]
+  },
+  "fiche": {
+    "fcpMediane": 92,
+    "completMediane": 958,
+    "ecran": [
+      "rpc/get_patient_workspace"
+    ],
+    "coquilleNb": 9,
+    "bruts": [
+      {
+        "fcp": 80,
+        "tComplet": 951
+      },
+      {
+        "fcp": 92,
+        "tComplet": 958
+      },
+      {
+        "fcp": 148,
+        "tComplet": 1006
+      }
+    ]
+  },
+  "creation": {
+    "dureeMs": 2645,
+    "numero": "P-0002"
+  },
+  "resultats": [
+    {
+      "verdict": "vert",
+      "label": "/patients · appels ÉCRAN ≤ 1",
+      "detail": "[rpc/search_patients] (+10 coquille)"
+    },
+    {
+      "verdict": "ROUGE",
+      "label": "/patients · FCP ≤ 100 ms (médiane 3)",
+      "detail": "104 ms"
+    },
+    {
+      "verdict": "ROUGE",
+      "label": "/patients · complet ≤ 400 ms (médiane 3)",
+      "detail": "956 ms"
+    },
+    {
+      "verdict": "vert",
+      "label": "fiche patient · appels ÉCRAN ≤ 2",
+      "detail": "[rpc/get_patient_workspace] (+9 coquille)"
+    },
+    {
+      "verdict": "vert",
+      "label": "fiche patient · FCP ≤ 100 ms (médiane 3)",
+      "detail": "92 ms"
+    },
+    {
+      "verdict": "ROUGE",
+      "label": "fiche patient · complet ≤ 500 ms (médiane 3)",
+      "detail": "958 ms"
+    },
+    {
+      "verdict": "vert",
+      "label": "création complète · redirection fiche + numéro P-nnnx",
+      "detail": "numéro=« P-0002 »"
+    },
+    {
+      "verdict": "vert",
+      "label": "création complète · ≤ 60 s",
+      "detail": "2645 ms"
+    }
+  ],
+  "verts": 5,
+  "rouges": 3
+}

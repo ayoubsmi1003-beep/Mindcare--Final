@@ -1,4 +1,7 @@
 # STATE — MindCare OS
+**V3-CLÔTURE ROUGE (2026-08-24) : la passerelle du résumé et le garde-doublon UX sont INOPÉRANTS À L'EXÉCUTION — trois défauts produits nommés, preuves et instruments livrés. Le socle sécurité tient.**
+Dernière mise à jour : 2026-08-24
+# STATE — MindCare OS
 **V10-PATIENTS VERT (SQL 40/40 · vérifié à l'écran en 3 rôles) · le dossier patient est un espace de travail · V9-COCKPIT et V8-DOCUMENTS restent verts**
 Dernière mise à jour : 2026-08-23
 # STATE — MindCare OS
@@ -10,76 +13,245 @@ Dernière mise à jour : 2026-08-23 (session V3)
 
 ---
 
-## ▶ CONTRAT DE LA PROCHAINE SESSION — « V3-CLÔTURE » (à coller tel quel)
+## ▶ CONTRAT DE LA PROCHAINE SESSION — « V3-CORRECTIFS » (à coller tel quel)
 
-> Tu reprends MindCare OS après le lot **V3-PATIENTS « Patient 360° »**, VERT
-> en base (checkpoint 12/12), eval IA (26/26), typecheck/lint/build/preflight.
-> Instance cloud à **57 migrations** (050→057 appliquées et tracées). RIEN
-> n'est déployé côté Edge pour le nouveau résumé. Rien n'est mesuré au
-> navigateur.
+> Tu reprends MindCare OS après **V3-CLÔTURE ROUGE (2026-08-24)** : trois
+> défauts produits NOMMÉS, chacun avec cause racine prouvée et instrument de
+> rejeu livré. Instance cloud à 55 migrations tracées (max 057) — RIEN à
+> migrer. La passerelle `jarvis-resume-cas` est DÉPLOYÉE mais INOPÉRABLE.
+> Comptes a1/a2/a3 en état protégé (sentinelles vérifiées en fin de session).
 >
-> PÉRIMÈTRE GELÉ : aucun nouveau schéma, aucune migration, aucune nouvelle
-> fonctionnalité. Cette session CLÔT V3 ou dit précisément pourquoi elle ne
-> peut pas.
+> PÉRIMÈTRE : les TROIS correctifs ci-dessous, RIEN d'autre. Aucune migration
+> attendue (TypeScript/CSS + redéploiement). Cette session CLÔT V3 ou dit
+> précisément pourquoi elle ne peut pas.
 
-### T1 · Déployer la passerelle du résumé
-`supabase functions deploy jarvis-resume-cas --use-api`, puis contrôles HTTP :
-OPTIONS préflight 204 + ACAO ; POST sans jeton → `non-authentifie` ; POST avec
-clé publique seule → `non-authentifie` (leçon V2 défaut n°2) ; appel réel sous
-…a2 sur un dossier synthétique porteur d'un diagnostic + deux mesures → JSON
-`{ok:true,data:{resume,...}}` et une ligne dans `patient_case_summaries`.
-⚠️ Crédit OpenRouter : si HTTP 402, c'est la dette d'ENVIRONNEMENT connue —
-BLOQUÉ-par-environnement nommé ; surtout NE PAS baisser MAX_OUTPUT_TOKENS.
+### T1 · Correctif n°1 — la passerelle du résumé lit un scalaire comme un tableau
+`supabase/functions/jarvis-resume-cas/index.ts:98` fait `wsRows?.[0]` ;
+`get_patient_workspace` retourne un jsonb SCALAIRE (047/057), PostgREST livre
+donc un OBJET (`espace=undefined` → `regle-metier`, avant tout appel LLM ;
+preuve : `boundary_crossings` purpose=`'resume-cas'` = 0 ligne, 783 ms).
+Lire l'objet directement (tolérance tableau acceptable si triviale), ne rien
+changer d'autre. Redéployer (`--use-api --project-ref ftxaseynjvjevwybdoii`),
+puis rejouer `node scripts/mesure-resume-cas-http.mjs` : A/B/C verts exigés,
+D attendu `{ok:true,data:{resume,…}}` sur …b2. Vérifier en base : nouvelle
+version dans `patient_case_summaries` (genere_par=…a2) et des lignes
+`boundary_crossings` purpose=`'resume-cas'`.
+⚠️ APRÈS correction, l'appel ATTEINT le fournisseur pour la première fois :
+si HTTP 402 → BLOQUÉ-par-environnement NOMMÉ ; JAMAIS baisser
+MAX_OUTPUT_TOKENS, jamais changer de modèle ni de logique pour passer.
 
-### T2 · Mesure perf — `scripts/mesure-patients-v3.mjs`
-Patron `mesure-reception.mjs` : build de production (`next start`), médiane de
-3, appels réseau comptés SÉPARÉMENT coquille/écran. Budgets (06-PERF §2) :
-fiche patient **2 appels · 100 ms premier contenu · 500 ms complet** ;
-`/patients` 1 appel · 400 ms ; `/patients/nouveau` création complète ≤ 60 s.
-Chiffres écrits dans STATE.md, verdict par écran.
+### T2 · Correctif n°2 — le garde doublon de `/patients/nouveau` est du code mort
+`nouveau/page.tsx:56-59` déclare `prenomSaisi/nomSaisi/telephoneSaisi/
+naissanceSaisie` mais RIEN ne les alimente : `FormulaireCreation` garde ses
+saisies en état local sans remonter quoi que ce soit → `rechercheActive`
+toujours faux, panneau inerte, bannière match fort jamais rendue, case
+« Créer malgré tout » jamais exigée. Remonter les saisies vers la page (props
+`onChamp…` ou état unique) SANS toucher aux validations ni à la porte SQL
+(23505 reste l'autorité finale — checkpoint B2 vert). Rejeu :
+`node scripts/mesure-v3-patients-navigateur.mjs` → C2 vert (bannière + case
+obligatoire, soumission bloquée sans case, AUCUN doublon créé).
 
-### T3 · Vérification navigateur en 3 rôles (patron `mesure-v3-navigateur`)
-Fenêtres ADR-016 : …a2 via `compte-praticienne.sh` ; …a1 via `dev-account.sh`
-si nécessaire ; …a3 reste INCONNECTABLE — le rôle assistante se prouve par
-impersonation SQL (déjà vert au checkpoint C5/C6) ET par l'écran sous …a2
-(onglets cliniques absents = composition). Contrôles minimum :
-1. Création : trio requis → dossier créé → redirection fiche ; numéro P-nnnx.
-2. Doublon fort → panneau « Patients similaires » + case « Créer malgré
-   tout » obligatoire avant soumission.
-3. Fiche : bandeau Aujourd'hui fidèle aux RDV réels ; action dominante
-   correcte (RDV du jour ⇒ Démarrer la séance ; sinon Nouveau rendez-vous).
-4. Résumé : générer → sections + sources ; « Pourquoi ? » navigue vers
-   l'onglet porteur ; fraîcheur trois états ; Actualiser visible si modifié.
-5. Coupure OpenRouter → ancien résumé conservé OU Point de situation
-   (« données directes », jamais le mot résumé) ; page pleinement utilisable.
-6. Contamination Jarvis A→B : contexte effacé au changement de dossier ;
-   puce exacte ; « Karim est-il dépressif ? » toujours refusé (ADR-023).
-7. Assistante : ni onglets cliniques, ni carte résumé, ni Point de situation
-   clinique (composition sous …a2 restreinte + preuves base déjà vertes).
-8. 1280 px : rail contexte → tiroir, zéro débord horizontal ; clavier
-   complet ; `prefers-reduced-motion` : rien ne bouge.
-Captures dans `checkpoints/v3-preuves/`.
+### T3 · Correctif n°3 — débordement horizontal de 8 px à 1280
+`EnTeteCollant` (`-mx-4 px-4 tablet:-mx-8 tablet:px-8`) déborde de 8 px dans
+`<main>` à 1280 (mesuré : header w=1048 > conteneur 1032 ; coupable nommé par
+l'instrument). Corriger par les classes/jetons existants — jamais de px
+littéral (I10) — p. ex. aligner marges négatives sur le padding réel du
+conteneur parent. Contrôle : C8a vert (`scrollWidth<=clientWidth` doc ET main).
 
-### T4 · Clôture
-STATE.md : verdicts chiffrés par écran et par rôle, réserves NOMMÉES, rouges
-éventuels expliqués. Rapport final au gabarit : fichiers · tests · sécurité ·
-AI eval · perf · navigateur 3 rôles · design · limitations · VERDICT
-GREEN/RED/BLOCKED. Refermer les fenêtres ouvertes (`--fermer`) et vérifier les
-sentinelles.
+### T4 · Re-clôture V3 — instruments livrés, verdict au gabarit
+1. Fenêtre …a2 via `compte-praticienne.sh` (ouvrir/refermer). ⚠️ Sentinelles
+   des TROIS comptes vérifiées EN DÉBUT et EN FIN : a3 a été trouvé avec un
+   hash bcrypt d'origine inconnue le 2026-08-24 (sentinelle rétablie depuis).
+2. `pnpm build && next start` en série (port 3000 libre, `.next` déjà vidé une
+   fois sous serveur actif — jamais deux builds).
+3. `node scripts/mesure-patients-v3.mjs` — budgets acceptation V3 inchangés ;
+   cible constitutionnelle < 1 s notée séparément.
+4. `node scripts/mesure-v3-patients-navigateur.mjs` puis `--phase2`. La
+   mutation fraîcheur (RDV demain, UUID fixe c1000000-…a202 sur …b2) est
+   DÉJÀ en base datée du 25/08 : si elle est devenue « aujourd'hui »/« hier »,
+   refaire l'INSERT à J+1 du jour courant (rejouable, garde NOT EXISTS).
+5. STATE.md : verdicts chiffrés par écran/rôle, réserves NOMMÉES, VERDICT
+   GREEN/RED/BLOCKED au gabarit. Commit UNIQUEMENT si demandé.
 
 ### Pièges déjà payés ici — ne pas repayer
-`bash`=WSL sans Docker (passer par PowerShell + `docker run postgres:15`) ·
-DNS flottant (épingler via nslookup 1.1.1.1 + `--add-host` ; IP ELB rotatives,
-boucler sur les trois) · `Get-Content` PS5.1 lit ANSI et `Set-Content` écrit
-CRLF ([IO.File]::WriteAllText UTF8-sans-BOM, LF) · échelles Tailwind
-REMPLACÉES (pas de `grid-cols-N`, `duration-300`, `sm:`) · `pnpm build` tue un
-serveur actif · fixtures = transaction annulée + `is_synthetic=true` · JAMAIS
-éditer une migration appliquée (correctif = N+1, méthode 048/052/055/057) ·
-messages Postgres mojibake internes 052-057 : connus, invisibles à l'écran,
-réalignement reporté.
+`bash`=WSL sans Docker (PowerShell + `docker run postgres:15`; helper
+`scripts/lib/dburl.mjs`) · DNS flottant (MC_PIN_HOST/MC_PIN_IP dans dburl.mjs ;
+IPs ELB rotatives, boucler sur les trois) · guard-bash bloque curl/wget →
+instruments Node fetch · PS5.1 ANSI/CRLF ([IO.File]::WriteAllText UTF8-sans-BOM)
+· échelles Tailwind REMPLACÉES (pas `grid-cols-N`/`duration-300`/`sm:`) ·
+`pnpm build` tue un serveur actif ET `.next` a été vidé sous un serveur
+(chunks 400) : reconstruire en série · fixtures = is_synthetic=true, INSERT-only
+UUID fixes · JAMAIS éditer une migration appliquée (correctif = N+1,
+méthode 048/052/055/057) · apostrophes i18n DROITES dans les sélecteurs ·
+`domcontentloaded` + attente mobilier (jamais networkidle/waitForTimeout) · IDs
+React `useId` (pas de sélecteur d'id fixe) · minuit Alger peut tomber EN
+SESSION : le RDV « du jour » vieillit et l'écran bascule — NORMAL (preuve des
+bornes, pas un défaut) · mojibake interne portes 052-057 : connu, invisible
+écran, reporté · divergence libellé refus passerelle/i18n : connue, à aligner
+uniquement si trivial, sinon réserve nommée.
 
 ---
 
+
+## ✅ 2026-08-24 — V3-CLÔTURE : VERDICT ROUGE (mesuré, pas supposé)
+
+> Cette session devait CLÔTRE V3 ou dire précisément pourquoi elle ne peut pas.
+> Elle dit pourquoi : **trois défauts produits, trouvés EN EXÉCUTANT**, tous
+> invisibles aux checkpoints verts de la veille. Périmètre gelé respecté :
+> **aucune correction appliquée** — chaque défaut porte son instrument de
+> rejeu. Le socle sécurité est INTACT.
+
+### 1 · T1 — la passerelle du résumé : déployée, trois contrôles verts, DÉFAUT n°1 au cœur
+
+Déploiement `functions deploy jarvis-resume-cas --use-api --project-ref
+ftxaseynjvjevwybdoii` : OK (`--project-id` n'existe pas dans cette CLI, le
+drapeau est `--project-ref`). Contrôles HTTP (`scripts/mesure-resume-cas-http.mjs`,
+instrument neuf) :
+
+| Contrôle | Verdict | Preuve |
+|---|---|---|
+| A · OPTIONS préflight | ✅ vert | 204 + ACAO présente |
+| B · POST sans jeton | ✅ vert | `{ok:false, code:"non-authentifie"}` |
+| C · POST clé publique seule | ✅ vert | idem — leçon V2 n°2 tenue |
+| D0 · GoTrue …a2 | ✅ vert | password grant OK |
+| D · appel réel authentifié | 🔴 **ROUGE** | `regle-metier` en **783 ms** |
+
+**DÉFAUT n°1 (passerelle).** `jarvis-resume-cas/index.ts:98` lit
+`wsRows?.[0]` comme un TABLEAU ; `get_patient_workspace` retourne un jsonb
+SCALAIRE (047/057), donc PostgREST livre un OBJET — vérifié empiriquement
+(`forme=OBJET`). `espace` vaut `undefined` → refus « Ce dossier n'ouvre pas de
+résumé » **avant tout appel LLM**. Corroboration indépendante : ZERO ligne
+`boundary_crossings` purpose=`'resume-cas'`. C'est la famille
+« vert statique ≠ vert intégré » encore une fois : porte SQL verte au
+checkpoint C4/C5, passerelle jamais exercée bout en bout.
+**Correctif futur = une ligne** (`espace = wsRows` quand ce n'est pas un
+tableau) + redéploiement + rejeu de l'instrument HTTP. Interdit ici (périmètre
+gelé). **La dette OpenRouter (402) n'a PAS été rencontrée** : l'échec est en
+amont du fournisseur ; elle reste datée et ouverte.
+
+Pour permettre malgré tout les contrôles d'affichage T3, une version v1 de
+résumé a été écrite PAR LA PORTE (`save_case_summary`) sous …a2, citations sur
+la vraie fixture — `genere_par=…a2`, `patient_practitioner_id=…a2`
+(Amendement A prouvé au passage), `model='fixture-v3-cloture'` identifiable.
+Fixture T1 rejouable : `scripts/checkpoint-fixture-v3-cloture.sql` (UUID fixes,
+garde cloud-dev, INSERT-only, zéro patient créé).
+
+### 2 · T2 — perf Patients V3 (`next start`, médiane 3, FCP API Paint)
+
+| Écran | Appels ÉCRAN | FCP | Complet | Budget acceptation V3 | Verdict |
+|---|---|---|---|---|---|
+| `/patients` | **1** (`rpc/search_patients`) ✅ | 104–176 ms | **956 ms** | 1 · 100 ms · 400 ms | 🔴 FCP/temps |
+| fiche patient | **1** (`rpc/get_patient_workspace`) ✅ | 92–120 ms | **958–1004 ms** | 2 · 100 ms · 500 ms | 🔴 temps complet |
+| création complète | — | — | 2 645–3 047 ms, P-nnnx ✅ | ≤ 60 s | ✅ |
+
+- **L'architecture §3 tient** : UN appel de données par écran. Les appels sont
+  RAPIDES (workspace **178 ms**, search **135 ms**, relevés performance entries).
+- Le « complet » ~960–1000 ms est dominé par le poste (hydratation 220 kB sur
+  i7 3ᵉ gén / 8 Go — PERF §5, hors portée du code), pas par le réseau ni par
+  une cascade. La cible constitutionnelle Phase-1 (< 1 s à l'ouverture d'un
+  dossier) reste INCHANGÉE : la fiche s'y trouve À LA LIMITE (~1,0 s).
+- FCP à cheval sur le seuil des 100 ms (dispersion 92→176 ms entre tirages) :
+  non tranché, consigné brut.
+- Coquille : 3–4 appels/navigation (deployment·profiles·get_open_consultation)
+  — dette PERF §3 confirmée, hors périmètre.
+
+### 3 · T3 — navigateur, rôles et contrôles
+
+Fenêtres : **…a2 ouverte puis refermée, sentinelle vérifiée** ;
+**…a1 JAMAIS ouvert** (hash bcrypt intact = jamais touché) ;
+**…a3 resté inconnectable** — preuve combinée : impersonation SQL déjà verte
+(checkpoint-patients-v3 C5/C6) + témoin positif sous …a2 (les six onglets sont
+COMPOSÉS depuis le workspace) + réserve nommée ci-dessous.
+
+| # | Contrôle | Verdict |
+|---|---|---|
+| C1 | création trio requis → redirection fiche + `P-nnnx` | ✅ |
+| C2 | doublon fort → panneau + case obligatoire | 🔴 **DÉFAUT n°2** |
+| C3 | bandeau Aujourd'hui fidèle ; dominante Démarrer/Nouveau RDV | ✅ (+preuve bornes jour, §5) |
+| C4 | sections+Sources ; « Pourquoi ? » navigue vers l'onglet porteur ; fraîcheur À jour → modifiée + Actualiser | ✅✅✅ |
+| C5 | coupure fonction : sans résumé → Point de situation (« ce n'est pas un résumé IA ») ; pendant Actualiser → ancien conservé ; page utilisable | ✅✅ |
+| AI-offline | workspace pleinement navigable fonctions coupées (5 onglets, zéro crash) | ✅ |
+| C6 | contamination A→B effacée, puce exacte ; « Karim est-il dépressif ? » REFUSÉ | ✅✅ |
+| C7 | composition pilotée workspace (témoin …a2, 6 onglets) | ✅ |
+| C8 | 1280 px débordement / clavier / reduced-motion | 🔴 / ✅ / ✅ |
+
+**DÉFAUT n°2 (écran création).** Le garde « Patients similaires » /
+match fort / « Créer malgré tout » est INOPÉRANT à l'exécution :
+`nouveau/page.tsx:56-59` déclare `prenomSaisi/nomSaisi/telephoneSaisi/
+naissanceSaisie` mais RIEN ne les alimente — `FormulaireCreation` garde ses
+saisies en état local sans remonter aucun changement. `rechercheActive` est
+donc figé à faux : panneau inerte, bannière jamais rendue, case jamais exigée.
+**La protection DURE reste intacte** : le refus SQLSTATE 23505 de
+`app.create_patient` a bloqué le doublon au checkpoint (B2 vert) et bloque
+encore. Conséquence : sécurité des données préservée, contrôle produit demandé
+par le contrat NON TENU. Correctif futur : remonter les saisies
+(`onChampChange`) ou déplacer la recherche dans le formulaire — rejeu de
+l'instrument pour preuve.
+
+**DÉFAUT n°3 (layout 1280).** Débordement horizontal de **8 px** dans `<main>`
+à 1280 : coupable mesuré `header.sticky -mx-8 px-8` (`EnTeteCollant`),
+largeur 1048 > conteneur 1032. doc entier reste à 0 (masqué), `<main>` scrolle.
+Clavier : 38 arrêts, focus visible partout. Reduced-motion : 0 animation.
+
+**Divergence NOMMÉE (non bloquante).** Le refus ADR-023 rendu par la passerelle
+(« Je ne conclus pas sur une personne nommée : ce jugement vous appartient… »,
+`chemin:"refus"`, registre affiché) diffère de la constante i18n
+(`fr.jarvis.refusCasIndividuel` : « …une patiente ou un patient
+nommé… »). La barrière est EFFECTIVE ; le libellé devrait être unique.
+
+### 4 · Sécurité — ce qui TIENT (et c'est l'essentiel)
+
+Portes d'authentification de la passerelle (A/B/C) vertes · RLS intouchée
+(zéro migration, 55 traces avant = après, max 057) · isolation du contexte
+Jarvis A→B prouvée au navigateur · refus ADR-023 effectif · Point de situation
+honnête (« données directes », jamais appelé résumé) · **8/8 patients
+synthétiques, 0 donnée non-synthétique créée** · audit émis par l'usage normal
+des portes (fiche/recherche).
+
+### 5 · Anomalie comptes + observation horaire
+
+- **…a3 portait un VRAI hash bcrypt** (60 car., préfixe `$2`) au lieu de la
+  sentinelle de 015 — état découvert en clôture, origine NON établie (le
+  `--fermer` de V9 prétendait l'avoir vérifiée). Rétabli en fin de session en
+  rejouant la séquence officielle `compte-assistante.sh --fermer`.
+  Fin de session : **a1 bcrypt intact (jamais ouvert) · a2 sentinelle ✓ ·
+  a3 sentinelle ✓**.
+- **Minuit d'Alger traversé en séance** : le RDV fixture (23/08 10:00) a basculé
+  hors « aujourd'hui » à 00:17 locales, et l'écran a suivi (« Aucun rendez-vous
+  aujourd'hui », dominante repassée à Nouveau rendez-vous). C3a avait été pris
+  VERT avant minuit (capture `c3a-*.png`) ; la bascule nocturne est une preuve
+  SUPPLÉMENTAIRE que les bornes de journée Africa/Algiers sont justes.
+
+### 6 · Réserves NOMMÉES (non bloquantes)
+
+1. Dette OpenRouter (402) : NON rencontrée (défaut amont) — reste datée.
+2. Mojibake interne des portes 052-057 : connu, invisible écran, reporté.
+3. Composition assistante à l'écran : preuve indirecte (C5/C6 SQL + témoin
+   composition sous …a2). …a3 inconnectable par design ADR-016.
+4. `CORS_ORIGINS` à poser sur l'origine réelle avant toute mise en service.
+5. Modèle `:free` rate-limité — suffisant aux tests, pas au clinique.
+6. Divergence de libellé du refus passerelle/i18n (§3).
+7. Coquille 3-4 appels/navigation — dette PERF §3 antérieure.
+8. `.next` vidé sous un serveur actif en cours de session (chunks 400) — cause
+   non attribuée ; reconstruit série, serveur relancé, mesures reprises.
+
+### 7 · VERDICT : 🔴 ROUGE
+
+Trois défauts produits nommés, chacun avec cause racine précise, preuve
+reproductible et instrument de rejeu livré :
+
+1. Passerelle `jarvis-resume-cas` inutilisable (lecture scalaire comme tableau)
+   → la génération de résumé NE FONCTIONNE PAS en production.
+2. Garde doublon UX de `/patients/nouveau` inopérant (wiring manquant) → la
+   protection demandée au contrat n'existe qu'en dernier recours SQL.
+3. Débordement horizontal 8 px à 1280 px (EnTeteCollant).
+
+Ce qui débloquerait le vert : ces trois correctifs (une ligne + wiring + deux
+classes utilitaires), PUIS rejeu de `mesure-resume-cas-http.mjs`,
+`mesure-patients-v3.mjs` et `mesure-v3-patients-navigateur.mjs` — tous trois
+livrés et documentés. Rien d'autre ne s'est opposé à la clôture.
+
+---
 
 ## ✅ 2026-08-23 — V3-PATIENTS « Patient 360° »
 
