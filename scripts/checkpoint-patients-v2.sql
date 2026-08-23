@@ -446,6 +446,35 @@ SELECT pg_temp.controle('F5 address à null EFFACE (distinct de « absent »)',
      '00000000-0000-0000-0000-f04700000b03', '{"address":null}'::jsonb)),
   'clé absente = inchangé, clé null = effacé');
 
+-- ⚠️ F6 ET F7 SONT LE CHEMIN CLIENT RÉEL, ET LEUR ABSENCE A COÛTÉ UN BOGUE.
+--
+-- F1–F5 passent une charge écrite en `'…'::jsonb` — un OBJET. Ce n'est PAS ce
+-- que l'application envoie : `RpcArgs` (ADR-020) ne transporte que des
+-- scalaires, donc le port sérialise, et PostgREST livre une CHAÎNE jsonb au
+-- paramètre. La porte refusait alors toute modification (« un objet JSON est
+-- attendu », P0001) — pendant que ce checkpoint était vert.
+--
+-- Un contrôle qui n'emprunte pas le chemin de l'appelant ne prouve pas que
+-- l'appelant fonctionne. `to_jsonb(texte)` reproduit exactement ce que reçoit
+-- la porte depuis le client.
+SELECT pg_temp.controle('F6 la charge SÉRIALISÉE du port est acceptée (049)',
+  (SELECT address = 'Adresse via charge sérialisée' FROM app.update_patient(
+     '00000000-0000-0000-0000-f04700000b03',
+     to_jsonb('{"address":"Adresse via charge sérialisée"}'::text))),
+  'le chemin réel de FormulaireModification');
+
+SELECT pg_temp.controle('F7 une chaîne qui ne contient pas un objet reste refusée',
+  pg_temp.appel_refuse($q$
+    SELECT app.update_patient('00000000-0000-0000-0000-f04700000b03',
+                              to_jsonb('ceci n''est pas un objet'::text))$q$),
+  '049 déballe UNE fois, il n''ouvre pas la porte');
+
+SELECT pg_temp.controle('F8 clé inconnue refusée AUSSI en charge sérialisée',
+  pg_temp.appel_refuse($q$
+    SELECT app.update_patient('00000000-0000-0000-0000-f04700000b03',
+                              to_jsonb('{"record_number":"PIRATE-2"}'::text))$q$),
+  'l''allowlist s''applique après le déballage');
+
 RESET request.jwt.claim.sub;
 RESET ROLE;
 

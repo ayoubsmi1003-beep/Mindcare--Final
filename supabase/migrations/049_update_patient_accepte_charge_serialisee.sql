@@ -114,4 +114,13 @@ COMMENT ON FUNCTION app.update_patient(uuid, jsonb) IS
   '049 : accepte aussi la charge SÉRIALISÉE — `RpcArgs` (ADR-020) n''envoie que '
   'des scalaires, comme pour update_appointment, save_note et issue_document.';
 
+NOTIFY pgrst, 'reload schema';
+
+-- Sans cette ligne, `db-migrate` — qui décide du reste à appliquer en lisant
+-- `app.schema_migrations` — reproposerait 049 à chaque exécution, et « 0 en
+-- attente » ne serait plus jamais vrai. Chaque fichier enregistre sa propre
+-- version, dans sa propre transaction.
+INSERT INTO app.schema_migrations (version) VALUES ('049_update_patient_accepte_charge_serialisee')
+  ON CONFLICT DO NOTHING;
+
 COMMIT;

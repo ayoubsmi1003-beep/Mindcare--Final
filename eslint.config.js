@@ -265,7 +265,13 @@ const config = [
     // S6 approuvé §2 : ni `pnpm typecheck` ni `pnpm build` ne couvrent le
     // code Deno, la relecture manuelle en tient lieu jusqu'à ce que `deno
     // check`/`deno lint` soient outillés séparément.
-    ignores: [".next/**", "node_modules/**", "supabase/functions/**"],
+    // `.claude/**` — outils d'agent VENDORÉS, pas la source du produit. Une
+    // compétence installée le 2026-08-23 y a apporté du JS tiers qui déclenche
+    // `no-restricted-imports` (createRequire), une règle écrite pour le code
+    // NAVIGATEUR de `src/`. Linter des outils hors ligne sous les règles du
+    // front rend le rouge ininterprétable, et un contrôle ininterprétable finit
+    // désarmé. Même motif que l'élagage `.claude` de preflight (4ᵉ passe).
+    ignores: [".next/**", "node_modules/**", "supabase/functions/**", ".claude/**"],
   },
   {
     linterOptions: {

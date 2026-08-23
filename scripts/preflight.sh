@@ -75,7 +75,13 @@ out=$(find . -name "*.webm" -o -name "*.wav" -o -name "*.ogg" 2>/dev/null | grep
 # Raffiner ce motif n'est donc PAS le correctif de secours par défaut : élargir
 # la classe de contexte ferait revenir le faux positif `#1234`, que la 4ᵉ passe
 # a déjà payé une fois.
-src_files=$(find . \( -path ./node_modules -o -path ./.git -o -path ./.next -o -path ./.kilo \) -prune -o \
+# `.claude` rejoint la liste d'élagage pour la MÊME raison que `.kilo` : ce sont
+# des outils d'agent VENDORÉS, pas la source du produit. Une compétence installée
+# le 2026-08-23 y a apporté quelques milliers de lignes de JS tiers truffées de
+# `#ffffff`, et la 4ᵉ passe est devenue rouge sans qu'une seule ligne de l'écran
+# ait changé. Le contrôle protège le design system du PRODUIT ; élargir son
+# élagage aux outils n'affaiblit pas la règle, il lui rend son périmètre.
+src_files=$(find . \( -path ./node_modules -o -path ./.git -o -path ./.next -o -path ./.kilo -o -path ./.claude \) -prune -o \
               -type f \( -iname "*.ts" -o -iname "*.tsx" -o -iname "*.css" -o -iname "*.json" \
                          -o -iname "*.js" -o -iname "*.jsx" -o -iname "*.mjs" -o -iname "*.cjs" \
                          -o -iname "*.mts" -o -iname "*.cts" \) -print 2>/dev/null \

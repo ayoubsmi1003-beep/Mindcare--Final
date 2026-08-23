@@ -1,5 +1,5 @@
 # STATE — MindCare OS
-**V10-PATIENTS VERT (SQL 37/37) · le dossier patient est un espace de travail · V9-COCKPIT et V8-DOCUMENTS restent verts**
+**V10-PATIENTS VERT (SQL 40/40 · vérifié à l'écran en 3 rôles) · le dossier patient est un espace de travail · V9-COCKPIT et V8-DOCUMENTS restent verts**
 Dernière mise à jour : 2026-08-23
 
 ---
@@ -26,7 +26,7 @@ second chemin d'écriture, aucune création de patient** (elle n'a pas de porte 
 `id_document_issuer` existent depuis 004 et `get_patient` les rendait déjà : seul
 le mapping TypeScript les jetait. Elles sont exposées sans une seule migration.
 
-### 1. Migrations 047 et 048 — appliquées et vérifiées
+### 1. Migrations 047, 048 et 049 — appliquées et vérifiées
 
 | Objet | Forme |
 |---|---|
@@ -65,14 +65,15 @@ Contrôles C1/C2 contre B4b : les deux situations sont distinguables.
 ### 4. Verdicts mesurés
 
 ```
-checkpoint-patients-v2.sql ....... 37 verts · 0 ROUGE · 0 BLOQUÉ
+checkpoint-patients-v2.sql ....... 40 verts · 0 ROUGE · 0 BLOQUÉ
                                    (fixtures ANNULÉES, impersonation a1/a2/a3)
   §A plateforme (9)  le porteur ne peut pas contourner la RLS
   §B cloison (7)     praticienne / consœur → NULL / assistante / inexistant
   §C forme (4)       « pas le droit » ≠ « rien à montrer » ; aucun champ interne
   §D chronologie (5) ordre, keyset sans doublon, bornage, ZÉRO fuite clinique
   §E audit (5)       1 trace par appel, y compris hors périmètre
-  §F écriture (5)    allowlist, coalesce, format, effacement
+  §F écriture (8)    allowlist, coalesce, format, effacement,
+                     ET LA CHARGE SÉRIALISÉE — le chemin client réel
 
 tsc --noEmit ..................... 0 erreur
 eslint ........................... 0 erreur
@@ -94,7 +95,7 @@ communications · résumé IA · statut médicamenteux (`prescription_lines` n'a
 `stopped_at` ni statut : l'écran dit « Dernière prescription », **jamais**
 « traitement en cours ») · graphique de tendance sous deux mesures.
 
-### 6. Trois pièges rencontrés, et ce qu'ils coûtent
+### 6. Quatre pièges rencontrés, et ce qu'ils coûtent
 
 **`consultations.kind` N'EXISTE PAS.** 024 n'a ajouté `kind` qu'à
 `app.appointments` ; une consultation en hérite par son rendez-vous. 047 est
@@ -113,6 +114,16 @@ déploiement est en `cloud-dev`.
 §E sont d'abord sortis ROUGE sur un instrument qui comparait `id > count(*)` :
 les portes traçaient correctement depuis le début.
 
+**UN CONTRÔLE QUI N'EMPRUNTE PAS LE CHEMIN DE L'APPELANT NE PROUVE RIEN.**
+`§F1–F5` passaient une charge écrite `'…'::jsonb` — un OBJET. Or `RpcArgs`
+(ADR-020) ne transporte que des scalaires : le port SÉRIALISE, et PostgREST
+livre une CHAÎNE jsonb. `app.update_patient`, seule porte restée en `jsonb`
+parce qu'elle PRÉCÈDE la convention, refusait donc toute modification
+(« un objet JSON est attendu », P0001) — **pendant que le checkpoint était
+vert**. Corrigé par 049 (la porte accepte les deux formes, signature inchangée
+pour ne pas rouvrir la cloison par un DROP) et par trois contrôles neufs
+(`F6`–`F8`) qui empruntent enfin le chemin réel.
+
 ### 7. Reste ouvert
 
 - **Création de patient** — aucune porte ; `app.next_number(cabinet,'patient_record',…)`
@@ -126,7 +137,11 @@ les portes traçaient correctement depuis le début.
   devient un doublon de dossier.
 - **`phone LIKE '%…%'`** reste un *seq scan* : non indexable en l'état.
 - **Adresse structurée** — `address` est un `text` libre. Écart documenté.
-- Vérification navigateur en 3 rôles réels : **non faite dans cette session.**
+- Vérification navigateur en 3 rôles réels : **faite et validée par
+  l'utilisateur le 2026-08-23.**
+- `.claude/**` élagué de `preflight.sh` (4ᵉ passe) et des `ignores` d'ESLint :
+  outils d'agent vendorés, pas la source du produit. Le périmètre du contrôle
+  est rendu, la règle n'est pas affaiblie.
 
 ---
 
