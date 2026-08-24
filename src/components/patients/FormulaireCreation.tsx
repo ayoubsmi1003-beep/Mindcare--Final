@@ -56,6 +56,7 @@ export function FormulaireCreation({
   selectionPraticienRequise,
   creationFermee,
   onCree,
+  onSaisie,
 }: {
   /** L'annuaire du cabinet — fourni uniquement quand le sélecteur s'affiche. */
   readonly praticiens?: readonly Practitioner[];
@@ -67,6 +68,17 @@ export function FormulaireCreation({
    */
   readonly creationFermee: boolean;
   readonly onCree: (patient: Patient) => void;
+  /**
+   * ⚠️ SANS CETTE REMONTÉE, LE GARDE DOUBLON EST DU CODE MORT (défaut n°2 de
+   * la clôture V3) : le panneau « Patients similaires », la bannière de match
+   * fort et la case « Créer malgré tout » vivent DANS LA PAGE — si les saisies
+   * ne remontent pas, `rechercheActive` reste figé à faux et rien ne s'allume.
+   * Les validations restent ici ; la base (23505) reste l'autorité finale.
+   */
+  readonly onSaisie?: (
+    champ: "prenom" | "nom" | "telephone" | "naissance",
+    valeur: string,
+  ) => void;
 }): React.JSX.Element {
   const [prenom, setPrenom] = useState("");
   const [nom, setNom] = useState("");
@@ -197,6 +209,7 @@ export function FormulaireCreation({
           onChange={(v) => {
             setPrenom(v);
             setErreurPrenom(undefined);
+            onSaisie?.("prenom", v);
           }}
           requis
           {...(erreurPrenom === undefined ? {} : { erreur: erreurPrenom })}
@@ -207,6 +220,7 @@ export function FormulaireCreation({
           onChange={(v) => {
             setNom(v);
             setErreurNom(undefined);
+            onSaisie?.("nom", v);
           }}
           requis
           {...(erreurNom === undefined ? {} : { erreur: erreurNom })}
@@ -217,6 +231,7 @@ export function FormulaireCreation({
           onChange={(v) => {
             setTelephone(v);
             setErreurTelephone(undefined);
+            onSaisie?.("telephone", v);
           }}
           indication={fr.patients.formatTelephone}
           requis
@@ -251,7 +266,10 @@ export function FormulaireCreation({
             <ChampTexte
               libelle={fr.patients.dateNaissance}
               valeur={naissance}
-              onChange={setNaissance}
+              onChange={(v) => {
+                setNaissance(v);
+                onSaisie?.("naissance", v);
+              }}
               type="date"
             />
             <ChampSelection

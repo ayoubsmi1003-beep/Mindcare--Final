@@ -104,6 +104,22 @@ export default function PageNouveauDossier(): React.JSX.Element {
     return valeur.replace(/[^0-9]/g, "");
   }
 
+  /**
+   * Le formulaire remonte ses quatre champs de saisie ICI (défaut n°2 de la
+   * clôture V3 : rien n'alimentait ces états, `rechercheActive` restait figé
+   * à faux et le garde doublon était du code mort). Les validations restent
+   * dans le formulaire ; la base (23505) reste l'autorité finale.
+   */
+  function surSaisie(
+    champ: "prenom" | "nom" | "telephone" | "naissance",
+    valeur: string,
+  ): void {
+    if (champ === "prenom") setPrenomSaisi(valeur);
+    else if (champ === "nom") setNomSaisi(valeur);
+    else if (champ === "telephone") setTelephoneSaisi(valeur);
+    else setNaissanceSaisie(valeur);
+  }
+
   // Le seuil d'ACTIVATION, distinct du débounce : chercher sur une lettre
   // coûterait une trace d'audit pour un bruit de résultats.
   const rechercheActive =
@@ -207,6 +223,7 @@ export default function PageNouveauDossier(): React.JSX.Element {
           {...(utilisateur?.role === "assistant" ? { praticiens } : {})}
           creationFermee={fortePresente}
           onCree={apresCree}
+          onSaisie={surSaisie}
         />
 
         <div className="tablet:sticky tablet:top-6">

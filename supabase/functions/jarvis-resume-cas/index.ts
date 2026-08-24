@@ -95,8 +95,14 @@ Deno.serve(async (req) => {
   if (erreurWs !== null) {
     return reponseEchec(req, "indisponible", "Résumé indisponible.");
   }
-  const espace = (wsRows as ReadonlyArray<unknown> | null)?.[0] as
+  // ⚠️ get_patient_workspace retourne un jsonb SCALAIRE (047/057) : PostgREST
+  // livre donc un OBJET directement — le lire comme un tableau rendait
+  // `espace` indéfini et refusait chaque dossier avant tout appel LLM.
+  // Tolérance tableau conservée : elle ne peut rien ouvrir de plus.
+  const chargeWs = wsRows as unknown;
+  const espace = (Array.isArray(chargeWs) ? chargeWs[0] : chargeWs) as
     | (Record<string, unknown> & EspacePourResume)
+    | null
     | undefined;
 
   // Introuvable OU hors périmètre OU rôle sans clinique : même réponse.

@@ -164,7 +164,14 @@ async function main() {
       .filter({ hasText: "Patients similaires" })
       .first()
       .innerText();
-    const banniereForte = panneauTexte.includes("Ce dossier semble correspondre");
+    // ⚠️ Le titre du PanneauInfo est rendu en CSS `uppercase` : innerText rend
+    // des CAPITALES. La comparaison est insensible à la casse — l'intention du
+    // contrôle (voir la bannière de match fort) ne change pas. (Instrument
+    // corrigé le 2026-08-24 : le contrôle ne pouvait jamais passer contre un
+    // titre en capitales — famille « l'instrument avant le produit », V8 §4.)
+    const banniereForte = panneauTexte
+      .toLowerCase()
+      .includes("ce dossier semble correspondre");
     const caseVisible = (await page.locator('form input[type="checkbox"]').count()) > 0;
     let desactiveAvant = false;
     let actifApres = false;

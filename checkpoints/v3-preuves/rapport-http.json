@@ -1,19 +1,19 @@
 {
-  "date": "2026-08-23T22:20:17.990Z",
+  "date": "2026-08-24T00:06:53.189Z",
   "fonction": "jarvis-resume-cas",
   "projet": "ftxaseynjvjevwybdoii",
   "patientFixture": "00000000-0000-0000-0000-0000000000b2",
   "controleD": {
-    "classe": "ECHEC",
+    "classe": "BLOQUE-ENV",
     "statutHttp": 200,
-    "codeApplicatif": "regle-metier",
-    "dureeMs": 783
+    "codeApplicatif": "indisponible",
+    "dureeMs": 1268
   },
   "resultats": [
     {
       "verdict": "vert",
       "label": "A · OPTIONS préflight → 204 + ACAO",
-      "detail": "status=204 ACAO=présente 2134ms"
+      "detail": "status=204 ACAO=présente 1463ms"
     },
     {
       "verdict": "vert",
@@ -33,7 +33,12 @@
     {
       "verdict": "ROUGE",
       "label": "D · POST réel sous …a2 → {ok:true,data:{resume,…}}",
-      "detail": "status=200 code=regle-metier durée=783ms"
+      "detail": "status=200 code=indisponible durée=1268ms"
+    },
+    {
+      "verdict": "BLOQUÉ-ENV",
+      "label": "fournisseur LLM indisponible (crédit OpenRouter)",
+      "detail": "dette d'environnement nommée ; contrôles indépendants A/B/C exigés verts"
     }
   ],
   "verts": 4,

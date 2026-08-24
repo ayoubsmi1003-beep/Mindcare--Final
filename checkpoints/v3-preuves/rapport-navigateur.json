@@ -1,26 +1,46 @@
 {
-  "date": "2026-08-23T23:18:41.227Z",
+  "date": "2026-08-24T00:24:48.142Z",
   "phase1": {
     "resultats": [
       {
         "verdict": "vert",
         "label": "C1 · création : trio requis → fiche + numéro P-nnnx",
-        "detail": "numéro=P-0005 · id=818e6360-7898-46de-b654-b0bda0ffdd81"
+        "detail": "numéro=P-0008 · id=770cc48a-7789-4795-9b5d-4123ef468086"
       },
       {
-        "verdict": "ROUGE",
+        "verdict": "vert",
         "label": "C2 · doublon fort : panneau actif + « Créer malgré tout » obligatoire",
-        "detail": "bannière=false · case=false · bloqué-sans-case=false · débloqué=false"
+        "detail": "bannière=true · case=true · bloqué-sans-case=true · débloqué=true"
       },
       {
-        "verdict": "ROUGE",
+        "verdict": "vert",
         "label": "C3a · b2 (RDV du jour posé) : action dominante Démarrer la séance",
-        "detail": "bandeau=« AUJOURD'HUI Aucun rendez-vous aujourd'hui À jour »"
+        "detail": "bandeau=« AUJOURD'HUI 10:00 · Confirmé Données modifiées depuis ce résumé »"
       },
       {
         "verdict": "vert",
         "label": "C3b · dossier sans RDV : action dominante Nouveau rendez-vous",
         "detail": "bandeau=« AUJOURD'HUI Aucun rendez-vous aujourd'hui Aucun résumé généré »"
+      },
+      {
+        "verdict": "ROUGE",
+        "label": "C4a · résumé : sections rendues + fraîcheur « À jour »",
+        "detail": "en_bref=true évolution=true à_jour=false"
+      },
+      {
+        "verdict": "vert",
+        "label": "C4b · « Pourquoi ? » ouvre les sources et navigue vers l’onglet porteur",
+        "detail": "sources=true · navigation=true"
+      },
+      {
+        "verdict": "vert",
+        "label": "C5a · coupure sans résumé : Point de situation « données directes »",
+        "detail": "visible=true"
+      },
+      {
+        "verdict": "vert",
+        "label": "AI-offline · workspace pleinement navigable fonctions coupées",
+        "detail": "Chronologie:ok · Clinique:ok · Traitements:ok · Rendez-vous:ok · Documents:ok"
       },
       {
         "verdict": "vert",
@@ -38,18 +58,18 @@
         "detail": "onglets=[Vue d'ensemble · Chronologie · Clinique · Traitements · Rendez-vous · Documents]"
       },
       {
-        "verdict": "ROUGE",
+        "verdict": "vert",
         "label": "C8a · 1280 px : zéro débordement horizontal",
-        "detail": "doc=0px · main=8px · coupable: HEADER w=1048 > 1280 · classes=sticky top-0 z-10 -mx-4 px-4 py-3 tablet:-mx-8 tablet:px-8"
+        "detail": "doc=0px · main=0px · coupable: aucun élément au-delà de <main>"
       },
       {
         "verdict": "vert",
         "label": "C8b · parcours clavier complet, focus toujours visible",
-        "detail": "38 arrêts · 0 sans anneau"
+        "detail": "39 arrêts · 0 sans anneau"
       }
     ],
-    "verts": 6,
-    "rouges": 3
+    "verts": 12,
+    "rouges": 1
   },
   "phase2": {
     "resultats": [

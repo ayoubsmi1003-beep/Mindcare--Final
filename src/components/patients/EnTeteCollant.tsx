@@ -41,7 +41,10 @@ export function EnTeteCollant({
 
   return (
     <header
-      className="sticky top-0 z-10 -mx-4 px-4 py-3 tablet:-mx-8 tablet:px-8"
+      // ⚠️ Le saignement latéral ÉGALE le padding réel de `<main>` (px-6,
+      // AppShell — sans variante tablet). `tablet:-mx-8` débordait de 8 px
+      // par côté à 1280 : header w=1048 > conteneur 1032.
+      className="sticky top-0 z-10 -mx-4 px-4 py-3 tablet:-mx-6 tablet:px-6"
       style={{
         background: "var(--glass-panel)",
         backdropFilter: "var(--glass-blur)",

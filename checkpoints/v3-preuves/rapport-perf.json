@@ -1,70 +1,70 @@
 {
-  "date": "2026-08-23T22:40:43.622Z",
+  "date": "2026-08-24T00:13:01.220Z",
   "methode": "next start (production) · médiane de 3 · FCP via API Paint · appels coquille/écran séparés",
   "budgets": "ACCEPTATION V3 : fiche 2 appels/100 ms FCP/500 ms · liste 1 appel/400 ms · création ≤ 60 s. La cible constitutionnelle Phase-1 (< 1 s ouverture dossier) reste INCHANGÉE et distincte.",
   "liste": {
-    "fcpMediane": 104,
-    "completMediane": 956,
+    "fcpMediane": 112,
+    "completMediane": 358,
     "ecran": [
       "rpc/search_patients"
     ],
-    "coquilleNb": 10,
+    "coquilleNb": 9,
     "bruts": [
       {
-        "fcp": 160,
-        "tComplet": 1050
+        "fcp": 184,
+        "tComplet": 583
       },
       {
-        "fcp": 72,
-        "tComplet": 939
+        "fcp": 100,
+        "tComplet": 333
       },
       {
-        "fcp": 104,
-        "tComplet": 956
+        "fcp": 112,
+        "tComplet": 358
       }
     ]
   },
   "fiche": {
-    "fcpMediane": 92,
-    "completMediane": 958,
+    "fcpMediane": 88,
+    "completMediane": 359,
     "ecran": [
       "rpc/get_patient_workspace"
     ],
     "coquilleNb": 9,
     "bruts": [
       {
-        "fcp": 80,
-        "tComplet": 951
+        "fcp": 140,
+        "tComplet": 541
       },
       {
-        "fcp": 92,
-        "tComplet": 958
+        "fcp": 84,
+        "tComplet": 359
       },
       {
-        "fcp": 148,
-        "tComplet": 1006
+        "fcp": 88,
+        "tComplet": 328
       }
     ]
   },
   "creation": {
-    "dureeMs": 2645,
-    "numero": "P-0002"
+    "dureeMs": 946,
+    "numero": "P-0006"
   },
   "resultats": [
     {
       "verdict": "vert",
       "label": "/patients · appels ÉCRAN ≤ 1",
-      "detail": "[rpc/search_patients] (+10 coquille)"
+      "detail": "[rpc/search_patients] (+9 coquille)"
     },
     {
       "verdict": "ROUGE",
       "label": "/patients · FCP ≤ 100 ms (médiane 3)",
-      "detail": "104 ms"
+      "detail": "112 ms"
     },
     {
-      "verdict": "ROUGE",
+      "verdict": "vert",
       "label": "/patients · complet ≤ 400 ms (médiane 3)",
-      "detail": "956 ms"
+      "detail": "358 ms"
     },
     {
       "verdict": "vert",
@@ -74,24 +74,24 @@
     {
       "verdict": "vert",
       "label": "fiche patient · FCP ≤ 100 ms (médiane 3)",
-      "detail": "92 ms"
+      "detail": "88 ms"
     },
     {
-      "verdict": "ROUGE",
+      "verdict": "vert",
       "label": "fiche patient · complet ≤ 500 ms (médiane 3)",
-      "detail": "958 ms"
+      "detail": "359 ms"
     },
     {
       "verdict": "vert",
       "label": "création complète · redirection fiche + numéro P-nnnx",
-      "detail": "numéro=« P-0002 »"
+      "detail": "numéro=« P-0006 »"
     },
     {
       "verdict": "vert",
       "label": "création complète · ≤ 60 s",
-      "detail": "2645 ms"
+      "detail": "946 ms"
     }
   ],
-  "verts": 5,
-  "rouges": 3
+  "verts": 7,
+  "rouges": 1
 }

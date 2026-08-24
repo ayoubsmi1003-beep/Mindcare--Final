@@ -1,4 +1,7 @@
 # STATE — MindCare OS
+**V3-CORRECTIFS (2026-08-24) : les TROIS défauts sont corrigés — T2 et T3 PROUVÉS verts au rejeu ; T1 prouvé JUSQU'AU FOURNISSEUR (première trace `resume-cas` en base) et BLOQUÉ par la dette de crédit OpenRouter. Le socle sécurité tient.**
+Dernière mise à jour : 2026-08-24 (session V3-CORRECTIFS)
+# STATE — MindCare OS
 **V3-CLÔTURE ROUGE (2026-08-24) : la passerelle du résumé et le garde-doublon UX sont INOPÉRANTS À L'EXÉCUTION — trois défauts produits nommés, preuves et instruments livrés. Le socle sécurité tient.**
 Dernière mise à jour : 2026-08-24
 # STATE — MindCare OS
@@ -92,6 +95,186 @@ uniquement si trivial, sinon réserve nommée.
 
 ---
 
+
+## ✅ 2026-08-24 — V3-CORRECTIFS : les trois défauts corrigés ; clôture complète attendue du fournisseur
+
+> Le contrat demandait : « Cette session CLÔT V3 ou dit précisément pourquoi elle
+> ne peut pas. » Elle corrige les trois défauts, prouve chacun par son
+> instrument, et dit précisément le reste : le SEUL contrôle encore rouge
+> (D de la passerelle) est bloqué par l'ENVIRONNEMENT fournisseur (crédit
+> OpenRouter), pas par le code. Aucune migration (55 traces avant = après,
+> max 057). Fenêtre …a2 ouverte puis refermée, sentinelles des TROIS comptes
+> vérifiées EN DÉBUT et EN FIN.
+
+### 1 · T1 — passerelle du résumé : correctif PROUVÉ, l'appel atteint le fournisseur pour la première fois
+
+- **Correctif** (`jarvis-resume-cas/index.ts:98`) : la charge de
+  `get_patient_workspace` est lue directement comme l'OBJET jsonb qu'elle est
+  (scalaire 047/057), avec tolérance tableau triviale ; la garde
+  `regle-metier` est inchangée. La ligne 250 est restée telle quelle :
+  `save_case_summary` est `RETURNS SETOF` (055:39) → tableau, son `[0]` est
+  correct.
+- **Déploiement** `functions deploy jarvis-resume-cas --use-api
+  --project-ref ftxaseynjvjevwybdoii` : OK.
+- **Instrument** `mesure-resume-cas-http.mjs` : **A · B · C · D0 VERTS (4/4)** ;
+  D → `{ok:false, code:"indisponible"}` en 1268 ms → classé BLOQUÉ-ENV par
+  l'instrument (exit 0).
+- **LA PREUVE DU CORRECTIF** : `audit.boundary_crossings`
+  purpose=`'resume-cas'` : **0 ligne avant → 1 ligne après**
+  (`outcome=error`, 0 jeton, 178 ms, `google/gemini-2.5-flash`). La lecture
+  du workspace scalaire passe, `pseudonymize`+`assertSafe` passent, l'appel
+  PART chez OpenRouter — exactement la chaîne qui était morte hier.
+- **Cause nommée** : refus PERMANENT du fournisseur
+  (`external-call.ts:222-224` : 4xx → `permanent: HTTP …`, pas de retry),
+  zéro jeton généré. Cohérent avec la dette datée « crédit épuisé »
+  (DOC-AUTHORITY §4) et la réserve du modèle `:free`. Le statut HTTP exact
+  n'est pas journalisé (conception 028) — seul `outcome=error` est écrit.
+- `patient_case_summaries` : toujours 1 ligne (la fixture v1) — aucune
+  version nouvelle, impossible sans fournisseur. **AUCUN contournement
+  appliqué** : ni MAX_OUTPUT_TOKENS, ni modèle, ni logique.
+- **Sortie nommée** : achat des crédits (décision praticienne) → rejeu de
+  `node scripts/mesure-resume-cas-http.mjs` → D attendu `{ok:true,…}` +
+  vérifs base (nouvelle version `genere_par=…a2`, lignes `outcome=ok`).
+
+### 2 · T2 — garde doublon : corrigé et PROUVÉ (C2 VERT)
+
+- **Correctif** : prop `onSaisie(champ, valeur)` sur `FormulaireCreation`
+  (appelée dans les 4 `onChange`), branchée sur les quatre états déjà
+  déclarés de `nouveau/page.tsx` (`surSaisie`). Validations, porte SQL et
+  23505 intouchés.
+- **Rejeu** : `C2 VERT — bannière=true · case=true · bloqué-sans-case=true ·
+  débloqué=true`. AUCUN doublon créé (C2 ne soumet pas ; le refus dur 23505
+  reste l'autorité finale, B2 toujours vert).
+- ⚠️ **CORRECTION D'INSTRUMENT nommée** : le contrôle cherchait
+  « Ce dossier semble correspondre » SENSIBLE À LA CASSE alors que
+  `PanneauInfo` rend son titre en CSS `uppercase` — le contrôle ne pouvait
+  JAMAIS passer contre un produit correct (preuve visuelle :
+  `c2-doublon-fort.png` : bannière rendue, 4 candidats, raisons affichées).
+  Comparaison rendue insensible à la casse, intention inchangée. Cinquième
+  occurrence de la famille « l'instrument avant le produit » (V8 §4).
+- Le panneau liste désormais P-0003…P-0008 : les dossiers « Sonde Cloture »
+  créés par les instruments aux passages successifs (is_synthetic via la
+  porte, par design).
+
+### 3 · T3 — débordement 1280 : corrigé et PROUVÉ (C8a VERT)
+
+- **Cause exacte confirmée** : `<main>` porte `px-6` SANS variante tablet
+  (`AppShell.tsx:378`) ; `EnTeteCollant` saignait de `tablet:-mx-8`
+  (-32 px) → 8 px de débordement par côté (984 + 64 = 1048 > 1032, les
+  mesures d'hier).
+- **Correctif** : `tablet:-mx-6 tablet:px-6` — marges négatives alignées sur
+  le padding RÉEL du conteneur, échelle existante `var(--s-6)`, zéro px
+  littéral (I10). Base `-mx-4 px-4` conservée (aucun débordement < 1024).
+- **Rejeu** : `C8a VERT — doc=0px · main=0px · « aucun élément au-delà de
+  <main> »`. C8b : 39 arrêts clavier, 0 sans anneau. C8c : 0 animation.
+
+### 4 · T4 — mesures complètes (next start en série, port 3000, un seul build)
+
+**Perf** (`mesure-patients-v3.mjs`, médiane 3) — **7 verts · 1 ROUGE** :
+
+| Écran | Appels ÉCRAN | FCP | Complet | Budget | Verdict |
+|---|---|---|---|---|---|
+| `/patients` | **1** (`rpc/search_patients`) ✅ | 112 ms | 358 ms | 1 · 100 · 400 | 🔴 FCP (limite) |
+| fiche patient | **1** (`rpc/get_patient_workspace`) ✅ | 88 ms | **359 ms** | 2 · 100 · 500 | ✅✅ |
+| création complète | — | — | **946 ms**, P-0006 | ≤ 60 s | ✅ |
+
+- Le ROUGE FCP `/patients` (112 ms > 100) est le MÊME écart limite non
+  tranché qu'hier (dispersion 92→176 ms entre tirages), dominé par
+  l'hydratation sur ce poste — consigné brut, jamais moyenné en verdict.
+- **La fiche patient passe SOUS la cible constitutionnelle < 1 s ce tirage**
+  (359 ms ; hier ~960-1000 ms) — la dispersion du poste domine, les deux
+  relevés sont conservés.
+- Coquille : **9 appels hors écran** comptés par l'instrument cette fois
+  (hier 3-4 consignés) — dette PERF §3 antérieure, hors périmètre, chiffré
+  brut.
+
+**Navigateur** (`mesure-v3-patients-navigateur.mjs`) — phase 1 : **12 verts ·
+1 ROUGE** ; phase 2 : **3 verts · 0 ROUGE** :
+
+| Contrôle | Verdict |
+|---|---|
+| C1 création trio requis → fiche + P-0007/P-0008 | ✅ |
+| **C2 doublon fort : bannière + case + soumission bloquée** | ✅ **(T2 prouvé)** |
+| C3a bandeau Aujourd'hui fidèle, dominante Démarrer | ✅ |
+| C3b dossier sans RDV → Nouveau rendez-vous | ✅ |
+| C4a sections + « À jour » | 🔴 **artefact de protocole NOMMÉ** (§6.3) |
+| C4b « Pourquoi ? » → sources → onglet porteur | ✅ |
+| C5a coupure sans résumé → Point de situation honnête | ✅ |
+| C5b coupure pendant Actualiser → ancien conservé | ✅ |
+| C4c source modifiée → badge + « Actualiser » | ✅ |
+| AI-offline : 5 onglets navigables, zéro crash | ✅ |
+| C6a contamination A→B effacée, puce exacte | ✅ |
+| C6b « Karim est-il dépressif ? » → refus ADR-023 | ✅ (divergence libellé inchangée) |
+| C7 six onglets composés depuis le workspace (…a2) | ✅ |
+| **C8a 1280 px : zéro débordement** | ✅ **(T3 prouvé)** |
+| C8b clavier · C8c reduced-motion | ✅ · ✅ |
+
+**Sentinelles** (docker psql, empreintes md5 — aucun secret imprimé) :
+DÉBUT a1 `$2a$`/`b347454f…` · a2 sentinelle ✓ · a3 sentinelle ✓ — FIN
+**identiques** (a1 jamais touché ; a2 refermée via la séquence officielle
+rejouée sous PowerShell/docker — WSL sans Docker, piège connu).
+
+### 5 · Sécurité — ce qui TIENT
+
+RLS intouchée (zéro migration, 55 traces avant = après) · portes A/B/C de la
+passerelle vertes · refus ADR-023 effectif · Point de situation honnête ·
+tous les patients créés cette session (P-0006, P-0007, P-0008) le sont PAR LA
+PORTE `app.create_patient`, `is_synthetic=true` · RDV du jour restauré en
+INSERT-only (`…a203`, bornes Africa/Algiers, garde NOT EXISTS, is_synthetic)
+· audit émis par l'usage normal des portes.
+
+### 6 · Réserves NOMMÉES (non bloquantes)
+
+1. **Dette OpenRouter (crédit) : RENCONTRÉE cette fois** — elle bloque le
+   contrôle D. Datée DOC-AUTHORITY §4 ; sortie = achat + rejeu d'UN
+   instrument. Aucun contournement de code ne sera fait.
+2. FCP `/patients` 112 ms > 100 ms : limite non tranchée (dispersion
+   inter-tirages 92→176 ms, poste i7 3ᵉ gén / 8 Go). Architecture 1
+   appel/écran tenue.
+3. **C4a phase 1 = ARTEFACT DE PROTOCOLE, pas un défaut** : la mutation de
+   fraîcheur `…a202` (déjà en base, INSERT-only, non retirable) est plus
+   récente que le résumé fixture → `a_jour=false` PAR CONCEPTION (le max des
+   `created_at`, 057). Le produit fait exactement son travail : le badge
+   « Données modifiées » est rendu (visible jusque dans le bandeau C3a) et
+   C4c est vert. Les deux états du badge sont prouvés : « À jour » hier
+   (`c4a-resume-a-jour.png`), « modifié » aujourd'hui.
+4. Le RDV « du jour » `…a201` a vieilli (posé le 23/08, minuit Alger
+   traversé — NORMAL, preuve des bornes) : restauré par INSERT day-relative
+   `…a203` (même motif que le « refaire l'INSERT à J+1 » du contrat). ⚠️ Le
+   fixture livré `checkpoint-fixture-v3-cloture.sql` n'est PAS rejouable
+   pour sa partie RDV après vieillissement : son UUID fixe entre alors en
+   conflit de clé — son NOT EXISTS est à l'échelle du jour, pas de l'UUID.
+5. Correction d'instrument C2 (casse du titre uppercase) — voir §2,
+   documentée dans le script.
+6. Coquille : 9 appels hors écran ce tirage (dette PERF §3 antérieure).
+7. Mojibake interne des portes 052-057 : inchangé, invisible écran.
+8. Divergence libellé refus passerelle/i18n : toujours visible (C6b).
+9. `CORS_ORIGINS` à poser sur l'origine réelle avant mise en service ;
+   modèle `:free` rate-limité.
+10. **ADR-025 (Palette v3) : changements NON commités présents dans l'arbre
+    PENDANT la session** (`tokens.css`, `ui/Etats.tsx`, `ui/Icones.tsx`,
+    `ui/Surfaces.tsx`, `tailwind.config.ts` — flux parallèle, hors
+    périmètre). Le build et les mesures les incluent ; les trois correctifs
+    sont orthogonaux (comportement et layout, pas palette). Non jugés ici.
+
+### 7 · VERDICT : 🟡 BLOCKED — environnement fournisseur (le code de V3 est au vert)
+
+1. ~~Passerelle `jarvis-resume-cas` inutilisable~~ → **corrigé** : la charge
+   scalaire est lue, la trace `resume-cas` existe en base, l'appel part chez
+   le fournisseur. Le vert D attend le crédit OpenRouter (décision
+   praticienne).
+2. ~~Garde doublon UX inopérant~~ → **corrigé et prouvé** : C2 vert complet,
+   aucun doublon créé.
+3. ~~Débordement horizontal 8 px à 1280~~ → **corrigé et prouvé** : C8a à
+   0 px doc ET main.
+
+**Ce qui débloque le GREEN intégral** : achat des crédits OpenRouter, PUIS
+`node scripts/mesure-resume-cas-http.mjs` (A/B/C/D0 déjà verts ; D attendu
+`{ok:true,data:{resume,…}}`) + vérifs base (`patient_case_summaries`
+nouvelle version `genere_par=…a2`, `boundary_crossings` `outcome=ok`).
+Rien d'autre ne s'est opposé à la clôture.
+
+---
 
 ## ✅ 2026-08-24 — V3-CLÔTURE : VERDICT ROUGE (mesuré, pas supposé)
 
