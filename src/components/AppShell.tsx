@@ -64,6 +64,7 @@ import { fr, type NomEcran } from "@/i18n/fr";
 import type { UserRole } from "@/services/authz";
 
 import { BandeauSeanceEnCours } from "./BandeauSeanceEnCours";
+import { BootVoix } from "./BootVoix";
 import { PanneauJarvis } from "./PanneauJarvis";
 import { Icone, MarqueMindCare } from "./ui/Icones";
 
@@ -103,6 +104,9 @@ const ECRANS_CONSTRUITS: readonly NomEcran[] = [
   "agenda",
   "finances",
   "documents",
+  "parametres",
+  /** V-JARVIS-CORE — la conversation plein écran. */
+  "jarvis",
 ];
 
 /**
@@ -111,7 +115,15 @@ const ECRANS_CONSTRUITS: readonly NomEcran[] = [
  * (ses patients, ses revenus), jamais ce composant.
  */
 const NAVIGATION_PRATICIENNE: readonly GroupeNav[] = [
-  { titre: fr.nav.groupes.menu, ecrans: ["tableauDeBord"] },
+  /**
+   * V-JARVIS-CORE — `jarvis` vit dans le groupe MENU : c'est un outil du
+   * quotidien qui traverse les domaines, pas une donnée clinique. ABSENT de la
+   * composition assistante (décision produit du lot) : l'assistant dialogue
+   * avec des dossiers qu'il ne lit pas ; à défaut d'un périmètre tranché en
+   * base pour ce rôle, l'entrée n'est pas construite — même règle I12 que
+   * partout ici.
+   */
+  { titre: fr.nav.groupes.menu, ecrans: ["tableauDeBord", "jarvis"] },
   {
     titre: fr.nav.groupes.clinique,
     ecrans: ["patients", "agenda", "messages", "documents", "traitements", "suivi"],
@@ -131,10 +143,13 @@ const NAVIGATION_PRATICIENNE: readonly GroupeNav[] = [
  * §6 ne les lui accorde, et à défaut de décision explicite on ne construit
  * pas l'accès.
  */
+/**
+ * Réception : 2 écrans uniquement — Tableau de bord + Agenda.
+ * Pas de Patients (recherche intégrée au dashboard), pas de Finances (encaissement dans le dashboard),
+ * pas de Documents/Messages/Traitements/Suivi/Statistiques/Agents/Journal. Interface opérationnelle pure.
+ */
 const NAVIGATION_ASSISTANTE: readonly GroupeNav[] = [
-  { titre: fr.nav.groupes.menu, ecrans: ["tableauDeBord"] },
-  { titre: fr.nav.groupes.gestion, ecrans: ["patients", "agenda", "finances"] },
-  { titre: fr.nav.groupes.systeme, ecrans: ["parametres"] },
+  { titre: fr.nav.groupes.menu, ecrans: ["tableauDeBord", "agenda"] },
 ];
 
 function navigationPour(role: UserRole): readonly GroupeNav[] {
@@ -145,6 +160,20 @@ function navigationPour(role: UserRole): readonly GroupeNav[] {
     case "assistant":
       return NAVIGATION_ASSISTANTE;
   }
+}
+
+/**
+ * Les initiales du compte connecté — première lettre des deux premiers mots.
+ * `trim()` d'abord, `charAt` ensuite : une chaîne d'espaces ne doit pas jeter
+ * (même raison qu'`Avatar`). Un nom vide rend une chaîne vide — le disque nu
+ * se lit « compte » sans inventer d'identité.
+ */
+function monogrammeCompte(nomComplet: string): string {
+  const mots = nomComplet.trim().split(/\s+/).filter((m) => m.length > 0);
+  return mots
+    .slice(0, 2)
+    .map((m) => m.charAt(0).toUpperCase())
+    .join("");
 }
 
 /**
@@ -187,10 +216,20 @@ export function AppShell({
         aria-label={fr.coquille.navigationPrincipale}
         className="sur-marque sticky top-0 flex h-full flex-col gap-5 overflow-hidden bg-grad-auth px-3 py-5 shadow-lift3 tablet:px-4"
       >
+        {/* v9 — LE REFLET. La même lumière rasante que les en-têtes de lieu
+            (`--grad-hero-reflet`) : le rail n'est plus un aplat sombre, il a
+            une source de lumière, donc une épaisseur. Décor pur — il ne porte
+            aucun texte, et l'encre blanche du rail reste mesurée sur le
+            dégradé, pas sur lui. */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 bg-grad-hero-reflet"
+        />
+
         {/* ── La marque. Le mark hérite de `currentColor`, donc blanc ici sans
             qu'on ait à le dire. Le mot disparaît avec le repli, le mark reste :
             c'est lui qui identifie le produit, pas le texte. */}
-        <div className="flex items-center gap-3 px-2 text-on-brand">
+        <div className="relative flex items-center gap-3 px-2 text-on-brand">
           <MarqueMindCare taille={32} titre="MindCare OS" />
           <span
             className={["font-ui text-heading font-semibold", LIBELLE_REPLIABLE].join(" ")}
@@ -215,7 +254,7 @@ export function AppShell({
             `mt-auto` dans le conteneur qui défile donne les deux propriétés qui
             comptent : le bloc se pose en bas quand il y a la place, et il reste
             ATTEIGNABLE par défilement quand il n'y en a pas. Jamais coupé. */}
-        <div className="flex min-h-0 flex-1 flex-col gap-5 overflow-y-auto">
+        <div className="relative flex min-h-0 flex-1 flex-col gap-5 overflow-y-auto">
         {groupes.map((groupe) => (
           <div key={groupe.titre} className="flex flex-col gap-2">
             {/* Le titre de groupe s'efface au repli : à 72px il n'y a pas de
@@ -294,8 +333,15 @@ export function AppShell({
                       aria-current={actif ? "page" : undefined}
                       className={[
                         "flex min-h-target items-center justify-center gap-3 rounded-full px-3 py-2 font-ui text-body text-on-brand no-underline transition duration-quick ease-soft tablet:justify-start",
+                        /* L'état actif empile TROIS signaux, et c'est voulu :
+                           la pastille de fond (la forme), la graisse (le
+                           poids) et la lueur de marque (la seule surface de
+                           navigation qui brille — la liste des lueurs est
+                           fermée). `shadow-sheen` ajoute le filet interne
+                           haut : la pastille a une épaisseur, pas seulement
+                           une teinte. */
                         actif
-                          ? "bg-on-brand-surface font-semibold shadow-glow-brand"
+                          ? "bg-on-brand-surface font-semibold shadow-glow-nav"
                           : "hover:bg-on-brand-surface-hover",
                       ].join(" ")}
                     >
@@ -312,7 +358,7 @@ export function AppShell({
         {/* ── Le compte, ANCRÉ en bas et hors de la zone qui défile. `mt-auto` plutôt qu'une hauteur fixe :
             le rail porte quatre groupes pour la praticienne et trois pour
             l'assistante, et une valeur figée serait fausse pour l'une des deux. */}
-        <div className="mt-auto flex shrink-0 flex-col gap-2 border-t border-on-brand-surface px-2 pt-4">
+        <div className="relative mt-auto flex shrink-0 flex-col gap-2 border-t border-on-brand-surface px-2 pt-4">
           <span
             className={[
               "font-ui text-eyebrow font-semibold uppercase text-on-brand",
@@ -321,26 +367,38 @@ export function AppShell({
           >
             {fr.coquille.deconnexionCompte}
           </span>
-          {/* Le nom de l'utilisatrice connectée EST une donnée identifiante.
-              Il est ici sur un fond de marque — admis parce que ce fond est le
-              dégradé sombre et que l'encre est le blanc pur (≥ 5:1 sur toute
-              la hauteur du rail), jamais un blanc atténué. */}
-          {/* ⚠️ UNE SEULE LIGNE, ET C'EST STRUCTUREL.
-              Sans `truncate`, « Praticienne 1 (données de test) » se répartit sur
-              trois lignes et POUSSE LE BOUTON DE DÉCONNEXION SOUS LE BORD DE
-              L'ÉCRAN — mesuré à 1920×1080. Ancrer le bloc en bas ne suffisait
-              pas : c'est le bloc lui-même qui grandissait. Un nom long est la
-              règle, pas l'exception (I11), et le bouton qui ferme la session
-              dans une salle de consultation ne peut pas dépendre de sa
-              longueur. Le nom complet reste lisible en infobulle. */}
-          <span
-            title={nomComplet || fr.etats.texteAbsent}
-            className={["truncate font-ui text-body font-semibold text-on-brand", LIBELLE_REPLIABLE].join(
-              " ",
-            )}
-          >
-            {nomComplet || fr.etats.texteAbsent}
-          </span>
+          <div className="flex items-center gap-3">
+            {/* Le monogramme de l'utilisatrice — la même pastille de verre que
+                les icônes du rail. Les initiales se calculent ici et nulle
+                part ailleurs pour le rail ; un nom vide rend un disque nu, ce
+                qui se lit « compte » sans inventer d'identité. */}
+            <span
+              aria-hidden="true"
+              className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-on-brand-surface font-ui text-label font-semibold text-on-brand shadow-sheen"
+            >
+              {monogrammeCompte(nomComplet)}
+            </span>
+            {/* Le nom de l'utilisatrice connectée EST une donnée identifiante.
+                Il est ici sur un fond de marque — admis parce que ce fond est le
+                dégradé sombre et que l'encre est le blanc pur (≥ 5:1 sur toute
+                la hauteur du rail), jamais un blanc atténué. */}
+            {/* ⚠️ UNE SEULE LIGNE, ET C'EST STRUCTUREL.
+                Sans `truncate`, « Praticienne 1 (données de test) » se répartit sur
+                trois lignes et POUSSE LE BOUTON DE DÉCONNEXION SOUS LE BORD DE
+                L'ÉCRAN — mesuré à 1920×1080. Ancrer le bloc en bas ne suffisait
+                pas : c'est le bloc lui-même qui grandissait. Un nom long est la
+                règle, pas l'exception (I11), et le bouton qui ferme la session
+                dans une salle de consultation ne peut pas dépendre de sa
+                longueur. Le nom complet reste lisible en infobulle. */}
+            <span
+              title={nomComplet || fr.etats.texteAbsent}
+              className={["min-w-0 truncate font-ui text-body font-semibold text-on-brand", LIBELLE_REPLIABLE].join(
+                " ",
+              )}
+            >
+              {nomComplet || fr.etats.texteAbsent}
+            </span>
+          </div>
           <button
             type="button"
             onClick={onDeconnexion}
@@ -381,16 +439,20 @@ export function AppShell({
         </main>
       </div>
 
-      {/* V2 — LE PANNEAU JARVIS. Monté ici et nulle part ailleurs : une seule
-          instance pour toute l'application, donc une seule conversation, donc
-          des propositions regroupées dans `app.jarvis_actions`. Le monter par
-          écran en créerait une par page.
+      {/* Panneau Alexa : uniquement pour praticienne. L'assistante n'a pas de
+          contexte clinique. `BootVoix` porte le cycle de vie du mot de réveil et
+          ne rend rien ; il vit ici pour durer autant que l'application, pas
+          autant qu'un écran.
 
-          Il ne reçoit AUCUNE prop : la coquille reste présentationnelle et ne
-          connaît toujours aucun service. Le panneau est autonome, et son
-          indisponibilité n'atteint rien de ce qui l'entoure — le retirer est
-          une suppression de ligne, pas une reprise. */}
-      <PanneauJarvis />
+          ⚠️ CE `role !==` EST UNE COMPOSITION D'INTERFACE, PAS UN CONTRÔLE DE
+          SÉCURITÉ (règle 4). Ce qu'Alexa peut lire ou écrire est décidé par la
+          RLS et les portes SQL, qui ne connaissent pas ce composant. */}
+      {role !== "assistant" ? (
+        <>
+          <BootVoix />
+          <PanneauJarvis />
+        </>
+      ) : null}
     </div>
   );
 }

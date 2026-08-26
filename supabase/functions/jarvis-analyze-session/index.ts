@@ -18,17 +18,22 @@ import { assertSafe, BoundaryViolation, pseudonymize, rehydrate } from "../_shar
 import { enTetesCors, reponsePrealable } from "../_shared/cors.ts";
 import { llm } from "../_shared/external-call.ts";
 import { getPromptHash, PROMPT_VERSION, SYSTEM_PROMPT_V1 } from "./prompt.ts";
+import {
+  assemblerContexteSeance,
+  formaterDonneesStructurees,
+  type SourceBrute,
+} from "../_shared/contexte-seance.ts";
 
 // ---------------------------------------------------------------------------
-// Budget de tokens (§3.4 n°4) — troncature EXPLICITE avant tout envoi.
+// Budget de tokens (§3.4 n°4) — désormais dans `_shared/contexte-seance.ts`.
+//
+// ⚠️ L'ANCIENNE TRONCATURE COUPAIT PAR LA FIN, ET C'ÉTAIT LE MAUVAIS SENS. Dans
+// une note clinique, la fin porte l'évaluation et le plan — ce que la
+// praticienne a DÉCIDÉ. Garder les six premiers milliers de caractères et jeter
+// la conclusion produisait un résumé sans décision, sur une note longue.
+// L'assemblage coupe maintenant par le DÉBUT, source par source, et dit ce
+// qu'il a omis.
 // ---------------------------------------------------------------------------
-const MAX_INPUT_CHARS = 6_000;
-const MARQUEUR_TRONQUE = "\n[tronqué]";
-
-function tronquer(texte: string): string {
-  if (texte.length <= MAX_INPUT_CHARS) return texte;
-  return texte.slice(0, MAX_INPUT_CHARS - MARQUEUR_TRONQUE.length) + MARQUEUR_TRONQUE;
-}
 
 // ---------------------------------------------------------------------------
 // Validation étendue (§3.4 n°6) — au-delà de la forme.
@@ -221,31 +226,65 @@ Deno.serve(async (req) => {
   });
   const precedente = (previousRows as readonly PreviousNoteRow[] | null)?.[0] ?? null;
 
-  // ── Étape 4 : budget de tokens — troncature avant pseudonymisation. ──
-  const notesActuelles = tronquer(rawNotes);
+  // ── Le dossier structure : diagnostics, echelles, derniere prescription. ──
+  //
+  // AVANT CETTE LECTURE, L'ANALYSE ETAIT AVEUGLE AU DOSSIER. Elle ne voyait que
+  // les notes du jour et UNE note precedente : ni diagnostic enregistre, ni
+  // score d'echelle, ni traitement. Le resume produit etait coherent avec ce
+  // qu'on lui avait montre, et muet sur tout le reste.
+  //
+  // On passe par la porte `get_patient_workspace` -- jamais un SELECT direct
+  // (regle 6) : c'est elle qui journalise la lecture du dossier et qui applique
+  // `can_see_clinical`. Un echec ici n'interrompt PAS l'analyse : mieux vaut un
+  // resume fonde sur les notes seules qu'aucun resume, a condition de ne rien
+  // affirmer sur ce qu'on n'a pas lu.
+  let donneesStructurees: string | null = null;
+  const { data: workspace, error: erreurWorkspace } = await client.rpc("get_patient_workspace", {
+    p_id: patientId,
+  });
+  if (erreurWorkspace === null && workspace !== null && typeof workspace === "object") {
+    const w = workspace as { clinique?: unknown; traitements?: unknown };
+    donneesStructurees = formaterDonneesStructurees(w.clinique ?? null, w.traitements ?? null);
+  }
+
+  // ── Etape 4 : assemblage par PRESEANCE, budget borne, troncature DITE. ──
+  //
+  // L'ordre n'est plus une consigne de prompt mais une propriete du code :
+  // notes finalisees > donnees structurees > transcription > longitudinal.
+  // Voir `_shared/contexte-seance.ts`, et `scripts/eval-contexte-seance.mjs`
+  // qui l'eprouve hors ligne.
   const noteAnterieure = precedente
-    ? tronquer(
-        [precedente.subjective, precedente.objective, precedente.assessment, precedente.plan]
-          .filter((champ) => champ !== null && champ.trim() !== "")
-          .join("\n"),
-      )
+    ? [precedente.subjective, precedente.objective, precedente.assessment, precedente.plan]
+        .filter((champ) => champ !== null && champ.trim() !== "")
+        .join("\n")
     : null;
+
+  const sources: readonly SourceBrute[] = [
+    {
+      type: "notes-finalisees",
+      libelle: "Notes de la praticienne pour la seance en cours",
+      contenu: rawNotes,
+    },
+    {
+      type: "donnees-structurees",
+      libelle: "Donnees cliniques enregistrees au dossier",
+      contenu: donneesStructurees,
+    },
+    {
+      type: "contexte-longitudinal",
+      libelle: "Consultation precedente",
+      contenu: noteAnterieure,
+    },
+  ];
+
+  const contexte = assemblerContexteSeance(sources);
 
   const identites = [consultation?.first_name, consultation?.last_name, consultation?.record_number].filter(
     (v): v is string => typeof v === "string" && v.trim() !== "",
   );
 
   // ── Étape 5 : pseudonymisation, prompt anti-injection. ──
-  const blocDonnees = [
-    "<donnees_patient>",
-    "Notes de la séance en cours :",
-    notesActuelles,
-    noteAnterieure !== null ? "\nConsultation précédente :" : "",
-    noteAnterieure ?? "",
-    "</donnees_patient>",
-  ]
-    .filter((ligne) => ligne !== "")
-    .join("\n");
+  const blocDonnees = ["<donnees_patient>", contexte.bloc, "</donnees_patient>"].join("\n");
 
   const { texte: bloqueSans, map } = pseudonymize(blocDonnees, identites);
 

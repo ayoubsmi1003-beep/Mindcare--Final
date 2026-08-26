@@ -42,6 +42,8 @@ export const fr = {
       agents: "Agents",
       journalActivite: "Journal d'activité",
       parametres: "Paramètres",
+      /** V-JARVIS-CORE — l'écran conversationnel plein. Rail praticiennes. */
+      jarvis: "Alexa",
     },
   },
 
@@ -97,6 +99,12 @@ export const fr = {
     champEmail: "E-mail",
     champMotDePasse: "Mot de passe",
     connexionEnCours: "Connexion en cours…",
+    /**
+     * v9 — la promesse du panneau de marque, à côté du formulaire. Une phrase,
+     * pas un slogan : elle dit ce que ce poste est, au moment de la journée où
+     * la praticienne décide encore si elle ouvre le bon logiciel.
+     */
+    accroche: "Le poste de travail du cabinet.",
   },
 
   /**
@@ -140,6 +148,12 @@ export const fr = {
    */
   patients: {
     titre: "Patients",
+    /**
+     * v9 — le sous-titre de l'en-tête de lieu. Il dit ce qu'est l'écran, pas
+     * ce qu'il contient : le comptage, lui, vit près de la liste, où il est
+     * vrai au moment où on le lit.
+     */
+    sousTitre: "L'annuaire clinique du cabinet.",
     rechercher: "Rechercher un patient",
     rechercherIndication: "Nom, téléphone ou numéro de dossier",
     listeVide: "Aucun dossier visible dans votre périmètre.",
@@ -370,7 +384,7 @@ export const fr = {
      */
     resume: {
       titre: "Résumé du cas",
-      surTitre: "Jarvis",
+      surTitre: "Alexa",
       enBref: "En bref",
       evolution: "Évolution récente",
       dernierEtat: "Dernier état connu",
@@ -394,7 +408,7 @@ export const fr = {
       reessayer: "Réessayer",
       videTitre: "Aucun résumé généré",
       videCorps:
-        "Jarvis peut préparer une synthèse structurée à partir des faits documentés du dossier.",
+        "Alexa peut préparer une synthèse structurée à partir des faits documentés du dossier.",
       pointSituationTitre: "Point de situation du dossier",
       pointSituationSousTitre:
         "Données directes du dossier — ce n'est pas un résumé IA.",
@@ -738,7 +752,7 @@ export const fr = {
     analyseEnCours: "Analyse en cours…",
     analyseAucuneNote: "Aucune note de séance à analyser pour l'instant.",
     analyseIndisponible:
-      "Assistant indisponible. Le reste de l'écran reste pleinement utilisable — notes, note clinique et signature ne dépendent pas de Jarvis.",
+      "Assistant indisponible. Le reste de l'écran reste pleinement utilisable — notes, note clinique et signature ne dépendent pas d'Alexa.",
     noteStructureeTitre: "Note structurée",
     evolutionTitre: "Évolution depuis la dernière fois",
     evolutionAucune: "Aucune consultation antérieure à comparer.",
@@ -1277,7 +1291,7 @@ export const fr = {
    * et aucun ne distingue « introuvable » de « hors périmètre » (ADR-003).
    */
   jarvis: {
-    titre: "Jarvis",
+    titre: "Alexa",
 
     /**
      * Patients V3 — contexte patient actif. Jamais une autorisation : une
@@ -1288,13 +1302,18 @@ export const fr = {
       patientActif: "Patient actif",
       retirer: "Retirer le contexte patient",
     },
-    ouvrir: "Ouvrir Jarvis",
+    ouvrir: "Ouvrir Alexa",
     fermer: "Fermer",
     invite: "Posez une question, ou dictez-la.",
+    /** v9 — le libellé du bouton d'envoi (icône seule : nommé pour le lecteur
+     * d'écran) et l'état d'attente, qui existe parce que le silence ne dit pas
+     * que Jarvis travaille. */
+    envoyer: "Envoyer",
+    reflechit: "Alexa réfléchit…",
 
     /** V2.2 — l'indisponibilité ne bloque JAMAIS le reste de l'application. */
     indisponible:
-      "Jarvis est indisponible. Toutes les fonctions restent accessibles.",
+      "Alexa est indisponible. Toutes les fonctions restent accessibles.",
 
     argumentsInvalides:
       "Cette demande n'a pas pu être interprétée de façon sûre. Rien n'a été modifié. Reformulez-la.",
@@ -1325,6 +1344,55 @@ export const fr = {
       patienter: "Confirmer…",
       creerRendezVous: "Créer un rendez-vous",
       fixerTarif: "Fixer le tarif de la séance",
+      /** 063 — les quatre écritures ajoutées. Un titre = un acte, jamais un vague « Modifier ». */
+      decalerRendezVous: "Déplacer le rendez-vous",
+      annulerRendezVous: "Annuler le rendez-vous",
+      marquerArrivee: "Marquer le patient comme arrivé",
+      encaisserPaiement: "Enregistrer l'encaissement",
+      /** Les trois écritures que la base admettait déjà sans que l'assistant les offre. */
+      creerBrouillonDocument: "Préparer un brouillon de document",
+      champNouvelleDate: "Nouvelle date",
+      champDuree: "Durée",
+      champMotif: "Motif",
+      champSeance: "Séance",
+      champPatient: "Patient",
+      champPraticienne: "Praticienne",
+      champDate: "Date",
+      champMontant: "Montant",
+      champTypeDocument: "Type de document",
+      champNature: "Nature",
+    },
+
+    /**
+     * ÉCRITURES — préconditions refusées et vérification post-exécution.
+     *
+     * ⚠️ `nonVerifiee` EST LA PHRASE LA PLUS IMPORTANTE DE CE FICHIER. Elle est
+     * dite quand la porte n'a pas levé MAIS que la relecture ne retrouve pas
+     * l'état demandé. Annoncer « c'est fait » dans ce cas serait le mensonge le
+     * plus coûteux que Jarvis puisse produire : la praticienne compterait sur
+     * un rendez-vous déplacé qui ne l'est pas.
+     */
+    ecriture: {
+      creneauOccupe:
+        "Ce créneau est déjà pris. Rien n'a été modifié. Proposez-moi une autre heure.",
+      dejaAnnule: "Ce rendez-vous est déjà annulé. Rien n'a été modifié.",
+      dejaArrive: "Ce patient est déjà marqué comme arrivé. Rien n'a été modifié.",
+      dejaEncaisse: "Cette séance est déjà encaissée. Rien n'a été modifié.",
+      tarifFige:
+        "Cette séance est déjà encaissée : son tarif ne peut plus être changé. Rien n'a été modifié.",
+      /**
+       * ⚠️ UN BROUILLON N'EST PAS UNE ÉMISSION. Émettre consomme un numéro de la
+       * table compteur, et un numéro consommé ne se rend pas : un brouillon
+       * refusé laisserait un TROU dans la numérotation d'un document médical.
+       * Cette phrase doit donc dire exactement ce qui a eu lieu — une demande
+       * enregistrée, pas un document produit.
+       */
+      brouillonPrepare:
+        "J'ai enregistré votre demande de brouillon. Aucun document n'a été émis : l'émission se fait à l'écran des documents.",
+      seanceIntrouvable: "Je ne retrouve pas cette séance. Rien n'a été préparé.",
+      nonVerifiee:
+        "L'action a été tentée, mais je n'ai pas pu vérifier qu'elle a bien abouti. Vérifiez à l'écran avant de compter dessus.",
+      verifiee: "C'est fait, et je l'ai vérifié.",
     },
 
     /** V2.4 — la voix. Coupée, le panneau reste utilisable au clavier. */
@@ -1333,6 +1401,242 @@ export const fr = {
       ecoute: "À l'écoute…",
       transcription: "Transcription…",
       indisponible: "La voix est indisponible. Le clavier reste utilisable.",
+      dejaEnCours: "Un enregistrement est déjà en cours.",
+      microIndisponible:
+        "Ce navigateur n'expose pas de micro utilisable. Le clavier reste utilisable.",
+      microRefuse:
+        "L'accès au micro a été refusé ou aucun micro n'est disponible. Utilisez le clavier.",
+      aucuneDictee: "Aucun son n'a été capté. Rien n'a été envoyé.",
+      tropLongue:
+        "L'enregistrement dépasse la durée prise en charge. Rien n'a été envoyé. Reformulez plus brièvement.",
+      texteTropLong:
+        "Cette réponse dépasse la longueur lisible à voix haute. Aucun son n'a été demandé.",
+      lectureBloquee:
+        "Le navigateur a bloqué la lecture automatique. Touchez de nouveau le bouton pour écouter.",
+      /**
+       * Le texte nomme une patiente : la voix EXTERNE est interdite (règle 1),
+       * et la voix locale manque. On le dit — on ne bascule pas vers l'externe
+       * « pour que ça marche quand même ».
+       */
+      /**
+       * LE MOT DE RÉVEIL — huit états, et les raisons de son absence.
+       *
+       * ⚠️ `aucunDetecteur` DIT LA VÉRITÉ SUR UN CHOIX EN ATTENTE, pas sur une
+       * panne. Aucun moteur n'est embarqué parce qu'aucun n'a encore été retenu :
+       * l'API du navigateur écoute en continu vers un tiers (règle 1), et les
+       * moteurs sous licence exigent une clé en ligne. L'écran le dit plutôt que
+       * d'afficher un micro inerte que la praticienne croirait cassé.
+       */
+      reveil: {
+        /**
+         * L'état de DÉPART, et le plus fréquent : la voix n'a simplement pas
+         * encore été activée sur ce poste. À ne pas confondre avec
+         * `aucunDetecteur`, qui signale une installation incomplète — dire
+         * « aucun moteur installé » à quelqu'un qui n'a rien allumé l'enverrait
+         * chercher une panne qui n'existe pas.
+         */
+        nonActivee:
+          "Voix désactivée. Cliquez sur l'orbe pour activer le mot de réveil sur ce poste.",
+        aucunDetecteur:
+          "Le mot de réveil n'est pas activé sur ce poste : aucun moteur de détection locale n'est installé. Le micro reste utilisable en maintenant le bouton.",
+        moteurIndisponible:
+          "Le moteur de détection est installé mais ses fichiers sont introuvables. Le micro reste utilisable en maintenant le bouton.",
+        /**
+         * Le seul endroit de l'interface où la praticienne apprend QUOI DIRE.
+         * Le mot prononcé et le nom de l'assistant coïncident désormais : dire
+         * « Alexa » réveille Alexa. Cette chaîne doit rester alignée sur le
+         * modèle réellement chargé (`NEXT_PUBLIC_WAKEWORD_MODELE`) — enseigner
+         * un mot que le détecteur ne reconnaît pas serait pire que se taire.
+         */
+        motAPrononcer: "Dites « Alexa » pour me réveiller.",
+        desarme: "Mot de réveil désactivé.",
+        microRefuse:
+          "L'accès au micro a été refusé. Le mot de réveil ne peut pas fonctionner ; le clavier reste utilisable.",
+        etats: {
+          veille: "En veille",
+          reveille: "Oui ?",
+          ecoute: "Je vous écoute…",
+          traitement: "Un instant…",
+          parole: "Alexa parle",
+          interrompu: "Arrêté.",
+          erreur: "Voix indisponible",
+          desactive: "Voix désactivée",
+        },
+      },
+
+      localeIndisponible:
+        "Ce navigateur n'a pas de voix locale, et cette réponse nomme un dossier : elle ne peut pas être lue à voix haute. Le texte reste affiché.",
+    },
+
+    /**
+     * V-JARVIS-CORE — flux, interruption, persistance, plein écran.
+     * Chaque mention dit ce qui s'est passé SANS citer de contenu modèle :
+     * les libellés d'état viennent de l'INTERFACE, jamais du serveur ni du
+     * LLM (ADR-023, garde-fou 3).
+     */
+    flux: {
+      pleinEcran: "Ouvrir Alexa en plein écran",
+      fermerPleinEcran: "Revenir à l'écran",
+      stop: "Arrêter la réponse",
+      relire: "Écouter cette réponse",
+      stopLecture: "Arrêter l'écoute",
+      /** La porte 058 a refusé l'écriture : l'écran le dit, une fois. */
+      nonPersistee:
+        "Cette réponse n'a pas pu être conservée dans l'historique. Elle reste affichée ici.",
+      interrompue: "Réponse arrêtée à votre demande.",
+    },
+
+    /**
+     * LA BOUCLE — ce que Jarvis dit quand il N'A PAS abouti.
+     *
+     * ⚠️ CHACUNE DE CES PHRASES EST UN AVEU, PAS UNE EXCUSE. Quand un budget
+     * s'épuise, la seule issue honnête est de dire qu'on n'a pas abouti :
+     * fabriquer une réponse plausible avec les données partielles déjà obtenues
+     * serait précisément l'hallucination que toute l'architecture existe pour
+     * rendre impossible. Elles disent aussi ce qui N'A PAS été modifié — sur un
+     * écran médical, « rien n'a changé » est l'information qui rassure.
+     */
+    boucle: {
+      tropDIterations:
+        "Je n'ai pas réussi à aboutir avec les informations dont je dispose. Rien n'a été modifié. Reformulez, ou demandez-moi un point précis.",
+      tropDAppels:
+        "Cette demande a nécessité trop de consultations successives. Rien n'a été modifié. Posez-la en plusieurs fois.",
+      tropLong:
+        "Cette demande a pris trop de temps. Rien n'a été modifié. Réessayez, ou demandez-moi un point plus précis.",
+      enBoucle:
+        "Je tourne en rond sur cette demande. Rien n'a été modifié. Reformulez-la autrement.",
+      /**
+       * Le pare-feu a refusé la charge sortante. Le message ne nomme JAMAIS ce
+       * qui a déclenché le refus — ce serait recréer à l'écran la fuite que le
+       * garde vient d'empêcher.
+       */
+      frontiere:
+        "Je n'ai pas pu traiter cette demande sans risquer d'exposer une donnée identifiante. Rien n'a été envoyé, rien n'a été modifié.",
+      /** Mention d'étape, affichée pendant que la capacité tourne. */
+      consulte: "Je consulte…",
+    },
+
+    /** Historique rejoué après rechargement — mentions d'état seulement. */
+    historique: {
+      outil: "Outil proposé :",
+      interrompue: "— réponse interrompue —",
+      echecChargement:
+        "L'historique n'a pas pu être chargé. Vous pouvez continuer la conversation.",
+    },
+
+    /**
+     * AMORCES — des gestes réels, pas un contenu : chaque phrase part telle
+     * quelle dans le champ de saisie, l'utilisatrice la voit et l'édite.
+     * Aucune donnée fictive derrière (règle 8) : ce sont des questions.
+     */
+    amorce1: "Résume-moi ma journée",
+    amorce2: "Qui arrive ensuite ?",
+    amorce3: "Explique-moi le score de Hamilton",
+  },
+
+  /**
+   * L'ÉCRAN DU MATIN DE LA PRATICIENNE (V4).
+   *
+   * Le contrat de cet écran tient en une phrase, celle du checkpoint V4 :
+   * ouvrir le tableau de bord un matin réel, et savoir en une seconde qui est
+   * là, qui est le suivant, combien attendent, ce qui a été encaissé.
+   *
+   * ⚠️ CHAQUE LIBELLÉ CI-DESSOUS A UNE COLONNE DERRIÈRE LUI. Il n'y a ni
+   * « objectif du mois » (décoratif, écarté par Q14), ni « taux de présence »,
+   * ni « occupation », ni « alerte clinique », ni « activité des agents » : rien
+   * dans la base ne les calcule, et un chiffre plausible sur un écran médical
+   * est un mensonge, pas un ornement (règle 8).
+   *
+   * LE MOT « ENCAISSÉ » EST CHOISI, PAS SUBI. La porte compte les paiements
+   * dont `collected_at` n'est pas nul — jamais les montants facturés. Le jour où
+   * l'un des deux change, ce libellé change avec lui.
+   *
+   * LES ÉTATS VIDES DISENT POURQUOI, ET PROPOSENT UN GESTE (05-UX-CONTRACT §3).
+   * Jamais d'illustration, jamais « aucune donnée », jamais « bientôt ».
+   */
+  tableauDeBord: {
+    salutation: "Bonjour Docteur",
+    sousTitre: "Votre journée",
+    /** L'action d'en-tête. Distincte de `fil.videAction` bien que le mot soit
+     *  le même aujourd'hui : l'une mène à l'agenda depuis un écran plein,
+     *  l'autre depuis une journée vide. Les fusionner ferait changer les deux
+     *  le jour où l'une seule doit changer. */
+    ouvrirAgenda: "Voir l'agenda",
+
+    maintenant: {
+      seanceEnCours: "Séance en cours",
+      depuis: "Depuis {duree}",
+      reprendre: "Reprendre la séance",
+      aucuneSeance: "Aucune consultation en cours.",
+      demarrerSeance: "Démarrer une séance",
+
+      suivant: "Patient suivant",
+      aSonHeure: "à {heure}",
+      dejaLa: "Déjà arrivé",
+      demarrer: "Démarrer la séance",
+      ouvrirDossier: "Ouvrir le dossier",
+      aucunSuivant: "Plus personne après cette séance.",
+
+      salleAttente: "Salle d'attente",
+      personneAttend: "Personne n'attend.",
+      /** Pluriel géré à l'appel : la base rend un nombre, pas une phrase. */
+      attendUn: "patient attend",
+      attendPlusieurs: "patients attendent",
+    },
+
+    fil: {
+      titre: "Le fil de la journée",
+      maintenant: "Maintenant",
+      vide: "Votre journée est libre.",
+      videAction: "Ouvrir l'agenda",
+      /** Statuts repris tels quels du glossaire — jamais traduits deux fois. */
+      statut: {
+        confirmed: "Attendu",
+        arrived: "Arrivé",
+        in_session: "En séance",
+        completed: "Terminé",
+        no_show: "Absent",
+      },
+      seances: "{nombre} séances",
+      terminees: "{nombre} terminées",
+    },
+
+    caisse: {
+      titre: "Encaissé aujourd'hui",
+      /** Le périmètre vient de la base ; l'écran ne le devine jamais. */
+      perimetreCabinet: "Le cabinet",
+      perimetrePraticienne: "Vos séances",
+      seances: "{nombre} séances encaissées",
+      rien: "Rien encaissé pour l'instant.",
+      voirFinances: "Ouvrir les finances",
+    },
+
+    nouveaux: {
+      titre: "Nouveaux patients ce mois",
+      aucun: "Aucun dossier ouvert ce mois-ci.",
+      voirPatients: "Ouvrir les patients",
+    },
+
+    jarvis: {
+      titre: "Alexa propose",
+      /**
+       * ⚠️ CES PROPOSITIONS NAISSENT D'UNE CONVERSATION RÉELLE, jamais d'un
+       * agent de fond — il n'en existe aucun. La carte vide est le cas normal,
+       * et elle le dit sans s'excuser.
+       */
+      vide: "Aucune proposition en attente.",
+      videIndication: "Alexa proposera ici ce que vous lui demanderez de préparer.",
+      examiner: "Examiner & confirmer",
+      refuser: "Refuser",
+      confirmee: "Action confirmée.",
+      refusee: "Proposition refusée.",
+      indisponible: "Alexa est indisponible. Le reste de votre journée n'est pas affecté.",
+    },
+
+    erreur: {
+      chargement:
+        "Le tableau de bord n'a pas pu être chargé. Aucune donnée n'a été modifiée. Réessayez dans un instant.",
+      reessayer: "Réessayer",
     },
   },
 
@@ -1350,10 +1654,6 @@ export const fr = {
    */
   reception: {
     titre: "Poste d'accueil",
-    /** Placeholder honnête du rôle praticien : V4 reste due, entière (D-23). */
-    placeholderPraticienne:
-      "Le tableau de bord praticienne sera livré avec la session V4. Aucun contenu n'est simulé ici.",
-
     pulse: {
       salleAttente: "En salle d'attente",
       retards: "Retards",
@@ -1375,6 +1675,8 @@ export const fr = {
       titre: "Ce qui demande attention",
       autres: "autres éléments — voir les files ci-dessous",
       vide: "Tout est à jour. Rien ne réclame votre geste.",
+      voir: "Voir",
+      voirEncaissement: "Voir l'encaissement",
     },
 
     arrivees: {
@@ -1396,10 +1698,14 @@ export const fr = {
       methode: "Méthode",
       methodeEspeces: "Espèces",
       encaisser: "Encaisser maintenant",
+      encaisserCourt: "Encaisser",
       confirmerTitre: "Confirmer l'encaissement",
       dejaEncaisse: "Déjà encaissé — rien à faire.",
+      horsFenetre: "Hors fenêtre d'encaissement (24h). Voir Finances.",
+      dejaEncaisseDetail: "Déjà encaissé à",
       recu: "Reçu",
       praticienne: "Fixé par",
+      voirTous: "Voir tous les encaissements",
     },
 
     notifications: {
@@ -1424,9 +1730,19 @@ export const fr = {
     recherche: {
       libelle: "Rechercher un patient",
       indication: "Nom, téléphone ou numéro de dossier — touche /",
+      indicationCourte: "Nom, téléphone ou n°",
       ouvrirFiche: "Ouvrir la fiche",
       prochainRdv: "Prochain rendez-vous",
       aucunRdvAVenir: "Aucun rendez-vous à venir.",
+    },
+
+    dock: {
+      nouveauRdv: "Nouveau rendez-vous",
+      rechercher: "Rechercher",
+      voirAgenda: "Voir l'agenda",
+      voirFinances: "Voir les finances",
+      demain: "Demain",
+      aucunDemain: "Rien prévu demain",
     },
 
     deplacement: {

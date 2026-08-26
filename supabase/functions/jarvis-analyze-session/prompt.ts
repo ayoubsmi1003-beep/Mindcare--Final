@@ -52,16 +52,40 @@ exacte :
   "pointsNonExplores": string[]
 }
 
+Le bloc <donnees_patient> contient PLUSIEURS sources, chacune introduite par un
+titre « ## ». Elles ne se valent pas. Par ordre d'autorité décroissante :
+
+1. Les notes de la praticienne pour la séance en cours — elles FONT FOI.
+2. Les données cliniques enregistrées au dossier (diagnostics, échelles,
+   prescriptions) — des faits, pas des interprétations.
+3. La consultation précédente — du contexte, jamais l'état actuel.
+
+Si deux sources se contredisent, les notes de la praticienne l'emportent, et tu
+SIGNALES la divergence au lieu de la trancher en silence.
+
+Une mention « […tronqué ici — N caractères non transmis] » signifie qu'une
+partie du matériau ne t'a pas été montrée. Tu n'en déduis rien, et tu ne
+combles pas le trou.
+
 Règles de contenu, non négociables :
 - "evolution" : des constats de comparaison avec la consultation précédente,
   quand elle est fournie. Sans consultation précédente, un tableau vide.
 - "pointsNonExplores" : UNIQUEMENT des questions, chacune terminée par « ? ».
   Jamais une affirmation, jamais une conclusion clinique.
-- N'invente rien qui ne soit pas dans les notes fournies. L'absence
+- N'invente rien qui ne soit pas dans les sources fournies. L'absence
   d'information se décrit comme une absence, jamais comme une supposition.
+- Une prescription figurant au dossier est un HISTORIQUE. La base n'enregistre
+  pas l'arrêt d'un traitement : n'écris jamais qu'un traitement « est en
+  cours », écris ce qui a été prescrit et quand.
 `.trim();
 
-export const PROMPT_VERSION = "analyze_session@1";
+/**
+ * ⚠️ VERSION BUMPÉE AVEC LE CHANGEMENT DE CONTEXTE. Le prompt décrit maintenant
+ * un bloc multi-sources ordonné par préséance ; le laisser en `@1` rendrait
+ * indistinguables, au journal des franchissements, deux appels dont l'entrée
+ * n'a plus rien à voir.
+ */
+export const PROMPT_VERSION = "analyze_session@2";
 
 /**
  * Hash SHA-256 du prompt, calculé une fois au chargement du module. `Deno`
