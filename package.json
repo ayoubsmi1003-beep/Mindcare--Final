@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev",
+    "dev": "node scripts/garde-origine.mjs && next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "node scripts/garde-origine.mjs && next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "postinstall": "node scripts/sync-wakeword-runtime.mjs"

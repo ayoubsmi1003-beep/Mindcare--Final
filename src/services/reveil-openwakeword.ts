@@ -29,10 +29,15 @@
  *
  * ═══ LE PIPELINE, MESURÉ SUR LES MODÈLES RÉELLEMENT PRÉSENTS ═══
  *
- *   audio 16 kHz, 1280 échantillons (80 ms)
- *     → melspectrogram.onnx   [1,1280]    → [1,1,5,32]
+ *   audio 16 kHz, 1280 échantillons (80 ms) + 480 de contexte gauche
+ *     → melspectrogram.onnx   [1,1760]    → [1,1,8,32]
  *     → embedding_model.onnx  [1,76,32,1] → [1,1,1,96]
  *     → alexa.onnx            [1,16,96]   → [1,1]  = un score
+ *
+ * ⚠️ LES 480 ÉCHANTILLONS DE CONTEXTE NE SONT PAS UN DÉTAIL — voir
+ * `CONTEXTE_GAUCHE`. Sans eux le mel rend 5 trames au lieu de 8, l'axe du temps
+ * se dilate de 1,6× et le mot n'est plus reconnu, sans qu'aucune erreur ne soit
+ * levée nulle part.
  *
  * ⚠️ LES NOMS DE TENSEURS SONT LUS DANS LE GRAPHE, JAMAIS ÉCRITS EN DUR. La
  * migration « Hey Jarvis » → « Alexa » l'a prouvé à nos dépens : les deux
@@ -86,6 +91,43 @@ const SEUIL = Number(process.env["NEXT_PUBLIC_WAKEWORD_SEUIL"] ?? "0.5");
  */
 const TAUX = 16_000;
 const ECHANTILLONS_PAR_TRAME = 1280; // 80 ms
+
+/**
+ * ⚠️ LE CONTEXTE GAUCHE — TROIS SAUTS DE 160 ÉCHANTILLONS, ET C'EST OBLIGATOIRE.
+ *
+ * DÉFAUT MESURÉ LE 2026-08-27, ET IL EXPLIQUE POURQUOI « ALEXA » N'ÉTAIT PAS
+ * RECONNU ALORS QUE TOUTE LA CHAÎNE ONNX TOURNAIT. `melspectrogram.onnx` rend
+ * un nombre de trames qui dépend de la LONGUEUR qu'on lui donne :
+ *
+ *     1280 échantillons  →  5 trames mel     ← ce que faisait ce fichier
+ *     1760 échantillons  →  8 trames mel     ← ce que fait openWakeWord
+ *
+ * openWakeWord appelle le modèle sur `raw_data_buffer[-n_samples - 160*3:]`
+ * (`utils.py`, `_streaming_melspectrogram`) : les 1280 échantillons du pas
+ * COURANT, précédés de 480 échantillons DÉJÀ CONSOMMÉS. Ce recouvrement n'est
+ * pas un raffinement — il produit les 8 trames que la suite du graphe attend,
+ * et il évite le remplissage par zéros au bord de chaque bloc de 80 ms.
+ *
+ * En n'envoyant que 1280, on produisait 5 trames là où il en faut 8. La fenêtre
+ * de 76 trames couvrait alors 76/5 × 80 ms = 1216 ms d'audio au lieu de
+ * 76/8 × 80 ms = 760 ms : L'AXE DU TEMPS ÉTAIT DILATÉ D'UN FACTEUR 1,6. Le
+ * détecteur cherchait un « Alexa » prononcé 1,6 fois trop lentement. Rien
+ * n'échoue, rien ne lève : les scores restent simplement au plancher.
+ *
+ * Mesuré sur de la parole réelle, seuil 0,5 (`eval-reveil-pipeline`) :
+ *
+ *                        sans contexte      avec contexte
+ *     « Alexa »              0,999986          0,999995
+ *     « Alexa » (2)          0,957989          0,999999
+ *     « Alexa, bonjour »     0,094701  RATÉ    0,847221  DÉTECTÉ
+ *     phrase témoin          0,000006          0,000004
+ *
+ * La troisième ligne est le défaut en entier : le mot suivi de n'importe quoi
+ * — c'est-à-dire l'usage RÉEL, où l'on enchaîne « Alexa, ... » — passait sous
+ * le seuil. Le témoin reste au plancher : le correctif ne rend pas le
+ * détecteur bavard, il le rend juste.
+ */
+const CONTEXTE_GAUCHE = 160 * 3; // 480 échantillons, 30 ms
 const MEL_PAR_FENETRE = 76;
 const MEL_PAR_PAS = 8;
 const EMBEDDINGS_ATTENDUS = 16;
@@ -94,6 +136,63 @@ const TAILLE_EMBEDDING = 96;
 
 /** Silence imposé après un réveil : sans lui, un seul mot en déclencherait dix. */
 const REFRACTAIRE_MS = 2_000;
+
+// ═══════════════════════════════════════════════════════════════════════════
+// 1 bis · L'INSTRUMENT — CE QU'ON PEUT CONSTATER SANS ENTENDRE
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * ⚠️ CET INSTRUMENT EXISTE PARCE QUE « ÇA NE MARCHE PAS » N'EST PAS UN
+ * DIAGNOSTIC. Quand la praticienne dit « Alexa » et que rien ne se passe, il y
+ * a au moins six causes possibles — micro muet, mauvaise fréquence, trames
+ * jetées, chaîne ONNX morte, score sous le seuil, réfractaire actif — et rien à
+ * l'écran ne permet de les distinguer. Elles se distinguent ici.
+ *
+ * ⚠️ AUCUN ÉCHANTILLON, AUCUN SPECTRE, AUCUN AUDIO. Uniquement des scalaires
+ * agrégés : un niveau, des compteurs, un score maximal. Il n'y a rien ici dont
+ * on puisse reconstituer une parole — la règle 1 tient par la FORME de cet
+ * objet, pas par une consigne d'usage.
+ */
+export interface DiagnosticReveil {
+  /** La fréquence RÉELLE du contexte audio, pas celle qu'on a demandée. */
+  readonly frequence: number;
+  /** Échantillons reçus du micro depuis l'armement. Zéro = micro muet. */
+  readonly echantillons: number;
+  /** Niveau efficace de la dernière trame. Proche de 0 = micro coupé ou silence. */
+  readonly rms: number;
+  /** Crête de la dernière trame. Proche de 1 = saturation. */
+  readonly crete: number;
+  /** Nombre de scores calculés. Zéro alors que `echantillons` monte = chaîne bloquée. */
+  readonly inferences: number;
+  /**
+   * Trames JETÉES parce que l'inférence précédente durait encore. Voir le
+   * commentaire de `enCours` : ce rejet est délibéré, mais il était jusqu'ici
+   * INVISIBLE. S'il grimpe avec les échantillons, le poste n'a pas les moyens de
+   * scorer en temps réel et le mot de réveil sera manqué SANS AUCUNE ERREUR.
+   */
+  readonly tramesJetees: number;
+  /** Le plus haut score vu depuis l'armement. À comparer au seuil. */
+  readonly scoreMax: number;
+  readonly seuil: number;
+}
+
+const diagnostic = {
+  frequence: 0,
+  echantillons: 0,
+  rms: 0,
+  crete: 0,
+  inferences: 0,
+  tramesJetees: 0,
+  scoreMax: 0,
+};
+
+/**
+ * L'état mesuré du détecteur. Destiné au développement et au rapport de mesure.
+ * Sûr à appeler en production — il ne rend que les scalaires ci-dessus.
+ */
+export function diagnosticReveil(): DiagnosticReveil {
+  return { ...diagnostic, seuil: SEUIL };
+}
 
 // ═══════════════════════════════════════════════════════════════════════════
 // 2 · L'ADAPTATEUR
@@ -221,12 +320,21 @@ export function creerDetecteurOpenWakeWord(): DetecteurReveil {
 
   // Tampons de travail. Circulaires et écrasés : rien n'est conservé.
   let restes = new Float32Array(0);
+  /**
+   * Les 480 derniers échantillons DÉJÀ scorés, réinjectés en tête de la trame
+   * suivante. Voir `CONTEXTE_GAUCHE` : sans eux le mel rend 5 trames au lieu de
+   * 8 et l'axe du temps se dilate. Écrasé à chaque tour — rien n'est conservé.
+   */
+  let contexteGauche = new Float32Array(0);
   let mel: number[][] = [];
   let melDepuisPas = 0;
   let embeddings: number[][] = [];
 
   function reinitialiser(): void {
     restes = new Float32Array(0);
+    // Le contexte gauche se jette AVEC les tampons : à la reprise on repart
+    // d'un silence, pas de la fin de la phrase qu'on venait d'ignorer.
+    contexteGauche = new Float32Array(0);
     mel = [];
     melDepuisPas = 0;
     embeddings = [];
@@ -236,9 +344,22 @@ export function creerDetecteurOpenWakeWord(): DetecteurReveil {
     const m = modules;
     if (m === null || !actif || suspendu) return;
 
-    // ── 1 · mel-spectrogramme ──
+    // ── 1 · mel-spectrogramme, SUR LA TRAME PRÉCÉDÉE DE SON CONTEXTE GAUCHE ──
+    //
+    // Voir l'avertissement de `CONTEXTE_GAUCHE` : 1280 seuls rendent 5 trames
+    // mel, 1760 en rendent 8, et c'est 8 que la fenêtre de 76 suppose. Les 480
+    // échantillons de tête sont ceux du pas PRÉCÉDENT — déjà scorés, jamais
+    // conservés au-delà du tour suivant.
+    const avecContexte = new Float32Array(CONTEXTE_GAUCHE + ECHANTILLONS_PAR_TRAME);
+    // Au tout premier tour, `contexte` est encore vide : le début reste à zéro,
+    // exactement comme le tampon initial d'openWakeWord. Le décalage garantit
+    // que la trame COURANTE occupe toujours la fin du tenseur.
+    avecContexte.set(contexteGauche, CONTEXTE_GAUCHE - contexteGauche.length);
+    avecContexte.set(trame, CONTEXTE_GAUCHE);
+    contexteGauche = trame.slice(-CONTEXTE_GAUCHE);
+
     const sortieMel = await m.mel.run({
-      [nomEntree(m.mel)]: new m.Tensor("float32", trame, [1, ECHANTILLONS_PAR_TRAME]),
+      [nomEntree(m.mel)]: new m.Tensor("float32", avecContexte, [1, avecContexte.length]),
     });
     const brut = premiereSortie(sortieMel);
     if (brut === null) return;
@@ -290,6 +411,8 @@ export function creerDetecteurOpenWakeWord(): DetecteurReveil {
           ]),
         });
         const score = premiereSortie(sortie)?.[0] ?? 0;
+        diagnostic.inferences += 1;
+        if (score > diagnostic.scoreMax) diagnostic.scoreMax = score;
 
         const maintenant = Date.now();
         if (score >= SEUIL && maintenant - dernierReveil > REFRACTAIRE_MS) {
@@ -364,6 +487,17 @@ export function creerDetecteurOpenWakeWord(): DetecteurReveil {
       actif = true;
       reinitialiser();
 
+      // L'instrument repart de zéro à chaque armement : des compteurs cumulés
+      // d'une session à l'autre feraient lire un ancien score maximal comme
+      // celui du mot qu'on vient de prononcer.
+      diagnostic.frequence = contexte.sampleRate;
+      diagnostic.echantillons = 0;
+      diagnostic.rms = 0;
+      diagnostic.crete = 0;
+      diagnostic.inferences = 0;
+      diagnostic.tramesJetees = 0;
+      diagnostic.scoreMax = 0;
+
       let enCours = false;
       noeud.onaudioprocess = (ev) => {
         if (!actif) return;
@@ -374,6 +508,22 @@ export function creerDetecteurOpenWakeWord(): DetecteurReveil {
           return;
         }
         const entrant = ev.inputBuffer.getChannelData(0);
+
+        // ── L'instrument, avant tout traitement : ce qui ARRIVE du micro. ──
+        // Mesuré ici et pas plus bas, pour que le niveau reste vrai même quand
+        // la trame finit jetée — c'est précisément ce cas qu'il faut pouvoir
+        // distinguer d'un micro muet.
+        diagnostic.echantillons += entrant.length;
+        let somme = 0;
+        let crete = 0;
+        for (const v of entrant) {
+          somme += v * v;
+          const a = v < 0 ? -v : v;
+          if (a > crete) crete = a;
+        }
+        diagnostic.rms = Math.sqrt(somme / entrant.length);
+        diagnostic.crete = crete;
+
         const fusion = new Float32Array(restes.length + entrant.length);
         fusion.set(restes, 0);
         fusion.set(entrant, restes.length);
@@ -390,7 +540,10 @@ export function creerDetecteurOpenWakeWord(): DetecteurReveil {
         // JETTE la trame plutôt que d'accumuler un retard qui grandirait sans
         // fin : un détecteur qui réagit avec dix secondes de retard est pire
         // qu'un détecteur qui rate un mot.
-        if (enCours) return;
+        if (enCours) {
+          diagnostic.tramesJetees += trames.length;
+          return;
+        }
         enCours = true;
         void (async () => {
           try {
