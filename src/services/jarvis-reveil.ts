@@ -240,7 +240,23 @@ export async function armerReveil(r: RappelsVoix): Promise<Result<true>> {
     void surReveil();
   });
   if (!demarrage.ok) {
-    aller("erreur", fr.jarvis.voix.reveil.microRefuse);
+    // ⚠️ NE PAS ACCUSER LE MICRO DE TOUT CE QUI RATE ICI.
+    //
+    // DÉFAUT MESURÉ LE 2026-08-27 : le runtime ONNX manquait (404 sur le
+    // chargeur jsep), et l'orbe annonçait « L'accès au micro a été refusé ».
+    // `getUserMedia` avait pourtant parfaitement réussi — vérifié dans la même
+    // session. Le message envoyait chercher une permission de navigateur
+    // pendant que le vrai défaut était un fichier absent du déploiement.
+    //
+    // Le code porté par le détecteur DIT lequel des deux : `interdit` est le
+    // seul refus de permission ; tout le reste est un moteur qui n'a pas pu
+    // démarrer. On ne devine plus, on relaie.
+    aller(
+      "erreur",
+      demarrage.error.code === "interdit"
+        ? fr.jarvis.voix.reveil.microRefuse
+        : fr.jarvis.voix.reveil.moteurIndisponible,
+    );
     return err(demarrage.error);
   }
 

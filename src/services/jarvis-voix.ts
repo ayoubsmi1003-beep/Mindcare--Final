@@ -60,6 +60,8 @@ interface DicteeEnCours {
   recorder: MediaRecorder;
   prise: PriseMicro;
   fragments: Blob[];
+  /** Horodatage de départ — sert la seule métrique de durée, jamais l'audio. */
+  debut: number;
 }
 
 let dictee: DicteeEnCours | null = null;
@@ -102,7 +104,15 @@ export async function demarrerDictee(): Promise<Result<true>> {
   };
   recorder.start(250); // fragment toutes les 250 ms — stop net, pas de queue perdue
 
-  dictee = { recorder, prise, fragments };
+  dictee = { recorder, prise, fragments, debut: Date.now() };
+
+  // ⚠️ DIAGNOSTIC : DES MÉTADONNÉES, JAMAIS UN ÉCHANTILLON.
+  // Ce qui a manqué le 2026-08-27 n'était pas l'audio — c'était de savoir si
+  // un octet partait seulement. Le conteneur réellement retenu par CE
+  // navigateur est un repère de format, pas une donnée de patiente ; il change
+  // d'un navigateur à l'autre et décide de l'extension envoyée au fournisseur.
+  // `LogFields` reste FERMÉE : aucun champ nouveau, donc aucun canal nouveau.
+  log.info("jarvis.voix.enregistrementDemarre", { context: recorder.mimeType || "inconnu" });
   return ok(true);
 }
 
@@ -136,6 +146,15 @@ export async function arreterEtTranscrire(): Promise<Result<string>> {
     return err({ code: "regle-metier", message: fr.jarvis.voix.aucuneDictee });
   }
   const blob = new Blob(enCours.fragments, { type: enCours.recorder.mimeType || "audio/webm" });
+
+  // Octets, durée, conteneur — de quoi distinguer « le micro n'a rien capté »
+  // de « le fournisseur a refusé un audio valide », qui étaient jusqu'ici le
+  // même écran. Ni transcription, ni base64, ni échantillon.
+  log.info("jarvis.voix.enregistrementClos", {
+    count: blob.size,
+    durationMs: Date.now() - enCours.debut,
+    context: blob.type,
+  });
 
   // Audio vide malgré des fragments : conteneur sans piste. On le CONSTATE
   // plutôt que de payer une transcription pour du néant.

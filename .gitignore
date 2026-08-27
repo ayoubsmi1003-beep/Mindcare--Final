@@ -48,3 +48,16 @@ supabase/.temp/
 # ferait croire à un vert qui voyage avec le dépôt — exactement le « souvenir »
 # que ce mécanisme existe pour empêcher.
 scripts/.mesures/
+
+# Sortie de compilation des passes d'évaluation (`eval-jarvis-*.mjs`).
+# Les modules de `src/services` y sont recompilés en CommonJS pour être chargés
+# par Node sans Next, sans réseau et sans clé — c'est ce qui permet d'éprouver
+# la BOUCLE en la faisant tourner plutôt qu'en relisant son code. Artefact
+# reconstruit à chaque checkpoint, jamais un livrable.
+.eval-out/
+.eval-tsconfig.json
+
+# Runtime ONNX du mot de reveil : 41 Mio regeneres depuis node_modules par
+# scripts/sync-wakeword-runtime.mjs (postinstall). Les MODELES .onnx, eux,
+# sont suivis : ce sont des choix de produit, pas une dependance.
+public/wakeword/ort/

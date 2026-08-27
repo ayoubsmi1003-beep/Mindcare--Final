@@ -142,7 +142,23 @@ async function fichiersPresents(): Promise<boolean> {
     `${RACINE}/melspectrogram.onnx`,
     `${RACINE}/embedding_model.onnx`,
     `${RACINE}/${MODELE_MOT}`,
-    `${RACINE}/ort/ort-wasm-simd-threaded.wasm`,
+    // ⚠️ LE FICHIER VÉRIFIÉ DOIT ÊTRE CELUI QUI EST RÉELLEMENT CHARGÉ.
+    //
+    // DÉFAUT MESURÉ AU NAVIGATEUR LE 2026-08-27, ET LE MOT DE RÉVEIL N'A DONC
+    // JAMAIS PU S'ARMER. Ce contrôle testait `ort-wasm-simd-threaded.wasm`,
+    // présent — mais `import("onnxruntime-web")` charge la variante **jsep**
+    // (celle qui sait parler WebGPU), et SEULE celle-là est demandée à
+    // l'exécution. `public/wakeword/ort/` ne la contenait pas :
+    //   GET /wakeword/ort/ort-wasm-simd-threaded.jsep.mjs → 404
+    // `disponible()` rendait donc `true`, puis `InferenceSession.create`
+    // échouait — c'est-à-dire au pire endroit : après avoir promis que ça
+    // marchait. Un contrôle de présence qui regarde un autre fichier que celui
+    // qu'on charge ne contrôle rien ; il rassure.
+    //
+    // Le `.mjs` SUFFIT et le `.wasm` est volontairement omis : le premier est
+    // le chargeur, il échoue en 404 lisible, alors que les 27 Mio du second
+    // coûteraient une requête `HEAD` inutile à chaque armement.
+    `${RACINE}/ort/ort-wasm-simd-threaded.jsep.mjs`,
   ];
   for (const u of requis) {
     try {

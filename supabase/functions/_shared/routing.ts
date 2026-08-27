@@ -78,10 +78,40 @@ const FORMES_CONCLUSIVES_PERSONNELLES: readonly RegExp[] = [
  */
 const FORMES_CONCLUSIVES_DEPENDANTES: readonly RegExp[] = [
   /\bque (dois|doit|devrais)-je (prescrire|donner|administrer|faire)\b/,
-  /\bquel (traitement|medicament|antidepresseur|anxiolytique|dosage)\b/,
+  // ⚠️ « Quel traitement » N'EST PAS TOUJOURS UNE DÉCISION. « Quel traitement
+  // prend ce patient ? » est un FAIT, et le refuser rendait la lecture du dossier
+  // impossible. On exige donc un verbe de décision dans la même phrase.
+  /\bquel (traitement|medicament|antidepresseur|anxiolytique|dosage)\b[^?.!]{0,40}\b(dois-je|doit-on|devrais-je|prescrire|instaurer|proposer|choisir|introduire|mettre)\b/,
+  /\bquel (traitement|medicament|antidepresseur|anxiolytique) pour\b/,
   /\b(a|est a) risque (suicidaire|de suicide|de passage a l'acte)\b/,
   /\b(quel|quelle) (est le |est la )?(diagnostic|pathologie)\b/,
   /\bfaut-il (hospitaliser|arreter|augmenter|prescrire)\b/,
+
+  // ═══ DÉCISION THÉRAPEUTIQUE — MODAL × ACTION ═══
+  //
+  // ⚠️ C'EST LE TROU LE PLUS GRAVE QU'AVAIT CE FICHIER. « Dois-je augmenter la
+  // dose pour Amina ? » et « Est-ce que je peux arrêter le traitement de
+  // Karim ? » partaient au chemin PATIENT : la question atteignait les outils,
+  // et c'est le MODÈLE qu'on chargeait de refuser. Un refus confié au modèle
+  // n'est pas une frontière, c'est une espérance.
+  //
+  // Le motif est un PRODUIT CARTÉSIEN explicite — un modal de décision (« dois-je »,
+  // « puis-je », « recommandes-tu », « est-il approprié ») croisé avec une action
+  // thérapeutique (augmenter, arrêter, changer, prescrire…). Aucune des deux
+  // moitiés ne suffit : « augmenter » seul est un mot de savoir (« comment
+  // augmenter progressivement une dose ? »), et « dois-je » seul est
+  // administratif (« dois-je appeler le laboratoire ? »).
+  //
+  // Ces formes restent DÉPENDANTES : il faut qu'un individu soit désigné dans
+  // la phrase. « Faut-il augmenter la dose quand un patient ne répond pas ? »
+  // est une question de savoir et doit le rester.
+  /\b(dois-je|doit-on|devrais-je|devrait-on|puis-je|peut-on|pourrais-je|je peux|je dois|je devrais|je pourrais|faut-il|faudrait-il)\b[^?.!]{0,60}\b(augmenter|monter|majorer|doubler|titrer|diminuer|reduire|baisser|abaisser|arreter|stopper|suspendre|interrompre|sevrer|reprendre|demarrer|commencer|debuter|initier|instaurer|introduire|changer|modifier|remplacer|switcher|substituer|prescrire|represcrire|renouveler|donner|administrer|associer|ajouter|hospitaliser|adresser|orienter)\b/,
+  /\b(est-il|serait-il|est-ce)\s+(approprie|indique|recommande|prudent|raisonnable|justifie|opportun|souhaitable|preferable|sur|risque)\b/,
+  /\b(recommandes-tu|conseilles-tu|me conseilles-tu|que me conseilles-tu|preconises-tu|suggeres-tu|qu'en penses-tu|ton avis|tu recommanderais|tu conseillerais)\b/,
+  /\b(quelle|quel)\s+(dose|posologie|dosage|molecule|classe|palier)\b/,
+  // Darija/français mêlés — l'interface les accepte, la frontière doit les voir.
+  /\b(wach|wech|chnou|chno|kifach)[^?.!]{0,60}\b(nzid|n9as|nwa9ef|nbeddel|na3ti|noktob|dose|traitement|dwa)\b/,
+  /\bnzid(lo|lha)?\b|\bnwa9ef(lo|lha)?\b/,
 ];
 
 /**
@@ -91,7 +121,7 @@ const FORMES_CONCLUSIVES_DEPENDANTES: readonly RegExp[] = [
  */
 const DEICTIQUES: readonly RegExp[] = [
   /\b(ce|cette|mon|ma|le|la|du|de la) (patient|patiente|malade|monsieur|madame)\b/,
-  /\b(son|sa|ses) (dossier|traitement|etat|note|ordonnance)\b/,
+  /\b(son|sa|ses) (dossier|traitement|etat|note|ordonnance|consultation|seance|prescription|posologie|bilan|suivi|derniere consultation)\b/,
   /\bdossier (de|d')\s*\S+/,
 ];
 
@@ -111,7 +141,20 @@ const DEICTIQUES: readonly RegExp[] = [
  * Trouvé par le test, pas par la relecture. D'où la classe explicite
  * « début de chaîne ou caractère non-lettre ».
  */
-const NOM_PROPRE_COMPLEMENT = /(?:^|[^\p{L}])(?:à|a|pour|chez|de)\s+([A-ZÀ-Þ][\p{L}'-]{2,})/u;
+// ⚠️ `d'Amina` ET `de Amina`. L'élision supprime l'espace : un motif qui exige
+// `\s+` après la préposition ne voit jamais la forme élidée, qui est pourtant la
+// plus naturelle en français. « Dois-je augmenter la dose d'Amina ? » partait au
+// chemin connaissance pour cette seule raison — mesuré, pas supposé.
+const NOM_PROPRE_COMPLEMENT =
+  /(?:^|[^\p{L}])(?:(?:à|a|pour|chez|de|avec|sur)\s+|d'|l')([A-ZÀ-Þ][\p{L}'-]{2,})/u;
+
+/**
+ * Un nom propre en position d'OBJET DIRECT d'un verbe de soin : « hospitaliser
+ * Amina », « sevrer Karim ». Sans préposition, le motif précédent ne les voit
+ * pas — et « Faut-il hospitaliser Amina ? » échappait au refus.
+ */
+const NOM_PROPRE_OBJET =
+  /\b(hospitaliser|traiter|sevrer|adresser|orienter|suivre|examiner|arreter|augmenter|diminuer)\s+([A-ZÀ-Þ][\p{L}'-]{2,})/u;
 
 /**
  * ═══ INTENTIONS OPÉRATIONNELLES ═══
@@ -125,6 +168,35 @@ const OPERATIONNEL: readonly RegExp[] = [
   /\b(ouvre|ouvrir|affiche|afficher|montre|montrer|cherche|chercher|recherche|rechercher|trouve|trouver)\b/,
   /\b(dossier|fiche)\b/,
   /\bplanifie|programme|deplace|annule\b/,
+
+  // ═══ AJOUT DU 2026-08-26 — TROUVÉ AU NAVIGATEUR, PAS À LA RELECTURE ═══
+  //
+  // ⚠️ CE FICHIER EST GELÉ, ET CETTE ADDITION EST ASSUMÉE. La phase 5 a mesuré
+  // que « Qui est mon prochain patient ? », « Combien ai-je encaissé
+  // aujourd'hui ? » et « Qu'ai-je demain matin ? » partaient toutes au chemin
+  // CONNAISSANCE — donc sans outil et sans contexte. Jarvis répondait « je n'ai
+  // accès à aucun dossier patient, agenda ou planning » : la couche opérante
+  // entière était inatteignable pour exactement les questions qu'elle sert.
+  //
+  // Ce n'était pas une décision de conception : le commentaire du groupe dit
+  // « agenda, tarif, ouverture de dossier — elles ont besoin des outils ». Le
+  // lexique n'avait simplement ni « patient », ni « encaissé », ni les tournures
+  // de journée. On comble les trous, on ne change pas la règle.
+  //
+  // ⚠️ POURQUOI C'EST SÛR : le REFUS est décidé AVANT ce groupe (branche 1 de
+  // `classer`) et rend directement. Élargir l'opérationnel ne peut donc PAS
+  // avaler un refus — la propriété critique d'ADR-023 est préservée par l'ORDRE,
+  // pas par la prudence du lexique. Le seul coût d'un élargissement trop large
+  // est de monter les outils sans nécessité, ce que ce fichier qualifie déjà
+  // lui-même de coût et non de danger.
+  /\b(prochain|prochaine|suivant|suivante)\s+(patient|patiente|consultation|rendez-vous|rdv|seance)\b/,
+  /\b(patient|patiente)s?\s+(suivant|suivante)\b/,
+  /\b(encaisse|encaissee|encaisses|recette|recettes|caisse|impaye|impayes|facture|facturation)\b/,
+  /\b(salle d'attente|file d'attente|arrivees?)\b/,
+  // Les tournures de journée n'ont de sens opérationnel que POSSÉDÉES :
+  // « qu'ai-je demain » interroge l'agenda ; « que se passe-t-il demain », non.
+  /\b(ai-je|j'ai|qu'ai-je|il me reste|me reste-t-il)\b[^?]*\b(demain|aujourd'hui|matin|matinee|apres-midi|semaine|journee)\b/,
+  /\b(prepare|preparer|brief|resume|resumer)[- ]moi\b/,
 ];
 
 function correspond(motifs: readonly RegExp[], texte: string): boolean {
@@ -159,7 +231,7 @@ export function classer(phraseUtilisateur: string): Routage {
     return { chemin: "connaissance", motif: "phrase vide" };
   }
 
-  const nomPropre = NOM_PROPRE_COMPLEMENT.test(brut);
+  const nomPropre = NOM_PROPRE_COMPLEMENT.test(brut) || NOM_PROPRE_OBJET.test(brut);
   const deictique = correspond(DEICTIQUES, texte);
   const individuDesigne = nomPropre || deictique;
 

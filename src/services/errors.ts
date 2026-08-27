@@ -25,6 +25,16 @@ export type AppErrorCode =
   | "conflit"
   | "regle-metier"
   | "indisponible"
+  // ── LES TROIS CODES DE PASSERELLE — V-ALEXA ──
+  // Ils existent parce qu'un seul `indisponible` décrivait SIX pannes sans
+  // rapport, et affirmait à chaque fois « le service de données est
+  // momentanément indisponible ». Le 2026-08-27, la base était parfaitement
+  // saine pendant que Groq refusait la dictée : la praticienne a cherché une
+  // panne de base pendant une heure. Une erreur qui désigne le mauvais organe
+  // coûte plus cher que pas d'erreur du tout.
+  | "transcription"
+  | "synthese"
+  | "analyse"
   | "inattendu";
 
 export interface AppError {
@@ -300,4 +310,53 @@ export function logFieldsFor(erreur: AppError): {
  */
 export function offlineError(): AppError {
   return { code: "hors-ligne", message: fr.erreurs["hors-ligne"] };
+}
+
+/**
+ * Traduit le `code` métier renvoyé par une Edge Function vers `AppErrorCode`.
+ *
+ * Source de vérité UNIQUE depuis V-JARVIS-CORE : l'adaptateur (`invokeFunction`,
+ * enveloppes JSON) et le client flux (`jarvis.ts`, repli dégradation gracieuse)
+ * classent les mêmes codes — deux tables divergentes produiraient deux écrans
+ * différents pour la même panne. Bornée à ce que les passerelles produisent ;
+ * un code non reconnu tombe sur `indisponible`, jamais `inattendu` : une Edge
+ * Function qui répond en échec est TOUJOURS un cas de dégradation gracieuse
+ * (I20), pas une panne à investiguer à l'écran.
+ */
+export function classerCodeEdge(code: string | undefined): AppErrorCode {
+  switch (code) {
+    case "non-authentifie":
+      return "non-authentifie";
+    case "regle-metier":
+      return "regle-metier";
+    // Les passerelles NOMMENT désormais l'organe en panne. Le message affiché
+    // reste tiré d'`fr.erreurs`, jamais de la passerelle : c'est le CODE qui
+    // gagne en précision, pas un canal de texte qui s'ouvre (règle 1).
+    case "transcription-indisponible":
+      return "transcription";
+    case "synthese-indisponible":
+      return "synthese";
+    case "analyse-indisponible":
+      return "analyse";
+    default:
+      return "indisponible";
+  }
+}
+
+/**
+ * Construit une `AppError` à partir d'une enveloppe Edge `{ ok:false, error }`
+ * déjà décodée — partagé par les deux chemins d'appel pour la même raison que
+ * `classerCodeEdge`.
+ */
+export function erreurDepuisEnveloppeEdge(
+  edgeCode: string | undefined,
+  context: string,
+): AppError {
+  const code = classerCodeEdge(edgeCode);
+  return {
+    code,
+    message: fr.erreurs[code],
+    ...(edgeCode !== undefined && { technical: edgeCode }),
+    context,
+  };
 }

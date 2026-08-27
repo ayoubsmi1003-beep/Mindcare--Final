@@ -11,9 +11,16 @@
  * synthèse cloud s'arrête d'elle-même.
  *
  * L'audio produit remonte au navigateur et n'est écrit nulle part.
+ *
+ * ═══ V-JARVIS-CORE · CORS ═══ Cette fonction était déployée SANS en-têtes
+ * CORS ni gestion OPTIONS : jamais appelable du navigateur (défaut latent,
+ * trouvé à l'audit V-JARVIS-CORE — le front voix n'existait pas encore).
+ * Le rétrofit applique `enTetesCors`/`reponsePrealable` à TOUTES les réponses,
+ * échecs compris, comme partout ailleurs.
  */
 import { createClient } from "npm:@supabase/supabase-js@2";
 
+import { enTetesCors, reponsePrealable } from "../_shared/cors.ts";
 import { tts } from "../_shared/external-call.ts";
 
 /**
@@ -36,10 +43,21 @@ function resoudreVoix(): string | null {
   return voix === undefined || voix === "" ? null : voix;
 }
 
-function reponseEchec(code: string, message: string): Response {
+/**
+ * Même raison qu'en entrée (voir `codeEchecStt` dans `jarvis-voice-in`) : une
+ * panne de synthèse annonçait « le service de données est indisponible ». Ici
+ * la nuance compte doublement — la RÉPONSE, elle, existe et reste affichée ;
+ * seule sa lecture à voix haute a échoué. Le dire évite de faire recommencer
+ * une demande qui a parfaitement abouti.
+ */
+function codeEchecTts(code: string): string {
+  return code === "indisponible" ? "synthese-indisponible" : code;
+}
+
+function reponseEchec(req: Request, code: string, message: string): Response {
   return new Response(JSON.stringify({ ok: false, error: { code, message } }), {
     status: 200,
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", ...enTetesCors(req) },
   });
 }
 
@@ -52,13 +70,16 @@ function estCorpsValide(valeur: unknown): valeur is { readonly texte: string } {
 }
 
 Deno.serve(async (req) => {
+  const prealable = reponsePrealable(req);
+  if (prealable !== null) return prealable;
+
   if (req.method !== "POST") {
-    return reponseEchec("methode-invalide", "Méthode non supportée.");
+    return reponseEchec(req, "methode-invalide", "Méthode non supportée.");
   }
 
   const authorization = req.headers.get("Authorization");
   if (authorization === null) {
-    return reponseEchec("non-authentifie", "Voix indisponible.");
+    return reponseEchec(req, "non-authentifie", "Voix indisponible.");
   }
 
   // Même raison qu'en entrée : cette fonction ne touche pas la base, donc la
@@ -67,7 +88,7 @@ Deno.serve(async (req) => {
   const supabaseUrl = Deno.env.get("SUPABASE_URL");
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY");
   if (supabaseUrl === undefined || supabaseAnonKey === undefined) {
-    return reponseEchec("configuration", "Voix indisponible.");
+    return reponseEchec(req, "configuration", "Voix indisponible.");
   }
 
   const client = createClient(supabaseUrl, supabaseAnonKey, {
@@ -77,32 +98,37 @@ Deno.serve(async (req) => {
 
   const { data: utilisateur, error: erreurAuth } = await client.auth.getUser();
   if (erreurAuth !== null || utilisateur?.user === null) {
-    return reponseEchec("non-authentifie", "Voix indisponible.");
+    return reponseEchec(req, "non-authentifie", "Voix indisponible.");
+  }
+
+  // Interrupteur d'exploitation — V-JARVIS-CORE. Absence = activé.
+  if (Deno.env.get("JARVIS_VOICE_ENABLED") === "false") {
+    return reponseEchec(req, "configuration", "Voix indisponible.");
   }
 
   let corps: unknown;
   try {
     corps = await req.json();
   } catch {
-    return reponseEchec("requete-invalide", "Requête invalide.");
+    return reponseEchec(req, "requete-invalide", "Requête invalide.");
   }
   if (!estCorpsValide(corps)) {
-    return reponseEchec("requete-invalide", "Requête invalide.");
+    return reponseEchec(req, "requete-invalide", "Requête invalide.");
   }
 
   const texte = corps.texte.trim();
   if (texte.length > MAX_CARACTERES) {
-    return reponseEchec("requete-invalide", "Texte trop long pour être lu à voix haute.");
+    return reponseEchec(req, "requete-invalide", "Texte trop long pour être lu à voix haute.");
   }
 
   const voix = resoudreVoix();
   if (voix === null) {
-    return reponseEchec("configuration", "Voix indisponible.");
+    return reponseEchec(req, "configuration", "Voix indisponible.");
   }
 
   const resultat = await tts({ text: texte, voiceId: voix, sessionToken: crypto.randomUUID() });
   if (!resultat.ok) {
-    return reponseEchec(resultat.error.code, resultat.error.message);
+    return reponseEchec(req, codeEchecTts(resultat.error.code), resultat.error.message);
   }
 
   // L'audio part en binaire, sans détour par base64 : la conversion doublerait
@@ -113,6 +139,7 @@ Deno.serve(async (req) => {
     headers: {
       "Content-Type": resultat.data.mimeType,
       "Cache-Control": "no-store",
+      ...enTetesCors(req),
     },
   });
 });

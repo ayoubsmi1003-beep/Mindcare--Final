@@ -1249,6 +1249,18 @@ export const fr = {
       "L'enregistrement a été refusé par une règle du dossier médical. Rien n'a été modifié. Le détail de la règle figure dans le journal d'activité.",
     indisponible:
       "Le service de données est momentanément indisponible. Aucune donnée n'a été perdue. Réessayez dans quelques instants.",
+    // ⚠️ CES TROIS-LÀ DISENT QUEL ORGANE A LÂCHÉ, ET C'EST TOUT L'INTÉRÊT.
+    // Chacune se lit en trois temps comme les autres : ce qui s'est passé ·
+    // ce qui est préservé · quoi faire. Aucune ne prétend qu'une écriture a
+    // eu lieu ou non quand la sémantique de l'opération est inconnue.
+    transcription:
+      "Je n'ai pas réussi à comprendre votre demande. Rien n'a été enregistré. Reformulez à voix haute, ou tapez votre demande.",
+    // La réponse EXISTE et reste affichée : le dire évite de refaire une
+    // demande qui a parfaitement abouti.
+    synthese:
+      "La réponse est prête, mais je n'arrive pas à la lire à voix haute. Le texte reste affiché ci-dessus. Réessayez la lecture dans quelques instants.",
+    analyse:
+      "Le service d'analyse est momentanément indisponible. Aucune donnée n'a été modifiée. Réessayez dans quelques instants.",
     inattendu:
       "Une erreur inattendue s'est produite. Aucune donnée n'a été modifiée. Réessayez ; si cela se reproduit, signalez-le avec l'heure exacte.",
   },

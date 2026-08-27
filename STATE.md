@@ -1,4 +1,216 @@
 # STATE — MindCare OS
+**ADR-027 · V-ALEXA-RUNTIME — LA BOUCLE VOCALE FONCTIONNE POUR DE VRAI · migrations 63/63 appliquées (065 incluse) · Edge Functions redéployées et VÉRIFIÉES en ligne · STT, TTS et LLM prouvés sur les fournisseurs réels · chaîne micro→transcription éprouvée en navigateur · reconnaissance du mot « Alexa » dans une VOIX HUMAINE toujours NON mesurée**
+Dernière mise à jour : 2026-08-27 (session « la voix, pour de vrai »)
+
+---
+
+## ▶ 2026-08-27 — DEUX PANNES QUI N'AVAIENT JAMAIS FONCTIONNÉ, SOUS UNE SUITE VERTE
+
+La praticienne parlait, rien n'était transcrit, Alexa ne répondait pas, et l'écran
+affichait « Le service de données est momentanément indisponible ». La base était
+parfaitement saine. **Sept défauts, tous confirmés par expérience contre les
+services réels, aucun trouvé par lecture de code.**
+
+### Le diagnostic de la session précédente était FAUX, et il faut le savoir
+« Projet Supabase INACTIVE » venait du connecteur MCP, qui n'expose que
+`fnrcxlewbuqgpgykwfwg` — **un autre projet**. L'application parle à
+`ftxaseynjvjevwybdoii`, `ACTIVE_HEALTHY`. **Ne pas utiliser les outils MCP
+Supabase sur ce dépôt** : ils visent la mauvaise base. Le CLI (`pnpm exec
+supabase`) et `scripts/db-migrate.sh` visent la bonne.
+
+### Les sept
+| # | Défaut | Preuve |
+|---|---|---|
+| 1 | **STT : le multipart Groq n'avait pas d'extension de fichier.** `"audio"` au lieu de `"commande.webm"`. **La transcription n'a JAMAIS pu aboutir.** | A/B live : `"audio"` → HTTP 400 « file must be one of the following types » ; `"audio.wav"` → HTTP 200 |
+| 2 | **Mot de réveil : le chargeur ONNX *jsep* manquait de `public/wakeword/ort/`.** 404 à l'armement. **« Alexa » n'a JAMAIS pu s'armer** — pendant que `eval-reveil-pipeline` était vert, car il exécute l'ONNX sous Node, où le chargement est tout autre | navigateur : `GET …jsep.mjs → 404` |
+| 3 | **`fichiersPresents()` vérifiait un fichier que l'application ne charge pas.** `disponible()` rendait `true`, puis la création de session échouait — le pire endroit : après avoir promis | idem |
+| 4 | **L'orbe accusait le micro de tout.** « L'accès au micro a été refusé » alors que `getUserMedia` réussissait ; le vrai défaut était le 404 ci-dessus | `getUserMedia` → `OK pistes=1` dans la même session |
+| 5 | **TTS : la voix configurée était une *library voice*, interdite au palier gratuit** | ElevenLabs → HTTP 402 `Free users cannot use library voices` |
+| 6 | **Toute panne de passerelle devenait « service de données indisponible ».** `classerCodeEdge` écrasait le message juste de la passerelle | `errors.ts` + `supabase.ts:271` |
+| 7 | **Le compte praticien ne pouvait plus se connecter.** `encrypted_password` = 20 caractères commençant par `CONN`, pas un hash bcrypt | journal auth : `crypto/bcrypt: hashedSecret too short` |
+
+### La faille de PROCÉDÉ, qui explique pourquoi tout cela a tenu si longtemps
+**Aucun script du dépôt ne déployait une Edge Function ni ne posait un secret.**
+`jarvis-voice-in/out` tournaient en **v6 du 25 août** pendant que le dépôt portait
+1 228 lignes de corrections. Les vérifications hors ligne étaient vertes — sur du
+code qui n'avait jamais tourné.
+
+→ `scripts/deploy-edge.sh` comble le trou, et **relit l'API Management après
+déploiement** pour afficher la version réellement en ligne. Il porte aussi la
+table de correspondance `.env` → noms lus par le code (`ALEXA_* → JARVIS_*`,
+`GROQ_STT_MODEL → STT_MODEL`) : sans elle, `ALEXA_VOICE_ENABLED=false` ne
+couperait PAS la voix.
+
+→ `scripts/mesure-voix-navigateur.mjs` couvre la seule zone que les evals hors
+ligne ne peuvent pas atteindre. Les défauts 1 à 4 y étaient tous visibles.
+
+### Prouvé en ligne le 2026-08-27
+`audit.boundary_crossings` : `voix-entree|groq|ok|217ms` · `voix-sortie|elevenlabs|ok|379ms` ·
+`jarvis|openrouter|ok|1584ms`. Navigateur : armement ONNX → écoute → blob **236 101 octets**
+webm/opus → `jarvis-voice-in` 200 → `jarvis-chat` 200 → retour en veille, aucun état bloqué.
+Modèle passé à `qwen/qwen3-next-80b-a3b-instruct` (1,6 s) — l'ancien `nemotron:free`
+échouait ou expirait sur 6 des 8 derniers appels.
+
+### ⚠️ CE QUI N'EST TOUJOURS PAS PROUVÉ
+- **La reconnaissance de « Alexa » dans une voix humaine.** Le micro factice de
+  Chromium émet un bip. Aucun automate ne remplace la praticienne ici.
+- **Qu'un son sort du haut-parleur.** Le TTS rend un MP3 valide (24 285 octets),
+  la lecture navigateur n'a pas été entendue.
+- **La qualité clinique des résumés.** Contexte livré ≠ résumé juste.
+
+### Dette notée, non traitée
+- Les voix ElevenLabs du palier gratuit sont toutes anglophones : le français est
+  correct mais accentué. `AqX3O1nij56oCicN2U6w` (Saray, native) redevient
+  utilisable au palier payant — une variable d'environnement, rien d'autre.
+- `public/wakeword/` n'est pas suivi par git : un clone neuf n'a pas de mot de
+  réveil. C'est la même famille que la faille de procédé ci-dessus.
+- `DEV_ACCOUNT_PASSWORD` de `.env` est périmé (owner.dev → HTTP 400).
+
+---
+
+## ▶ CE QUI A ÉTÉ LIVRÉ, ET CE QUI NE L'A PAS ÉTÉ
+
+### Livré et prouvé SANS base ni réseau (`scripts/checkpoint-jarvis-couche.sh`)
+| Passe | Contrôles | Ce qu'elle prouve |
+|---|---|---|
+| `eval-jarvis-frontiere` | 49 | aucune valeur identifiante ne franchit ; le modèle reçoit BIEN les faits cliniques |
+| `eval-jarvis-boucle` | 42 | le résultat d'outil REBOUCLE ; budgets, dédup, annulation se déclenchent |
+| `eval-jarvis-ecritures` | 26 | précondition, carte, **scénario N** (échec → aveu, jamais faux succès) |
+| `eval-jarvis-briefs` | 29 | aucun nombre orphelin ; encaissé ≠ en attente ; domaines absents déclarés |
+| `eval-jarvis-injection` | 12 | **scénario M** : le contenu T3 est délimité, et le contenu ne peut pas refermer sa propre enveloppe |
+| `eval-jarvis-briefs` (§H) | 15 | **scénario H** : le brouillon est composé, porte un jeton, et n'est JAMAIS envoyé |
+
+`tsc` et `eslint` verts. Aucun nom de modèle hors des variables de la passerelle.
+
+### Cinq défauts RÉELS trouvés et corrigés en cours de route
+1. **La boucle n'existait pas.** Le résultat d'outil ne retournait jamais au modèle,
+   et le chemin flux ne transmettait aucun contexte. « Parle-moi du prochain
+   patient » était inatteignable par construction.
+2. **Le pare-feu laissait fuir un domaine de courriel.** `masquerIdentites`
+   s'exécutait AVANT `retirerMotifs` : le prénom dans `nadia@example.dz` devenait
+   un jeton, cassait le motif e-mail, et `@example.dz` partait en clair. Les 42
+   contrôles étaient VERTS — ils cherchaient l'adresse entière, qui n'existait
+   plus. Trouvé en **dumpant la charge réelle et en la lisant**.
+3. **La synthèse vocale envoyait les vrais noms à ElevenLabs.** `lireTexte`
+   recevait le texte déjà réhydraté. Corrigé : toute réponse portant un jeton
+   passe par la synthèse **locale**.
+4. **Un libellé vide rendait une chaîne vide, pas un marqueur.**
+   `get_patient_timeline` frappe la carte d'identité en ne connaissant que
+   l'identifiant. Tant qu'une autre source avait déjà frappé le dossier sous son
+   vrai nom, l'idempotence le masquait ; une première frappe sans nom produisait
+   « le patient  a… » — un trou muet. Une telle entrée n'a par ailleurs aucune
+   identité à masquer : elle doit se voir. Trouvé par la passe adversariale, pas
+   par un test.
+5. **Une écriture non vérifiée pouvait s'annoncer « enregistrée ».** Si les
+   arguments d'une capacité du registre manquaient à la confirmation, la branche
+   historique de 033 s'appliquait et annonçait un succès qu'on n'avait pas relu —
+   le « c'est fait » non prouvé que §9 interdit. La branche dit maintenant que
+   l'écriture a eu lieu mais que son résultat n'a pas été vérifié.
+
+### NON livré, et pourquoi — à arbitrer par l'utilisatrice
+- **Le mot de réveil : moteur LIVRÉ, oreille NON MESURÉE (2026-08-26).**
+  Assistant = **Jarvis** ; mot prononcé = **Alexa**. Le détecteur
+  (`src/services/reveil-openwakeword.ts`) fait tourner openWakeWord en ONNX via
+  `onnxruntime-web`, modèles et runtime WASM auto-hébergés dans
+  `public/wakeword/` — **aucune requête réseau pendant l'écoute** (règle 1).
+  `scripts/eval-reveil-pipeline.mjs` rend **11/11 VERT** sur `alexa.onnx` :
+  chargement, formes, inférence, scores finis et bornés, silence et bruit blanc
+  à 0,0000, scores variables selon l'entrée.
+  ⚠️ **CE QUI N'EST PAS PROUVÉ** : qu'une voix humaine disant « Alexa » soit
+  reconnue. Aucun enregistrement n'a été passé. La plomberie est validée, la
+  qualité de reconnaissance NE L'EST PAS — et tant qu'elle ne l'est pas, les
+  faux réveils par heure sont inconnus. Mesure :
+  `node scripts/eval-reveil-pipeline.mjs alexa.onnx voix.wav` (WAV 16 kHz mono).
+- **Le câblage à l'écran du mot de réveil.** Rien n'appelle encore
+  `installerDetecteur` ni `armerReveil`, et l'orbe à 8 états n'est pas affiché.
+  L'état reste donc `desactive` avec une raison nommée — honnête, pas fonctionnel.
+- **La migration 063 EST APPLIQUÉE ET VÉRIFIÉE (2026-08-26).** Les 7 branches de
+  `execute_jarvis_action` sont vivantes, la contrainte `jarvis_tool_allowlist`
+  porte les 7 outils, `app.check_slot_available` a la signature attendue, et la
+  cloison ADR-019 tient : les 4 portes restent `app_gatekeeper` · SECURITY
+  DEFINER, le rôle est toujours SANS `BYPASSRLS`.
+
+### Phase 5 — ce qui a été MESURÉ au navigateur, sur la base réelle
+- **Scénario L (critère de sécurité dur) : VERT.** La charge réellement émise
+  vers le fournisseur a été capturée (11 957 octets, 3 envois, dossier patient
+  ouvert), puis comparée AUX IDENTITÉS RÉELLES **dans Postgres** —
+  `scripts/mesure-jarvis-phase5-fuite.sql`. 57 valeurs examinées en 6 classes
+  (nom, prénom, n° de dossier, téléphone, adresse, identifiant réel) :
+  **0 occurrence**. La comparaison a lieu en base précisément pour ne pas avoir
+  à extraire les noms afin de prouver qu'ils ne sortent pas.
+- **La boucle reboucle POUR DE VRAI.** Deux envois successifs mesurés, le second
+  portant le résultat de la capacité. C'est le correctif central, prouvé hors
+  du banc d'essai.
+- **Défaut trouvé et corrigé — le routage.** `classer()` envoyait « Qui est mon
+  prochain patient ? », « Combien ai-je encaissé aujourd'hui ? » et « Qu'ai-je
+  demain matin ? » au chemin CONNAISSANCE : sans outil, sans contexte. Jarvis
+  répondait « je n'ai accès à aucun dossier patient ». **La couche opérante
+  était inatteignable pour les questions qu'elle sert.** Le lexique OPÉRATIONNEL
+  a été complété. ⚠️ `routing.ts` est un fichier GELÉ : la modification est
+  assumée, et elle change EXACTEMENT 3 classements (mesuré avant/après contre
+  le fichier de HEAD), **aucun refus**. Le refus est décidé AVANT l'opérationnel,
+  donc élargir ce groupe ne peut pas avaler un refus.
+- **Défaut trouvé et corrigé — l'échec de validation était muet.** `z.strictObject`
+  rejette toute clé inventée par le modèle ; le motif rendu était le code nu
+  `regle-metier`, avec lequel le modèle ne peut rien faire — il annonçait un
+  outil en panne alors que la porte marchait (mesuré : 4 000 DA existaient).
+  La capacité rend désormais `champsAttendus`, calculé à l'enregistrement à
+  partir des clés du SCHÉMA. ⚠️ `motifEchec` reste un code CLASSÉ : un contrôle
+  du checkpoint interdit d'y mettre un message de base, et il a attrapé la
+  première tentative.
+- **NON CONCLUANT : les scénarios A · E · F · J · K · X.** Le fournisseur de
+  modèle (palier gratuit) répond entre 5 s et 180 s, ou pas du tout. Les
+  verdicts obtenus ne sont donc pas reproductibles et ne sont PAS déclarés
+  verts. Ce n'est pas un défaut du produit ; c'est une limite du banc.
+
+### Reste NON livré
+- **La migration 063 était non appliquée — ce point est clos.** Elle est écrite et relue, jamais
+  exécutée — aucune base n'était joignable dans cette session. Les quatre
+  écritures nouvelles échoueront sur la contrainte `jarvis_tool_allowlist` tant
+  qu'elle n'est pas passée.
+- **La phase 5 au navigateur** (les 14 scénarios sur données réelles, en français
+  puis en darija mixte) n'a pas été exécutée. Le flot de contrôle est prouvé ; le
+  COMPORTEMENT avec un vrai modèle ne l'est pas.
+- **Communications** : le BROUILLON est livré (`jarvis-messages.ts`, capacité
+  `draft_patient_message`, scénario H vert) ; **l'envoi ne l'est pas et ne peut
+  pas l'être** — MindCare n'a ni canal, ni carnet d'envois, ni trace de
+  réception. Le type l'interdit structurellement : `canal: null` et
+  `envoye: false` sont des types littéraux, pas des valeurs par défaut. Chaque
+  brouillon porte la phrase qui dit qu'il n'est pas parti.
+- **`create_document_draft` reste HORS du registre client**, bien que 063
+  l'admette en base. La composition par type de document exigerait d'inventer
+  un contenu (règle 8). La contrainte SQL borne ce qui est POSSIBLE, le registre
+  borne ce qui est OFFERT — l'écart est délibéré et documenté sur place.
+- **Aftercare, rapports** : hors périmètre — aucune table, aucun service.
+  Jarvis doit le DIRE, et les briefs le déclarent.
+- **Les textes composés (briefs, brouillons) vivent dans le service, pas dans
+  `fr.ts`.** C'est le précédent posé par `jarvis-briefs.ts` et suivi ici : ce
+  sont des CHARGES destinées au modèle et au presse-papier, pas des libellés
+  d'interface. À trancher explicitement si l'application devient multilingue.
+
+---
+
+## ▶ CONTRAT DE LA PROCHAINE SESSION — « ADR-027 CLÔTURE »
+
+> Tu reprends MindCare OS après la session « couche opérante » (2026-08-26).
+> Le flot de contrôle est prouvé vert hors base ; RIEN n'a été vérifié à l'écran.
+>
+> PÉRIMÈTRE, dans cet ordre :
+> 1. **Appliquer `063_jarvis_capacites.sql`** et rejouer le checkpoint SQL.
+>    ⚠️ Elle REMPLACE `execute_jarvis_action` par `CREATE OR REPLACE` — vérifier
+>    le propriétaire de la fonction après coup (mémoire « un DROP emporte le
+>    propriétaire »).
+> 2. **Les 14 scénarios au navigateur**, base réelle, trois rôles. Un scénario
+>    qui ne cite pas une donnée vérifiable en base est ROUGE.
+> 3. **Passe adversariale** `security-reviewer` sur le diff complet avant commit.
+> 4. Arbitrer le moteur de mot de réveil, ou reporter explicitement.
+>
+> NE PAS toucher : `_shared/routing.ts`, les trois portes de 033, le protocole
+> SSE et sa chaîne d'abandon, `external-call.ts`.
+
+---
+
+# STATE — MindCare OS
 **V3-CORRECTIFS (2026-08-24) : les TROIS défauts sont corrigés — T2 et T3 PROUVÉS verts au rejeu ; T1 prouvé JUSQU'AU FOURNISSEUR (première trace `resume-cas` en base) et BLOQUÉ par la dette de crédit OpenRouter. Le socle sécurité tient.**
 Dernière mise à jour : 2026-08-24 (session V3-CORRECTIFS)
 # STATE — MindCare OS
