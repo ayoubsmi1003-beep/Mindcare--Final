@@ -274,3 +274,139 @@ export function formaterDonneesStructurees(clinique: unknown, traitements: unkno
   const texte = lignes.join("\n").trim();
   return texte === "" ? null : texte;
 }
+
+// ═══════════════════════════════════════════════════════════════════════════
+// L'HISTORIQUE DES NOTES — LA POLITIQUE DE SÉLECTION, EN CODE
+// ═══════════════════════════════════════════════════════════════════════════
+
+export interface AmendementNote {
+  readonly reason?: string | null;
+  readonly body?: string | null;
+  readonly created_at?: string | null;
+}
+
+/** Une ligne rendue par `app.get_patient_notes_history` (migration 065). */
+export interface NoteHistorique {
+  readonly consultation_id?: string | null;
+  readonly started_at?: string | null;
+  readonly note_status?: string | null;
+  readonly signed_at?: string | null;
+  readonly subjective?: string | null;
+  readonly objective?: string | null;
+  readonly assessment?: string | null;
+  readonly plan?: string | null;
+  readonly amendments?: readonly AmendementNote[] | null;
+}
+
+export interface HistoriqueRendu {
+  readonly texte: string | null;
+  readonly notesRetenues: number;
+  readonly notesDisponibles: number;
+  /** Vrai si le budget a écarté au moins une note. Doit être DIT au modèle. */
+  readonly incomplet: boolean;
+}
+
+function corpsNote(n: NoteHistorique): string {
+  const parts: string[] = [];
+  if (n.subjective?.trim()) parts.push(`S : ${n.subjective.trim()}`);
+  if (n.objective?.trim()) parts.push(`O : ${n.objective.trim()}`);
+  if (n.assessment?.trim()) parts.push(`A : ${n.assessment.trim()}`);
+  if (n.plan?.trim()) parts.push(`P : ${n.plan.trim()}`);
+  return parts.join("\n");
+}
+
+/**
+ * Met en forme l'historique des notes, du PLUS ANCIEN au plus récent.
+ *
+ * ⚠️ L'ORDRE DE LECTURE EST CHRONOLOGIQUE, PAS CELUI DU SQL. La porte rend du
+ * plus récent au plus ancien — c'est le bon ordre pour PAGINER (on veut les
+ * plus pertinentes d'abord) et le mauvais pour LIRE une évolution. Une
+ * évolution se raconte dans le sens du temps ; présentée à l'envers, elle se
+ * lit comme une dégradation quand c'est une amélioration.
+ *
+ * ⚠️ LES AMENDEMENTS SUIVENT LEUR NOTE, ET SONT MARQUÉS COMME TELS. Sur une
+ * note amendée, le dernier mot de la praticienne est dans l'amendement (008) :
+ * l'omettre ferait lire une version qu'elle a explicitement corrigée.
+ *
+ * ⚠️ CE QUI EST ÉCARTÉ FAUTE DE PLACE EST COMPTÉ ET DIT. Un historique tronqué
+ * en silence produirait un résumé qui paraît fondé sur tout le dossier.
+ */
+export function formaterHistoriqueNotes(
+  notes: readonly NoteHistorique[],
+  budgetCaracteres = BUDGET["contexte-longitudinal"],
+): HistoriqueRendu {
+  // ⚠️ ON RETRIE ICI PLUTÔT QUE DE FAIRE CONFIANCE À L'APPELANT. La porte 065
+  // rend déjà du plus récent au plus ancien — mais s'en remettre à cet ordre
+  // ferait dépendre la POLITIQUE DE SÉLECTION d'un `ORDER BY` situé dans une
+  // autre couche. Le jour où quelqu'un ajusterait ce tri pour une autre raison,
+  // l'analyse retiendrait silencieusement les notes les plus ANCIENNES : aucune
+  // erreur, aucun test rouge, juste un résumé fondé sur le mauvais bout du
+  // dossier. Le coût du tri est nul, celui de la confiance ne l'est pas.
+  const utiles = notes
+    .filter((n) => corpsNote(n) !== "")
+    .slice()
+    .sort((a, b) => {
+      const da = Date.parse(a.started_at ?? "");
+      const db = Date.parse(b.started_at ?? "");
+      // Une date illisible part en fin de liste : elle ne doit ni évincer une
+      // note datée, ni faire basculer l'ordre au hasard du parsing.
+      if (Number.isNaN(da) && Number.isNaN(db)) return 0;
+      if (Number.isNaN(da)) return 1;
+      if (Number.isNaN(db)) return -1;
+      return db - da;
+    });
+
+  if (utiles.length === 0) {
+    return { texte: null, notesRetenues: 0, notesDisponibles: notes.length, incomplet: false };
+  }
+
+  // On retient depuis la PLUS RÉCENTE — c'est elle qui décrit l'état actuel —
+  // puis on inverse pour la lecture. Prendre les plus anciennes en premier
+  // remplirait le budget avec ce qui compte le moins.
+  const retenues: { note: NoteHistorique; rendu: string }[] = [];
+  let total = 0;
+  for (const n of utiles) {
+    const date = n.started_at?.slice(0, 10) ?? "date inconnue";
+    // Le statut est un FAIT porté au modèle, pas un filtre : une note non
+    // signée reste de la matière écrite par la praticienne, mais elle ne fait
+    // pas foi comme une note signée.
+    const statut = n.note_status === "signed" ? "signée" : "NON SIGNÉE (brouillon)";
+    const amendements = (n.amendments ?? [])
+      .filter((a) => (a.body ?? "").trim() !== "")
+      .map(
+        (a) =>
+          `  ↳ Amendement du ${a.created_at?.slice(0, 10) ?? "?"}` +
+          `${a.reason?.trim() ? ` (${a.reason.trim()})` : ""} : ${(a.body ?? "").trim()}`,
+      );
+
+    const rendu = [
+      `### Consultation du ${date} — note ${statut}`,
+      corpsNote(n),
+      ...(amendements.length > 0
+        ? ["(Corrections postérieures de la praticienne — elles priment sur le corps ci-dessus.)", ...amendements]
+        : []),
+    ].join("\n");
+
+    if (total + rendu.length > budgetCaracteres && retenues.length > 0) break;
+    retenues.push({ note: n, rendu });
+    total += rendu.length;
+  }
+
+  const incomplet = retenues.length < utiles.length;
+  const entete = incomplet
+    ? `(${retenues.length} note(s) sur ${utiles.length} transmises — les plus récentes. Les plus anciennes ne t'ont pas été montrées : n'en déduis rien.)`
+    : `(${retenues.length} note(s) — l'historique complet disponible.)`;
+
+  const corps = retenues
+    .slice()
+    .reverse() // chronologique : le passé d'abord
+    .map((r) => r.rendu)
+    .join("\n\n");
+
+  return {
+    texte: `${entete}\n\n${corps}`,
+    notesRetenues: retenues.length,
+    notesDisponibles: utiles.length,
+    incomplet,
+  };
+}

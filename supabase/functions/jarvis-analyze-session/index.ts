@@ -21,6 +21,8 @@ import { getPromptHash, PROMPT_VERSION, SYSTEM_PROMPT_V1 } from "./prompt.ts";
 import {
   assemblerContexteSeance,
   formaterDonneesStructurees,
+  formaterHistoriqueNotes,
+  type NoteHistorique,
   type SourceBrute,
 } from "../_shared/contexte-seance.ts";
 
@@ -247,6 +249,33 @@ Deno.serve(async (req) => {
     donneesStructurees = formaterDonneesStructurees(w.clinique ?? null, w.traitements ?? null);
   }
 
+  // -- L'historique COMPLET des notes de la praticienne (migration 065). --
+  //
+  // AVANT CETTE LECTURE, L'ANALYSE NE VOYAIT QU'UN SEUL PAS EN ARRIERE.
+  // `get_previous_note` (027) rend la consultation precedente, et elle repond
+  // correctement a SA question. Mais un changement de traitement decide il y a
+  // trois seances, ou une plainte qui revient a six mois d'intervalle, ne
+  // l'atteignaient jamais.
+  //
+  // La porte 065 est paginee et plafonnee A 50 LIGNES COTE SERVEUR ; la
+  // POLITIQUE de selection -- combien de notes, lesquelles, dans quel ordre --
+  // reste dans `formaterHistoriqueNotes`, donc en code deterministe eprouvable
+  // hors ligne. Un echec ici n'interrompt pas l'analyse : on retombe sur la
+  // note precedente seule, et le modele est informe de ce qu'il n'a pas vu.
+  let historique: string | null = null;
+  const { data: notesRows, error: erreurNotes } = await client.rpc(
+    "get_patient_notes_history",
+    {
+      p_patient_id: patientId,
+      p_excluding_consultation_id: corps.consultationId,
+      p_limit: 20,
+      p_before: null,
+    },
+  );
+  if (erreurNotes === null && Array.isArray(notesRows) && notesRows.length > 0) {
+    historique = formaterHistoriqueNotes(notesRows as readonly NoteHistorique[]).texte;
+  }
+
   // ── Etape 4 : assemblage par PRESEANCE, budget borne, troncature DITE. ──
   //
   // L'ordre n'est plus une consigne de prompt mais une propriete du code :
@@ -272,8 +301,15 @@ Deno.serve(async (req) => {
     },
     {
       type: "contexte-longitudinal",
-      libelle: "Consultation precedente",
-      contenu: noteAnterieure,
+      // L'historique complet quand la porte 065 a repondu ; a defaut, la seule
+      // note precedente de 027. Le libelle DIT laquelle des deux est en jeu :
+      // annoncer un historique quand on n'a qu'une note serait un mensonge sur
+      // l'etendue de ce qui a ete lu.
+      libelle:
+        historique !== null
+          ? "Historique des notes de la praticienne"
+          : "Consultation precedente",
+      contenu: historique ?? noteAnterieure,
     },
   ];
 

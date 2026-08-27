@@ -23,7 +23,7 @@ if (fichier === undefined) {
   process.exit(2);
 }
 
-const { assemblerContexteSeance, formaterDonneesStructurees } = await import(
+const { assemblerContexteSeance, formaterDonneesStructurees, formaterHistoriqueNotes } = await import(
   pathToFileURL(fichier).href
 );
 
@@ -198,6 +198,148 @@ console.log("\nC6 — mise en forme du dossier");
 
   const vide = formaterDonneesStructurees(null, null);
   verdict("un dossier inaccessible rend `null`, pas un texte vide", vide === null, String(vide));
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// C7 · L'HISTORIQUE LONGITUDINAL — LA POLITIQUE DE SÉLECTION
+// ═══════════════════════════════════════════════════════════════════════════
+console.log("\nC7 — plusieurs notes historiques");
+{
+  const note = (mois, plan, statut = "signed", amendments = []) => ({
+    started_at: `2026-0${mois}-15T09:00:00Z`,
+    note_status: statut,
+    subjective: `S du mois ${mois}`,
+    plan,
+    amendments,
+  });
+
+  const r = formaterHistoriqueNotes([
+    note(6, "PLAN-RECENT"),
+    note(4, "PLAN-MOYEN"),
+    note(2, "PLAN-ANCIEN"),
+  ]);
+
+  verdict("les trois notes sont retenues", r.notesRetenues === 3, `${r.notesRetenues}/${r.notesDisponibles}`);
+  verdict("rien n'est déclaré incomplet", r.incomplet === false, String(r.incomplet));
+  // ⚠️ UNE ÉVOLUTION SE RACONTE DANS LE SENS DU TEMPS. Présentée à l'envers,
+  // elle se lit comme une dégradation quand c'est une amélioration.
+  verdict(
+    "la lecture est CHRONOLOGIQUE, pas celle du SQL",
+    r.texte.indexOf("PLAN-ANCIEN") < r.texte.indexOf("PLAN-MOYEN") &&
+      r.texte.indexOf("PLAN-MOYEN") < r.texte.indexOf("PLAN-RECENT"),
+    "ancien < moyen < récent",
+  );
+  verdict("le nombre de notes est annoncé au modèle", r.texte.includes("3 note(s)"), "compte présent");
+}
+
+console.log("\nC8 — une note amendée");
+{
+  const r = formaterHistoriqueNotes([
+    {
+      started_at: "2026-05-02T09:00:00Z",
+      note_status: "signed",
+      assessment: "VERSION-INITIALE",
+      amendments: [
+        { reason: "erreur de dosage", body: "CORRECTION-PRATICIENNE", created_at: "2026-05-03T10:00:00Z" },
+      ],
+    },
+  ]);
+
+  // ⚠️ SUR UNE NOTE AMENDÉE, LE DERNIER MOT N'EST PAS DANS LE CORPS. 008 a fait
+  // le choix qu'une correction est un amendement visible, jamais un écrasement :
+  // omettre l'amendement ferait lire une version que la praticienne a corrigée.
+  verdict("l'amendement est transmis", r.texte.includes("CORRECTION-PRATICIENNE"), "présent");
+  verdict("son motif est transmis", r.texte.includes("erreur de dosage"), "présent");
+  verdict(
+    "sa PRÉSÉANCE sur le corps est dite",
+    r.texte.includes("priment sur le corps"),
+    "préséance explicite",
+  );
+}
+
+console.log("\nC9 — statut des notes, et budget");
+{
+  const brouillon = formaterHistoriqueNotes([
+    { started_at: "2026-05-02T09:00:00Z", note_status: "draft", plan: "P" },
+  ]);
+  // Un brouillon reste de la matière écrite par la praticienne, mais il ne fait
+  // pas foi comme une note signée : le FAIT est porté au modèle, pas filtré.
+  verdict("une note non signée est marquée comme telle", brouillon.texte.includes("NON SIGNÉE"), "marquée");
+
+  const signee = formaterHistoriqueNotes([
+    { started_at: "2026-05-02T09:00:00Z", note_status: "signed", plan: "P" },
+  ]);
+  verdict("une note signée est marquée signée", signee.texte.includes("note signée"), "marquée");
+
+  // 12 notes énormes contre un budget longitudinal de 3000 caractères.
+  const enormes = Array.from({ length: 12 }, (_, i) => ({
+    started_at: `2026-01-${String(i + 1).padStart(2, "0")}T09:00:00Z`,
+    note_status: "signed",
+    plan: "Z".repeat(800),
+  }));
+  const r = formaterHistoriqueNotes(enormes);
+  verdict("le budget écarte les plus anciennes", r.notesRetenues < 12, `${r.notesRetenues}/12`);
+  // ⚠️ UN HISTORIQUE TRONQUÉ EN SILENCE PRODUIRAIT UN RÉSUMÉ QUI PARAÎT FONDÉ
+  // SUR TOUT LE DOSSIER.
+  verdict(
+    "l'omission est DITE au modèle",
+    r.incomplet === true && r.texte.includes("n'en déduis rien"),
+    "annoncée",
+  );
+  // Les plus récentes d'abord : ce sont elles qui décrivent l'état actuel.
+  verdict("les plus RÉCENTES sont conservées", r.texte.includes("2026-01-12"), "récentes gardées");
+}
+
+console.log("\nC10 — absence de notes");
+{
+  const vide = formaterHistoriqueNotes([]);
+  verdict("aucune note rend `null`", vide.texte === null, String(vide.texte));
+  const creuses = formaterHistoriqueNotes([
+    { started_at: "2026-05-02T09:00:00Z", note_status: "signed", subjective: "  ", plan: null },
+  ]);
+  // Une note sans contenu n'est pas une note : l'annoncer inviterait à combler.
+  verdict("une note vide n'est pas transmise", creuses.texte === null, String(creuses.texte));
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// C11 · TRANSCRIPTION SEULE, PUIS NOTES SEULES
+// ═══════════════════════════════════════════════════════════════════════════
+console.log("\nC11 — une seule nature de source");
+{
+  const t = assemblerContexteSeance([src("transcription", "Transcription", "ce qui a ete dit")]);
+  verdict("la transcription seule est transmise", t.bloc.includes("ce qui a ete dit"), "présente");
+  verdict("elle est nommée pour ce qu'elle est", t.bloc.includes("Transcription"), "provenance dite");
+
+  const n = assemblerContexteSeance([src("notes-finalisees", "Notes", "ce qui a ete ecrit")]);
+  verdict("les notes seules sont transmises", n.bloc.includes("ce qui a ete ecrit"), "présentes");
+  // ⚠️ AUCUNE SECTION FANTÔME. Une rubrique « Transcription » vide inviterait le
+  // modèle à supposer ce qui s'y trouverait.
+  verdict("aucune rubrique transcription fantôme", !n.bloc.includes("Transcription"), "absente");
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// C12 · CONFLIT ENTRE LA TRANSCRIPTION ET LA NOTE DE LA PRATICIENNE
+// ═══════════════════════════════════════════════════════════════════════════
+console.log("\nC12 — la transcription dit A, la praticienne écrit B");
+{
+  const r = assemblerContexteSeance([
+    src("transcription", "Transcription", "Le patient dit prendre 100 mg."),
+    src("notes-finalisees", "Notes de la praticienne", "Dose ramenee a 50 mg ce jour."),
+  ]);
+
+  // ⚠️ CE QUE CETTE ÉVAL PROUVE, ET CE QU'ELLE NE PROUVE PAS.
+  // Elle prouve que la note de la praticienne est présentée AVANT la
+  // transcription, et donc que la préséance annoncée au modèle correspond à
+  // l'ordre réel du contexte. Elle ne prouve PAS que le modèle tranche bien :
+  // cela demande un modèle et se mesure ailleurs. On ne confond pas les deux.
+  verdict(
+    "la note de la praticienne précède la transcription",
+    r.bloc.indexOf("50 mg") < r.bloc.indexOf("100 mg"),
+    "notes avant transcription",
+  );
+  verdict("les deux versions sont transmises, aucune n'est masquée", r.bloc.includes("100 mg"), "conflit visible");
+  const ordre = r.sources.map((s) => s.type);
+  verdict("l'ordre déclaré correspond à l'ordre du bloc", ordre[0] === "notes-finalisees", ordre.join(" > "));
 }
 
 console.log(
