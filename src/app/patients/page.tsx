@@ -44,10 +44,8 @@ import {
   BandeauHorsLigne,
   BlocErreur,
   ChampRecherche,
-  EnTeteEcran,
   EtatVide,
   LienBouton,
-  MetaHeros,
   Squelette,
 } from "@/components/ui";
 import { fr } from "@/i18n/fr";
@@ -243,31 +241,16 @@ export default function PagePatients(): React.JSX.Element {
       role={utilisateur?.role ?? "assistant"}
       nomComplet={utilisateur?.fullName ?? ""}
       onDeconnexion={deconnecter}
+      sousTitre={dateDuJour()}
+      actions={
+        /* SPRINT-V1 §V5 : « Bouton Nouveau patient — visible, en haut a
+           droite, jamais cache dans un menu ». Il l'est desormais dans la
+           barre superieure, donc au meme endroit sur tous les ecrans. */
+        <LienBouton href="/patients/nouveau" rang="principal">
+          {fr.patients.creation.titre}
+        </LienBouton>
+      }
     >
-      {/* V3 — EN-TÊTE HÉROS. Admis ici parce que le titre est un nom de LIEU
-          (« Patients »), jamais celui d'un dossier : ADR-022 interdit un
-          dégradé derrière un nom de patient, et c'est cette frontière qui
-          décide lequel des deux en-têtes un écran reçoit. La fiche d'un
-          dossier, elle, garde `EnTetePage`, sobre et opaque.
-          SPRINT-V1 §V5 : « Bouton Nouveau patient - visible, en haut à
-          droite, jamais caché dans un menu ».
-          v9 — la rangée de contexte porte la date du jour : l'écran se
-          situe dans la journée avant qu'on ait cherché quoi que ce soit.
-          La date se calcule au rendu client (l'écran est gardé par la
-          session, donc jamais rendu côté serveur) — aucun risque
-          d'hydratation. */}
-      <EnTeteEcran
-        icone="patients"
-        titre={fr.patients.titre}
-        sousTitre={fr.patients.sousTitre}
-        meta={<MetaHeros icone="horloge">{dateDuJour()}</MetaHeros>}
-        actions={
-          <LienBouton href="/patients/nouveau" rang="principal">
-            {fr.patients.creation.titre}
-          </LienBouton>
-        }
-      />
-
       {/* Plus de bouton « Rechercher » : la recherche part au débounce. Le
           formulaire reste un `form` pour que `Entrée` fonctionne au clavier et
           que le champ soit correctement étiqueté. v9 — la barre prend la
@@ -279,7 +262,7 @@ export default function PagePatients(): React.JSX.Element {
           event.preventDefault();
           setRequete(saisie.trim());
         }}
-        className="my-6"
+        className="mb-5"
       >
         <ChampRecherche
           libelle={fr.patients.rechercher}

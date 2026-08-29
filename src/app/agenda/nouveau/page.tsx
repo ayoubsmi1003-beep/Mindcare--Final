@@ -44,7 +44,6 @@ import {
   ChampSelection,
   ChampTexte,
   ChampZoneTexte,
-  EnTeteEcran,
   LienBouton,
 } from "@/components/ui";
 import { useSessionEcran } from "@/components/useSessionEcran";
@@ -213,10 +212,9 @@ export default function PageNouveauRendezVous(): React.JSX.Element {
       role={utilisateur?.role ?? "assistant"}
       nomComplet={utilisateur?.fullName ?? ""}
       onDeconnexion={deconnecter}
+      titre={fr.agenda.nouveau}
     >
-      <div className="flex flex-col gap-8">
-        <EnTeteEcran icone="agenda" titre={fr.agenda.nouveau} />
-
+      <div className="flex max-w-form flex-col gap-8">
         {horsLigne || horsLigneSession ? <BandeauHorsLigne /> : null}
         {messageErreur !== undefined && !horsLigne ? <BlocErreur message={messageErreur} /> : null}
 

@@ -95,7 +95,18 @@ export default function PageTableauDeBord(): React.JSX.Element {
   // le lot cockpit a enfin son écran.
   if (role !== "assistant") {
     return (
-      <AppShell role={role} nomComplet={utilisateur?.fullName ?? ""} onDeconnexion={deconnecter}>
+      <AppShell
+        role={role}
+        nomComplet={utilisateur?.fullName ?? ""}
+        onDeconnexion={deconnecter}
+        titre={fr.tableauDeBord.salutation}
+        sousTitre={fr.tableauDeBord.sousTitre}
+        actions={
+          <LienBouton href="/agenda" rang="secondaire">
+            {fr.tableauDeBord.ouvrirAgenda}
+          </LienBouton>
+        }
+      >
         <TableauDeBordPraticienne horsLigneSession={horsLigneSession} />
       </AppShell>
     );
@@ -106,6 +117,7 @@ export default function PageTableauDeBord(): React.JSX.Element {
       role={role}
       nomComplet={utilisateur?.fullName ?? ""}
       onDeconnexion={deconnecter}
+      sansGouttiere
     >
       {/* Le cockpit se dimensionne lui-même : hauteur pleine du main, défilement
           interne par zone, zéro défilement de page à 1440×900. */}

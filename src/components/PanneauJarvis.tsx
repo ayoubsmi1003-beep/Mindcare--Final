@@ -40,8 +40,22 @@ import { Icone } from "./ui/Icones";
 
 const LARGEUR_PANNEAU = "380px";
 
-export function PanneauJarvis(): React.JSX.Element {
-  const [ouvert, setOuvert] = useState(false);
+export interface PanneauJarvisProps {
+  /**
+   * V7 — L'OUVERTURE EST REMONTÉE DANS LA COQUILLE. Elle était un state
+   * local, ce qui obligeait le panneau à porter son propre lanceur : la
+   * pastille flottante en bas à droite, c'est-à-dire le motif « bulle de
+   * chat » exact. Le lanceur est désormais le champ de commande de la barre
+   * supérieure, et l'état vit là où ses deux lecteurs se rejoignent.
+   */
+  readonly ouvert: boolean;
+  readonly onChangerOuvert: (ouvert: boolean) => void;
+}
+
+export function PanneauJarvis({
+  ouvert,
+  onChangerOuvert,
+}: PanneauJarvisProps): React.JSX.Element {
   const [etat, setEtat] = useState<EtatConversationPublique | null>(null);
   const [patientActif, setPatientActif] = useState<PatientActif | null>(null);
 
@@ -56,14 +70,14 @@ export function PanneauJarvis(): React.JSX.Element {
     function surTouche(evenement: KeyboardEvent): void {
       if ((evenement.metaKey || evenement.ctrlKey) && evenement.key.toLowerCase() === "k") {
         evenement.preventDefault();
-        setOuvert((precedent) => !precedent);
+        onChangerOuvert(!ouvert);
         return;
       }
-      if (evenement.key === "Escape" && etat?.carteEcriture === null) setOuvert(false);
+      if (evenement.key === "Escape" && etat?.carteEcriture === null) onChangerOuvert(false);
     }
     window.addEventListener("keydown", surTouche);
     return () => window.removeEventListener("keydown", surTouche);
-  }, [etat]);
+  }, [etat, ouvert, onChangerOuvert]);
 
   const soumettre = useCallback(() => {
     if (etat === null) return;
@@ -72,30 +86,17 @@ export function PanneauJarvis(): React.JSX.Element {
 
   if (etat === null) return <></>;
 
-  if (!ouvert) {
-    return (
-      <div
-        className="fixed bottom-5 right-5 flex min-h-target-lg items-center gap-2 rounded-full border border-rule bg-card px-2 py-2 shadow-lift3"
-        style={{ zIndex: "var(--z-panneau)" }}
-      >
-        <OrbeVoix taille={32} />
-        <button
-          type="button"
-          onClick={() => setOuvert(true)}
-          aria-label={fr.jarvis.ouvrir}
-          className="flex cursor-pointer items-center gap-2.5 rounded-full bg-ai-50 px-3 py-1.5 font-ui text-body font-semibold tracking-tight text-ai-600 transition duration-quick ease-out hover:bg-ai-100"
-        >
-          {fr.jarvis.ouvrir}
-          <span
-            aria-hidden="true"
-            className="rounded-md border border-ai-100 bg-white px-1.5 py-0.5 font-num text-eyebrow font-bold tabular-nums text-ink-500"
-          >
-            ⌘K
-          </span>
-        </button>
-      </div>
-    );
-  }
+  /**
+   * V7 — FERMÉ, LE PANNEAU NE REND PLUS RIEN.
+   *
+   * Il rendait une pastille flottante en bas à droite : orbe + « Ouvrir » +
+   * ⌘K. C'était le motif « bulle de chat » dans sa forme la plus
+   * reconnaissable, et il faisait lire une intelligence intégrée comme un
+   * widget collé après coup, flottant au-dessus d'un produit qui ne
+   * l'attendait pas. Le lanceur est désormais le champ de commande de la barre
+   * supérieure, et l'orbe y tient son rôle de témoin d'état de la voix.
+   */
+  if (!ouvert) return <></>;
 
   return (
     <aside
@@ -122,7 +123,7 @@ export function PanneauJarvis(): React.JSX.Element {
         </span>
         <button
           type="button"
-          onClick={() => setOuvert(false)}
+          onClick={() => onChangerOuvert(false)}
           aria-label={fr.jarvis.fermer}
           title={fr.jarvis.fermer}
           className="inline-flex min-h-target min-w-target shrink-0 cursor-pointer items-center justify-center rounded-lg border-0 bg-white/10 text-white transition duration-quick ease-out hover:bg-white/15"

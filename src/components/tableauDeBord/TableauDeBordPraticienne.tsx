@@ -31,9 +31,7 @@ import {
   BandeauHorsLigne,
   BlocErreur,
   Bouton,
-  EnTeteEcran,
   LienBouton,
-  MetaHeros,
   Section,
   Squelette,
 } from "@/components/ui";
@@ -197,27 +195,24 @@ export function TableauDeBordPraticienne({
     <div className="flex flex-col gap-6 lg:gap-8">
       {horsLigneSession ? <BandeauHorsLigne /> : null}
 
-      <EnTeteEcran
-        icone="tableauDeBord"
-        surTitre={fr.tableauDeBord.sousTitre}
-        titre={fr.tableauDeBord.salutation}
-        sousTitre={fr.tableauDeBord.sousTitre}
-        meta={
+      {/*
+        LE CONTEXTE DE LA JOURNEE, EN UNE LIGNE.
+        C'etait une banniere heros de 120 px qui repetait la meme chaine en
+        sur-titre ET en sous-titre. L'identite de l'ecran est montee dans la
+        barre superieure ; ce qui restait d'utile ici — la date, le nombre de
+        seances, combien sont finies — est du CONTEXTE, et tient sur une ligne.
+      */}
+      <p className="font-ui text-body font-regular text-ink-500">
+        <span className="text-ink-700">{dateLongueCabinet(maintenant)}</span>
+        {t.journee.length === 0 ? null : (
           <>
-            <MetaHeros icone="horloge">{dateLongueCabinet(maintenant)}</MetaHeros>
-            {t.journee.length === 0 ? null : (
-              <MetaHeros icone="agenda">
-                {`${fr.tableauDeBord.fil.seances.replace("{nombre}", String(t.journee.length))} · ${fr.tableauDeBord.fil.terminees.replace("{nombre}", String(terminees))}`}
-              </MetaHeros>
-            )}
+            {" · "}
+            {fr.tableauDeBord.fil.seances.replace("{nombre}", String(t.journee.length))}
+            {" · "}
+            {fr.tableauDeBord.fil.terminees.replace("{nombre}", String(terminees))}
           </>
-        }
-        actions={
-          <LienBouton href="/agenda" rang="secondaire">
-            {fr.tableauDeBord.ouvrirAgenda}
-          </LienBouton>
-        }
-      />
+        )}
+      </p>
 
       {/* Une erreur SURVENUE APRÈS un premier chargement réussi ne remplace pas
           l'écran : la journée déjà chargée reste lisible, et l'incident se dit

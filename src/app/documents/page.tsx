@@ -18,7 +18,6 @@ import {
   BandeauHorsLigne,
   BlocErreur,
   Bouton,
-  EnTeteEcran,
   EtatVide,
   LienBouton,
   Squelette,
@@ -346,26 +345,29 @@ export default function DocumentsPage(): React.JSX.Element {
   })();
 
   return (
-    <AppShell role={utilisateur.role} nomComplet={utilisateur.fullName} onDeconnexion={deconnecter}>
-      <div className="flex h-full min-h-0 flex-col gap-4 overflow-hidden">
+    <AppShell
+      role={utilisateur.role}
+      nomComplet={utilisateur.fullName}
+      onDeconnexion={deconnecter}
+      sousTitre={fr.documents.sousTitre}
+      actions={
+        dossier === null ? null : (
+          <Bouton rang="principal" onClick={ouvrirEmission}>{fr.documents.emission.ouvrir}</Bouton>
+        )
+      }
+      sansGouttiere
+    >
+      {/* Trois volets bord a bord : selecteur, liste/formulaire, feuille. La
+          gouttiere est portee par chaque volet, pas par la coquille — une
+          feuille A5 doit pouvoir toucher le bord de son volet. */}
+      <div className="flex h-full min-h-0 flex-col gap-4 overflow-hidden px-6 py-5">
         {horsLigne ? <BandeauHorsLigne /> : null}
-
-        <EnTeteEcran
-          icone="documents"
-          titre={fr.documents.titre}
-          sousTitre={fr.documents.sousTitre}
-          actions={
-            dossier === null ? null : (
-              <Bouton rang="principal" onClick={ouvrirEmission}>{fr.documents.emission.ouvrir}</Bouton>
-            )
-          }
-        />
 
         {/* Readiness banner */}
         {readiness !== null && !readiness.canIssue ? (
           <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-attention bg-attention-bg p-4">
             <div className="flex flex-col gap-1">
-              <p className="font-ui text-label font-semibold uppercase tracking-label text-attention-ink">En-tête incomplet</p>
+              <p className="font-ui text-body font-semibold text-attention-ink">En-tête incomplet</p>
               <p className="font-ui text-body text-ink-700">
                 {readiness.missing.map((m) => m.label).join(" · ") || fr.documents.erreurs.marqueurNonResolu}
               </p>

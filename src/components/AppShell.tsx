@@ -1,64 +1,39 @@
 /**
- * Coquille de navigation — PURE PRÉSENTATION.
+ * LA COQUILLE — V7. Pure présentation.
  *
  * Aucun appel à `src/services/*` au-delà du TYPE `UserRole` (import type
- * uniquement, jamais de valeur). Ce composant ne décide de rien : il reçoit
- * `role` et compose l'affichage. Il n'appelle jamais `getCurrentUser()`.
- *
- * ⚠️ I12 — COMPOSITION PAR RÔLE, PAS CHAMP MASQUÉ.
- * `NAVIGATION_PAR_ROLE` définit, pour chaque rôle, la liste RÉELLE des entrées
- * de menu. Pour `assistant`, le groupe CLINIQUE n'existe PAS dans l'arbre
- * rendu — ses entrées ne sont pas retirées par CSS ni par une condition qui
- * "cacherait" un `<a>` déjà présent : elles ne sont simplement jamais
- * construites. Un élément rendu puis masqué reste dans le DOM et se lit en
- * trois clics dans les outils de développement ; un élément jamais construit
- * n'existe nulle part dans la réponse.
- *
- * NUANCE À NE JAMAIS OUBLIER : ce choix est COSMÉTIQUE. Il ne protège RIEN.
- * Si un jour un appel réseau expose une donnée clinique à l'assistante, ce
- * composant ne l'aurait pas empêché — seule la RLS Postgres protège la
- * donnée (règle 4 de CLAUDE.md). Ce fichier ne doit jamais contenir de
- * `if (role === "assistant")` qui prétendrait cacher une donnée : ici, on ne
- * choisit qu'une liste d'entrées de menu, ce qui est légitime précisément
- * parce que ça ne prétend protéger rien.
- *
- * ÉCRANS NON CONSTRUITS : tout sauf « Patients », « Agenda » et « Finances »
- * est rendu inerte et visiblement à venir (I19) — pas de lien mort qui ouvre
- * une page blanche, et aucun badge de compteur inventé.
+ * uniquement, jamais de valeur). Cette coquille ne décide de rien : elle reçoit
+ * `role` et compose. Elle n'appelle jamais `getCurrentUser()`.
  *
  * ═══════════════════════════════════════════════════════════════════════════
- * V3 — CE RAIL EST L'ÉLÉMENT SIGNATURE DU PRODUIT
+ * CE QUI CHANGE EN V7
  * ═══════════════════════════════════════════════════════════════════════════
  *
- * Il était une colonne blanche, sans icône et SANS AUCUN ÉTAT ACTIF : rien
- * n'indiquait sur quel écran on se trouvait. C'était le plus gros défaut
- * d'orientation de l'application, et il ne coûtait qu'un `usePathname()`.
+ * 1. DEUX MONDES AU LIEU D'UN. Le rail est du CHROME (encre froide profonde),
+ *    le contenu est du PAPIER. Avant, un unique lavage teinté de marque allait
+ *    du bord gauche au bord droit, le rail n'étant que ce lavage en dégradé :
+ *    rien ne distinguait l'outil de la matière. Voir `coquille/Rail.tsx`.
  *
- * Trois décisions de dessin, chacune avec sa raison :
+ * 2. UNE BARRE SUPÉRIEURE, ET PLUS DE BANNIÈRE HÉROS. L'identité de page monte
+ *    dans une barre de 60 px partagée. Les 120 px de dégradé qui ouvraient
+ *    chaque écran à l'identique disparaissent — c'était la cause première du
+ *    « même interface, autres couleurs ». Voir `coquille/Topbar.tsx`.
  *
- * 1. FOND `--grad-auth`, PAS `--grad-brand`. Les deux sont au catalogue
- *    d'ADR-022 ; celui-ci part de `--brand-900` et reste sombre plus longtemps.
- *    Sur un rail plein écran, c'est ce qui garde le blanc pur au-dessus de
- *    5:1 sur toute la hauteur. Le choix est un calcul de contraste, pas un goût.
+ * 3. LE CONTENU EST PLEINE LARGEUR. `max-w-main` (1120 px centré) imposait la
+ *    même colonne à tous les écrans, ce qui poussait chacun vers la même pile
+ *    verticale de cartes. Chaque écran compose désormais selon son travail :
+ *    le bento est un outil, pas l'identité du produit.
  *
- * 2. UNE SEULE ENCRE : LE BLANC PUR. Pas de blanc atténué pour les titres de
- *    groupe — sur la partie claire d'un dégradé de marque, aucun alpha < 1 ne
- *    passe 4.5:1 (le calcul est écrit dans `tokens.css`). La hiérarchie se
- *    fait à la TAILLE, à la GRAISSE et à la pastille de fond.
- *
- * 3. SOUS 1024px, LE RAIL SE REPLIE EN ICÔNES au lieu de passer au-dessus du
- *    contenu. Cela referme l'écart avec `04-DESIGN-SYSTEM` §3 que ce fichier
- *    documentait depuis le 2026-08-04, et dont la seule cause était l'absence
- *    d'un jeu d'icônes. Les libellés ne sont pas RETIRÉS quand le rail se
- *    replie — ils sont retirés du FLUX VISUEL et restent dans l'arbre
- *    d'accessibilité. Un rail d'icônes muet pour un lecteur d'écran serait un
- *    écran de moins, pas un écran plus compact.
+ * 4. L'ASSISTANT N'EST PLUS UNE BULLE FLOTTANTE. Son lanceur était une
+ *    pastille en bas à droite ; il est maintenant le champ de commande de la
+ *    barre supérieure. Même ⌘K, même panneau — mais l'assistant appartient à
+ *    l'instrument au lieu d'être posé dessus.
  */
 
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 import { fr, type NomEcran } from "@/i18n/fr";
 import type { UserRole } from "@/services/authz";
@@ -66,367 +41,154 @@ import type { UserRole } from "@/services/authz";
 import { BandeauSeanceEnCours } from "./BandeauSeanceEnCours";
 import { BootVoix } from "./BootVoix";
 import { PanneauJarvis } from "./PanneauJarvis";
-import { Icone, MarqueMindCare } from "./ui/Icones";
+import { Rail } from "./coquille/Rail";
+import { Topbar } from "./coquille/Topbar";
 
 export interface AppShellProps {
   readonly role: UserRole;
   readonly nomComplet: string;
   /**
-   * Fermeture de session. Fournie par l'écran, pas appelée par ce composant :
-   * la coquille reste présentationnelle et ne connaît aucun service.
-   *
-   * ⚠️ CE BOUTON N'EST PAS UN ORNEMENT. Le poste est dans une salle de
-   * consultation, et le patient suivant s'assoit devant l'écran. Sans commande
-   * de déconnexion, la seule façon de fermer une session est de vider le
-   * stockage du navigateur — donc personne ne le fait. Une version antérieure
-   * livrait `signOut()` et ses libellés sans aucun appelant.
+   * Fermeture de session. Fournie par l'écran, pas appelée ici : la coquille
+   * reste présentationnelle et ne connaît aucun service.
    */
   readonly onDeconnexion: () => void;
+  /**
+   * L'identité de l'écran, affichée dans la barre supérieure.
+   *
+   * Optionnelle : les écrans de LIEU (`/patients`, `/agenda`, `/finances`…)
+   * la déduisent de la route, ce qui garantit qu'un titre ne diverge jamais du
+   * libellé de la navigation. Les écrans de PERSONNE ou d'objet
+   * (`/consultation/<id>`, `/patients/<id>`) la fournissent, parce qu'aucune
+   * route ne peut deviner un nom de patient.
+   */
+  readonly titre?: string;
+  readonly sousTitre?: string;
+  /** Actions de page, à droite de la barre. Une action dominante au plus. */
+  readonly actions?: React.ReactNode;
+  /**
+   * Retire la gouttière du contenu, pour les écrans qui gèrent eux-mêmes leurs
+   * bords — la grille de l'agenda, les trois volets de Documents, le cockpit.
+   * Sans cette échappatoire, ces écrans repeindraient un fond par-dessus la
+   * gouttière pour l'annuler, ce qui est la même chose en moins lisible.
+   */
+  readonly sansGouttiere?: boolean;
+  /**
+   * LE MODE SÉANCE. Quand une consultation est ouverte, l'interface se retire :
+   * plus de rail, plus de barre supérieure, le fond glisse vers l'encre de
+   * nuit. Il ne reste que la personne, la note et le chrono.
+   *
+   * Le rail et la barre sont RETIRÉS DE L'ARBRE, pas seulement translatés
+   * hors-champ. Une navigation invisible mais toujours focalisable enverrait
+   * la tabulation d'un lecteur d'écran dans douze liens fantômes au milieu
+   * d'une consultation — le contraire de l'effet recherché.
+   *
+   * Alexa, elle, RESTE montée : la dictée pendant la séance est le cœur du
+   * cas d'usage. C'est le seul mobilier qui survit au repli.
+   */
+  readonly modeSeance?: boolean;
   readonly children: React.ReactNode;
 }
 
-interface GroupeNav {
-  readonly titre: string;
-  readonly ecrans: readonly NomEcran[];
+/**
+ * L'écran de la route courante, s'il en est un. Sert à déduire le titre par
+ * défaut de la barre supérieure : un titre déduit ne peut pas diverger du
+ * libellé affiché dans le rail, alors que deux chaînes recopiées divergent
+ * toujours un jour.
+ */
+function ecranDeLaRoute(chemin: string): NomEcran | null {
+  const segment = chemin.split("/")[1] ?? "";
+  if (segment === "") return null;
+  return segment in fr.nav.ecrans ? (segment as NomEcran) : null;
 }
-
-/**
- * Écrans construits à ce jour. Tout le reste est inerte et visiblement à venir
- * (I19) — pas de lien mort qui ouvre une page blanche.
- *
- * La liste est la SEULE chose à toucher ici quand un écran est livré : la
- * navigation elle-même ne change pas, et son icône existe déjà (le jeu d'icônes
- * couvre les douze écrans par construction de type).
- */
-const ECRANS_CONSTRUITS: readonly NomEcran[] = [
-  "tableauDeBord",
-  "patients",
-  "agenda",
-  "finances",
-  "documents",
-  "parametres",
-  /** V-JARVIS-CORE — la conversation plein écran. */
-  "jarvis",
-];
-
-/**
- * Composition COMPLÈTE — praticienne (`owner`/`practitioner`). Les deux rôles
- * partagent la même navigation ; c'est la RLS qui restreint les LIGNES vues
- * (ses patients, ses revenus), jamais ce composant.
- */
-const NAVIGATION_PRATICIENNE: readonly GroupeNav[] = [
-  /**
-   * V-JARVIS-CORE — `jarvis` vit dans le groupe MENU : c'est un outil du
-   * quotidien qui traverse les domaines, pas une donnée clinique. ABSENT de la
-   * composition assistante (décision produit du lot) : l'assistant dialogue
-   * avec des dossiers qu'il ne lit pas ; à défaut d'un périmètre tranché en
-   * base pour ce rôle, l'entrée n'est pas construite — même règle I12 que
-   * partout ici.
-   */
-  { titre: fr.nav.groupes.menu, ecrans: ["tableauDeBord", "jarvis"] },
-  {
-    titre: fr.nav.groupes.clinique,
-    ecrans: ["patients", "agenda", "messages", "documents", "traitements", "suivi"],
-  },
-  { titre: fr.nav.groupes.gestion, ecrans: ["finances", "statistiques"] },
-  { titre: fr.nav.groupes.systeme, ecrans: ["agents", "journalActivite", "parametres"] },
-];
-
-/**
- * Composition SÉPARÉE — assistante (I12). Le groupe CLINIQUE est absent : ni
- * notes, ni transcriptions, ni diagnostics, ni motif de consultation, ni les
- * écrans qui n'en portent que ça (`Messages`, `Documents`, `Traitements`,
- * `Suivi`) ne sont construits pour ce rôle. `Patients` et `Agenda` restent :
- * identité, coordonnées et rendez-vous sont dans son périmètre (WORKING-
- * CONTEXT §6). `Finances` reste pour le statut et le montant d'un paiement,
- * jamais un motif clinique. `Statistiques` et `Agents` sont omis : rien dans
- * §6 ne les lui accorde, et à défaut de décision explicite on ne construit
- * pas l'accès.
- */
-/**
- * Réception : 2 écrans uniquement — Tableau de bord + Agenda.
- * Pas de Patients (recherche intégrée au dashboard), pas de Finances (encaissement dans le dashboard),
- * pas de Documents/Messages/Traitements/Suivi/Statistiques/Agents/Journal. Interface opérationnelle pure.
- */
-const NAVIGATION_ASSISTANTE: readonly GroupeNav[] = [
-  { titre: fr.nav.groupes.menu, ecrans: ["tableauDeBord", "agenda"] },
-];
-
-function navigationPour(role: UserRole): readonly GroupeNav[] {
-  switch (role) {
-    case "owner":
-    case "practitioner":
-      return NAVIGATION_PRATICIENNE;
-    case "assistant":
-      return NAVIGATION_ASSISTANTE;
-  }
-}
-
-/**
- * Les initiales du compte connecté — première lettre des deux premiers mots.
- * `trim()` d'abord, `charAt` ensuite : une chaîne d'espaces ne doit pas jeter
- * (même raison qu'`Avatar`). Un nom vide rend une chaîne vide — le disque nu
- * se lit « compte » sans inventer d'identité.
- */
-function monogrammeCompte(nomComplet: string): string {
-  const mots = nomComplet.trim().split(/\s+/).filter((m) => m.length > 0);
-  return mots
-    .slice(0, 2)
-    .map((m) => m.charAt(0).toUpperCase())
-    .join("");
-}
-
-/**
- * Visible au-dessus de `tablet`, lisible par un lecteur d'écran EN DESSOUS.
- *
- * Ce n'est pas `hidden tablet:inline` : `hidden` retire l'élément de l'arbre
- * d'accessibilité, et le rail replié deviendrait une colonne de pictogrammes
- * sans nom. Ici le texte sort du flux visuel et reste annoncé — un utilisateur
- * au lecteur d'écran ne perd rien quand la fenêtre rétrécit.
- */
-const LIBELLE_REPLIABLE =
-  "absolute h-0 w-0 overflow-hidden opacity-0 tablet:static tablet:h-auto tablet:w-auto tablet:overflow-visible tablet:opacity-100";
 
 export function AppShell({
   role,
   nomComplet,
   onDeconnexion,
+  titre,
+  sousTitre,
+  actions,
+  sansGouttiere = false,
+  modeSeance = false,
   children,
 }: AppShellProps): React.JSX.Element {
-  const groupes = navigationPour(role);
-  const chemin = usePathname();
+  /**
+   * L'ouverture de l'assistant vit ICI parce que deux enfants la partagent :
+   * le champ de commande de la barre l'ouvre, le panneau la referme. Un store
+   * de plus serait disproportionné pour un booléen dont les deux seuls
+   * lecteurs sont frères.
+   */
+  const [alexaOuvert, setAlexaOuvert] = useState(false);
 
   /**
-   * L'écran courant. `startsWith` avec la barre finale, et pas seulement
-   * l'égalité : `/patients/<uuid>` doit allumer « Patients ». Sans la barre,
-   * un futur `/patientsarchives` s'allumerait aussi.
+   * ⚠️ CE `role !==` EST UNE COMPOSITION D'INTERFACE, PAS UN CONTRÔLE DE
+   * SÉCURITÉ (règle 4). Ce qu'Alexa peut lire ou écrire est décidé par la RLS
+   * et les portes SQL, qui ne connaissent pas ce composant.
    */
-  const estActif = (ecran: NomEcran): boolean =>
-    chemin === `/${ecran}` || chemin.startsWith(`/${ecran}/`);
+  const avecAlexa = role !== "assistant";
+
+  /**
+   * Le titre par défaut. `usePathname` et non `window.location` : la valeur
+   * doit survivre au rendu serveur ET suivre les navigations client, ce
+   * qu'une lecture directe de l'URL ne fait ni l'un ni l'autre.
+   */
+  const chemin = usePathname();
+  const ecranCourant = ecranDeLaRoute(chemin);
+  const titreEffectif = titre ?? (ecranCourant === null ? "" : fr.nav.ecrans[ecranCourant]);
 
   return (
     <div
-      className="grid min-h-0 flex-1 grid-rows-1 grid-cols-app-compact overflow-hidden tablet:grid-cols-app"
-      style={{ height: "var(--size-full)" }}
+      className={[
+        "flex min-h-0 flex-1 overflow-hidden",
+        /* Le remappage de variables vit dans tokens.css (§ MODE SÉANCE) : les
+           composants de l'espace de travail ne savent rien de la nuit, ils
+           lisent `var(--card)` comme toujours et c'est --card qui change. */
+        modeSeance ? "mode-seance bg-night-bg" : "",
+      ].join(" ")}
     >
-      {/* `sur-marque` bascule l'anneau de focus en blanc : `--action-600` est la
-          marque elle-même et disparaîtrait dans ce fond. Sans cette classe, la
-          navigation au clavier serait invisible exactement ici. */}
-      <nav
-        aria-label={fr.coquille.navigationPrincipale}
-        className="sur-marque sticky top-0 flex h-full flex-col gap-4 overflow-hidden bg-grad-auth px-3 py-4 shadow-lift3 tablet:gap-5 tablet:px-3.5 tablet:py-5"
-      >
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-grad-hero-reflet opacity-80"
-        />
-        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-px bg-white/10" />
+      {modeSeance ? null : (
+        <Rail role={role} nomComplet={nomComplet} onDeconnexion={onDeconnexion} />
+      )}
 
-        <div className="relative flex items-center gap-2.5 px-2 py-1 text-on-brand">
-          <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-white text-brand-700 shadow-lift1">
-            <MarqueMindCare taille={20} titre="MindCare OS" />
-          </span>
-          <span
-            className={["font-ui text-heading font-bold tracking-tight", LIBELLE_REPLIABLE].join(" ")}
-          >
-            MindCare
-          </span>
-          <span className={["ml-1 rounded-full bg-white/15 px-2 py-0.5 font-ui text-eyebrow font-semibold tracking-widest text-white/90", LIBELLE_REPLIABLE].join(" ")}>OS</span>
-        </div>
-
-        {/* ⚠️ LE COMPTE EST COLLÉ EN BAS **DANS** LA ZONE QUI DÉFILE, ET C'EST
-            LE COMPROMIS CORRECT — deux tentatives plus naïves ont échoué avant.
-            Mesuré à 1920×1080, « Se déconnecter » tombait sous le bord de
-            l'écran. Or ce bouton n'est pas un ornement : le poste est dans une
-            salle de consultation et le patient suivant s'assoit devant l'écran.
-            · L'ancrer HORS de la zone de défilement (`shrink-0` en fin de rail)
-              ne suffit pas : le rail est `sticky top-0`, il se cale sur le haut
-              de la FENÊTRE, tandis que le bandeau ADR-016 le pousse vers le bas.
-              Sa hauteur déborde donc de celle du bandeau, en bas, hors de vue —
-              et `max-h-screen` ne rattrape pas ce décalage.
-            · Le fixer à une hauteur calculée reviendrait à coder en dur la
-              hauteur d'un bandeau qui se replie sur deux lignes en fenêtre
-              étroite et DISPARAÎT le jour de l'auto-hébergement.
-            `mt-auto` dans le conteneur qui défile donne les deux propriétés qui
-            comptent : le bloc se pose en bas quand il y a la place, et il reste
-            ATTEIGNABLE par défilement quand il n'y en a pas. Jamais coupé. */}
-        <div className="relative flex min-h-0 flex-1 flex-col gap-5 overflow-y-auto">
-        {groupes.map((groupe) => (
-          <div key={groupe.titre} className="flex flex-col gap-2">
-            {/* Le titre de groupe s'efface au repli : à 72px il n'y a pas de
-                place, et son rôle — regrouper visuellement — est déjà tenu par
-                l'espacement entre les blocs. */}
-            <span
-              className={[
-                "px-2 font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-on-brand",
-                LIBELLE_REPLIABLE,
-              ].join(" ")}
-            >
-              {groupe.titre}
-            </span>
-
-            <ul className="flex list-none flex-col gap-1 p-0">
-              {groupe.ecrans.map((ecran) => {
-                const libelle = fr.nav.ecrans[ecran];
-                const construit = ECRANS_CONSTRUITS.includes(ecran);
-                const actif = construit && estActif(ecran);
-
-                if (!construit) {
-                  return (
-                    <li key={ecran}>
-                        <div
-                        aria-disabled="true"
-                        title={fr.coquille.ecranAVenir}
-                        className="flex min-h-target items-center justify-center gap-2.5 rounded-xl px-3 py-2 text-white/45 tablet:justify-between"
-                      >
-                        <span className="flex items-center gap-2.5">
-                          <Icone nom={ecran} taille={16} className="opacity-60" />
-                          <span
-                            className={["font-ui text-body font-regular", LIBELLE_REPLIABLE].join(" ")}
-                          >
-                            {libelle}
-                          </span>
-                        </span>
-                        {/* Décision Q12 : la mention reste VISIBLE et assumée.
-                         *
-                         * ⚠️ ELLE A ÉTÉ NETTEMENT CALMÉE APRÈS REVUE VISUELLE.
-                         * Première version : pastille de fond, MAJUSCULES,
-                         * demi-gras. Vu à l'écran, l'effet était l'inverse de
-                         * l'intention — neuf « BIENTÔT » criaient plus fort que
-                         * les trois écrans qui marchent, et l'œil y allait en
-                         * premier. Une mention d'indisponibilité qui domine la
-                         * navigation est un contresens.
-                         *
-                         * Calmée par la TAILLE et la GRAISSE, jamais par le
-                         * contraste : bas de casse, graisse normale, pas de
-                         * pastille. Le blanc pur reste (≥ 5:1 sur toute la
-                         * hauteur du rail). C'est la règle du système — la
-                         * hiérarchie ne s'obtient pas en rendant un texte
-                         * moins lisible. */}
-                        <span
-                          className={[
-                            "shrink-0 font-ui text-label font-regular text-on-brand",
-                            LIBELLE_REPLIABLE,
-                          ].join(" ")}
-                        >
-                          {fr.coquille.bientot}
-                        </span>
-                      </div>
-                    </li>
-                  );
-                }
-
-                return (
-                  <li key={ecran}>
-                      <Link
-                      href={`/${ecran}`}
-                      aria-current={actif ? "page" : undefined}
-                      className={[
-                        "flex min-h-target items-center justify-center gap-2.5 rounded-xl px-3 py-2 font-ui text-body no-underline transition duration-quick ease-out tablet:justify-start",
-                        actif
-                          ? "bg-white text-brand-800 font-bold shadow-lift2"
-                          : "text-white/80 hover:bg-white/10 hover:text-white",
-                      ].join(" ")}
-                    >
-                      <Icone nom={ecran} taille={16} />
-                      <span className={LIBELLE_REPLIABLE}>{libelle}</span>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        ))}
-
-        <div className="relative mt-auto flex shrink-0 flex-col gap-3 rounded-xl bg-on-brand-surface p-3 backdrop-blur-sm">
-          <span
-            className={[
-              "font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-on-brand",
-              LIBELLE_REPLIABLE,
-            ].join(" ")}
-          >
-            {fr.coquille.deconnexionCompte}
-          </span>
-          <div className="flex items-center gap-2">
-            <span
-              aria-hidden="true"
-              className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white font-ui text-label font-bold text-brand-700 shadow-lift1"
-            >
-              {monogrammeCompte(nomComplet)}
-            </span>
-            {/* Le nom de l'utilisatrice connectée EST une donnée identifiante.
-                Il est ici sur un fond de marque — admis parce que ce fond est le
-                dégradé sombre et que l'encre est le blanc pur (≥ 5:1 sur toute
-                la hauteur du rail), jamais un blanc atténué. */}
-            {/* ⚠️ UNE SEULE LIGNE, ET C'EST STRUCTUREL.
-                Sans `truncate`, « Praticienne 1 (données de test) » se répartit sur
-                trois lignes et POUSSE LE BOUTON DE DÉCONNEXION SOUS LE BORD DE
-                L'ÉCRAN — mesuré à 1920×1080. Ancrer le bloc en bas ne suffisait
-                pas : c'est le bloc lui-même qui grandissait. Un nom long est la
-                règle, pas l'exception (I11), et le bouton qui ferme la session
-                dans une salle de consultation ne peut pas dépendre de sa
-                longueur. Le nom complet reste lisible en infobulle. */}
-            <span
-              title={nomComplet || fr.etats.texteAbsent}
-              className={["min-w-0 truncate font-ui text-body font-semibold text-on-brand", LIBELLE_REPLIABLE].join(
-                " ",
-              )}
-            >
-              {nomComplet || fr.etats.texteAbsent}
-            </span>
-          </div>
-          <button
-            type="button"
-            onClick={onDeconnexion}
-            title={fr.actions.seDeconnecter}
-            className="mt-1 flex min-h-target items-center justify-center gap-2 rounded-xl bg-on-brand-surface-hover px-3 py-2 font-ui text-label font-semibold text-on-brand transition duration-quick ease-out hover:bg-on-brand-surface tablet:justify-start"
-          >
-            <Icone nom="deconnexion" taille={16} />
-            <span className={LIBELLE_REPLIABLE}>{fr.actions.seDeconnecter}</span>
-          </button>
-        </div>
-        </div>
-      </nav>
-
-      {/* DEUX COLONNES, PAS TROIS — ET C'EST DÉLIBÉRÉ.
-          Le §3 décrit une troisième colonne de contexte (340px, repliable).
-          Elle n'est pas posée ici parce qu'aucun écran n'a encore de contenu à
-          y mettre. Une version antérieure de ce fichier rendait déjà le bouton
-          « Masquer le contexte » au-dessus d'une colonne inexistante : un
-          bouton qui ne replie rien apprend à la praticienne que les commandes
-          de cette interface ne font pas ce qu'elles disent, ce qui coûte plus
-          cher que la colonne manquante. Le jeton `--grid-context-width` existe
-          et attend l'écran qui en aura besoin. */}
-      {/* ⚠️ `min-h-0` + `overflow-hidden` SUR CETTE COLONNE, ET SUR LA GRILLE.
+      {/* ⚠️ `min-h-0` + `overflow-hidden` SUR CETTE COLONNE, ET C'EST STRUCTUREL.
           Sans eux, la grille de l'agenda — plus haute que la fenêtre — faisait
-          grandir sa RANGÉE, donc la colonne, donc le rail : mesuré à 1359 px de
+          grandir sa rangée, donc la colonne, donc le rail : mesuré à 1359 px de
           haut pour une fenêtre de 1080, « Se déconnecter » à 1342. Le rail
           suivait la taille du CONTENU d'à côté, ce qu'aucun mobilier ne devrait
-          faire. Un enfant de grille refuse par défaut de descendre sous la
-          taille de son contenu : `min-h-0` lève ce refus, `overflow-hidden`
-          borne la boîte, et le défilement retombe alors là où il doit être —
-          dans `<main>`, et nulle part ailleurs. */}
-      <div className="flex min-h-0 flex-col overflow-hidden bg-layer-ambient">
-        <BandeauSeanceEnCours role={role} />
+          faire. Un enfant de flex refuse par défaut de descendre sous la taille
+          de son contenu : `min-h-0` lève ce refus, et le défilement retombe
+          alors là où il doit être — dans `<main>`, et nulle part ailleurs. */}
+      <div className="flex min-w-0 min-h-0 flex-1 flex-col overflow-hidden bg-canevas">
+        {modeSeance ? null : (
+          <Topbar
+            titre={titreEffectif}
+            {...(sousTitre === undefined ? {} : { sousTitre })}
+            {...(actions === undefined ? {} : { actions })}
+            {...(avecAlexa ? { onOuvrirCommande: () => setAlexaOuvert(true) } : {})}
+          />
+        )}
+
+        {/* Rappeler « une séance est en cours » à quelqu'un qui est DANS la
+            séance serait du bruit : le bandeau ne sert qu'ailleurs. */}
+        {modeSeance ? null : <BandeauSeanceEnCours role={role} />}
+
         <main
-          className="mx-auto w-full max-w-main flex-1 overflow-y-auto px-5 py-6 lg:px-6 lg:py-8"
+          id="contenu-principal"
+          className={[
+            "min-h-0 flex-1 overflow-y-auto",
+            sansGouttiere ? "" : "px-6 py-6",
+          ].join(" ")}
         >
           {children}
         </main>
       </div>
 
-      {/* Panneau Alexa : uniquement pour praticienne. L'assistante n'a pas de
-          contexte clinique. `BootVoix` porte le cycle de vie du mot de réveil et
-          ne rend rien ; il vit ici pour durer autant que l'application, pas
-          autant qu'un écran.
-
-          ⚠️ CE `role !==` EST UNE COMPOSITION D'INTERFACE, PAS UN CONTRÔLE DE
-          SÉCURITÉ (règle 4). Ce qu'Alexa peut lire ou écrire est décidé par la
-          RLS et les portes SQL, qui ne connaissent pas ce composant. */}
-      {role !== "assistant" ? (
+      {/* `BootVoix` porte le cycle de vie du mot de réveil et ne rend rien ; il
+          vit ici pour durer autant que l'application, pas autant qu'un écran. */}
+      {avecAlexa ? (
         <>
           <BootVoix />
-          <PanneauJarvis />
+          <PanneauJarvis ouvert={alexaOuvert} onChangerOuvert={setAlexaOuvert} />
         </>
       ) : null}
     </div>

@@ -62,7 +62,6 @@ import {
   Champ,
   ChampTexte,
   ChampZoneTexte,
-  EnTetePage,
   EspaceTravail,
   EtatVide,
   GrilleChamps,
@@ -395,6 +394,13 @@ export default function PageConsultation(): React.JSX.Element {
   const etatVerrou = noteEstVerrouillee(note, maintenant);
   const restantMs = tempsRestantAvantVerrou(note, maintenant);
   const seanceClose = seance?.status === "closed";
+  /**
+   * LE MODE SÉANCE ne s'arme que sur une séance OUVERTE. Une consultation
+   * close se relit comme un document : elle reprend la coquille normale, avec
+   * son rail et sa barre. Se retrouver dans le noir pour relire une note d'il
+   * y a trois semaines serait un effet de style, pas une aide.
+   */
+  const enSeance = seance != null && !seanceClose;
   // La note se rédige tant qu'elle n'est pas verrouillée — y compris pendant la
   // fenêtre de 15 minutes qui SUIT la signature. Ce n'est pas une tolérance :
   // c'est le dispositif d'I15, et le retirer ferait passer par un amendement une
@@ -1010,44 +1016,72 @@ export default function PageConsultation(): React.JSX.Element {
       role={utilisateur.role}
       nomComplet={utilisateur.fullName}
       onDeconnexion={deconnecter}
+      modeSeance={enSeance}
+      titre={
+        seance == null
+          ? fr.consultation.titre
+          : // Un rendez-vous sans dossier visible garde sa séance et perd
+            // seulement son nom : faire disparaître l'écran masquerait une
+            // consultation réelle (même raison que le LEFT JOIN en base).
+            (nomPatient(seance.firstName, seance.lastName) ?? fr.agenda.patientNonRattache)
+      }
+      {...(seance?.practitionerName == null ? {} : { sousTitre: seance.practitionerName })}
+      actions={
+        seance == null ? (
+          <LienBouton href="/agenda">{fr.agenda.retourALAgenda}</LienBouton>
+        ) : (
+          <div className="flex flex-wrap items-center gap-4">
+            {/* Le chronomètre s'arrête à la clôture : une séance close affiche
+                sa durée réelle si elle est connue, ou le dit honnêtement sinon
+                (V1.3) — jamais un compteur qui continue. */}
+            <span className="font-num text-num tabular-nums text-ink-900">
+              {dureeAffichee(seanceClose, seance.startedAt, seance.endedAt, maintenant)}
+            </span>
+            <LienBouton href="/agenda" rang="discret">
+              {fr.agenda.retourALAgenda}
+            </LienBouton>
+          </div>
+        )
+      }
     >
-      <div className="flex flex-col gap-8">
+      <div className="mx-auto flex w-full max-w-main flex-col gap-8">
         {horsLigne || horsLigneSession ? <BandeauHorsLigne /> : null}
 
-        <EnTetePage
-          surTitre={
-            seanceClose ? fr.consultation.surTitreClose : fr.consultation.surTitreSeance
-          }
-          titre={
-            seance == null
-              ? fr.consultation.titre
-              : // Un rendez-vous sans dossier visible garde sa séance et perd
-                // seulement son nom : faire disparaître l'écran masquerait une
-                // consultation réelle (même raison que le LEFT JOIN en base).
-                (nomPatient(seance.firstName, seance.lastName) ??
-                fr.agenda.patientNonRattache)
-          }
-          {...(seance?.practitionerName == null
-            ? {}
-            : { sousTitre: seance.practitionerName })}
-          actions={
-            seance == null ? (
-              <LienBouton href="/agenda">{fr.agenda.retourALAgenda}</LienBouton>
-            ) : (
-              <div className="flex flex-wrap items-center gap-4">
-                {/* Le chronomètre s'arrête à la clôture : une séance close
-                    affiche sa durée réelle si elle est connue, ou le dit
-                    honnêtement sinon (V1.3) — jamais un compteur qui continue. */}
-                <span className="font-num text-num tabular-nums text-ink-900">
-                  {dureeAffichee(seanceClose, seance.startedAt, seance.endedAt, maintenant)}
-                </span>
-                <LienBouton href="/agenda" rang="discret">
-                  {fr.agenda.retourALAgenda}
-                </LienBouton>
-              </div>
-            )
-          }
-        />
+        {/*
+          L'EN-TÊTE DE SÉANCE — visible UNIQUEMENT dans le mode séance.
+          Hors séance, l'identité est portée par la barre supérieure et
+          répéter le nom ici ferait deux titres pour un écran.
+
+          Dans la séance, il n'y a plus de barre : ce bloc EST le seul repère.
+          Le nom domine, le chrono se lit d'un coup d'œil à l'autre bout de la
+          ligne, et la seule sortie reste atteignable sans chercher.
+        */}
+        {enSeance && seance != null ? (
+          <header className="flex flex-wrap items-baseline justify-between gap-4 border-b border-rule pb-5">
+            <div className="flex min-w-0 flex-col gap-1">
+              <h1 className="truncate font-ui text-display font-bold tracking-display text-ink-900">
+                {nomPatient(seance.firstName, seance.lastName) ?? fr.agenda.patientNonRattache}
+              </h1>
+              {seance.practitionerName == null ? null : (
+                <p className="font-ui text-body font-regular text-ink-500">
+                  {seance.practitionerName}
+                </p>
+              )}
+            </div>
+            <div className="flex shrink-0 items-center gap-5">
+              <span
+                /* Le chrono en chiffres tabulaires : sans `tabular-nums`, les
+                   secondes font trembler la ligne à chaque seconde. */
+                className="font-num text-metric font-semibold tabular-nums tracking-metric text-ink-900"
+              >
+                {dureeAffichee(seanceClose, seance.startedAt, seance.endedAt, maintenant)}
+              </span>
+              <LienBouton href="/agenda" rang="discret">
+                {fr.agenda.retourALAgenda}
+              </LienBouton>
+            </div>
+          </header>
+        ) : null}
 
         {confirmation === undefined ? null : (
           <PanneauInfo ton="positif">{confirmation}</PanneauInfo>

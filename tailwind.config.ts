@@ -302,6 +302,17 @@ const config: Config = {
           letterSpacing: "var(--text-eyebrow-tracking)",
         },
       ],
+      // V7 — LA MÉTRIQUE. Les trois jetons --text-metric-* existaient dans
+      // tokens.css sans aucune classe pour les consommer : `text-metric`
+      // n'émettait rien. Réservé aux valeurs qui se lisent d'un coup d'œil à
+      // distance — le chrono de séance, un total. Jamais du texte courant.
+      metric: [
+        "var(--text-metric-size)",
+        {
+          lineHeight: "var(--text-metric-leading)",
+          letterSpacing: "var(--text-metric-tracking)",
+        },
+      ],
       num: [
         "var(--text-num-size)",
         {
@@ -321,6 +332,7 @@ const config: Config = {
     // lineHeight/letterSpacing en classes autonomes (hors fontSize) — mêmes
     // variables que ci-dessus, pas de nouvelle échelle parallèle.
     lineHeight: {
+      metric: "var(--text-metric-leading)",
       display: "var(--text-display-leading)",
       title: "var(--text-title-leading)",
       heading: "var(--text-heading-leading)",
@@ -332,6 +344,7 @@ const config: Config = {
       arabic: "var(--text-arabic-leading)",
     },
     letterSpacing: {
+      metric: "var(--text-metric-tracking)",
       display: "var(--text-display-tracking)",
       title: "var(--text-title-tracking)",
       heading: "var(--text-heading-tracking)",

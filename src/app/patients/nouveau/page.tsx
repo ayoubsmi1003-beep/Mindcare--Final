@@ -30,7 +30,6 @@ import { PanneauSimilaires } from "@/components/patients/PanneauSimilaires";
 import {
   BandeauHorsLigne,
   BlocErreur,
-  EnTeteEcran,
   Squelette,
 } from "@/components/ui";
 import { fr } from "@/i18n/fr";
@@ -197,14 +196,9 @@ export default function PageNouveauDossier(): React.JSX.Element {
       role={utilisateur?.role ?? "assistant"}
       nomComplet={utilisateur?.fullName ?? ""}
       onDeconnexion={deconnecter}
+      titre={fr.patients.creation.titre}
+      sousTitre={fr.patients.creation.sousTitre}
     >
-      <EnTeteEcran
-        icone="patients"
-        surTitre={fr.patients.creation.surTitre}
-        titre={fr.patients.creation.titre}
-        sousTitre={fr.patients.creation.sousTitre}
-      />
-
       {horsLigne ? (
         <div className="my-4">
           <BandeauHorsLigne />

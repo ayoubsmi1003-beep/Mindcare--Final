@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import { AppShell } from "@/components/AppShell";
 import { useSessionEcran } from "@/components/useSessionEcran";
-import { BandeauHorsLigne, BlocErreur, Bouton, EnTeteEcran, Squelette } from "@/components/ui";
+import { BandeauHorsLigne, BlocErreur, Bouton, Squelette } from "@/components/ui";
 import { Carte } from "@/components/ui/Surfaces";
 import { ChampTexte } from "@/components/ui/Champs";
 import { LienBouton } from "@/components/ui/Bouton";
@@ -78,14 +78,19 @@ export default function ParametresDocumentsPage(): React.JSX.Element {
   const horsLigne = horsLigneSession;
 
   return (
-    <AppShell role={utilisateur.role} nomComplet={utilisateur.fullName} onDeconnexion={deconnecter}>
-      <div className="flex flex-col gap-6">
+    <AppShell
+      role={utilisateur.role}
+      nomComplet={utilisateur.fullName}
+      onDeconnexion={deconnecter}
+      titre="Paramètres · Documents"
+      sousTitre="Informations utilisées dans l'en-tête de chaque certificat"
+    >
+      <div className="flex max-w-form flex-col gap-6">
         {horsLigne ? <BandeauHorsLigne /> : null}
-        <EnTeteEcran icone="parametres" titre="Paramètres · Documents" sousTitre="Informations utilisées dans l'en-tête de chaque certificat" />
 
         {readiness && !readiness.canIssue ? (
           <div className="rounded-lg border border-attention bg-attention-bg p-4">
-            <p className="font-ui text-label font-semibold uppercase tracking-label text-attention-ink">En-tête incomplet</p>
+            <p className="font-ui text-body font-semibold text-attention-ink">En-tête incomplet</p>
             <p className="font-ui text-body text-ink-700">{readiness.missing.map((m)=>m.label).join(" · ")}</p>
             <p className="font-ui text-label text-ink-500">Ces informations sont requises pour émettre un certificat. L&apos;impression est bloquée, la consultation du dossier reste possible.</p>
           </div>

@@ -49,7 +49,6 @@ import { useSessionEcran } from "@/components/useSessionEcran";
 import {
   BandeauHorsLigne,
   BlocErreur,
-  EnTeteEcran,
   LienBouton,
   Squelette,
 } from "@/components/ui";
@@ -273,16 +272,18 @@ export default function FinancesPage(): React.JSX.Element {
       role={utilisateur.role}
       nomComplet={utilisateur.fullName}
       onDeconnexion={deconnecter}
+      actions={<SelecteurPeriode periode={periode} onChange={changerPeriode} />}
+      sansGouttiere
     >
       {/* `h-full` + `overflow-hidden` : la page NE DÉFILE PAS. Ce qui ne tient
           pas se comprime (rangée 3) ou défile DANS son panneau (Anatomie). */}
-      <div className="flex h-full min-h-0 flex-col gap-3 overflow-hidden">
+      {/* La gouttiere est POSEE ICI, pas par la coquille (`sansGouttiere`) :
+          cette page ne defile pas, et `h-full` additionne a un `padding`
+          exterieur deborderait de la hauteur disponible d'exactement ce
+          padding. La rentrer dans le conteneur qui porte `h-full` fait que
+          les deux se composent au lieu de s'additionner. */}
+      <div className="flex h-full min-h-0 flex-col gap-3 overflow-hidden px-6 py-5">
         {horsLigneSession ? <BandeauHorsLigne /> : null}
-
-        <div className="flex flex-wrap items-end justify-between gap-3">
-          <EnTeteEcran icone="finances" titre={fr.finances.titre} />
-          <SelecteurPeriode periode={periode} onChange={changerPeriode} />
-        </div>
 
         {/* v9 — LES ONGLETS EN SEGMENTÉ. Le souligné flottant sous un trait
             plein laissait l'onglet actif à moitié posé ; ici le conteneur

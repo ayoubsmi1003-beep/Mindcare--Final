@@ -57,7 +57,6 @@ import {
   ChampSelection,
   ChampTexte,
   ChampZoneTexte,
-  EnTetePage,
   EtatVide,
   GrilleChamps,
   LienBouton,
@@ -312,6 +311,18 @@ export default function PageRendezVous(): React.JSX.Element {
       role={utilisateur?.role ?? "assistant"}
       nomComplet={utilisateur?.fullName ?? ""}
       onDeconnexion={deconnecter}
+      titre={
+        rdv == null
+          ? fr.nav.ecrans.agenda
+          : (nomPatient(rdv.lastName, rdv.firstName) ?? fr.agenda.patientNonRattache)
+      }
+      {...(rdv == null
+        ? {}
+        : (() => {
+            const j = jourComplet(rdv.startsAt);
+            return j === null ? {} : { sousTitre: j };
+          })())}
+      {...(rdv == null ? {} : { actions: <Statut statut={rdv.status} /> })}
     >
       {horsLigne || horsLigneSession ? <BandeauHorsLigne /> : null}
 
@@ -328,15 +339,6 @@ export default function PageRendezVous(): React.JSX.Element {
         </div>
       ) : (
         <div className="flex flex-col gap-8">
-          <EnTetePage
-            titre={nomPatient(rdv.lastName, rdv.firstName) ?? fr.agenda.patientNonRattache}
-            actions={<Statut statut={rdv.status} />}
-            {...(() => {
-              const j = jourComplet(rdv.startsAt);
-              return j === null ? {} : { surTitre: j };
-            })()}
-          />
-
           {/* Une confirmation est un FAIT ACQUIS : ton positif, `role="status"`
               pour qu'un lecteur d'écran l'annonce sans couper la parole. */}
           {confirmation !== undefined ? (

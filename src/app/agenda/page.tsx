@@ -44,7 +44,6 @@ import {
   BandeauHorsLigne,
   BlocErreur,
   Chiffre,
-  EnTeteEcran,
   EtatVide,
   LienBouton,
   Section,
@@ -263,23 +262,18 @@ export default function PageAgenda(): React.JSX.Element {
       role={utilisateur?.role ?? "assistant"}
       nomComplet={utilisateur?.fullName ?? ""}
       onDeconnexion={deconnecter}
+      sousTitre={jourComplet(new Date().toISOString()) ?? fr.etats.texteAbsent}
+      actions={
+        <LienBouton href="/agenda/nouveau" rang="principal">
+          {fr.agenda.nouveau}
+        </LienBouton>
+      }
     >
       {/* L'écran respire par blocs de `--s-8` : titre, barre de période, grille,
           file d'attente. C'est l'espace, pas des traits, qui sépare des sujets
           différents — un filet de plus sur un agenda déjà quadrillé ajoute une
           ligne à lire pour rien. */}
       <div className="flex flex-col gap-8">
-        <EnTeteEcran
-          icone="agenda"
-          titre={fr.agenda.titre}
-          sousTitre={jourComplet(new Date().toISOString()) ?? fr.etats.texteAbsent}
-          actions={
-            <LienBouton href="/agenda/nouveau" rang="principal">
-              {fr.agenda.nouveau}
-            </LienBouton>
-          }
-        />
-
         {/* ── Période, chiffres, navigation ──────────────────────────────── */}
         <div className="flex flex-col gap-4">
           <div className="flex flex-wrap items-center gap-4">

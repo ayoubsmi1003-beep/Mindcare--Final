@@ -1056,6 +1056,60 @@
   /* Plancher d'accessibilité — WORKING-CONTEXT §4.4. Focus visible PARTOUT.
    * Ne jamais poser `outline: none` sans remplacer par un focus au moins aussi
    * visible : au clavier, un focus invisible rend l'application inutilisable. */
+  /* ══════════════════════════════════════════════════════════════════════
+   * LE MODE SÉANCE — LE SEUL MOMENT ORCHESTRÉ DU PRODUIT
+   * ══════════════════════════════════════════════════════════════════════
+   * Quand une consultation s'ouvre, l'interface se retire : le rail et la
+   * barre supérieure disparaîssent, le fond glisse vers l'encre de nuit, et il
+   * ne reste que la patiente ou le patient, la note, et le chrono.
+   *
+   * C'est là, et NULLE PART AILLEURS, que ce produit dépense son audace. Le
+   * plancher de craft ne tolère qu'UN moment orchestré ; le reste de
+   * l'application est délibérément silencieux.
+   *
+   * ⚠️ POURQUOI UN REMAPPAGE DE VARIABLES, ET PAS UNE PROP `mode` :
+   * l'espace de travail de la consultation empile `EspaceTravail`,
+   * `SectionPliable`, quatre `ChampZoneTexte`, `BlocTarif`, `PanneauInfo`,
+   * `Badge`… Faire descendre un booléen jusqu'à chacun signifierait toucher
+   * une douzaine de composants partagés pour un écran, et laisser dans chacun
+   * une branche `if (nuit)` que personne ne relira. Ici, les composants ne
+   * savent RIEN : ils lisent `var(--card)` comme toujours, et c'est la valeur
+   * de `--card` qui change sous eux.
+   *
+   * Contrastes MESURÉS sur --night-card (#132321) :
+   *   --ink-900 → --night-ink       #dce8e5  → 14.9:1
+   *   --ink-500 → --night-ink-soft  #93a8a3  →  6.49:1  texte secondaire valide
+   *   --ink-300 → #5d7671                    →  3.33:1  NON-TEXTUEL uniquement,
+   *                                             comme en clair (il y vaut 2.43:1)
+   */
+  .mode-seance {
+    --canevas: var(--night-bg);
+    --layer-ambient: var(--night-bg);
+    --card: var(--night-card);
+    --layer-surface: var(--night-card);
+    --layer-raised: var(--night-card);
+    --sunken: #0f1c1a;
+    --paper: var(--night-bg);
+    --rule: var(--night-rule);
+    --ink-900: var(--night-ink);
+    --ink-700: var(--night-ink);
+    --ink-500: var(--night-ink-soft);
+    --ink-300: #5d7671;
+    --ink-100: var(--night-rule);
+    /* L'action reste lisible sur l'encre de nuit : --brand-600 y tombe à
+     * 2.9:1, --brand-400 y monte à 7.1:1. La marque ne change pas, son PAS
+     * dans la rampe change. */
+    --action-600: var(--brand-400);
+    --action-700: var(--brand-200);
+    --selection-bg: var(--brand-700);
+    --selection-ink: var(--night-ink);
+    scrollbar-color: var(--barre-defil-chrome) transparent;
+  }
+
+  .mode-seance ::-webkit-scrollbar-thumb {
+    background-color: var(--barre-defil-chrome);
+  }
+
   /* ── LES SURFACES QUE NOUS N'AVONS PAS DESSINÉES ───────────────────────
    * Sélection, curseur, barres de défilement : le navigateur les livre avec
    * des valeurs qui n'appartiennent à aucun design system. Sur un écran lu
@@ -1121,6 +1175,14 @@
    * Le blanc est la seule encre qui tienne sur les trois arrêts du dégradé.
    * Sans cette règle, la navigation au clavier devient invisible exactement là
    * où le fond est le plus coloré — c'est-à-dire là où on regarde le moins. */
+  /* V7 — même raison que `.sur-marque` : --action-600 est la marque et
+   * disparaîtrait sur le chrome sombre. Sans cette règle, la navigation au
+   * clavier serait invisible exactement dans le rail. */
+  .sur-chrome :focus-visible {
+    outline: var(--outline-width, 2px) solid var(--chrome-ink);
+    outline-offset: 2px;
+  }
+
   .sur-marque :focus-visible {
     outline: 2px solid var(--on-brand);
     outline-offset: 2px;

@@ -23,11 +23,18 @@
 export const fr = {
   /** Les douze écrans, groupés comme dans la navigation. Libellés imposés §5. */
   nav: {
+    /**
+     * V7 — CASSE DE PHRASE, PLUS DE CAPITALES.
+     * Les capitales assorties d'un interlettrage large sont le costume de
+     * l'« eyebrow » : elles crient le libellé d'un groupe qui n'a besoin que
+     * d'être repérable. La hiérarchie du rail se fait désormais à la taille et
+     * à l'encre (--chrome-ink-faint, 4.72:1), pas au volume.
+     */
     groupes: {
-      menu: "MENU",
-      clinique: "CLINIQUE",
-      gestion: "GESTION",
-      systeme: "SYSTÈME",
+      menu: "Menu",
+      clinique: "Clinique",
+      gestion: "Gestion",
+      systeme: "Système",
     },
     ecrans: {
       tableauDeBord: "Tableau de bord",
@@ -125,6 +132,18 @@ export const fr = {
     /** La pastille elle-même. Décision Q12 : assumée et visible, pas masquée. */
     bientot: "bientôt",
     deconnexionCompte: "Compte connecté :",
+    /**
+     * V7 — LA BARRE SUPÉRIEURE. L'identité de page y monte, ce qui supprime
+     * la bannière héros qui ouvrait chaque écran sur le même dégradé et
+     * coûtait 120 px de hauteur utile partout.
+     */
+    commande: "Rechercher un patient, un rendez-vous, un document…",
+    commandeCourt: "Rechercher…",
+    /** Le raccourci, affiché dans la barre. Non traduit : c'est une touche. */
+    raccourci: "⌘K",
+    barreOutils: "Barre d'outils",
+    contenuPrincipal: "Contenu principal",
+    allerAuContenu: "Aller au contenu",
     /** Le rail lui-même, pour `aria-label` — distinct du groupe « MENU ». */
     navigationPrincipale: "Navigation principale",
   },
