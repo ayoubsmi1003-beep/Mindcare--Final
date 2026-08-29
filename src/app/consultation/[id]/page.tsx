@@ -680,6 +680,7 @@ export default function PageConsultation(): React.JSX.Element {
       return (
         <EtatVide
           message={fr.consultation.introuvable}
+          icone="documents"
           action={<LienBouton href="/agenda">{fr.agenda.retourALAgenda}</LienBouton>}
         />
       );

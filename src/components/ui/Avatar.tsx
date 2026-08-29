@@ -58,7 +58,7 @@ export function Avatar({
       aria-hidden="true"
       className={[
         "inline-flex shrink-0 items-center justify-center rounded-full",
-        "bg-brand-100 font-ui font-semibold text-brand-900",
+        "bg-grad-avatar font-ui font-semibold text-brand-900 shadow-lift1",
         TAILLES[taille],
       ].join(" ")}
     >

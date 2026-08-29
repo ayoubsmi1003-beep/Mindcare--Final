@@ -83,7 +83,7 @@ export function SelecteurPatient({
       {enCours ? <Squelette lignes={3} /> : null}
 
       {!enCours && resultats !== null && resultats.length === 0 ? (
-        <EtatVide message={fr.documents.selecteur.aucunResultat} />
+        <EtatVide message={fr.documents.selecteur.aucunResultat} icone="recherche" />
       ) : null}
 
       {!enCours && resultats !== null && resultats.length > 0 ? (

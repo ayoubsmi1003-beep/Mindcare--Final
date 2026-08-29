@@ -13,6 +13,12 @@
  * la chrome flottante, et ce bandeau vit dans le flux normal de la page, pas
  * au-dessus. Ton neutre, jamais `--critical` : une séance ouverte est un état
  * normal, pas un incident.
+ *
+ * v9 — LE BANDEAU EST COMPOSÉ, plus une ligne grise. La pastille d'horloge
+ * ancre le regard, l'eyebrow porte l'état, et le lien « Reprendre » devient
+ * l'objet le plus posable de la barre : c'est LE geste que ce bandeau existe
+ * pour offrir. Aucune donnée clinique ne repose sur le bandeau — son libellé
+ * est un état, pas une valeur.
  */
 
 "use client";
@@ -22,6 +28,7 @@ import Link from "next/link";
 import { fr } from "@/i18n/fr";
 import type { UserRole } from "@/services/authz";
 
+import { Icone } from "./ui/Icones";
 import { useSeanceEnCours } from "./useSeanceEnCours";
 
 export function BandeauSeanceEnCours({ role }: { readonly role: UserRole }): React.JSX.Element | null {
@@ -32,49 +39,25 @@ export function BandeauSeanceEnCours({ role }: { readonly role: UserRole }): Rea
   return (
     <aside
       aria-label={fr.consultation.seanceEnCours}
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        alignItems: "center",
-        gap: "var(--s-3)",
-        padding: "var(--s-3) var(--s-5)",
-        background: "var(--card)",
-        borderBottom: "var(--rule-width) solid var(--rule)",
-        fontFamily: "var(--font-ui)",
-      }}
+      className="flex flex-wrap items-center gap-3 border-b border-rule bg-card px-5 py-2"
     >
       <span
-        style={{
-          fontSize: "var(--text-eyebrow-size)",
-          lineHeight: "var(--text-eyebrow-leading)",
-          letterSpacing: "var(--text-eyebrow-tracking)",
-          fontWeight: "var(--weight-semibold)",
-          textTransform: "uppercase",
-          color: "var(--ink-500)",
-        }}
+        aria-hidden="true"
+        className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-action-100 text-action-600"
       >
+        <Icone nom="horloge" taille={16} />
+      </span>
+
+      <span className="font-ui text-eyebrow font-semibold uppercase tracking-eyebrow text-ink-700">
         {fr.consultation.seanceEnCours}
       </span>
 
       <Link
         href={`/consultation/${seanceId}`}
-        style={{
-          display: "inline-flex",
-          alignItems: "center",
-          minHeight: "var(--target-min)",
-          marginLeft: "auto",
-          padding: "var(--s-1) var(--s-3)",
-          borderRadius: "var(--r-md)",
-          border: "var(--rule-width) solid var(--rule)",
-          background: "var(--card)",
-          color: "var(--ink-900)",
-          fontSize: "var(--text-label-size)",
-          lineHeight: "var(--text-label-leading)",
-          fontFamily: "var(--font-ui)",
-          textDecoration: "none",
-        }}
+        className="ml-auto inline-flex min-h-target items-center gap-2 rounded-full bg-action-600 px-4 py-2 font-ui text-label font-medium text-paper no-underline shadow-lift1 transition duration-quick ease-soft hover:bg-action-700 hover:shadow-lift2"
       >
         {fr.consultation.reprendre}
+        <Icone nom="fleche" taille={16} />
       </Link>
     </aside>
   );

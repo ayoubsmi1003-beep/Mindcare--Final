@@ -86,16 +86,22 @@
     --brand-050: #f1f8f6;
 
     /* ── ACCENTS — agrégats et graphiques UNIQUEMENT (ADR-022) ─────────────
-     * Ils n'ont aucun sens clinique et ne doivent jamais en prendre un. */
+     * Ils n'ont aucun sens clinique et ne doivent jamais en prendre un.
+     * ⚠️ RÈGLE WCAG V2 — tons 400/500 clairs NE PORTENT JAMAIS DE TEXTE sur
+     * blanc : brand-400 2.32:1, brand-500 3.33:1, azure-400 3.26:1, violet-500 4.24:1,
+     * coral-400 2.58:1, amber-400 2.14:1, coral-600 4.38:1 → tous FAIL <4.5.
+     * Seules variantes *-ink / *-600 foncées portent du texte :
+     * brand-600 5.10:1, azure-600 6.12:1, ai-600 6.46:1, coral-ink 6.10:1,
+     * attention-ink 6.28:1, positive 5.06:1, critical 6.54:1. Respecter. */
     --azure-600: #2563a8;
-    --azure-400: #5b92ce;
-    --violet-500: #7c6bd8; /* 3e série de graphique, pas davantage */
+    --azure-400: #5b92ce; /* ACCENT GRAPHIQUE SEULEMENT, jamais texte 3.26:1 FAIL */
+    --violet-500: #7c6bd8; /* 3e série graphique, jamais texte sur blanc 4.24:1 */
 
-    --attention: #b8763a;
+    --attention: #b8763a; /* 3.69:1 FAIL — accent/liseré seulement */
     --attention-bg: #fbf2e9;
-    --critical: #a33a32;
+    --critical: #a33a32; /* 6.54:1 PASS — peut porter texte */
     --critical-bg: #fbedec;
-    --positive: #3e7a5e;
+    --positive: #3e7a5e; /* 5.06:1 PASS */
     --positive-bg: #edf5f1;
 
     /* ⚠️ L'AMBRE NE PEUT PAS PORTER DE TEXTE SUR SON PROPRE FOND — MESURÉ.
@@ -173,15 +179,16 @@
     --info-050: #eef4fb;
 
     /* ------------------------------------------------------------------
-     * PROFONDEUR EN TROIS COUCHES — ADR-022 appliqué
+     * PROFONDEUR EN TROIS COUCHES + 6 NIVEAUX V2 — L1-L6 Vibrant Instrument
      *
-     * Trois couches, pas davantage. Un système à cinq niveaux ne se tient pas :
-     * personne ne sait plus lequel choisir, et tout finit au niveau le plus
-     * haut, c'est-à-dire à plat.
-     *
-     *   ambiant  → le sol de la page. Teinté, jamais blanc pur.
-     *   surface  → les surfaces applicatives. Opaque.
-     *   élevé    → l'actif, l'important, l'interactif.
+     * L1 Environment 70-80% — layer-ambient #F1F8F6 + atmosphere 8/5/4%
+     * L2 Structure    10-15% — card/sunken/rule + lift1-2
+     * L3 Information  porte 70% hiérarchie — Inter 400/500/600/700/800 + tabular
+     * L4 Sémantique    5-10% — attention-ink/critical/positive + kind 3px
+     * L5 Marque        5-10% — brand-600/700/900 + grad-auth rail, hero seulement
+     * L6 Vibrant       <5%  — grad-tile/grad-orb/empty disc — rare wow-factor
+     * Si retirer 30% déco améliore, l'élément n'aurait jamais dû exister.
+     * Profondeur physique reste 3 couches : ambiant/surface/élevé.
      * ------------------------------------------------------------------ */
     --layer-ambient: var(--brand-050);
     --layer-surface: var(--card);
@@ -206,6 +213,12 @@
       0 4px 16px -4px rgba(124, 181, 172, 0.45);
     --glow-ai: 0 0 24px -4px rgba(124, 107, 216, 0.42),
       0 8px 32px -8px rgba(124, 107, 216, 0.28);
+    /* v9 — L'ENTRÉE ACTIVE DU RAIL : la lueur de marque ET le filet interne
+     * haut dans UN SEUL jeton. Deux utilitaires `shadow-*` ne se composent pas
+     * — le second écrase le premier — et poser les deux valeurs en dur dans le
+     * composant rouvrirait la porte aux alphas arbitraires. La composition vit
+     * ici, nommée, une fois. */
+    --glow-nav: var(--glow-brand), var(--layer-sheen);
 
     /* ------------------------------------------------------------------
      * DÉGRADÉS — LISTE FERMÉE (ADR-022). Il y en a TROIS.
@@ -290,7 +303,10 @@
     --kind-premiere-accent: #5b5bd6;
     --kind-premiere-bg: #eeeefb;
 
-    --kind-psychotherapie-accent: #2b7a9b;
+    /* V2 WCAG correction 2026-08-29 : #2b7a9b sur #e8f2f7 = 4.24:1 FAIL (<4.5).
+     * Passé à #247095 → 4.83:1, et blanc sur #247095 → 5.49:1. Subtil assombrissement
+     * conserve teinte psychothérapie tout en tenant AA normal text. */
+    --kind-psychotherapie-accent: #247095;
     --kind-psychotherapie-bg: #e8f2f7;
 
     --kind-entretien-accent: var(--attention);
@@ -303,6 +319,151 @@
      * ce n'est pas un trait de séparation mais un marqueur de catégorie, et
      * lui donner 1px le rendrait invisible à distance de lecture. */
     --kind-accent-width: 3px;
+
+    /* ------------------------------------------------------------------
+     * PALETTE v3 — ADR-025 (00-DECISIONS.md), docs/04-DESIGN-SYSTEM.md v3 §3
+     *
+     * ADR-022 gardait trois familles (marque, azur, violet) et une liste
+     * fermée de trois dégradés, réservés aux agrégats. ADR-025 en ajoute deux
+     * (ambre étendu aux graphiques, corail) et lève la liste fermée : tout
+     * dégradé composé À L'INTÉRIEUR des familles ci-dessous est autorisé sur
+     * les surfaces de §4.1 (tuiles d'agrégat, en-têtes, nav, orbe, connexion,
+     * illustrations, états vides). La frontière qui ne bouge pas : §4.2 —
+     * aucune de ces valeurs ne passe derrière une donnée clinique.
+     *
+     * Les jetons `-ink` sont les seuls autorisés à PORTER DU TEXTE sur leur
+     * fond `-bg` / `-100` associé : chacun vérifié ≥ 4.5:1, pour ne pas
+     * reproduire le défaut mesuré d'ADR-022 sur `--attention`/`--attention-bg`
+     * (3.34:1, corrigé par `--attention-ink` plus haut). Un accent SANS `-ink`
+     * vérifié ne porte pas de texte — il reste un fond, un liseré, un point.
+     * ------------------------------------------------------------------ */
+
+    /* IA — élargie. --ai-600/--ai-500/--ai-100/--ai-050 existent déjà plus
+     * haut (rôle IA d'ADR-022) ; v3 leur ajoute les deux bornes de la rampe. */
+    --ai-700: #3b2f9e;
+    --ai-300: #b3a8ed;
+
+    /* AZUR — élargi. --info-600/--info-400/--info-100/--info-050 existent
+     * déjà (rôle INFO) ; v3 ajoute la borne foncée pour le texte sur fond
+     * clair et retient le nom `azure` pour un usage direct en graphique
+     * (deuxième série), distinct du rôle `info` de navigation. */
+    --azure-700: #1e4e85;
+    --azure-600: var(--info-600);
+    --azure-400: var(--info-400);
+    --azure-100: var(--info-100);
+    --azure-050: var(--info-050);
+
+    /* AMBRE — la même couleur sémantique (--attention) reçoit ici un rôle
+     * décoratif de graphique (troisième série), en plus de son rôle clinique
+     * inchangé. --amber-ink recopie --attention-ink : même paire, même
+     * contraste déjà vérifié (5.67:1), pas une seconde mesure à refaire. */
+    --amber-700: var(--attention-ink);
+    --amber-600: var(--attention);
+    --amber-400: #d9a968;
+    --amber-100: var(--attention-bg);
+    --amber-050: #fdf8f2;
+
+    /* CORAIL — nouvelle famille, quatrième série de graphique et accents
+     * chaleureux des tuiles d'agrégat. N'EST PAS une couleur sémantique :
+     * jamais d'alerte, jamais un statut clinique (§3 règle 1, inchangée —
+     * le rouge reste un budget réservé à --critical). */
+    --coral-600: #c1594a;
+    --coral-400: #e08b7c;
+    --coral-100: #fbe9e6;
+    /* #c1594a sur #fbe9e6 → 4.71:1, mesuré. Seul jeton -ink de cette famille :
+     * c'est ce qui autorise "+12% vs mois dernier" en corail sur une tuile
+     * corail, pas la teinte de fond seule. */
+    --coral-ink: #a5432f;
+
+    /* Ombre teintée d'une tuile colorée — docs/04-DESIGN-SYSTEM.md v3 §4.4.
+     * Le composant fournit `--shadow-color` (une des teintes ci-dessus en
+     * rgba) ; sans elle, la valeur de repli reste celle de la marque. */
+    --lift-color: 0 8px 24px -8px var(--shadow-color, rgba(42, 122, 112, 0.35));
+
+    /* ── BORNES FONCÉES DES FAMILLES D'AGRÉGAT — v9 ─────────────────────────
+     * Les tuiles d'agrégat (voir `--grad-tile-*` plus bas) posent du blanc pur
+     * sur un dégradé de famille ; l'arrêt clair de chaque famille doit donc
+     * lui-même porter du blanc à ≥ 4.5:1. Trois familles n'avaient pas de borne
+     * foncée vérifiée — l'ambre s'arrêtait à `--amber-700` (#8a5325, 6.29:1,
+     * calculé), le positif à `--positive` (#3e7a5e, 5.07:1) et le corail à
+     * `--coral-ink` (#a5432f, 6.10:1) ; on ajoute LEUR borne foncée pour que
+     * chaque dégradé descende d'un ton, comme `--grad-brand` le fait déjà.
+     * Blanc sur `--amber-800` → 8.78:1 · sur `--positive-700` → 7.68:1 ·
+     * sur `--coral-700` → 8.77:1. Calculés, pas estimés. */
+    --amber-800: #6e3f1d;
+    --positive-700: #2e5c47;
+    --coral-700: #83301f;
+
+    /* ── ATMOSPHÈRE DU SOL — v9 ─────────────────────────────────────────────
+     * Le sol de page reste `--layer-ambient` ; l'atmosphère est une COUCHE
+     * DESSUS : trois lavages radiaux très bas (marque, azur, violet) qui
+     * donnent de la profondeur sans jamais porter ni toucher une donnée —
+     * toute valeur clinique ou financière vit sur une carte opaque par
+     * dessus. C'est la même logique que le sol teinté d'ADR-022, poussée
+     * d'un cran : une carte blanche se détache mieux sur un sol qui vit
+     * discrètement que sur un aplat.
+     *
+     * ⚠️ JAMAIS POSÉE SOUS UN TEXTE NU. Elle habille `<main>` et les écrans
+     * de lieu ; un texte qui n'est pas posé sur une carte reste sur le sol
+     * teinté uni (`--layer-ambient`), pas sur un lavage. */
+    --atmosphere: radial-gradient(
+        1100px 700px at 88% -8%,
+        rgba(42, 122, 112, 0.08),
+        transparent 62%
+      ),
+      radial-gradient(900px 640px at -12% 108%, rgba(37, 99, 168, 0.05), transparent 58%),
+      radial-gradient(720px 520px at 50% 118%, rgba(124, 107, 216, 0.04), transparent 60%);
+
+    /* ── REFLET DES EN-TÊTES DE LIEU — v9 ───────────────────────────────────
+     * Un lavage blanc posé sur `--grad-brand` dans le tiers supérieur droit :
+     * il donne à l'en-tête une source de lumière, donc une épaisseur, sans
+     * créer un quatrième dégradé de marque. C'est un DÉCOR, pas une encre —
+     * le texte au-dessus reste du blanc pur, dont le contraste ne dépend
+     * que du dégradé porteur déjà vérifié. */
+    --grad-hero-reflet: radial-gradient(
+      560px 300px at 82% 0%,
+      rgba(255, 255, 255, 0.13),
+      transparent 70%
+    );
+
+    /* ── DISC D'ÉTAT VIDE — v9 ──────────────────────────────────────────────
+     * ADR-025 nomme explicitement les états vides parmi les surfaces où un
+     * dégradé au sein des familles est autorisé. Le disque porte l'icône d'un
+     * état vide : un fond de marque très doux qui s'éteint dans la carte,
+     * pour qu'un « rien » composé ne ressemble pas à un oubli. */
+    --grad-empty: radial-gradient(circle at 34% 28%, var(--brand-100) 0%, transparent 74%);
+
+    /* ── TUILES D'AGRÉGAT — v9, au catalogue ouvert d'ADR-025 ───────────────
+     * Une tuile d'agrégat (compteur de tableau de bord, anneau de synthèse)
+     * peut porter un dégradé COMPOSÉ DANS SA FAMILLE. La frontière d'ADR-025
+     * ne bouge pas : §4.2 — aucune de ces valeurs ne passe derrière une
+     * donnée clinique nominative. Une tuile compte, elle ne décrit personne.
+     *
+     * UNE SEULE ENCRE POSÉE DESSUS : le blanc pur — même règle, même calcul
+     * que la marque. Chaque arrêt clair porte le blanc à ≥ 5:1 (vérifié en
+     * tête de bloc « bornes foncées ») ; la hiérarchie se fait à la taille
+     * et à la graisse, jamais en baissant le contraste. */
+    --grad-tile-brand: linear-gradient(135deg, var(--brand-600) 0%, var(--brand-700) 100%);
+    --grad-tile-info: linear-gradient(135deg, var(--info-600) 0%, var(--azure-700) 100%);
+    --grad-tile-ai: linear-gradient(135deg, var(--ai-600) 0%, var(--ai-700) 100%);
+    --grad-tile-amber: linear-gradient(135deg, var(--amber-700) 0%, var(--amber-800) 100%);
+    --grad-tile-positive: linear-gradient(135deg, var(--positive) 0%, var(--positive-700) 100%);
+    --grad-tile-coral: linear-gradient(135deg, var(--coral-ink) 0%, var(--coral-700) 100%);
+
+    /* Le fond du MONOGRAMME — les deux tons clairs de la marque, l'un vers
+     * l'autre. Un avatar est une illustration d'identité, pas une donnée :
+     * ADR-025 l'autorise, et le dégradé donne au monogramme le relief que
+     * son aplat plat lui refusait. L'encre reste `--brand-900`, mesurée sur
+     * le ton clair de la rampe (5.70:1 sur blanc, plus sur ces deux tons). */
+    --grad-avatar: linear-gradient(135deg, var(--brand-100) 0%, var(--brand-200) 100%);
+
+    /* Chiffre de tuile d'agrégat — v3 §5.1. `--font-display` (Fraunces) est
+     * déjà émise pour les montants financiers ; ce rôle lui donne un second
+     * emploi, distinct de `.font-display`, réservé aux COMPTEURS de tableau
+     * de bord (patients, consultations, %) plutôt qu'aux sommes d'argent. */
+    --text-metric-size: 36px;
+    --text-metric-leading: 1.1;
+    --text-metric-tracking: -0.02em;
 
     /* Palette nocturne — DÉCLARÉE, JAMAIS APPLIQUÉE À CE JOUR.
      * Ces quatre jetons existent parce que §3 les définit, et pour rien
@@ -374,33 +535,46 @@
     --font-display: var(--font-display-emise), "Fraunces", Georgia, serif;
 
     /* ------------------------------------------------------------------
-     * ÉCHELLE TYPOGRAPHIQUE — WORKING-CONTEXT §3
+     * ÉCHELLE TYPOGRAPHIQUE — WORKING-CONTEXT §3 + V2 Vibrant Instrument
      * Format source : `taille/interligne graisse interlettrage`.
+     * Hiérarchie verrouillée : 400 corps long-forme / 500 label secondaire /
+     * 600 emphase+boutons+sections / 700 titres page / 800 display/metrics seule.
      * L'interligne est sans unité : il suit la taille du rôle.
      * ------------------------------------------------------------------ */
     --weight-regular: 400;
     --weight-medium: 500;
     --weight-semibold: 600;
+    --weight-bold: 700;
+    --weight-extrabold: 800;
 
-    /* display 30/1.15 600 -.02em — un seul par vue */
+    /* V2 hiérarchie graisses :
+     * display 30/1.15 700 -.02em — un seul par vue, page heading
+     * title 21/1.25 600 -.01em — sections
+     * heading 16/1.35 600 -.005em — cartes / groupes
+     * body 14/1.55 400 — long-forme clinique, NE JAMAIS passer en 600+
+     * metric 36/1.1 800 -.02em — display exceptionnel uniquement */
     --text-display-size: 30px;
     --text-display-leading: 1.15;
     --text-display-tracking: -0.02em;
+    --text-display-weight: 700;
 
-    /* title 21/1.25 600 -.01em */
+    /* title 21/1.25 600 -.01em — sections, reste 600 */
     --text-title-size: 21px;
     --text-title-leading: 1.25;
     --text-title-tracking: -0.01em;
+    --text-title-weight: 600;
 
     /* heading 16/1.35 600 -.005em */
     --text-heading-size: 16px;
     --text-heading-leading: 1.35;
     --text-heading-tracking: -0.005em;
+    --text-heading-weight: 600;
 
-    /* body 14/1.55 400 */
+    /* body 14/1.55 400 — CLINIQUE LONGUE : 400 obligatoire */
     --text-body-size: 14px;
     --text-body-leading: 1.55;
     --text-body-tracking: 0em;
+    --text-body-weight: 400;
 
     /* notes 15/1.7 400 — notes cliniques, plus grandes EXPRÈS. Ne pas réduire. */
     --text-notes-size: 15px;
@@ -549,6 +723,11 @@
      * garde-fou n'est pas une preuve de conformité, c'est un filet.
      * ------------------------------------------------------------------ */
     --size-0: 0;
+    /* Opacité du FILIGRANE décoratif (motif de feuilles des en-têtes de lieu).
+     * Une valeur de décor, nommée pour la même raison que `--voile` : posée en
+     * dur dans chaque composant, elle aurait divergé — et un filigrane à 0.2
+     * concurrence le titre qu'il est là accompagner. */
+    --op-filigrane: 0.14;
     /* Plan du panneau Jarvis. Un seul calque, nommé : un `zIndex: 50` écrit
        dans un composant est un chiffre que personne ne peut arbitrer face au
        suivant. V2. */
@@ -576,6 +755,19 @@
      * (§3 : une ligne de formulaire ne gagne rien à s'étirer), assez large
      * pour un e-mail long sans troncature. */
     --width-form: 420px;
+    /* Largeur de la COMPOSITION de connexion — panneau de marque + carte.
+     * Au-delà, les deux colonnes s'écartent sans raison ; en dessous, la
+     * carte se retrouve collée au bord. Nommée pour la même raison que
+     * --width-form : une valeur de composition qui vivait en dur dans un
+     * écran est une valeur qui divergera. */
+    --width-auth: 960px;
+    /* v9 — LARGEURS MAXIMALES DES BULLES DU PANNEAU JARVIS. Deux valeurs
+     * nommées plutôt que deux pourcentages en dur : la bulle de l'utilisatrice
+     * (à droite) et la réponse de Jarvis (à gauche) ne laissent pas la même
+     * marge au bord du panneau, et ces deux proportions sont une décision de
+     * composition — si l'une bouge, elle bouge ICI. */
+    --bulle-humain-max: 85%;
+    --bulle-jarvis-max: 92%;
 
     /* ── LA FEUILLE DE DOCUMENT — V8 ──────────────────────────────────────
      * EN MILLIMÈTRES, ET C'EST LA RAISON D'ÊTRE DE CES JETONS. Le millimètre
@@ -591,7 +783,7 @@
      * travers une feuille de style. */
     --doc-largeur: 148mm;
     --doc-hauteur: 210mm;
-    --doc-marge-v: 13mm;
+    --doc-marge-v: 14mm;
     --doc-marge-h: 14mm;
     /* Le côté du logo dans l'en-tête, et l'épaisseur des deux filets qui
      * encadrent le bloc arabe. Relevés sur les documents d'origine, puis
@@ -673,8 +865,16 @@
      * blanches sur fond blanc, donc une bordure partout pour les distinguer :
      * l'aspect « plat » venait de là autant que de l'absence de couleur.
      * `--layer-ambient` reste très clair (#f1f8f6) — l'écran est lu 6-8 h par
-     * jour, un fond saturé fatiguerait. */
+     * jour, un fond saturé fatiguerait.
+     *
+     * v9 — l'ATMOSPHÈRE se pose EN PLUS (voir sa définition plus haut) : trois
+     * lavages radiaux qui donnent au sol une profondeur discrète. La couche
+     * vit ici, sur la racine : l'application ne défile jamais à ce niveau, le
+     * défilement appartenant aux colonnes internes — le lavage ne bouge donc
+     * jamais sous les yeux. L'écran de connexion peint par-dessus avec son
+     * propre fond de marque ; rien d'autre ne le recouvre. */
     background-color: var(--layer-ambient);
+    background-image: var(--atmosphere);
     color: var(--ink-900);
     font-family: var(--font-ui);
     /* Pas de `font-size` sur la racine : la fixer à 14px écraserait la taille
@@ -730,12 +930,25 @@
 
   /* Chiffres alignés verticalement — heures, doses, montants, chronomètre.
    * `tabular-nums` n'est pas décoratif : une colonne de doses qui ne s'aligne
-   * pas se lit mal, et elle se lit avec un patient qui parle. */
+   * pas se lit mal, et elle se lit avec un patient qui parle.
+   * V2 : zéro = ovale standard, JAMAIS slashé. Inter active `slashed-zero`
+   * via `zero`/`ss02`; on le désactive explicitement pour éviter toute variante
+   * barrée dans dossiers et montants (0 doit rester O, pas Ø). */
   .num,
-  [class*="font-num"] {
+  [class*="font-num"],
+  .tabular-nums {
     font-family: var(--font-num);
     font-variant-numeric: tabular-nums;
-    font-feature-settings: "tnum";
+    font-feature-settings: "tnum" 1, "zero" 0, "ss02" 0;
+  }
+
+  /* Correctif Inter : zéro ovale global sur l'interface.
+   * Inter expose 0 barré via `zero` OT; on neutralise partout sauf doc imprimé.
+   * Ce blocage est testable : inspecter `0` → computed font-feature-settings ne contient pas `zero`. */
+  html,
+  body {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1, "zero" 0, "ss02" 0;
   }
 
   /* Plancher d'accessibilité — WORKING-CONTEXT §4.4. Focus visible PARTOUT.
@@ -800,23 +1013,23 @@
  * ajustement d'un millimètre après le premier tirage soit UNE ligne.
  *
  * ═══ A5, ET LE BUDGET VERTICAL QUI VA AVEC ═══
- * 148 × 210 mm, moins 14 mm de marge horizontale et 13 mm de marge verticale
- * de chaque côté : il reste 120 × 184 mm de colonne utile. C'est ce chiffre de
- * 184 mm qui commande tout le reste de cette section, et il se dépense ainsi
- * sur le plus long des quatre certificats (bonne santé mentale) :
+ * 148 × 210 mm, moins 14 mm de marge de chaque côté : il reste 120 × 182 mm
+ * de colonne utile (210 − 28). C'est ce chiffre de 182 mm qui commande tout le
+ * reste de cette section, et il se dépense ainsi sur le plus long des quatre
+ * certificats (bonne santé mentale) :
  *
  *     en-tête (identité FR + arabe + 2 filets + ordre + tél)   ~34 mm
- *     titre souligné, avec ses respirations                    ~21 mm
+ *     titre souligné (15pt + respirations 9/6mm)               ~21 mm
  *     corps — 5 paragraphes, ~13 lignes à 10,5 pt / 1,5        ~85 mm
  *     réserve de signature (--doc-signature)                    28 mm
  *     ────────────────────────────────────────────────────────────────
- *                                                             ~168 mm  ≤ 184
+ *                                                             ~168 mm  ≤ 182
  *
  * ⚠️ CE BUDGET EST LA RAISON DES VALEURS, PAS UNE OBSERVATION APRÈS COUP.
  * Toucher `--doc-texte`, `--doc-interligne` ou `--doc-espace-titre-avant` sans
  * refaire cette addition est le chemin exact par lequel un certificat part sur
  * deux pages — et une page 2 ne portant qu'une signature fait douter de la
- * pièce entière. Les ~16 mm de reste sont la marge pour un nom long ou un
+ * pièce entière. Les ~14 mm de reste sont la marge pour un nom long ou un
  * `{{vars.mairie}}` qui passe à la ligne, PAS de la place libre à dépenser.
  * ========================================================================== */
 
@@ -827,12 +1040,18 @@
  * silencieusement. `size: A5 portrait` fait que l'aperçu du navigateur montre
  * DÉJÀ le format qui sortira.
  *
+ * `margin:0` SUPPRIME les en-têtes/pieds du navigateur (date, URL, pagination).
+ * Chrome et Edge n'affichent ces textes QUE dans la marge du @page. À 0, la
+ * marge disparaît — et avec elle toute trace de `localhost:3000/...` ou `1/1`
+ * vue en capture 1. C'est une garantie CSS, pas une option d'impression à
+ * décocher.
+ *
  * `portrait` est explicite bien qu'il soit l'orientation par défaut d'A5 : les
  * quatre certificats d'origine sont en portrait, et le dire ici évite qu'une
  * feuille de style d'écran à venir ne le retourne sans qu'on le voie. */
 @page {
   size: A5 portrait;
-  margin: var(--doc-marge-v) var(--doc-marge-h);
+  margin: 0;
 }
 
 /* --- La feuille, à l'écran ------------------------------------------------- */
@@ -878,9 +1097,10 @@
  * sont donc FIXÉES, et c'est le texte qui passe à la ligne dans sa colonne. */
 .doc-entete {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 0.72fr);
-  gap: var(--doc-espace-para);
+  grid-template-columns: minmax(0, 1fr) var(--doc-marque) minmax(0, 1fr);
+  gap: var(--s-4);
   align-items: start;
+  justify-items: stretch;
   color: var(--brand-700);
   font-size: var(--doc-entete-taille);
   line-height: 1.35;
@@ -903,6 +1123,9 @@
   flex-direction: column;
   gap: var(--s-1);
   min-width: 0;
+  align-self: start;
+  padding-top: 0;
+  margin-top: 0;
   overflow-wrap: anywhere;
 }
 
@@ -919,8 +1142,10 @@
 }
 
 .doc-entete__nom {
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--doc-entete-nom);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
 }
 
 /* Le bloc arabe est CENTRÉ sur les quatre originaux, sous le nom français et
@@ -970,13 +1195,19 @@
 .doc-entete__marque {
   width: var(--doc-marque);
   height: var(--doc-marque);
-  /* Sur les quatre originaux, le logo est à hauteur du bloc arabe, pas collé
-   * en haut de l'en-tête. `align-items: start` de la grille le remonterait. */
+  /* Parfaitement centré entre les deux blocs — à la fois horizontalement
+   * (colonne centrale fixe) et verticalement (milieu de la hauteur du plus
+   * grand bloc). `align-self:center` + `justify-self:center` garantissent
+   * le centrage optique même quand les deux colonnes latérales ont des
+   * hauteurs différentes. */
   align-self: center;
+  justify-self: center;
   background-image: url("/marque-certificat.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  /* Touche subtile, jamais criarde — le logo ne doit pas concurrencer le titre */
+  opacity: 0.92;
 }
 
 /* ⚠️ LE TEXTE EST ALIGNÉ À GAUCHE, LE BLOC EST POSÉ À DROITE — les deux
@@ -991,9 +1222,10 @@
   gap: var(--s-1);
   text-align: left;
   justify-self: end;
+  align-self: start;
   min-width: 0;
-  /* Un nom composé sans espace passe à la ligne DANS sa colonne au lieu de la
-   * pousser. Sans ça, `min-width: 0` seul ne suffit pas : le mot déborde. */
+  padding-top: 0;
+  margin-top: 0;
   overflow-wrap: anywhere;
 }
 
@@ -1007,13 +1239,25 @@
   margin: var(--doc-espace-titre-avant) 0 var(--doc-espace-titre-apres);
   text-align: center;
   font-size: var(--doc-titre-taille);
-  font-weight: 600;
-  text-decoration: underline;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink-900);
+  /* Soulignement vert doux — l'unique accent vert du corps, en plus du logo.
+   * Epaisseur fine, offset généreux : élégant, clinique, jamais agressif. */
+  text-decoration-line: underline;
+  text-decoration-color: var(--brand-400);
+  text-decoration-thickness: 1.2pt;
+  text-underline-offset: 4pt;
+  /* Légère respiration typographique pour un titre qui respire la confiance */
+  line-height: 1.2;
 }
 
 .doc-corps p {
   margin: 0 0 var(--doc-espace-para);
   line-height: var(--doc-interligne);
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
   /* Un nom de patient très long, un numéro de pièce d'identité sans espace :
    * sur 120 mm, ce sont les cas qui poussent une ligne hors de la feuille. */
   overflow-wrap: anywhere;
@@ -1045,15 +1289,22 @@
  * facultative. */
 
 .doc-liste {
-  margin: 0 0 var(--doc-espace-para);
+  margin: 1mm 0 var(--doc-espace-para);
   padding-inline-start: var(--doc-alinea);
   list-style: disc;
+  list-style-position: outside;
 }
 
 .doc-liste li {
-  margin: 0;
+  margin: 0 0 1.2mm;
   line-height: var(--doc-interligne);
+  text-align: left;
   overflow-wrap: anywhere;
+}
+
+.doc-liste li::marker {
+  color: var(--ink-700);
+  font-size: 0.9em;
 }
 
 /* ⚠️ LA PUCE FACULTATIVE. `traitement_2` peut être une chaîne VIDE (045) : le
@@ -1095,6 +1346,16 @@
 /* --- L'IMPRESSION ---------------------------------------------------------- */
 
 @media print {
+  @page {
+    size: A5 portrait;
+    margin: 0;
+  }
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+  }
   /* 1 · Tout disparaît sauf la feuille : la coquille, le rail de navigation,
    *     les boutons, les onglets. `.doc-racine` est un enfant DIRECT de
    *     `<body>`, posé par un portail React : imbriqué dans la coquille, il
@@ -1117,14 +1378,15 @@
     display: none !important;
   }
 
-  /* 2 · La feuille redevient du papier : pas d'ombre, pas d'arrondi, pas de
-   *     largeur imposée — c'est `@page` qui tient les marges. */
+  /* 2 · La feuille redevient du papier : pas d'ombre, pas d'arrondi.
+   *     `@page` est à 0 pour masquer l'en-tête/pied du navigateur (URL + pagination).
+   *     Les marges sont portées par la feuille elle-même. */
   .doc-feuille {
     width: auto;
     min-height: 0;
     max-width: none;
     margin: 0;
-    padding: 0;
+    padding: var(--doc-marge-v) var(--doc-marge-h);
     box-shadow: none;
     border-radius: 0;
     background: var(--card);

@@ -52,7 +52,13 @@ export type NomIcone =
   | "deconnexion"
   | "recherche"
   | "jarvis"
-  | "chevron";
+  | "chevron"
+  | "plus"
+  | "croix"
+  | "fleche"
+  | "horloge"
+  | "alerte"
+  | "audio";
 
 /** Trait commun. Aucune icône ne le redéfinit. */
 const TRAIT = {
@@ -186,16 +192,54 @@ const TRACES: Record<NomIcone, React.JSX.Element> = {
     </>
   ),
   chevron: <path d="M9.2 4.8l7.2 7.2-7.2 7.2" />,
+  // Ajouter. Deux segments, quatre bouts arrondis — le geste le plus fréquent
+  // de l'application mérite le tracé le plus calme.
+  plus: <path d="M12 5.4v13.2M5.4 12h13.2" />,
+  // Fermer. Le même geste que `plus`, tourné de 45° : deux commandes opposées
+  // partagent la même géométrie, l'œil les reconnaît avant de les lire.
+  croix: <path d="M6.8 6.8l10.4 10.4M17.2 6.8L6.8 17.2" />,
+  // Avancer. Un trait et une pointe arrondie — « voir la suite », « envoyer ».
+  fleche: (
+    <>
+      <path d="M4.6 12h14" />
+      <path d="M13.8 7.2l4.8 4.8-4.8 4.8" />
+    </>
+  ),
+  // Le temps qui passe — contexte d'un en-tête, séance en cours.
+  horloge: (
+    <>
+      <circle cx="12" cy="12" r="8.4" />
+      <path d="M12 7.4V12l3.1 1.9" />
+    </>
+  ),
+  // La voix rendue — haut-parleur et deux arcs de propagation. V-JARVIS-CORE.
+  audio: (
+    <>
+      <path d="M4.4 9.6v4.8h3l4.2 3.8V5.8L7.4 9.6h-3Z" />
+      <path d="M15.4 9.3a4 4 0 0 1 0 5.4" />
+      <path d="M18.1 7a7.4 7.4 0 0 1 0 10" />
+    </>
+  ),
+  // À votre attention. Le point est un trait d'une longueur nulle : avec des
+  // bouts arrondis, il rend un disque sans introduire de remplissage.
+  alerte: (
+    <>
+      <circle cx="12" cy="12" r="8.4" />
+      <path d="M12 7.6v5" />
+      <path d="M12 16.3v.01" />
+    </>
+  ),
 };
 
 export interface IconeProps {
   readonly nom: NomIcone;
   /**
-   * 20 pour une icône accolée à du texte de corps, 24 dans la navigation.
-   * L'échelle s'arrête là : au-delà, un tracé de 1.75 paraît fin et grêle, et
-   * l'épaissir romprait l'alignement avec toutes les autres.
+   * 16 accolée à un libellé de taille `label` (rangée de contexte d'un
+   * en-tête), 20 pour une icône accolée à du texte de corps, 24 dans la
+   * navigation. L'échelle s'arrête là : au-delà, un tracé de 1.75 paraît fin
+   * et grêle, et l'épaissir romprait l'alignement avec toutes les autres.
    */
-  readonly taille?: 20 | 24;
+  readonly taille?: 16 | 20 | 24;
   /**
    * À ne renseigner QUE si l'icône est seule, sans libellé écrit à côté.
    * Sinon le lecteur d'écran annonce deux fois la même chose.
@@ -275,6 +319,69 @@ export function MarqueMindCare({
           médical. Deux par hémisphère, orientées vers l'extérieur. */}
       <path d="M9.6 8.6c-1.1-.5-2.2-.2-2.7.7.9.6 2 .5 2.7-.7zM9.6 14.4c-1.1.5-2.2.2-2.7-.7.9-.6 2-.5 2.7.7z" />
       <path d="M14.4 8.6c1.1-.5 2.2-.2 2.7.7-.9.6-2 .5-2.7-.7zM14.4 14.4c1.1.5 2.2.2 2.7-.7-.9-.6-2-.5-2.7.7z" />
+    </svg>
+  );
+}
+
+/**
+ * Le motif de filigrane des en-têtes de lieu — les feuilles du logo, éparillées.
+ *
+ * CE N'EST PAS UNE ILLUSTRATION AU SENS DE §4 règle 7 : aucune information, un
+ * seul rôle — donner à la surface de marque une texture qui lui appartient, au
+ * lieu d'un aplat. Le tracé reprend MOT POUR MOT les feuilles de
+ * `MarqueMindCare` : la décoration est ici une citation de l'identité, pas un
+ * ornement inventé.
+ *
+ * `aria-hidden` et `pointer-events-none` par construction : c'est un fond, il
+ * ne se lit pas et ne se clique pas. L'appelant le positionne et règne sur son
+ * opacité — le blanc pur reste la seule encre du texte posé dessus.
+ */
+export function MotifFeuilles({
+  className,
+}: {
+  readonly className?: string;
+}): React.JSX.Element {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 240 120"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={["pointer-events-none select-none", className ?? ""].join(" ")}
+    >
+      {/* Chaque groupe est une vrille qui se termine en feuille — la même
+          courbe que le logo, à trois échelles, posée comme un semis. */}
+      <g>
+        <path d="M28 92c14-4 22-14 24-28" />
+        <path d="M52 64c-6-3-12-1-15 4 5 3 11 3 15-4z" />
+      </g>
+      <g>
+        <path d="M84 104c10-8 13-18 10-30" />
+        <path d="M94 74c-6-2-12 1-14 6 5 2 11 1 14-6z" />
+      </g>
+      <g>
+        <path d="M150 96c16-2 26-10 30-24" />
+        <path d="M180 72c-7-2-13 1-15 7 6 2 12 0 15-7z" />
+      </g>
+      <g>
+        <path d="M206 100c8-10 9-20 4-30" />
+        <path d="M210 70c-5-3-11-2-14 3 5 3 11 2 14-3z" />
+      </g>
+      <g>
+        <path d="M118 78c12-6 17-16 15-28" />
+        <path d="M133 50c-6-3-12-1-15 4 5 3 11 2 15-4z" />
+      </g>
+      <g>
+        <path d="M60 40c8-6 10-14 8-22" />
+        <path d="M68 18c-5-2-10 0-12 4 4 2 9 1 12-4z" />
+      </g>
+      <g>
+        <path d="M176 34c10-4 14-12 13-22" />
+        <path d="M189 12c-6-2-11 1-13 6 5 2 10 0 13-6z" />
+      </g>
     </svg>
   );
 }

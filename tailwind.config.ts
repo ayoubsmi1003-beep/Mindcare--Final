@@ -95,6 +95,13 @@ const config: Config = {
         surface: "var(--layer-surface)",
         raised: "var(--layer-raised)",
       },
+      // Le verre décore le mobilier flottant (§4.1) — panneau Jarvis, en-tête
+      // collant du dossier. Sa TEINTE vient de --glass-panel ; le FILTRE
+      // complet reste posé en style inline (voir PanneauJarvis), les
+      // utilitaires n'injectant qu'un blur nu.
+      glass: {
+        panel: "var(--glass-panel)",
+      },
       attention: {
         // L'ACCENT — bordure, liseré, point de légende. Ne porte pas de texte
         // sur `attention.bg` : mesuré à 3.34:1, sous le plancher. Voir
@@ -252,11 +259,13 @@ const config: Config = {
         },
       ],
     },
-    // Graisses utilisées par l'échelle ci-dessus uniquement.
+    // Graisses V2 — hiérarchie verrouillée: 400 corps / 500 label / 600 emphase / 700 page / 800 display-metrics
     fontWeight: {
       regular: "var(--weight-regular)",
       medium: "var(--weight-medium)",
       semibold: "var(--weight-semibold)",
+      bold: "var(--weight-bold)",
+      extrabold: "var(--weight-extrabold)",
     },
     // lineHeight/letterSpacing en classes autonomes (hors fontSize) — mêmes
     // variables que ci-dessus, pas de nouvelle échelle parallèle.
@@ -294,21 +303,40 @@ const config: Config = {
       // titre qu'un dégradé : elle module le contraste.
       "glow-brand": "var(--glow-brand)",
       "glow-ai": "var(--glow-ai)",
+      // v9 — l'entrée active du rail : la lueur de marque ET le filet interne,
+      // composés en un seul jeton (`--glow-nav`) parce que deux utilitaires
+      // `shadow-*` ne s'additionnent pas.
+      "glow-nav": "var(--glow-nav)",
       // Le filet interne haut d'une surface élevée sur fond coloré : la lumière
       // rasante qui donne l'épaisseur sans ajouter d'ombre.
       sheen: "var(--layer-sheen)",
     },
-    // LES TROIS DÉGRADÉS D'ADR-022, ET RIEN D'AUTRE.
+    // LES TROIS DÉGRADÉS D'ADR-022, ET LES FAMILLES D'AGRÉGAT D'ADR-025.
     //
     // `backgroundImage` est remplacé, pas étendu : les dégradés utilitaires de
     // Tailwind (`bg-gradient-to-*`, qui s'assortissent de `from-`/`via-`/`to-`)
     // permettraient d'en composer un quatrième en trois classes, sans qu'aucune
     // relecture ne le distingue d'un dégradé du système. La liste fermée
     // d'ADR-022 ne tient que si l'outil ne sait pas en fabriquer d'autre.
+    //
+    // v9 ajoute les jetons d'ADR-025 étendu : l'atmosphère du sol, le reflet
+    // des en-têtes de lieu, le disque des états vides et les six tuiles
+    // d'agrégat — tous définis dans tokens.css au sein des familles existantes,
+    // tous interdits derrière une donnée clinique nominative (§4.2).
     backgroundImage: {
       "grad-brand": "var(--grad-brand)",
       "grad-orb": "var(--grad-orb)",
       "grad-auth": "var(--grad-auth)",
+      atmosphere: "var(--atmosphere)",
+      "grad-hero-reflet": "var(--grad-hero-reflet)",
+      "grad-empty": "var(--grad-empty)",
+      "grad-tile-brand": "var(--grad-tile-brand)",
+      "grad-tile-info": "var(--grad-tile-info)",
+      "grad-tile-ai": "var(--grad-tile-ai)",
+      "grad-tile-amber": "var(--grad-tile-amber)",
+      "grad-tile-positive": "var(--grad-tile-positive)",
+      "grad-tile-coral": "var(--grad-tile-coral)",
+      "grad-avatar": "var(--grad-avatar)",
     },
     // Le verre décore le mobilier, jamais la donnée (§4 règle 2). Ses valeurs
     // viennent de --glass-*, définies en T1.2 (04-DESIGN-SYSTEM §4.1).
@@ -377,6 +405,10 @@ const config: Config = {
       0: "0px",
       target: "36px",
       "target-lg": "44px",
+      // v9 — la hauteur de la fenêtre, jeton `--size-viewport` déjà déclaré :
+      // l'écran de connexion centre sa scène dans le viewport sans qu'aucune
+      // valeur en dur ne réapparaisse.
+      viewport: "var(--size-viewport)",
     },
     maxHeight: {
       none: "none",
@@ -415,12 +447,18 @@ const config: Config = {
       trois: "repeat(3, minmax(0, 1fr))",
       // Le pouls financier : cinq tuiles de largeur egale, jamais moins.
       pouls: "repeat(5, minmax(0, 1fr))",
-      // Le poste d'accueil (cockpit assistante) : frise du jour a gauche,
-      // files operationnelles a droite. Deux fractions INEGALES nommees ici
-      // plutot qu'en syntaxe arbitraire dans l'ecran (I10), meme motif que
-      // `finance`. `minmax(0, …)` autorise chaque colonne a se comprimer —
-      // sans lui, une carte large ferait deborder la grille.
+      // Le poste d'accueil (Reception Console) : 3 colonnes
+      // 44% agenda / 28% attente+attention / 28% encaissements+notifs.
+      // Nommée ici plutôt qu'en syntaxe arbitraire (I10), même motif que
+      // `finance`. `minmax(0,…)` autorise chaque colonne à se comprimer.
       cockpit: "minmax(0, 2fr) minmax(0, 1fr)",
+      reception: "minmax(0, 1.35fr) minmax(0, 0.85fr) minmax(0, 0.8fr)",
+      // Pulse réception : 4 tuiles carrées
+      receptionPulse: "repeat(4, minmax(0, 1fr))",
+      quatre: "repeat(4, minmax(0, 1fr))",
+      // Bento reception
+      receptionMiddle: "minmax(0, 1.85fr) minmax(0, 1fr)",
+      receptionBottom: "minmax(0, 1fr) minmax(0, 1.45fr) minmax(0, 1fr)",
     },
     // Largeurs de grille §3 — source unique tokens.css, aucune valeur ici.
     maxWidth: {
@@ -428,12 +466,19 @@ const config: Config = {
       nav: "var(--grid-nav-width)",
       main: "var(--grid-main-max)",
       context: "var(--grid-context-width)",
+      // v9 — les compositions de connexion : la carte, puis la scène à deux
+      // colonnes qui l'accompagne.
+      form: "var(--width-form)",
+      auth: "var(--width-auth)",
     },
     // Pas de token dédié dans 04-DESIGN-SYSTEM à ce jour : échelle utilitaire
     // minimale, fermée, non extensible en syntaxe arbitraire.
+    // `filigrane` (v9) est la valeur nommée du décor des en-têtes de lieu —
+    // `--op-filigrane` dans tokens.css, pas une valeur libre.
     opacity: {
       0: "0",
       disabled: ".5",
+      filigrane: "var(--op-filigrane)",
       100: "1",
     },
     borderWidth: {

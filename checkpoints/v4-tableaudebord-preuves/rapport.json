@@ -1,0 +1,43 @@
+{
+  "ecran": "/tableauDeBord",
+  "compte": "praticien2.dev@invalid.local",
+  "viewport": "1440x900",
+  "budget": {
+    "appels": 1,
+    "premierContenuMs": 100,
+    "ecranCompletMs": 400
+  },
+  "mesure": {
+    "premierContenuMs": 687,
+    "ecranCompletMs": 834,
+    "releves": [
+      {
+        "tContenu": 1139,
+        "tComplet": 1175
+      },
+      {
+        "tContenu": 687,
+        "tComplet": 834
+      },
+      {
+        "tContenu": 617,
+        "tComplet": 689
+      }
+    ]
+  },
+  "appelsRest": [
+    "deployment",
+    "profiles",
+    "rpc/dashboard_today"
+  ],
+  "resultats": [
+    "vert   | 1 · UN SEUL appel de données d'écran : rpc/dashboard_today | rpc/dashboard_today, et rien d'autre",
+    "vert   | 2 · 1440×900 : aucun défilement horizontal de page | doc 0px · body 0px",
+    "vert   | 3 · aucun bouton « Actualiser » (le live est un polling borné)",
+    "vert   | 4 · aucun bloc fabriqué (objectif · taux · occupation · agents) | l'écran ne montre que ce que la base sait",
+    "ROUGE  | 5 · premier contenu ≤ 100 ms | médiane 687 ms sur 1139/687/617",
+    "ROUGE  | 6 · écran complet ≤ 400 ms | médiane 834 ms sur 1175/834/689"
+  ],
+  "verts": 4,
+  "rouges": 2
+}

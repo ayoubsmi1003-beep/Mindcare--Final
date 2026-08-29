@@ -56,7 +56,7 @@ export function PanneauRendezVous({
   readonly agenda: PatientWorkspace["agenda"];
 }): React.JSX.Element {
   if (agenda.nombreRendezVous === 0) {
-    return <EtatVide message={fr.patients.vide.rendezVous} />;
+    return <EtatVide message={fr.patients.vide.rendezVous} icone="agenda" />;
   }
 
   return (

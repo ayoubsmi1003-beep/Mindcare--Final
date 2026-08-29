@@ -23,6 +23,7 @@
  */
 
 import { fr } from "@/i18n/fr";
+import { Icone } from "@/components/ui/Icones";
 import { formaterDzd, type Echeance } from "@/services/finance-cash";
 
 export function PanneauAttention({
@@ -51,18 +52,30 @@ export function PanneauAttention({
 
       <div
         className={[
-          "rounded-md px-3 py-3",
-          aucun ? "bg-sunken" : "bg-attention-bg",
+          "rounded-lg border px-3 py-3",
+          aucun ? "border-rule bg-sunken" : "border-attention bg-attention-bg",
         ].join(" ")}
       >
-        <p className="font-ui text-eyebrow font-medium uppercase text-ink-500">
+        <p className="flex items-center gap-2 font-ui text-eyebrow font-medium uppercase text-ink-500">
+          {/* La forme double la couleur (§4 règle 4) : l'icône ne dit pas
+              « erreur », elle dit « cette zone réclame un regard ». Un jour
+              sans impayé, elle s'efface avec le fond ambre. */}
+          <span
+            aria-hidden="true"
+            className={[
+              "inline-flex h-6 w-6 items-center justify-center rounded-md",
+              aucun ? "bg-card text-positive" : "bg-card text-attention-ink",
+            ].join(" ")}
+          >
+            <Icone nom={aucun ? "finances" : "alerte"} taille={16} />
+          </span>
           {t.impayes}
         </p>
         {aucun ? (
           <p className="mt-1 font-ui text-body text-ink-700">{t.aucunImpaye}</p>
         ) : (
           <>
-            <p className="font-display text-title font-semibold leading-tight text-attention-ink">
+            <p className="mt-1 font-display text-title font-semibold leading-tight text-attention-ink">
               {formaterDzd(impayesTotal)}
             </p>
             <p className="font-ui text-label text-ink-700">

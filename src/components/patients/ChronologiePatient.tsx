@@ -213,7 +213,7 @@ export function ChronologiePatient({
   }
 
   if (evenements.length === 0) {
-    return <EtatVide message={fr.patients.vide.chronologie} />;
+    return <EtatVide message={fr.patients.vide.chronologie} icone="suivi" />;
   }
 
   // Intertitres par mois : un flux de cinquante lignes sans repère temporel

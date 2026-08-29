@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Certificat médical — Aperçu A5 — Dr. LARBI. N</title>
+<style>
+/* Polished A5 Certificate — standalone preview, mirrors src/styles/tokens.css
+   @page margin:0 suppresses Chrome/Edge headers & footers (date, localhost URL, 1/1).
+   All dimensions in mm/pt — the only units shared by screen and printer. */
+@page { size: A5 portrait; margin: 0 !important; }
+* { box-sizing: border-box; }
+html { background: #f1f8f6; }
+body {
+  margin: 0;
+  padding: 24px 0 48px;
+  background: #f1f8f6;
+  display: flex;
+  justify-content: center;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+@media print {
+  html, body { background: white !important; margin:0 !important; padding:0 !important; }
+  body { display:block; }
+  .no-print { display:none !important; }
+  .doc-feuille { box-shadow:none !important; border-radius:0 !important; margin:0 auto !important; }
+}
+.doc-feuille {
+  width: 148mm;
+  min-height: 210mm;
+  max-width: 100%;
+  margin-inline: auto;
+  padding: 14mm 14mm;
+  background: white;
+  color: #0b1614;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 10.5pt;
+  line-height: 1.5;
+  box-shadow: 0 4px 8px rgba(11,22,20,.06), 0 16px 32px -12px rgba(11,22,20,.12);
+  border-radius: 10px;
+}
+/* ── Header: three columns, perfectly balanced ── */
+.doc-entete {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 18mm minmax(0,1fr);
+  gap: 16px;
+  align-items: start;
+  justify-items: stretch;
+  color: #1d5c54;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 9pt;
+  line-height: 1.35;
+}
+.doc-feuille .doc-entete p { margin:0; }
+.doc-entete__identite {
+  display:flex; flex-direction:column; gap:4px;
+  min-width:0; align-self:start; padding-top:0; margin-top:0;
+  overflow-wrap:anywhere;
+}
+.doc-entete__nom, .doc-entete__specialite { text-align:center; }
+.doc-entete__nom { font-weight:700; font-size:11pt; letter-spacing:-0.01em; line-height:1.2; }
+.doc-entete__specialite { font-weight:400; }
+.doc-entete__ar {
+  text-align:center; line-height:1.45; font-family:"IBM Plex Sans Arabic","Noto Sans Arabic",sans-serif;
+}
+.doc-entete__filet { border:none; border-top:1px solid #1d5c54; margin:4px 0; width:100%; }
+.doc-entete__ordre, .doc-entete__tel { font-size:8.5pt; }
+.doc-entete__marque {
+  width:18mm; height:18mm;
+  align-self:center; justify-self:center;
+  background-image:url("./marque-certificat.svg");
+  background-size:contain; background-repeat:no-repeat; background-position:center;
+  opacity:.92;
+}
+.doc-entete__patient {
+  display:flex; flex-direction:column; gap:4px;
+  text-align:left; justify-self:end; align-self:start;
+  min-width:0; padding-top:0; margin-top:0;
+  overflow-wrap:anywhere;
+}
+.doc-entete__patient span { font-weight:600; }
+/* ── Title: elegant serif, soft green underline only ── */
+.doc-titre {
+  margin: 9mm 0 6mm;
+  text-align:center;
+  font-family: "Newsreader", Georgia, serif;
+  font-size:15pt;
+  font-weight:700;
+  letter-spacing:-0.01em;
+  line-height:1.2;
+  color:#0b1614;
+  text-decoration-line: underline;
+  text-decoration-color: #7cb5ac;
+  text-decoration-thickness: 1.2pt;
+  text-underline-offset: 4pt;
+}
+/* ── Body: justified, clinical, trustworthy ── */
+.doc-corps p {
+  margin:0 0 3mm;
+  line-height:1.5;
+  text-align:justify;
+  text-justify:inter-word;
+  hyphens:auto;
+  overflow-wrap:anywhere;
+}
+.doc-corps p:last-child { margin-bottom:0; }
+.doc-liste {
+  margin:1mm 0 3mm;
+  padding-inline-start:8mm;
+  list-style: disc;
+  list-style-position: outside;
+}
+.doc-liste li {
+  margin:0 0 1.2mm;
+  line-height:1.5;
+  text-align:left;
+  overflow-wrap:anywhere;
+}
+.doc-liste li::marker { color:#23342f; font-size:.9em; }
+.doc-liste li:empty { display:none; }
+.doc-corps::after {
+  content:"";
+  display:block;
+  height:28mm;
+  break-inside:avoid;
+}
+/* ── Demo chrome (screen only) ── */
+.no-print {
+  position:fixed; top:16px; right:16px; z-index:10;
+  display:flex; gap:8px; align-items:center;
+}
+.btn {
+  appearance:none; border:1px solid #1d5c54; background:#1d5c54; color:white;
+  font-family:Inter,system-ui,sans-serif; font-size:13px; font-weight:500;
+  padding:10px 16px; border-radius:999px; cursor:pointer;
+}
+.btn.secondary { background:white; color:#1d5c54; }
+.hint {
+  position:fixed; bottom:16px; left:50%; transform:translateX(-50%);
+  background:rgba(11,22,20,.88); color:white; font-family:Inter,system-ui,sans-serif;
+  font-size:12px; padding:8px 14px; border-radius:999px;
+}
+</style>
+</head>
+<body>
+<div class="no-print">
+  <button class="btn" onclick="window.print()">Imprimer A5</button>
+  <button class="btn secondary" onclick="window.close()">Fermer</button>
+</div>
+
+<article class="doc-feuille" role="document" aria-label="Certificat médical A5">
+  <header class="doc-entete">
+    <div class="doc-entete__identite">
+      <p class="doc-entete__nom">Dr. LARBI. N</p>
+      <p class="doc-entete__specialite">Médecin Spécialiste en Psychiatrie<br>et Psychothérapie</p>
+      <hr class="doc-entete__filet">
+      <div class="doc-entete__ar" lang="ar" dir="rtl">
+        <p class="doc-entete__nom-ar">الدكتورة العربي-ن</p>
+        <p class="doc-entete__specialite-ar">طبيبة مختصة في الأمراض النفسية<br>العقلية والعصبية</p>
+      </div>
+      <hr class="doc-entete__filet">
+      <p class="doc-entete__ordre">N° d'Ordre : 16 / 16780</p>
+      <p class="doc-entete__tel">Tel : 0554813911</p>
+    </div>
+
+    <div class="doc-entete__marque" aria-hidden="true"></div>
+
+    <div class="doc-entete__patient">
+      <p><span>Date :</span> 26/08/2026</p>
+      <p><span>Nom :</span> SALMI</p>
+      <p><span>Prénom :</span> AYOUB</p>
+      <p><span>Age :</span> 22 ans</p>
+    </div>
+  </header>
+
+  <h1 class="doc-titre">Certificat médical</h1>
+
+  <div class="doc-corps">
+    <p>Je soussignée, Dr. LARBI. N, Médecin Spécialiste en Psychiatrie et Psychothérapie, Certifie que Mr/Mme/Mlle SALMI AYOUB, né(e) le 10/03/2004, présente une affection psychique chronique et invalidante nécessitant un traitement par&nbsp;:</p>
+    <ul class="doc-liste">
+      <li>Suivi psychiatrique régulier et psychothérapie de soutien</li>
+      <li>Traitement pharmacologique adapté selon l’évolution clinique</li>
+    </ul>
+    <p>Le présent certificat est établi pour servir et valoir ce que de droit.</p>
+  </div>
+</article>
+
+<div class="hint no-print">A5 portrait · marges 14 mm · @page margin:0 → aucun en-tête/pied navigateur</div>
+
+<script>
+// Extra hardening: if opened as file:// or http, ensure print uses about:blank-style isolation
+// when user clicks the on-page button we already use window.print() inside this clean A5 doc —
+// since this demo page IS the A5 doc, its URL would appear if margin were not 0.
+// With @page margin:0 it is correctly suppressed. For extra safety on the main app,
+// the React code uses an about:blank iframe (see src/app/documents/page.tsx:243).
+</script>
+</body>
+</html>

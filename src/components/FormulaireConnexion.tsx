@@ -22,6 +22,13 @@
  *
  * Aucune donnée saisie ne part dans un `console.log` (I5) : ce composant ne
  * journalise rien, jamais.
+ *
+ * v9 — LA CARTE EST COMPOSÉE. L'en-tête de carte porte la marque (le mark au
+ * trait, blanc sur sa pastille de dégradé — le seul dégradé de la carte, et
+ * c'est l'orbe du produit), le titre, et les états d'erreur prennent la place
+ * qu'ils ont toujours eue : entre le titre et les champs, JAMAIS après le
+ * bouton — une erreur qu'on découvre en bas d'un formulaire est une erreur
+ * qu'on ne relit pas.
  */
 
 "use client";
@@ -29,6 +36,7 @@
 import { useId, useState } from "react";
 
 import { fr } from "@/i18n/fr";
+import { Icone, MarqueMindCare } from "./ui/Icones";
 
 export interface FormulaireConnexionProps {
   readonly onSubmit: (email: string, motDePasse: string) => void;
@@ -60,64 +68,36 @@ export function FormulaireConnexion({
   }
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "var(--s-6)",
-        padding: "var(--s-10)",
-        borderRadius: "var(--r-xl)",
-        maxWidth: "var(--width-form)",
-        width: "var(--size-full)",
-        /* ⚠️ CETTE CARTE EST OPAQUE, ET ELLE L'EST DEPUIS V3.
-         *
-         * Elle portait un dégradé composé ICI, à la main — un dégradé linéaire
-         * de 180deg allant de `--brand-050` à `--card`.
-         * Écrit avec des jetons, donc invisible à un contrôle qui ne cherche
-         * que des couleurs en dur — et pourtant c'était un QUATRIÈME dégradé,
-         * là où ADR-022 en ferme la liste à trois. Un dégradé composé de jetons
-         * légitimes reste un dégradé inventé : ce qui est fermé, c'est la
-         * liste, pas la provenance des couleurs.
-         *
-         * La couleur n'a pas disparu pour autant — elle a changé de plan. Le
-         * DÉGRADÉ EST DERRIÈRE, sur le fond d'écran (`--grad-auth`, au
-         * catalogue), et la carte se détache dessus en blanc franc. C'est le
-         * meilleur dessin des deux : les champs de saisie et leurs étiquettes
-         * reposent sur une surface opaque, donc à contraste constant, ce qu'un
-         * fond dégradé sous un formulaire ne garantit jamais. */
-        background: "var(--card)",
-        boxShadow: "var(--lift-3)",
-        fontFamily: "var(--font-ui)",
-      }}
-    >
-      <h1
-        style={{
-          fontSize: "var(--text-title-size)",
-          lineHeight: "var(--text-title-leading)",
-          letterSpacing: "var(--text-title-tracking)",
-          fontWeight: "var(--weight-semibold)",
-          color: "var(--ink-900)",
-          margin: "var(--size-0)",
-        }}
-      >
-        {fr.connexion.titre}
-      </h1>
+    <div className="flex w-full flex-col gap-6 rounded-xl border border-rule bg-card p-10 shadow-lift3 max-w-form">
+      {/* L'en-tête de marque de la carte : le mark dans son orbe, le titre.
+          C'est le même mark que le rail — l'application se reconnaît avant
+          qu'on ait lu un mot. */}
+      <div className="flex items-center gap-4">
+        <span
+          aria-hidden="true"
+          className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-grad-orb text-on-brand shadow-glow-brand"
+        >
+          <MarqueMindCare taille={28} />
+        </span>
+        <div className="flex min-w-0 flex-col">
+          <h1 className="m-0 font-ui text-title font-semibold text-ink-900">
+            {fr.connexion.titre}
+          </h1>
+          <p className="m-0 font-ui text-label text-ink-500">{fr.connexion.accroche}</p>
+        </div>
+      </div>
 
       {/* Hors ligne : ton neutre, jamais --attention ni --critical (§4.1). */}
       {horsLigne ? (
         <p
           id={horsLigneId}
           role="status"
-          style={{
-            margin: "var(--size-0)",
-            padding: "var(--s-3) var(--s-4)",
-            borderRadius: "var(--r-md)",
-            background: "var(--sunken)",
-            color: "var(--ink-700)",
-            fontSize: "var(--text-body-size)",
-            lineHeight: "var(--text-body-leading)",
-          }}
+          className="m-0 flex items-start gap-3 rounded-md border border-rule bg-sunken px-4 py-3 font-ui text-body text-ink-700"
         >
+          <span
+            aria-hidden="true"
+            className="mt-2 inline-block h-2 w-2 shrink-0 rounded-full bg-ink-300"
+          />
           {fr.etats.horsLigne}
         </p>
       ) : null}
@@ -128,57 +108,36 @@ export function FormulaireConnexion({
         <div
           id={erreurId}
           role="alert"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "var(--s-1)",
-            padding: "var(--s-3) var(--s-4)",
-            borderRadius: "var(--r-md)",
-            background: "var(--attention-bg)",
-            color: "var(--ink-700)",
-          }}
+          className="m-0 flex items-start gap-3 rounded-md border border-attention bg-attention-bg px-4 py-3"
         >
-          <strong
-            style={{
-              fontSize: "var(--text-label-size)",
-              lineHeight: "var(--text-label-leading)",
-              letterSpacing: "var(--text-label-tracking)",
-              fontWeight: "var(--weight-semibold)",
-              color: "var(--attention-ink)",
-            }}
-          >
-            {fr.erreur.titre}
-          </strong>
           <span
-            style={{
-              fontSize: "var(--text-body-size)",
-              lineHeight: "var(--text-body-leading)",
-            }}
+            aria-hidden="true"
+            className="mt-0.5 inline-flex shrink-0 text-attention-ink"
           >
-            {messageErreur}
+            <Icone nom="alerte" taille={20} />
+          </span>
+          <span className="flex min-w-0 flex-col gap-1">
+            <strong className="font-ui text-label font-semibold uppercase tracking-label text-attention-ink">
+              {fr.erreur.titre}
+            </strong>
+            <span className="font-ui text-body text-ink-700">{messageErreur}</span>
           </span>
         </div>
       ) : null}
 
       <form
         onSubmit={handleSubmit}
-        style={{ display: "flex", flexDirection: "column", gap: "var(--s-4)" }}
+        className="flex flex-col gap-4"
         aria-describedby={
           [messageErreur !== undefined ? erreurId : null, horsLigne ? horsLigneId : null]
             .filter((value): value is string => value !== null)
             .join(" ") || undefined
         }
       >
-        <div style={{ display: "flex", flexDirection: "column", gap: "var(--s-2)" }}>
+        <div className="flex flex-col gap-2">
           <label
             htmlFor={emailId}
-            style={{
-              fontSize: "var(--text-label-size)",
-              lineHeight: "var(--text-label-leading)",
-              letterSpacing: "var(--text-label-tracking)",
-              fontWeight: "var(--weight-medium)",
-              color: "var(--ink-700)",
-            }}
+            className="font-ui text-label font-medium tracking-label text-ink-700"
           >
             {fr.connexion.champEmail}
           </label>
@@ -190,30 +149,14 @@ export function FormulaireConnexion({
             disabled={enCours}
             value={email}
             onChange={(event) => setEmail(event.target.value)}
-            style={{
-              padding: "var(--s-3) var(--s-4)",
-              borderRadius: "var(--r-md)",
-              border: "var(--rule-width) solid var(--rule)",
-              background: "var(--card)",
-              color: "var(--ink-900)",
-              fontSize: "var(--text-body-size)",
-              lineHeight: "var(--text-body-leading)",
-              fontFamily: "var(--font-ui)",
-              minHeight: "var(--target-comfort)",
-            }}
+            className="min-h-target-lg w-full rounded-md border border-rule bg-card px-4 py-3 font-ui text-body text-ink-900 outline-none transition duration-quick ease-soft placeholder:text-ink-300 hover:border-ink-300 focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset disabled:cursor-not-allowed disabled:bg-sunken disabled:opacity-disabled"
           />
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: "var(--s-2)" }}>
+        <div className="flex flex-col gap-2">
           <label
             htmlFor={motDePasseId}
-            style={{
-              fontSize: "var(--text-label-size)",
-              lineHeight: "var(--text-label-leading)",
-              letterSpacing: "var(--text-label-tracking)",
-              fontWeight: "var(--weight-medium)",
-              color: "var(--ink-700)",
-            }}
+            className="font-ui text-label font-medium tracking-label text-ink-700"
           >
             {fr.connexion.champMotDePasse}
           </label>
@@ -225,17 +168,7 @@ export function FormulaireConnexion({
             disabled={enCours}
             value={motDePasse}
             onChange={(event) => setMotDePasse(event.target.value)}
-            style={{
-              padding: "var(--s-3) var(--s-4)",
-              borderRadius: "var(--r-md)",
-              border: "var(--rule-width) solid var(--rule)",
-              background: "var(--card)",
-              color: "var(--ink-900)",
-              fontSize: "var(--text-body-size)",
-              lineHeight: "var(--text-body-leading)",
-              fontFamily: "var(--font-ui)",
-              minHeight: "var(--target-comfort)",
-            }}
+            className="min-h-target-lg w-full rounded-md border border-rule bg-card px-4 py-3 font-ui text-body text-ink-900 outline-none transition duration-quick ease-soft placeholder:text-ink-300 hover:border-ink-300 focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset disabled:cursor-not-allowed disabled:bg-sunken disabled:opacity-disabled"
           />
         </div>
 
@@ -243,34 +176,27 @@ export function FormulaireConnexion({
           type="submit"
           disabled={enCours}
           aria-busy={enCours}
-          style={{
-            marginTop: "var(--s-2)",
-            padding: "var(--s-3) var(--s-5)",
-            borderRadius: "var(--r-md)",
-            border: "none",
-            minHeight: "var(--target-comfort)",
-            /* ⚠️ `--brand-500` PENDANT L'ENVOI, ET SURTOUT PAS `--brand-400`.
-             *
-             * L'ancienne palette employait ici son ton 400. Le renommage v2
-             * aurait donné `--brand-400` — le ton du LOGO, bien plus clair que
-             * son prédécesseur : le libellé blanc du bouton y tombe à ≈ 2.2:1,
-             * très en dessous du plancher de 4.5:1. Un bouton lisible au repos
-             * devenait illisible exactement pendant qu'il annonce « Connexion
-             * en cours… », c'est-à-dire au moment où on le lit.
-             *
-             * C'est le piège du renommage : un mappage 1:1 entre deux rampes
-             * qui n'ont pas la même clarté déplace des contrastes sans rien
-             * changer d'apparent dans le code. `--brand-500` tient le plancher
-             * et reste visiblement en retrait de l'état actif. */
-            background: enCours ? "var(--brand-500)" : "var(--action-600)",
-            color: "var(--card)",
-            fontSize: "var(--text-body-size)",
-            lineHeight: "var(--text-body-leading)",
-            fontWeight: "var(--weight-semibold)",
-            fontFamily: "var(--font-ui)",
-            cursor: enCours ? "default" : "pointer",
-            transition: `background var(--d-quick) var(--e-soft)`,
-          }}
+          /* ⚠️ `--brand-500` PENDANT L'ENVOI, ET SURTOUT PAS `--brand-400`.
+           *
+           * L'ancienne palette employait ici son ton 400. Le renommage v2
+           * aurait donné `--brand-400` — le ton du LOGO, bien plus clair que
+           * son prédécesseur : le libellé blanc du bouton y tombe à ≈ 2.2:1,
+           * très en dessous du plancher de 4.5:1. Un bouton lisible au repos
+           * devenait illisible exactement pendant qu'il annonce « Connexion
+           * en cours… », c'est-à-dire au moment où on le lit.
+           *
+           * C'est le piège du renommage : un mappage 1:1 entre deux rampes
+           * qui n'ont pas la même clarté déplace des contrastes sans rien
+           * changer d'apparent dans le code. `--brand-500` tient le plancher
+           * et reste visiblement en retrait de l'état actif. */
+          className={[
+            "mt-2 flex min-h-target-lg w-full cursor-pointer items-center justify-center gap-2 rounded-md border-0 px-5 py-3",
+            "font-ui text-body font-semibold text-paper shadow-lift1",
+            "transition duration-quick ease-soft",
+            enCours
+              ? "cursor-default bg-brand-500 shadow-none"
+              : "bg-action-600 hover:bg-action-700 hover:shadow-lift2 active:bg-action-900 active:shadow-lift1",
+          ].join(" ")}
         >
           {enCours ? fr.connexion.connexionEnCours : fr.actions.seConnecter}
         </button>

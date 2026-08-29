@@ -271,7 +271,12 @@ const config = [
     // NAVIGATEUR de `src/`. Linter des outils hors ligne sous les règles du
     // front rend le rouge ininterprétable, et un contrôle ininterprétable finit
     // désarmé. Même motif que l'élagage `.claude` de preflight (4ᵉ passe).
-    ignores: [".next/**", "node_modules/**", "supabase/functions/**", ".claude/**"],
+    // `.eval-out/**` : sortie JavaScript COMPILÉE des bancs d'essai, jetable et
+    // déjà ignorée par git. La linter y voyait l'adaptateur Supabase transpilé
+    // et criait à l'accès base interdit — une alerte portant sur un artefact,
+    // pas sur du code écrit. Un garde-fou qui crie sur ses propres sous-produits
+    // finit par ne plus être lu.
+    ignores: [".next/**", "node_modules/**", "supabase/functions/**", ".claude/**", ".eval-out/**"],
   },
   {
     linterOptions: {

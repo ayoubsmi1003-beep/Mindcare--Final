@@ -38,25 +38,23 @@ export type RangBouton = "principal" | "secondaire" | "discret";
  */
 const SOCLE = [
   "inline-flex items-center justify-center gap-2",
-  "min-h-target rounded-md px-4",
-  "font-ui text-body font-medium",
+  "min-h-target rounded-full px-5 py-3",
+  "font-ui text-body font-semibold tracking-body",
   "cursor-pointer select-none text-center",
-  "transition duration-quick ease-soft",
+  "transition duration-quick ease-out",
   "outline-none focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset",
   "disabled:cursor-not-allowed disabled:opacity-disabled disabled:shadow-none",
+  "active:scale-95",
 ].join(" ");
 
 const RANGS: Readonly<Record<RangBouton, string>> = {
-  // L'ombre s'accentue au survol au lieu de déplacer le bouton : un élément
-  // qui se soulève sous le curseur déplace aussi la cible qu'on vise.
-  // Jetons de RÔLE, pas de palette : un bouton primaire est une ACTION, et
-  // c'est `--action-*` qui le dit. Les valeurs sont aujourd'hui celles de la
-  // marque ; le jour où l'action s'en détacherait, ce bouton suivrait sans
-  // qu'on ait à le retrouver.
+  // V2 Vibrant Instrument — principal = moment vibrant rare (L6)
+  // Dégradé de marque + blanc pur 5.10:1, lueur subtile au repos, intensifiée au hover.
+  // Un seul primaire par vue — il doit se trouver sans être lu.
   principal: [
-    "bg-action-600 text-paper shadow-lift1",
-    "hover:bg-action-700 hover:shadow-lift2",
-    "active:bg-action-900 active:shadow-lift1",
+    "bg-grad-tile-brand text-on-brand shadow-lift2 border border-transparent",
+    "hover:shadow-glow-brand",
+    "active:shadow-lift1",
   ].join(" "),
   secondaire: [
     "bg-card text-ink-900 border border-rule shadow-lift1",
@@ -64,7 +62,7 @@ const RANGS: Readonly<Record<RangBouton, string>> = {
     "active:bg-sunken active:shadow-lift0",
   ].join(" "),
   discret: [
-    "bg-transparent text-ink-500 border border-transparent",
+    "bg-transparent text-ink-500 border border-transparent rounded-full",
     "hover:bg-sunken hover:text-ink-900",
     "active:bg-sunken",
   ].join(" "),
@@ -72,7 +70,7 @@ const RANGS: Readonly<Record<RangBouton, string>> = {
 
 /** Rang d'un geste qui retire quelque chose. `attention`, jamais `critical`. */
 const RETRAIT = [
-  "bg-card text-attention-ink border border-attention shadow-lift1",
+  "bg-card text-attention-ink border border-attention shadow-lift1 rounded-full",
   "hover:bg-attention-bg hover:shadow-lift2",
   "active:bg-attention-bg active:shadow-lift0",
 ].join(" ");

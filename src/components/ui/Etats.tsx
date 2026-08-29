@@ -16,6 +16,8 @@ import type { ReactNode } from "react";
 
 import { fr } from "@/i18n/fr";
 
+import { Icone, type NomIcone } from "./Icones";
+
 /**
  * Bandeau hors ligne.
  *
@@ -32,12 +34,13 @@ export function BandeauHorsLigne(): React.JSX.Element {
     <p
       role="status"
       className={[
-        "flex items-center gap-3 rounded-md border border-rule bg-sunken px-4 py-3",
-        "font-ui text-body text-ink-700",
+        "flex items-center gap-3 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3",
+        "font-ui text-body font-medium text-amber-700",
       ].join(" ")}
     >
-      {/* Une forme, pas seulement une couleur (§4 règle 4). */}
-      <span aria-hidden="true" className="inline-block h-2 w-2 shrink-0 rounded-full bg-ink-300" />
+      <span aria-hidden="true" className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-white text-amber-600 shadow-lift1">
+        <Icone nom="alerte" taille={16} />
+      </span>
       {fr.etats.horsLigne}
     </p>
   );
@@ -61,40 +64,68 @@ export function BlocErreur({
   return (
     <div
       role="alert"
-      className="flex flex-col gap-3 rounded-md border border-attention bg-attention-bg p-4"
+      className="flex items-start gap-4 rounded-xl border border-amber-200 bg-amber-50 p-5 shadow-lift2"
     >
-      <div className="flex flex-col gap-1">
-        <strong className="font-ui text-label font-semibold uppercase tracking-label text-attention-ink">
+      <span
+        aria-hidden="true"
+        className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-amber-700 shadow-lift1 border border-amber-100"
+      >
+        <Icone nom="alerte" taille={20} />
+      </span>
+      <div className="flex min-w-0 flex-col gap-1.5">
+        <strong className="font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-amber-700">
           {fr.erreur.titre}
         </strong>
-        <p className="font-ui text-body text-ink-700">{message}</p>
+        <p className="font-ui text-body font-regular leading-relaxed text-ink-700">{message}</p>
+        {action === undefined ? null : <div className="mt-3">{action}</div>}
       </div>
-      {action}
     </div>
   );
 }
 
 /**
- * État vide.
+ * État vide — COMPOSÉ, jamais un blanc qui ressemble à un oubli.
  *
- * JAMAIS D'ILLUSTRATION (§4 règle 7) — une phrase en `--ink-500` et une action
- * teal. Un dessin de boîte vide occupe l'espace sans rien dire, et sur un écran
- * qu'on ouvre quarante fois par jour il devient du bruit permanent.
+ * v9 : le disque de marque (`--grad-empty`, explicitement au catalogue des
+ * états vides d'ADR-025) porte l'icône du contexte ; le titre dit ce qui
+ * N'EST PAS, le message dit ce qu'on peut faire. Aucune donnée fictive
+ * (I19), aucune illustration qui meuble : l'icône est celle de l'écran
+ * lui-même, elle rappelle ce qu'on vient chercher ici.
  *
- * Un état vide est HONNÊTE : il dit qu'il n'y a rien, il ne meuble pas avec de
- * la donnée fictive (I19).
+ * `icone` reste optionnel : un appelant qui ne la passe pas garde la
+ * composition sobre d'avant — mais l'écran principal de chaque domaine la
+ * passe, parce qu'un « rien » dessiné est plus calme qu'un « rien » brut.
  */
 export function EtatVide({
   message,
   action,
+  icone,
+  titre,
 }: {
   readonly message: string;
   readonly action?: ReactNode;
+  readonly icone?: NomIcone;
+  readonly titre?: string;
 }): React.JSX.Element {
   return (
-    <div className="flex flex-col items-center gap-4 rounded-lg border border-rule bg-card px-6 py-12 text-center">
-      <p className="max-w-main font-ui text-body text-ink-500">{message}</p>
-      {action}
+    <div className="flex flex-col items-center gap-5 rounded-2xl border border-rule/60 bg-card px-6 py-10 text-center shadow-lift2">
+      {icone === undefined ? null : (
+        <span
+          aria-hidden="true"
+          className="inline-flex h-20 w-20 items-center justify-center rounded-2xl bg-grad-empty shadow-lift1"
+        >
+          <span className="inline-flex h-14 w-14 items-center justify-center rounded-xl border border-rule bg-card text-action-600 shadow-lift2">
+            <Icone nom={icone} taille={24} />
+          </span>
+        </span>
+      )}
+      <div className="flex max-w-sm flex-col gap-2">
+        {titre === undefined ? null : (
+          <p className="font-ui text-heading font-bold tracking-tight text-ink-900">{titre}</p>
+        )}
+        <p className="font-ui text-body font-regular leading-relaxed text-ink-500">{message}</p>
+      </div>
+      {action === undefined ? null : <div className="mt-1">{action}</div>}
     </div>
   );
 }
@@ -120,18 +151,19 @@ export function Squelette({
     <div
       role="status"
       aria-busy="true"
-      className="flex flex-col gap-3 rounded-lg border border-rule bg-card p-6"
+      className="flex flex-col gap-4 rounded-2xl border border-rule/60 bg-card p-6 shadow-lift2"
     >
       <span className="sr-only">{fr.etats.chargement}</span>
+      <span
+        aria-hidden="true"
+        className="block h-5 w-1/3 animate-respire rounded-lg bg-sunken"
+      />
       {Array.from({ length: lignes }, (_, i) => (
         <span
           key={i}
           aria-hidden="true"
           className={[
-            "block h-4 animate-respire rounded-sm bg-sunken",
-            // La dernière ligne est plus courte : un paragraphe réel l'est
-            // presque toujours, et l'œil lit « du texte » au lieu de « des
-            // barres ».
+            "block h-4 animate-respire rounded-lg bg-sunken",
             i === lignes - 1 ? "w-1/2" : "w-full",
           ].join(" ")}
         />
@@ -219,15 +251,13 @@ export function Champ({
 }): React.JSX.Element {
   const vide = valeur === null || valeur === "";
   return (
-    <div className="flex min-w-0 flex-col gap-1">
-      <span className="font-ui text-label font-medium tracking-label text-ink-500">{libelle}</span>
+    <div className="flex min-w-0 flex-col gap-2 rounded-xl bg-sunken px-4 py-3">
+      <span className="font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-ink-500">{libelle}</span>
       <span
         className={[
-          "font-ui text-body tabular-nums",
-          // Un nom long ou une note d'une ligne entière ne doit ni déborder ni
-          // pousser la colonne voisine (I11, cinquième état).
+          "font-ui text-body font-regular tabular-nums",
           "whitespace-pre-wrap break-words",
-          vide ? "text-ink-500" : "text-ink-900",
+          vide ? "text-ink-500" : "text-ink-900 font-medium",
         ].join(" ")}
       >
         {vide ? fr.etats.texteAbsent : valeur}

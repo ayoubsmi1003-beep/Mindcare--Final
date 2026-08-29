@@ -24,9 +24,21 @@
  *
  * Aucun `.reduce`, aucun `/ 100`, aucune somme. Tous les nombres arrivent
  * calculés de `app.get_finance_overview`. Ce fichier FORMATE, il ne calcule pas.
+ *
+ * ═══ v9 — LA COULEUR A UN RÔLE, PAS UNE HUMEUR ═════════════════════════════
+ *
+ * Quatre tuiles blanches portent leur famille en PASTILLE (marque pour les
+ * encaissements, ambre pour les charges) ; la tuile ANCRE — le résultat net,
+ * le chiffre que l'œil cherche en premier — prend le dégradé de marque
+ * (`--grad-tile-brand`) et l'encre blanche unique. Aucune valeur clinique ou
+ * nominative ne repose sur le dégradé : une tuile compte, elle ne décrit
+ * personne (§4.2). Le signe du résultat reste LISIBLE dans la valeur elle-même
+ * (« -12 500 DZD ») — sur un fond de marque, la hiérarchie ne se fait jamais
+ * en baissant le contraste.
  */
 
 import { fr } from "@/i18n/fr";
+import { Icone, type NomIcone } from "@/components/ui/Icones";
 import { formaterDzd, type Pulse } from "@/services/finance-cash";
 
 function Tuile({
@@ -34,48 +46,72 @@ function Tuile({
   aide,
   valeur,
   sousLigne,
+  icone,
   ancre = false,
-  ton = "neutre",
 }: {
   readonly etiquette: string;
   readonly aide: string;
   readonly valeur: string;
   readonly sousLigne: string;
+  /** Absent sur la tuile ancre : le dégradé de marque la signale déjà. */
+  readonly icone?: NomIcone;
   readonly ancre?: boolean;
-  readonly ton?: "neutre" | "positif" | "negatif";
 }): React.JSX.Element {
-  const encre =
-    ton === "positif" ? "text-positive" : ton === "negatif" ? "text-critical" : "text-ink-900";
+  if (ancre) {
+    /* LA TUILE ANCRE — le dégradé de marque, l'encre blanche pure. Elle se
+     * trouve sans être lue ; les quatre autres restent au même niveau entre
+     * elles — hiérarchiser tout revient à ne rien hiérarchiser. */
+    return (
+      <div className="flex min-w-0 flex-col justify-between gap-2 rounded-lg bg-grad-tile-brand px-4 py-3 shadow-lift2">
+        <p
+          className="truncate font-ui text-eyebrow font-semibold uppercase text-on-brand"
+          title={aide}
+        >
+          {etiquette}
+        </p>
+        {/* ⚠️ `text-title` POUR LES CINQ, ANCRE COMPRISE. Mesuré : à
+            `text-display` (30 px), « -142 500 DZD » ne tient pas dans une
+            tuile d'un cinquième de largeur et sortait tronqué. Un montant
+            tronqué est pire qu'un montant plus petit : il se lit comme un
+            autre montant. L'ancre se distingue par le FOND, la GRAISSE et la
+            pastille, pas par une taille qui ne tient pas. */}
+        <p className="font-display truncate text-title font-semibold leading-none text-on-brand">
+          {valeur}
+        </p>
+        <p className="truncate font-ui text-label text-on-brand">{sousLigne}</p>
+      </div>
+    );
+  }
 
   return (
-    <div
-      className={[
-        "flex min-w-0 flex-col justify-between rounded-lg bg-card px-4 py-3",
-        // L'ancre visuelle porte une élévation et un liseré : elle se trouve
-        // sans être lue. Les quatre autres restent au même niveau entre elles —
-        // hiérarchiser tout revient à ne rien hiérarchiser.
-        ancre ? "shadow-lift2 ring-1 ring-brand-200" : "shadow-lift1",
-      ].join(" ")}
-    >
-      <p
-        className="truncate font-ui text-eyebrow font-medium uppercase text-ink-500"
-        title={aide}
-      >
-        {etiquette}
-      </p>
-      {/* ⚠️ `text-title` POUR LES CINQ, ANCRE COMPRISE. Mesuré : à `text-display`
-          (30 px), « -142 500 DZD » ne tient pas dans une tuile d'un cinquième de
-          largeur et sortait tronqué — « -142 500 … ». Un montant tronqué est
-          pire qu'un montant plus petit : il se lit comme un autre montant.
-          L'ancre se distingue par la GRAISSE, la couleur et l'élévation, pas
-          par une taille qui ne tient pas. */}
-      <p
-        className={[
-          "font-display truncate leading-none",
-          ancre ? "text-title font-semibold" : "text-title font-medium",
-          encre,
-        ].join(" ")}
-      >
+    <div className="flex min-w-0 flex-col justify-between gap-2 rounded-lg border border-rule bg-card px-4 py-3 shadow-lift1 transition duration-quick ease-soft hover:shadow-lift2">
+      <div className="flex items-center justify-between gap-2">
+        <p
+          className="truncate font-ui text-eyebrow font-medium uppercase text-ink-500"
+          title={aide}
+        >
+          {etiquette}
+        </p>
+        {/* La pastille porte la FAMILLE (encaissement = marque, charge =
+            ambre), jamais un statut. Elle double l'étiquette écrite — la
+            couleur n'est pas le seul porteur (§4 règle 4). L'icône des
+            charges est une page : une pièce de papier, pas un avertissement —
+            une charge n'est pas une alerte, c'est un axe comptable. */}
+        {icone === undefined ? null : (
+          <span
+            aria-hidden="true"
+            className={[
+              "inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md",
+              icone === "documents"
+                ? "bg-attention-bg text-attention-ink"
+                : "bg-action-100 text-action-600",
+            ].join(" ")}
+          >
+            <Icone nom={icone} taille={16} />
+          </span>
+        )}
+      </div>
+      <p className="font-display truncate text-title font-medium leading-none text-ink-900">
         {valeur}
       </p>
       <p className="truncate font-ui text-label text-ink-500">{sousLigne}</p>
@@ -116,24 +152,28 @@ export function TuilesPulse({ pulse }: { readonly pulse: Pulse }): React.JSX.Ele
         aide={t.aujourdhuiAide}
         valeur={formaterDzd(pulse.revenu_aujourdhui)}
         sousLigne={seances}
+        icone="horloge"
       />
       <Tuile
         etiquette={t.semaine}
         aide={t.semaineAide}
         valeur={formaterDzd(pulse.revenu_semaine)}
         sousLigne={panier}
+        icone="finances"
       />
       <Tuile
         etiquette={t.mois}
         aide={t.moisAide}
         valeur={formaterDzd(pulse.revenu_mois)}
         sousLigne={seances}
+        icone="statistiques"
       />
       <Tuile
         etiquette={t.charges}
         aide={t.chargesAide}
         valeur={formaterDzd(pulse.charges_periode)}
         sousLigne={charges}
+        icone="documents"
       />
       <Tuile
         etiquette={t.resultatNet}
@@ -141,9 +181,6 @@ export function TuilesPulse({ pulse }: { readonly pulse: Pulse }): React.JSX.Ele
         valeur={formaterDzd(pulse.resultat_net_periode)}
         sousLigne={seances}
         ancre
-        // Le signe vient de la BASE (`resultat_net_periode`), pas d'une
-        // soustraction refaite ici.
-        ton={pulse.resultat_net_periode < 0 ? "negatif" : "positif"}
       />
     </div>
   );

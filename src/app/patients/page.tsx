@@ -43,9 +43,11 @@ import { EnTeteAnnuaire, LignePatient } from "@/components/patients/LignePatient
 import {
   BandeauHorsLigne,
   BlocErreur,
+  ChampRecherche,
   EnTeteEcran,
   EtatVide,
   LienBouton,
+  MetaHeros,
   Squelette,
 } from "@/components/ui";
 import { fr } from "@/i18n/fr";
@@ -248,10 +250,17 @@ export default function PagePatients(): React.JSX.Element {
           décide lequel des deux en-têtes un écran reçoit. La fiche d'un
           dossier, elle, garde `EnTetePage`, sobre et opaque.
           SPRINT-V1 §V5 : « Bouton Nouveau patient - visible, en haut à
-          droite, jamais caché dans un menu ». */}
+          droite, jamais caché dans un menu ».
+          v9 — la rangée de contexte porte la date du jour : l'écran se
+          situe dans la journée avant qu'on ait cherché quoi que ce soit.
+          La date se calcule au rendu client (l'écran est gardé par la
+          session, donc jamais rendu côté serveur) — aucun risque
+          d'hydratation. */}
       <EnTeteEcran
         icone="patients"
         titre={fr.patients.titre}
+        sousTitre={fr.patients.sousTitre}
+        meta={<MetaHeros icone="horloge">{dateDuJour()}</MetaHeros>}
         actions={
           <LienBouton href="/patients/nouveau" rang="principal">
             {fr.patients.creation.titre}
@@ -261,7 +270,9 @@ export default function PagePatients(): React.JSX.Element {
 
       {/* Plus de bouton « Rechercher » : la recherche part au débounce. Le
           formulaire reste un `form` pour que `Entrée` fonctionne au clavier et
-          que le champ soit correctement étiqueté. */}
+          que le champ soit correctement étiqueté. v9 — la barre prend la
+          forme d'une commande : loupe, champ sans bordure propre, le focus
+          porté par la barre entière. */}
       <form
         role="search"
         onSubmit={(event) => {
@@ -270,16 +281,11 @@ export default function PagePatients(): React.JSX.Element {
         }}
         className="my-6"
       >
-        <label htmlFor="recherche-patients" className="sr-only">
-          {fr.patients.rechercher}
-        </label>
-        <input
-          id="recherche-patients"
-          type="search"
-          value={saisie}
+        <ChampRecherche
+          libelle={fr.patients.rechercher}
+          valeur={saisie}
+          onChange={setSaisie}
           placeholder={fr.patients.rechercherIndication}
-          onChange={(event) => setSaisie(event.target.value)}
-          className="min-h-target-lg w-full rounded-md border border-rule bg-card px-4 font-ui text-body text-ink-900 placeholder:text-ink-500"
         />
       </form>
 
@@ -297,9 +303,12 @@ export default function PagePatients(): React.JSX.Element {
       {!chargement && page !== undefined && page.rows.length === 0 ? (
         /* Deux phrases distinctes selon qu'une recherche est en cours ou non —
            « rien ne correspond » et « rien n'est visible » ne disent pas la
-           même chose, et les confondre ferait croire à un dossier manquant. */
+           même chose, et les confondre ferait croire à un dossier manquant.
+           v9 — l'icône compose le vide : la loupe dit « on a cherché », le
+           monogramme dit « l'annuaire est là, il est vide pour vous ». */
         <EtatVide
           message={requete === "" ? fr.patients.listeVide : fr.patients.rechercheSansResultat}
+          icone={requete === "" ? "patients" : "recherche"}
         />
       ) : null}
 
@@ -309,7 +318,7 @@ export default function PagePatients(): React.JSX.Element {
             {page.total} {fr.patients.comptage} · {fr.patients.listeActifsSeulement}
           </p>
 
-          <div className="mt-4 rounded-lg border border-rule bg-card px-3 py-3">
+          <div className="mt-4 overflow-hidden rounded-xl border border-rule bg-card shadow-lift2">
             <EnTeteAnnuaire />
             <ul className="m-0 list-none p-0">
               {page.rows.map((patient) => (
@@ -321,4 +330,18 @@ export default function PagePatients(): React.JSX.Element {
       ) : null}
     </AppShell>
   );
+}
+
+/**
+ * La date du jour, en toutes lettres — le contexte de l'en-tête de lieu.
+ * `fr-DZ` et le format long : « lundi 24 août ». C'est une ÉTIQUETTE de
+ * lecture, pas une borne de journée : la référence des bornes reste le
+ * serveur en Africa/Algiers, jamais l'horloge du poste.
+ */
+function dateDuJour(): string {
+  return new Intl.DateTimeFormat("fr-DZ", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  }).format(new Date());
 }

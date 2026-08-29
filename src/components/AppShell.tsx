@@ -214,28 +214,24 @@ export function AppShell({
           navigation au clavier serait invisible exactement ici. */}
       <nav
         aria-label={fr.coquille.navigationPrincipale}
-        className="sur-marque sticky top-0 flex h-full flex-col gap-5 overflow-hidden bg-grad-auth px-3 py-5 shadow-lift3 tablet:px-4"
+        className="sur-marque sticky top-0 flex h-full flex-col gap-4 overflow-hidden bg-grad-auth px-3 py-4 shadow-lift3 tablet:gap-5 tablet:px-3.5 tablet:py-5"
       >
-        {/* v9 — LE REFLET. La même lumière rasante que les en-têtes de lieu
-            (`--grad-hero-reflet`) : le rail n'est plus un aplat sombre, il a
-            une source de lumière, donc une épaisseur. Décor pur — il ne porte
-            aucun texte, et l'encre blanche du rail reste mesurée sur le
-            dégradé, pas sur lui. */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-grad-hero-reflet"
+          className="pointer-events-none absolute inset-0 bg-grad-hero-reflet opacity-80"
         />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-px bg-white/10" />
 
-        {/* ── La marque. Le mark hérite de `currentColor`, donc blanc ici sans
-            qu'on ait à le dire. Le mot disparaît avec le repli, le mark reste :
-            c'est lui qui identifie le produit, pas le texte. */}
-        <div className="relative flex items-center gap-3 px-2 text-on-brand">
-          <MarqueMindCare taille={32} titre="MindCare OS" />
+        <div className="relative flex items-center gap-2.5 px-2 py-1 text-on-brand">
+          <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-white text-brand-700 shadow-lift1">
+            <MarqueMindCare taille={20} titre="MindCare OS" />
+          </span>
           <span
-            className={["font-ui text-heading font-semibold", LIBELLE_REPLIABLE].join(" ")}
+            className={["font-ui text-heading font-bold tracking-tight", LIBELLE_REPLIABLE].join(" ")}
           >
             MindCare
           </span>
+          <span className={["ml-1 rounded-full bg-white/15 px-2 py-0.5 font-ui text-eyebrow font-semibold tracking-widest text-white/90", LIBELLE_REPLIABLE].join(" ")}>OS</span>
         </div>
 
         {/* ⚠️ LE COMPTE EST COLLÉ EN BAS **DANS** LA ZONE QUI DÉFILE, ET C'EST
@@ -262,7 +258,7 @@ export function AppShell({
                 l'espacement entre les blocs. */}
             <span
               className={[
-                "px-2 font-ui text-eyebrow font-semibold uppercase text-on-brand",
+                "px-2 font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-on-brand",
                 LIBELLE_REPLIABLE,
               ].join(" ")}
             >
@@ -278,18 +274,15 @@ export function AppShell({
                 if (!construit) {
                   return (
                     <li key={ecran}>
-                      <div
+                        <div
                         aria-disabled="true"
                         title={fr.coquille.ecranAVenir}
-                        className="flex min-h-target items-center justify-center gap-3 rounded-full px-3 py-2 text-on-brand tablet:justify-between"
+                        className="flex min-h-target items-center justify-center gap-2.5 rounded-xl px-3 py-2 text-white/45 tablet:justify-between"
                       >
-                        <span className="flex items-center gap-3">
-                          {/* Opacité RÉDUITE sur l'ICÔNE, jamais sur le texte :
-                              un pictogramme discret reste identifiable, un
-                              libellé sous 4.5:1 ne se lit plus. */}
-                          <Icone nom={ecran} taille={20} className="opacity-disabled" />
+                        <span className="flex items-center gap-2.5">
+                          <Icone nom={ecran} taille={16} className="opacity-60" />
                           <span
-                            className={["font-ui text-body", LIBELLE_REPLIABLE].join(" ")}
+                            className={["font-ui text-body font-regular", LIBELLE_REPLIABLE].join(" ")}
                           >
                             {libelle}
                           </span>
@@ -325,27 +318,17 @@ export function AppShell({
 
                 return (
                   <li key={ecran}>
-                    <Link
+                      <Link
                       href={`/${ecran}`}
-                      /* `aria-current="page"` et PAS seulement une couleur :
-                         l'écran courant doit être annoncé, pas seulement vu.
-                         §4.4 — un statut ne repose jamais sur la couleur seule. */
                       aria-current={actif ? "page" : undefined}
                       className={[
-                        "flex min-h-target items-center justify-center gap-3 rounded-full px-3 py-2 font-ui text-body text-on-brand no-underline transition duration-quick ease-soft tablet:justify-start",
-                        /* L'état actif empile TROIS signaux, et c'est voulu :
-                           la pastille de fond (la forme), la graisse (le
-                           poids) et la lueur de marque (la seule surface de
-                           navigation qui brille — la liste des lueurs est
-                           fermée). `shadow-sheen` ajoute le filet interne
-                           haut : la pastille a une épaisseur, pas seulement
-                           une teinte. */
+                        "flex min-h-target items-center justify-center gap-2.5 rounded-xl px-3 py-2 font-ui text-body no-underline transition duration-quick ease-out tablet:justify-start",
                         actif
-                          ? "bg-on-brand-surface font-semibold shadow-glow-nav"
-                          : "hover:bg-on-brand-surface-hover",
+                          ? "bg-white text-brand-800 font-bold shadow-lift2"
+                          : "text-white/80 hover:bg-white/10 hover:text-white",
                       ].join(" ")}
                     >
-                      <Icone nom={ecran} taille={20} />
+                      <Icone nom={ecran} taille={16} />
                       <span className={LIBELLE_REPLIABLE}>{libelle}</span>
                     </Link>
                   </li>
@@ -355,26 +338,19 @@ export function AppShell({
           </div>
         ))}
 
-        {/* ── Le compte, ANCRÉ en bas et hors de la zone qui défile. `mt-auto` plutôt qu'une hauteur fixe :
-            le rail porte quatre groupes pour la praticienne et trois pour
-            l'assistante, et une valeur figée serait fausse pour l'une des deux. */}
-        <div className="relative mt-auto flex shrink-0 flex-col gap-2 border-t border-on-brand-surface px-2 pt-4">
+        <div className="relative mt-auto flex shrink-0 flex-col gap-3 rounded-xl bg-on-brand-surface p-3 backdrop-blur-sm">
           <span
             className={[
-              "font-ui text-eyebrow font-semibold uppercase text-on-brand",
+              "font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-on-brand",
               LIBELLE_REPLIABLE,
             ].join(" ")}
           >
             {fr.coquille.deconnexionCompte}
           </span>
-          <div className="flex items-center gap-3">
-            {/* Le monogramme de l'utilisatrice — la même pastille de verre que
-                les icônes du rail. Les initiales se calculent ici et nulle
-                part ailleurs pour le rail ; un nom vide rend un disque nu, ce
-                qui se lit « compte » sans inventer d'identité. */}
+          <div className="flex items-center gap-2">
             <span
               aria-hidden="true"
-              className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-on-brand-surface font-ui text-label font-semibold text-on-brand shadow-sheen"
+              className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white font-ui text-label font-bold text-brand-700 shadow-lift1"
             >
               {monogrammeCompte(nomComplet)}
             </span>
@@ -403,9 +379,9 @@ export function AppShell({
             type="button"
             onClick={onDeconnexion}
             title={fr.actions.seDeconnecter}
-            className="mt-2 flex min-h-target items-center justify-center gap-3 rounded-full bg-on-brand-surface-hover px-3 py-2 font-ui text-label text-on-brand transition duration-quick ease-soft hover:bg-on-brand-surface tablet:justify-start"
+            className="mt-1 flex min-h-target items-center justify-center gap-2 rounded-xl bg-on-brand-surface-hover px-3 py-2 font-ui text-label font-semibold text-on-brand transition duration-quick ease-out hover:bg-on-brand-surface tablet:justify-start"
           >
-            <Icone nom="deconnexion" taille={20} />
+            <Icone nom="deconnexion" taille={16} />
             <span className={LIBELLE_REPLIABLE}>{fr.actions.seDeconnecter}</span>
           </button>
         </div>
@@ -430,10 +406,10 @@ export function AppShell({
           taille de son contenu : `min-h-0` lève ce refus, `overflow-hidden`
           borne la boîte, et le défilement retombe alors là où il doit être —
           dans `<main>`, et nulle part ailleurs. */}
-      <div className="flex min-h-0 flex-col overflow-hidden">
+      <div className="flex min-h-0 flex-col overflow-hidden bg-layer-ambient">
         <BandeauSeanceEnCours role={role} />
         <main
-          className="mx-auto w-full max-w-main flex-1 overflow-y-auto px-6 py-8"
+          className="mx-auto w-full max-w-main flex-1 overflow-y-auto px-5 py-6 lg:px-6 lg:py-8"
         >
           {children}
         </main>

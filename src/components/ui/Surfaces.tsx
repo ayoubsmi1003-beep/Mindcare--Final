@@ -24,7 +24,7 @@
 
 import type { ReactNode } from "react";
 
-import { Icone, type NomIcone } from "./Icones";
+import { Icone, MotifFeuilles, type NomIcone } from "./Icones";
 
 /* ═══════════════════════════════════════════════════════════════════════════
  * LA FAMILLE DE CARTES
@@ -52,18 +52,18 @@ export type NiveauCarte = NiveauDecor | NiveauPorteur;
  * avec `Carte`.
  */
 const NIVEAUX: Record<NiveauCarte, string> = {
-  // L'ancrage d'un écran : ce qu'on regarde en premier.
-  primaire: "bg-card border-rule shadow-lift2",
-  // Le second plan : listes internes, sous-blocs. Encastré plutôt que posé.
+  // V2 — L2 structure + L1 ambient : teinte subtile, radius XL, ombre plus diffuse
+  primaire: "bg-card border-rule/70 shadow-lift2",
+  // Second plan encastré — reste sunken
   secondaire: "bg-sunken border-rule shadow-none",
-  // Une affordance : la carte EST l'action. Teinte de marque, bordure assumée.
+  // Affordance action — tinté marque mais reste L5 sélectif
   action: "bg-action-50 border-action-100 shadow-lift1",
-  // Jarvis et l'analyse. Le violet ne désigne jamais rien d'autre.
+  // Jarvis — voile violet très contenu
   ia: "bg-ai-50 border-ai-100 shadow-lift1",
-  // Les trois qui portent une valeur : blanc franc, contraste maximal.
-  clinique: "bg-card border-rule shadow-lift1",
-  financier: "bg-card border-rule shadow-lift1",
-  // Éditorial — un aperçu de document est un objet de papier.
+  // Porteurs valeur — blanc franc, élévation minimale, radius affiné
+  clinique: "bg-card border-rule/60 shadow-lift1",
+  financier: "bg-card border-rule/60 shadow-lift1",
+  // Document — papier objet, ombre plus marquée pour feuille
   document: "bg-card border-ink-100 shadow-lift2",
 };
 
@@ -109,12 +109,12 @@ export function Carte(props: CarteProps): React.JSX.Element {
   return (
     <div
       className={[
-        "rounded-lg border",
+        "rounded-xl border",
         NIVEAUX[niveau],
         lueur ? "shadow-glow-brand" : "",
         interactive
-          ? "transition duration-quick ease-soft hover:border-action-500 hover:shadow-lift3"
-          : "",
+          ? "transition duration-quick ease-out hover:border-action-300 hover:shadow-lift3"
+          : "transition duration-quick ease-soft",
       ].join(" ")}
     >
       {children}
@@ -151,18 +151,18 @@ export function PastilleIcone({
   readonly taille?: "normale" | "grande";
 }): React.JSX.Element {
   const tons = {
-    action: "bg-action-100 text-action-600",
-    ia: "bg-ai-100 text-ai-600",
-    info: "bg-info-100 text-info-600",
-    neutre: "bg-sunken text-ink-500",
+    action: "bg-action-50 text-action-600 border border-action-100",
+    ia: "bg-ai-50 text-ai-600 border border-ai-100",
+    info: "bg-info-50 text-info-600 border border-info-100",
+    neutre: "bg-sunken text-ink-500 border border-rule",
   } as const;
 
   return (
     <span
       aria-hidden
       className={[
-        "inline-flex items-center justify-center rounded-md",
-        taille === "grande" ? "h-12 w-12" : "h-10 w-10",
+        "inline-flex items-center justify-center rounded-xl shadow-lift1",
+        taille === "grande" ? "h-11 w-11" : "h-9 w-9",
         tons[ton],
       ].join(" ")}
     >
@@ -206,6 +206,7 @@ export function EnTeteEcran({
   titre,
   sousTitre,
   actions,
+  meta,
 }: {
   /** L'icône de l'écran, dans une pastille de verre clair sur la marque. */
   readonly icone?: NomIcone;
@@ -214,42 +215,79 @@ export function EnTeteEcran({
   readonly titre: string;
   readonly sousTitre?: string;
   readonly actions?: ReactNode;
+  /**
+   * v9 — LA RANGÉE DE CONTEXTE, sous le titre. La date du jour, un compteur
+     réel, un sélecteur : ce que l'œil réclame en arrivant sur un écran de
+     lieu. Elle vit SOUS un filet posé sur la marque (`--on-brand-surface`),
+     et ses textes restent soumis à la règle de l'encre unique : blanc pur,
+     hiérarchie à la taille et à la graisse.
+   */
+  readonly meta?: ReactNode;
+}): React.JSX.Element {
+    return (
+     <header className="sur-marque relative overflow-hidden rounded-2xl bg-grad-brand p-7 shadow-lift3 lg:p-8">
+       <div aria-hidden="true" className="absolute inset-0 bg-grad-hero-reflet" />
+       <MotifFeuilles className="absolute -right-2 -top-4 h-32 w-64 text-on-brand opacity-filigrane" />
+       {/* hairline interne haut — épaisseur sans ombre lourde */}
+       <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-px bg-white/10" />
+       <div className="relative flex flex-wrap items-start justify-between gap-6">
+         <div className="flex min-w-0 items-start gap-4">
+           {icone === undefined ? null : (
+             <span
+               aria-hidden
+               className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-on-brand text-brand-700 shadow-lift2"
+             >
+               <Icone nom={icone} taille={20} />
+             </span>
+           )}
+            <div className="flex min-w-0 flex-col gap-2">
+              {surTitre === undefined ? null : (
+                <span className="font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-on-brand">
+                  {surTitre}
+                </span>
+              )}
+              <h1 className="font-ui text-display font-bold tracking-display text-on-brand break-words">
+                {titre}
+              </h1>
+              {sousTitre === undefined ? null : (
+                <p className="max-w-2xl font-ui text-body font-regular leading-relaxed text-on-brand">{sousTitre}</p>
+              )}
+           </div>
+         </div>
+         {actions === undefined ? null : (
+           <div className="flex flex-wrap items-center gap-3">{actions}</div>
+         )}
+       </div>
+       {meta === undefined ? null : (
+         <div className="relative mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-white/15 pt-4">
+           {meta}
+         </div>
+       )}
+     </header>
+   );
+}
+
+/**
+ * Un objet de la rangée de contexte d'un en-tête de lieu — icône, puis texte.
+ *
+ * v9 : la rangée `meta` d'`EnTeteEcran` était sinon composée de spans nus,
+ * chacun avec son espacement. La pièce existe pour que la date, un compteur
+ * ou une mention se posent au même rythme d'un écran à l'autre. Encre blanche
+ * pure (règle de la marque) ; l'icône ne se annonce pas — le texte à côté
+ * parle déjà.
+ */
+export function MetaHeros({
+  icone,
+  children,
+}: {
+  readonly icone: NomIcone;
+  readonly children: ReactNode;
 }): React.JSX.Element {
   return (
-    /* `sur-marque` : bascule le focus clavier en blanc. Sans elle, l'anneau de
-       focus (`--action-600`, la marque elle-même) disparaîtrait dans le fond —
-       la navigation au clavier deviendrait invisible exactement là où l'écran
-       est le plus coloré. Voir tokens.css. */
-    <header className="sur-marque rounded-xl bg-grad-brand p-8 shadow-lift3">
-      <div className="flex flex-wrap items-start justify-between gap-6">
-        <div className="flex min-w-0 items-start gap-5">
-          {icone === undefined ? null : (
-            <span
-              aria-hidden
-              className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-on-brand-surface text-on-brand shadow-sheen"
-            >
-              <Icone nom={icone} taille={24} />
-            </span>
-          )}
-          <div className="flex min-w-0 flex-col gap-1">
-            {surTitre === undefined ? null : (
-              <span className="font-ui text-eyebrow font-semibold uppercase text-on-brand">
-                {surTitre}
-              </span>
-            )}
-            <h1 className="font-ui text-display font-semibold text-on-brand break-words">
-              {titre}
-            </h1>
-            {sousTitre === undefined ? null : (
-              <p className="font-ui text-body text-on-brand">{sousTitre}</p>
-            )}
-          </div>
-        </div>
-        {actions === undefined ? null : (
-          <div className="flex flex-wrap items-center gap-3">{actions}</div>
-        )}
-      </div>
-    </header>
+    <span className="inline-flex min-w-0 items-center gap-2 font-ui text-label font-medium text-on-brand">
+      <Icone nom={icone} taille={16} />
+      <span className="truncate">{children}</span>
+    </span>
   );
 }
 
@@ -278,18 +316,16 @@ export function EnTetePage({
   readonly actions?: ReactNode;
 }): React.JSX.Element {
   return (
-    <header className="flex flex-wrap items-start justify-between gap-4">
-      <div className="flex min-w-0 flex-col gap-1">
+    <header className="flex flex-wrap items-start justify-between gap-5 border-b border-rule/60 pb-6">
+      <div className="flex min-w-0 flex-col gap-2">
         {surTitre === undefined ? null : (
-          <span className="font-ui text-eyebrow font-semibold uppercase text-action-600">
+          <span className="font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-action-600">
             {surTitre}
           </span>
         )}
-        {/* `break-words` : un nom de patient très long ne doit ni déborder ni
-            pousser les actions hors de l'écran (I11, cinquième état). */}
-        <h1 className="font-ui text-display font-semibold text-ink-900 break-words">{titre}</h1>
+        <h1 className="font-ui text-display font-bold tracking-display text-ink-900 break-words">{titre}</h1>
         {sousTitre === undefined ? null : (
-          <p className="font-ui text-body text-ink-500">{sousTitre}</p>
+          <p className="max-w-2xl font-ui text-body font-regular leading-relaxed text-ink-500">{sousTitre}</p>
         )}
       </div>
       {actions === undefined ? null : (
@@ -324,11 +360,11 @@ export function Section({
   readonly children: ReactNode;
 }): React.JSX.Element {
   return (
-    <section className="flex flex-col gap-4">
-      <div className="flex flex-wrap items-center justify-between gap-3">
+    <section className="flex flex-col gap-5">
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-rule/40 pb-3">
         <div className="flex items-center gap-3">
           {icone === undefined ? null : <PastilleIcone nom={icone} />}
-          <h2 className="font-ui text-heading font-semibold text-ink-900">{titre}</h2>
+          <h2 className="font-ui text-heading font-bold tracking-tight text-ink-900">{titre}</h2>
         </div>
         {action}
       </div>

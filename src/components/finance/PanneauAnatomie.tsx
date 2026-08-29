@@ -123,7 +123,7 @@ export function PanneauAnatomie({
                   libelle={libelleType(r.libelle)}
                   montant={r.montant}
                   pct={r.part_pct}
-                  couleur="var(--brand-600)"
+                  couleur="var(--grad-tile-brand)"
                   suffixe={
                     r.nb_seances === 1
                       ? fr.finances.pulse.uneSeance
@@ -151,7 +151,7 @@ export function PanneauAnatomie({
                   libelle={libelleCategorie(c.libelle)}
                   montant={c.montant}
                   pct={c.part_pct}
-                  couleur="var(--attention)"
+                  couleur="var(--grad-tile-amber)"
                 />
               ))}
             </ul>

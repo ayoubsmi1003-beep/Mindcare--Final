@@ -23,8 +23,8 @@ import type { RdvAccueil } from "@/services/reception";
 
 const HEURE_DEBUT = 8;
 const HEURE_FIN = 19;
-/** Deux pixels par minute : 30 min = 60 px, lisible sans être encombrant. */
-const PX_PAR_MINUTE = 2;
+/** 1.4 px/min : 30 min = 42 px — compact pour tenir dans le viewport reception 900px (924px total vs 1320px avant). */
+const PX_PAR_MINUTE = 1.4;
 
 function minutesDepuisOuverture(dateIso: string): number {
   const t = Date.parse(dateIso);

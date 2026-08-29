@@ -282,9 +282,27 @@ export async function outilAnalyzeSession(
 /** Ce que l'humaine lit avant d'accepter. Chaque champ modifié y figure (V2.5). */
 export interface CarteConfirmation {
   readonly actionId: string;
-  readonly outil: ToolEcriture;
+  /**
+   * ⚠️ ÉLARGI DE `ToolEcriture` À `string` EN 063, ET C'EST DÉLIBÉRÉ. Les
+   * écritures ne sont plus les deux seules d'ici : `jarvis-ecritures.ts` en
+   * déclare quatre autres, et l'allowlist de 063 en admet sept en base.
+   *
+   * Ce champ N'A JAMAIS ÉTÉ UNE FRONTIÈRE — il ne l'était pas quand il était
+   * typé, il ne l'est pas davantage maintenant. Ce qui borne réellement les
+   * écritures, c'est la contrainte `jarvis_tool_allowlist` en base et le
+   * registre d'écriture côté client. Un type d'affichage qui prétendrait
+   * garantir la sécurité serait la sorte de garantie fausse qui empêche la
+   * relecture suivante de chercher la vraie.
+   */
+  readonly outil: string;
   readonly titre: string;
   readonly champs: ReadonlyArray<{ readonly libelle: string; readonly valeur: string }>;
+  /**
+   * Un acte visible du patient ou irréversible — l'interface le signale.
+   * La base ne fait pas la différence, et c'est normal : la gravité est une
+   * notion d'écran, pas de contrainte.
+   */
+  readonly critique?: boolean;
 }
 
 /**

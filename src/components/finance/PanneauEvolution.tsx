@@ -107,7 +107,7 @@ export function PanneauEvolution({
           {t.legendeCharges}
         </span>
         <span className="flex items-center gap-2">
-          <span className="h-1 w-3 bg-ink-700" aria-hidden="true" />
+          <span className="h-1 w-3 rounded-full bg-ink-700" aria-hidden="true" />
           {t.legendeNet}
         </span>
       </div>
@@ -133,12 +133,17 @@ export function PanneauEvolution({
             barre en dessous se ressemblent. */}
         <div className="absolute inset-x-0 border-t border-rule" style={{ top: `${zero}%` }} />
 
-        {/* Les barres, en pourcentage de hauteur — rien n'est déformé. */}
+        {/* Les barres, en pourcentage de hauteur — rien n'est déformé.
+            v9 — le dégradé de famille sur chaque barre (marque pour la
+            recette, ambre pour les charges) : un graphique d'agrégat est une
+            surface où ADR-025 autorise la couleur. Le dégradé ne passe
+            derrière AUCUN chiffre — les valeurs vivent dans le tableau
+            équivalent et les infobulles, jamais sur les barres. */}
         <div className="absolute inset-0 flex items-stretch gap-1">
           {serie.map((s) => (
             <div key={s.mois_iso} className="relative min-w-0 flex-1">
               <div
-                className="absolute rounded-t-sm bg-brand-600"
+                className="absolute rounded-t bg-grad-tile-brand"
                 style={{
                   left: `${BARRE_RECETTE_X}%`,
                   width: `${BARRE_LARGEUR}%`,
@@ -147,7 +152,7 @@ export function PanneauEvolution({
                 }}
               />
               <div
-                className="absolute rounded-t-sm bg-attention"
+                className="absolute rounded-t bg-grad-tile-amber"
                 style={{
                   left: `${BARRE_CHARGES_X}%`,
                   width: `${BARRE_LARGEUR}%`,

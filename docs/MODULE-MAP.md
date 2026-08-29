@@ -17,7 +17,25 @@ de vrais patients. Tout le reste attend.
 | 1 | **Tableau de bord** | 🔵 V4 | `/` | `app.dashboard_today()` | feature-builder |
 | 2 | **Patients** | 🔵 V5 | `/patients` | `patients` · `search_patients` · `get_patient` | feature-builder |
 | 3 | **Agenda** | 🔵 V5 | `/agenda` | `appointments` · portes `022` | feature-builder |
-| 4 | **Jarvis** | 🔵 V2 | panneau global (⌘K) | `jarvis_actions` | jarvis-tooler |
+| 4 | **Jarvis** | 🟢 ADR-027 | panneau global (⌘K) + `/jarvis` | `jarvis_actions`, `jarvis_conversations` | jarvis-tooler |
+
+**La couche opérante Jarvis — ADR-027, 2026-08-26.** Dépendances vers l'INTÉRIEUR
+uniquement : un composant appelle la boucle, la boucle appelle le registre, le
+registre appelle un service, le service appelle une porte SQL.
+
+| Fichier | Rôle | Ne fait JAMAIS |
+|---|---|---|
+| `services/jarvis-identite.ts` | jetons `PATIENT_001` ↔ identité locale | ne franchit jamais la frontière |
+| `services/jarvis-projections.ts` | DTO `Safe*` à liste blanche | ne masque rien — il SÉLECTIONNE |
+| `services/jarvis-confidentialite.ts` | pare-feu + garde fail-closed | ne connaît aucune porte SQL |
+| `services/jarvis-contexte.ts` | broker, cible unique, budgets | n'expédie jamais le dossier entier |
+| `services/jarvis-capacites.ts` | registre de LECTURE (16) | ne contient aucune écriture |
+| `services/jarvis-ecritures.ts` | registre d'ÉCRITURE (4) + vérification | n'est pas importé par la boucle |
+| `services/jarvis-briefs.ts` | briefs composés en TypeScript | ne laisse aucun chiffre au modèle |
+| `services/jarvis-messages.ts` | brouillons de message composés en TypeScript | n'envoie rien — `canal: null`, `envoye: false` par le TYPE |
+| `services/jarvis-boucle.ts` | machine à états, budgets, dédup | n'exécute aucune écriture |
+| `services/jarvis-reveil.ts` | 8 états vocaux + contrat de détecteur | n'embarque aucun moteur (dette datée) |
+| `migrations/063_jarvis_capacites.sql` | allowlist à 7, `check_slot_available` | ne modifie pas 033 |
 | 5 | **Dossiers & Notes** | 🔵 V1/V6 | `/consultation/[id]` · `/documents` | `consultations` · `clinical_notes` · `documents` · portes `030` | feature-builder |
 | 6 | **Finances** | 🔵 V6 | `/finances` | `payments` · portes `029` + `036` | feature-builder |
 

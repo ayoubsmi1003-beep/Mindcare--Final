@@ -108,33 +108,28 @@ const fonteAr = IBM_Plex_Sans_Arabic({
 });
 
 /**
- * Interface — Inter. Remplace Geist comme fonte d'interface (arbitrage explicite
- * de la médecin, qui prime sur le choix typographique d'ADR-022). Geist reste
- * chargée : d'autres écrans s'y appuient encore, et les retypographier n'était
- * pas le périmètre demandé.
+ * Interface — Inter. Source principale V2 Vibrant Instrument.
+ * Hiérarchie verrouillée : 400 corps / 500 labels / 600 emphase+sections /
+ * 700 titres de page / 800 métriques display exceptionnelles uniquement.
+ * Toutes les graisses chargées pour éviter faux-gras synthétique au build.
+ * Zéro = ovale standard (pas de slash) — voir tokens.css --font-variant-numeric.
  */
 const fonteInter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-inter-emise",
   display: "swap",
 });
 
 /**
  * Chiffres financiers de grande taille — Fraunces. Réservée aux MONTANTS des
- * tuiles Finances : c'est une fonte à fort contraste, excellente à 30 px et
- * illisible à 12. L'employer comme fonte de texte courant annulerait le signal
- * qu'elle porte — « ceci est un chiffre d'argent, pas une étiquette ».
- *
- * ⚠️ PAS D'`axes` ICI. next/font refuse `axes` dès qu'un `weight` explicite est
- * donné — les deux s'excluent (« Axes can only be defined … when the weight
- * property is nonexistent or set to `variable` »). On garde les DEUX graisses
- * énumérées plutôt que l'axe optique : deux graisses figées pèsent moins qu'une
- * fonte variable complète, et cet écran n'en emploie pas d'autre.
+ * tuiles Finances et métriques display 800 : forte contraste à 30-36px,
+ * illisible à 12. Employée uniquement pour sommes/metrics, jamais texte courant.
+ * Ajout 800 pour hiérarchie V2 (800 = moments display exceptionnels uniquement).
  */
 const fonteDisplay = Fraunces({
   subsets: ["latin"],
-  weight: ["500", "600"],
+  weight: ["500", "600", "700", "800"],
   variable: "--font-display-emise",
   display: "swap",
 });

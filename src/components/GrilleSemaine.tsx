@@ -206,8 +206,9 @@ export function GrilleSemaine({
       {/* La grille est posée dans une carte : elle EST la surface principale de
           l'écran, et un tableau nu au milieu d'une page flotte sans se poser.
           Le tableau scrolle dans SON conteneur — la page, elle, ne défile
-          jamais horizontalement (règle 9). */}
-      <div className="overflow-x-auto rounded-lg border border-rule bg-card shadow-lift1">
+          jamais horizontalement (règle 9). v9 — élévation cohérente avec les
+          autres surfaces principales de l'application. */}
+      <div className="overflow-x-auto rounded-xl border border-rule bg-card shadow-lift2">
         <table
           className="w-full table-fixed border-collapse"
           // La largeur plancher dépend du NOMBRE de colonnes, qui est une
@@ -258,7 +259,21 @@ export function GrilleSemaine({
                         ].join(" ")}
                       >
                         {FORMAT_JOUR_ABREGE.format(jourColonne)}{" "}
-                        {FORMAT_JOUR_NUMERO.format(jourColonne)}
+                        {/* v9 — LE NUMÉRO DU JOUR EN PASTILLE, le jour
+                            d'aujourd'hui seulement : c'est le repère que
+                            l'œil accroche en arrivant sur la grille, sans
+                            que les six autres colonnes bougent. La pastille
+                            n'est pas cliquable : pas de cible minimale à
+                            tenir, c'est un repère de lecture. */}
+                        {estAujourdhui ? (
+                          <span className="inline-flex items-center justify-center rounded-full bg-brand-600 px-2 font-num tabular-nums text-paper">
+                            {FORMAT_JOUR_NUMERO.format(jourColonne)}
+                          </span>
+                        ) : (
+                          <span className="font-num tabular-nums">
+                            {FORMAT_JOUR_NUMERO.format(jourColonne)}
+                          </span>
+                        )}
                       </span>
                       <span
                         className={[
@@ -398,11 +413,13 @@ function CarteRendezVous({ entree }: { readonly entree: AgendaEntry }): React.JS
       // Le liseré de famille reste à gauche : c'est le seul repère qui survit à
       // la vision périphérique quand on balaie une semaine entière.
       className={[
-        "group flex min-h-target min-w-0 flex-col gap-1 rounded-sm py-2 pl-3 pr-2",
+        "group flex min-h-target min-w-0 flex-col gap-1 rounded-md py-2 pl-3 pr-2",
         "border-l-kind no-underline",
         // Pas de translation au survol : une carte qui se soulève déplace la
-        // cible qu'on vise, et sur une grille dense on vise beaucoup.
-        "transition duration-quick ease-soft hover:shadow-lift2",
+        // cible qu'on vise, et sur une grille dense on vise beaucoup. v9 —
+        // la carte gagne une élévation de repos : elle se détache du fond de
+        // cellule avant même le survol, et le survol l'accentue.
+        "shadow-lift1 transition duration-quick ease-soft hover:shadow-lift2",
         "outline-none focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset",
       ].join(" ")}
       style={{ borderLeftColor: jetons.accent, background: jetons.fond }}

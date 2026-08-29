@@ -67,7 +67,7 @@ export function ListeDiagnostics({
   readonly diagnostics: readonly Diagnostic[];
 }): React.JSX.Element {
   if (diagnostics.length === 0) {
-    return <EtatVide message={fr.patients.vide.diagnostics} />;
+    return <EtatVide message={fr.patients.vide.diagnostics} icone="statistiques" />;
   }
 
   const actifs = diagnostics.filter((d) => d.resolvedAt === null);
@@ -143,7 +143,7 @@ export function ListeEchelles({
   readonly echelles: readonly EchelleResume[];
 }): React.JSX.Element {
   if (echelles.length === 0) {
-    return <EtatVide message={fr.patients.vide.echelles} />;
+    return <EtatVide message={fr.patients.vide.echelles} icone="suivi" />;
   }
 
   return (

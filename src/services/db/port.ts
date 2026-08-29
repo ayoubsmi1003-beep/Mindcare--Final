@@ -106,4 +106,25 @@ export interface DbPort {
    * — l'appelant ne voit jamais la forme brute de la réponse HTTP.
    */
   readonly invokeFunction: <T>(name: string, body: unknown) => Promise<Result<T>>;
+
+  /**
+   * Appel STREAMING d'une Edge Function — V-JARVIS-CORE.
+   *
+   * Même frontière que `invokeFunction`, en flux : le corps de réponse est
+   * rendu TEL QUEL (SSE du chat, octets audio de la voix), sans aucune
+   * interprétation ici — le protocole applicatif reste dans les services.
+   *
+   * ⚠️ LE JETON NE SORT PAS DU PORT. L'adaptateur lit l'access token en
+   * interne pour construire l'en-tête Authorization ; `SessionInfo` reste
+   * volontairement pauvre, exactement pour cette raison.
+   *
+   * `signal` porte l'interruption bout-en-bout (bouton Stop, navigation) :
+   * l'abandon remonte jusqu'au `req.signal` Deno, donc jusqu'au fetch
+   * fournisseur — la génération s'arrête vraiment.
+   */
+  readonly invokeFunctionStream: (
+    name: string,
+    body: unknown,
+    signal?: AbortSignal,
+  ) => Promise<Result<ReadableStream<Uint8Array>>>;
 }

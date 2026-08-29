@@ -284,7 +284,17 @@ export default function FinancesPage(): React.JSX.Element {
           <SelecteurPeriode periode={periode} onChange={changerPeriode} />
         </div>
 
-        <div role="tablist" aria-label={fr.finances.titre} className="flex gap-1 border-b border-rule">
+        {/* v9 — LES ONGLETS EN SEGMENTÉ. Le souligné flottant sous un trait
+            plein laissait l'onglet actif à moitié posé ; ici le conteneur
+            creusé porte les trois vues, et l'onglet actif est une pastille
+            blanche ELEVÉE : l'état actif se lit comme un objet posé, pas
+            comme une couleur. `role="tablist"` et `aria-selected` ne bougent
+            pas — l'habillage change, le contrat non. */}
+        <div
+          role="tablist"
+          aria-label={fr.finances.titre}
+          className="flex w-max max-w-full gap-1 rounded-full border border-rule bg-sunken p-1"
+        >
           {onglets.map(([cle, libelle]) => (
             <button
               key={cle}
@@ -293,12 +303,11 @@ export default function FinancesPage(): React.JSX.Element {
               aria-selected={onglet === cle}
               onClick={() => setOnglet(cle)}
               className={[
-                "rounded-t-md px-4 py-2 font-ui text-body transition-colors",
-                "duration-quick ease-out",
+                "min-h-target rounded-full px-5 py-2 font-ui text-body transition duration-quick ease-soft",
                 "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
                 "focus-visible:outline-action-600",
                 onglet === cle
-                  ? "border-b-2 border-brand-600 font-medium text-ink-900"
+                  ? "bg-card font-semibold text-ink-900 shadow-lift1"
                   : "text-ink-500 hover:text-ink-700",
               ].join(" ")}
             >
@@ -398,16 +407,16 @@ function TuilesEtRangees({ apercu }: { readonly apercu: ApercuCaisse }): React.J
           interdite (I10). Une seule colonne sous 1280 : trois panneaux de
           ~300 px côte à côte deviennent illisibles avant de devenir petits. */}
       <div className="grid min-h-0 flex-1 grid-cols-un gap-3 desktop:grid-cols-finance">
-        <div className="min-h-0 rounded-lg bg-card p-4 shadow-lift1">
+        <div className="min-h-0 rounded-xl border border-rule bg-card p-4 shadow-lift2">
           <PanneauEvolution serie={apercu.evolution} />
         </div>
-        <div className="min-h-0 rounded-lg bg-card p-4 shadow-lift1">
+        <div className="min-h-0 rounded-xl border border-rule bg-card p-4 shadow-lift2">
           <PanneauAnatomie
             revenus={apercu.composition.revenus_par_type}
             charges={apercu.composition.charges_par_categorie}
           />
         </div>
-        <div className="min-h-0 rounded-lg bg-card p-4 shadow-lift1">
+        <div className="min-h-0 rounded-xl border border-rule bg-card p-4 shadow-lift2">
           <PanneauAttention
             impayesTotal={apercu.attention.impayes_total}
             impayesCount={apercu.attention.impayes_count}
@@ -420,7 +429,7 @@ function TuilesEtRangees({ apercu }: { readonly apercu: ApercuCaisse }): React.J
       {/* Rangée 3. `hidden` sous 900 px de haut n'existe pas en CSS pur côté
           Tailwind : on réduit la hauteur et on masque les numéros à la place,
           ce qui garde l'information et supprime le débordement. */}
-      <div className="shrink-0 rounded-lg bg-card p-3 shadow-lift1">
+      <div className="shrink-0 rounded-xl border border-rule bg-card p-3 shadow-lift2">
         <div className="hidden desktop:block">
           <BandeCalendrier jours={apercu.calendrier} />
         </div>

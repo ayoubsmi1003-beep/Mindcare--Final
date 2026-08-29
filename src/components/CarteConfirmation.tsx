@@ -15,6 +15,13 @@
  * CHAQUE CHAMP EST AFFICHÉ, RIEN N'EST IMPLICITE. Un champ que la carte ne
  * montre pas est un champ que la praticienne n'a pas validé, et qui partira
  * pourtant en base.
+ *
+ * v9 — LA SURFACE IA. La carte prend le niveau `ia` (le violet ne désigne
+ * que Jarvis et l'analyse) : pastille d'état, titre, champs en tableau net,
+ * puis les DEUX gestes. Le bouton de confirmation reprend la hiérarchie des
+ * boutons du produit — pendant l'anti-réflexe, il est gris et dit
+ * « patienter » : un bouton désactivé qui ne dit pas pourquoi apprend que
+ * l'interface ment.
  */
 
 "use client";
@@ -22,6 +29,7 @@
 import { useEffect, useState } from "react";
 
 import { fr } from "@/i18n/fr";
+import { Icone } from "./ui/Icones";
 import type { CarteConfirmation as DonneesCarte } from "@/services/jarvis-tools";
 
 /** Anti-clic réflexe. Le chiffre vient de `SPRINT-V1.md` §V2.5, pas d'un ressenti. */
@@ -58,73 +66,48 @@ export function CarteConfirmation({
   return (
     <section
       aria-label={carte.titre}
-      style={{
-        border: "var(--rule-width) solid var(--rule)",
-        borderRadius: "var(--r-md)",
-        background: "var(--card)",
-        padding: "var(--s-4)",
-        display: "flex",
-        flexDirection: "column",
-        gap: "var(--s-3)",
-      }}
+      className="flex flex-col gap-3 rounded-lg border border-ai-100 bg-ai-50 p-4 shadow-lift1"
     >
-      <h3
-        style={{
-          margin: "var(--size-0)",
-          fontSize: "var(--text-body-size)",
-          lineHeight: "var(--text-body-leading)",
-          color: "var(--ink-900)",
-        }}
-      >
-        {carte.titre}
-      </h3>
+      <div className="flex items-center gap-3">
+        {/* La pastille d'identité : c'est Jarvis qui PROPOSE, et la carte le
+            dit avant le titre. Le violet ne désigne jamais un état clinique —
+            il désigne exactement ceci. */}
+        <span
+          aria-hidden="true"
+          className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-ai-100 bg-card text-ai-600 shadow-lift1"
+        >
+          <Icone nom="jarvis" taille={20} />
+        </span>
+        <h3 className="m-0 min-w-0 font-ui text-body font-semibold text-ink-900">
+          {carte.titre}
+        </h3>
+      </div>
 
-      <dl style={{ margin: "var(--size-0)", display: "grid", gap: "var(--s-2)" }}>
+      {/* CHAQUE CHAMP, SANS EXCEPTION — ce qui n'est pas montré n'est pas
+          validé. Le libellé à gauche en encre secondaire, la valeur à droite
+          en encre pleine : un tableau de vérification, pas une fiche. */}
+      <dl className="m-0 grid gap-2 rounded-md border border-ai-100 bg-card px-3 py-3">
         {carte.champs.map((champ) => (
           <div
             key={champ.libelle}
-            style={{ display: "flex", justifyContent: "space-between", gap: "var(--s-3)" }}
+            className="flex items-baseline justify-between gap-3"
           >
-            <dt
-              style={{
-                fontSize: "var(--text-label-size)",
-                lineHeight: "var(--text-label-leading)",
-                letterSpacing: "var(--text-label-tracking)",
-                color: "var(--ink-500)",
-              }}
-            >
+            <dt className="font-ui text-label tracking-label text-ink-500">
               {champ.libelle}
             </dt>
-            <dd
-              style={{
-                margin: "var(--size-0)",
-                fontSize: "var(--text-body-size)",
-                lineHeight: "var(--text-body-leading)",
-                color: "var(--ink-900)",
-                textAlign: "right",
-              }}
-            >
+            <dd className="m-0 text-right font-ui text-body tabular-nums text-ink-900 break-words">
               {champ.valeur}
             </dd>
           </div>
         ))}
       </dl>
 
-      <div style={{ display: "flex", gap: "var(--s-2)", justifyContent: "flex-end" }}>
+      <div className="flex justify-end gap-2">
         <button
           type="button"
           onClick={onAnnuler}
           disabled={enCours}
-          style={{
-            minHeight: "var(--target-min)",
-            padding: "0 var(--s-4)",
-            borderRadius: "var(--r-md)",
-            border: "var(--rule-width) solid var(--rule)",
-            background: "var(--card)",
-            color: "var(--ink-700)",
-            fontSize: "var(--text-body-size)",
-            cursor: enCours ? "default" : "pointer",
-          }}
+          className="inline-flex min-h-target cursor-pointer items-center rounded-md border border-rule bg-card px-4 font-ui text-body text-ink-700 shadow-lift1 transition duration-quick ease-soft hover:bg-sunken disabled:cursor-not-allowed disabled:opacity-disabled"
         >
           {fr.jarvis.carte.annuler}
         </button>
@@ -136,16 +119,7 @@ export function CarteConfirmation({
           // `aria-disabled` en plus de `disabled` : un lecteur d'écran annonce
           // alors l'indisponibilité momentanée au lieu de sauter le bouton.
           aria-disabled={!confirmerActif}
-          style={{
-            minHeight: "var(--target-min)",
-            padding: "0 var(--s-4)",
-            borderRadius: "var(--r-md)",
-            border: "none",
-            background: confirmerActif ? "var(--brand-600)" : "var(--ink-100)",
-            color: confirmerActif ? "var(--paper)" : "var(--ink-300)",
-            fontSize: "var(--text-body-size)",
-            cursor: confirmerActif ? "pointer" : "default",
-          }}
+          className="inline-flex min-h-target cursor-pointer items-center rounded-md border-0 bg-action-600 px-4 font-ui text-body font-medium text-paper shadow-lift1 transition duration-quick ease-soft hover:bg-action-700 hover:shadow-lift2 disabled:cursor-default disabled:bg-ink-100 disabled:text-ink-300 disabled:shadow-none"
         >
           {delaiEcoule ? fr.jarvis.carte.confirmer : fr.jarvis.carte.patienter}
         </button>

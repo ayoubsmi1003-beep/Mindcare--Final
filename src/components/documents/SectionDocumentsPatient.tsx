@@ -80,6 +80,7 @@ function CorpsDocuments({ patientId }: { readonly patientId: string }): React.JS
     return (
       <EtatVide
         message={fr.documents.vide.phrase}
+        icone="documents"
         action={
           <LienBouton rang="principal" href={`/documents?patient=${patientId}`}>
             {fr.documents.vide.action}

@@ -68,60 +68,62 @@ export function TableauSeances({
       </div>
 
       {liste.lignes.length === 0 ? (
-        <p className="font-ui text-body text-ink-500">{t.aucune}</p>
+        <p className="rounded-xl border border-dashed border-rule bg-sunken/40 px-4 py-8 text-center font-ui text-body font-regular text-ink-500">{t.aucune}</p>
       ) : (
-        <div className="overflow-x-auto rounded-lg bg-card shadow-lift1">
-          <table className="w-full border-collapse">
-            <thead>
-              <tr className="border-b border-rule">
-                {[t.date, t.patient, t.type, t.montant, t.mode, t.statut].map((h) => (
-                  <th
-                    key={h}
-                    scope="col"
-                    className="px-4 py-3 text-left font-ui text-eyebrow font-medium uppercase text-ink-500"
-                  >
-                    {h}
+        <div className="overflow-hidden rounded-xl border border-rule bg-card shadow-lift2">
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="border-b border-rule bg-sunken/40">
+                  {[t.date, t.patient, t.type, t.montant, t.mode, t.statut].map((h) => (
+                    <th
+                      key={h}
+                      scope="col"
+                      className="px-4 py-3 text-left font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-ink-500"
+                    >
+                      {h}
+                    </th>
+                  ))}
+                  <th scope="col" className="px-4 py-3 text-right">
+                    <span className="sr-only">{t.action}</span>
                   </th>
-                ))}
-                <th scope="col" className="px-4 py-3 text-right">
-                  <span className="sr-only">{t.action}</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {liste.lignes.map((l) => (
-                <tr key={l.id} className="border-b border-rule last:border-0">
-                  <td className="whitespace-nowrap px-4 py-3 font-num text-label tabular-nums text-ink-700">
-                    {l.date.replace("T", " · ")}
-                  </td>
-                  <td className="px-4 py-3 font-ui text-body text-ink-900">{l.patient}</td>
-                  <td className="px-4 py-3 font-ui text-label text-ink-700">
-                    {libelleType(l.type)}
-                  </td>
-                  <td className="px-4 py-3 font-num text-body tabular-nums text-ink-900">
-                    {formaterDzd(l.montant)}
-                  </td>
-                  <td className="px-4 py-3 font-ui text-label text-ink-700">{libelleMode(l.mode)}</td>
-                  <td className="px-4 py-3">
-                    <Badge ton={l.paye ? "positif" : "attention"}>
-                      {l.paye ? t.paye : t.impaye}
-                    </Badge>
-                  </td>
-                  <td className="whitespace-nowrap px-4 py-3 text-right">
-                    {l.paye ? (
-                      <Bouton rang="discret" onClick={() => onRecu(l.id)}>
-                        {t.recu}
-                      </Bouton>
-                    ) : (
-                      <Bouton rang="secondaire" onClick={() => onRelancer(l.id)}>
-                        {t.relancer}
-                      </Bouton>
-                    )}
-                  </td>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="divide-y divide-rule/60">
+                {liste.lignes.map((l) => (
+                  <tr key={l.id} className="transition hover:bg-sunken/40">
+                    <td className="whitespace-nowrap px-4 py-3.5 font-num text-label font-semibold tabular-nums text-ink-700">
+                      {l.date.replace("T", " · ")}
+                    </td>
+                    <td className="px-4 py-3.5 font-ui text-body font-semibold tracking-tight text-ink-900">{l.patient}</td>
+                    <td className="px-4 py-3.5 font-ui text-label font-medium text-ink-500">
+                      {libelleType(l.type)}
+                    </td>
+                    <td className="px-4 py-3.5 font-num text-body font-bold tabular-nums text-ink-900">
+                      {formaterDzd(l.montant)}
+                    </td>
+                    <td className="px-4 py-3.5 font-ui text-label text-ink-500">{libelleMode(l.mode)}</td>
+                    <td className="px-4 py-3.5">
+                      <Badge ton={l.paye ? "positif" : "attention"}>
+                        {l.paye ? t.paye : t.impaye}
+                      </Badge>
+                    </td>
+                    <td className="whitespace-nowrap px-4 py-3.5 text-right">
+                      {l.paye ? (
+                        <Bouton rang="discret" onClick={() => onRecu(l.id)}>
+                          {t.recu}
+                        </Bouton>
+                      ) : (
+                        <Bouton rang="secondaire" onClick={() => onRelancer(l.id)}>
+                          {t.relancer}
+                        </Bouton>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
     </div>

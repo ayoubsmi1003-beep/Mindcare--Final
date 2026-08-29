@@ -153,50 +153,42 @@ export function FeuilleApercu({
 }
 
 /**
- * ═══ L'INVARIANT DE SORTIE : ZÉRO MARQUEUR SUR LE PAPIER ═══════════════════
+ * ═══ VIEW ≠ PRINT — le correctif architectural central ══════════════════════
  *
  * `app.render_template` (030 §1quater) laisse LITTÉRAL tout marqueur sans
- * valeur, délibérément : « un trou invisible dans un certificat est pire qu'un
- * marqueur visible ». Ce raisonnement est juste EN BASE, où le marqueur est un
- * signal lu par quelqu'un qui sait ce qu'il regarde. Il ne l'est plus devant
- * une imprimante : sur le papier remis à un notaire, `{{praticien.full_name_ar}}`
- * n'est plus un signal, c'est une pièce médico-légale abîmée.
+ * valeur: un trou invisible est pire qu'un marqueur visible EN BASE.
+ * Mais sur le papier, un {{…}} est une pièce abîmée.
  *
- * L'écran est donc le dernier poste de contrôle, et il tient la garantie que la
- * base ne peut pas tenir : ce qui part à l'impression ne contient AUCUN `{{…}}`.
+ * AVANT: le viewer bloquait l'affichage si {{ présent → l'historique devenait
+ * illisible dès que le profil était incomplet.
+ * APRÈS: VIEW affiche TOUJOURS le snapshot immuable (même troué), avec un
+ * bandeau ambre explicatif hors papier. PRINT est seul à être bloqué.
  *
- * ⚠️ CE N'EST PAS UNE RÉPARATION, ET IL NE FAUT PAS QUE ÇA LE DEVIENNE.
- * Substituer ici la valeur manquante, ou seulement effacer le marqueur du HTML
- * affiché, ferait diverger le papier de `rendered_html` — la pièce figée
- * cesserait d'être la pièce imprimée, et c'est exactement ce que l'immuabilité
- * de 030 protège. La ligne émise reste donc INTACTE en base ; c'est le TIRAGE
- * qui est refusé, et la seule sortie est d'émettre un nouveau certificat une
- * fois le profil complété.
- *
- * Le test est délibérément grossier — la présence de `{{` — et non une liste
- * des 25 clés du contexte. Une liste devrait être tenue en accord avec 043 et
- * 044, et le jour où elle prendrait du retard elle laisserait passer justement
- * le marqueur nouveau, celui que personne n'attend.
+ * Le test reste grossier (présence de {{) : une liste fermée de 25 clés
+ * prendrait du retard et laisserait passer le marqueur nouveau.
  */
 export function contientMarqueurNonResolu(html: string): boolean {
   return html.includes("{{");
 }
 
-/**
- * La pièce émise. Rend `null` — donc n'imprime RIEN — si le HTML figé porte un
- * marqueur non résolu ; c'est l'appelante qui affiche l'explication, parce
- * qu'elle seule sait si l'on est dans la colonne de droite ou dans le portail
- * d'impression.
- *
- * ⚠️ CONSÉQUENCE DIRECTE DE `html_escape` (voir l'en-tête du fichier) : un `{{` trouvé dans le HTML figé
- * NE PEUT PAS venir d'une donnée patiente — une saisie hostile
- * « {{patient.last_name}} » ressort échappée, et le checkpoint le vérifie. Il
- * vient donc forcément du MODÈLE, c'est-à-dire d'une valeur de contexte
- * absente. La garde ne peut pas se déclencher sur un certificat sain.
- */
-export function FeuilleEmise({ html }: { readonly html: string }): React.JSX.Element | null {
-  if (contientMarqueurNonResolu(html)) return null;
+export function extractUnresolvedMarkers(html: string): readonly string[] {
+  if (!html.includes("{{")) return [];
+  const re = /\{\{([^}]+)\}\}/g;
+  const out: string[] = [];
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(html)) !== null) {
+    const key = m[1]?.trim();
+    if (key !== undefined && key !== "" && !out.includes(key)) out.push(key);
+  }
+  return out;
+}
 
+/**
+ * La pièce émise — TOUJOURS affichée (même trouée).
+ * Le bandeau d'incomplétude est rendu PAR L'APPELANTE, hors papier,
+ * pour ne jamais muter le HTML figé ni le masquer.
+ */
+export function FeuilleEmise({ html }: { readonly html: string }): React.JSX.Element {
   return (
     <article className="doc-feuille doc-corps" dangerouslySetInnerHTML={{ __html: html }} />
   );

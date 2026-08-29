@@ -78,7 +78,7 @@ export function PanneauEtat<T>({
       );
 
     case "vide":
-      return <EtatVide message={messageVide ?? fr.finances.videPeriode} />;
+      return <EtatVide message={messageVide ?? fr.finances.videPeriode} icone="finances" />;
 
     case "partiel":
       return (

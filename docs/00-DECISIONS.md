@@ -328,74 +328,7 @@ trg_appt_transition                       -- BEFORE UPDATE, sur la TABLE
 
 **Non décidé, et donc non construit.** Le **type de consultation** n'existe dans aucune table. `source` est le canal d'entrée (`phone`/`walk_in`/`web`/`assistant`/`doctor`), pas le type. La liste réellement employée par la praticienne n'ayant pas été fournie, inventer « première consultation / suivi / urgence » aurait fabriqué une taxonomie clinique dans un dossier médical (I19). Le champ s'ajoutera par une migration isolée — colonne **nullable**, visible de tous les rôles — sans qu'aucun écran soit à reconstruire.
 
-### ADR-022 — Palette v2 : la couleur revient, la donnée reste opaque
-**Date.** 2026-08-09. **Amende** `04-DESIGN-SYSTEM.md` §1.1, §3, §4.
-**Ne remplace pas** §4.2 — qui devient au contraire la seule frontière qui compte.
 
-**Le problème.** `04-DESIGN-SYSTEM.md` §1.1 écartait les dégradés et « la palette
-générique SaaS » de la référence fournie. L'application livrée est en conséquence
-blanche, beige, sans profondeur ni couleur — et l'utilisateur la juge, à raison,
-ennuyeuse. Le document avait raison sur la **donnée clinique** et tort sur **tout
-le reste** : il a appliqué à l'écran entier une règle qui ne valait que pour les
-valeurs.
-
-**Deuxième constat, factuel.** `--teal-600: #1B6B63` était une estimation. Le teal
-réel du logo, pipetté sur `lOGO_JPG.jpg` et `4.jpg`, est **`#7CB5AC`** — un vert
-d'eau clair, très différent. La palette était fausse dès l'origine.
-
-**Décision.** La couleur et les dégradés sont **autorisés** sur :
-cartes d'agrégat et indicateurs · en-têtes d'écran · panneau Jarvis et orbe ·
-écran de connexion · navigation active · graphiques · illustrations · états vides.
-
-Ils restent **interdits**, sans exception, derrière ou dans :
-une posologie · une dose · un score d'échelle · une note clinique · une transcription ·
-un montant · une date ou heure de rendez-vous · un nom de patient · un aperçu de document.
-
-**Pourquoi la frontière tient.** Un dégradé sous un chiffre change le contraste selon
-ce qui défile derrière. Sur `25 mg` contre `250 mg`, le coût d'une lecture ambiguë
-n'est pas esthétique. Sur « Recette du mois », il n'y a aucun coût — c'est un agrégat,
-il ne se prescrit pas.
-
-**Palette v2 — dérivée du vrai logo.**
-```css
-:root {
-  /* ── Marque, dérivée de #7CB5AC ─────────────────────── */
-  --brand-900: #0F2E2A;
-  --brand-800: #16443E;
-  --brand-700: #1D5C54;
-  --brand-600: #2A7A70;   /* PRIMAIRE ACTION — 5.10:1 sur blanc, vérifié */
-  --brand-500: #4A9A8E;
-  --brand-400: #7CB5AC;   /* LOGO — marque, dégradés, jamais du texte sur blanc */
-  --brand-200: #B4D8D1;
-  --brand-100: #DCEDE9;
-  --brand-050: #F1F8F6;
-
-  /* ── Accents — agrégats et graphiques UNIQUEMENT ────── */
-  --azure-600: #2563A8;
-  --azure-400: #5B92CE;
-  --violet-500: #7C6BD8;   /* 3e série de graphique, pas davantage */
-
-  /* ── Sémantique clinique — inchangée ────────────────── */
-  --attention: #B8763A;  --attention-bg: #FBF2E9;
-  --critical:  #A33A32;  --critical-bg:  #FBEDEC;
-  --positive:  #3E7A5E;  --positive-bg:  #EDF5F1;
-
-  /* ── Dégradés — liste FERMÉE ────────────────────────── */
-  --grad-brand: linear-gradient(135deg, #16443E 0%, #2A7A70 48%, #3E8FA8 100%);
-  --grad-orb:   radial-gradient(circle at 30% 30%, #7CB5AC 0%, #2A7A70 60%, #16443E 100%);
-  --grad-auth:  linear-gradient(160deg, #0F2E2A 0%, #1D5C54 55%, #2A7A70 100%);
-}
-```
-**Aucun autre dégradé n'existe.** Un dégradé inventé dans un écran est un défaut de
-revue, pas une variation.
-
-**Le rouge reste un budget** (§3.1 règle 1) : disque critique, perte de données.
-Un rendez-vous annulé n'est pas rouge.
-
-**Contrôle de checkpoint.** `grep -rE "#[0-9a-fA-F]{6}" src/ --exclude=tokens.css`
-doit rendre 0. Contraste mesuré, jamais estimé.
-
----
 
 ### ADR-023 — Jarvis répond en psychiatre sur la connaissance, jamais sur le patient
 **Date.** 2026-08-09. **Amende** L4 de `03-JARVIS-TOOLS.md`. **Ne l'annule pas.**
@@ -443,61 +376,148 @@ telles quelles. Sept comportements conformes, ou V2 est rouge.
 
 ---
 
-### ADR-024 — La voix bascule par un flag ; le navigateur n'est jamais une option
-**Date.** 2026-08-09. **Complète** R1, R2, ADR-002 et ADR-009. **Amendé le même jour**
-après précision de l'utilisateur (développement sur poste distant du cabinet).
 
-**La demande.** « La doctoresse doit pouvoir parler normalement à Jarvis, avec une
-belle voix et rapide. » Et : « utiliser OpenRouter pour toutes les clés. »
+### ADR-025 — Palette v3 : direction premium et colorée, sur permission explicite de l'utilisatrice
+**Date.** 2026-08-24. **Remplace** `04-DESIGN-SYSTEM.md` v2 et ADR-022 dans leur
+dosage de la couleur. **Ne touche pas** à §4.2 (donnée clinique opaque) ni au Mode
+Séance (§7), qui restent les deux seules contraintes non négociables.
 
-**Premier constat, technique.** OpenRouter route des modèles de **texte**. Il n'expose
-ni transcription ni synthèse vocale. Une clé unique pour la voix n'existe pas : il en
-faut deux de plus, `GROQ_API_KEY` et `ELEVENLABS_API_KEY`, côté serveur uniquement (R3).
+**Le problème, montré à l'écran.** ADR-022 avait déjà autorisé la couleur sur les
+agrégats, la navigation et les graphiques — mais avec retenue. La capture du
+2026-08-24 (`/patients/…`) montre le résultat livré : navigation à peine teintée,
+tableau de bord sans tuiles d'agrégat ni graphique réel, cartes blanches sur fond
+presque blanc, information repliée par défaut. L'utilisatrice le juge — à raison,
+en le comparant à des tableaux de bord de référence (santé, finance) — plat et
+sous-exploité par rapport à ce que la palette autorisait déjà.
 
-**Second constat, et c'est celui qui décide.** La voix fuit **dans les deux sens**.
-À l'entrée, elle dira « ouvre le dossier de Belkacem » : le nom part **avec l'audio**,
-avant que la passerelle de pseudonymisation puisse agir — la passerelle d'ADR-002
-traite le texte *produit* par la transcription, elle arrive une étape trop tard.
-À la sortie, Jarvis répond « Karim Belkacem, jeudi 15 h » : envoyer ce texte à un
-service de synthèse fait sortir le nom une seconde fois.
+**Ce qui a été demandé, explicitement.** Un pivot complet vers une direction
+« premium, colorée, vivante », au niveau des références fournies : dégradés larges,
+tuiles d'agrégat à fond coloré, iconographie riche, graphiques réels. L'utilisatrice
+a demandé de **passer outre les ADR de design existants** pour cette décision — elle
+en a été informée avant d'y consentir (le conflit avec ADR-022 §1.1 lui a été
+explicité), et son accord porte spécifiquement sur l'esthétique, pas sur la
+sécurité ou l'accessibilité.
 
-**Décision — le même mécanisme qu'ADR-002, étendu aux deux sens.**
+**Ce qui ne bouge pas, et pourquoi ce n'est pas une esquive de la permission
+donnée.** Deux frontières restent en place, parce qu'elles ne sont pas des choix
+de goût :
+1. **§4.2 — la donnée clinique reste opaque, sans dégradé ni verre en dessous.**
+   Un dégradé sous « 25 mg » change de contraste selon ce qu'il y a derrière ; le
+   coût d'une lecture ambiguë sur une dose n'est pas esthétique, il est clinique.
+   Ce n'est pas une restriction de palette, c'est un fait mesurable (I2/§11).
+2. **Le Mode Séance (§7) reste sobre.** Sa sobriété est justifiée par la présence
+   du patient face à l'écran, pas par la palette de l'application — le
+   redemander formellement n'apporterait rien que la clinique n'ait déjà tranché.
+Tout le reste — navigation, tableau de bord, fiches, agenda, panneau Jarvis, états
+vides — est désormais ouvert à la couleur et aux dégradés sans la liste fermée que
+posait ADR-022.
 
-| | `VOICE_PROVIDER=cloud` | `VOICE_PROVIDER=local` |
-|---|---|---|
-| **Quand** | développement, base synthétique (ADR-016) | dès le premier patient réel |
-| **Entrée** | Groq `whisper-large-v3-turbo` | `whisper.cpp`, modèle `base` FR |
-| **Sortie** | ElevenLabs, voix française | Piper, `fr_FR-siwis-medium` |
-| **Bascule** | — | une variable d'environnement |
+**Palette étendue.** ADR-022 gardait le teal du logo (`#7CB5AC`, pipetté, vérifié)
+comme unique famille de marque, avec azur/violet réservés aux graphiques. ADR-025
+ajoute l'indigo (Jarvis/IA), élargit l'azur, ajoute l'ambre (déjà présent en
+sémantique, étendu aux graphiques) et un corail — cinq familles au lieu de trois,
+recopiées dans `docs/04-DESIGN-SYSTEM.md` §3 et dans `tokens.css`. Chaque nouvelle
+teinte de texte est vérifiée ≥ 4.5:1 avant d'être commise — le défaut mesuré
+d'ADR-022 sur `--attention`/`--attention-bg` (3.34:1) ne doit pas se reproduire
+avec une cinquième famille non vérifiée.
 
-**Pourquoi le cloud est légitime en développement.** Exactement le raisonnement
-d'ADR-016 : R1 protège la **donnée**, pas le service. Une transcription de données
-synthétiques ne viole ni R1 ni la loi 18-07. Le trigger `assert_synthetic_when_cloud`
-garantit qu'il n'y a rien d'autre à protéger.
+**Portée de cette décision.** Ce lot ne touche que la documentation — `00-DECISIONS.md`
+et `04-DESIGN-SYSTEM.md` — et `tokens.css`, seule source de valeurs (I10). Aucun
+écran n'est modifié ici. L'implémentation sur les composants et les pages suit dans
+un lot séparé, une fois la palette et sa doc stabilisées.
 
-**Pourquoi le local est obligatoire au cabinet, et pas « recommandé ».** Le jour où
-la base contient de vraies patientes, chaque commande vocale contient un nom réel.
-Il n'existe aucune façon de pseudonymiser un son. La bascule est donc une ligne de
-la checklist de livraison, au même rang que la révocation des clés cloud.
+### ADR-027 — La couche opérante Jarvis : boucle bornée, frontière de confidentialité, identité côté application
+**Date.** 2026-08-26. **Étend** ADR-023 (les trois chemins) et ADR-026 sans les
+remplacer. **Ne touche pas** à `_shared/routing.ts`, ni aux trois portes de 033,
+ni au protocole SSE.
 
-**Pourquoi Piper et pas la voix Windows.** Piper tourne sur CPU plus vite que le temps
-réel, en français naturel, hors ligne, sans clé. C'est le seul candidat qui satisfasse
-à la fois « beau », « rapide » et « ne sort pas du cabinet ».
+**Le problème, mesuré et non supposé.** V-JARVIS-CORE avait livré un transport
+solide et une boucle d'écriture défendue, mais il manquait le chaînon qui les
+rend utiles : **le résultat d'un outil ne retournait jamais au modèle**.
+`conversation.ts` exécutait l'outil, collait les lignes brutes dans le fil, et le
+tour s'arrêtait. Le chemin flux — le seul que l'interface emprunte — ne
+transmettait même pas `contexteDossiers`. « Parle-moi du prochain patient »
+était donc **inatteignable par construction**, quelle que soit la qualité du
+modèle. Aucun test ne l'avait vu : ils vérifiaient que les outils existaient, pas
+qu'une réponse pouvait se construire.
 
-**L'API `SpeechRecognition` du navigateur est interdite dans les DEUX modes.**
-Elle envoie l'audio aux serveurs de Google, et surtout : **aucun flag ne peut
-l'éteindre**. Un chemin de sortie qu'on ne peut pas débrancher n'est pas un choix de
-qualité, c'est une frontière absente. Contrôle de checkpoint permanent :
-`grep -r "SpeechRecognition\|webkitSpeech" src/` doit rendre 0.
+**Décision 1 — une boucle agentique BORNÉE, dont le runtime porte la politique.**
+Le résultat de capacité reboucle vers le modèle, au plus trois fois par tour, sous
+six budgets indépendants (itérations, appels, octets de contexte, octets de
+résultat, durée, **une seule écriture par tour**). Un plafond unique laisserait un
+tour brûler sa totalité en un appel ; six bornes six dérives différentes. À
+l'épuisement, Jarvis **avoue** — il ne fabrique jamais une réponse pour donner
+l'illusion d'avoir abouti.
 
-**Ce qui est rejeté, et pourquoi c'est écrit ici.** « Juste pour tester en vrai, on
-met l'API du navigateur, on changera après. » Un test avec un vrai nom de patient est
-une fuite réelle. Il n'existe pas de version provisoire d'une frontière.
+**Décision 2 — la frontière de confidentialité est structurelle, en trois couches.**
+`projection à liste blanche` → `pare-feu déterministe` → `garde fail-closed`.
+Un champ absent des DTO de `jarvis-projections.ts` **ne peut pas** atteindre le
+modèle : le chemin `ligne brute → JSON.stringify → modèle` n'existe nulle part.
+Une liste blanche protège de ce qu'on n'a pas pensé — le cas dangereux, qui
+grandit à chaque colonne ajoutée en base.
 
-**Ce que ça ne change pas.** Le panneau Jarvis reçoit du **texte**. La voix produit du
-texte et alimente le même panneau, les mêmes outils, le même écran. Zéro changement
-d'architecture au moment de la bascule — exactement l'intention de D-10.
+Les deux gardes fail-closed sont **répartis, et c'est le point** : le client
+vérifie les NOMS (il les connaît), la passerelle vérifie les MOTIFS (téléphone,
+courriel). Lui transmettre la liste des noms du cabinet pour qu'elle vérifie leur
+absence reviendrait à **mettre les noms dans la charge pour prouver qu'ils n'y
+sont pas**.
 
+**Décision 3 — l'application détient l'identité, le modèle ne la voit jamais.**
+Le modèle manipule `PATIENT_001` ; la carte de correspondance vit en mémoire
+dans le navigateur, n'est ni persistée ni journalisée, et est **purgée à chaque
+tour et à chaque changement de cible**. Les arguments d'outil font le chemin
+inverse *avant* Zod. Conséquence directe : **les UUID ne quittent plus la
+machine**, ce qu'ADR-023 avait dû concéder faute de mécanisme de retour.
+
+Bénéfice non anticipé : un jeton halluciné ne résout rien et échoue **à la
+frontière**, alors qu'un UUID halluciné franchissait Zod (c'est une forme valide)
+et n'échouait qu'au fond d'`execute_jarvis_action`, rangé en `failed`,
+indiscernable d'un refus de la RLS.
+
+**Décision 4 — toute écriture se VÉRIFIE par relecture.** Le type
+`CapaciteEcriture` n'a pas de `verifier` facultatif : on ne peut pas déclarer une
+écriture sans dire comment on relit son effet. `executerAction` refusait déjà de
+lire un retour `NULL` comme un succès — nécessaire, **pas suffisant** : la porte
+peut rendre un identifiant sans que la ligne porte l'heure demandée. Quand la
+relecture ne confirme pas, Jarvis ne dit ni « c'est fait » ni « ça a échoué » : il
+dit que l'action a été tentée et renvoie à l'écran.
+
+**Décision 5 — les faits ne sont jamais produits par le modèle.** Identité, heure,
+total, date, compte, statut viennent de résultats typés. Les briefs sont
+**composés en TypeScript** et le modèle ne fait que les mettre en langue. Un
+chiffre plausible sur un écran médical est un mensonge, pas un ornement (règle 8).
+
+**Ce qui est rejeté, et pourquoi c'est écrit ici.** « On donne au modèle le
+dossier complet, il fera le tri. » Un dossier complet expédié à chaque tour est
+une recopie de la base chez un tiers, et un contexte que le modèle relit mal. Le
+broker charge selon l'intention : deux kilo-octets pour une question d'agenda,
+douze pour une préparation de consultation, **zéro** pour une question de
+connaissance générale.
+
+**Ce que cette décision ne prétend PAS régler.** Un pare-feu déterministe est
+exhaustif sur ce qu'il CONNAÎT. Une praticienne peut écrire dans une note un
+surnom que le dossier ne porte pas ; aucune substitution ne le rattrapera. C'est
+pourquoi la liste blanche est la défense principale et la pseudonymisation la
+seconde. Écrire l'inverse serait sur-déclarer une garantie — et une garantie
+fausse empêche la relecture suivante de la remettre en cause.
+
+**Mot de réveil — tranché le 2026-08-26.** Assistant = **Jarvis** ; mot
+prononcé = **Alexa**. `jarvis-reveil.ts` garde la machine à huit états et le
+contrat de détecteur, sans jamais savoir quel mot réveille — c'est ce qui a
+permis de passer de « Hey Jarvis » à « Alexa » sans y toucher.
+`reveil-openwakeword.ts` porte le moteur : openWakeWord en ONNX, exécuté par
+`onnxruntime-web` en WASM, **modèles ET runtime auto-hébergés** dans
+`public/wakeword/`. Aucune requête réseau pendant l'écoute — c'est la condition
+qui rend une écoute permanente acceptable dans un cabinet (règle 1). L'API du
+navigateur a été écartée pour la raison inverse : elle expédie l'audio de veille
+chez un tiers.
+
+Deux points appris à ce moment-là, et qui coûteraient cher à réapprendre :
+les noms de tenseurs sont **lus dans le graphe**, jamais codés en dur — les
+modèles « Hey Jarvis » et « Alexa » ont la même forme `[1,16,96]` mais des noms
+d'entrée différents (`x.1` contre `onnx::Flatten_0`), donc un nom en dur
+transforme un remplacement de fichier en panne. Et la plomberie prouvée n'est
+pas l'oreille prouvée : aucune voix humaine n'a encore été mesurée.
 
 ---
 

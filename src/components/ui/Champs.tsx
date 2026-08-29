@@ -16,13 +16,17 @@
 
 import { useId } from "react";
 
+import { Icone } from "./Icones";
+
 const SOCLE_CHAMP = [
-  "w-full min-h-target rounded-md border bg-card px-4 py-3",
-  "font-ui text-body text-ink-900",
+  "w-full min-h-target rounded-xl border bg-card px-4 py-3",
+  "font-ui text-body font-regular text-ink-900",
   "placeholder:text-ink-300",
-  "transition duration-quick ease-soft",
+  "transition duration-quick ease-out",
   "outline-none focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset",
+  "focus-within:border-action-600 focus-within:shadow-lift2",
   "disabled:cursor-not-allowed disabled:bg-sunken disabled:opacity-disabled",
+  "shadow-lift1",
 ].join(" ");
 
 function bordure(enErreur: boolean): string {
@@ -59,7 +63,7 @@ function Habillage({
     <div className="flex flex-col gap-2">
       <label
         htmlFor={idChamp}
-        className="font-ui text-label font-medium tracking-label text-ink-700"
+        className="font-ui text-label font-semibold tracking-label text-ink-700"
       >
         {libelle}
       </label>
@@ -221,5 +225,57 @@ export function ChampZoneTexte({
         {...(placeholder === undefined ? {} : { placeholder })}
       />
     </Habillage>
+  );
+}
+
+/**
+ * La barre de recherche d'un annuaire — une COMMANDE, pas un champ de
+ * formulaire.
+ *
+ * v9 : le champ nu avec sa bordure grise se fondait dans la page ; la
+ * recherche est pourtant le premier geste de l'écran. La barre prend la
+ * forme d'un pupitre : la loupe à gauche, le champ sans bordure propre au
+ * milieu, la barre entière portant le focus. `role="search"` reste posé PAR
+ * L'APPELANT (le `form` qui l'entoure) — ce composant ne fait que l'habiller.
+ *
+ * Le libellé reste OBLIGATOIRE et visuellement masqué : un champ sans nom
+ * n'existe pas pour un lecteur d'écran, et le placeholder n'est pas un nom.
+ */
+export function ChampRecherche({
+  libelle,
+  valeur,
+  onChange,
+  placeholder,
+}: {
+  readonly libelle: string;
+  readonly valeur: string;
+  readonly onChange: (v: string) => void;
+  readonly placeholder?: string;
+}): React.JSX.Element {
+  const idChamp = useId();
+
+  return (
+    <div
+      className={[
+        "flex min-h-target-lg w-full items-center gap-3 rounded-xl border border-rule bg-card px-4",
+        "shadow-lift1 transition duration-quick ease-out",
+        "focus-within:border-action-500 focus-within:shadow-lift2 focus-within:ring-4 focus-within:ring-action-50",
+      ].join(" ")}
+    >
+      <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-action-50 text-action-600">
+        <Icone nom="recherche" taille={16} className="shrink-0" />
+      </span>
+      <label htmlFor={idChamp} className="sr-only">
+        {libelle}
+      </label>
+      <input
+        id={idChamp}
+        type="search"
+        value={valeur}
+        onChange={(e) => onChange(e.target.value)}
+        {...(placeholder === undefined ? {} : { placeholder })}
+        className="min-h-target-lg w-full border-0 bg-transparent font-ui text-body font-regular text-ink-900 outline-none placeholder:text-ink-500"
+      />
+    </div>
   );
 }

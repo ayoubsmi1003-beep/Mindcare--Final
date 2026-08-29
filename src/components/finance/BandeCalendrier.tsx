@@ -84,7 +84,7 @@ export function BandeCalendrier({
             >
               <div
                 className={[
-                  "flex items-center justify-center rounded-sm font-num tabular-nums",
+                  "flex items-center justify-center rounded-md font-num tabular-nums",
                   compact ? "h-5" : "h-9 text-eyebrow",
                 ].join(" ")}
                 style={{ background: p.fond, color: p.encre }}

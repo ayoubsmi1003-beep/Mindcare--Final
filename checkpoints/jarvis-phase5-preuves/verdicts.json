@@ -1,0 +1,54 @@
+{
+  "verts": 7,
+  "rouges": 2,
+  "lignes": [
+    {
+      "verdict": "vert",
+      "label": "K · au moins deux dossiers atteignables",
+      "detail": "11 dossiers"
+    },
+    {
+      "verdict": "ROUGE",
+      "label": "K · les deux réponses arrivent",
+      "detail": ""
+    },
+    {
+      "verdict": "vert",
+      "label": "K · la seconde réponse n'est pas la première",
+      "detail": "cible remplacée, pas accumulée"
+    },
+    {
+      "verdict": "vert",
+      "label": "L · au moins une charge a été capturée",
+      "detail": "2 charge(s)"
+    },
+    {
+      "verdict": "ROUGE",
+      "label": "L · un résultat de capacité est RENVOYÉ au modèle",
+      "detail": "0 envoi(s) porteur(s)"
+    },
+    {
+      "verdict": "vert",
+      "label": "L · aucun UUID en clair dans la charge",
+      "detail": "identifiants réels absents"
+    },
+    {
+      "verdict": "vert",
+      "label": "L · aucun téléphone algérien dans la charge",
+      "detail": "motif mobile absent"
+    },
+    {
+      "verdict": "vert",
+      "label": "L · aucune adresse de courriel dans la charge",
+      "detail": "motif courriel absent"
+    },
+    {
+      "verdict": "vert",
+      "label": "aucune erreur JavaScript de page",
+      "detail": ""
+    }
+  ],
+  "reponses": {
+    "K": "Je ne vois pas de dossier patient actuellement ouvert ni sélectionné. Pourriez-vous me préciser de quel patient il s'agit (nom, prénom ou numéro de dossier) afin que je puisse en faire un résumé en trois phrases ?\n---\n"
+  }
+}

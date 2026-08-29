@@ -74,13 +74,8 @@ export function PanneauJarvis(): React.JSX.Element {
 
   if (!ouvert) {
     return (
-      /* DEUX GESTES, DEUX BOUTONS. L'orbe parle, le libelle ouvre le panneau.
-       * Les imbriquer donnerait un bouton dans un bouton — invalide, et
-       * impossible a atteindre au clavier. Separes, la praticienne peut poser
-       * une question sans jamais ouvrir le panneau : c'est tout l'interet d'un
-       * assistant vocal. */
       <div
-        className="fixed bottom-6 right-6 flex min-h-target-lg items-center gap-2 rounded-full bg-card py-2 pl-2 pr-2 shadow-lift3"
+        className="fixed bottom-5 right-5 flex min-h-target-lg items-center gap-2 rounded-full border border-rule bg-card px-2 py-2 shadow-lift3"
         style={{ zIndex: "var(--z-panneau)" }}
       >
         <OrbeVoix taille={32} />
@@ -88,12 +83,12 @@ export function PanneauJarvis(): React.JSX.Element {
           type="button"
           onClick={() => setOuvert(true)}
           aria-label={fr.jarvis.ouvrir}
-          className="flex cursor-pointer items-center gap-3 rounded-full border-0 bg-transparent py-1 pl-1 pr-3 font-ui text-body font-medium text-ink-900 transition duration-quick ease-soft hover:text-ai-600"
+          className="flex cursor-pointer items-center gap-2.5 rounded-full bg-ai-50 px-3 py-1.5 font-ui text-body font-semibold tracking-tight text-ai-600 transition duration-quick ease-out hover:bg-ai-100"
         >
           {fr.jarvis.ouvrir}
           <span
             aria-hidden="true"
-            className="rounded-sm border border-rule bg-sunken px-2 py-1 font-num text-eyebrow tabular-nums text-ink-500"
+            className="rounded-md border border-ai-100 bg-white px-1.5 py-0.5 font-num text-eyebrow font-bold tabular-nums text-ink-500"
           >
             ⌘K
           </span>
@@ -116,10 +111,12 @@ export function PanneauJarvis(): React.JSX.Element {
         zIndex: "var(--z-panneau)",
       }}
     >
-      <header className="flex items-center justify-between gap-3 border-b border-rule bg-card px-4 py-3">
-        <span className="flex min-w-0 items-center gap-3">
-          <OrbeVoix taille={24} />
-          <strong className="truncate font-ui text-body font-semibold text-ink-900">
+      <header className="flex items-center justify-between gap-3 border-b border-rule bg-grad-tile-ai px-4 py-3">
+        <span className="flex min-w-0 items-center gap-2.5">
+          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-white/15 text-white">
+            <OrbeVoix taille={18} />
+          </span>
+          <strong className="truncate font-ui text-body font-bold tracking-tight text-white">
             {fr.jarvis.titre}
           </strong>
         </span>
@@ -128,9 +125,9 @@ export function PanneauJarvis(): React.JSX.Element {
           onClick={() => setOuvert(false)}
           aria-label={fr.jarvis.fermer}
           title={fr.jarvis.fermer}
-          className="inline-flex min-h-target min-w-target shrink-0 cursor-pointer items-center justify-center rounded-md border-0 bg-transparent text-ink-500 transition duration-quick ease-soft hover:bg-sunken hover:text-ink-900"
+          className="inline-flex min-h-target min-w-target shrink-0 cursor-pointer items-center justify-center rounded-lg border-0 bg-white/10 text-white transition duration-quick ease-out hover:bg-white/15"
         >
-          <Icone nom="croix" taille={20} />
+          <Icone nom="croix" taille={16} />
         </button>
       </header>
 

@@ -21,6 +21,7 @@ export {
   EnTetePage,
   PanneauInfo,
   GrilleChamps,
+  MetaHeros,
 } from "./Surfaces";
 export type {
   CarteProps,
@@ -29,7 +30,7 @@ export type {
   NiveauPorteur,
 } from "./Surfaces";
 
-export { Icone, MarqueMindCare } from "./Icones";
+export { Icone, MarqueMindCare, MotifFeuilles } from "./Icones";
 export type { NomIcone, IconeProps } from "./Icones";
 
 /* ⚠️ NI `Tableau` NI `Toast` NE SONT ICI, ET C'EST LA MÊME RAISON.
@@ -64,7 +65,7 @@ export type { Onglet } from "./Onglets";
 export { Avatar } from "./Avatar";
 export type { TailleAvatar } from "./Avatar";
 
-export { ChampTexte, ChampSelection, ChampZoneTexte } from "./Champs";
+export { ChampTexte, ChampSelection, ChampZoneTexte, ChampRecherche } from "./Champs";
 
 export { EspaceTravail, SectionPliable } from "./Espaces";
 

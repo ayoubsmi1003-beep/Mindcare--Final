@@ -1,76 +1,57 @@
 /**
- * La file des arrivées — la salle d'attente, par attente DÉCROISSANTE.
- *
- * L'arrivée elle-même se pose depuis la frise ou la zone d'attention ; cette
- * file montre qui attend DEPUIS COMBIEN, avec l'action d'accueil restante :
- * « Non présenté(e) » (transition `arrived → no_show`, porte 046). Passer le
- * patient en séance est le geste de la praticienne (`start_consultation`),
- * jamais celui de l'assistante — aucun bouton ne l'y invite.
+ * File d'attente — version réception console : cartes numérotées, progression, vide explicite.
  */
-
 "use client";
 
 import { fr } from "@/i18n/fr";
-
-import { Bouton } from "@/components/ui/Bouton";
+import { AttenteCard } from "./AttenteCard";
 import type { RdvAccueil } from "@/services/reception";
 
-interface FileArriveesProps {
+interface Props {
   readonly journee: readonly RdvAccueil[];
   readonly maintenant: Date;
   readonly onAbsent: (rdv: RdvAccueil) => void;
   readonly onSelectRdv: (id: string) => void;
 }
 
-export function FileArrivees({
-  journee,
-  maintenant,
-  onAbsent,
-  onSelectRdv,
-}: FileArriveesProps): React.JSX.Element | null {
+export function FileArrivees({ journee, maintenant, onAbsent, onSelectRdv }: Props): React.JSX.Element {
   const arrivees = journee
     .filter((rdv) => rdv.status === "arrived" && rdv.arrivedAt !== null)
-    .sort(
-      (a, b) => Date.parse(a.arrivedAt ?? "") - Date.parse(b.arrivedAt ?? ""),
-    );
+    .sort((a, b) => Date.parse(a.arrivedAt ?? "") - Date.parse(b.arrivedAt ?? ""));
 
-  if (arrivees.length === 0) return null;
+  const MAX_VISIBLE = 6;
+  const visibles = arrivees.slice(0, MAX_VISIBLE);
+  const restants = arrivees.length - visibles.length;
 
   return (
     <section aria-label={fr.reception.arrivees.titre} className="flex flex-col gap-2">
-      <h3 className="font-ui text-heading font-semibold text-ink-900">
+      <h3 className="flex items-center gap-2 font-ui text-heading font-semibold text-ink-900">
         {fr.reception.arrivees.titre}
-        <span className="ml-2 font-num text-num tabular-nums text-ink-500">{arrivees.length}</span>
+        <span className="rounded-full bg-sunken px-2 py-0.5 font-num text-label font-semibold tabular-nums text-ink-500">{arrivees.length}</span>
       </h3>
 
-      <ul className="m-0 flex list-none flex-col gap-2 p-0">
-        {arrivees.map((rdv) => {
-          const minutes = Math.max(
-            0,
-            Math.floor((maintenant.getTime() - Date.parse(rdv.arrivedAt ?? "")) / 60000),
-          );
-          return (
-            <li key={rdv.id}>
-              <div className="flex min-h-target items-center gap-3 rounded-md border border-info-100 bg-card px-3 py-2">
-                <button
-                  type="button"
-                  onClick={() => onSelectRdv(rdv.id)}
-                  className="min-w-0 flex-auto truncate bg-transparent text-left font-ui text-body font-medium text-ink-900 outline-none focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset"
-                >
-                  {[rdv.lastName, rdv.firstName].filter(Boolean).join(" ") ||
-                    fr.agenda.patientNonRattache}
-                </button>
-                <span className="shrink-0 font-num text-label tabular-nums text-ink-500">
-                  {fr.reception.arrivees.attenteDepuis} {minutes} min
-                </span>
-                <Bouton rang="discret" onClick={() => onAbsent(rdv)}>
-                  {fr.reception.arrivees.marquerAbsent}
-                </Bouton>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
+      {arrivees.length === 0 ? (
+        <div className="flex items-center gap-3 rounded-md border border-rule bg-sunken px-3 py-3">
+          <span aria-hidden="true" className="h-9 w-9 rounded-full bg-grad-empty opacity-60" />
+          <p className="font-ui text-body text-ink-500">{fr.reception.arrivees.vide}</p>
+        </div>
+      ) : (
+        <>
+          <ul className="m-0 flex list-none flex-col gap-2 p-0">
+            {visibles.map((rdv, idx) => {
+              const minutes = Math.max(0, Math.floor((maintenant.getTime() - Date.parse(rdv.arrivedAt ?? "")) / 60000));
+              return (
+                <li key={rdv.id}>
+                  <AttenteCard index={idx} rdv={rdv} minutes={minutes} onAbsent={onAbsent} onSelect={onSelectRdv} />
+                </li>
+              );
+            })}
+          </ul>
+          {restants > 0 ? (
+            <p className="px-1 font-ui text-label text-ink-500">+ {restants} en attente — voir ci-dessus</p>
+          ) : null}
+        </>
+      )}
     </section>
   );
 }

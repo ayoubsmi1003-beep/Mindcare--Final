@@ -28,7 +28,7 @@ import { getClientEnv } from "@/lib/env";
 import { fr } from "@/i18n/fr";
 
 import type { AppError, AppErrorCode } from "../errors";
-import { toAppError } from "../errors";
+import { classerCodeEdge, toAppError } from "../errors";
 import { err, ok, type Result } from "../result";
 import type { DbPort, RpcArgs, SelectSpec, SessionInfo, SignInCredentials } from "./port";
 
@@ -47,6 +47,18 @@ import type { DbPort, RpcArgs, SelectSpec, SessionInfo, SignInCredentials } from
  * document d'autorité n'a été modifié, aucune valeur de passerelle non plus.
  */
 const PLAFOND_INVOKE_MS = 15_000;
+
+/**
+ * V-JARVIS-CORE — course au PREMIER octet d'un flux, pas à sa fin.
+ *
+ * Un flux Jarvis vit aussi longtemps que le modèle réfléchit (mesuré : plus de
+ * 40 s sur les variantes à raisonnement). Un plafond global tuerait des
+ * réponses parfaitement vivantes. Ce qui doit rester borné, c'est le silence
+ * INITIAL : passerelle injoignable, fonction morte avant ses en-têtes. Une fois
+ * le corps ouvert, la vivacité du flux est surveillée PAR LE SERVICE (watchdog
+ * inter-frames), qui seul connaît son protocole et ses battements.
+ */
+const PLAFOND_PREMIERE_REPONSE_MS = 15_000;
 
 function createAppClient() {
   const env = getClientEnv();
@@ -269,6 +281,128 @@ export const supabaseDbPort: DbPort = {
       clearTimeout(minuteur);
     }
   },
+
+  async invokeFunctionStream(
+    name: string,
+    body: unknown,
+    signal?: AbortSignal,
+  ): Promise<Result<ReadableStream<Uint8Array>>> {
+    // ── Le jeton ne sort jamais d'ici (voir port.ts) ──
+    let jeton: string | undefined;
+    try {
+      const { data, error } = await getClient().auth.getSession();
+      if (error !== null) return err(toAppError(error, `invokeFunctionStream:${name}`));
+      jeton = data.session?.access_token;
+    } catch (cause) {
+      return err(toAppError(new Error("échec session flux", { cause }), `invokeFunctionStream:${name}`));
+    }
+    if (jeton === undefined || jeton === "") {
+      return err({
+        code: "non-authentifie",
+        message: fr.erreurs["non-authentifie"],
+        context: `invokeFunctionStream:${name}`,
+      });
+    }
+
+    const env = getClientEnv();
+
+    // Course au premier octet : plafond interne + abandon externe, fusionnés
+    // dans un seul contrôleur. AbortSignal.any exigerait un lib cible plus
+    // récent ; deux écouteurs coûtent quatre lignes et restent explicites.
+    const controleur = new AbortController();
+    const abandonnerExterne = () => {
+      console.info("[TRACE-adapter] externe recu");
+      controleur.abort();
+    };
+    signal?.addEventListener("abort", abandonnerExterne, { once: true });
+    const minuteur = setTimeout(() => controleur.abort(), PLAFOND_PREMIERE_REPONSE_MS);
+
+    try {
+      // fetch DIRECT — et non `functions.invoke`, qui consomme le corps pour
+      // décoder le JSON et n'expose jamais le ReadableStream. C'est la seule
+      // raison de ce bloc : l'URL est celle du projet, le jeton vient de la
+      // session déjà gérée par le SDK, aucune clé nouvelle n'apparaît ici
+      // (contrôle 1 du préflight porte l'exemption nommée de ce fichier).
+      const reponse = await fetch(`${env.supabaseUrl}/functions/v1/${name}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          apikey: env.supabaseAnonKey,
+          Authorization: `Bearer ${jeton}`,
+        },
+        body: JSON.stringify(body),
+        signal: controleur.signal,
+      });
+
+      if (!reponse.ok) {
+        // La passerelle répond toujours 200 avec `{ ok:false, error }` — mais
+        // la plateforme devant elle (404 fonction absente, 502 relais) non.
+        // On décode ce qu'on peut SANS jamais deviner : enveloppe lisible →
+        // codes Edge ; sinon → indisponible technique.
+        let edgeCode: string | undefined;
+        try {
+          const brut = (await reponse.text()).slice(0, 2000);
+          const parse: unknown = JSON.parse(brut);
+          if (
+            typeof parse === "object" && parse !== null && "error" in parse &&
+            typeof (parse as { error?: unknown }).error === "object" &&
+            (parse as { error?: { code?: unknown } }).error !== null &&
+            typeof ((parse as { error: { code?: unknown } }).error).code === "string"
+          ) {
+            edgeCode = ((parse as { error: { code: string } }).error).code;
+          }
+        } catch {
+          // Corps non JSON : on reste sur le statut HTTP comme seule preuve.
+        }
+        const code = classifyEdgeErrorCode(edgeCode ?? (reponse.status >= 500 ? undefined : "non-authentifie"));
+        return err({
+          code,
+          message: fr.erreurs[code],
+          technical: edgeCode ?? `http:${reponse.status}`,
+          context: `invokeFunctionStream:${name}`,
+        });
+      }
+
+      if (reponse.body === null) {
+        return err({
+          code: "indisponible",
+          message: fr.erreurs["indisponible"],
+          technical: "client:flux-corps-vide",
+          context: `invokeFunctionStream:${name}`,
+        });
+      }
+
+      // Premier octet en route : le PLAFOND initial est levé — mais l'écouteur
+      // d'abandon externe RESTE EN PLACE jusqu'au `finally`. L'avoir retiré ici
+      // (défaut trouvé par l'instrument navigateur N4) coupait le bouton Stop
+      // pour toute la durée du flux : l'utilisateur interrompait un contrôleur
+      // qui n'écoutait plus rien.
+      clearTimeout(minuteur);
+      return ok(reponse.body);
+    } catch (cause) {
+      // Abandon EXTERNE (bouton Stop, navigation) : ce n'est ni une panne ni
+      // un délai — l'écran doit rester sur ce qui a déjà été reçu. Code
+      // `interrompu` technique via indisponible + marqueur dédié ; le service
+      // reconnaît son propre signal AVANT de lire cette erreur et ne
+      // consulte le message que pour les abandons qu'il n'a pas provoqués.
+      if (signal?.aborted) {
+        return err({
+          code: "indisponible",
+          message: fr.delaiDepasse,
+          technical: "client:flux-abandonne",
+          context: `invokeFunctionStream:${name}`,
+          cause,
+        });
+      }
+      // Abandon INTERNE = premier octet jamais arrivé : c'est notre plafond,
+      // nommé ici plutôt que classé panne réseau par toAppError.
+      if (controleur.signal.aborted) return err(erreurDelaiInvoke(name, cause));
+      return err(toAppError(new Error("échec flux", { cause }), `invokeFunctionStream:${name}`));
+    } finally {
+      clearTimeout(minuteur);
+      signal?.removeEventListener("abort", abandonnerExterne);
+    }
+  },
 };
 
 /**
@@ -294,19 +428,10 @@ function erreurDelaiInvoke(name: string, cause: unknown): AppError {
 
 /**
  * Traduit le `code` métier renvoyé par une Edge Function (voir
- * `jarvis-analyze-session/index.ts`) vers `AppErrorCode`. Bornée à ce que S6
- * peut produire aujourd'hui ; un code non reconnu tombe sur `indisponible` —
- * jamais `inattendu`, parce qu'une Edge Function qui répond en échec est
- * TOUJOURS un cas de dégradation gracieuse (I20), pas une panne à investiguer
- * à l'écran.
+ * `jarvis-analyze-session/index.ts`) vers `AppErrorCode`. DÉLÉGUÉ à
+ * `errors.classerCodeEdge` depuis V-JARVIS-CORE : le client flux classe les
+ * mêmes codes — une seule table, jamais deux vérités.
  */
 function classifyEdgeErrorCode(code: string | undefined): AppErrorCode {
-  switch (code) {
-    case "non-authentifie":
-      return "non-authentifie";
-    case "regle-metier":
-      return "regle-metier";
-    default:
-      return "indisponible";
-  }
+  return classerCodeEdge(code);
 }

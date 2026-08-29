@@ -4,8 +4,18 @@
 fail=0
 
 # 1 — aucune sortie réseau hors passerelle
+#
+# Exemption NOMMÉE (V-JARVIS-CORE) : `src/services/db/supabase.ts` appelle la
+# passerelle Edge DU PROJET (`${NEXT_PUBLIC_SUPABASE_URL}/functions/v1/…`) en
+# flux — le même unique chemin d'accès que ADR-019/020, pas une sortie externe.
+# OpenRouter, Groq et ElevenLabs restent derrière `_shared/external-call.ts`,
+# seul point de sortie du monde extérieur (règle 1). L'URL vient de
+# l'environnement : le littéral `https://` ne peut donc pas s'y trouver —
+# l'exemption ne désarme rien aujourd'hui ; elle documente l'intention et fait
+# échouer immédiatement tout futur appel direct collé dans l'adaptateur.
 out=$(grep -rn "fetch(['\"]https://" --include="*.ts" --include="*.tsx" src/ supabase/ 2>/dev/null \
-      | grep -v "_shared/external-call.ts")
+      | grep -v "_shared/external-call.ts" \
+      | grep -v "^src/services/db/supabase\.ts:")
 [ -n "$out" ] && { echo "🔴 fetch externe hors passerelle :"; echo "$out"; fail=1; }
 
 # 2 — aucun secret côté client

@@ -340,6 +340,7 @@ export default function PageAgenda(): React.JSX.Element {
                  La phrase dit « rien de VISIBLE par vous », jamais « rien ». */
               <EtatVide
                 message={vue === "semaine" ? fr.agenda.semaine.semaineVide : fr.agenda.journeeVide}
+                icone="agenda"
                 action={
                   <LienBouton href="/agenda/nouveau" rang="principal">
                     {fr.agenda.nouveau}

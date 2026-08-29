@@ -2,6 +2,7 @@
 # en Phase 1 (aucune image livrée) — postinstall refusé, surface réduite sur le
 # poste qui héberge aussi la base clinique.
 allowBuilds:
+  protobufjs: true
   sharp: false
   # unrs-resolver : binaire natif requis par l'outillage ESLint/Next
   # (résolution de modules) — seul postinstall autorisé.

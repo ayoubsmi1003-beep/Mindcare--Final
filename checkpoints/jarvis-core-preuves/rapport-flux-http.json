@@ -1,0 +1,100 @@
+{
+  "date": "2026-08-25T19:48:06.867Z",
+  "fonction": "jarvis-chat (mode flux)",
+  "projet": "ftxaseynjvjevwybdoii",
+  "metriques": {
+    "ttfdMs": 2312,
+    "completionMs": 4591,
+    "fragments": 60,
+    "intervalleMaxEntreFramesMs": 1933
+  },
+  "resultats": [
+    {
+      "verdict": "vert",
+      "label": "A · OPTIONS préflight → 204 + ACAO",
+      "detail": "status=204"
+    },
+    {
+      "verdict": "vert",
+      "label": "B · POST sans Authorization → non-authentifie",
+      "detail": "status=200 code=non-authentifie"
+    },
+    {
+      "verdict": "vert",
+      "label": "C · POST clé publique seule → non-authentifie (leçon V2 n°2)",
+      "detail": "status=200"
+    },
+    {
+      "verdict": "vert",
+      "label": "D0 · connexion GoTrue owner (…a1)",
+      "detail": "status=200"
+    },
+    {
+      "verdict": "vert",
+      "label": "E1a · réponse en text/event-stream",
+      "detail": "status=200 ct=text/event-stream"
+    },
+    {
+      "verdict": "vert",
+      "label": "E1b · événement chemin=connaissance annoncé avant le modèle",
+      "detail": "chemin=connaissance"
+    },
+    {
+      "verdict": "vert",
+      "label": "E1c · deltas réels reçus",
+      "detail": "fragments=60 car=685"
+    },
+    {
+      "verdict": "vert",
+      "label": "E1d · canonicalité : fin.reponse === concat(deltas)",
+      "detail": "fin=true persiste=true"
+    },
+    {
+      "verdict": "vert",
+      "label": "E1e · persiste:true (porte 058 acceptée)",
+      "detail": ""
+    },
+    {
+      "verdict": "vert",
+      "label": "E1f · progressivité mesurée (attente pendant réflexion OU plusieurs fragments)",
+      "detail": "ttfd=2312ms total=4591ms battements=0"
+    },
+    {
+      "verdict": "vert",
+      "label": "E2a · historique par la porte : paire humain+jarvis présente",
+      "detail": "tours=humain,jarvis"
+    },
+    {
+      "verdict": "vert",
+      "label": "E2b · rejeu même clientTurnId → aucune seconde ligne",
+      "detail": "persiste(rejeu)=false lignes=2"
+    },
+    {
+      "verdict": "vert",
+      "label": "F · refus : constante, zéro delta, aucun modèle",
+      "detail": "460ms"
+    },
+    {
+      "verdict": "vert",
+      "label": "G · patient : chemin annoncé, AUCUN delta avant fin, charge atomique",
+      "detail": "battements=1 type=outil chemin=patient"
+    },
+    {
+      "verdict": "vert",
+      "label": "H · interruption : tour jamais simulé complet sans contenu réel",
+      "detail": "premierDeltaVu=true lignes=1 statut=absent"
+    },
+    {
+      "verdict": "vert",
+      "label": "I · 9 tours d'historique → requete-invalide",
+      "detail": ""
+    },
+    {
+      "verdict": "vert",
+      "label": "J · double soumission simultanée → UNE seule ligne humain",
+      "detail": "lignes=1"
+    }
+  ],
+  "verts": 17,
+  "rouges": 0
+}

@@ -46,6 +46,14 @@ export function doitAfficherBandeau(
 ): boolean {
   if (role === "assistant") return false;
   if (pathname.startsWith("/consultation")) return false;
+  // ⚠️ LE TABLEAU DE BORD MONTRE DÉJÀ LA SÉANCE EN COURS, en grand, avec son
+  // chronomètre et son bouton « Reprendre ». Le bandeau y répétait la même
+  // phrase juste au-dessus de la carte qui la porte — et surtout, il la
+  // RELISAIT : `app.get_open_consultation` partait en plus de
+  // `app.dashboard_today`, qui rend déjà `consultation_ouverte`. Deux lectures
+  // de la même vérité peuvent diverger (leçon S4), et celle-ci coûtait un
+  // aller-retour sur l'écran au budget le plus serré. Mesuré le 2026-08-25.
+  if (pathname.startsWith("/tableauDeBord")) return false;
   return seanceId !== null;
 }
 
@@ -61,7 +69,12 @@ export function useSeanceEnCours(role: UserRole): SeanceEnCours {
 
   // Ni l'assistante ni l'écran de séance lui-même n'ont besoin de cette
   // lecture — inutile de la déclencher pour la refuser ensuite à l'affichage.
-  const doitVerifier = role !== "assistant" && !pathname.startsWith("/consultation");
+  // Le guard suit `doitAfficherBandeau` à la lettre : ne pas déclencher une
+  // lecture pour la refuser ensuite à l'affichage.
+  const doitVerifier =
+    role !== "assistant" &&
+    !pathname.startsWith("/consultation") &&
+    !pathname.startsWith("/tableauDeBord");
 
   useEffect(() => {
     if (!doitVerifier) {

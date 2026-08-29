@@ -279,7 +279,7 @@ export default function PageFichePatient(): React.JSX.Element {
 
     if (espace === null) {
       /* Dossier inexistant OU hors périmètre — un seul message, voir en-tête. */
-      return <EtatVide message={fr.patients.ficheIntrouvable} action={<RetourListe />} />;
+      return <EtatVide message={fr.patients.ficheIntrouvable} icone="patients" action={<RetourListe />} />;
     }
 
     if (enModification !== null) {

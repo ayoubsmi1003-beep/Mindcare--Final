@@ -116,7 +116,7 @@ export function PanneauTraitements({
   const derniere = traitements.dernierePrescription;
 
   if (derniere === null) {
-    return <EtatVide message={fr.patients.vide.prescriptions} />;
+    return <EtatVide message={fr.patients.vide.prescriptions} icone="traitements" />;
   }
 
   // Combien d'autres existent, sans les charger. La porte agrégée rend la

@@ -9,6 +9,61 @@ Prérequis : `00-DECISIONS.md`, `01-SCHEMA.md`, `02-SECURITY-BOUNDARY.md`
 
 ---
 
+## 0. ÉTAT RÉEL AU 2026-08-26 — ADR-027
+
+> ⚠️ **CE QUI SUIT AUX §3 ET §4 EST LA CIBLE DE CONCEPTION, PAS L'IMPLÉMENTATION.**
+> Ce document a été écrit avant le code. La liste ci-dessous est ce que le dépôt
+> porte RÉELLEMENT, relevé dans `src/services/`, pas dans cette page. En cas de
+> désaccord entre les deux, **c'est le code qui a raison** — et cette section qui
+> doit être mise à jour, jamais l'inverse.
+
+**Deux registres DISJOINTS**, pas un drapeau `write` sur une liste commune : un
+booléen se teste, et un test s'oublie. `jarvis-boucle.ts` n'importe que le
+registre de lecture et n'a donc **aucun chemin d'appel** vers une écriture.
+
+### Lecture — `src/services/jarvis-capacites.ts` (16)
+`search_patients` · `get_patient_context` · `get_patient_timeline` ·
+`get_patient_documents` · `get_next_patient` · `get_today_agenda` ·
+`get_agenda_range` · `get_appointment` · `get_waiting_room` · `get_consultation` ·
+`get_day_revenue` · `get_period_revenue` · `get_outstanding_payments` ·
+`brief_prochain_patient` · `brief_matinal` · `brief_finance`
+
+Chacune **délègue** à un service existant et rend un DTO `Safe*` — le type de
+retour est contraint à une union fermée, donc une capacité qui rendrait une ligne
+brute **ne compile pas**.
+
+### Écriture — `src/services/jarvis-ecritures.ts` (4)
+`reschedule_appointment` · `cancel_appointment` · `mark_patient_arrived` ·
+`record_payment_collected`
+Plus les deux historiques de 033 : `create_appointment` · `set_consultation_price`.
+
+Cycle **PROPOSE → CONFIRM → EXECUTE → VERIFY → LOG**. La précondition s'exécute
+*avant* de poser la ligne `proposed` — une carte qui annonce un décalage vers un
+créneau déjà pris ferait cliquer l'humaine sur un échec. La vérification est
+**obligatoire par le type** : pas de `verifier` facultatif.
+
+### Ce qui reste HORS ALLOWLIST — donc inatteignable
+Émission de certificat ou d'ordonnance, impression, correction financière,
+suppression, export, envoi de message, changement de permission. Le refus vient
+de la **contrainte `jarvis_tool_allowlist` en base** (033, étendue par 063), pas
+du client : un nom hors liste fait échouer l'`INSERT`, avant toute carte.
+
+`create_document_draft` est admis par 063 **mais absent du registre client** : le
+brouillon exige un contrat de variables par type que Jarvis ne sait pas encore
+composer sans risquer d'inventer un contenu (règle 8). La contrainte SQL borne ce
+qui est POSSIBLE, le registre borne ce qui est OFFERT.
+
+### Ce que MindCare ne sait pas, et que Jarvis doit dire
+Ni **aftercare**, ni **check-ins**, ni **humeur**, ni **sommeil**, ni
+**observance** : aucune table de `01-SCHEMA.md` ne les porte. Les briefs le
+déclarent explicitement dans leur registre « information manquante ». Une absence
+de donnée n'est pas une absence de fait, et un silence serait pris pour un « non ».
+
+Aucune **couche de messagerie patient** n'existe non plus — ni service, ni table.
+Les scénarios d'envoi sont hors périmètre tant qu'un canal n'a pas été décidé.
+
+---
+
 ## 1. LES QUATRE LOIS
 
 **L1 — Allowlist stricte.** Jarvis ne peut appeler que les outils listés dans ce document.

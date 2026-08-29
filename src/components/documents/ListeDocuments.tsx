@@ -1,27 +1,18 @@
 "use client";
 
 /**
- * L'historique documentaire d'un dossier.
+ * Liste Documents — cartes premium, état + numéro + patient + actions.
  *
- * ⚠️ AUCUNE ACTION DE MODIFICATION NI DE SUPPRESSION, ICI NI AILLEURS. `030`
- * ne pose aucune porte `update_document` ni `delete_document`, et la table
- * elle-même est verrouillée par déclencheur : un certificat remis au patient
- * existe hors du système, et le rattraper en base ne le rattrape pas dans sa
- * poche. Une erreur se corrige en émettant un NOUVEAU document, numéroté à sa
- * date. Ne pas ajouter de bouton « corriger » ici en croyant compléter l'écran.
- *
- * ⚠️ `printed_count` COMPTE DES ENVOIS À L'IMPRESSION, PAS DES FEUILLES. Le
- * navigateur ne dit jamais si la boîte de dialogue a été validée ou annulée.
- * La colonne le dit dans son libellé, et l'infobulle le redit : afficher
- * « imprimé 2 fois » affirmerait une chose que le système ne peut pas savoir.
+ * VIEW ≠ PRINT : la liste n'affiche JAMAIS de blocage d'impression — elle liste.
+ * Le statut voided est visible ("Annulé") et ne supprime jamais la ligne.
  */
 
-import { Bouton } from "@/components/ui";
-import { CACHE_VISUELLEMENT } from "@/components/finance/a11y";
+import { Badge } from "@/components/ui/Badge";
+import { Bouton } from "@/components/ui/Bouton";
+import { Carte, PastilleIcone } from "@/components/ui/Surfaces";
 import { fr } from "@/i18n/fr";
 import type { Document } from "@/services/documents";
 
-/** `2026-08-21T09:12:00Z` → `21/08/2026`, dans le fuseau du cabinet. */
 function dateLisible(iso: string): string {
   return new Intl.DateTimeFormat("fr-DZ", {
     timeZone: "Africa/Algiers",
@@ -31,67 +22,95 @@ function dateLisible(iso: string): string {
   }).format(new Date(iso));
 }
 
+function tonStatut(s: Document["status"]): "positif" | "attention" | "neutre" {
+  if (s === "voided") return "attention";
+  return "positif";
+}
+function labelStatut(s: Document["status"]): string {
+  if (s === "voided") return "Annulé";
+  return "Émis";
+}
+
 export function ListeDocuments({
   documents,
   documentOuvert,
   onOuvrir,
+  onImprimer,
 }: {
   readonly documents: readonly Document[];
   readonly documentOuvert: string | null;
   readonly onOuvrir: (id: string) => void;
+  readonly onImprimer?: (id: string) => void;
 }): React.JSX.Element {
   return (
-    <table className="w-full border-collapse font-ui text-body">
-      {/* ⚠️ PAS `sr-only` : tailwind.config.ts REMPLACE les échelles du cœur au
-          lieu de les étendre, et une classe absente ne produit aucune règle — en
-          silence. `CACHE_VISUELLEMENT` est écrit dans tokens.css. */}
-      <caption className={CACHE_VISUELLEMENT}>{fr.documents.liste.titre}</caption>
-      <thead>
-        <tr className="border-b border-rule text-left">
-          <th scope="col" className="py-2 pr-3 font-medium text-ink-500">
-            {fr.documents.liste.colonneType}
-          </th>
-          <th scope="col" className="py-2 pr-3 font-medium text-ink-500">
-            {fr.documents.liste.colonneDate}
-          </th>
-          <th
-            scope="col"
-            className="py-2 pr-3 font-medium text-ink-500"
-            title={fr.documents.impression.avertissementCompteur}
-          >
-            {fr.documents.liste.colonneImpressions}
-          </th>
-          <th scope="col" className="py-2">
-            <span className={CACHE_VISUELLEMENT}>{fr.documents.liste.ouvrir}</span>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        {documents.map((d) => (
-          <tr
+    <div className="flex flex-col gap-2">
+      <p className="sr-only">{fr.documents.liste.titre}</p>
+      {documents.map((d) => {
+        const actif = d.id === documentOuvert;
+        const annule = d.status === "voided";
+        return (
+          <Carte
             key={d.id}
-            className={[
-              "border-b border-rule",
-              d.id === documentOuvert ? "bg-brand-50" : "",
-            ].join(" ")}
+            niveau={actif ? "document" : "primaire"}
+            interactive={false}
           >
-            <td className="whitespace-nowrap py-2 pr-3 text-ink-900">
-              {fr.documents.types[d.docType]}
-            </td>
-            <td className="whitespace-nowrap py-2 pr-3 font-num text-ink-700">
-              {dateLisible(d.issuedAt)}
-            </td>
-            <td className="whitespace-nowrap py-2 pr-3 font-num text-ink-700">
-              {d.printedCount}
-            </td>
-            <td className="py-2 text-right">
-              <Bouton rang="discret" onClick={() => onOuvrir(d.id)}>
-                {fr.documents.liste.ouvrir}
-              </Bouton>
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+            <div
+              className={[
+                "flex flex-col gap-3 p-4",
+                actif ? "border-l-4 border-action-500" : "border-l-4 border-transparent",
+                annule ? "opacity-70" : "",
+              ].join(" ")}
+            >
+              <div className="flex items-start justify-between gap-3">
+                <div className="flex min-w-0 items-start gap-3">
+                  <PastilleIcone nom="documents" ton={annule ? "neutre" : "action"} />
+                  <div className="flex min-w-0 flex-col gap-1">
+                    <p className="truncate font-ui text-body font-medium text-ink-900">
+                      {fr.documents.types[d.docType]}
+                    </p>
+                    <p className="flex flex-wrap items-center gap-2 font-ui text-label text-ink-500">
+                      {d.patientNom !== null || d.patientPrenom !== null ? (
+                        <span className="font-medium text-ink-700">
+                          {[d.patientNom, d.patientPrenom].filter(Boolean).join(" ")}
+                        </span>
+                      ) : (
+                        <span className="text-ink-500">—</span>
+                      )}
+                      <span aria-hidden>·</span>
+                      <span className="font-num tabular-nums">{dateLisible(d.issuedAt)}</span>
+                      <span aria-hidden>·</span>
+                      <span className="font-num tabular-nums">{d.docNumber}</span>
+                    </p>
+                    {d.recordNumber !== null ? (
+                      <span className="font-num text-label tabular-nums text-ink-500">
+                        {d.recordNumber}
+                      </span>
+                    ) : null}
+                  </div>
+                </div>
+                <Badge ton={tonStatut(d.status)}>{labelStatut(d.status)}</Badge>
+              </div>
+
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <span className="font-ui text-label text-ink-500" title={fr.documents.impression.avertissementCompteur}>
+                  {fr.documents.impression.envoyees} {d.printedCount}
+                  {annule && d.voidReason ? ` · ${d.voidReason}` : ""}
+                </span>
+                <div className="flex items-center gap-2">
+                  <Bouton rang={actif ? "principal" : "secondaire"} onClick={() => onOuvrir(d.id)}>
+                    {fr.documents.liste.ouvrir}
+                  </Bouton>
+                  {onImprimer !== undefined ? (
+                    <Bouton rang="discret" onClick={() => onImprimer(d.id)}>
+                      {fr.documents.impression.imprimer}
+                    </Bouton>
+                  ) : null}
+                </div>
+              </div>
+            </div>
+          </Carte>
+        );
+      })}
+    </div>
   );
 }
