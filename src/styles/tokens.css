@@ -934,6 +934,17 @@
     /* Rayon manquant — `rounded-2xl` était mort dans 12 endroits, dont
      * l'en-tête héros de Surfaces.tsx lui-même. */
     --r-2xl: 24px;
+
+    /* La hauteur au-dela de laquelle une liste de resultats defile plutot que
+     * de couvrir l'ecran. `max-h-80` etait ecrit et n'existait pas. */
+    --liste-max: 320px;
+
+    /* Trois largeurs de composition qui vivaient en classes inexistantes
+     * (`w-40`, `w-64`, `w-72`) : la recherche compacte de la reception, sa
+     * version large, et le motif de l'ecran de connexion. */
+    --s-40: 160px;
+    --s-64: 256px;
+    --s-72: 288px;
   }
 
   /* --------------------------------------------------------------------

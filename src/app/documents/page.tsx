@@ -511,7 +511,7 @@ export default function DocumentsPage(): React.JSX.Element {
                       <p className="font-ui text-body text-ink-700">{ouvert.voidReason ?? "—"}</p>
                     </div>
                   ) : null}
-                  <div className="flex justify-center overflow-auto rounded-xl border border-rule bg-sunken p-6 shadow-inner">
+                  <div className="flex justify-center overflow-auto rounded-xl border border-rule bg-sunken p-6 shadow-lift0">
                     <div style={{ transform: `scale(${zoom/100})`, transformOrigin: "top center" }}>
                       <FeuilleEmise html={ouvert.renderedHtml ?? ""} />
                     </div>
@@ -594,7 +594,7 @@ export default function DocumentsPage(): React.JSX.Element {
                       <span className="ml-2"><LienBouton href="/parametres/documents" rang="discret">Compléter les paramètres</LienBouton></span>
                     </div>
                   ) : null}
-                  <div className="flex justify-center overflow-auto rounded-xl border border-rule bg-sunken p-6 shadow-inner">
+                  <div className="flex justify-center overflow-auto rounded-xl border border-rule bg-sunken p-6 shadow-lift0">
                     <div style={{ transform: `scale(${zoom/100})`, transformOrigin: "top center" }}>
                       <FeuilleEmise html={ouvert.renderedHtml ?? ""} />
                     </div>

@@ -92,7 +92,7 @@ export default function JarvisPage(): React.JSX.Element {
 
   return (
     <AppShell role={utilisateur.role} nomComplet={utilisateur.fullName} onDeconnexion={deconnecter}>
-      <div className="mx-auto flex h-full min-h-0 w-full max-w-3xl flex-col gap-3">
+      <div className="mx-auto flex h-full min-h-0 w-full max-w-lecture flex-col gap-3">
         {/* En-tête sobre : l'orbe suffit à identifier qui parle ici. */}
         <div className="flex items-center gap-3">
           <span aria-hidden className="inline-flex h-8 w-8 shrink-0 rounded-full bg-grad-orb shadow-glow-ai" />

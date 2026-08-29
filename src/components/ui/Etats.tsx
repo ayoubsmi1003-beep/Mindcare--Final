@@ -162,7 +162,7 @@ export function Squelette({
     <div
       role="status"
       aria-busy="true"
-      className="flex flex-col gap-4 rounded-2xl border border-rule/60 bg-card p-6 shadow-lift2"
+      className="flex flex-col gap-4 rounded-2xl border border-rule bg-card p-6 shadow-lift2"
     >
       <span className="sr-only">{fr.etats.chargement}</span>
       <span

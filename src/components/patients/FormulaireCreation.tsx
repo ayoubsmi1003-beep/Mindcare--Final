@@ -338,7 +338,7 @@ export function FormulaireCreation({
           />
           <span className="font-ui text-body font-medium text-attention-ink">
             {fr.patients.similaires.creerMalgreTout} —{" "}
-            <span className="font-normal">{fr.patients.similaires.forteCorps}</span>
+            <span className="font-regular">{fr.patients.similaires.forteCorps}</span>
           </span>
         </label>
       ) : null}

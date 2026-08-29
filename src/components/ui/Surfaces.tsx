@@ -53,7 +53,7 @@ export type NiveauCarte = NiveauDecor | NiveauPorteur;
  */
 const NIVEAUX: Record<NiveauCarte, string> = {
   // V2 — L2 structure + L1 ambient : teinte subtile, radius XL, ombre plus diffuse
-  primaire: "bg-card border-rule/70 shadow-lift2",
+  primaire: "bg-card border-rule shadow-lift2",
   // Second plan encastré — reste sunken
   secondaire: "bg-sunken border-rule shadow-none",
   // Affordance action — tinté marque mais reste L5 sélectif
@@ -61,8 +61,8 @@ const NIVEAUX: Record<NiveauCarte, string> = {
   // Jarvis — voile violet très contenu
   ia: "bg-ai-50 border-ai-100 shadow-lift1",
   // Porteurs valeur — blanc franc, élévation minimale, radius affiné
-  clinique: "bg-card border-rule/60 shadow-lift1",
-  financier: "bg-card border-rule/60 shadow-lift1",
+  clinique: "bg-card border-rule shadow-lift1",
+  financier: "bg-card border-rule shadow-lift1",
   // Document — papier objet, ombre plus marquée pour feuille
   document: "bg-card border-ink-100 shadow-lift2",
 };
@@ -113,7 +113,7 @@ export function Carte(props: CarteProps): React.JSX.Element {
         NIVEAUX[niveau],
         lueur ? "shadow-glow-brand" : "",
         interactive
-          ? "transition duration-quick ease-out hover:border-action-300 hover:shadow-lift3"
+          ? "transition duration-quick ease-out hover:border-action-500 hover:shadow-lift3"
           : "transition duration-quick ease-soft",
       ].join(" ")}
     >
@@ -219,7 +219,7 @@ export function Section({
 }): React.JSX.Element {
   return (
     <section className="flex flex-col gap-5">
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-rule/40 pb-3">
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-rule pb-3">
         <div className="flex items-center gap-3">
           {icone === undefined ? null : <PastilleIcone nom={icone} />}
           <h2 className="font-ui text-heading font-bold text-ink-900">{titre}</h2>

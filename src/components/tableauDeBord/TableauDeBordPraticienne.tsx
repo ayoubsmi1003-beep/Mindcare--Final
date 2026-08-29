@@ -240,7 +240,7 @@ export function TableauDeBordPraticienne({
 
       <div className="grid grid-cols-un gap-6 tablet:grid-cols-cockpit">
         <Section titre={fr.tableauDeBord.fil.titre} icone="agenda">
-          <div className="rounded-xl border border-rule/60 bg-card p-5 shadow-lift1 lg:p-6">
+          <div className="rounded-xl border border-rule bg-card p-5 shadow-lift1 lg:p-6">
             <FilDeLaJournee
               journee={t.journee}
               maintenant={maintenant}

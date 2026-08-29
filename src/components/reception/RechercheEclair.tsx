@@ -66,7 +66,7 @@ export function ResultatsRecherche({ requete, onFermer }: { readonly requete: st
   }
 
   return (
-    <div className="absolute inset-x-0 top-full z-20 mt-2 max-h-80 overflow-y-auto rounded-lg border border-rule bg-card p-2 shadow-lift3">
+    <div className="absolute inset-x-0 top-full z-20 mt-2 max-h-liste overflow-y-auto rounded-lg border border-rule bg-card p-2 shadow-lift3">
       <ul role="list" className="m-0 flex list-none flex-col gap-1.5 p-0">
         {resultats.map((p) => (
           <li key={p.id}>

@@ -68,13 +68,13 @@ export function TableauSeances({
       </div>
 
       {liste.lignes.length === 0 ? (
-        <p className="rounded-xl border border-dashed border-rule bg-sunken/40 px-4 py-8 text-center font-ui text-body font-regular text-ink-500">{t.aucune}</p>
+        <p className="rounded-xl border border-dashed border-rule bg-sunken px-4 py-8 text-center font-ui text-body font-regular text-ink-500">{t.aucune}</p>
       ) : (
         <div className="overflow-hidden rounded-xl border border-rule bg-card shadow-lift2">
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
-                <tr className="border-b border-rule bg-sunken/40">
+                <tr className="border-b border-rule bg-sunken">
                   {[t.date, t.patient, t.type, t.montant, t.mode, t.statut].map((h) => (
                     <th
                       key={h}
@@ -91,7 +91,7 @@ export function TableauSeances({
               </thead>
               <tbody className="divide-y divide-rule/60">
                 {liste.lignes.map((l) => (
-                  <tr key={l.id} className="transition hover:bg-sunken/40">
+                  <tr key={l.id} className="transition hover:bg-sunken">
                     <td className="whitespace-nowrap px-4 py-3.5 font-num text-label font-semibold tabular-nums text-ink-700">
                       {l.date.replace("T", " · ")}
                     </td>

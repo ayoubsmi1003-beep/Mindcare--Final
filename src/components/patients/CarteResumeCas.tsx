@@ -207,7 +207,7 @@ function ItemPreuve({
           type="button"
           onClick={() => setOuvert((v) => !v)}
           aria-expanded={ouvert}
-          className="shrink-0 rounded-md px-2 py-1 font-ui text-label tracking-label text-ai-600 outline-none transition duration-instant ease-soft hover:bg-ai-050 focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset"
+          className="shrink-0 rounded-md px-2 py-1 font-ui text-label tracking-label text-ai-600 outline-none transition duration-instant ease-soft hover:bg-ai-50 focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset"
         >
           {ouvert ? fr.patients.resume.fermerPreuves : fr.patients.resume.pourquoi}
         </button>
@@ -370,7 +370,7 @@ function ChampSelectionVerdict({
           className={
             "cursor-pointer rounded-full border px-3 py-1.5 font-ui text-label tracking-label " +
             (valeur === o.valeur
-              ? "border-action-600 bg-brand-050 text-ink-900"
+              ? "border-action-600 bg-brand-50 text-ink-900"
               : "border-rule bg-card text-ink-500")
           }
         >

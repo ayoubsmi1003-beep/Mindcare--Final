@@ -144,6 +144,9 @@ const config: Config = {
       // Le sol du contenu, neutre-froid — remplace le lavage teinté de marque.
       canevas: "var(--canevas)",
       "tete-tableau": "var(--tete-tableau-bg)",
+      // Le voile derriere un dialogue — le jeton existait, aucune classe ne
+      // le consommait, et `backdrop-blur-sm` (inexistant) tenait sa place.
+      voile: "var(--voile)",
       // ── V7 — LE MODE SÉANCE ──────────────────────────────────────────
       // `night.*` était retiré faute de rampe spécifiée. Elle l'est
       // désormais : --night-ink-soft complète les quatre jetons d'origine
@@ -189,6 +192,9 @@ const config: Config = {
       "1.5": "var(--s-1-5)",
       "2.5": "var(--s-2-5)",
       "3.5": "var(--s-3-5)",
+      40: "var(--s-40)",
+      64: "var(--s-64)",
+      72: "var(--s-72)",
     },
     borderRadius: {
       // "none" est la valeur nulle universelle : pas de token dédié dans §3
@@ -197,6 +203,7 @@ const config: Config = {
       sm: "var(--r-sm)",
       md: "var(--r-md)",
       lg: "var(--r-lg)",
+      DEFAULT: "var(--r-md)",
       xl: "var(--r-xl)",
       // `rounded-2xl` était mort dans 12 endroits, dont l'en-tête héros de
       // Surfaces.tsx lui-même — il rendait donc un angle droit.
@@ -250,6 +257,7 @@ const config: Config = {
       },
     },
     animation: {
+      none: "none",
       respire: "respire var(--d-scene) var(--e-soft) infinite",
     },
     // Échelle typographique §3 — taille/interligne/interlettrage par rôle de
@@ -442,18 +450,38 @@ const config: Config = {
     // WORKING-CONTEXT §4.4 (`outline: 2px solid var(--action-600); outline-
     // offset: 2px`), pas une valeur inventée par cet agent.
     outlineWidth: {
+      2: "2px",
       DEFAULT: "2px",
     },
     outlineOffset: {
+      2: "2px",
       DEFAULT: "2px",
     },
+    // L'anneau sert deux etats : le focus d'un champ compose (`focus-within`)
+    // et l'ecoute active de l'orbe. Sans ces echelles, `ring-2` et `ring-4`
+    // n'emettaient rien et les deux etats etaient invisibles.
+    // `ringColor` n'est PAS redefini : Tailwind le derive de `theme.colors`,
+    // qui est deja la palette de jetons. Le redefinir avec la forme fonction
+    // rendrait `any` et ferait tomber `no-unsafe-return`.
+    ringOffsetWidth: { 0: "0px", 2: "2px" },
     ringWidth: {
-      DEFAULT: "2px",
       0: "0px",
+      1: "1px",
+      2: "2px",
+      4: "4px",
+      DEFAULT: "2px",
     },
     // Exception documentée : cibles tactiles fixées explicitement par
     // WORKING-CONTEXT §4.4 (≥36px, 44px sur le formulaire QR).
     minWidth: {
+      // ⚠️ `0` EST STRUCTUREL, EXACTEMENT COMME `minHeight.0`.
+      // Un enfant de flex a `min-width: auto` par defaut : il refuse de
+      // descendre sous la largeur de son contenu, et un conteneur
+      // `overflow-x-auto` grandit alors au lieu de faire defiler. `min-w-0`
+      // etait ecrit a six endroits du depot — dont la colonne de contenu de
+      // la coquille — et n'existait pas.
+      0: "var(--size-0)",
+      full: "var(--size-full)",
       target: "36px",
       "target-lg": "44px",
       // Pas une exception : `--card-column-min` est un jeton déclaré dans
@@ -490,6 +518,9 @@ const config: Config = {
     maxHeight: {
       none: "none",
       full: "100%",
+      // La hauteur au-dela de laquelle une liste de resultats defile au lieu
+      // de couvrir l'ecran (recherche eclair de la reception).
+      liste: "var(--liste-max)",
     },
     // Grilles fluides — aucune valeur littérale, `--card-column-min` est déjà
     // le jeton nommé pour la largeur minimale d'une colonne de carte (il
@@ -559,6 +590,7 @@ const config: Config = {
     // Largeurs de grille §3 — source unique tokens.css, aucune valeur ici.
     maxWidth: {
       none: "none",
+      full: "var(--size-full)",
       nav: "var(--grid-nav-width)",
       main: "var(--grid-main-max)",
       context: "var(--grid-context-width)",
@@ -578,6 +610,7 @@ const config: Config = {
       100: "1",
     },
     borderWidth: {
+      4: "4px",
       0: "0px",
       DEFAULT: "1px",
       2: "2px",
@@ -615,6 +648,12 @@ const config: Config = {
         coquille: "var(--topbar-hauteur) minmax(0, 1fr)",
       },
       zIndex: {
+        // Une echelle minimale et fermee : le contenu, ce qui flotte au-dessus
+        // de lui dans une carte (liste deroulante), et le mobilier de la
+        // coquille. `z-20` etait ecrit et n'existait pas.
+        0: "0",
+        10: "10",
+        20: "20",
         // --z-panneau existait comme jeton mais n'avait aucune classe : il
         // était posé en `style={{ zIndex }}` inline.
         panneau: "var(--z-panneau)",

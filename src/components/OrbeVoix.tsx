@@ -52,13 +52,13 @@ import {
  */
 const APPARENCE: Record<EtatVoix, { readonly noyau: string; readonly anneau: string }> = {
   veille: { noyau: "bg-grad-orb", anneau: "" },
-  reveille: { noyau: "bg-grad-orb shadow-glow-ai", anneau: "ring-2 ring-ai-300" },
+  reveille: { noyau: "bg-grad-orb shadow-glow-ai", anneau: "ring-2 ring-ai-500" },
   ecoute: { noyau: "bg-grad-orb shadow-glow-ai", anneau: "ring-2 ring-ai-600" },
-  // `animate-pulse` : le SEUL mouvement non piloté par une mesure. Il est
+  // `animate-respire` : le SEUL mouvement non piloté par une mesure. Il est
   // justifié — « un instant… » est précisément l'état où rien d'observable ne
   // se produit, et un orbe figé y serait indiscernable d'un orbe planté.
-  traitement: { noyau: "bg-grad-orb animate-pulse", anneau: "ring-2 ring-ai-100" },
-  parole: { noyau: "bg-grad-orb shadow-glow-ai", anneau: "ring-2 ring-ai-300" },
+  traitement: { noyau: "bg-grad-orb animate-respire", anneau: "ring-2 ring-ai-100" },
+  parole: { noyau: "bg-grad-orb shadow-glow-ai", anneau: "ring-2 ring-ai-500" },
   interrompu: { noyau: "bg-grad-orb", anneau: "ring-2 ring-rule" },
   erreur: { noyau: "bg-attention-bg", anneau: "ring-2 ring-attention" },
   desactive: { noyau: "bg-sunken", anneau: "" },
