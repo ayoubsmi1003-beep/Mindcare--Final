@@ -118,10 +118,45 @@ const config: Config = {
         DEFAULT: "var(--positive)",
         bg: "var(--positive-bg)",
       },
-      // `night.*` retiré — voir le commentaire sur `darkMode` en tête de
-      // fichier. Les jetons --night-* restent déclarés dans tokens.css parce
-      // que §3 les définit ; ils ne sont simplement consommables par aucune
-      // classe tant que la rampe nocturne n'est pas spécifiée.
+      // ── V7 — LA COUCHE CHROME ────────────────────────────────────────
+      // Le second neutre. Rail, barre supérieure, panneaux d'outil. C'est
+      // cette séparation chrome / contenu qui fait qu'un instrument se lit
+      // comme un instrument : le cadre recule, la matière avance. Les quatre
+      // encres sont MESURÉES sur --chrome-900 (15.6 / 9.00 / 4.72:1) et
+      // tirées de la teinte de marque — aucune n'est un gris.
+      chrome: {
+        900: "var(--chrome-900)",
+        800: "var(--chrome-800)",
+        700: "var(--chrome-700)",
+        600: "var(--chrome-600)",
+        rule: "var(--chrome-rule)",
+        ink: "var(--chrome-ink)",
+        "ink-soft": "var(--chrome-ink-soft)",
+        "ink-faint": "var(--chrome-ink-faint)",
+        actif: "var(--chrome-actif-bg)",
+        survol: "var(--chrome-survol-bg)",
+        // Surfaces translucides NOMMÉES : Tailwind ne peut pas injecter
+        // d'alpha dans un `var()`, donc `bg-chrome-ink/10` ne marcherait pas.
+        // C'est exactement pourquoi `bg-white/10` était mort 37 fois.
+        voile: "var(--chrome-voile)",
+        "voile-faible": "var(--chrome-voile-faible)",
+      },
+      // Le sol du contenu, neutre-froid — remplace le lavage teinté de marque.
+      canevas: "var(--canevas)",
+      "tete-tableau": "var(--tete-tableau-bg)",
+      // ── V7 — LE MODE SÉANCE ──────────────────────────────────────────
+      // `night.*` était retiré faute de rampe spécifiée. Elle l'est
+      // désormais : --night-ink-soft complète les quatre jetons d'origine
+      // (7.46:1 sur --night-bg), et ces couleurs servent UN écran, la
+      // consultation ouverte. Ce n'est toujours pas un thème sombre global :
+      // `darkMode` reste absent, il n'y a pas de variante `dark:`.
+      night: {
+        bg: "var(--night-bg)",
+        card: "var(--night-card)",
+        rule: "var(--night-rule)",
+        ink: "var(--night-ink)",
+        "ink-soft": "var(--night-ink-soft)",
+      },
     },
     spacing: {
       // "0" est la valeur nulle universelle, pas une décision de design : pas
@@ -137,6 +172,19 @@ const config: Config = {
       10: "var(--s-10)",
       12: "var(--s-12)",
       16: "var(--s-16)",
+      // V7 — les pas qui MANQUAIENT. `theme.spacing` remplace l'échelle de
+      // Tailwind au lieu de l'étendre : tout pas absent d'ici rend `h-9`,
+      // `p-7`, `gap-14` SILENCIEUSEMENT morts, sans erreur de build. 41
+      // classes de dimension inertes dans l'arbre venaient de ce trou.
+      7: "var(--s-7)",
+      9: "var(--s-9)",
+      11: "var(--s-11)",
+      14: "var(--s-14)",
+      18: "var(--s-18)",
+      20: "var(--s-20)",
+      24: "var(--s-24)",
+      32: "var(--s-32)",
+      px: "var(--s-px)",
     },
     borderRadius: {
       // "none" est la valeur nulle universelle : pas de token dédié dans §3
@@ -146,6 +194,9 @@ const config: Config = {
       md: "var(--r-md)",
       lg: "var(--r-lg)",
       xl: "var(--r-xl)",
+      // `rounded-2xl` était mort dans 12 endroits, dont l'en-tête héros de
+      // Surfaces.tsx lui-même — il rendait donc un angle droit.
+      "2xl": "var(--r-2xl)",
       full: "var(--r-full)",
     },
     fontFamily: {
@@ -360,6 +411,15 @@ const config: Config = {
     screens: {
       tablet: "1024px",
       desktop: "1280px",
+      // V7 — `lg:` et `xl:` étaient utilisés dans 8 endroits (dont
+      // `lg:p-8` sur l'en-tête héros et `lg:grid-cols-2` sur Documents) et
+      // n'existaient pas : les variantes tombaient dans le vide. On les
+      // déclare aux mêmes ruptures que tablet/desktop plutôt que d'inventer
+      // une seconde échelle concurrente.
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1600px",
     },
     // Exception documentée : plancher d'accessibilité fixé explicitement par
     // WORKING-CONTEXT §4.4 (`outline: 2px solid var(--action-600); outline-
@@ -424,6 +484,25 @@ const config: Config = {
     // champ ne passe jamais sous sa largeur lisible. Un point de rupture de
     // moins est une occasion de moins de le régler pour un seul écran.
     gridTemplateColumns: {
+      // V7 — LES COLONNES NUMÉRIQUES, qui manquaient. `grid-cols-*` étant
+      // REMPLACÉ et non étendu, `grid-cols-2` n'existait pas : Documents
+      // écrivait `grid-cols-1 lg:grid-cols-2` (deux no-ops) et retombait sur
+      // un `style={{gridTemplateColumns}}` en dur pour compenser. Un incident
+      // de production documenté dans ce fichier a la même origine.
+      1: "repeat(1, minmax(0, 1fr))",
+      2: "repeat(2, minmax(0, 1fr))",
+      3: "repeat(3, minmax(0, 1fr))",
+      4: "repeat(4, minmax(0, 1fr))",
+      5: "repeat(5, minmax(0, 1fr))",
+      6: "repeat(6, minmax(0, 1fr))",
+      12: "repeat(12, minmax(0, 1fr))",
+      // V7 — LES COMPOSITIONS D'ÉCRAN. Chaque écran compose selon son travail
+      // (le bento est un outil, pas l'identité du produit) : ces gabarits
+      // nomment les compositions retenues, une par famille d'écran.
+      "espace-liste": "minmax(0, 22rem) minmax(0, 1fr)",
+      "espace-travail": "minmax(0, 1fr) minmax(0, 21rem)",
+      "espace-jour": "minmax(0, 1.6fr) minmax(0, 1fr)",
+      "espace-document": "minmax(0, 20rem) minmax(0, 1fr) minmax(0, 26rem)",
       fiche: "repeat(auto-fit, minmax(var(--card-column-min), 1fr))",
       // La coquille : navigation fixe + contenu fluide. Sous la rupture
       // `tablet`, le rail se REPLIE en icônes (`app-compact`) au lieu de passer
@@ -489,7 +568,41 @@ const config: Config = {
       // le liseré gauche d'une carte de rendez-vous, distinct de `--rule-width`.
       kind: "var(--kind-accent-width)",
     },
-    extend: {},
+    // V7 — `extend` (et non un remplacement) pour les métriques de coquille :
+    // `height`/`width` ne sont PAS redéfinis plus haut, ils dérivent donc de
+    // `spacing` plus les valeurs par défaut de Tailwind (`full`, `screen`,
+    // fractions). Les écraser ici ferait disparaître `w-full` de toute
+    // l'application. On ajoute, on ne remplace pas.
+    extend: {
+      height: {
+        topbar: "var(--topbar-hauteur)",
+        rang: "var(--rang-hauteur)",
+        "rang-dense": "var(--rang-hauteur-dense)",
+      },
+      minHeight: {
+        topbar: "var(--topbar-hauteur)",
+        rang: "var(--rang-hauteur)",
+      },
+      width: {
+        rail: "var(--rail-largeur)",
+        "rail-compact": "var(--rail-compact)",
+      },
+      maxWidth: {
+        rail: "var(--rail-largeur)",
+        // La mesure de lecture d'un texte clinique long (note, résumé).
+        // 65-75ch est le plancher de lisibilité ; en dessous le texte hache,
+        // au-dessus l'œil perd la ligne suivante.
+        lecture: "70ch",
+      },
+      gridTemplateRows: {
+        coquille: "var(--topbar-hauteur) minmax(0, 1fr)",
+      },
+      zIndex: {
+        // --z-panneau existait comme jeton mais n'avait aucune classe : il
+        // était posé en `style={{ zIndex }}` inline.
+        panneau: "var(--z-panneau)",
+      },
+    },
   },
   plugins: [],
 };

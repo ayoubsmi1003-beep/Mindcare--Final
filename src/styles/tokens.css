@@ -829,6 +829,102 @@
      * `rendered_html`, qui reste du contenu figé et ne doit rien savoir du
      * format de papier. */
     --doc-signature: 28mm;
+
+    /* ═══════════════════════════════════════════════════════════════════════
+     * V7 — LA COUCHE CHROME (le second neutre)
+     * ═══════════════════════════════════════════════════════════════════════
+     * Jusqu'ici l'application n'avait qu'UN monde : un lavage clair unique du
+     * rail jusqu'au contenu, le rail étant simplement ce même monde en
+     * dégradé teal. Résultat : rien ne distinguait l'outil de la matière, et
+     * chaque écran ouvrait sur la même bannière.
+     *
+     * V7 sépare deux neutres. Le CHROME (rail, barre supérieure, panneaux
+     * d'outil) est une encre froide et profonde ; le CONTENU reste le papier
+     * clair. C'est la séparation qui fait qu'un instrument professionnel se
+     * lit comme un instrument : le cadre recule, la matière avance.
+     *
+     * ⚠️ CONTRASTES MESURÉS, PAS ESTIMÉS (WCAG 2.1, sur --chrome-900) :
+     *   --chrome-ink       #eaf2ef  → 15.6:1   texte principal du chrome
+     *   --chrome-ink-soft  #a7bdb7  →  9.00:1  texte secondaire, TEXTE VALIDE
+     *   --chrome-ink-faint #6e8983  →  4.72:1  plancher AA, libellés de groupe
+     *   --chrome-ink sur --chrome-actif-bg (#1d5c54) → 6.81:1
+     * Aucune de ces quatre encres n'est un gris : elles sont tirées de la
+     * teinte de marque, comme l'exige le plancher de craft sur surface teintée.
+     */
+    --chrome-900: #0e1a18;
+    --chrome-800: #14231f;
+    --chrome-700: #1b2e29;
+    --chrome-600: #24403a;
+    --chrome-rule: #24403a;
+    --chrome-ink: #eaf2ef;
+    --chrome-ink-soft: #a7bdb7;
+    --chrome-ink-faint: #6e8983;
+    --chrome-actif-bg: var(--brand-700);
+    --chrome-survol-bg: #1b2e29;
+    /* Tailwind ne sait pas injecter d'alpha dans un `var()` : une surface
+     * translucide sur le chrome doit être son propre jeton. C'est la raison
+     * pour laquelle `bg-white/10` était mort dans 37 endroits du dépôt. */
+    --chrome-voile-faible: rgba(234, 242, 239, 0.06);
+    --chrome-voile: rgba(234, 242, 239, 0.1);
+
+    /* Le sol du CONTENU. Distinct de --layer-ambient (#f1f8f6), qui était le
+     * lavage teinté de marque : le canevas V7 est neutre-froid, pour que la
+     * couleur de marque ne serve plus qu'à désigner l'action et la sélection. */
+    --canevas: #f4f7f6;
+
+    /* ── SURFACES DU NAVIGATEUR ────────────────────────────────────────────
+     * Sélection, curseur de saisie et barres de défilement arrivent avec les
+     * valeurs par défaut du navigateur, qui n'appartiennent à aucun design
+     * system. Les habiller est le signal le moins cher qu'un écran a été
+     * dessiné plutôt qu'assemblé. */
+    --selection-bg: #cfe6e1;
+    --selection-ink: var(--ink-900);
+    --caret: var(--brand-600);
+    --barre-defil: #c9d7d3;
+    --barre-defil-survol: #a9bdb8;
+    --barre-defil-chrome: #2c4b44;
+
+    /* ── TABLEAU ───────────────────────────────────────────────────────────
+     * L'application est de forme tabulaire (patients, séances, charges,
+     * documents) et n'avait aucune primitive de tableau. Ces trois jetons
+     * fixent le rythme de lecture d'une ligne. */
+    --rang-hauteur: 44px;
+    --rang-hauteur-dense: 36px;
+    --tete-tableau-bg: #eef3f1;
+
+    /* ── MÉTRIQUES DE LA COQUILLE V7 ───────────────────────────────────────
+     * La bannière héros disparaît : l'identité de page monte dans la barre
+     * supérieure. Ces quatre valeurs remplacent --grid-nav-width /
+     * --grid-nav-compact / --grid-main-max. */
+    --rail-largeur: 244px;
+    --rail-compact: 68px;
+    --topbar-hauteur: 60px;
+    --gouttiere: 28px;
+
+    /* ── ENCRES DU MODE SÉANCE ─────────────────────────────────────────────
+     * Les quatre --night-* existaient depuis l'origine pour ce seul écran et
+     * n'ont jamais servi. Il leur manquait une encre secondaire.
+     * #93a8a3 sur --night-bg (#0a1413) → 7.46:1. */
+    --night-ink-soft: #93a8a3;
+
+    /* ── PAS D'ESPACEMENT MANQUANTS ────────────────────────────────────────
+     * L'échelle s'arrêtait à 6, 8, 10, 12, 16. Comme `theme.spacing` REMPLACE
+     * l'échelle de Tailwind au lieu de l'étendre, `h-9`, `h-11`, `p-7`,
+     * `gap-14` n'émettaient rien — silencieusement, sans erreur de build.
+     * 41 classes de dimension mortes dans l'arbre venaient de là. */
+    --s-7: 28px;
+    --s-9: 36px;
+    --s-11: 44px;
+    --s-14: 56px;
+    --s-18: 72px;
+    --s-20: 80px;
+    --s-24: 96px;
+    --s-32: 128px;
+    --s-px: 1px;
+
+    /* Rayon manquant — `rounded-2xl` était mort dans 12 endroits, dont
+     * l'en-tête héros de Surfaces.tsx lui-même. */
+    --r-2xl: 24px;
   }
 
   /* --------------------------------------------------------------------
@@ -873,8 +969,14 @@
      * défilement appartenant aux colonnes internes — le lavage ne bouge donc
      * jamais sous les yeux. L'écran de connexion peint par-dessus avec son
      * propre fond de marque ; rien d'autre ne le recouvre. */
-    background-color: var(--layer-ambient);
-    background-image: var(--atmosphere);
+    /* V7 — le sol passe de --layer-ambient (lavage teinté de marque) à
+     * --canevas (neutre froid), et l'ATMOSPHÈRE EST RETIRÉE. Les trois
+     * lavages radiaux étaient une décoration de fond : ils teintaient
+     * l'intégralité de l'application en marque, ce qui rendait la couleur de
+     * marque insignifiante là où elle désigne vraiment quelque chose (action,
+     * sélection, état). La profondeur vient désormais de la séparation
+     * chrome / contenu, pas d'un dégradé. */
+    background-color: var(--canevas);
     color: var(--ink-900);
     font-family: var(--font-ui);
     /* Pas de `font-size` sur la racine : la fixer à 14px écraserait la taille
@@ -954,6 +1056,61 @@
   /* Plancher d'accessibilité — WORKING-CONTEXT §4.4. Focus visible PARTOUT.
    * Ne jamais poser `outline: none` sans remplacer par un focus au moins aussi
    * visible : au clavier, un focus invisible rend l'application inutilisable. */
+  /* ── LES SURFACES QUE NOUS N'AVONS PAS DESSINÉES ───────────────────────
+   * Sélection, curseur, barres de défilement : le navigateur les livre avec
+   * des valeurs qui n'appartiennent à aucun design system. Sur un écran lu
+   * six à huit heures par jour, une barre de défilement bleu système au bord
+   * d'un rail vert est le détail qui trahit l'assemblage. */
+  ::selection {
+    background-color: var(--selection-bg);
+    color: var(--selection-ink);
+  }
+
+  /* Le curseur de saisie prend la couleur d'action : dans un formulaire
+   * clinique, savoir où l'on écrit est fonctionnel, pas décoratif. */
+  input,
+  textarea,
+  [contenteditable] {
+    caret-color: var(--caret);
+  }
+
+  /* Défilement fin, teinté, sans flèches. `scrollbar-width`/`scrollbar-color`
+   * couvrent Firefox ; les pseudo-éléments WebKit couvrent Chrome et Edge,
+   * qui est le navigateur du cabinet. */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--barre-defil) transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: var(--s-2);
+    height: var(--s-2);
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--barre-defil);
+    border-radius: var(--r-full);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--barre-defil-survol);
+  }
+
+  /* Sur le chrome sombre, la même barre en clair serait un trait blanc. */
+  .sur-chrome {
+    scrollbar-color: var(--barre-defil-chrome) transparent;
+  }
+
+  .sur-chrome ::-webkit-scrollbar-thumb,
+  .sur-chrome::-webkit-scrollbar-thumb {
+    background-color: var(--barre-defil-chrome);
+  }
+
+
   :focus-visible {
     outline: 2px solid var(--action-600);
     outline-offset: 2px;
