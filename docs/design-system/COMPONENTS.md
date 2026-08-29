@@ -1,78 +1,90 @@
-# COMPONENTS — Taxonomie MindCare V2
+# Les primitives — inventaire réel
 
-## 1. Navigation
+Tout vient de `@/components/ui` (barrel `src/components/ui/index.ts`).
+**52 fichiers l'importent** : une signature qui change ici change partout.
 
-| Composant | Fichier | Anatomie | Variants | Usage |
-|---|---|---|---|---|
-| AppShell | `components/AppShell.tsx` | rail 248/72 grad-auth + main 1120 + bandeau + Jarvis | praticienne / assistante | shell global |
-| Onglets | `ui/Onglets.tsx` | barre + indicateur brand-600 2px | 2–6 items | fiche patient, finances |
-| Fil de journée | `tableauDeBord/FilDeLaJournee.tsx` | timeline verticale + maintenant | — | dashboard |
-| Breadcrumbs | inline | label 12 + chevron 12 | — | fiches |
+## Action — `Bouton.tsx`
 
-## 2. Actions
+```ts
+type RangBouton = "principal" | "secondaire" | "discret"
+Bouton({ children, rang?, retrait?, type?, onClick?, disabled?, pleineLargeur?, deploye? })
+LienBouton({ href, children, rang?, retrait?, pleineLargeur? })
+BarreActions({ children })
+```
 
-| Composant | Tokens | Variants | Règle |
-|---|---|---|---|
-| Bouton primaire | `bg-action-600 hover:700 active:900 text-on-brand shadow-lift1` | default/icon/split | une action primaire par section |
-| Secondaire | `bg-card border-rule text-ink-700 hover:sunken` | — | annuler/retour |
-| Tertiaire/ghost | `text-action-600 hover:action-050` | — | inline |
-| Destructif | `bg-critical text-white` | — | annuler RDV, verrou note — confirmer requis |
-| Icon button | `min-h-target 36 w-target` | — | `aria-label` obligatoire |
-| Groupe | `gap-2` | — | jamais pills multiples égales |
+| Rang | Traitement |
+|---|---|
+| `principal` | aplat `--action-600`, blanc pur (5.10:1). **Un seul par vue.** |
+| `secondaire` | `--card`, bordure `--rule` |
+| `discret` | transparent, `--ink-500` |
+| `retrait` | bordure `--attention` — un acte qu'on retire, pas qu'on détruit |
 
-## 3. Inputs
+**Il n'existe pas de rang « destructif » rouge, et c'est délibéré** : le rouge
+est un budget réservé à la perte de donnée.
 
-Inputs `ui/Champs.tsx` : `h-target 36 (comfort 44 QR)`, `rounded-md 10`, `border-rule`, `focus ring action-600`. Label 12 500 au-dessus, erreur 12 attention-ink **sous** champ près du contrôle, jamais placeholder seul. Textarea notes `15px 1.7 400`. Select/combobox/date/time via popover natif + clavier. Checkbox/radio 16px + label. Switch 44×24.
+Géométrie `rounded-lg`, cible `min-h-target`, `active:scale-95` (retour de
+pression — la cible est déjà acquise, rien ne se déplace sous le curseur).
 
-## 4. Information
+## Surfaces — `Surfaces.tsx`
 
-| Comp. | Style | Note |
-|---|---|---|
-| Badge/Status | `rounded-full px2 py1 text-label 12 500` | `attention-ink/bg`, `critical`, `positive`, `ai`, `info` — jamais couleur seule |
-| Avatar | `grad-avatar` 40px + `text-brand-900` 5.70:1 | monogramme, fallback disque nu |
-| Tooltip/Popover | `card lift3 p2 text-label` | focus + hover |
-| Card | `bg-layer-surface border-rule rounded-lg lift1 p4/6` | **pas de dégradé derrière valeur** |
-| Stat | `p4 border-rule` L3 typo porte chiffre (Inter 600 21 ou 800 36 si hero) | pas 4 tuiles égales saturées |
-| Timeline | `ChronologiePatient.tsx` 8 sources UNION ALL keyset | pagination 50, bornée base |
-| Table | `TableauSeances/Charges` + `Tableau*` | voir §5 |
-| Chart | `PanneauEvolution/Anatomie` | voir DATA_VISUALIZATION |
-| Progress | `h2 track sunken + fill brand-600` | — |
+```ts
+type NiveauDecor   = "primaire" | "secondaire" | "action" | "ia"
+type NiveauPorteur = "clinique" | "financier" | "document"
+Carte({ children, niveau?, interactive?, lueur? })
+```
 
-## 5. Tables & listes denses
+> ⚠️ **L'union discriminée est le garde-fou.** `lueur` est `never` sur les
+> niveaux PORTEURS (ceux qui portent une valeur clinique ou financière). Ne pas
+> l'aplatir en `lueur?: boolean` : ce serait rendre au relecteur une
+> responsabilité que le compilateur assume aujourd'hui.
 
-- Row `min-h-target 36`, `py3 px4`, `divide-y rule`, `hover:sunken`.
-- Headers `eyebrow 11 600 0.09` sticky, `bg-layer-surface`.
-- Numérique `tabular-nums` aligné droite, `font-num 500`.
-- Sorting indicateur 12, filtering inline.
-- Pagination keyset `(occurred_at, event_id)` — pas offset.
-- Empty → `EtatPanneau` centré, pas ligne vide.
+`interactive` change **l'ombre et la bordure, jamais la position** : une carte
+qui se soulève sous le curseur déplace la cible qu'on vise.
 
-## 6. Feedback (5 états `05-UX-CONTRACT`)
+Aussi : `PastilleIcone`, `Section`, `PanneauInfo`, `GrilleChamps`.
 
-- **Chargement :** squelette `respire 600 soft` (bloc sunken opacity 1↔.5), jamais spinner nu, forme \(=\) contenu.
-- **Vide :** phrase + action `ink-500` + brand link ; illustration disque `grad-empty` seulement sur empty (pas workspace). `EtatPanneau.tsx`.
-- **Erreur :** 3 phrases (quoi passé / quoi préservé / quoi faire) + `[Réessayer]`, remplace contenu, jamais + liste vide dessous.
-- **Hors ligne :** bandeau `attention-bg` permanent calme, lecture reste, écritures bloquées avec raison.
-- **Contenu :** normal.
+> `EnTeteEcran`, `EnTetePage` et `MetaHeros` ont été **supprimés** en V7. Voir
+> `DESIGN_DECISIONS.md` D-V7-1.
 
-Toast/Banner/Alert `ui/Etats.tsx` — `attention-bg` / `critical-bg` / `positive-bg` + `ink` correcte 5.67/5.74/4.56.
+## Saisie — `Champs.tsx`
 
-## 7. Overlays
+`ChampTexte` · `ChampSelection` · `ChampZoneTexte` (`clinique` → rôle `notes`) ·
+`ChampRecherche`.
 
-Modal/drawer/sheet : `bg-card lift3 rounded-xl`, voile `rgba(11,22,20,.32)` teinté (pas noir pur), `backdrop-blur glass`. Fermeture `Esc` sauf carte `proposed`. Command palette `RechercheEclair` 460px max, `⌘K`. Context menu minimal.
+Socle commun : libellé au-dessus, aide et erreur en dessous, câblés par
+`aria-describedby` / `aria-invalid`. Cible `min-h-target`.
 
-## 8. Santé-spécifique
+## États — `Etats.tsx`
 
-| Pattern | Composant | Contenu |
-|---|---|---|
-| Patient identity | `CarteIdentite`, `EnTetePatient` | monogramme + P-0003 + tel + naissance |
-| Risk | ZoneAttention indicator | attention-ink + icône, jamais couleur seule |
-| Medication row | `PanneauTraitements` ligne | molécule INN + forme + dose tabular |
-| Consultation row | `PanneauRendezVous` carte | heure + type + liseré 3px + libellé type |
-| Clinical timeline | `ChronologiePatient` | 8 sources, icône type+date |
-| Document status | `ListeDocuments` | doc_number + type + issued_at + printed_count |
-| Payment status | `PaiementCard` | receipt_number + amount_dzd integer DZD + état |
-| AI suggestion | FilJarvis bulle | `bulle-jarvis-max 92%` opaque, source payload |
-| AI approval | CarteConfirmation | `confirmed_at` avant exécution, 400ms attente L2 |
+`BandeauHorsLigne` · `BlocErreur` · `EtatVide` · `Squelette` ·
+`IndicateurEnregistrement` · `Champ` (lecture seule).
 
-Tous portent Anatomy / Purpose / Variants / States / Spacing / Typo / A11y / Usage + anti-pattern.
+Contrat complet : `UX_CONTRACT.md`.
+
+## Information
+
+`Badge` (`neutre | attention | positif | information` — **pas de rouge**) ·
+`Chiffre` · `Avatar` (**monogramme, jamais une photo**).
+
+## Structure
+
+`Onglets` / `PanneauOnglet` — contrat `role="tablist"` complet : tabindex
+glissant, flèches avec bouclage, `Home`/`End`, activation automatique.
+
+`EspaceTravail` (travail / contexte) · `SectionPliable` — le contenu replié est
+**retiré du DOM**, pas masqué.
+
+## Icônes — `Icones.tsx`
+
+SVG écrits à la main, aucune dépendance. Trait 1.75, grille 24, capuchons
+ronds. Tailles `16 | 20 | 24`. `aria-hidden` sauf si `titre` est fourni.
+
+> ⚠️ `TRACES: Record<NomIcone, …>` est indexé sur `keyof fr.nav.ecrans` :
+> **ajouter un écran sans son icône ne compile pas.**
+
+## Ce qui n'existe toujours pas
+
+`Tableau` et `Toast` restent différés. Les tableaux du produit (annuaire,
+séances, charges) sont composés sur place. Une primitive de tableau reste le
+manque le plus net de l'inventaire — l'application est de forme tabulaire, et
+les jetons `--rang-hauteur` / `--tete-tableau-bg` l'attendent.

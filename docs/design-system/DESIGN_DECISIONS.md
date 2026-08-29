@@ -1,83 +1,111 @@
-# DESIGN_DECISIONS — Rationale & migration
+# Les décisions de V7 — ce qui a été retiré, et pourquoi
 
-## 1. Décisions majeures
+Une refonte se juge autant à ce qu'elle enlève qu'à ce qu'elle ajoute. Chaque
+entrée ci-dessous a été prise en regardant l'application tourner.
 
-### Décision : hiérarchie couleur 70/15/10 + neutres dominants
-**Pourquoi :** premium gagné par neutres, pas accent (7 critiques). Test retrait 30% : tout coloré échoue.
-**Alternative rejetée :** 5-6 familles également saturées, gradients partout (Vibrant Instrument mal interprété → SaaS slop bruyant).
-**Conséquence :** `COLOR_SYSTEM.md` discipline, `atmosphere` subtile 8/5/4%, tiles neutres + vibrant rare L6.
+## D-V7-1 · La bannière héros disparaît
 
-### Décision : Inter 400/500/600/700/800 avec contraste, pas 600–800 partout
-**Pourquoi :** corps 400 lisible 6-8h, hiérarchie taille+graisse+espace. Tout bold = fatigue + moins premium (rejet #1).
-**Rejeté :** 600/700/800 sans regular (fatigue 14px).
-**Implé :** `layout.tsx` Inter added 700,800 + Fraunces 700,800 + `tokens --weight-bold/extrabold` + Tailwind `bold/extrabold`. Body reste 400 obligatoire.
+`EnTeteEcran` posait en tête de **chaque** écran un bloc de ~120 px sur
+`--grad-brand`, avec motif en filigrane et sur-titre.
 
-### Décision : zéro oval, pas slashé, tabular partout
-**Pourquoi :** `0` vs `Ø` ambigu dossiers/montants. Désactiver OT `zero`/`ss02`.
-**Rejeté :** défaut Inter slashé activé via `zero`.
-**Implé :** `tokens.css html,body,.num { font-feature-settings:"tnum"1,"zero"0,"ss02"0 }`.
+**C'était la cause première du « c'est la même interface avec d'autres
+couleurs ».** Quel que soit l'écran, les 120 premiers pixels étaient
+identiques, et le travail réel commençait sous la ligne de flottaison.
 
-### Décision : gradients moments, pas environnement
-**Pourquoi :** canvas quiet nécessaire pour que vibrant parle ; contraste drift sur dégradé (tokens 244 calc 2.11/4.18 fail).
-**Rejeté :** gradient sur chaque card/section/métrique (rejet #2, fatigue).
-**Implé :** catalogue `grad-brand/auth/orb/tile-*/avatar/empty/reflet` seulement en L6, §4.2 clinique jamais dégradé conservé — formalisé ADR-028 au lieu de "skip ADRs" (rejet #7).
+L'identité de page monte dans une barre supérieure de 60 px partagée. Gain :
+120 px de hauteur utile partout, une composition libre sous la barre, et un
+emplacement stable pour la commande et les actions.
 
-### Décision : charts décisionnels, pas décoratifs
-**Pourquoi :** dashboard opérationnel spec (timeline/now/next/attention/waiting/unfinished avant stats).
-**Rejeté :** 4 charts dashboard + 5 finance décoratifs (rejet #3).
-**Implé :** `DATA_VISUALIZATION.md` max 1-2 micro dashboard, finance jusqu'à 3, `chart-min 480`.
+### La règle de sûreté qu'elle portait est devenue structurelle
 
-### Décision : icônes comme IA, pas décoration
-**Pourquoi :** reconnaissance/scannabilité.
-**Rejeté :** icône fill par carte par réflexe (rejet #4).
-**Implé :** étendre `Icones.tsx` seulement où aide voisinage, pas remplissage vide.
+`EnTeteEcran` (dégradé) et `EnTetePage` (sobre) existaient pour tenir ADR-022 :
+**pas de dégradé derrière un nom de patient**. La règle reposait sur la
+discipline de chaque écrivain d'écran, qui devait choisir le bon des deux.
 
-### Décision : illustrations rétrécies editorial/duotone
-**Pourquoi :** empty/onboarding seulement, pas workspace clinique (rejet #5).
-**Implé :** `grad-empty` disque, spot A5, pas 3D clay.
+La barre supérieure est **opaque, sans dégradé, sur tous les écrans**. Un nom
+de patient y est donc toujours posé sur un fond uni. La règle ne dépend plus
+d'une discipline : elle découle de la structure.
 
-### Décision : PC-first, pas mobile-first
-**Pourquoi :** poste fixe 1920×1080 principal, patient devant. Mobile hamburger = anti-productif.
-**Implé :** breakpoints 1024/1280 seuls, rail 248→72.
+## D-V7-2 · Deux mondes neutres au lieu d'un
 
-### Décision : WCAG corrections appliquées
-**Pourquoi :** audit 2026-08-29 : coral600 4.38 fail → ink, azure400 3.26 fail jamais texte, psych #2b7a9b 4.24→#247095 4.83.
-**Implé :** `tokens.css` bloc ACCENTS documenté + `kind-psych` corrigé.
+Voir `VISUAL_LANGUAGE.md` §1. Le rail passe de `--grad-auth` à `--chrome-900`.
 
-### Décision : dark mode non implémenté maintenu
-**Pourquoi :** 4 jetons nuit sans rampe = thème à moitié armé pire qu'absent (lisibilité 6h).
-**Implé :** `darkMode` absent, `night-*` non exposés — volontaire.
+Effet secondaire recherché : la couleur de marque cesse de teinter le fond de
+l'application et redevient signifiante.
 
-## 2. Alternatives explorées & rejetées
+## D-V7-3 · L'assistant n'est plus une bulle flottante
 
-- Editorial Clinical Luxury (Newsreader hero + halftone fort) — trop fragile tables denses.
-- Modern Quiet pur (trop plat post ADR-025).
-- Sélectionnée : Sophisticated Intelligent Workspace, VARIANCE 3 MOTION 2 DENSITY 5.
+Son lanceur était une pastille en bas à droite : orbe + « Ouvrir » + ⌘K —
+**le motif « bulle de chat » dans sa forme la plus reconnaissable**, qui fait
+lire une intelligence intégrée comme un widget collé après coup.
 
-## 3. Migration depuis ancien système
+Le lanceur est désormais le **champ de commande de la barre supérieure**. Même
+⌘K, même panneau ; ce qui change est ce que la disposition raconte.
 
-| Ancien | Nouveau | Action |
-|---|---|---|
-| `teal-*` | `brand-*` pipetté #7CB5AC | déjà fait — vérif 0 occurrences |
-| `--teal-600 #1B6B63` estimé | `brand-600 #2A7A70 5.10:1` | alias supprimés |
-| gradients partout (ouvert) | L6 seulement | retirer `bg-grad-*` hors tuiles/nav/orb/empty |
-| 4 KPI saturés | 70 neutral + 1 primaire + accent parcimonieux | re-token cards → `layer-surface` + `liseré` |
-| Inter 400/500/600 seul | +700/800 | build vérif woff2 + fallback Geist |
-| zéro par défaut Inter | oval forcé | CSS zero 0 |
-| tables sans hint | tabular + sticky | `.num` |
+Le libellé dit « **Demander à Alexa** », pas « Rechercher » : la première
+version disait « Rechercher un patient, un rendez-vous, un document… », et
+l'écran Patients portait alors **deux** champs de recherche superposés, l'écran
+Documents **trois**.
 
-## 4. ADR design
+## D-V7-4 · Le bouton principal passe en aplat
 
-- **ADR-028 (nouveau, à numéroter 0NN)** — *V2 Vibrant Instrument restreint* — étend ADR-022/025 : catalogue dégradés ouvert intra-famille pour L6, maintient §4.2 clinique opaque, lock hiérarchie 70/15/10, 6 niveaux, charts décisionnels. Remplace phrase "no other gradient" par "intra-family L6 catalogue".
-- Ne jamais éditer migration appliquée — créer `0NN_v2_design_system.sql` si schema impact (pas prévu — visuel seul).
+`bg-grad-tile-brand` + `hover:shadow-glow-brand` → `bg-action-600` + élévation.
 
-## 5. Checklist livraison V2
+Deux raisons. Le halo à décalage nul est une décoration, pas de la profondeur.
+Et la lueur avait **trois usages fermés** ; un bouton primaire présent sur
+presque tous les écrans en faisait le quatrième et le plus fréquent — la lueur
+ne signalait plus rien.
 
-- [ ] tokens.css seule source, grep hex 0
-- [ ] Inter 700/800 chargés, woff2 ≥28, zero oval inspecté
-- [ ] contrasts AA pass list §COLOR, fail list jamais texte
-- [ ] 5 états déclenchables tous écrans
-- [ ] perf 1 call/400ms dashboard/patients, 2 calls/500ms fiche
-- [ ] C8a 0px scroll, C8b focus Anneau blanc, reduced-motion 0
-- [ ] Jarvis carte 400ms + allowlist 7
-- [ ] docs 18 fichiers présents
+Sur un dégradé, le contraste du blanc varie d'un bout à l'autre du bouton.
+`--action-600` en aplat mesure 5.10:1, partout pareil.
+
+## D-V7-5 · Les capitales de l'« eyebrow » quittent 24 libellés
+
+Le rôle `eyebrow` (11 px / 700 / CAPITALES / 0.09em) était posé sur une
+vingtaine de libellés de cartes et de sections, plus les titres de groupe du
+rail. À cette densité, l'écran se couvre de petites capitales qui pèsent
+visuellement autant que les vrais titres, et la hiérarchie s'aplatit là où elle
+devrait porter.
+
+Le libellé reste, le costume part : rôle `label` (12 px / 500 / casse de
+phrase). Le rôle `eyebrow` survit pour les étiquettes d'axe de graphique.
+
+## D-V7-6 · Fraunces quitte les nombres
+
+`font-display text-display` était posé sur des compteurs et des montants. Une
+face d'affichage sur de la donnée est un costume. Les valeurs passent en
+`font-num` (Geist Mono, tabulaire) : elles se lisent comme des mesures.
+
+## D-V7-7 · L'atmosphère quitte le sol
+
+Trois lavages radiaux de marque sur toute la racine. Une couleur présente
+partout ne désigne plus rien.
+
+## D-V7-8 · Le Mode Séance est enfin construit
+
+Les quatre jetons `--night-*` existaient depuis l'origine, écrits pour ce seul
+écran, et n'avaient jamais servi. Voir `MODE_SEANCE.md`.
+
+## D-V7-9 · Les échelles Tailwind sont complétées
+
+Décision d'ingénierie qui conditionnait tout le reste. Voir
+`DESIGN_TOKENS.md` §1.
+
+---
+
+## Ce qui a été délibérément CONSERVÉ
+
+Pour éviter qu'une refonte suivante ne les défasse en croyant bien faire :
+
+- **`Carte` et son union discriminée** (`lueur?: never` sur les niveaux
+  porteurs). Le compilateur assume une responsabilité qu'un relecteur assumerait
+  moins bien.
+- **`TRACES: Record<NomIcone, …>`** indexé sur `keyof fr.nav.ecrans` : ajouter un
+  écran sans son icône ne compile pas.
+- **La composition du rail par rôle** (I12) : les entrées d'un rôle ne sont pas
+  masquées, elles ne sont **jamais construites**. Cosmétique et assumé comme
+  tel — seule la RLS protège la donnée.
+- **Le rouge est un budget.** Un rendez-vous annulé n'est pas une erreur.
+- **Aucune illustration dans le dossier clinique actif.**
+- **`EtatVide` n'affiche jamais d'illustration décorative** — une phrase qui
+  explique, et une action.

@@ -807,6 +807,26 @@ export const fr = {
    * fabriqueraient un oracle d'existence.
    */
   documents: {
+    /*
+     * V7 — LA BARRE D'OUTILS DE DOCUMENTS. Ces libellés vivaient en dur dans
+     * `app/documents/page.tsx` (« Recherche », « Tous », « Émis »…), ce que
+     * l'ADR-008 interdit — y compris pour un libellé de filtre.
+     */
+    recherche: {
+      libelle: "Rechercher un document",
+      indication: "N° document, patient, type",
+    },
+    filtres: {
+      type: "Type de document",
+      statut: "Statut du document",
+      tousTypes: "Tous les types",
+      tousStatuts: "Tous les statuts",
+    },
+    statuts: {
+      issued: "Émis",
+      voided: "Annulé",
+    },
+    changerDossier: "Changer de dossier",
     titre: "Documents",
     sousTitre: "Certificats et attestations",
 

@@ -1,72 +1,62 @@
-# JARVIS_UI — Couche d'intelligence ambiante (V2)
+# La langue visuelle d'Alexa
 
-> Jarvis propose, humain confirme, base journalise. L'IA assistante, jamais dominante.
+## Le principe
 
-## 1. Principe — ambient, pas chatbot demi-écran
+**L'IA propose, la médecin décide, la base journalise.** La forme doit rendre
+cette phrase lisible sans qu'on l'explique.
 
-Jarvis n'est pas un panneau géant occupant 50%. Il est :
-- **Inline suggestions** dans fiche/agenda (contextuel)
-- **Command bar** `⌘K` — palette
-- **Panneau latéral 380px** — secondaire, fermable, partage store avec `/jarvis` plein écran
-- **Orbe voix 8 états** — idle/listening/thinking/working/ready/proposed/awaiting/failed/unavailable
+L'assistant est **distinctif sans dominer** : il possède une famille de couleur
+(`--ai-*`), et rien d'autre du produit ne l'emploie.
 
-`PanneauJarvis.tsx:41` `LARGEUR_PANNEAU 380px max 100vw z 50 glass-panel blur 20`.
+## Il n'est plus une bulle flottante
 
-## 2. Emplacements PC
+Son lanceur était une pastille en bas à droite — orbe + « Ouvrir » + ⌘K, le
+motif « bulle de chat » dans sa forme la plus reconnaissable.
 
-- **Lanceur** `fixed bottom-6 right-6 pill card lift3` : `Orbe 32` + bouton `Ouvrir Jarvis ⌘K` (séparés, pas button-in-button invalide).
-- **Panel** `fixed inset-y-0 right-0 border-l rule glass` — header `card 24+fermer`, contexte patient `ai-50/100`, erreur `attention-bg`, fil `overflow-y p4`, footer `SaisieJarvis`.
-- **BootVoix** lifecycle voix sans rendu, vit dans `AppShell` (dure app, pas écran).
-- **Assistante** : pas de `PanneauJarvis` ni `BootVoix` (I12) — pas de contexte clinique.
+En V7, **le champ de commande de la barre supérieure EST l'assistant**. On lui
+parle là où on chercherait, au centre de l'outil. Fermé, `PanneauJarvis` ne rend
+plus rien.
 
-## 3. États visuels (10)
+L'orbe reste dans la barre comme **témoin d'état de la voix** — il renseigne, il
+n'ouvre pas.
 
-| État | Visuel | Composant |
-|---|---|---|
-| idle | orb static `grad-orb` | `OrbeVoix taille 24/32` |
-| listening | orb pulse outer `glow-ai` + anneau |  |
-| thinking | trois points anim `respire` | `FilJarvis` bulle Jarvis |
-| working | barre indéterminée `sunken` + "Jarvis travaille..." | header |
-| ready | orb glow calme |  |
-| proposed | **CarteConfirmation** flottante `absolute inset-x-3 bottom-3 z10 lift3 glow-ai` | `CarteConfirmation.tsx` |
-| awaiting confirmation | carte + jauge 400ms avant confirm | `confirmed_at` écrit avant exec |
-| completed | bulle verte `positive-bg` + tick, toast |  |
-| failed | bandeau `critical-bg` + retry |  |
-| unavailable/offline | `attention-bg` + "IA indisponible — navigation reste" |  |
+## Les surfaces
 
-## 4. Carte de confirmation (règle 7)
+| Surface | Rôle |
+|---|---|
+| Champ de commande (barre) | l'entrée — « Demander à Alexa », ⌘K |
+| Orbe (`OrbeVoix`) | l'état de la voix, 8 états |
+| Panneau latéral (`PanneauJarvis`) | la conversation, 380 px, verre |
+| Écran plein (`/jarvis`) | la même conversation, même store |
+| Carte de confirmation | **la décision** |
+| Carte du tableau de bord | les propositions en attente |
 
-- Flotte **au-dessus** du fil, pas bulle parmi autres.
-- Contenu : outil + args pseudonymisés (`PATIENT_001`) + impact + source (`sources` payload).
-- Boutons `Confirmer 600 action` + `Annuler` — `scale-[0.98]` active, `400ms` attente anti double-click.
-- Contrainte base `confirmed_at NOT NULL` si `executed` — UI ne peut outrepasser.
-- Allowlist 7 outils `063_jarvis_capacites.sql` — hors liste = jamais affiché.
+Panneau et écran plein partagent **un seul état** (`services/conversation.ts`) :
+ouvrir le plein écran ne duplique pas la conversation, fermer le panneau ne
+l'interrompt pas.
 
-## 5. Bulle modèle (design)
+## La carte de confirmation
 
-- Humain droite `bulle-humain-max 85%` `bg-action-600 text-white` 14 400.
-- Jarvis gauche `bulle-jarvis-max 92%` `bg-card border-rule lift1` opaque (jamais verre), `text-ink-900`.
-- Contexte patient au-dessus fil `ai-50 12 500` + `patients 16` icône + croix retirer.
-- Erreur nommée au-dessus fil `attention-bg attention-ink` + croix dismiss.
+Le seul endroit du produit où la lueur est admise, avec l'orbe.
 
-## 6. Command palette
+- **Aucun bouton par défaut.** Rien ne se déclenche sur `Entrée`.
+- **Délai anti-clic-réflexe de 400 ms** avant que l'acceptation ne devienne
+  active.
+- `Échap` **ne ferme pas** le panneau tant qu'une carte attend : la laisser
+  `proposed` sans que personne ne sache qu'elle existe serait pire que
+  l'interruption.
+- Le contenu de la carte **ne bouge jamais** — on ne fait pas glisser ce sur
+  quoi on demande un accord.
 
-- `RechercheEclair` 460px, `filters`, `Recent Transactions` style reference — adaptée MindCare : patients, RDV, actions Jarvis.
+## Le verre, et sa limite
 
-## 7. Accessibilité
+`--glass-panel` habille le panneau et la carte : du mobilier flottant. **Les
+bulles de conversation sont opaques.** Une transcription ou une posologie ne se
+lit pas à travers du verre.
 
-- `Esc` ferme panel sauf `proposed` (bloque).
-- `aria-label titre Jarvis`, `role status` contexte, `role alert` erreur, `role dialog` carte.
-- Focus sur orbe et dans saisie conserve `tab`.
+## Ce que la couleur IA ne fait pas
 
-## 8. Motion
-
-- Orb spring `0.34,1.56,0.64,1` seul autorisé.
-- Panel slide 380 out, voile 240.
-- Bulle apparition 160 soft, pas bounce.
-
-## 9. Anti-patterns
-
-- Pas de gradient texte, pas de glowing border partout, pas de chatbot pleine largeur par défaut.
-- Pas d'écriture sans carte ni hors allowlist.
-- Pas d'élévation permission (hérite `owner/practitioner/assistant`).
+Elle ne colore pas une valeur clinique, ne teinte pas une note, n'entoure pas un
+champ de saisie de dossier. Elle dit « ceci vient de l'assistant » — et cette
+distinction est exactement ce qui permet à la praticienne de savoir ce qu'elle
+relit.

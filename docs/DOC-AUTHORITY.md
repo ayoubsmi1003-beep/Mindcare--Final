@@ -17,8 +17,14 @@ v2 — 2026-08-09 · réécrit à l'ouverture de la phase v1
 4. 01-SCHEMA.md                   ← intention du schéma (régénéré, jamais écrit à la main)
    02-SECURITY-BOUNDARY.md        ← frontière des données
    03-JARVIS-TOOLS.md             ← contrat des outils
-   04-DESIGN-SYSTEM.md            ← jetons visuels (amendé par ADR-022)
-   05-UX-CONTRACT.md              ← états d'écran obligatoires
+   design-system/                 ← LE SYSTÈME VISUEL ET LES ÉTATS D'ÉCRAN
+                                     (V7, 2026-08-29 — REMPLACE 04-DESIGN-SYSTEM.md
+                                     et 05-UX-CONTRACT.md, tous deux supprimés.
+                                     Les règles de SÛRETÉ qu'ils portaient sont
+                                     reprises : voir design-system/UX_CONTRACT.md
+                                     pour les 5 états, VISUAL_LANGUAGE.md pour le
+                                     rouge budgété et l'interdit du dégradé
+                                     derrière une valeur clinique.)
    06-PERF-BUDGET.md              ← budget de performance
    DOCUMENT-TEMPLATES-v2.md       ← contenu des certificats (v2, 2026-08-22 ;
                                      remplace DOCUMENT-TEMPLATES.md, retiré)

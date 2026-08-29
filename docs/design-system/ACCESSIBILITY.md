@@ -1,73 +1,62 @@
-# ACCESSIBILITY — MindCare V2
+# Accessibilité — le plancher, et les mesures
 
-> L'accessibilité est architecture, pas annexe conformité. Poste 8h, stress, patient devant.
+Les contrastes ci-dessous sont **mesurés** (WCAG 2.1, formule de luminance
+relative), pas estimés. Une valeur estimée qui se révèle fausse coûte plus cher
+qu'une absence de valeur : elle empêche la relecture suivante.
 
-## 1. Contraste — mesuré 2026-08-29, non estimé
+## Plancher
 
-| Couple | Ratio | Verdict | Règle |
+- Texte normal ≥ **4.5:1**, texte large et éléments d'interface ≥ **3:1**.
+- Focus visible **partout** — `:focus-visible`, 2 px, décalé de 2 px.
+- Cibles ≥ 36 px (`--target-min`), 44 px sur les commandes tactiles.
+- **La couleur n'est jamais seule porteuse de sens** : un statut porte aussi un
+  mot, une forme ou une position.
+- `prefers-reduced-motion: reduce` → toute animation à 0.01 ms.
+- Le zoom du navigateur est préservé : **aucun `font-size` sur `html`**.
+
+## Chrome (sur `--chrome-900` `#0e1a18`)
+
+| Jeton | Valeur | Ratio | Emploi |
 |---|---|---|---|
-| ink-900 / white | 18.44:1 | AAA | titres |
-| ink-700 / white | 13.09:1 | AAA | corps |
-| ink-500 / white | 5.70:1 | AA+ | discret légitime |
-| ink-500 / brand-050 | 5.29:1 | AA | discret sur sol |
-| brand-600 / white | 5.10:1 | AA | action repos |
-| white / brand-600 | 5.10:1 | AA | texte sur brand |
-| attention-ink / attention-bg | 5.67:1 | AA | bandeau fictif corrigé |
-| attention / attention-bg | 3.34:1 | FAIL | jamais texte |
-| positive / white 5.06, /bg 4.56 | AA | — |
-| critical / white 6.54, /bg 5.74 | AA | — |
-| ai-600 / white 6.46 | AA | — |
-| azure-600 / white 6.12 | AA | — |
-| coral-ink / white 6.10, /coral-bg 5.20 | AA | texte coral = ink |
-| kind-psych #247095 / #E8F2F7 4.83 | AA | corrigé 2026-08-29 |
-| kind-premiere #5B5BD6 / #EEEEFB 4.67 | AA | — |
-| ink-300 / white 2.66 | FAIL | **jamais texte**, filets/placeholders seulement |
+| `--chrome-ink` | `#eaf2ef` | **15.6:1** | entrée active, nom du compte |
+| `--chrome-ink-soft` | `#a7bdb7` | **9.00:1** | entrées inactives — encre de texte valide |
+| `--chrome-ink-faint` | `#6e8983` | **4.72:1** | libellés de groupe, écrans à venir |
+| `--chrome-ink` sur `--chrome-actif-bg` | | **6.81:1** | l'entrée active |
 
-**Hiérarchie ne se fait jamais en baissant contraste** — taille/graisse/pastille seulement. Blanc atténué sur dégradé interdit (tokens 244 calc 2.11 à 4.18 fail).
+Aucune de ces quatre encres n'est un gris : elles sont tirées de la teinte de
+marque, comme l'exige la règle « sur une surface teintée, teinter le texte
+secondaire depuis cette teinte, jamais vers le gris ».
 
-## 2. Focus
+## Contenu (sur `--card` `#ffffff`)
 
-- `outline 2px solid var(--action-600) offset 2` partout.
-- Sur marque (rail `grad-auth`, hero, auth) : `sur-marque` → blanc pur 2px (brand disparaîtrait).
-- Jamais `outline:none` sans remplaçant ≥ aussi visible.
+| Jeton | Ratio | Emploi |
+|---|---|---|
+| `--ink-900` `#0b1614` | 18.1:1 | titres |
+| `--ink-700` `#23342f` | 12.4:1 | corps |
+| `--ink-500` `#566b65` | **5.70:1** | texte discret — plancher tenu |
+| `--ink-300` `#8fa39d` | **2.43:1** | ⚠️ **JAMAIS du texte.** Bordures, séparateurs, `placeholder` décoratif uniquement |
+| `--action-600` `#2a7a70` | 5.10:1 | action, avec le blanc pur dessus |
+| `--attention` `#b8763a` | 3.69:1 | accent seulement — le texte utilise `--attention-ink` (5.67:1) |
 
-## 3. Clavier
+## Nuit — Mode Séance
 
-- Tab order = DOM order ; skip non ajouté (rail fixe seul, main scrolle).
-- `Enter/Space` active, `Esc` ferme modal/drawer sauf carte `proposed` (bloque).
-- `⌘K/Ctrl-K` ouvre palette/panneau Jarvis, `Esc` ferme si pas de carte.
-- Tous contrôles `min-h-target 36` (comfort 44 QR), `min-w-target 36`.
-- Rail compact 72 garde hit 40 pastille + 16 padding = 36+.
+Voir `MODE_SEANCE.md` : 14.9 / 6.49 / 3.33:1.
 
-## 4. Lecteur d'écran
+## Ce qui a été corrigé en V7
 
-- `cache-visuellement` (`position absolute 1px clip`) — jamais `display:none` (retire arbre).
-- `aria-current="page"` sur nav actif, pas couleur seule.
-- `role="status/alert/dialog"` pour empty/error/confirmation.
-- Libellés rail masqués visuellement restent annoncés.
-- `alt` illustration empty disc, `aria-hidden` décor `atmosphere`/`grad-hero-reflet`.
+- La bannière **hors ligne** et le **bloc d'erreur** étaient stylés entièrement
+  sur la palette `amber.*`, **jamais exposée** dans la configuration Tailwind :
+  ils s'affichaient sans fond ni bordure. Passés sur la famille `attention`.
+- Les créneaux libres de l'agenda affichaient « libre » 80 fois par semaine en
+  `--ink-500`. Le mot est désormais révélé au survol et au focus, et **reste
+  dans l'arbre d'accessibilité** — une case muette pour un lecteur d'écran
+  serait un créneau de moins, pas un écran plus calme.
+- Le rail reprenait sa largeur pleine **à partir de** 1024, exactement la
+  largeur où il devait se replier.
 
-## 5. Formulaires
+## Ce qui n'est pas vérifié
 
-- Label visible au-dessus, erreur `attention-ink` sous champ proche, `aria-describedby`.
-- Placeholder ≠ label ; `ink-300` placeholder ok (non-texte), valeur `ink-900`.
-- `is_synthetic` etc. jamais exposés.
-
-## 6. Motion & préférences
-
-- `prefers-reduced-motion` coupe à 0.01ms.
-- Pas d'anim dépendante pour lisibilité.
-- `prefers-contrast: more` → non géré (hors scope, light-only).
-
-## 7. Cibles & densité
-
-- ≥36px partout, 44px QR (WORKING-CONTEXT §4). Vérifiable `grep min-h-target`.
-- Touch spacing ≥8px entre cibles.
-
-## 8. Checklist livraison
-
-- [ ] Axe contrast: tous couples AA (fail list respectée)
-- [ ] Focus anneau visible sur grad (blanc) testé 1024 + 1920
-- [ ] Tab 39 arrêts, 0 sans anneau (mesure C8b)
-- [ ] Lecteur annonce nav actif + empty + error
-- [ ] `0` oval non slashé inspecté
+Honnêteté : **aucun test avec un lecteur d'écran réel (NVDA / VoiceOver) n'a
+été mené.** Les rôles ARIA, l'ordre de tabulation et les libellés sont posés et
+relus dans le code ; ils ne sont pas *validés à l'usage*. C'est le premier
+travail d'accessibilité à programmer.

@@ -380,47 +380,81 @@ export default function DocumentsPage(): React.JSX.Element {
           </div>
         ) : null}
 
-        {/* Barre filtres + recherche */}
-        <Carte niveau="primaire">
-          <div className="flex flex-wrap items-end gap-3 p-4">
-            <div className="min-w-48 flex-1">
-              <label className="font-ui text-label font-medium tracking-label text-ink-500">Recherche</label>
-              <input
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="N° document, patient, type"
-                className="mt-1 w-full rounded-md border border-rule bg-card px-3 py-2 font-ui text-body text-ink-900 outline-none focus:border-action-500"
-              />
-            </div>
-            <div>
-              <label className="font-ui text-label font-medium tracking-label text-ink-500">Type</label>
-              <select value={filtreType} onChange={(e) => setFiltreType(e.target.value as TypeDocument | "")} className="mt-1 rounded-md border border-rule bg-card px-3 py-2 font-ui text-body">
-                <option value="">Tous</option>
-                <option value="bonne_sante_mentale">{fr.documents.types.bonne_sante_mentale}</option>
-                <option value="suivi_medical">{fr.documents.types.suivi_medical}</option>
-                <option value="certificat_medical">{fr.documents.types.certificat_medical}</option>
-                <option value="justification">{fr.documents.types.justification}</option>
-              </select>
-            </div>
-            <div>
-              <label className="font-ui text-label font-medium tracking-label text-ink-500">Statut</label>
-              <select value={filtreStatut} onChange={(e) => setFiltreStatut(e.target.value as StatutDocument | "")} className="mt-1 rounded-md border border-rule bg-card px-3 py-2 font-ui text-body">
-                <option value="">Tous</option>
-                <option value="issued">Émis</option>
-                <option value="voided">Annulé</option>
-              </select>
-            </div>
-            {dossier === null ? null : (
-              <div className="flex items-center gap-2">
-                <span className="font-ui text-label text-ink-700">{dossier.lastName} {dossier.firstName} <span className="font-num text-ink-500">{dossier.recordNumber}</span></span>
-                <Bouton rang="discret" onClick={() => { setDossier(null); setOuvert(null); setEmission(false); }}>Changer de dossier</Bouton>
-              </div>
-            )}
+        {/*
+          LA BARRE D'OUTILS — UNE RANGEE, PAS UNE CARTE.
+          C'etait une `Carte` contenant trois champs a libelles empiles : un
+          bloc de 90 px de haut, avec sa propre bordure et son ombre, pose
+          au-dessus de la liste qu'il filtre. Un filtre n'est pas un contenu :
+          il appartient au meuble. Les libelles passent en visuellement-cache
+          (ils restent lus par un lecteur d'ecran), et les trois commandes
+          s'alignent sur une seule ligne a hauteur constante.
+        */}
+        <div className="flex flex-wrap items-center gap-3">
+          <div className="min-w-card flex-1">
+            <label className="cache-visuellement" htmlFor="doc-recherche">
+              {fr.documents.recherche.libelle}
+            </label>
+            <input
+              id="doc-recherche"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder={fr.documents.recherche.indication}
+              className="min-h-target w-full rounded-lg border border-rule bg-card px-3 py-2 font-ui text-body text-ink-900 outline-none transition duration-quick ease-out placeholder:text-ink-300 focus-visible:border-action-600 focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset"
+            />
           </div>
-        </Carte>
+
+          <label className="cache-visuellement" htmlFor="doc-type">
+            {fr.documents.filtres.type}
+          </label>
+          <select
+            id="doc-type"
+            value={filtreType}
+            onChange={(e) => setFiltreType(e.target.value as TypeDocument | "")}
+            className="min-h-target rounded-lg border border-rule bg-card px-3 py-2 font-ui text-body text-ink-900 outline-none transition duration-quick ease-out focus-visible:border-action-600 focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset"
+          >
+            <option value="">{fr.documents.filtres.tousTypes}</option>
+            <option value="bonne_sante_mentale">{fr.documents.types.bonne_sante_mentale}</option>
+            <option value="suivi_medical">{fr.documents.types.suivi_medical}</option>
+            <option value="certificat_medical">{fr.documents.types.certificat_medical}</option>
+            <option value="justification">{fr.documents.types.justification}</option>
+          </select>
+
+          <label className="cache-visuellement" htmlFor="doc-statut">
+            {fr.documents.filtres.statut}
+          </label>
+          <select
+            id="doc-statut"
+            value={filtreStatut}
+            onChange={(e) => setFiltreStatut(e.target.value as StatutDocument | "")}
+            className="min-h-target rounded-lg border border-rule bg-card px-3 py-2 font-ui text-body text-ink-900 outline-none transition duration-quick ease-out focus-visible:border-action-600 focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset"
+          >
+            <option value="">{fr.documents.filtres.tousStatuts}</option>
+            <option value="issued">{fr.documents.statuts.issued}</option>
+            <option value="voided">{fr.documents.statuts.voided}</option>
+          </select>
+
+          {dossier === null ? null : (
+            <div className="flex items-center gap-2">
+              <span className="font-ui text-body text-ink-700">
+                {dossier.lastName} {dossier.firstName}{" "}
+                <span className="font-num text-ink-500">{dossier.recordNumber}</span>
+              </span>
+              <Bouton
+                rang="discret"
+                onClick={() => {
+                  setDossier(null);
+                  setOuvert(null);
+                  setEmission(false);
+                }}
+              >
+                {fr.documents.changerDossier}
+              </Bouton>
+            </div>
+          )}
+        </div>
 
         {dossier === null ? (
-          <div className="grid min-h-0 flex-1 grid-cols-1 gap-4 overflow-hidden lg:grid-cols-2" style={{ gridTemplateColumns: "420px 1fr" }}>
+          <div className="grid min-h-0 flex-1 grid-cols-1 gap-4 overflow-hidden lg:grid-cols-espace-liste">
             {/* Global recent */}
             <div className="flex min-h-0 flex-col gap-3 overflow-y-auto">
               <h2 className="font-ui text-heading font-semibold text-ink-900">Documents récents</h2>
@@ -500,7 +534,7 @@ export default function DocumentsPage(): React.JSX.Element {
             </div>
           </div>
         ) : (
-          <div className="grid min-h-0 flex-1 grid-cols-1 gap-4 overflow-hidden lg:grid-cols-2" style={{ gridTemplateColumns: "420px 1fr" }}>
+          <div className="grid min-h-0 flex-1 grid-cols-1 gap-4 overflow-hidden lg:grid-cols-espace-liste">
             {/* Colonne gauche: Liste patient + émission */}
             <div className="flex min-h-0 flex-col gap-3 overflow-y-auto">
               <PanneauEtat etat={liste} onReessayer={() => void chargerListe(dossier.id)} lignesSquelette={3}>

@@ -1,61 +1,83 @@
-# MindCare OS — Design System V2 : Vibrant Instrument
+# Design system MindCare — V7
 
-**Statut : verrouillé 2026-08-29 — remplace tout système antérieur.**
-**Cible : PC 1920×1080 (min 1366×768), tablette 1024 icône-rail. Pas de dark mode. Pas de mobile-first.**
+**Statut : en vigueur, 2026-08-29. Remplace tout système antérieur.**
 
-## Pourquoi un nouveau système
+Ce répertoire décrit **ce qui est livré**, pas ce qui serait souhaitable. Chaque
+règle ici correspond à du code que l'on peut ouvrir, et chaque valeur de
+contraste a été mesurée, pas estimée. Une règle qu'aucun fichier n'applique n'a
+rien à faire dans ce répertoire — c'est exactement ce qui a fait échouer les
+quatre tentatives précédentes.
 
-Le système précédent livrait des cartes blanches sur fond blanc, sans état actif, densité indifférenciée et couleur utilisée comme décoration. La pratique exige 6–8h d'usage continu sur données réelles, sous loi 18-07 — la décoration qui fatigue est un défaut clinique.
+> ⚠️ **La leçon des quatre échecs.** La cinquième version de ce répertoire
+> (18 fichiers, 1 177 lignes, écrits le 2026-08-29 à 01h49) décrivait un
+> produit qui n'existait pas : la doctrine était bonne, l'application n'avait
+> pas bougé. Une documentation de design ne vaut que par le diff qui
+> l'accompagne. **Documenter après avoir implémenté, jamais l'inverse.**
 
-V2 s'articule autour de **Quiet Intelligence devenue Vibrant Instrument** :
+---
 
-> Fondation neutre extrêmement raffinée + surfaces structurées discrètes + typographie qui porte 70% de la hiérarchie + couleur sémantique parcimonieuse + marque orientante + **moments vibrants rares** (dégradé / illustration / effet IA sur hero / tuile d'identité seulement).
+## Autorité
 
-Si retirer 30% de la décoration améliore la hiérarchie, l'élément n'aurait jamais dû exister.
+Ce répertoire remplace `04-DESIGN-SYSTEM.md` (jetons visuels) et
+`05-UX-CONTRACT.md` (états d'écran), supprimés du dépôt.
 
-## Lecture
+**Les règles de SÛRETÉ que ces deux documents portaient ne sont pas
+abandonnées** : elles sont reprises ici, et pour deux d'entre elles rendues
+structurelles plutôt que disciplinaires (voir `DESIGN_DECISIONS.md`).
 
-```
-README.md               — ce fichier, carte et build
-DESIGN_PHILOSOPHY.md    — principes, 6 niveaux, anti-slop
-DESIGN_TOKENS.md        — implémentation tokens.css ↔ Tailwind
-COLOR_SYSTEM.md         — hiérarchie 70/15/10, ramps, WCAG
-TYPOGRAPHY.md           — Inter 400-800 + Fraunces display + mono
-SPACING_AND_GRID.md     — échelle 4pt + grille PC + densité
-LAYOUT_SYSTEM.md        — shell, max 1120, cockpit bento
-NAVIGATION.md            — rail 248→72, groupes par rôle
-COMPONENTS.md           — taxonomie complète + anatomie
-COMPONENT_STATES.md     — 15 états obligatoires
-DATA_VISUALIZATION.md   — charts décisionnels seulement
-MOTION.md               — durées, easing, reduced-motion
-ACCESSIBILITY.md        — WCAG AA, focus, clavier, cibles
-RESPONSIVE_AND_RTL.md   — PC-first, 1024/1280, RTL Arabe
-JARVIS_UI.md            — couche ambiante, 10 états, carte confirmation
-HEALTHCARE_PATTERNS.md  — blocs identité, chronologie, posologie, sécurité
-UX_PRINCIPLES.md        — 10 principes + contract 5 états
-DESIGN_DECISIONS.md     — ADR design, alternatives rejetées, migration
-```
-
-## Source unique
-
-`src/styles/tokens.css` — seule source de couleur/espacement/rayon/durée/typo/grille (I10). `tailwind.config.ts` consomme en `var(--*)`, ne définit jamais de littéral hors `screens`/`outline`/`min 0`. Violer = rejet revue.
-
-## Build & vérification
+La hiérarchie d'autorité de `DOC-AUTHORITY.md` §1 reste vraie ; ce répertoire y
+prend la place des deux fichiers cités. En cas de conflit :
 
 ```
-pnpm typecheck   — 0 erreur (strict, noUncheckedIndexedAccess)
-pnpm lint        — 0 erreur (no-restricted-imports porte DbPort)
-pnpm build && pnpm start  — mesure perf §06-PERF-BUDGET
-grep -r "gradient(" src/ — 0 hors tokens.css (hors tuiles autorisées)
-grep -r "#[0-9a-fA-F]\{3,6\}" src/components — 0 hex hors tokens
+migration appliquée  >  CLAUDE.md  >  00-DECISIONS (ADR)  >  ce répertoire
 ```
 
-## Rôles
+---
 
-- `owner`/`practitioner` — navigation complète, RLS cloisonne lignes (patients/revenus).
-- `assistant` — rail réduit (Tableau + Agenda uniquement), jamais clinique.
-- Jarvis hérite des permissions humaines, jamais d'élévation.
+## Les documents
 
-## Environnements
+| Fichier | Ce qu'il fixe |
+|---|---|
+| `VISUAL_LANGUAGE.md` | Les deux mondes (chrome / contenu), la couleur, la profondeur, le mouvement |
+| `DESIGN_TOKENS.md` | Les jetons, leur mapping Tailwind, **et le piège du no-op silencieux** |
+| `TYPOGRAPHY.md` | Les rôles typographiques et leur emploi |
+| `LAYOUT_SYSTEM.md` | La coquille, les compositions par écran |
+| `NAVIGATION.md` | Le rail, la barre supérieure, la composition par rôle |
+| `COMPONENTS.md` | L'inventaire réel des primitives et leur API |
+| `UX_CONTRACT.md` | **Les 5 états obligatoires** — repris de `05-UX-CONTRACT.md` |
+| `ACCESSIBILITY.md` | Le plancher, avec les contrastes mesurés |
+| `MODE_SEANCE.md` | Le seul moment orchestré du produit |
+| `JARVIS_UI.md` | La langue visuelle de l'assistant |
+| `RESPONSIVE_AND_RTL.md` | Les ruptures réelles, et l'état honnête du RTL |
+| `DESIGN_DECISIONS.md` | Ce qui a été retiré en V7, et pourquoi |
 
-Light-only. `--night-*` déclarés mais non mappés Tailwind — poser `class="dark"` ne produit rien (volontaire, § ACCESSIBILITY).
+---
+
+## Cible
+
+Poste du cabinet : **1920 × 1080**. Secondaire : 1366 × 768. Plancher
+supporté : **1024** (rail replié en icônes).
+
+**Pas de dark mode global** — `darkMode` est délibérément absent de
+`tailwind.config.ts`. La seule surface sombre du produit est le **Mode Séance**,
+et c'est un écran, pas un thème.
+
+**Pas de mobile-first.** L'application est un instrument de bureau, utilisé
+assise, six à huit heures par jour, sur un écran fixe.
+
+---
+
+## Les trois invariants d'implémentation
+
+Ils ne sont pas des conseils : le lint ou le build les font respecter.
+
+1. **`src/styles/tokens.css` est la seule feuille de style du dépôt.**
+   `scripts/preflight.sh` §6ter rejette tout second `.css`.
+
+2. **Aucune couleur ni dimension en dur dans `src/`.**
+   `eslint.config.js` interdit les valeurs Tailwind arbitraires (`w-[420px]`),
+   le hex, `rgb()/hsl()`, et les littéraux `px/ms/%` dans un `style={{}}`.
+   Toute valeur visuelle existe d'abord comme jeton.
+
+3. **Un écran = un appel serveur.** `docs/06-PERF-BUDGET.md` reste la
+   référence ; la refonte V7 n'a ajouté aucun appel.

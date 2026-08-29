@@ -1,66 +1,71 @@
-# TYPOGRAPHY — MindCare V2
+# Typographie
 
-## 1. Familles (chargées `next/font/google`, zéro réseau à l'exécution, 26 woff2 392KB)
+## Une famille porte l'interface
 
-| Rôle | Famille | Variable | Poids | Usage |
-|---|---|---|---|---|
-| **UI principal** | **Inter** | `--font-inter-emise` → `--font-ui` / `--font-inter` | 400,500,600,700,800 | toute interface. 400 corps, 500 label, 600 emphase, 700 page, 800 metrics |
-| Fallback UI | Geist | `--font-ui-emise` | 400,500,600 | secours si Inter échoue (I20) |
-| Num/data | Geist Mono | `--font-num-emise` → `--font-num` | 400,500 | heures/doses/montants/chrono tabular-nums |
-| Display | Fraunces | `--font-display-emise` → `--font-display` | 500,600,700,800 | montants 30-36px uniquement, jamais corps |
-| Document | Newsreader | `--font-doc-emise` → `--font-doc` | 400 | aperçus certificats imprimés seulement |
-| Arabe | IBM Plex Sans Arabic | `--font-ar-emise` → `--font-ar` | 400,500,600 | RTL transcriptions, interligne 1.8 |
+**Inter** (`--font-ui`) porte titres, libellés, corps, boutons, navigation. Un
+produit d'usage n'a pas besoin d'un couple affichage/texte : un grotesque bien
+réglé fait tout, et la variété affaiblirait la cohérence.
 
-Pas de serif display OS (anti slop). Pas d'Inter 600+ systématique.
+| Famille | Jeton | Emploi |
+|---|---|---|
+| Inter | `--font-ui` | **tout l'écran** |
+| Geist Mono | `--font-num` | **mesures** : montants, heures, chronomètre, n° de dossier |
+| Newsreader | `--font-doc` | **le document imprimé uniquement** — elle encode le statut légal du contenu |
+| IBM Plex Sans Arabic | `--font-ar` | blocs arabes, `[dir="rtl"]` |
+| Fraunces | `--font-display` | chargée, **plus employée dans l'interface** |
 
-## 2. Échelle (définie `tokens.css:531` → consommée `tailwind.fontSize`)
+> **Fraunces a quitté les nombres en V7.** Une face d'affichage posée sur un
+> compteur ou un montant est un costume. Les valeurs passent en `--font-num` :
+> elles se lisent comme des mesures.
 
-| Nom | Taille / interligne | Graisse | Tracking | Usage |
-|---|---|---|---|---|
-| display | 30px / 1.15 | **700** | -0.02em | un par vue, titre de page |
-| title | 21px / 1.25 | **600** | -0.01em | sections |
-| heading | 16px / 1.35 | **600** | -0.005em | cartes/groupes |
-| body | 14px / 1.55 | **400** | 0 | texte courant — **400 obligatoire**, ne jamais 600 |
-| notes | 15px / 1.7 | **400** | 0 | notes cliniques — plus grand exprès |
-| label | 12px / 1.3 | **500** | 0.02em | libellés UI |
-| eyebrow | 11px / 1.2 | **600** | 0.09em | MAJUSCULES groupes, kicker |
-| num | 14px / 1.4 | **500** | 0 | tabular-nums obligatoire |
-| metric | 36px / 1.1 | **800** | -0.02em | `--text-metric-*` display exceptionnel |
+> **Le monospace n'est pas un costume « technique ».** Il sert la donnée et la
+> mesure — jamais du texte courant pour faire sérieux.
 
-**Hiérarchie V2 verrouillée :** 400 corps long-forme → 500 secondaire → 600 emphase/bouton/section → 700 page → 800 metrics hero. Augmenter identité par taille/espace, pas en grasissant le corps.
+## Les rôles
 
-## 3. Zéro ovale (sans slash) — correction V2
+Chaque rôle porte **sa** taille, **son** interligne et **son** interlettrage,
+posés ensemble dans le tuple `fontSize` de la configuration.
 
-Inter active `slashed-zero` via OT `zero`/`ss02`. Pour dossiers/montants, Ø barre = ambigu. On force ovale partout :
+| Rôle | Taille | Graisse | Emploi |
+|---|---|---|---|
+| `metric` | 36 px | 600 | une valeur lue d'un coup d'œil à distance — chronomètre de séance |
+| `display` | 30 px | 700 | le nom en Mode Séance |
+| `title` | 21 px | 600 | titre d'écran, valeur de tuile |
+| `heading` | 16 px | 600 | titre de section |
+| `body` | 14 px | 400 | **le corps, et il reste en 400** |
+| `notes` | 15 px | 400 | texte clinique long (interligne 1.7) |
+| `label` | 12 px | 500 | libellés de champs et de cartes |
+| `eyebrow` | 11 px | — | étiquettes d'axe de graphique **uniquement** |
+| `num` | 14 px | — | données tabulaires |
 
-```css
-html, body, .num, .tabular-nums, [class*="font-num"] {
-  font-variant-numeric: tabular-nums;
-  font-feature-settings: "tnum" 1, "zero" 0, "ss02" 0;
-}
-.font-display { font-variant-numeric: tabular-nums lining-nums; font-feature-settings:"tnum"; }
-```
+### Deux règles qui se transgressent facilement
 
-Tailwind : `tabular-nums` classe conserve, `.num` appliqué colonnes doses/heures. Vérifiable inspect → computed ne contient pas `zero`.
+**Le corps clinique reste en 400.** Une note lue plusieurs minutes en 600
+fatigue. La hiérarchie se fait par la taille, l'espace et la couleur — pas en
+mettant tout en gras.
 
-## 4. Règles d'usage clinique
+**L'interlettrage est déjà dans le rôle.** `tracking-tight` était posé 8 fois
+par-dessus un rôle qui portait déjà le sien : redondant, et de toute façon
+inexistant dans l'échelle. Ne pas re-spécifier ce que le rôle fixe.
 
-- **Noms patients** — heading 16 600, pas display. Poids distingue, pas taille seule.
-- **Dates** — num 14 500 tabular, `Africa/Algiers` calculée en base, jamais JS locale.
-- **Posologies** — num tabular, `15mg` sans espace fine ? espace normale, alignée droite en colonne.
-- **Montants DZD** — integer, Fraunces 30-36 600/800 ou Inter num 500 tabular, jamais flottant (ADR-018).
-- **Statuts** — label 12 500 + puce couleur, jamais couleur seule.
-- **Table dense** — 14 body, `leading 1.35`, `tracking 0` — pas 12px body (illisibilité 8h).
+## Chiffres tabulaires
 
-## 5. Longueur de ligne & interligne
+`font-variant-numeric: tabular-nums` est posé sur `html`/`body`, plus
+`"tnum" 1, "zero" 0, "ss02" 0` — ce dernier neutralise le zéro barré d'Inter,
+qui se lit mal sur un montant.
 
-- Corps max 65ch, notes max 70ch.
-- Arabe `1.8` obligatoire (`[dir=rtl]` règle).
-- Document imprimé séparé : `--doc-texte 10.5pt / 1.5` en mm/pt, jamais px écran.
+Sans `tabular-nums`, un chronomètre fait trembler sa ligne à chaque seconde.
 
-## 6. Anti-patterns
+## Le sur-titre est banni
 
-- Tout en bold (rejet critique 6.5/10).
-- Double font décorative hors doc imprimé.
-- Taille arbitraire `text-[13px]` hors échelle.
-- Zéro barré dans numéro dossier/reçu (`P-0003` etc.).
+Un libellé en capitales posé **au-dessus** d'un titre est un ornement qui
+affaiblit le titre qu'il prétend introduire. `surTitre` a disparu avec
+`EnTeteEcran` / `EnTetePage`, et 24 libellés ont quitté le costume capitales +
+interlettrage large (voir `DESIGN_DECISIONS.md` D-V7-5).
+
+Le rôle `eyebrow` survit pour ce qu'il sait faire : une étiquette d'axe.
+
+## Mesure de lecture
+
+`max-w-lecture` (70ch) pour tout texte long — note, résumé, message d'erreur
+développé. En deçà le texte hache, au-delà l'œil perd la ligne suivante.

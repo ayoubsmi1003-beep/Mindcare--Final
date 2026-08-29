@@ -1,49 +1,61 @@
-# RESPONSIVE_AND_RTL — MindCare V2 (PC)
+# Ruptures, et l'état honnête du RTL
 
-> MindCare est un OS de poste fixe, pas une app mobile. PC first, pas mobile first.
+## Les ruptures
 
-## 1. Breakpoints (seuls)
+| Nom | Largeur | Effet |
+|---|---|---|
+| `md` | 768 px | déclaré, peu employé |
+| `tablet` / `lg` | 1024 px | **plancher supporté** |
+| `desktop` / `xl` | 1280 px | **le rail reprend ses libellés** |
+| `2xl` | 1600 px | réserve |
 
-```
-tablet  1024px  — rail 248 → 72 icônes, contenu reste bento max 1120
-desktop 1280px  — gutters max, grilles larges contexte 340 possible
-```
+Cible principale : **1920 × 1080**, le poste du cabinet. Secondaire :
+1366 × 768.
 
-Pas de `sm`/`xs` mobile. `tailwind.screens` lit `1024/1280` littéraux (`var()` inopérant).
+> `lg` / `xl` / `md` n'existaient pas avant V7 : `theme.screens` étant remplacé,
+> huit variantes `lg:` du dépôt tombaient dans le vide, dont `lg:p-8` sur
+> l'en-tête et `lg:grid-cols-2` sur Documents.
 
-## 2. Comportements PC
+## Comportement
 
-| Largeur | Rail | Grille | Notes |
-|---|---|---|---|
-| ≥1920 (cible) | 248 | 4 colonnes `fiche`, 3 finance 40/32/28, pouls×5 | poste cabinet, optimal |
-| 1366 min | 248 | 2-3 cols auto-fit, pouls wraps 5→3+2 | vérifié |
-| 1280 | 248 | idem, contexte 340 possible | — |
-| 1024 | **72** compact icônes | 2 cols, cartes `min 240` | `LIBELLE_REPLIABLE` a11y |
-| <1024 | reste 72 (pas overlay) | 1 col, charts scroll `min 480`, agenda scroll `day-min 132` | page **ne** scrolle pas horizontal |
+- **1280 et au-delà** : rail complet à 244 px.
+- **1024 → 1279** : rail replié en icônes (68 px). Les libellés sortent du flux
+  visuel et **restent dans l'arbre d'accessibilité**.
+- **Sous 1024** : non supporté. Pas de mobile-first — l'application est un
+  instrument de bureau.
 
-**Règle :** page jamais `overflow-x: auto` — chaque tableau/chart porte son propre scroll. `min-h-0` + `overflow-hidden` sur grille isole.
+Le contenu large (grille d'agenda, tableaux) **défile dans son conteneur**,
+jamais en poussant la page.
 
-## 3. Dégradation mesurée
+> ⚠️ **Ne pas mesurer un débordement avec `documentElement.scrollWidth`.**
+> `getBoundingClientRect` et `scrollWidth` ignorent le clipping d'un ancêtre :
+> une grille qui défile correctement dans sa boîte est annoncée comme un
+> débordement du document. `scripts/qa-visuelle-v7.mjs` teste le
+> **comportement** — la page défile-t-elle vraiment.
 
-- 1280 aucun scroll horizontal `scrollWidth ≤ clientWidth` (contrôle C8a 0px).
-- Agenda semaine >132px/col → scroll horizontal conteneur, header sticky, temps vertical fixe.
-- Finance chart <480 → scroll, `h2 track` visible.
+## RTL et localisation — l'état réel
 
-## 4. RTL — FR/AR/Darija/EN (règle 4 locale)
+**Ce qui existe :**
 
-- `[dir="rtl"], .ar { font-family: var(--font-ar); line-height: 1.8 }` (`tokens 901`).
-- `IBM Plex Sans Arabic` subset `arabic` obligatoire (glyphes réels), pas fallback.
-- Layout logique : `gap`, `padding-inline`, pas `left/right`. Nav rail miroir droite si `dir=rtl` futur (actuellement `lang=fr` `layout 162` — prévoir `dir` dynamique au routeur).
-- Dates/heures : `timestamptz` + bornes `Africa/Algiers` en base, affichage via `Intl` avec locale, chiffres `tabular-nums` restent `Geist Mono` LTR même en RTL (`[dir=rtl] .num` override si besoin).
-- Bidirectionnel : noms patients FR/AR mixtes → `unicode-bidi: plaintext` sur identity blocks.
-- Nombres/monnaie : `amount_dzd` integer DZD — `1 234 DA`, groupement espace fine, pas virgule US en AR.
-- Patient name long : `truncate` + `title`, RTL truncate `direction: rtl`.
+- `--font-ar` (IBM Plex Sans Arabic) est **réellement chargée**, sous-ensemble
+  arabe compris.
+- `[dir="rtl"], .ar` bascule la famille et l'interligne (1.8) dans `tokens.css`.
+- L'en-tête du certificat A5 rend son bloc arabe avec sa propre métrique.
 
-## 5. Localisation strings
+**Ce qui n'existe pas, et qu'il ne faut pas croire acquis :**
 
-Aucune chaîne en dur (`i18n/fr.ts` source). Clés `fr.nav.groupes.*`, `fr.coquille.*`, `fr.actions.*`. Vide/erreur confirmés FR, fallback `texteAbsent`.
+- `<html lang="fr">` est **en dur** dans `src/app/layout.tsx`.
+- **Aucun attribut `dir` n'est posé nulle part** dans `src/`.
+- Il n'y a **qu'un seul catalogue**, `src/i18n/fr.ts`. Pas de `en.ts`, pas de
+  `ar.ts`, aucun mécanisme de bascule.
+- Les compositions n'ont **jamais été rendues en miroir**.
 
-## 6. Tests RTL
+En clair : le produit est **francophone, LTR**, avec le support typographique
+d'un bloc arabe **dans un document imprimé**. Le multilingue et le RTL
+d'interface sont un chantier à part entière — catalogue, `dir` dynamique au
+routeur, miroir des grilles, relecture des icônes directionnelles — et
+prétendre le contraire coûterait une session de reprise.
 
-- [ ] Passer `html lang="ar" dir="rtl"` → rail droite, timeline miroir, chiffres restent lisibles.
-- [ ] `0` arabe-indic optionnel `font-feature-settings:"locl"` — désactivé V1 (chiffres européens conservés pour DZD).
+Ce que V7 n'a **pas** fait : ajouter du RTL décoratif non testé. Ce que V7 a
+fait : ne rien poser qui le rende plus difficile — les compositions sont en
+flex/grid logiques, sans marges gauche/droite codées en dur.
