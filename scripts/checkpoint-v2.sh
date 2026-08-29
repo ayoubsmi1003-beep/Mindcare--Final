@@ -88,9 +88,9 @@ n=$(grep -rn "SpeechRecognition\|webkitSpeech" src/ 2>/dev/null | wc -l | tr -d 
 
 # Contrôle 9 · aucune clé de fournisseur dans le bundle client.
 if [ -d .next/static ]; then
-  n=$(grep -rl "GROQ\|ELEVENLABS\|OPENROUTER" .next/static/ 2>/dev/null | wc -l | tr -d ' ')
-  [ "$n" = "0" ] && vert "9 · grep GROQ/ELEVENLABS/OPENROUTER dans .next/static/" "0 fichier" \
-                  || rouge "9 · grep GROQ/ELEVENLABS/OPENROUTER dans .next/static/" "$n fichier(s)"
+  n=$(grep -rl "GROQ\|ELEVENLABS\|OPENROUTER\|SEEKAI" .next/static/ 2>/dev/null | wc -l | tr -d ' ')
+  [ "$n" = "0" ] && vert "9 · grep GROQ/ELEVENLABS/OPENROUTER/SEEKAI dans .next/static/" "0 fichier" \
+                  || rouge "9 · grep GROQ/ELEVENLABS/OPENROUTER/SEEKAI dans .next/static/" "$n fichier(s)"
 else
   bloque "9 · grep clés dans .next/static/" "pas de build sur le disque"
 fi

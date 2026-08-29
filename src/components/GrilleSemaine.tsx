@@ -208,7 +208,15 @@ export function GrilleSemaine({
           Le tableau scrolle dans SON conteneur — la page, elle, ne défile
           jamais horizontalement (règle 9). v9 — élévation cohérente avec les
           autres surfaces principales de l'application. */}
-      <div className="overflow-x-auto rounded-xl border border-rule bg-card shadow-lift2">
+      {/*
+        `min-w-0` EST INDISPENSABLE ICI, ET SON ABSENCE DEBORDAIT LE DOCUMENT.
+        Un enfant de flex a `min-width: auto` par defaut : il refuse de
+        descendre sous la largeur de son contenu. L'`overflow-x-auto` de cette
+        boite ne servait donc a rien — elle grandissait avec la grille au lieu
+        de la faire defiler, et poussait la page entiere. Mesure a 1024 :
+        1192px de document pour 1024px de fenetre.
+      */}
+      <div className="min-w-0 overflow-x-auto rounded-xl border border-rule bg-card shadow-lift2">
         <table
           className="w-full table-fixed border-collapse"
           // La largeur plancher dépend du NOMBRE de colonnes, qui est une
@@ -372,8 +380,19 @@ function CelluleLibre({
     "font-ui text-label text-ink-500",
   ].join(" ");
 
+  // V7 — L'INTENTION CI-DESSUS EST ENFIN IMPLÉMENTÉE. Le commentaire disait
+  // depuis le début « le mot n'apparaît qu'au survol » ; le code, lui, l'écrivait
+  // toujours. Mesuré à 1920 sur une semaine ordinaire : 80 « libre » pour
+  // 4 séances. Le motif dominant de l'écran était le vide, répété.
+  //
+  // Le mot reste dans l'arbre d'accessibilité : une case muette pour un lecteur
+  // d'écran serait un créneau de moins, pas un écran plus calme.
   if (onCreneauLibre === undefined) {
-    return <div className={commun}>{fr.agenda.semaine.libre}</div>;
+    return (
+      <div className={commun}>
+        <span className="cache-visuellement">{fr.agenda.semaine.libre}</span>
+      </div>
+    );
   }
 
   return (
@@ -382,12 +401,14 @@ function CelluleLibre({
       onClick={() => onCreneauLibre(debut)}
       className={[
         commun,
-        "cursor-pointer transition duration-quick ease-soft",
+        "group cursor-pointer transition duration-quick ease-soft",
         "hover:border-brand-400 hover:bg-brand-50 hover:text-brand-700",
         "outline-none focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset",
       ].join(" ")}
     >
-      {fr.agenda.semaine.libre}
+      <span className="opacity-0 transition duration-quick ease-out group-hover:opacity-100 group-focus-visible:opacity-100">
+        {fr.agenda.semaine.libre}
+      </span>
     </button>
   );
 }

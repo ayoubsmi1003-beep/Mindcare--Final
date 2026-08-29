@@ -17,11 +17,8 @@ export {
   Carte,
   PastilleIcone,
   Section,
-  EnTeteEcran,
-  EnTetePage,
   PanneauInfo,
   GrilleChamps,
-  MetaHeros,
 } from "./Surfaces";
 export type {
   CarteProps,

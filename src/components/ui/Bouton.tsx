@@ -38,7 +38,11 @@ export type RangBouton = "principal" | "secondaire" | "discret";
  */
 const SOCLE = [
   "inline-flex items-center justify-center gap-2",
-  "min-h-target rounded-full px-5 py-3",
+  // V7 — `rounded-lg`, plus `rounded-full`. La pastille pleine est une forme
+  // de produit grand public ; l'outil professionnel partage UNE géométrie, et
+  // c'est celle du rail, du champ de commande et des cartes. Une seule
+  // grammaire de forme sur tout l'écran vaut mieux que deux qui coexistent.
+  "min-h-target rounded-lg px-5 py-3",
   "font-ui text-body font-semibold tracking-body",
   "cursor-pointer select-none text-center",
   "transition duration-quick ease-out",
@@ -48,13 +52,26 @@ const SOCLE = [
 ].join(" ");
 
 const RANGS: Readonly<Record<RangBouton, string>> = {
-  // V2 Vibrant Instrument — principal = moment vibrant rare (L6)
-  // Dégradé de marque + blanc pur 5.10:1, lueur subtile au repos, intensifiée au hover.
-  // Un seul primaire par vue — il doit se trouver sans être lu.
+  // V7 — APLAT DE MARQUE, PLUS DE DÉGRADÉ NI DE LUEUR.
+  //
+  // L'action principale était `bg-grad-tile-brand` avec `hover:shadow-glow-brand` :
+  // un dégradé et un halo coloré sans décalage. Deux problèmes.
+  //
+  // Le halo à décalage nul n'est pas de la profondeur, c'est de la décoration :
+  // une ombre porte un décalage et un flou parce qu'elle vient d'une lumière.
+  // Et la lueur avait, par règle du système, TROIS usages fermés — entrée de
+  // navigation active, orbe Alexa, carte de confirmation. Un bouton primaire
+  // présent sur presque tous les écrans en faisait le quatrième, et le plus
+  // fréquent : la lueur ne signalait plus rien.
+  //
+  // Le dégradé, lui, faisait varier le contraste du blanc d'un bout à l'autre
+  // du bouton. --action-600 en aplat mesure 5.10:1 avec le blanc pur, partout
+  // pareil. Sur un bouton qui déclenche une écriture clinique, une valeur de
+  // contraste constante vaut mieux qu'un dégradé.
   principal: [
-    "bg-grad-tile-brand text-on-brand shadow-lift2 border border-transparent",
-    "hover:shadow-glow-brand",
-    "active:shadow-lift1",
+    "bg-action-600 text-on-brand border border-transparent shadow-lift1",
+    "hover:bg-action-700 hover:shadow-lift2",
+    "active:bg-action-900 active:shadow-lift0",
   ].join(" "),
   secondaire: [
     "bg-card text-ink-900 border border-rule shadow-lift1",
@@ -62,7 +79,7 @@ const RANGS: Readonly<Record<RangBouton, string>> = {
     "active:bg-sunken active:shadow-lift0",
   ].join(" "),
   discret: [
-    "bg-transparent text-ink-500 border border-transparent rounded-full",
+    "bg-transparent text-ink-500 border border-transparent rounded-lg",
     "hover:bg-sunken hover:text-ink-900",
     "active:bg-sunken",
   ].join(" "),
@@ -70,7 +87,7 @@ const RANGS: Readonly<Record<RangBouton, string>> = {
 
 /** Rang d'un geste qui retire quelque chose. `attention`, jamais `critical`. */
 const RETRAIT = [
-  "bg-card text-attention-ink border border-attention shadow-lift1 rounded-full",
+  "bg-card text-attention-ink border border-attention shadow-lift1 rounded-lg",
   "hover:bg-attention-bg hover:shadow-lift2",
   "active:bg-attention-bg active:shadow-lift0",
 ].join(" ");

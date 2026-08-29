@@ -37,7 +37,7 @@ printf '%s' "$cmd" | grep -Eiq 'supabase[[:space:]]+db[[:space:]]+reset' \
 printf '%s' "$cmd" | grep -Eq '(cat|less|more|head|tail|type)[[:space:]]+[^|;&]*\.env' \
   && block "lecture d'un fichier .env. Les secrets ne transitent pas par le terminal."
 
-printf '%s' "$cmd" | grep -Eq 'echo[[:space:]]+.*\$(SERVICE_ROLE|GROQ_API_KEY|OPENROUTER_API_KEY)' \
+printf '%s' "$cmd" | grep -Eq 'echo[[:space:]]+.*\$(SERVICE_ROLE|GROQ_API_KEY|OPENROUTER_API_KEY|SEEKAI_API_KEY|NEW_API_KEY)' \
   && block "affichage d'un secret. Une clé affichée est une clé compromise."
 
 # 5 — audio écrit sur disque (un glob "*.wav" reste permis : c'est une recherche, pas une écriture)

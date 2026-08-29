@@ -353,10 +353,10 @@ export function CockpitReception({ horsLigneSession }: CockpitReceptionProps): R
               {journee.length === 0 && demandes.length === 0 ? (
                 <div className="flex flex-1 flex-col items-center justify-center gap-4 rounded-xl border border-dashed border-rule bg-sunken px-6 py-10">
                   <span aria-hidden="true" className="flex h-14 w-14 items-center justify-center rounded-2xl bg-card shadow-lift1">
-                    <span className="h-8 w-8 rounded-xl bg-grad-empty opacity-60" />
+                    <span className="h-8 w-8 rounded-xl bg-grad-empty opacity-disabled" />
                   </span>
                   <p className="font-ui text-body font-medium text-ink-700">{fr.reception.frise.videJournee}</p>
-                  <p className="max-w-sm text-center font-ui text-label text-ink-500">Les rendez-vous du jour apparaissent ici. Créez le premier en un clic.</p>
+                  <p className="max-w-form text-center font-ui text-label text-ink-500">Les rendez-vous du jour apparaissent ici. Créez le premier en un clic.</p>
                   <LienBouton href="/agenda/nouveau" rang="principal">
                     {fr.reception.frise.nouveauRdv}
                   </LienBouton>

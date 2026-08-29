@@ -126,7 +126,7 @@ function LigneCreneau({
               <Avatar prenom={creneau.firstName ?? ""} nom={creneau.lastName ?? ""} />
             ) : null}
 
-            <span className="min-w-0 flex-1 truncate font-ui text-body font-semibold tracking-tight text-ink-900">
+            <span className="min-w-0 flex-1 truncate font-ui text-body font-semibold text-ink-900">
               {nomConnu ? `${creneau.firstName} ${creneau.lastName}` : "—"}
             </span>
 
@@ -159,7 +159,7 @@ function CurseurMaintenant(): React.JSX.Element {
       <span className="relative z-10 inline-flex shrink-0 rounded-full bg-card p-1">
         <span className="block h-3 w-3 rounded-full bg-action-600 shadow-glow-brand" />
       </span>
-      <span className="font-ui text-eyebrow font-medium uppercase tracking-eyebrow text-action-700">
+      <span className="font-ui text-label font-medium tracking-label text-action-700">
         {fr.tableauDeBord.fil.maintenant}
       </span>
       <span className="flex-1 border-t border-action-100" />

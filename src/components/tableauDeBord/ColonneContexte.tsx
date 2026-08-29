@@ -18,7 +18,7 @@ import type { CaisseDuJour, PropositionJarvis } from "@/services/dashboard";
 
 function Intitule({ children }: { readonly children: React.ReactNode }): React.JSX.Element {
   return (
-    <p className="font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-ink-500">
+    <p className="font-ui text-label font-medium tracking-label text-ink-500">
       {children}
     </p>
   );
@@ -68,10 +68,10 @@ export function CarteCaisse({
         </div>
 
         {caisse.seances === 0 ? (
-          <p className="font-ui text-body font-regular leading-relaxed text-ink-500">{fr.tableauDeBord.caisse.rien}</p>
+          <p className="font-ui text-body font-regular text-ink-500">{fr.tableauDeBord.caisse.rien}</p>
         ) : (
           <div className="flex flex-col gap-1">
-            <p className="font-display text-display font-bold tabular-nums tracking-tight text-ink-900">
+            <p className="font-num text-metric font-semibold tabular-nums text-ink-900">
               {formaterDzd(caisse.montantDzd)}
             </p>
             <p className="font-ui text-label font-medium text-ink-500">
@@ -110,9 +110,9 @@ export function CarteNouveauxPatients({
         </div>
 
         {nombre === 0 ? (
-          <p className="font-ui text-body font-regular leading-relaxed text-ink-500">{fr.tableauDeBord.nouveaux.aucun}</p>
+          <p className="font-ui text-body font-regular text-ink-500">{fr.tableauDeBord.nouveaux.aucun}</p>
         ) : (
-          <p className="font-display text-display font-bold tabular-nums tracking-tight text-ink-900">
+          <p className="font-num text-metric font-semibold tabular-nums text-ink-900">
             {nombre}
           </p>
         )}
@@ -213,11 +213,13 @@ export function CartePropositions({
 
   if (propositions.length === 0) {
     return (
-      <EtatVide
-        icone="jarvis"
-        titre={fr.tableauDeBord.jarvis.titre}
-        message={fr.tableauDeBord.jarvis.vide}
-      />
+      <Carte niveau="ia">
+        <EtatVide
+          icone="jarvis"
+          titre={fr.tableauDeBord.jarvis.titre}
+          message={fr.tableauDeBord.jarvis.vide}
+        />
+      </Carte>
     );
   }
 

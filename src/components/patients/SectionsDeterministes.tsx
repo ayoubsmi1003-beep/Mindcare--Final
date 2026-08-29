@@ -48,7 +48,7 @@ export function SectionDepuisDerniere({
   }
 return (
     <section className="flex flex-col gap-2">
-      <h3 className="font-ui text-eyebrow uppercase tracking-eyebrow text-ink-500">
+      <h3 className="font-ui text-label tracking-label text-ink-500">
         {fr.patients.depuis.titre}
       </h3>
       {ref === null ? (
@@ -97,7 +97,7 @@ export function ListeSignaux({
 
   return (
     <section id="signaux" className="flex flex-col gap-2">
-      <h3 className="font-ui text-eyebrow uppercase tracking-eyebrow text-ink-500">
+      <h3 className="font-ui text-label tracking-label text-ink-500">
         {fr.patients.signaux.titre}
       </h3>
       {affiches.length === 0 ? (

@@ -137,8 +137,8 @@ export const fr = {
      * la bannière héros qui ouvrait chaque écran sur le même dégradé et
      * coûtait 120 px de hauteur utile partout.
      */
-    commande: "Rechercher un patient, un rendez-vous, un document…",
-    commandeCourt: "Rechercher…",
+    commande: "Demander à Alexa…",
+    commandeCourt: "Alexa…",
     /** Le raccourci, affiché dans la barre. Non traduit : c'est une touche. */
     raccourci: "⌘K",
     barreOutils: "Barre d'outils",

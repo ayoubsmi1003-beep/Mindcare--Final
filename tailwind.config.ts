@@ -185,6 +185,10 @@ const config: Config = {
       24: "var(--s-24)",
       32: "var(--s-32)",
       px: "var(--s-px)",
+      "0.5": "var(--s-0-5)",
+      "1.5": "var(--s-1-5)",
+      "2.5": "var(--s-2-5)",
+      "3.5": "var(--s-3-5)",
     },
     borderRadius: {
       // "none" est la valeur nulle universelle : pas de token dédié dans §3

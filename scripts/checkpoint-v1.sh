@@ -94,7 +94,7 @@ out=$(grep -rn "fetch(\"https\|fetch('https" --include="*.ts" --include="*.tsx" 
 # 5 · Aucune clé au bundle client (règle 2). Exige un build : sans `.next/`, le
 # contrôle n'a rien mesuré et le dire est le seul comportement honnête.
 if [ -d .next/static ]; then
-  out=$(grep -rn "OPENROUTER\|GROQ\|ELEVENLABS" .next/static/ 2>/dev/null)
+  out=$(grep -rn "OPENROUTER\|GROQ\|ELEVENLABS\|SEEKAI" .next/static/ 2>/dev/null)
   [ -z "$out" ] && green "aucun secret dans .next/static (règle 2)" \
                 || red "SECRET AU BUNDLE — arrêt immédiat" "$(printf '%s' "$out" | head -1)"
 else

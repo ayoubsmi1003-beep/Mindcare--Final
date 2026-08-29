@@ -48,7 +48,7 @@ export function BandeauSeanceEnCours({ role }: { readonly role: UserRole }): Rea
         <Icone nom="horloge" taille={16} />
       </span>
 
-      <span className="font-ui text-eyebrow font-semibold uppercase tracking-eyebrow text-ink-700">
+      <span className="font-ui text-label font-semibold tracking-label text-ink-700">
         {fr.consultation.seanceEnCours}
       </span>
 

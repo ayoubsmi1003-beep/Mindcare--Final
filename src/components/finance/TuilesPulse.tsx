@@ -62,9 +62,9 @@ function Tuile({
      * trouve sans être lue ; les quatre autres restent au même niveau entre
      * elles — hiérarchiser tout revient à ne rien hiérarchiser. */
     return (
-      <div className="flex min-w-0 flex-col justify-between gap-2 rounded-lg bg-grad-tile-brand px-4 py-3 shadow-lift2">
+      <div className="flex min-w-0 flex-col justify-between gap-2 rounded-lg bg-brand-800 px-4 py-3 shadow-lift1">
         <p
-          className="truncate font-ui text-eyebrow font-semibold uppercase text-on-brand"
+          className="truncate font-ui text-label font-medium text-on-brand"
           title={aide}
         >
           {etiquette}
@@ -75,7 +75,7 @@ function Tuile({
             tronqué est pire qu'un montant plus petit : il se lit comme un
             autre montant. L'ancre se distingue par le FOND, la GRAISSE et la
             pastille, pas par une taille qui ne tient pas. */}
-        <p className="font-display truncate text-title font-semibold leading-none text-on-brand">
+        <p className="font-num truncate text-title font-semibold tabular-nums text-on-brand">
           {valeur}
         </p>
         <p className="truncate font-ui text-label text-on-brand">{sousLigne}</p>
@@ -87,7 +87,7 @@ function Tuile({
     <div className="flex min-w-0 flex-col justify-between gap-2 rounded-lg border border-rule bg-card px-4 py-3 shadow-lift1 transition duration-quick ease-soft hover:shadow-lift2">
       <div className="flex items-center justify-between gap-2">
         <p
-          className="truncate font-ui text-eyebrow font-medium uppercase text-ink-500"
+          className="truncate font-ui text-label font-medium text-ink-500"
           title={aide}
         >
           {etiquette}
@@ -111,7 +111,7 @@ function Tuile({
           </span>
         )}
       </div>
-      <p className="font-display truncate text-title font-medium leading-none text-ink-900">
+      <p className="font-num truncate text-title font-semibold tabular-nums text-ink-900">
         {valeur}
       </p>
       <p className="truncate font-ui text-label text-ink-500">{sousLigne}</p>

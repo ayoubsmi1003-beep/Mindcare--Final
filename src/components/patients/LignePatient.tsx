@@ -49,7 +49,7 @@ export function LignePatient({
             {patient.lastName} {patient.firstName}
           </span>
           <span className="font-ui text-label font-medium tracking-label text-ink-500">
-            <span className="rounded bg-sunken px-2 py-1 font-num text-eyebrow font-semibold tabular-nums">{patient.recordNumber}</span>
+            <span className="rounded bg-sunken px-2 py-1 font-num text-label font-semibold tabular-nums">{patient.recordNumber}</span>
             {naissance === null ? null : (
               <>
                 {" · "}
@@ -83,10 +83,10 @@ export function LignePatient({
 export function EnTeteAnnuaire(): React.JSX.Element {
   return (
     <div className="flex items-center gap-4 border-b border-rule bg-sunken px-4 pb-2 pt-3">
-      <span className="grow font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-ink-500">
+      <span className="grow font-ui text-label font-medium tracking-label text-ink-500">
         {fr.patients.titre}
       </span>
-      <span className="hidden shrink-0 font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-ink-500 tablet:inline">
+      <span className="hidden shrink-0 font-ui text-label font-medium tracking-label text-ink-500 tablet:inline">
         {fr.patients.telephone}
       </span>
     </div>

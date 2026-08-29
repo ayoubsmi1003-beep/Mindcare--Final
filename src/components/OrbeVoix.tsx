@@ -150,7 +150,7 @@ export function OrbeVoix({ taille = 32 }: Props): React.JSX.Element {
         "relative inline-flex shrink-0 items-center justify-center rounded-full border-0 bg-transparent p-0",
         "transition duration-quick ease-soft",
         "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ai-600",
-        eteint ? "cursor-pointer opacity-60" : "cursor-pointer",
+        eteint ? "cursor-pointer opacity-disabled" : "cursor-pointer",
         apparence.anneau,
       ].join(" ")}
       style={{ width: taille, height: taille }}

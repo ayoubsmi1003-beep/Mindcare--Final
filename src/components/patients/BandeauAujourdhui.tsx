@@ -62,7 +62,7 @@ export function BandeauAujourdhui({
       aria-label={fr.patients.aujourdhui.titre}
       className="flex flex-wrap items-center gap-x-4 gap-y-2 rounded-lg border border-rule bg-sunken px-4 py-3"
     >
-      <span className="font-ui text-eyebrow uppercase tracking-eyebrow text-ink-500">
+      <span className="font-ui text-label tracking-label text-ink-500">
         {fr.patients.aujourdhui.titre}
       </span>
 

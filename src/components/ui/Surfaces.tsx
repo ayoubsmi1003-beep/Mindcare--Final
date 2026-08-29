@@ -24,7 +24,7 @@
 
 import type { ReactNode } from "react";
 
-import { Icone, MotifFeuilles, type NomIcone } from "./Icones";
+import { Icone, type NomIcone } from "./Icones";
 
 /* ═══════════════════════════════════════════════════════════════════════════
  * LA FAMILLE DE CARTES
@@ -171,173 +171,31 @@ export function PastilleIcone({
   );
 }
 
-/* ═══════════════════════════════════════════════════════════════════════════
- * LES EN-TÊTES — deux, et la frontière entre eux est une règle de sécurité
- * ═══════════════════════════════════════════════════════════════════════════ */
-
-/**
- * L'EN-TÊTE HÉROS — la surface de marque en tête d'écran.
+/* ══════════════════════════════════════════════════════════════════════
+ * LES EN-TÊTES ONT ÉTÉ RETIRÉS EN V7 — ET LA RÈGLE QU'ILS PORTAIENT SURVIT
+ * ══════════════════════════════════════════════════════════════════════
  *
- * ⚠️⚠️ SON TITRE N'EST JAMAIS UN NOM DE PATIENT. C'EST LA RÈGLE ENTIÈRE DE CE
- * COMPOSANT, ET ELLE N'EST PAS ESTHÉTIQUE.
+ * Ce fichier exportait `EnTeteEcran` (héros sur `--grad-brand`), `MetaHeros`
+ * et `EnTetePage`. Les trois sont supprimés : l'identité d'un écran vit
+ * désormais dans la barre supérieure de la coquille (`coquille/Topbar.tsx`),
+ * une fois, au même endroit, pour tous les écrans.
  *
- * Le fond est `--grad-brand`. ADR-022 interdit un dégradé derrière un nom de
- * patient, au même titre que derrière une dose ou un montant. Un en-tête héros
- * posé sur `/patients/[id]` mettrait donc le nom du dossier — la donnée la plus
- * identifiante de l'application — sur un fond dont le contraste varie d'un bout
- * à l'autre.
+ * ⚠️ LA RÈGLE DE SÉCURITÉ QU'ILS ENCODAIENT N'EST PAS ABANDONNÉE, ELLE EST
+ * DEVENUE STRUCTURELLE. ADR-022 interdit un dégradé derrière un nom de
+ * patient, au même titre que derrière une dose ou un montant. La répartition
+ * « écran de LIEU → héros dégradé / écran de PERSONNE → en-tête sobre »
+ * existait pour tenir cette règle, et elle reposait entièrement sur le fait
+ * que chaque écrivain d'écran choisisse le bon des deux composants.
  *
- * D'où la répartition, qui n'est pas un compromis mais le dessin lui-même :
- *   · les écrans de LIEU  (Patients, Agenda, Finances, Nouveau rendez-vous)
- *     portent le héros — leur titre est un nom d'endroit, pas de personne ;
- *   · les écrans de PERSONNE (un dossier, un rendez-vous, une consultation)
- *     gardent `EnTetePage`, sobre et opaque.
- * L'application y gagne un rythme : on entre dans la couleur, on travaille au
- * calme. La règle de sécurité et le rythme visuel disent ici la même chose.
+ * En V7 il n'y a plus de choix à faire : la barre supérieure est OPAQUE, sans
+ * dégradé, sur tous les écrans. Un nom de patient y est donc toujours posé
+ * sur un fond uni. La règle ne dépend plus d'une discipline, elle découle de
+ * la structure — la seule forme de garde-fou qui tienne dans le temps.
  *
- * UNE SEULE ENCRE : le blanc pur. Il n'existe pas de blanc atténué dans ce
- * système — sur l'arrêt clair du dégradé, aucun alpha < 1 ne passe 4.5:1 (le
- * calcul est dans `tokens.css`). La hiérarchie se fait à la taille et à la
- * graisse.
+ * Le sur-titre disparaît avec eux, et délibérément : un libellé en capitales
+ * posé au-dessus d'un titre est un ornement qui affaiblit le titre qu'il
+ * prétend introduire.
  */
-export function EnTeteEcran({
-  icone,
-  surTitre,
-  titre,
-  sousTitre,
-  actions,
-  meta,
-}: {
-  /** L'icône de l'écran, dans une pastille de verre clair sur la marque. */
-  readonly icone?: NomIcone;
-  readonly surTitre?: string;
-  /** Un nom de LIEU. Jamais un nom de personne — voir ci-dessus. */
-  readonly titre: string;
-  readonly sousTitre?: string;
-  readonly actions?: ReactNode;
-  /**
-   * v9 — LA RANGÉE DE CONTEXTE, sous le titre. La date du jour, un compteur
-     réel, un sélecteur : ce que l'œil réclame en arrivant sur un écran de
-     lieu. Elle vit SOUS un filet posé sur la marque (`--on-brand-surface`),
-     et ses textes restent soumis à la règle de l'encre unique : blanc pur,
-     hiérarchie à la taille et à la graisse.
-   */
-  readonly meta?: ReactNode;
-}): React.JSX.Element {
-    return (
-     <header className="sur-marque relative overflow-hidden rounded-2xl bg-grad-brand p-7 shadow-lift3 lg:p-8">
-       <div aria-hidden="true" className="absolute inset-0 bg-grad-hero-reflet" />
-       <MotifFeuilles className="absolute -right-2 -top-4 h-32 w-64 text-on-brand opacity-filigrane" />
-       {/* hairline interne haut — épaisseur sans ombre lourde */}
-       <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-px bg-white/10" />
-       <div className="relative flex flex-wrap items-start justify-between gap-6">
-         <div className="flex min-w-0 items-start gap-4">
-           {icone === undefined ? null : (
-             <span
-               aria-hidden
-               className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-on-brand text-brand-700 shadow-lift2"
-             >
-               <Icone nom={icone} taille={20} />
-             </span>
-           )}
-            <div className="flex min-w-0 flex-col gap-2">
-              {surTitre === undefined ? null : (
-                <span className="font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-on-brand">
-                  {surTitre}
-                </span>
-              )}
-              <h1 className="font-ui text-display font-bold tracking-display text-on-brand break-words">
-                {titre}
-              </h1>
-              {sousTitre === undefined ? null : (
-                <p className="max-w-2xl font-ui text-body font-regular leading-relaxed text-on-brand">{sousTitre}</p>
-              )}
-           </div>
-         </div>
-         {actions === undefined ? null : (
-           <div className="flex flex-wrap items-center gap-3">{actions}</div>
-         )}
-       </div>
-       {meta === undefined ? null : (
-         <div className="relative mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-white/15 pt-4">
-           {meta}
-         </div>
-       )}
-     </header>
-   );
-}
-
-/**
- * Un objet de la rangée de contexte d'un en-tête de lieu — icône, puis texte.
- *
- * v9 : la rangée `meta` d'`EnTeteEcran` était sinon composée de spans nus,
- * chacun avec son espacement. La pièce existe pour que la date, un compteur
- * ou une mention se posent au même rythme d'un écran à l'autre. Encre blanche
- * pure (règle de la marque) ; l'icône ne se annonce pas — le texte à côté
- * parle déjà.
- */
-export function MetaHeros({
-  icone,
-  children,
-}: {
-  readonly icone: NomIcone;
-  readonly children: ReactNode;
-}): React.JSX.Element {
-  return (
-    <span className="inline-flex min-w-0 items-center gap-2 font-ui text-label font-medium text-on-brand">
-      <Icone nom={icone} taille={16} />
-      <span className="truncate">{children}</span>
-    </span>
-  );
-}
-
-/**
- * L'en-tête SOBRE : sur-titre, titre, sous-titre, actions.
- *
- * Celui des écrans de personne — un dossier, un rendez-vous, une consultation —
- * dont le titre EST une donnée identifiante. Fond opaque, encre `--ink-900`,
- * aucun ornement derrière le nom. C'est le pendant volontairement calme de
- * `EnTeteEcran`, pas une version dégradée de celui-ci.
- *
- * Le sur-titre (`eyebrow`, majuscules) porte le contexte — de quel dossier, de
- * quelle semaine il s'agit — et le titre porte le sujet. Les séparer permet de
- * lire le contexte sans relire le titre, ce qui compte quand on ouvre le même
- * écran quarante fois par jour.
- */
-export function EnTetePage({
-  surTitre,
-  titre,
-  sousTitre,
-  actions,
-}: {
-  readonly surTitre?: string;
-  readonly titre: string;
-  readonly sousTitre?: string;
-  readonly actions?: ReactNode;
-}): React.JSX.Element {
-  return (
-    <header className="flex flex-wrap items-start justify-between gap-5 border-b border-rule/60 pb-6">
-      <div className="flex min-w-0 flex-col gap-2">
-        {surTitre === undefined ? null : (
-          <span className="font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-action-600">
-            {surTitre}
-          </span>
-        )}
-        <h1 className="font-ui text-display font-bold tracking-display text-ink-900 break-words">{titre}</h1>
-        {sousTitre === undefined ? null : (
-          <p className="max-w-2xl font-ui text-body font-regular leading-relaxed text-ink-500">{sousTitre}</p>
-        )}
-      </div>
-      {actions === undefined ? null : (
-        <div className="flex flex-wrap items-center gap-3">{actions}</div>
-      )}
-    </header>
-  );
-}
-
-/* ═══════════════════════════════════════════════════════════════════════════
- * LE RESTE — inchangé dans son intention, aligné sur les nouveaux jetons
- * ═══════════════════════════════════════════════════════════════════════════ */
 
 /**
  * Une section de page : un titre, et ce qu'il annonce.
@@ -364,7 +222,7 @@ export function Section({
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-rule/40 pb-3">
         <div className="flex items-center gap-3">
           {icone === undefined ? null : <PastilleIcone nom={icone} />}
-          <h2 className="font-ui text-heading font-bold tracking-tight text-ink-900">{titre}</h2>
+          <h2 className="font-ui text-heading font-bold text-ink-900">{titre}</h2>
         </div>
         {action}
       </div>

@@ -80,14 +80,17 @@ export function Topbar({
         <button
           type="button"
           onClick={onOuvrirCommande}
-          className="group ml-auto flex min-h-target w-full max-w-form shrink items-center gap-3 rounded-lg border border-rule bg-sunken px-3 py-2 text-left font-ui text-body font-regular text-ink-500 transition duration-quick ease-out hover:border-ink-300 hover:bg-card focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset"
+          className="group ml-auto flex min-h-target w-full max-w-context shrink items-center gap-3 rounded-lg border border-rule bg-sunken px-3 py-2 text-left font-ui text-body font-regular text-ink-500 transition duration-quick ease-out hover:border-ink-300 hover:bg-card focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset"
         >
-          <Icone nom="recherche" taille={16} />
+          <Icone nom="jarvis" taille={16} />
           {/*
-            Deux libellés, un seul élément visible à la fois : la phrase
-            complète dit CE QU'ON PEUT CHERCHER, et c'est elle qui apprend
-            l'interface. En dessous de `desktop` elle ne tient pas, et un
-            libellé tronqué apprendrait moins qu'un libellé court.
+            ⚠️ LE LIBELLÉ DIT « ALEXA », PAS « RECHERCHER », ET C'EST UNE CORRECTION.
+            La première version affichait « Rechercher un patient, un rendez-vous,
+            un document… » — vu à l'écran, l'écran Patients portait alors DEUX
+            champs de recherche superposés, et l'écran Documents TROIS. Le champ
+            de la barre n'est pas une recherche : il ouvre l'assistant, qui
+            propose et attend une confirmation. Le nommer « rechercher »
+            promettait une autre mécanique que celle qui s'ouvre.
           */}
           <span className="min-w-0 flex-1 truncate desktop:hidden">
             {fr.coquille.commandeCourt}

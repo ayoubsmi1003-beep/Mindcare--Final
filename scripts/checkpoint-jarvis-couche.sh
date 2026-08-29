@@ -161,7 +161,7 @@ else
 fi
 # Règle 2 : aucune clé de fournisseur dans le bundle client.
 if [ -d .next/static ]; then
-  if grep -rq "OPENROUTER\|GROQ\|ELEVENLABS" .next/static/ 2>/dev/null; then
+  if grep -rq "OPENROUTER\|GROQ\|ELEVENLABS\|SEEKAI" .next/static/ 2>/dev/null; then
     rouge "aucun secret fournisseur dans .next/static" "OCCURRENCE TROUVÉE"
   else
     vert "aucun secret fournisseur dans .next/static" "0 occurrence"

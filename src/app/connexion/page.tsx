@@ -86,7 +86,7 @@ export default function PageConnexion(): React.JSX.Element {
             <span className="font-ui text-title font-semibold">MindCare OS</span>
           </div>
           <div className="flex flex-col gap-3 text-on-brand">
-            <p className="m-0 font-ui text-title font-semibold leading-tight">
+            <p className="m-0 font-ui text-title font-semibold">
               {fr.connexion.accroche}
             </p>
             <MotifFeuilles className="h-32 w-64 text-on-brand opacity-filigrane" />

@@ -432,7 +432,7 @@ export default function DocumentsPage(): React.JSX.Element {
                 )}
               </PanneauEtat>
               <div className="pt-2">
-                <h3 className="font-ui text-label font-semibold uppercase tracking-label text-ink-500">Choisir un dossier</h3>
+                <h3 className="font-ui text-body font-semibold text-ink-900">Choisir un dossier</h3>
                 <div className="mt-2">
                   <SelecteurPatient onChoisir={(p) => setDossier({ id: p.id, firstName: p.firstName, lastName: p.lastName, recordNumber: p.recordNumber, birthDate: p.birthDate })} />
                 </div>

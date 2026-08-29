@@ -94,10 +94,10 @@ export function PanneauEvolution({
     <section className="flex h-full min-h-0 flex-col gap-2" aria-label={t.titre}>
       <div className="flex items-baseline justify-between gap-2">
         <h2 className="font-ui text-heading font-semibold text-ink-900">{t.titre}</h2>
-        <p className="truncate font-ui text-eyebrow text-ink-500">{t.aide}</p>
+        <p className="truncate font-ui text-label text-ink-500">{t.aide}</p>
       </div>
 
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-1 font-ui text-eyebrow text-ink-500">
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-1 font-ui text-label text-ink-500">
         <span className="flex items-center gap-2">
           <span className="h-2 w-2 rounded-sm bg-brand-600" aria-hidden="true" />
           {t.legendeRevenu}
@@ -123,7 +123,7 @@ export function PanneauEvolution({
             la barre du dernier mois et sortait du cadre — « 67 250 DZ… ».
             `text-ink-500` et non `ink-300`, réservé au NON-TEXTE (2.43:1). */}
         <span
-          className="absolute left-0 pt-1 font-num text-eyebrow tabular-nums text-ink-500"
+          className="absolute left-0 pt-1 font-num text-label tabular-nums text-ink-500"
           style={{ top: `${yPct(haut)}%` }}
         >
           {formaterDzd(haut)}

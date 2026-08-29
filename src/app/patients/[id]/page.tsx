@@ -398,6 +398,20 @@ export default function PageFichePatient(): React.JSX.Element {
       role={utilisateur?.role ?? "assistant"}
       nomComplet={utilisateur?.fullName ?? ""}
       onDeconnexion={deconnecter}
+      /*
+        LE CHROME NOMME TOUJOURS LE DOSSIER OUVERT, ET C'EST UNE PROPRIETE DE
+        SECURITE AUTANT QUE DE LISIBILITE. Sans ce titre, la barre affichait
+        « Patients » — deduit du segment de route — pendant qu'on lisait le
+        dossier de quelqu'un. Dans une salle ou le patient suivant s'assoit
+        devant l'ecran, savoir en permanence QUEL dossier est ouvert vaut la
+        repetition du nom entre le chrome et l'en-tete de la fiche.
+      */
+      {...(espace == null
+        ? {}
+        : {
+            titre: `${espace.identite.lastName.toUpperCase()} ${espace.identite.firstName}`,
+            sousTitre: espace.identite.recordNumber,
+          })}
     >
       {horsLigne ? (
         <div className="mb-4">

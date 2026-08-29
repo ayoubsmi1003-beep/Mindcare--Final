@@ -163,7 +163,7 @@ export function ModaleCharge({
           </div>
 
           <fieldset>
-            <legend className="mb-2 font-ui text-eyebrow font-medium uppercase text-ink-500">
+            <legend className="mb-2 font-ui text-label font-medium text-ink-500">
               {t.categorie}
             </legend>
             <div className="flex flex-wrap gap-2">
@@ -177,7 +177,7 @@ export function ModaleCharge({
                     "rounded-full px-3 py-2 font-ui text-label transition-colors",
                     "duration-quick ease-out",
                     categorie === c
-                      ? "bg-brand-600 text-white"
+                      ? "bg-brand-600 text-on-brand"
                       : "bg-sunken text-ink-700 hover:bg-brand-100",
                   ].join(" ")}
                 >
@@ -254,7 +254,7 @@ export function TableauCharges({
                   <th
                     key={h}
                     scope="col"
-                    className="px-4 py-3 text-left font-ui text-eyebrow font-medium uppercase text-ink-500"
+                    className="px-4 py-3 text-left font-ui text-label font-medium text-ink-500"
                   >
                     {h}
                   </th>

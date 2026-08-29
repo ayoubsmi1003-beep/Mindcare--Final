@@ -34,11 +34,11 @@ export function BandeauHorsLigne(): React.JSX.Element {
     <p
       role="status"
       className={[
-        "flex items-center gap-3 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3",
-        "font-ui text-body font-medium text-amber-700",
+        "flex items-center gap-3 rounded-xl border border-attention bg-attention-bg px-4 py-3",
+        "font-ui text-body font-medium text-attention-ink",
       ].join(" ")}
     >
-      <span aria-hidden="true" className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-white text-amber-600 shadow-lift1">
+      <span aria-hidden="true" className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-card text-attention-ink shadow-lift1">
         <Icone nom="alerte" taille={16} />
       </span>
       {fr.etats.horsLigne}
@@ -64,19 +64,19 @@ export function BlocErreur({
   return (
     <div
       role="alert"
-      className="flex items-start gap-4 rounded-xl border border-amber-200 bg-amber-50 p-5 shadow-lift2"
+      className="flex items-start gap-4 rounded-xl border border-attention bg-attention-bg p-5 shadow-lift2"
     >
       <span
         aria-hidden="true"
-        className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-amber-700 shadow-lift1 border border-amber-100"
+        className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-attention bg-card text-attention-ink shadow-lift1"
       >
         <Icone nom="alerte" taille={20} />
       </span>
       <div className="flex min-w-0 flex-col gap-1.5">
-        <strong className="font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-amber-700">
+        <strong className="font-ui text-body font-semibold text-attention-ink">
           {fr.erreur.titre}
         </strong>
-        <p className="font-ui text-body font-regular leading-relaxed text-ink-700">{message}</p>
+        <p className="font-ui text-body font-regular text-ink-700">{message}</p>
         {action === undefined ? null : <div className="mt-3">{action}</div>}
       </div>
     </div>
@@ -108,22 +108,33 @@ export function EtatVide({
   readonly titre?: string;
 }): React.JSX.Element {
   return (
-    <div className="flex flex-col items-center gap-5 rounded-2xl border border-rule/60 bg-card px-6 py-10 text-center shadow-lift2">
+    /*
+      V7 — L'ÉTAT VIDE N'EST PLUS UNE CARTE, ET LE DISQUE A MAIGRI.
+      Il portait `bg-card`, une bordure et `shadow-lift2` : posé dans une
+      `Carte` — ce qui est son usage principal, sur le tableau de bord — il
+      produisait une carte DANS une carte. Il empilait en plus un disque de
+      80 px contenant un disque de 56 px, une ombre dans une ombre pour tenir
+      une seule icône. Les trois cartes « maintenant » du tableau de bord
+      mesuraient 270 px de haut pour une phrase.
+
+      Ici : aucune surface propre (le parent la fournit), un seul disque
+      discret, et la phrase remonte. Un état vide explique pourquoi c'est vide,
+      il ne meuble pas.
+    */
+    <div className="flex flex-col items-center gap-4 px-4 py-6 text-center">
       {icone === undefined ? null : (
         <span
           aria-hidden="true"
-          className="inline-flex h-20 w-20 items-center justify-center rounded-2xl bg-grad-empty shadow-lift1"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-sunken text-ink-500"
         >
-          <span className="inline-flex h-14 w-14 items-center justify-center rounded-xl border border-rule bg-card text-action-600 shadow-lift2">
-            <Icone nom={icone} taille={24} />
-          </span>
+          <Icone nom={icone} taille={20} />
         </span>
       )}
-      <div className="flex max-w-sm flex-col gap-2">
+      <div className="flex max-w-form flex-col gap-2">
         {titre === undefined ? null : (
-          <p className="font-ui text-heading font-bold tracking-tight text-ink-900">{titre}</p>
+          <p className="font-ui text-heading font-semibold text-ink-900">{titre}</p>
         )}
-        <p className="font-ui text-body font-regular leading-relaxed text-ink-500">{message}</p>
+        <p className="font-ui text-body font-regular text-ink-500">{message}</p>
       </div>
       {action === undefined ? null : <div className="mt-1">{action}</div>}
     </div>
@@ -252,7 +263,7 @@ export function Champ({
   const vide = valeur === null || valeur === "";
   return (
     <div className="flex min-w-0 flex-col gap-2 rounded-xl bg-sunken px-4 py-3">
-      <span className="font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-ink-500">{libelle}</span>
+      <span className="font-ui text-label font-medium text-ink-500">{libelle}</span>
       <span
         className={[
           "font-ui text-body font-regular tabular-nums",

@@ -38,13 +38,13 @@ function Square({
   const inner = (
     <div className="flex h-full flex-col gap-1">
       <div className="flex items-start justify-between gap-2">
-        <span className={`inline-flex h-8 w-8 items-center justify-center rounded-lg ${accent} text-white shadow-lift1`}>
+        <span className={`inline-flex h-8 w-8 items-center justify-center rounded-lg ${accent} text-on-brand shadow-lift1`}>
           <Icone nom={icone} taille={16} />
         </span>
         <span className="font-num text-label tabular-nums text-ink-500">{valeur === 0 ? "—" : `${valeur}`}</span>
       </div>
-      <span className="mt-2 font-ui text-body font-semibold leading-tight text-ink-900">{libelle}</span>
-      <span className="font-ui text-label leading-tight text-ink-500">{sousLibelle}</span>
+      <span className="mt-2 font-ui text-body font-semibold text-ink-900">{libelle}</span>
+      <span className="font-ui text-label text-ink-500">{sousLibelle}</span>
       <span className="mt-auto flex items-baseline gap-2">
         <span className="font-num text-title font-semibold tabular-nums text-ink-900">{valeur}</span>
         <span className={`inline-flex h-1.5 w-1.5 rounded-full ${valeur > 0 ? accent : "bg-ink-100"}`} aria-hidden="true" />

@@ -56,7 +56,7 @@ export function PanneauAttention({
           aucun ? "border-rule bg-sunken" : "border-attention bg-attention-bg",
         ].join(" ")}
       >
-        <p className="flex items-center gap-2 font-ui text-eyebrow font-medium uppercase text-ink-500">
+        <p className="flex items-center gap-2 font-ui text-label font-medium text-ink-500">
           {/* La forme double la couleur (§4 règle 4) : l'icône ne dit pas
               « erreur », elle dit « cette zone réclame un regard ». Un jour
               sans impayé, elle s'efface avec le fond ambre. */}
@@ -75,7 +75,7 @@ export function PanneauAttention({
           <p className="mt-1 font-ui text-body text-ink-700">{t.aucunImpaye}</p>
         ) : (
           <>
-            <p className="mt-1 font-display text-title font-semibold leading-tight text-attention-ink">
+            <p className="mt-1 font-num text-title font-semibold text-attention-ink">
               {formaterDzd(impayesTotal)}
             </p>
             <p className="font-ui text-label text-ink-700">
@@ -95,7 +95,7 @@ export function PanneauAttention({
       </div>
 
       <div className="min-h-0 flex-1">
-        <h3 className="mb-2 font-ui text-eyebrow font-medium uppercase text-ink-500">
+        <h3 className="mb-2 font-ui text-label font-medium text-ink-500">
           {t.echeances}
         </h3>
         {echeances.length === 0 ? (

@@ -113,12 +113,27 @@ async function attendreEcranStable(page) {
   await page.waitForTimeout(700);
 }
 
-/** Un débordement horizontal est un défaut de composition, pas un détail. */
+/**
+ * Un débordement horizontal est un défaut de composition, pas un détail.
+ *
+ * ⚠️ MESURER `documentElement.scrollWidth` DONNE UN FAUX POSITIF, et il a
+ * coûté une enquête. La grille de l'agenda défile horizontalement DANS son
+ * conteneur : elle est donc plus large que la fenêtre, légitimement, et
+ * visuellement clippée. `getBoundingClientRect` et `scrollWidth` ignorent le
+ * clipping d'un ancêtre — le document était annoncé à 1192 px pour 1024
+ * alors que rien ne dépassait à l'écran.
+ *
+ * Le seul test honnête est le COMPORTEMENT : la page peut-elle être défilée
+ * horizontalement ? On tente de la défiler et on regarde si elle a bougé.
+ */
 async function mesurerDebordement(page) {
-  return page.evaluate(() => ({
-    scrollWidth: document.documentElement.scrollWidth,
-    clientWidth: document.documentElement.clientWidth,
-  }));
+  return page.evaluate(() => {
+    const avant = window.scrollX;
+    window.scrollTo(9999, window.scrollY);
+    const apres = window.scrollX;
+    window.scrollTo(avant, window.scrollY);
+    return { defile: apres > avant, decalage: apres - avant };
+  });
 }
 
 async function main() {
@@ -150,10 +165,10 @@ async function main() {
       await page.goto(`${BASE}${ecran.url}`, { waitUntil: "domcontentloaded" });
       await attendreEcranStable(page);
 
-      const { scrollWidth, clientWidth } = await mesurerDebordement(page);
-      if (scrollWidth > clientWidth + 1) {
+      const { defile, decalage } = await mesurerDebordement(page);
+      if (defile) {
         defauts.push(
-          `DEBORDEMENT ${ecran.nom} @${taille.nom} : ${scrollWidth}px pour ${clientWidth}px`,
+          `DEBORDEMENT ${ecran.nom} @${taille.nom} : la page défile de ${decalage}px horizontalement`,
         );
       }
 
@@ -162,6 +177,41 @@ async function main() {
         fullPage: false,
       });
       process.stdout.write(`  ${ecran.nom}@${taille.nom}\n`);
+    }
+
+    /*
+      LES DEUX ÉCRANS QU'AUCUNE URL FIXE N'ATTEINT.
+      La fiche patient et le rendez-vous vivent derrière un identifiant, et la
+      fiche est la surface la plus dense du produit — donc celle qu'une refonte
+      a le plus de chances d'abîmer. On y arrive comme la praticienne : en
+      cliquant, plutôt qu'en fabriquant une URL qui pourrait ne rien prouver.
+    */
+    if (ROLE !== "assistante") {
+      await page.goto(`${BASE}/patients`, { waitUntil: "domcontentloaded" });
+      await attendreEcranStable(page);
+      const premier = page.locator('main a[href^="/patients/"]').first();
+      if ((await premier.count()) > 0) {
+        await premier.click();
+        await attendreEcranStable(page);
+        const { defile } = await mesurerDebordement(page);
+        if (defile) defauts.push(`DEBORDEMENT 10-fiche-patient @${taille.nom}`);
+        await page.screenshot({ path: path.join(SORTIE, `10-fiche-patient@${taille.nom}.png`) });
+        process.stdout.write(`  10-fiche-patient@${taille.nom}\n`);
+      } else {
+        process.stdout.write(`  10-fiche-patient@${taille.nom} — aucun dossier cliquable\n`);
+      }
+
+      await page.goto(`${BASE}/agenda`, { waitUntil: "domcontentloaded" });
+      await attendreEcranStable(page);
+      const rdv = page.locator('main a[href^="/agenda/"]').first();
+      if ((await rdv.count()) > 0) {
+        await rdv.click();
+        await attendreEcranStable(page);
+        const { defile } = await mesurerDebordement(page);
+        if (defile) defauts.push(`DEBORDEMENT 11-rendez-vous @${taille.nom}`);
+        await page.screenshot({ path: path.join(SORTIE, `11-rendez-vous@${taille.nom}.png`) });
+        process.stdout.write(`  11-rendez-vous@${taille.nom}\n`);
+      }
     }
 
     if (erreursConsole.length > 0) {

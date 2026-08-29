@@ -273,7 +273,7 @@ export default function PageAgenda(): React.JSX.Element {
           file d'attente. C'est l'espace, pas des traits, qui sépare des sujets
           différents — un filet de plus sur un agenda déjà quadrillé ajoute une
           ligne à lire pour rien. */}
-      <div className="flex flex-col gap-8">
+      <div className="flex min-w-0 flex-col gap-8">
         {/* ── Période, chiffres, navigation ──────────────────────────────── */}
         <div className="flex flex-col gap-4">
           <div className="flex flex-wrap items-center gap-4">

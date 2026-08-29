@@ -32,7 +32,7 @@ export function FileArrivees({ journee, maintenant, onAbsent, onSelectRdv }: Pro
 
       {arrivees.length === 0 ? (
         <div className="flex items-center gap-3 rounded-md border border-rule bg-sunken px-3 py-3">
-          <span aria-hidden="true" className="h-9 w-9 rounded-full bg-grad-empty opacity-60" />
+          <span aria-hidden="true" className="h-9 w-9 rounded-full bg-grad-empty opacity-disabled" />
           <p className="font-ui text-body text-ink-500">{fr.reception.arrivees.vide}</p>
         </div>
       ) : (

@@ -19,7 +19,7 @@ out=$(grep -rn "fetch(['\"]https://" --include="*.ts" --include="*.tsx" src/ sup
 [ -n "$out" ] && { echo "🔴 fetch externe hors passerelle :"; echo "$out"; fail=1; }
 
 # 2 — aucun secret côté client
-out=$(grep -rn "SERVICE_ROLE\|GROQ_API_KEY\|OPENROUTER_API_KEY" src/ 2>/dev/null)
+out=$(grep -rn "SERVICE_ROLE\|GROQ_API_KEY\|OPENROUTER_API_KEY\|SEEKAI_API_KEY\|NEW_API_KEY" src/ 2>/dev/null)
 [ -n "$out" ] && { echo "🔴 secret côté client :"; echo "$out"; fail=1; }
 
 # 3 — aucun audio sur disque

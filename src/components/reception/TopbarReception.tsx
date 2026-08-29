@@ -28,7 +28,7 @@ export function TopbarReception({ ancreIso, aujourdhuiIso, versSaisieJour, reque
           <Icone nom="agenda" taille={16} />
         </span>
         <div className="min-w-0">
-          <h1 className="font-ui text-heading font-semibold leading-none text-ink-900">{fr.reception.titre}</h1>
+          <h1 className="font-ui text-heading font-semibold text-ink-900">{fr.reception.titre}</h1>
           <span className="hidden items-center gap-1 font-ui text-label font-medium text-ink-500 desktop:inline-flex">
             <Icone nom="horloge" taille={16} className="text-ink-500" />
             {estAujourdhui ? fr.agenda.aujourdhui : versSaisieJour(ancreIso)} · Poste d&apos;accueil

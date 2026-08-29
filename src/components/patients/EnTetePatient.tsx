@@ -125,7 +125,7 @@ export function EnTetePatient({
           agrège sept sources : savoir de quand date l'ensemble vaut mieux que
           sept horodatages qui obligeraient à comparer. */}
       {actualise === null ? null : (
-        <p className="mt-3 font-ui text-eyebrow tracking-eyebrow text-ink-500">
+        <p className="mt-3 font-ui text-label tracking-label text-ink-500">
           {fr.patients.actualiseA} {actualise}
         </p>
       )}

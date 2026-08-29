@@ -79,7 +79,7 @@ export function TableauSeances({
                     <th
                       key={h}
                       scope="col"
-                      className="px-4 py-3 text-left font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-ink-500"
+                      className="px-4 py-3 text-left font-ui text-label font-medium tracking-label text-ink-500"
                     >
                       {h}
                     </th>
@@ -95,7 +95,7 @@ export function TableauSeances({
                     <td className="whitespace-nowrap px-4 py-3.5 font-num text-label font-semibold tabular-nums text-ink-700">
                       {l.date.replace("T", " · ")}
                     </td>
-                    <td className="px-4 py-3.5 font-ui text-body font-semibold tracking-tight text-ink-900">{l.patient}</td>
+                    <td className="px-4 py-3.5 font-ui text-body font-semibold text-ink-900">{l.patient}</td>
                     <td className="px-4 py-3.5 font-ui text-label font-medium text-ink-500">
                       {libelleType(l.type)}
                     </td>

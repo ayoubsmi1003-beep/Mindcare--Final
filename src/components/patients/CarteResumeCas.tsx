@@ -68,7 +68,7 @@ export function CarteResumeCas({
       <div className="flex flex-wrap items-center justify-between gap-2">
         <h2 className="flex items-center gap-2 font-ui text-heading font-semibold tracking-heading text-ink-900">
           <Icone nom="jarvis" taille={24} className="text-ai-600" />
-          <span className="font-ui text-eyebrow uppercase tracking-eyebrow text-ai-600">
+          <span className="font-ui text-label tracking-label text-ai-600">
             {fr.patients.resume.surTitre}
           </span>
           {fr.patients.resume.titre}
@@ -182,7 +182,7 @@ function BlocSection({
 }): React.JSX.Element {
   return (
     <div>
-      <h3 className="mb-1 font-ui text-eyebrow uppercase tracking-eyebrow text-ink-500">{titre}</h3>
+      <h3 className="mb-1 font-ui text-label tracking-label text-ink-500">{titre}</h3>
       <div className="flex flex-col gap-2">{children}</div>
     </div>
   );

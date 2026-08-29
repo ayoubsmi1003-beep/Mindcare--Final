@@ -89,7 +89,7 @@ out=$(grep -rn "fetch(['\"]https://" --include="*.ts" --include="*.tsx" src/ sup
 [ -z "$out" ] && green "aucun fetch hors passerelle" \
               || red "fetch hors passerelle" "$(printf '%s' "$out" | head -1)"
 
-out=$(grep -rn "SERVICE_ROLE\|GROQ_API_KEY\|OPENROUTER_API_KEY" src/ 2>/dev/null)
+out=$(grep -rn "SERVICE_ROLE\|GROQ_API_KEY\|OPENROUTER_API_KEY\|SEEKAI_API_KEY" src/ 2>/dev/null)
 [ -z "$out" ] && green "aucun secret côté client" \
               || red "secret référencé dans src/" "$(printf '%s' "$out" | head -1)"
 

@@ -58,7 +58,7 @@ export function ListeDocuments({
               className={[
                 "flex flex-col gap-3 p-4",
                 actif ? "border-l-4 border-action-500" : "border-l-4 border-transparent",
-                annule ? "opacity-70" : "",
+                annule ? "opacity-disabled" : "",
               ].join(" ")}
             >
               <div className="flex items-start justify-between gap-3">

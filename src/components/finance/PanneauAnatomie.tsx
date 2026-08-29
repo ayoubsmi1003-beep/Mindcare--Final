@@ -86,7 +86,7 @@ function Barre({
           {/* La largeur EST `part_pct`, telle que Postgres l'a calculée. */}
           <div className="h-full rounded-full" style={{ width: `${pct}%`, background: couleur }} />
         </div>
-        <span className="shrink-0 whitespace-nowrap font-num text-eyebrow tabular-nums text-ink-500">
+        <span className="shrink-0 whitespace-nowrap font-num text-label tabular-nums text-ink-500">
           {part}
           {suffixe === undefined ? "" : ` · ${suffixe}`}
         </span>
@@ -110,7 +110,7 @@ export function PanneauAnatomie({
 
       <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto">
         <div>
-          <h3 className="mb-2 font-ui text-eyebrow font-medium uppercase text-ink-500">
+          <h3 className="mb-2 font-ui text-label font-medium text-ink-500">
             {t.revenus}
           </h3>
           {revenus.length === 0 ? (
@@ -138,7 +138,7 @@ export function PanneauAnatomie({
         <hr className="border-0 border-t border-rule" />
 
         <div>
-          <h3 className="mb-2 font-ui text-eyebrow font-medium uppercase text-ink-500">
+          <h3 className="mb-2 font-ui text-label font-medium text-ink-500">
             {t.charges}
           </h3>
           {charges.length === 0 ? (

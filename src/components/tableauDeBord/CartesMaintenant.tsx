@@ -27,7 +27,7 @@ import { dureeDepuis, heureCabinet } from "./heures";
  */
 function Intitule({ children }: { readonly children: React.ReactNode }): React.JSX.Element {
   return (
-    <p className="font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-ink-500">
+    <p className="font-ui text-label font-medium tracking-label text-ink-500">
       {children}
     </p>
   );
@@ -53,15 +53,17 @@ export function CarteSeanceEnCours({
 }): React.JSX.Element {
   if (seance === null) {
     return (
-      <EtatVide
-        icone="horloge"
-        message={fr.tableauDeBord.maintenant.aucuneSeance}
-        action={
-          <LienBouton href="/agenda" rang="secondaire">
-            {fr.tableauDeBord.maintenant.demarrerSeance}
-          </LienBouton>
-        }
-      />
+      <Carte niveau="clinique">
+        <EtatVide
+          icone="horloge"
+          message={fr.tableauDeBord.maintenant.aucuneSeance}
+          action={
+            <LienBouton href="/agenda" rang="secondaire">
+              {fr.tableauDeBord.maintenant.demarrerSeance}
+            </LienBouton>
+          }
+        />
+      </Carte>
     );
   }
 
@@ -87,7 +89,7 @@ export function CarteSeanceEnCours({
           <div className="flex min-w-0 items-center gap-4">
             <Avatar prenom={seance.firstName} nom={seance.lastName} taille="grande" />
             <div className="flex min-w-0 flex-col gap-0.5">
-              <p className="truncate font-ui text-title font-bold tracking-tight text-ink-900">
+              <p className="truncate font-ui text-title font-bold text-ink-900">
                 {seance.firstName} {seance.lastName}
               </p>
               <p className="font-num text-label font-medium tabular-nums text-ink-500">
@@ -120,7 +122,9 @@ export function CarteSuivant({
 }): React.JSX.Element {
   if (suivant === null) {
     return (
-      <EtatVide icone="agenda" message={fr.tableauDeBord.maintenant.aucunSuivant} />
+      <Carte niveau="clinique">
+        <EtatVide icone="agenda" message={fr.tableauDeBord.maintenant.aucunSuivant} />
+      </Carte>
     );
   }
 
@@ -152,7 +156,7 @@ export function CarteSuivant({
             <PastilleIcone nom="patients" ton="neutre" />
           )}
           <div className="flex min-w-0 flex-col gap-0.5">
-            <p className="truncate font-ui text-heading font-bold tracking-tight text-ink-900">
+            <p className="truncate font-ui text-heading font-bold text-ink-900">
               {nomConnu ? `${suivant.firstName} ${suivant.lastName}` : "—"}
             </p>
             {suivant.recordNumber === null ? null : (
@@ -205,12 +209,12 @@ export function CarteSalleAttente({
         </div>
 
         {nombre === 0 ? (
-          <p className="mt-auto font-ui text-body font-regular leading-relaxed text-ink-500">
+          <p className="font-ui text-body font-regular text-ink-500">
             {fr.tableauDeBord.maintenant.personneAttend}
           </p>
         ) : (
-          <div className="mt-auto flex items-baseline gap-3">
-            <span className="font-display text-display font-bold tabular-nums tracking-tight text-ink-900">
+          <div className="flex items-baseline gap-3">
+            <span className="font-num text-metric font-semibold tabular-nums text-ink-900">
               {nombre}
             </span>
             <span className="font-ui text-body font-regular text-ink-500">

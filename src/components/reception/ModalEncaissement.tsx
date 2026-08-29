@@ -81,7 +81,7 @@ export function ModalEncaissement({ paiement, onFermer, apresMutation }: Props):
       onClick={(e) => {
         if (e.target === dialogRef.current) onFermer();
       }}
-      className="m-auto max-w-md rounded-xl border border-rule bg-card p-0 shadow-lift3 backdrop:backdrop-blur-sm open:animate-none"
+      className="m-auto max-w-form rounded-xl border border-rule bg-card p-0 shadow-lift3 backdrop:backdrop-blur-sm open:animate-none"
       aria-label={fr.reception.paiements.confirmerTitre}
     >
       <div className="flex flex-col gap-4 p-6">

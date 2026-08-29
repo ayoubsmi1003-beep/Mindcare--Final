@@ -114,10 +114,10 @@ export function PanneauJarvis({
     >
       <header className="flex items-center justify-between gap-3 border-b border-rule bg-grad-tile-ai px-4 py-3">
         <span className="flex min-w-0 items-center gap-2.5">
-          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-white/15 text-white">
+          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-on-brand-surface text-on-brand">
             <OrbeVoix taille={18} />
           </span>
-          <strong className="truncate font-ui text-body font-bold tracking-tight text-white">
+          <strong className="truncate font-ui text-body font-semibold text-on-brand">
             {fr.jarvis.titre}
           </strong>
         </span>
@@ -126,7 +126,7 @@ export function PanneauJarvis({
           onClick={() => onChangerOuvert(false)}
           aria-label={fr.jarvis.fermer}
           title={fr.jarvis.fermer}
-          className="inline-flex min-h-target min-w-target shrink-0 cursor-pointer items-center justify-center rounded-lg border-0 bg-white/10 text-white transition duration-quick ease-out hover:bg-white/15"
+          className="inline-flex min-h-target min-w-target shrink-0 cursor-pointer items-center justify-center rounded-lg border-0 bg-on-brand-surface-hover text-on-brand transition duration-quick ease-out hover:bg-on-brand-surface"
         >
           <Icone nom="croix" taille={16} />
         </button>

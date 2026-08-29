@@ -140,14 +140,22 @@ function monogrammeCompte(nomComplet: string): string {
 }
 
 /**
- * Visible au-dessus de `tablet`, lisible par un lecteur d'écran EN DESSOUS.
+ * Visible au-dessus de `desktop`, lisible par un lecteur d.écran EN DESSOUS.
  *
- * Ce n'est PAS `hidden tablet:inline` : `hidden` retire l'élément de l'arbre
+ * Ce n'est PAS `hidden desktop:inline` : `hidden` retire l'élément de l'arbre
  * d'accessibilité, et le rail replié deviendrait une colonne de pictogrammes
  * sans nom. Ici le texte sort du flux visuel et reste annoncé.
  */
+/*
+ * ⚠️ LA RUPTURE EST `desktop` (1280), PAS `tablet` (1024) — ET C'EST UNE
+ * CORRECTION VUE A L'ECRAN. Avec `tablet:`, le rail reprenait ses 244 px A
+ * PARTIR de 1024, c'est-a-dire exactement a la largeur ou il devait se replier.
+ * Mesure a 1024 : 244 de rail + 48 de gouttiere laissaient 732 px de travail,
+ * et la grille de la semaine n'y montrait plus que cinq jours sur sept.
+ * En dessous de 1280, le rail est un rail d'icones.
+ */
 const LIBELLE_REPLIABLE =
-  "absolute h-0 w-0 overflow-hidden opacity-0 tablet:static tablet:h-auto tablet:w-auto tablet:overflow-visible tablet:opacity-100";
+  "absolute h-0 w-0 overflow-hidden opacity-0 desktop:static desktop:h-auto desktop:w-auto desktop:overflow-visible desktop:opacity-100";
 
 export function Rail({ role, nomComplet, onDeconnexion }: RailProps): React.JSX.Element {
   const groupes = navigationPour(role);
@@ -164,7 +172,7 @@ export function Rail({ role, nomComplet, onDeconnexion }: RailProps): React.JSX.
   return (
     <nav
       aria-label={fr.coquille.navigationPrincipale}
-      className="sur-chrome flex h-full w-rail-compact shrink-0 flex-col gap-6 overflow-hidden border-r border-chrome-rule bg-chrome-900 px-3 py-5 tablet:w-rail"
+      className="sur-chrome flex h-full w-rail-compact shrink-0 flex-col gap-6 overflow-hidden border-r border-chrome-rule bg-chrome-900 px-3 py-5 desktop:w-rail"
     >
       <div className="flex items-center gap-3 px-2">
         <MarqueMindCare taille={24} titre="MindCare OS" />
@@ -214,7 +222,7 @@ export function Rail({ role, nomComplet, onDeconnexion }: RailProps): React.JSX.
                       <div
                         aria-disabled="true"
                         title={fr.coquille.ecranAVenir}
-                        className="flex min-h-target items-center justify-center gap-3 rounded-lg px-3 py-2 text-chrome-ink-faint tablet:justify-between"
+                        className="flex min-h-target items-center justify-center gap-3 rounded-lg px-3 py-2 text-chrome-ink-faint desktop:justify-between"
                       >
                         <span className="flex items-center gap-3">
                           <Icone nom={ecran} taille={20} />
@@ -249,7 +257,7 @@ export function Rail({ role, nomComplet, onDeconnexion }: RailProps): React.JSX.
                       href={`/${ecran}`}
                       aria-current={actif ? "page" : undefined}
                       className={[
-                        "flex min-h-target items-center justify-center gap-3 rounded-lg px-3 py-2 font-ui text-body no-underline transition duration-quick ease-out tablet:justify-start",
+                        "flex min-h-target items-center justify-center gap-3 rounded-lg px-3 py-2 font-ui text-body no-underline transition duration-quick ease-out desktop:justify-start",
                         actif
                           ? "bg-chrome-actif font-semibold text-chrome-ink"
                           : "font-regular text-chrome-ink-soft hover:bg-chrome-survol hover:text-chrome-ink",
@@ -292,7 +300,7 @@ export function Rail({ role, nomComplet, onDeconnexion }: RailProps): React.JSX.
             type="button"
             onClick={onDeconnexion}
             title={fr.actions.seDeconnecter}
-            className="flex min-h-target items-center justify-center gap-3 rounded-lg px-3 py-2 font-ui text-body font-regular text-chrome-ink-soft transition duration-quick ease-out hover:bg-chrome-survol hover:text-chrome-ink tablet:justify-start"
+            className="flex min-h-target items-center justify-center gap-3 rounded-lg px-3 py-2 font-ui text-body font-regular text-chrome-ink-soft transition duration-quick ease-out hover:bg-chrome-survol hover:text-chrome-ink desktop:justify-start"
           >
             <Icone nom="deconnexion" taille={20} />
             <span className={LIBELLE_REPLIABLE}>{fr.actions.seDeconnecter}</span>

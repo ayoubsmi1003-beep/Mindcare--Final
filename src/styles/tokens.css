@@ -921,6 +921,15 @@
     --s-24: 96px;
     --s-32: 128px;
     --s-px: 1px;
+    /* Les DEMI-PAS. Tailwind en fournit quatre par défaut (0.5/1.5/2.5/3.5) ;
+     * l'échelle étant remplacée, ils n'existaient pas non plus. 45 classes de
+     * plus tombaient donc dans le vide, dont les `gap-1.5` qui espacent les
+     * pastilles d'état et les `py-3.5` des lignes de tableau. Ce sont de
+     * vraies valeurs de la grille de 2 px, pas des échappatoires. */
+    --s-0-5: 2px;
+    --s-1-5: 6px;
+    --s-2-5: 10px;
+    --s-3-5: 14px;
 
     /* Rayon manquant — `rounded-2xl` était mort dans 12 endroits, dont
      * l'en-tête héros de Surfaces.tsx lui-même. */
