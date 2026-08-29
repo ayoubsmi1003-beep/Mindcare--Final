@@ -11,9 +11,12 @@
  *
  * Les captures atterrissent dans `checkpoints/v7-preuves/<dossier>/`.
  *
- * ⚠️ AUCUNE DONNÉE PATIENT NE SORT DE LA MACHINE. Les images restent sur le
- * disque local, dans un répertoire déjà couvert par .gitignore pour les
- * preuves de checkpoint. Ne jamais les joindre à un ticket ni les téléverser.
+ * ⚠️ LES CAPTURES CONTIENNENT DES NOMS DE DOSSIER, ET ELLES SONT COMMITÉES.
+ * `checkpoints/` est suivi par git — c'est la convention du dépôt pour les
+ * preuves de checkpoint. Ces images ne sont donc PAS ignorées : elles ne sont
+ * acceptables que parce que la base de développement est synthétique
+ * (ADR-016). **Ne jamais lancer ce script contre une base réelle**, et ne
+ * jamais téléverser les images ailleurs que dans ce dépôt.
  */
 
 import { mkdirSync, readFileSync } from "node:fs";
