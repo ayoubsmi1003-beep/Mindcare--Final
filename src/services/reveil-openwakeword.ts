@@ -477,7 +477,7 @@ export function creerDetecteurOpenWakeWord(): DetecteurReveil {
         log.error("reveil.frequence", { code: "indisponible", count: contexte.sampleRate });
         prise.rendre();
         prise = null;
-        return err({ code: "indisponible", message: fr.jarvis.voix.reveil.moteurIndisponible });
+        return err({ code: "indisponible", message: fr.jarvis.voix.reveil.frequenceIncompatible });
       }
       // `ScriptProcessorNode` est déprécié mais universellement disponible.
       // Un `AudioWorklet` exigerait un fichier servi à part et une politique de

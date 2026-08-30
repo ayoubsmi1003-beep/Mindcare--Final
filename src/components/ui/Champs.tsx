@@ -50,6 +50,7 @@ function Habillage({
   erreur,
   idChamp,
   idAide,
+  action,
   children,
 }: {
   readonly libelle: string;
@@ -57,16 +58,28 @@ function Habillage({
   readonly erreur?: string;
   readonly idChamp: string;
   readonly idAide: string;
+  /**
+   * Commande propre à CE champ, posée sur la ligne du libellé.
+   *
+   * ⚠️ SA PLACE EST SON SENS. Un micro rangé à côté de « Subjectif » dit
+   * « dicter dans Subjectif » sans avoir besoin de l'écrire. Le sortir de
+   * cette ligne — une barre d'outils commune, par exemple — rendrait sa cible
+   * ambiguë au moment précis où elle doit être évidente.
+   */
+  readonly action?: React.ReactNode;
   readonly children: React.ReactNode;
 }): React.JSX.Element {
   return (
     <div className="flex flex-col gap-2">
-      <label
-        htmlFor={idChamp}
-        className="font-ui text-label font-semibold tracking-label text-ink-700"
-      >
-        {libelle}
-      </label>
+      <div className="flex min-h-6 flex-wrap items-center justify-between gap-x-4 gap-y-1">
+        <label
+          htmlFor={idChamp}
+          className="font-ui text-label font-semibold tracking-label text-ink-700"
+        >
+          {libelle}
+        </label>
+        {action ?? null}
+      </div>
       {children}
       {indication === undefined && erreur === undefined ? null : (
         <p
@@ -188,6 +201,8 @@ export function ChampZoneTexte({
   indication,
   erreur,
   disabled = false,
+  action,
+  zoneRef,
 }: BaseProps & {
   readonly valeur: string;
   readonly onChange: (v: string) => void;
@@ -195,6 +210,16 @@ export function ChampZoneTexte({
   /** Typographie de note clinique — plus grande, plus aérée. */
   readonly clinique?: boolean;
   readonly placeholder?: string;
+  /** Commande posée sur la ligne du libellé — voir `Habillage`. */
+  readonly action?: React.ReactNode;
+  /**
+   * Accès à la zone réelle, pour lire la position du curseur.
+   *
+   * L'appelant NE DOIT PAS écrire la valeur par cette référence : elle sert à
+   * SAVOIR où insérer, la valeur restant écrite par `onChange` comme toute
+   * autre saisie — donc soumise à l'enregistrement automatique existant.
+   */
+  readonly zoneRef?: React.Ref<HTMLTextAreaElement>;
 }): React.JSX.Element {
   const idChamp = useId();
   const idAide = useId();
@@ -207,9 +232,11 @@ export function ChampZoneTexte({
       idAide={idAide}
       {...(indication === undefined ? {} : { indication })}
       {...(erreur === undefined ? {} : { erreur })}
+      {...(action === undefined ? {} : { action })}
     >
       <textarea
         id={idChamp}
+        ref={zoneRef}
         value={valeur}
         rows={lignes}
         disabled={disabled}

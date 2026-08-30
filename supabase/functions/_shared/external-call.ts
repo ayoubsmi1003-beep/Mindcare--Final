@@ -1053,6 +1053,25 @@ const TTS_MODEL_DEFAUT = "eleven_multilingual_v2";
  * le cloud « en attendant » serait exactement la fuite qu'ADR-024 interdit, et
  * elle serait invisible.
  */
+/**
+ * Mémoire courte du SECOND verrou, et de lui seul.
+ *
+ * ⚠️ SEUL UN VERDICT `true` EST MÉMORISÉ. Un refus, lui, est toujours
+ * reconstaté : mettre en cache un « non » ferait survivre une panne de
+ * connexion passagère à sa cause, et la voix resterait muette une minute après
+ * réparation sans que rien ne l'explique. Un « oui » périmé, à l'inverse, est
+ * borné par la fenêtre ci-dessous — et la bascule `cloud-dev` → `self-hosted`
+ * est une opération humaine délibérée, pas un événement d'une seconde.
+ *
+ * POURQUOI CE CACHE EXISTE : sans lui, `garderVoix()` ouvrait une connexion
+ * Postgres NEUVE à chaque énoncé, dans les deux sens. C'est un aller-retour de
+ * plus par tour de parole, et surtout un point de panne supplémentaire dont
+ * l'échec se présentait comme `configuration` — indiscernable d'un vrai refus
+ * d'exploitation.
+ */
+const FENETRE_VERDICT_MS = 60_000;
+let verdictCloudDev: { expire: number } | null = null;
+
 async function garderVoix(): Promise<LlmResult<never> | null> {
   const mode = Deno.env.get("VOICE_PROVIDER");
   if (mode !== "cloud") {
@@ -1061,6 +1080,9 @@ async function garderVoix(): Promise<LlmResult<never> | null> {
       "Voix indisponible : le mode vocal cloud n'est pas activé.",
     );
   }
+
+  if (verdictCloudDev !== null && Date.now() < verdictCloudDev.expire) return null;
+  verdictCloudDev = null;
 
   const dsn = Deno.env.get("SUPABASE_DB_URL");
   if (dsn === undefined || dsn === "") {
@@ -1073,6 +1095,9 @@ async function garderVoix(): Promise<LlmResult<never> | null> {
   const sql = postgres(dsn, { max: 1 });
   try {
     const lignes = await sql<{ cloud: boolean }[]>`SELECT app.is_cloud_dev() AS cloud`;
+    if (lignes[0]?.cloud === true) {
+      verdictCloudDev = { expire: Date.now() + FENETRE_VERDICT_MS };
+    }
     if (lignes[0]?.cloud !== true) {
       return llmErr(
         "frontiere",

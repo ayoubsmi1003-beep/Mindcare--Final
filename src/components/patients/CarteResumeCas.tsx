@@ -24,7 +24,6 @@ import { useState } from "react";
 import { Badge } from "@/components/ui";
 import { Bouton } from "@/components/ui";
 import { ChampTexte } from "@/components/ui";
-import { Icone } from "@/components/ui";
 import { PanneauInfo } from "@/components/ui";
 import { fr } from "@/i18n/fr";
 import {
@@ -63,21 +62,22 @@ export function CarteResumeCas({
   return (
     <section
       aria-busy={etat.generationEnCours}
-      className="flex flex-col gap-4 rounded-lg border border-ai-100 bg-ai-50 px-6 py-5 shadow-lift1"
+      /* ⚠️ CE N'EST PLUS UN PANNEAU « IA ». Le fond teinté et l'orbe faisaient
+         de la synthèse un objet à part, décoratif, dont on se méfie sans savoir
+         quoi en faire. Ce qui compte n'est pas d'où vient le texte mais s'il
+         est juste et sourcé — la provenance est dite une fois, en bas, et
+         chaque affirmation porte ses preuves. */
+      className="flex flex-col gap-6 rounded-lg border border-rule bg-card px-6 py-6 shadow-lift1"
     >
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <h2 className="flex items-center gap-2 font-ui text-heading font-semibold tracking-heading text-ink-900">
-          <Icone nom="jarvis" taille={24} className="text-ai-600" />
-          <span className="font-ui text-label tracking-label text-ai-600">
-            {fr.patients.resume.surTitre}
-          </span>
+        <h2 className="font-ui text-display font-semibold tracking-heading text-ink-900">
           {fr.patients.resume.titre}
         </h2>
         {r !== null ? <ChipFraicheur resume={r} /> : null}
       </div>
 
       {etat.generationEnCours ? (
-        <p role="status" className="font-ui text-label tracking-label text-ai-600">
+        <p role="status" className="font-ui text-label tracking-label text-ink-500">
           {fr.patients.resume.generationEnCours}
         </p>
       ) : null}
@@ -107,36 +107,97 @@ export function CarteResumeCas({
         )
       ) : (
         <>
-          {/* En bref — 2 à 4 phrases maximum (garantie passerelle). */}
-          <BlocSection titre={fr.patients.resume.enBref}>
-            {r.contenu.enBref.map((item, idx) => (
-              <ItemPreuve key={idx} item={item} onOuvrirSource={onOuvrirSource} registreSynthese />
-            ))}
-          </BlocSection>
+          {/* ⚠️ DEUX FORMES VIVENT ICI, ET C'EST VOULU. Les résumés déjà
+              écrits en schéma 1 restent lisibles ; seuls les nouveaux sont
+              chronologiques (069). Un rendu unique aurait affiché « aucun
+              résumé » sur tous les dossiers jusqu'à leur régénération. */}
+          {r.contenu.schema === 2 ? (
+            <>
+              {/* L'APERÇU, EN PREMIER ET TOUJOURS. Il est composé en base, pas
+                  rédigé par le modèle : c'est la seule section sur laquelle on
+                  peut se fier sans rouvrir le dossier. */}
+              <BlocSection titre={fr.patients.resume.apercu}>
+                <p className="font-ui text-body font-medium text-ink-900">
+                  {[
+                    r.contenu.apercu.nom,
+                    r.contenu.apercu.age === null
+                      ? null
+                      : `${String(r.contenu.apercu.age)} ${fr.patients.ageAnnees}`,
+                    r.contenu.apercu.residence,
+                  ]
+                    .filter((x): x is string => x !== null && x !== "")
+                    .join(" · ")}
+                </p>
+                {r.contenu.apercu.diagnostics.map((item, idx) => (
+                  <ItemPreuve key={`d${String(idx)}`} item={item} onOuvrirSource={onOuvrirSource} />
+                ))}
+                {r.contenu.apercu.traitements.map((item, idx) => (
+                  <ItemPreuve key={`t${String(idx)}`} item={item} onOuvrirSource={onOuvrirSource} />
+                ))}
+                {r.contenu.apercu.contexte.map((item, idx) => (
+                  <ItemPreuve key={`c${String(idx)}`} item={item} onOuvrirSource={onOuvrirSource} />
+                ))}
+              </BlocSection>
 
-          {r.contenu.evolutionRecente.length > 0 ? (
-            <BlocSection titre={fr.patients.resume.evolution}>
-              {r.contenu.evolutionRecente.map((item, idx) => (
-                <ItemPreuve key={idx} item={item} onOuvrirSource={onOuvrirSource} />
+              {/* Le parcours, année par année, la plus récente en tête. */}
+              {r.contenu.chronologie.map((periode) => (
+                <BlocSection key={periode.periode} titre={periode.periode}>
+                  {periode.entrees.map((item, idx) => (
+                    <ItemPreuve key={idx} item={item} onOuvrirSource={onOuvrirSource} />
+                  ))}
+                </BlocSection>
               ))}
-            </BlocSection>
-          ) : null}
 
-          {r.contenu.traitementsDocumentes.length > 0 ? (
-            <BlocSection titre={fr.patients.resume.traitements}>
-              {r.contenu.traitementsDocumentes.map((item, idx) => (
-                <ItemPreuve key={idx} item={item} onOuvrirSource={onOuvrirSource} />
-              ))}
-            </BlocSection>
-          ) : null}
+              {r.contenu.anterieur.length > 0 ? (
+                <BlocSection titre={fr.patients.resume.anterieur}>
+                  {r.contenu.anterieur.map((item, idx) => (
+                    <ItemPreuve key={idx} item={item} onOuvrirSource={onOuvrirSource} />
+                  ))}
+                </BlocSection>
+              ) : null}
 
-          {r.contenu.pointsAttention.length > 0 ? (
-            <BlocSection titre={fr.patients.resume.pointsAttention}>
-              {r.contenu.pointsAttention.map((item, idx) => (
-                <ItemPreuve key={idx} item={item} onOuvrirSource={onOuvrirSource} />
-              ))}
-            </BlocSection>
-          ) : null}
+              {r.contenu.etatActuel.length > 0 ? (
+                <BlocSection titre={fr.patients.resume.etatActuel}>
+                  {r.contenu.etatActuel.map((item, idx) => (
+                    <ItemPreuve key={idx} item={item} onOuvrirSource={onOuvrirSource} />
+                  ))}
+                </BlocSection>
+              ) : null}
+            </>
+          ) : (
+            <>
+              {/* En bref — 2 à 4 phrases maximum (garantie passerelle). */}
+              <BlocSection titre={fr.patients.resume.enBref}>
+                {r.contenu.enBref.map((item, idx) => (
+                  <ItemPreuve key={idx} item={item} onOuvrirSource={onOuvrirSource} />
+                ))}
+              </BlocSection>
+
+              {r.contenu.evolutionRecente.length > 0 ? (
+                <BlocSection titre={fr.patients.resume.evolution}>
+                  {r.contenu.evolutionRecente.map((item, idx) => (
+                    <ItemPreuve key={idx} item={item} onOuvrirSource={onOuvrirSource} />
+                  ))}
+                </BlocSection>
+              ) : null}
+
+              {r.contenu.traitementsDocumentes.length > 0 ? (
+                <BlocSection titre={fr.patients.resume.traitements}>
+                  {r.contenu.traitementsDocumentes.map((item, idx) => (
+                    <ItemPreuve key={idx} item={item} onOuvrirSource={onOuvrirSource} />
+                  ))}
+                </BlocSection>
+              ) : null}
+
+              {r.contenu.pointsAttention.length > 0 ? (
+                <BlocSection titre={fr.patients.resume.pointsAttention}>
+                  {r.contenu.pointsAttention.map((item, idx) => (
+                    <ItemPreuve key={idx} item={item} onOuvrirSource={onOuvrirSource} />
+                  ))}
+                </BlocSection>
+              ) : null}
+            </>
+          )}
 
           {!r.aJour ? (
             <p className="font-ui text-label tracking-label text-attention-ink">
@@ -159,7 +220,7 @@ export function CarteResumeCas({
         </>
       )}
 
-      <p className="border-t border-ai-100 pt-3 font-ui text-label tracking-label text-ink-500">
+      <p className="border-t border-rule pt-3 font-ui text-label tracking-label text-ink-500">
         {fr.disclaimer}
       </p>
     </section>
@@ -181,76 +242,63 @@ function BlocSection({
   readonly children: React.ReactNode;
 }): React.JSX.Element {
   return (
-    <div>
-      <h3 className="mb-1 font-ui text-label tracking-label text-ink-500">{titre}</h3>
-      <div className="flex flex-col gap-2">{children}</div>
-    </div>
+    <section className="flex flex-col gap-2">
+      <h3 className="font-ui text-label font-semibold tracking-label text-ink-500">{titre}</h3>
+      <div className="flex flex-col gap-3">{children}</div>
+    </section>
   );
 }
 
 function ItemPreuve({
   item,
   onOuvrirSource,
-  registreSynthese = false,
 }: {
   readonly item: ItemResume;
   readonly onOuvrirSource: (s: SourceResume) => void;
-  readonly registreSynthese?: boolean;
 }): React.JSX.Element {
   const [ouvert, setOuvert] = useState(false);
 
   return (
-    <article className="rounded-md border border-rule bg-card px-4 py-3">
-      <div className="flex items-start justify-between gap-3">
-        <p className="font-ui text-body text-ink-900">{item.texte}</p>
-        <button
-          type="button"
-          onClick={() => setOuvert((v) => !v)}
-          aria-expanded={ouvert}
-          className="shrink-0 rounded-md px-2 py-1 font-ui text-label tracking-label text-ai-600 outline-none transition duration-instant ease-soft hover:bg-ai-50 focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset"
-        >
-          {ouvert ? fr.patients.resume.fermerPreuves : fr.patients.resume.pourquoi}
-        </button>
-      </div>
-
-      <div className="mt-1 flex items-center gap-2">
-        <Badge ton="neutre">
-          {registreSynthese ? fr.patients.resume.registreSynthese : fr.patients.resume.registreDocumente}
-        </Badge>
+    <div className="flex flex-col gap-1">
+      <p className="font-ui text-body text-ink-900">
+        {item.texte}
         {item.sources.length > 0 ? (
-          <button
-            type="button"
-            onClick={() => setOuvert((v) => !v)}
-            aria-expanded={ouvert}
-            className="font-ui text-label tracking-label tabular-nums text-ink-500 underline decoration-rule underline-offset-2 hover:text-ink-700"
-          >
-            {String(item.sources.length)} × {fr.patients.resume.sources}
-          </button>
+          <>
+            {" "}
+            {/* ⚠️ LA PREUVE RESTE, SA DÉCORATION PART. Chaque fait a porté
+                trois ornements — une carte, un badge « Documenté », un compteur
+                « 3 × Sources » — répétés sur trente items. La preuve n'y
+                gagnait rien : elle était noyée dans le même bruit qui la
+                rendait illisible. Il reste UN mot, discret, dans le fil de la
+                phrase, et tout ce qu'il ouvrait s'ouvre encore. */}
+            <button
+              type="button"
+              onClick={() => setOuvert((v) => !v)}
+              aria-expanded={ouvert}
+              className="rounded font-ui text-label tracking-label text-ink-500 underline decoration-rule underline-offset-4 outline-none transition duration-instant ease-soft hover:text-ink-900 focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset"
+            >
+              {ouvert ? fr.patients.resume.fermerPreuves : fr.patients.resume.sources}
+            </button>
+          </>
         ) : null}
-      </div>
+      </p>
 
       {ouvert ? (
-        <ul className="mt-2 flex list-none flex-col gap-1 border-t border-rule pt-2">
-          {item.sources.length === 0 ? (
-            <li className="font-ui text-label tracking-label text-ink-500">
-              {fr.patients.resume.aucuneSource}
+        <ul className="m-0 flex list-none flex-col gap-1 border-l border-rule py-1 pl-3">
+          {item.sources.map((s, i) => (
+            <li key={`${s.t}-${s.id}-${String(i)}`}>
+              <button
+                type="button"
+                onClick={() => onOuvrirSource(s)}
+                className="font-ui text-label tracking-label text-action-600 underline decoration-rule underline-offset-2 hover:decoration-action-600"
+              >
+                {libelleSource(s)} →
+              </button>
             </li>
-          ) : (
-            item.sources.map((s, i) => (
-              <li key={`${s.t}-${s.id}-${String(i)}`}>
-                <button
-                  type="button"
-                  onClick={() => onOuvrirSource(s)}
-                  className="font-ui text-label tracking-label text-action-600 underline decoration-rule underline-offset-2 hover:decoration-action-600"
-                >
-                  {libelleSource(s)} →
-                </button>
-              </li>
-            ))
-          )}
+          ))}
         </ul>
       ) : null}
-    </article>
+    </div>
   );
 }
 

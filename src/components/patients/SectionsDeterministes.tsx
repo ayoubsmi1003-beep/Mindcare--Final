@@ -90,7 +90,17 @@ export function ListeSignaux({
 }: {
   readonly espace: PatientWorkspace;
 }): React.JSX.Element {
-  const items = espace.resume?.contenu.aDiscuter ?? [];
+  // Les points à vérifier ont changé de place entre les deux formes : section
+  // `a_discuter` en schéma 1, fondus dans `etat_actuel` en schéma 2 (069).
+  // On lit la forme réellement reçue plutôt que de supposer laquelle est là —
+  // les anciens résumés restent affichés tant qu'ils n'ont pas été régénérés.
+  const contenu = espace.resume?.contenu;
+  const items =
+    contenu === undefined
+      ? []
+      : contenu.schema === 2
+        ? contenu.etatActuel
+        : contenu.aDiscuter;
   // Le total complet vient de la génération ; côté lecture seule, le plafond
   // affiché est honnête : on ne prétend jamais tout montrer sans le savoir.
   const affiches = items.slice(0, 5);

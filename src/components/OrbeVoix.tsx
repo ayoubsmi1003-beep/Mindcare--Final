@@ -41,28 +41,54 @@ import {
   type VueVoix,
 } from "@/services/jarvis-reveil";
 
+import { SiriOrb } from "./ui/siri-orb";
+
 /**
  * L'apparence de chaque état. Aucun hex : uniquement des jetons du design
- * system (§5 de CLAUDE.md).
+ * system (§5 de CLAUDE.md). L'anneau reste l'unique marquage d'état côté
+ * chrome — la couleur du noyau vit désormais dans SiriOrb (présentation
+ * seule, aucune logique).
  *
  * ⚠️ AUCUN ÉTAT N'EST DISTINGUÉ PAR LA SEULE COULEUR. Chacun porte un libellé
- * textuel lu par `aria-live` et affiché en info-bulle : un daltonien, ou une
- * praticienne qui regarde son patient plutôt que l'écran, doit pouvoir savoir
- * ce que fait l'assistant.
+ * textuel lu par `aria-live` et affiché en info-bulle.
  */
 const APPARENCE: Record<EtatVoix, { readonly noyau: string; readonly anneau: string }> = {
-  veille: { noyau: "bg-grad-orb", anneau: "" },
-  reveille: { noyau: "bg-grad-orb shadow-glow-ai", anneau: "ring-2 ring-ai-500" },
-  ecoute: { noyau: "bg-grad-orb shadow-glow-ai", anneau: "ring-2 ring-ai-600" },
-  // `animate-respire` : le SEUL mouvement non piloté par une mesure. Il est
-  // justifié — « un instant… » est précisément l'état où rien d'observable ne
-  // se produit, et un orbe figé y serait indiscernable d'un orbe planté.
-  traitement: { noyau: "bg-grad-orb animate-respire", anneau: "ring-2 ring-ai-100" },
-  parole: { noyau: "bg-grad-orb shadow-glow-ai", anneau: "ring-2 ring-ai-500" },
-  interrompu: { noyau: "bg-grad-orb", anneau: "ring-2 ring-rule" },
-  erreur: { noyau: "bg-attention-bg", anneau: "ring-2 ring-attention" },
-  desactive: { noyau: "bg-sunken", anneau: "" },
+  veille: { noyau: "", anneau: "" },
+  reveille: { noyau: "", anneau: "ring-2 ring-ai-500" },
+  ecoute: { noyau: "", anneau: "ring-2 ring-ai-600" },
+  traitement: { noyau: "", anneau: "ring-2 ring-ai-100" },
+  parole: { noyau: "", anneau: "ring-2 ring-ai-500" },
+  interrompu: { noyau: "", anneau: "ring-2 ring-rule" },
+  erreur: { noyau: "", anneau: "ring-2 ring-attention" },
+  desactive: { noyau: "", anneau: "" },
 };
+
+/**
+ * Durée d'animation du SiriOrb par état vocal.
+ *  - veille / interrompu : calme (22s)
+ *  - reveille / ecoute   : nettement réactif (7-8s)
+ *  - traitement          : lent / contrôlé, distinct de l'écoute (30s)
+ *  - parole              : vivant pendant la synthèse (12s)
+ *  - erreur / desactive  : traitement d'erreur/disponibilité existant, calme
+ */
+const DUREE_ORB: Record<EtatVoix, number> = {
+  veille: 22,
+  reveille: 8,
+  ecoute: 7,
+  traitement: 30,
+  parole: 12,
+  interrompu: 22,
+  erreur: 22,
+  desactive: 30,
+};
+
+/** Palette clinique premium (spec tâche) — rose/bleu maîtrisé, calme, médical. */
+const COULEURS_CLINIQUES = {
+  bg: "oklch(98% 0.01 264.695)",
+  c1: "oklch(72% 0.16 350)",
+  c2: "oklch(76% 0.14 200)",
+  c3: "oklch(75% 0.15 280)",
+} as const;
 
 interface Props {
   /** Diamètre en pixels. L'en-tête en veut un plus petit que le lanceur. */
@@ -132,13 +158,24 @@ export function OrbeVoix({ taille = 32 }: Props): React.JSX.Element {
   const libelle = fr.jarvis.voix.reveil.etats[etat];
   // La raison prime sur le mot à prononcer : quand la voix est indisponible, on
   // dit POURQUOI plutôt que d'enseigner un mot qui ne réveillerait rien.
+  // Et quand le son sort de la synthèse locale, on le NOMME plutôt que de
+  // laisser croire que la voix distante répond. Voir `VueVoix.sourceParole`.
   const detail =
-    vue?.raison ?? (etat === "veille" ? fr.jarvis.voix.reveil.motAPrononcer : libelle);
+    vue?.raison ??
+    (etat === "parole" && vue?.sourceParole === "local"
+      ? fr.jarvis.voix.reveil.paroleLocale
+      : etat === "veille"
+        ? fr.jarvis.voix.reveil.motAPrononcer
+        : libelle);
   const apparence = APPARENCE[etat];
   // ⚠️ « désactivé » N'EST PAS « inerte ». L'orbe éteint reste cliquable —
   // c'est le geste qui allume la voix. Le désactiver vraiment enfermerait la
   // praticienne dans un état dont aucun clic ne sort.
   const eteint = etat === "desactive";
+
+  // SiriOrb est la couche visuelle — la même palette premium pour tous les
+  // états, seule la durée d'animation distingue écoute / réflexion / parole.
+  const duree = DUREE_ORB[etat];
 
   return (
     <button
@@ -158,14 +195,21 @@ export function OrbeVoix({ taille = 32 }: Props): React.JSX.Element {
       <span
         ref={noyauRef}
         aria-hidden
-        className={`block h-full w-full rounded-full transition-transform duration-quick ease-soft ${apparence.noyau}`}
+        className="flex h-full w-full items-center justify-center rounded-full transition-transform duration-quick ease-soft"
         style={{
           // L'amplitude réelle, écrite par la boucle `rAF`. `--niveau` vaut 0
           // partout ailleurs, donc l'échelle vaut exactement 1 : aucun mouvement
           // n'est inventé hors de l'écoute.
           transform: "scale(calc(1 + var(--niveau, 0) * 0.18))",
         }}
-      />
+      >
+        <SiriOrb
+          size={`${String(taille)}px`}
+          animationDuration={duree}
+          colors={COULEURS_CLINIQUES}
+          className="rounded-full"
+        />
+      </span>
       {/* Le libellé d'état, annoncé aux lecteurs d'écran sans encombrer l'écran.
           `polite` : une transition d'orbe ne doit pas couper la parole en cours
           d'un lecteur d'écran au milieu d'une consultation. */}

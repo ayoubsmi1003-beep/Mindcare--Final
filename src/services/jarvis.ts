@@ -30,6 +30,18 @@ export interface AnalyseSeance {
   readonly noteStructuree: NoteSoap;
   readonly evolution: readonly string[];
   readonly pointsNonExplores: readonly string[];
+  /** Identifiant de la version enregistrée — `null` si l'écriture a échoué. */
+  readonly analyseId: string | null;
+  readonly version: number | null;
+  /**
+   * L'analyse a-t-elle été RANGÉE, ou seulement calculée ?
+   *
+   * ⚠️ LA DISTINCTION EST VISIBLE À L'ÉCRAN, ET ELLE DOIT L'ÊTRE. Une analyse
+   * non persistée disparaît au changement d'écran. La présenter comme les
+   * autres ferait promettre une permanence qui n'existe pas — et c'est
+   * exactement ce que faisait la version précédente, pour TOUTES les analyses.
+   */
+  readonly persistee: boolean;
 }
 
 interface AnalyseSeanceRow {
@@ -41,6 +53,16 @@ interface AnalyseSeanceRow {
   };
   readonly evolution: readonly string[];
   readonly pointsNonExplores: readonly string[];
+  readonly analyseId?: string | null;
+  readonly version?: number | null;
+  readonly persistee?: boolean;
+}
+
+/** La ligne rendue par `app.get_consultation_analysis` (067). */
+interface AnalyseEnregistreeRow {
+  readonly id: string;
+  readonly version: number;
+  readonly content: unknown;
 }
 
 /**
@@ -72,6 +94,64 @@ export async function analyzeSession(consultationId: string): Promise<Result<Ana
     },
     evolution: result.data.evolution,
     pointsNonExplores: result.data.pointsNonExplores,
+    analyseId: result.data.analyseId ?? null,
+    version: result.data.version ?? null,
+    persistee: result.data.persistee ?? false,
+  });
+}
+
+/**
+ * Relit l'analyse déjà enregistrée pour cette consultation, s'il y en a une.
+ *
+ * ═══ POURQUOI CETTE FONCTION EXISTE ═══
+ * L'analyse n'était RENDUE que par l'appel qui la produisait : elle vivait
+ * dans l'état React et disparaissait au premier changement d'écran. Rouvrir
+ * une consultation ne montrait plus rien, et rien n'indiquait qu'une analyse
+ * avait seulement existé. La porte 067 la rend durable ; celle-ci la relit.
+ *
+ * Rend `ok(null)` quand aucune analyse n'existe — une consultation jamais
+ * analysée n'est pas une erreur, c'est l'état normal d'une séance en cours.
+ */
+export async function chargerAnalyse(
+  consultationId: string,
+): Promise<Result<AnalyseSeance | null>> {
+  const result = await db().rpc<AnalyseEnregistreeRow>("get_consultation_analysis", {
+    p_consultation_id: consultationId,
+  });
+
+  if (!result.ok) {
+    log.error("jarvis.analyseRelecture", logFieldsFor(result.error));
+    return err(result.error);
+  }
+
+  const ligne = result.data[0];
+  if (ligne === undefined) return ok(null);
+
+  // Le contenu vient de NOTRE porte, mais il a été écrit par un modèle : on le
+  // lit avec la même défiance qu'une entrée réseau. Une forme inattendue rend
+  // `null` — « pas d'analyse » — jamais un écran cassé pendant une consultation.
+  const contenu = ligne.content;
+  if (typeof contenu !== "object" || contenu === null) return ok(null);
+  const c = contenu as Record<string, unknown>;
+  const note = c["noteStructuree"];
+  if (typeof note !== "object" || note === null) return ok(null);
+  const n = note as Record<string, unknown>;
+  const champ = (v: unknown): string => (typeof v === "string" ? v : "");
+  const liste = (v: unknown): readonly string[] =>
+    Array.isArray(v) ? v.filter((x): x is string => typeof x === "string") : [];
+
+  return ok({
+    noteStructuree: {
+      subjective: champ(n["subjective"]),
+      objective: champ(n["objective"]),
+      assessment: champ(n["assessment"]),
+      plan: champ(n["plan"]),
+    },
+    evolution: liste(c["evolution"]),
+    pointsNonExplores: liste(c["pointsNonExplores"]),
+    analyseId: ligne.id,
+    version: ligne.version,
+    persistee: true,
   });
 }
 

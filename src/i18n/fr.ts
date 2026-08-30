@@ -90,6 +90,24 @@ export const fr = {
     noteSignee: "Note signée.",
     seanceDemarree: "Séance démarrée.",
     seanceTerminee: "Séance terminée.",
+    /**
+     * Ce qui se passe APRÈS la clôture — analyse de la séance, puis mise à
+     * jour du résumé du cas.
+     *
+     * ⚠️ CES MESSAGES NE PARLENT JAMAIS DE LA CONSULTATION. Elle est close, et
+     * elle l'est restée quoi qu'il arrive ensuite : dire « échec » sans
+     * préciser QUOI a échoué ferait craindre pour la note clinique. Chaque
+     * libellé nomme donc l'étape, et rappelle que le dossier est enregistré.
+     */
+    apresSeance: {
+      analyseEnCours: "Séance terminée. Alexa analyse la séance…",
+      resumeEnCours: "Séance terminée. Mise à jour du résumé du cas…",
+      terminee: "Séance terminée. Analyse et résumé du cas à jour.",
+      analyseEchouee:
+        "Séance terminée et enregistrée. L'analyse n'a pas pu être générée — elle se relance depuis la séance.",
+      resumeEchoue:
+        "Séance terminée et enregistrée. Le résumé du cas n'a pas pu être mis à jour — la version précédente reste affichée.",
+    },
     certificatGenere: "Certificat généré.",
     confirme: "Confirmé.",
     annule: "Annulé.",
@@ -120,6 +138,8 @@ export const fr = {
    * nom d'écran supplémentaire.
    */
   coquille: {
+    /** V8 — le sous-titre de marque, sous « MindCare » dans le rail. */
+    marqueSousTitre: "Cabinet de psychiatrie",
     /**
      * Écran référencé dans la navigation mais pas encore construit (I19).
      *
@@ -217,7 +237,7 @@ export const fr = {
 
     onglets: {
       vueDEnsemble: "Vue d'ensemble",
-      chronologie: "Chronologie",
+      chronologie: "Historique",
       clinique: "Clinique",
       traitements: "Traitements",
       rendezVous: "Rendez-vous",
@@ -244,6 +264,15 @@ export const fr = {
       nouveauRendezVous: "Nouveau rendez-vous",
       modifier: "Modifier le dossier",
       chargerPlus: "Charger les événements précédents",
+      /** Le geste, nommé par ce qu'il fait — pas « Voir les détails ». */
+      ouvrirConsultation: "Ouvrir la consultation",
+      /**
+       * L'historique se DEMANDE, il ne s'ouvre pas tout seul.
+       * `app.list_patient_timeline` écrit une trace `liste` AVANT de lire :
+       * l'afficher d'office produirait, à chaque ouverture de fiche, une
+       * lecture que personne n'a demandée (règle 6).
+       */
+      afficherHistorique: "Afficher l'historique du dossier",
     },
 
     /**
@@ -405,6 +434,17 @@ export const fr = {
       titre: "Résumé du cas",
       surTitre: "Alexa",
       enBref: "En bref",
+      /**
+       * Les trois libellés du résumé chronologique (schéma 2, migration 069).
+       *
+       * « Aperçu » vient EN PREMIER et n'est pas rédigé par l'assistant : nom,
+       * âge, résidence, diagnostics et posologies sont recopiés de la base.
+       * C'est la section qu'on lit sans rouvrir le dossier — elle ne peut donc
+       * pas être le fruit d'une génération.
+       */
+      apercu: "Aperçu",
+      anterieur: "Années antérieures",
+      etatActuel: "État actuel",
       evolution: "Évolution récente",
       dernierEtat: "Dernier état connu",
       traitements: "Traitements documentés",
@@ -412,9 +452,6 @@ export const fr = {
       sources: "Sources",
       pourquoi: "Pourquoi ?",
       fermerPreuves: "Fermer les sources",
-      registreDocumente: "Documenté",
-      registreSynthese: "Synthèse IA",
-      aucuneSource: "Aucune source rattachée.",
       generer: "Générer le résumé",
       actualiser: "Actualiser",
       generationEnCours: "Actualisation du résumé…",
@@ -712,6 +749,29 @@ export const fr = {
     typeConsultation: "Type de consultation",
 
     notesBrutes: "Notes de séance",
+    /**
+     * La dictée — notes vocales de la séance.
+     *
+     * ⚠️ « BROUILLON » EST LE MOT EXACT, ET IL EST TENU. Une transcription
+     * atterrit dans les notes BRUTES, relues et corrigées par la praticienne,
+     * puis signées par un geste distinct. Aucune parole ne devient une note
+     * signée sans qu'elle l'ait décidé : la signature porte sa responsabilité
+     * médicale, elle ne s'obtient pas par défaut.
+     */
+    dicter: "Dictée",
+    /** L'état d'écoute, sur le micro d'un champ — court, il tient sur la ligne. */
+    dicterEcoute: "Écoute…",
+    /**
+     * ⚠️ CE QUI EST DICTÉ DANS UN CHAMP RESTE DANS CE CHAMP. Cette phrase le
+     * promet, et le code le tient : la cible est figée au moment où le micro
+     * est pressé, aucun modèle ne redistribue le texte entre les rubriques.
+     */
+    dicterChampIndication:
+      "La dictée s'insère à l'endroit du curseur, sans rien effacer. À relire avant signature.",
+    dicterTranscription: "Transcription en cours…",
+    dicterIndication:
+      "La dictée s'ajoute aux notes brutes, à relire et corriger avant signature.",
+    dicterVide: "Rien n'a été entendu.",
     notesBrutesIndication:
       "Brouillon de travail, saisi au fil de la séance. Ne fait pas partie de la note signée.",
     notesBrutesFigees: "La séance est close : ces notes ne sont plus modifiables.",
@@ -1102,6 +1162,10 @@ export const fr = {
       aucunRevenu: "Aucune recette sur la période.",
       aucuneCharge: "Aucune charge sur la période.",
       nonRattache: "Séance non rattachée",
+      /** ⚠️ UN MOT, PAS UNE PHRASE — le centre d'un anneau mesure ~112 px de
+       *  large. « D'où vient l'argent » y sortait tronqué par-dessus l'arc. */
+      centreRecettes: "Recettes",
+      centreCharges: "Charges",
       part: "{pct} %",
     },
 
@@ -1493,6 +1557,16 @@ export const fr = {
         moteurIndisponible:
           "Le moteur de détection est installé mais ses fichiers sont introuvables. Le micro reste utilisable en maintenant le bouton.",
         /**
+         * ⚠️ CETTE CAUSE PORTAIT LE MESSAGE DE LA PRÉCÉDENTE, et envoyait donc
+         * chercher des fichiers manquants alors que tout était installé. Le
+         * détecteur exige 16 kHz ; certains navigateurs et certaines cartes son
+         * rendent un contexte à 44,1 ou 48 kHz. Le moteur tourne alors très
+         * bien et ne reconnaît plus rien — panne muette, matériel-dépendante,
+         * introuvable en relecture. Une cause distincte mérite un mot distinct.
+         */
+        frequenceIncompatible:
+          "Le micro de ce poste ne fournit pas la fréquence attendue par la détection locale. Le mot de réveil est indisponible ici ; le micro reste utilisable en maintenant le bouton.",
+        /**
          * Le seul endroit de l'interface où la praticienne apprend QUOI DIRE.
          * Le mot prononcé et le nom de l'assistant coïncident désormais : dire
          * « Alexa » réveille Alexa. Cette chaîne doit rester alignée sur le
@@ -1501,6 +1575,17 @@ export const fr = {
          */
         motAPrononcer: "Dites « Alexa » pour me réveiller.",
         desarme: "Mot de réveil désactivé.",
+        /**
+         * Dit à voix haute ce qui était jusqu'ici indevinable : le son sort de
+         * la synthèse DU NAVIGATEUR, pas de la voix de synthèse distante.
+         *
+         * ⚠️ CE N'EST PAS UN DÉTAIL TECHNIQUE ÉGARÉ DANS L'INTERFACE. Une
+         * réponse qui nomme une patiente est lue en local par obligation
+         * (règle 1) et s'entend parfaitement même quand la passerelle vocale
+         * est injoignable. Sans ce mot, on entend Alexa parler, on en conclut
+         * que la sortie fonctionne, et on cherche la panne du mauvais côté.
+         */
+        paroleLocale: "Alexa parle avec la voix du navigateur (voix distante non utilisée).",
         microRefuse:
           "L'accès au micro a été refusé. Le mot de réveil ne peut pas fonctionner ; le clavier reste utilisable.",
         etats: {
@@ -1605,9 +1690,73 @@ export const fr = {
    * LES ÉTATS VIDES DISENT POURQUOI, ET PROPOSENT UN GESTE (05-UX-CONTRACT §3).
    * Jamais d'illustration, jamais « aucune donnée », jamais « bientôt ».
    */
+  /**
+   * V8 — LES GRAPHIQUES. Chaînes partagées par toutes les formes de
+   * `components/ui/Graphes.tsx`.
+   *
+   * ⚠️ UN GRAPHIQUE SANS DONNÉE DIT POURQUOI, IL NE DIT PAS « aucune donnée ».
+   * `aucunPoint` est le seul cas où la phrase ne peut pas être plus précise :
+   * le composant ne sait pas de quelle série il s'agit, c'est l'écran qui le
+   * sait. Les écrans qui ont mieux à dire le disent eux-mêmes et n'appellent
+   * pas le graphique du tout (05-UX-CONTRACT §3).
+   */
+  graphes: {
+    aucunPoint: "Rien à représenter sur cette période.",
+    /** Les en-têtes des tableaux équivalents, lus par les lecteurs d'écran. */
+    colonnePeriode: "Période",
+    colonneJour: "Jour",
+    colonneMois: "Mois",
+    colonneHeure: "Heure",
+    colonneMontant: "Montant",
+    colonnePart: "Part",
+    colonneSeances: "Séances",
+  },
+
   tableauDeBord: {
     salutation: "Bonjour Docteur",
     sousTitre: "Votre journée",
+
+    /**
+     * V8 — LE BANDEAU D'ACCUEIL ET LE POULS DE LA JOURNÉE.
+     *
+     * ⚠️ AUCUNE DE CES CHAÎNES NE PROMET UN CHIFFRE QUE LA PORTE NE REND PAS.
+     * `app.dashboard_today` (059) rend la journée, la salle d'attente, la
+     * caisse et les nouveaux dossiers du mois — c'est exactement ce que le
+     * pouls affiche. Il n'y a ni « taux d'occupation », ni « durée moyenne »,
+     * ni « évolution vs hier » : aucune porte ne les calcule, et les inventer
+     * serait une donnée fictive au sens de la règle 8.
+     */
+    v8: {
+      accueilSousTitre: "Voici votre journée au cabinet.",
+      poulsSeances: "Séances aujourd'hui",
+      poulsSeancesAide:
+        "Les rendez-vous inscrits à votre agenda pour la journée en cours, tous statuts confondus.",
+      poulsAttente: "Salle d'attente",
+      poulsAttenteAide: "Les patients arrivés et pas encore reçus, à cet instant.",
+      poulsNouveaux: "Nouveaux dossiers ce mois",
+      poulsNouveauxAide: "Les dossiers ouverts depuis le premier jour du mois en cours.",
+      poulsEncaisse: "Encaissé aujourd'hui",
+      poulsEncaisseAide:
+        "Les paiements dont l'encaissement est enregistré aujourd'hui. Jamais les montants facturés.",
+      poulsTermineesSur: "{n} terminées",
+      poulsPersonne: "Personne n'attend",
+      poulsUnPatient: "1 patient",
+      poulsPatients: "{n} patients",
+      poulsAucunDossier: "Aucun dossier ouvert",
+      poulsUnDossier: "1 dossier ouvert",
+      poulsDossiers: "{n} dossiers ouverts",
+
+      chargeTitre: "Charge de la journée",
+      chargeAide: "Séances par heure, telles qu'elles sont planifiées.",
+      chargeTableau: "Séances par heure",
+      chargeVide: "Aucune séance n'est planifiée aujourd'hui.",
+      chargeCreneau: "{heure} · {n} séance(s)",
+
+      repartitionTitre: "Où en est la journée",
+      repartitionTableau: "Répartition des séances par statut",
+      repartitionCentre: "séances",
+      repartitionVide: "Rien à répartir : la journée est vide.",
+    },
     /** L'action d'en-tête. Distincte de `fil.videAction` bien que le mot soit
      *  le même aujourd'hui : l'une mène à l'agenda depuis un écran plein,
      *  l'autre depuis une journée vide. Les fusionner ferait changer les deux

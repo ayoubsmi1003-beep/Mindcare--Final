@@ -116,7 +116,15 @@ fi
 #   ELEVENLABS_TTS_MODEL   →  TTS_MODEL
 #
 # Les autres passent sous leur propre nom.
+#
+# ⚠️ `CORS_ORIGINS` MANQUAIT À CETTE TABLE, et c'est la panne de la voix.
+# Absente des secrets, `_shared/cors.ts` retombe sur `http://localhost:3000` :
+# toute autre origine (port glissé, domaine du cabinet) reçoit des en-têtes
+# VIDES, le navigateur bloque avant l'exécution, et l'écran ne sait dire
+# qu'« indisponible ». La sortie vocale semblait pourtant fonctionner — c'était
+# le repli Web Speech local de `jarvis-voix.ts` qui masquait le refus.
 CORRESPONDANCES="
+CORS_ORIGINS:CORS_ORIGINS
 VOICE_PROVIDER:VOICE_PROVIDER
 OPENROUTER_API_KEY:OPENROUTER_API_KEY
 OPENROUTER_MODEL:OPENROUTER_MODEL
@@ -169,6 +177,20 @@ fi
 
 if [ $poses -eq 0 ]; then
   echo "ROUGE — aucun secret lisible dans .env."
+  exit 1
+fi
+
+# CORS_ORIGINS est le seul secret dont l'absence rend TOUTE la surface navigateur
+# inatteignable — et en silence, parce que le navigateur ne dit jamais à
+# JavaScript pourquoi il a bloqué une requête inter-origines. Un avertissement
+# se lit et s'oublie ; ce refus, non. Voir `_shared/cors.ts` et `garde-origine`.
+if [ -z "$(val CORS_ORIGINS)" ]; then
+  echo "ROUGE — CORS_ORIGINS absente de .env."
+  echo "      Sans elle, _shared/cors.ts retombe sur http://localhost:3000 et"
+  echo "      toute autre origine est bloquée PAR LE NAVIGATEUR, avant que la"
+  echo "      fonction ne s'exécute. L'écran ne saura dire qu'« indisponible »."
+  echo "      Poser l'origine réellement servie, p. ex. :"
+  echo "          CORS_ORIGINS=http://localhost:3000"
   exit 1
 fi
 

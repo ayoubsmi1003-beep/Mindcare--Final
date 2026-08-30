@@ -240,19 +240,41 @@ let lectureEnCours: { audio: HTMLAudioElement; url: string } | null = null;
  * (synthèse locale) : les deux seuls événements qui signifient qu'un son sort
  * réellement du haut-parleur.
  */
-type AbonneLecture = (enLecture: boolean) => void;
+type AbonneLecture = (enLecture: boolean, source: SourceLecture | null) => void;
 const abonnesLecture = new Set<AbonneLecture>();
 let enLecture = false;
+let sourceLecture: SourceLecture | null = null;
 
-function publierLecture(valeur: boolean): void {
-  if (enLecture === valeur) return; // pas de doublon : `pause` suit `ended`
+/**
+ * QUI a parlé — et pourquoi cette distinction n'est pas cosmétique.
+ *
+ * `cloud` : ElevenLabs, via la passerelle. `local` : la synthèse du navigateur,
+ * choisie quand le texte porte une identité (règle 1) ou par l'interrupteur
+ * d'exploitation.
+ *
+ * ⚠️ SANS CETTE DISTINCTION, UN DIAGNOSTIC FAUX DEVIENT INÉVITABLE. Mesuré le
+ * 2026-08-30 : la passerelle vocale était injoignable depuis le navigateur
+ * (`CORS_ORIGINS` jamais posée), mais les réponses NOMMANT une patiente
+ * partaient en synthèse locale et sortaient normalement du haut-parleur. On en
+ * a conclu « la sortie marche, l'entrée non », et on a cherché des heures du
+ * côté de la transcription — alors que les DEUX directions étaient bloquées à
+ * la même porte. Une lecture locale n'est pas une lecture cloud réussie : le
+ * dire, c'est rendre la panne visible au lieu de la maquiller.
+ */
+export type SourceLecture = "cloud" | "local";
+
+function publierLecture(valeur: boolean, source: SourceLecture | null = null): void {
+  // Pas de doublon (`pause` suit `ended`), sauf si la SOURCE change : passer du
+  // cloud au local sans le publier laisserait l'écran sur l'ancienne provenance.
+  if (enLecture === valeur && sourceLecture === (valeur ? source : null)) return;
   enLecture = valeur;
-  for (const a of abonnesLecture) a(valeur);
+  sourceLecture = valeur ? source : null;
+  for (const a of abonnesLecture) a(enLecture, sourceLecture);
 }
 
 export function abonnerLecture(abonne: AbonneLecture): () => void {
   abonnesLecture.add(abonne);
-  abonne(enLecture);
+  abonne(enLecture, sourceLecture);
   return () => {
     abonnesLecture.delete(abonne);
   };
@@ -261,6 +283,11 @@ export function abonnerLecture(abonne: AbonneLecture): () => void {
 /** Une lecture est-elle réellement en cours ? Un FAIT, pas une supposition. */
 export function lectureActive(): boolean {
   return enLecture;
+}
+
+/** Par quelle voie sort le son EN CE MOMENT — `null` si rien ne sort. */
+export function sourceLectureActive(): SourceLecture | null {
+  return sourceLecture;
 }
 
 /** Stoppe toute lecture en cours et révoque le blob — avant d'en lancer une autre. */
@@ -320,7 +347,7 @@ async function lireEnLocal(texte: string): Promise<Result<true>> {
   return await new Promise<Result<true>>((resoudre) => {
     const enonce = new SpeechSynthesisUtterance(texte);
     enonce.lang = "fr-FR";
-    enonce.onstart = () => publierLecture(true);
+    enonce.onstart = () => publierLecture(true, "local");
     enonce.onend = () => {
       publierLecture(false);
       resoudre(ok(true));
@@ -384,7 +411,7 @@ export async function lireTexte(
     // commentaire d'`abonnerLecture`.
     const demarre = new Promise<boolean>((resoudre) => {
       audio.onplaying = () => {
-        publierLecture(true);
+        publierLecture(true, "cloud");
         resoudre(true);
       };
       audio.onerror = () => resoudre(false);

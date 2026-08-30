@@ -22,6 +22,7 @@
 
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { Bouton, EtatVide, PastilleIcone, Squelette } from "@/components/ui";
@@ -130,9 +131,24 @@ function LigneEvenement({ evenement }: { readonly evenement: TimelineEvent }): R
 
       <div className="flex min-w-0 grow flex-col gap-1 pb-2">
         <div className="flex min-w-0 flex-wrap items-baseline gap-x-3 gap-y-1">
-          <span className="font-ui text-body font-medium text-ink-900">
-            {LIBELLES[evenement.labelKey]}
-          </span>
+          {/* ⚠️ UNE CONSULTATION S'OUVRE, LE RESTE SE LIT. La porte rend `c.id`
+              comme `event_id` pour ce type (048) : le lien est direct, sans
+              lecture supplémentaire. Les autres événements n'ont pas d'écran
+              propre — les rendre cliquables promettrait une destination qui
+              n'existe pas. */}
+          {evenement.eventType === "consultation" ? (
+            <Link
+              href={`/consultation/${evenement.eventId}`}
+              aria-label={`${LIBELLES[evenement.labelKey]} — ${fr.patients.actions.ouvrirConsultation}`}
+              className="rounded font-ui text-body font-medium text-ink-900 underline decoration-rule underline-offset-4 outline-none transition duration-instant ease-soft hover:decoration-action-600 focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset"
+            >
+              {LIBELLES[evenement.labelKey]}
+            </Link>
+          ) : (
+            <span className="font-ui text-body font-medium text-ink-900">
+              {LIBELLES[evenement.labelKey]}
+            </span>
+          )}
           <span className="font-ui text-label tracking-label text-ink-500 tabular-nums">
             {jour ?? fr.etats.texteAbsent}
             {h === null ? null : ` · ${h}`}

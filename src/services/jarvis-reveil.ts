@@ -48,6 +48,7 @@ import {
   arreterLecture,
   annulerDictee,
   demarrerDictee,
+  type SourceLecture,
 } from "./jarvis-voix";
 import { log } from "./log";
 import { err, ok, type Result } from "./result";
@@ -81,6 +82,17 @@ export interface VueVoix {
   readonly raison: string | null;
   /** Le détecteur de mot de réveil est-il réellement installé et armé ? */
   readonly reveilArme: boolean;
+  /**
+   * Par quelle voie sort le son pendant l'état `parole` — `null` sinon.
+   *
+   * ⚠️ CE CHAMP EXISTE PARCE QUE SON ABSENCE A COÛTÉ DES HEURES. Une réponse
+   * nommant une patiente part en synthèse LOCALE (règle 1) et s'entend
+   * parfaitement même quand la passerelle vocale est injoignable. Sans cette
+   * distinction, on entend Alexa parler et on en déduit que la sortie
+   * fonctionne — alors que seule la voie locale fonctionne, et que l'entrée
+   * échoue à la MÊME porte. Voir `SourceLecture` dans `jarvis-voix.ts`.
+   */
+  readonly sourceParole: SourceLecture | null;
 }
 
 type Abonne = (vue: VueVoix) => void;
@@ -141,10 +153,17 @@ let etat: EtatVoix = "desactive";
 // premier chargement rien n'a été tenté, donc rien ne permet d'affirmer qu'un
 // moteur manque. On ne diagnostique pas une panne qu'on n'a pas constatée.
 let raison: string | null = fr.jarvis.voix.reveil.nonActivee;
+/** Renseignée par l'abonnement à la lecture réelle, jamais par une intention. */
+let sourceParole: SourceLecture | null = null;
 const abonnes = new Set<Abonne>();
 
 function vue(): VueVoix {
-  return { etat, raison, reveilArme: detecteur !== null && etat !== "desactive" };
+  return {
+    etat,
+    raison,
+    reveilArme: detecteur !== null && etat !== "desactive",
+    sourceParole: etat === "parole" ? sourceParole : null,
+  };
 }
 
 function publier(): void {
@@ -264,7 +283,8 @@ export async function armerReveil(r: RappelsVoix): Promise<Result<true>> {
   // s'abonne à ce que le navigateur rapporte vraiment (`onplaying`/`onended`),
   // jamais au fait d'avoir demandé une lecture.
   quitterLecture?.();
-  quitterLecture = abonnerLecture((enLecture) => {
+  quitterLecture = abonnerLecture((enLecture, source) => {
+    sourceParole = source;
     if (enLecture) signalerParole();
     else signalerFinParole();
   });

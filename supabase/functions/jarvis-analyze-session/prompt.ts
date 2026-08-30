@@ -92,6 +92,23 @@ export const PROMPT_VERSION = "analyze_session@2";
  * expose `crypto.subtle` nativement — pas de dépendance supplémentaire pour
  * un seul hash au démarrage.
  */
+/**
+ * L'empreinte SHA-256 d'un texte, en hexadécimal.
+ *
+ * Exportée sous `empreinteTexte` parce que `index.ts` en a besoin pour
+ * l'idempotence de `save_session_analysis` (067) : deux analyses de la MÊME
+ * consultation avec le MÊME prompt et les MÊMES notes ne doivent pas produire
+ * deux versions. En réécrire une seconde copie ferait diverger les deux
+ * calculs le jour où l'un changerait.
+ *
+ * ⚠️ L'empreinte porte sur les notes ; elle ne les contient pas. C'est ce qui
+ * permet de la ranger dans `source_state`, lisible en audit, sans y déposer
+ * une ligne de dossier.
+ */
+export async function empreinteTexte(texte: string): Promise<string> {
+  return await sha256Hex(texte);
+}
+
 async function sha256Hex(texte: string): Promise<string> {
   const octets = new TextEncoder().encode(texte);
   const empreinte = await crypto.subtle.digest("SHA-256", octets);

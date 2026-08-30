@@ -58,6 +58,18 @@ export interface PatientListItem {
   readonly firstName: string;
   readonly lastName: string;
   readonly birthDate: string | null;
+  /**
+   * L'âge en années révolues, CALCULÉ PAR LA PORTE (066) — jamais ici.
+   *
+   * ⚠️ NE PAS LE RECALCULER À PARTIR DE `birthDate`. Un âge dérivé dans le
+   * navigateur dépend de l'horloge du poste : une machine mal réglée vieillit
+   * ou rajeunit une patiente d'un an, en silence, et le jour de l'anniversaire
+   * l'erreur devient systématique. Même motif que `format.ts`.
+   *
+   * `null` quand la date de naissance est inconnue — l'absence se dit, elle ne
+   * s'affiche pas « 0 ans » (règle 8).
+   */
+  readonly age: number | null;
   readonly phone: string;
   readonly isActive: boolean;
 }
@@ -100,6 +112,7 @@ interface SearchRow {
   readonly first_name: string;
   readonly last_name: string;
   readonly birth_date: string | null;
+  readonly age: number | null;
   readonly phone: string;
   readonly is_active: boolean;
   readonly total_count: number;
@@ -124,6 +137,11 @@ function toListItem(row: SearchRow): PatientListItem {
     firstName: row.first_name,
     lastName: row.last_name,
     birthDate: row.birth_date,
+    // `?? null` et non `row.age` seul : tant que 066 n'est pas appliquée, la
+    // porte ne renvoie pas la colonne et la valeur est `undefined`. L'écran
+    // doit alors ne RIEN afficher — pas « undefined ans ». Le dépôt a déjà été
+    // en avance sur la base ; on rend cette avance inoffensive.
+    age: row.age ?? null,
     phone: row.phone,
     isActive: row.is_active,
   };
@@ -544,7 +562,8 @@ export interface ItemResume {
 }
 
 /** Sections fermées — l'ensemble est verrouillé par la porte (053/055). */
-export interface ContenuResumeCas {
+/** La forme historique — cinq sections plates, sans dimension temporelle. */
+export interface ContenuResumeV1 {
   readonly schema: 1;
   readonly enBref: readonly ItemResume[];
   readonly evolutionRecente: readonly ItemResume[];
@@ -553,6 +572,39 @@ export interface ContenuResumeCas {
   readonly traitementsDocumentes: readonly ItemResume[];
   readonly pointsAttention: readonly ItemResume[];
 }
+
+/** L'aperçu compact — composé EN BASE, jamais rédigé par un modèle (068/069). */
+export interface ApercuResume {
+  readonly nom: string;
+  readonly age: number | null;
+  readonly residence: string | null;
+  readonly diagnostics: readonly ItemResume[];
+  readonly traitements: readonly ItemResume[];
+  readonly contexte: readonly ItemResume[];
+}
+
+export interface PeriodeResume {
+  readonly periode: string;
+  readonly entrees: readonly ItemResume[];
+}
+
+/** La forme chronologique (069) — aperçu, parcours par période, état actuel. */
+export interface ContenuResumeV2 {
+  readonly schema: 2;
+  readonly apercu: ApercuResume;
+  readonly chronologie: readonly PeriodeResume[];
+  readonly anterieur: readonly ItemResume[];
+  readonly etatActuel: readonly ItemResume[];
+}
+
+/**
+ * ⚠️ UNION DISCRIMINÉE, ET LES DEUX BRANCHES RESTENT VIVANTES. Les résumés
+ * déjà écrits en schéma 1 ne deviennent pas illisibles le jour du
+ * déploiement : l'écran lit `schema` et rend la forme correspondante. Un
+ * remplacement sec aurait affiché « aucun résumé » sur tous les dossiers
+ * jusqu'à leur régénération — une perte visible, pour rien.
+ */
+export type ContenuResumeCas = ContenuResumeV1 | ContenuResumeV2;
 
 export interface ResumeDernier {
   readonly id: string;
@@ -594,11 +646,41 @@ function versItems(brut: unknown): readonly ItemResume[] {
   return out;
 }
 
-function versContenu(brut: unknown): ContenuResumeCas {
+export function versContenu(brut: unknown): ContenuResumeCas {
   const o =
     typeof brut === "object" && brut !== null
       ? (brut as Record<string, unknown>)
       : {};
+
+  if (o.schema === 2 || o.schema === "2") {
+    const apercuBrut =
+      typeof o.apercu === "object" && o.apercu !== null
+        ? (o.apercu as Record<string, unknown>)
+        : {};
+    return {
+      schema: 2,
+      apercu: {
+        nom: typeof apercuBrut.nom === "string" ? apercuBrut.nom : "",
+        age: typeof apercuBrut.age === "number" ? apercuBrut.age : null,
+        residence: typeof apercuBrut.residence === "string" ? apercuBrut.residence : null,
+        diagnostics: versItems(apercuBrut.diagnostics),
+        traitements: versItems(apercuBrut.traitements),
+        contexte: versItems(apercuBrut.contexte),
+      },
+      chronologie: Array.isArray(o.chronologie)
+        ? o.chronologie.flatMap((p) => {
+            if (typeof p !== "object" || p === null) return [];
+            const periode = (p as { periode?: unknown }).periode;
+            if (typeof periode !== "string" || periode.trim() === "") return [];
+            const entrees = versItems((p as { entrees?: unknown }).entrees);
+            return entrees.length === 0 ? [] : [{ periode, entrees }];
+          })
+        : [],
+      anterieur: versItems(o.anterieur),
+      etatActuel: versItems(o.etat_actuel),
+    };
+  }
+
   return {
     schema: 1,
     enBref: versItems(o.en_bref),

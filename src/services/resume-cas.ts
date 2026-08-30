@@ -14,7 +14,7 @@ import { db } from "./db";
 import { logFieldsFor } from "./errors";
 import { log } from "./log";
 import { err, ok, type Result } from "./result";
-import type { ResumeDernier, TypeSourceResume } from "./patients";
+import { versContenu, type ResumeDernier } from "./patients";
 
 interface ResumeRowBrut {
   readonly id: string;
@@ -38,47 +38,11 @@ function versResumeDernier(row: ResumeRowBrut): ResumeDernier {
     // qu'elle a lus ; le prochain passage par le workspace recalculera
     // `a_jour` en base si quelque chose bouge entre-temps.
     aJour: true,
-    contenu: normaliserContenu(row.content),
-  };
-}
-
-/** Même façonnage tolérant que côté lecture (patients.ts), dupliqué volontairement petit. */
-function normaliserContenu(brut: unknown): ResumeDernier["contenu"] {
-  const o =
-    typeof brut === "object" && brut !== null
-      ? (brut as Record<string, unknown>)
-      : {};
-  const items = (cle: string): ResumeDernier["contenu"]["enBref"] => {
-    const v = o[cle];
-    if (!Array.isArray(v)) return [];
-    return v.flatMap((i) => {
-      if (typeof i !== "object" || i === null) return [];
-      const texte = (i as { texte?: unknown }).texte;
-      if (typeof texte !== "string") return [];
-      const sources = Array.isArray((i as { sources?: unknown }).sources)
-        ? ((i as { sources: ReadonlyArray<unknown> }).sources.flatMap((s) => {
-            if (typeof s !== "object" || s === null) return [];
-            const t = (s as { t?: unknown }).t;
-            const id = (s as { id?: unknown }).id;
-            return typeof t === "string" && typeof id === "string"
-              ? [{ t: t as TypeSourceResume, id }]
-              : [];
-          }))
-        : [];
-      return [{ texte, sources }];
-    });
-  };
-  return {
-    schema: 1,
-    enBref: items("en_bref"),
-    evolutionRecente: items("evolution_recente"),
-    aDiscuter: items("a_discuter"),
-    dernierEtat:
-      typeof o.dernier_etat === "object" && o.dernier_etat !== null
-        ? (o.dernier_etat as Readonly<Record<string, unknown>>)
-        : null,
-    traitementsDocumentes: items("traitements_documentes"),
-    pointsAttention: items("points_attention"),
+    // ⚠️ MÊME NORMALISATION QUE LA LECTURE. Ce fichier en portait une copie
+    // « volontairement petite » ; avec deux schémas à distinguer, deux copies
+    // auraient divergé — et la divergence se serait vue comme un résumé vide
+    // après génération, mais correct après rechargement.
+    contenu: versContenu(row.content),
   };
 }
 

@@ -89,7 +89,13 @@ import {
   type ChampSoap,
   type Consultation,
 } from "@/services/consultations";
-import { analyzeSession, type AnalyseSeance } from "@/services/jarvis";
+import { enchainerApresSeance } from "@/services/apres-seance";
+import {
+  BoutonDictee,
+  useDicteeChamps,
+} from "@/components/consultation/DicteeChamp";
+import { insererDictee } from "@/services/insertion-dictee";
+import { analyzeSession, chargerAnalyse, type AnalyseSeance } from "@/services/jarvis";
 
 /**
  * Délai d'inactivité avant enregistrement d'une saisie longue.
@@ -189,6 +195,30 @@ function amendementsLibelle(n: number): string {
   return `${n} ${n >= 2 ? fr.consultation.amendementPluriel : fr.consultation.amendementSingulier}`;
 }
 
+/**
+ * Les destinations possibles d'une dictée. `brut` = les notes de séance ; les
+ * quatre autres sont les rubriques de la note clinique. Le type EXISTE pour
+ * qu'aucune cinquième destination ne puisse apparaître par inadvertance.
+ */
+type CibleDictee = ChampSoap | "brut";
+
+/**
+ * Repose le curseur après l'insertion, pour que la praticienne continue à
+ * écrire là où le texte vient d'arriver plutôt qu'en fin de champ.
+ *
+ * Le report au tour suivant n'est pas une précaution de style : React réécrit
+ * la valeur du `textarea` au rendu, et poser la sélection avant ce rendu la
+ * ferait perdre. Un échec ici est SANS CONSÉQUENCE sur le texte — seul le
+ * confort du curseur en dépend, jamais le contenu.
+ */
+function replacerCurseur(zone: HTMLTextAreaElement | null, position: number): void {
+  if (zone === null) return;
+  requestAnimationFrame(() => {
+    zone.focus();
+    zone.setSelectionRange(position, position);
+  });
+}
+
 const LIBELLES_SOAP: Readonly<Record<ChampSoap, { titre: string; indication: string }>> = {
   subjective: {
     titre: fr.consultation.subjective,
@@ -248,6 +278,22 @@ export default function PageConsultation(): React.JSX.Element {
   // rechargement de la séance pendant la frappe écraserait ce qui est en train
   // d'être tapé, ce qui est la façon la plus sûre de perdre une note.
   const [brut, setBrut] = useState("");
+
+  // Les zones réelles, pour SAVOIR où insérer une dictée. Jamais pour y
+  // écrire : la valeur passe par `onChange`, donc par l'enregistrement
+  // automatique existant — la voix n'a pas de chemin de sauvegarde à elle.
+  const refBrut = useRef<HTMLTextAreaElement | null>(null);
+  const refSubjective = useRef<HTMLTextAreaElement | null>(null);
+  const refObjective = useRef<HTMLTextAreaElement | null>(null);
+  const refAssessment = useRef<HTMLTextAreaElement | null>(null);
+  const refPlan = useRef<HTMLTextAreaElement | null>(null);
+  const refsSoap: Readonly<Record<ChampSoap, React.RefObject<HTMLTextAreaElement | null>>> = {
+    subjective: refSubjective,
+    objective: refObjective,
+    assessment: refAssessment,
+    plan: refPlan,
+  };
+
   const [soap, setSoap] = useState<Record<ChampSoap, string>>({
     subjective: "",
     objective: "",
@@ -332,6 +378,16 @@ export default function PageConsultation(): React.JSX.Element {
         // champs : la praticienne peut avoir continué à écrire entre-temps.
         if (avecSaisies) {
           setBrut(result.data.rawNotes ?? "");
+          // ⚠️ L'ANALYSE SE RELIT, ELLE NE SE REFAIT PAS. Avant 067 elle ne
+          // vivait que dans cet état : rouvrir la consultation ne montrait
+          // plus rien, et rien ne disait qu'elle avait existé. On la recharge
+          // SANS rappeler le modèle — relancer une génération payante à chaque
+          // ouverture d'écran serait une dépense que personne n'a demandée.
+          // Un échec de relecture n'est pas signalé : ne pas avoir d'analyse
+          // est l'état normal d'une séance en cours.
+          void chargerAnalyse(id).then((relue) => {
+            if (relue.ok && relue.data !== null) setAnalyse(relue.data);
+          });
           const note = result.data.note;
           setSoap({
             subjective: note?.soap.subjective ?? "",
@@ -430,6 +486,54 @@ export default function PageConsultation(): React.JSX.Element {
       });
     }, DELAI_ENREGISTREMENT_MS);
   }
+
+  // ═══ LA DICTÉE — UNE VOIX, CINQ DESTINATIONS NOMMÉES ═══
+  //
+  // Cinq micros, cinq cibles explicites : les notes de séance, et chacune des
+  // quatre rubriques de la note clinique. Le micro posé à côté de « Subjectif »
+  // écrit dans Subjectif — sa POSITION est son contrat.
+  //
+  // ⚠️ DEUX USAGES DISTINCTS, JAMAIS FONDUS L'UN DANS L'AUTRE.
+  //   · Notes de séance  = le fil de l'entretien, brouillon de travail.
+  //   · Note clinique    = ce que la praticienne documente et signera.
+  // Rien ne migre automatiquement de l'un vers l'autre : ce serait décider à sa
+  // place de ce qui entre au dossier.
+  //
+  // ⚠️ AUCUN CLASSEMENT AUTOMATIQUE. Le texte dicté n'est ni reformulé, ni
+  // ponctué, ni redistribué vers « la bonne rubrique » par un modèle. Ce qui a
+  // été dit arrive tel quel, là où elle l'a demandé, et lui appartient.
+  //
+  // Le micro passe par le même courtier partagé que le mot de réveil
+  // (`micro-partage.ts`) : pas de second `getUserMedia`, donc pas de permission
+  // redemandée en pleine consultation.
+  const dictee = useDicteeChamps<CibleDictee>(
+    (cible, texte) => {
+      if (cible === "brut") {
+        const zone = refBrut.current;
+        const { texte: suivant, curseur } = insererDictee(
+          brut,
+          texte,
+          zone?.selectionStart ?? null,
+        );
+        enregistrerBrut(suivant);
+        replacerCurseur(zone, curseur);
+        return;
+      }
+      const zone = refsSoap[cible].current;
+      const { texte: suivant, curseur } = insererDictee(
+        soap[cible],
+        texte,
+        zone?.selectionStart ?? null,
+      );
+      enregistrerSoap(cible, suivant);
+      replacerCurseur(zone, curseur);
+    },
+    // ⚠️ PAS `signalerErreur` ICI. Celui-là RELIT la séance, ce qui est juste
+    // quand la BASE a refusé une écriture — mais une permission micro refusée
+    // ne dit rien de l'état du dossier, et recharger l'écran à ce moment ferait
+    // clignoter une note en cours de frappe pour rien.
+    setMessageErreur,
+  );
 
   function enregistrerSoap(champ: ChampSoap, texte: string): void {
     const suivant = { ...soap, [champ]: texte };
@@ -560,6 +664,36 @@ export default function PageConsultation(): React.JSX.Element {
         }
         setConfirmation(fr.feedback.seanceTerminee);
         charger(false);
+
+        // ═══ L'ENCHAÎNEMENT D'APRÈS-SÉANCE ═══
+        //
+        // ⚠️ APRÈS, ET JAMAIS PENDANT. La clôture a DÉJÀ rendu son verdict :
+        // rien de ce qui suit ne peut la défaire ni la faire paraître en
+        // échec. `void` est délibéré — un `await` ici bloquerait l'écran sur
+        // un appel de modèle, et une panne de fournisseur ressemblerait à une
+        // consultation qui refuse de se fermer.
+        //
+        // Le message de confirmation s'enrichit au fil des étapes ; en cas
+        // d'échec il dit CE QUI a échoué et rappelle que la séance, elle, est
+        // enregistrée. Voir `src/services/apres-seance.ts`.
+        void enchainerApresSeance(id, seance?.patientId ?? null, (suivi) => {
+          if (suivi.analyse === "en-cours") {
+            setConfirmation(fr.feedback.apresSeance.analyseEnCours);
+          } else if (suivi.analyse === "echouee") {
+            setConfirmation(fr.feedback.apresSeance.analyseEchouee);
+          } else if (suivi.resume === "en-cours") {
+            setConfirmation(fr.feedback.apresSeance.resumeEnCours);
+          } else if (suivi.resume === "echouee") {
+            setConfirmation(fr.feedback.apresSeance.resumeEchoue);
+          } else if (suivi.resume === "faite") {
+            setConfirmation(fr.feedback.apresSeance.terminee);
+            // L'analyse vient d'être écrite : on la remonte à l'écran plutôt
+            // que d'obliger à rouvrir la consultation pour la voir.
+            void chargerAnalyse(id).then((relue) => {
+              if (relue.ok && relue.data !== null) setAnalyse(relue.data);
+            });
+          }
+        });
       });
     });
   }
@@ -699,10 +833,21 @@ export default function PageConsultation(): React.JSX.Element {
             <SectionPliable
               titre={fr.consultation.notesBrutes}
               action={
-                <IndicateurEnregistrement
-                  etat={etatBrut}
-                  {...(heureBrut === undefined ? {} : { horodatage: heureBrut })}
-                />
+                <span className="flex items-center gap-3">
+                  {/* La dictée n'apparaît QUE si ce navigateur sait enregistrer,
+                      et QUE si la séance est encore ouverte. Un bouton présent
+                      mais inerte ferait croire à une panne. */}
+                  <BoutonDictee
+                    champ="brut"
+                    libelleChamp={fr.consultation.notesBrutes}
+                    dictee={dictee}
+                    disabled={seanceClose}
+                  />
+                  <IndicateurEnregistrement
+                    etat={etatBrut}
+                    {...(heureBrut === undefined ? {} : { horodatage: heureBrut })}
+                  />
+                </span>
               }
             >
               <div className="flex flex-col gap-3">
@@ -710,13 +855,16 @@ export default function PageConsultation(): React.JSX.Element {
                   libelle={fr.consultation.notesBrutes}
                   valeur={brut}
                   onChange={enregistrerBrut}
+                  zoneRef={refBrut}
                   lignes={8}
                   clinique
                   disabled={seanceClose}
                   indication={
                     seanceClose
                       ? fr.consultation.notesBrutesFigees
-                      : fr.consultation.notesBrutesIndication
+                      : dictee.cible === "brut"
+                        ? fr.consultation.dicterIndication
+                        : fr.consultation.notesBrutesIndication
                   }
                 />
                 {etatBrut === "echec" ? (
@@ -758,15 +906,32 @@ export default function PageConsultation(): React.JSX.Element {
                 ) : null}
 
                 {noteModifiable ? (
+                  /* ⚠️ LE MICRO EST SUR LA LIGNE DU LIBELLÉ, ET C'EST SON
+                     CONTRAT. Celui posé à côté de « Subjectif » écrit dans
+                     Subjectif — rien à lire, rien à choisir, aucun mode global
+                     à se rappeler. Une barre d'outils commune aurait rendu la
+                     cible ambiguë au moment précis où elle doit être évidente. */
                   CHAMPS_SOAP.map((champ) => (
                     <ChampZoneTexte
                       key={champ}
                       libelle={LIBELLES_SOAP[champ].titre}
-                      indication={LIBELLES_SOAP[champ].indication}
+                      indication={
+                        dictee.cible === champ
+                          ? fr.consultation.dicterChampIndication
+                          : LIBELLES_SOAP[champ].indication
+                      }
                       valeur={soap[champ]}
                       onChange={(v) => enregistrerSoap(champ, v)}
+                      zoneRef={refsSoap[champ]}
                       lignes={5}
                       clinique
+                      action={
+                        <BoutonDictee
+                          champ={champ}
+                          libelleChamp={LIBELLES_SOAP[champ].titre}
+                          dictee={dictee}
+                        />
+                      }
                     />
                   ))
                 ) : (

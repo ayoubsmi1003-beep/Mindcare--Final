@@ -1,0 +1,20 @@
+{
+  // Les tests unitaires, et EUX SEULS, type-vérifient le code Deno de
+  // `supabase/functions/`. Le tsconfig principal l'exclut délibérément (voir
+  // son commentaire : `Deno` et les spécificateurs `npm:` n'existent pas sous
+  // `moduleResolution: "bundler"`), et cette décision n'est pas remise en
+  // cause ici. Mais un module PUR importé par un test — `resume-cas.ts`,
+  // `contrat-workspace.ts` — n'a ni `Deno` ni `npm:` : rien n'empêche de le
+  // vérifier, et tout justifie de le faire, puisque c'est précisément là que
+  // vivait le décalage camelCase/snake_case que personne ne voyait.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // Deno impose l'extension `.ts` dans les imports ; TypeScript l'autorise
+    // sous ce drapeau tant qu'il n'émet rien. `pnpm test` n'émet rien.
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "types": ["node"]
+  },
+  "include": ["tests/**/*.ts", "supabase/functions/_shared/resume-cas.ts", "supabase/functions/_shared/contrat-workspace.ts", "supabase/functions/_shared/resume-chronologie.ts"],
+  "exclude": ["node_modules"]
+}

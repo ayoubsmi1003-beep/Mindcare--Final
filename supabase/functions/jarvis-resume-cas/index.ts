@@ -19,10 +19,18 @@ import { assertSafe, BoundaryViolation, pseudonymize } from "../_shared/pseudony
 import { enTetesCors, reponsePrealable } from "../_shared/cors.ts";
 import { llm } from "../_shared/external-call.ts";
 import {
-  construireCandidats,
-  validerContenuResume,
-  type EspacePourResume,
-} from "../_shared/resume-cas.ts";
+  adapterEspace,
+  analyserEspacePorte,
+  analysesAnterieures,
+  etatSource,
+  identitesDuDossier,
+} from "../_shared/contrat-workspace.ts";
+import { construireCandidats } from "../_shared/resume-cas.ts";
+import {
+  assemblerSchema2,
+  construireApercu,
+  idsAutorisesDuContexte,
+} from "../_shared/resume-chronologie.ts";
 import { getPromptHash, PROMPT_VERSION, SYSTEM_PROMPT_RESUME } from "./prompt.ts";
 
 interface CorpsRequete {
@@ -100,45 +108,134 @@ Deno.serve(async (req) => {
   // `espace` indéfini et refusait chaque dossier avant tout appel LLM.
   // Tolérance tableau conservée : elle ne peut rien ouvrir de plus.
   const chargeWs = wsRows as unknown;
+  // ⚠️ TYPÉ COMME LA PORTE L'ÉMET (snake_case), et surtout PAS comme la forme
+  // interne : c'est ce faux typage qui rendait le décalage invisible au
+  // compilateur. La traduction est explicite, plus bas.
   const espace = (Array.isArray(chargeWs) ? chargeWs[0] : chargeWs) as
-    | (Record<string, unknown> & EspacePourResume)
+    | Record<string, unknown>
     | null
     | undefined;
 
   // Introuvable OU hors périmètre OU rôle sans clinique : même réponse.
   if (
+    espace === null ||
     espace === undefined ||
-    espace.clinique === null ||
-    typeof espace.identite !== "object"
+    espace["clinique"] === null ||
+    typeof espace["identite"] !== "object"
   ) {
     return reponseEchec(req, "regle-metier", "Ce dossier n'ouvre pas de résumé.");
   }
 
-  // ── Candidats déterministes (≤5) + empreinte des faits couverts. ──
-  const { candidats, total } = construireCandidats(espace);
+  // ── LA FRONTIÈRE, EN UN SEUL POINT (voir `_shared/contrat-workspace.ts`). ──
+  // La porte émet du snake_case ; tout ce qui suit consomme la forme interne.
+  // Avant cette adaptation, les trois lectures ci-dessous se trompaient de
+  // convention EN SILENCE : aucun signal d'échelle ni de prescription, un
+  // « aucun rendez-vous à venir » FAUX, des compteurs à null qui rendaient la
+  // péremption incalculable, et une liste d'identités vide qui laissait
+  // `assertSafe()` chercher dans le vide.
+  const forme = analyserEspacePorte(espace);
+  if (!forme.success) {
+    // On ne devine pas une charge dont la forme a changé : on refuse, et le
+    // journal porte les CHEMINS fautifs — jamais les valeurs (règle 1).
+    console.error(JSON.stringify({
+      event: "resume.contratWorkspace",
+      chemins: forme.chemins,
+    }));
+    return reponseEchec(req, "indisponible", "Résumé indisponible.");
+  }
 
-  const sourceState = {
-    diagnostics: Array.isArray(espace.clinique.diagnostics)
-      ? espace.clinique.diagnostics.length
-      : 0,
-    echelles: Array.isArray(espace.clinique.echelles)
-      ? espace.clinique.echelles.length
-      : 0,
-    consultations: espace.clinique.nombreConsultations ?? null,
-    prescriptions: espace.traitements?.nombrePrescriptions ?? null,
-    dernierEvenement:
-      espace.clinique.derniereConsultation?.startedAt ??
-      espace.agenda?.dernierRendezVous?.startsAt ??
-      null,
-  };
+  // ⚠️ UNE SEULE TRADUCTION, RÉUTILISÉE PAR TOUS LES CONSOMMATEURS INTERNES.
+  // Adapter à un seul point d'appel et laisser l'autre lire la charge brute a
+  // produit un 500 en production : `validerContenuResume` teste
+  // `derniereConsultation !== null`, or sur la charge de la porte ce champ vaut
+  // `undefined` — le test passe, et le `.id` qui suit lève. Le compilateur ne
+  // pouvait rien voir : `supabase/functions/` est hors de tout tsconfig.
+  const espaceInterne = adapterEspace(espace);
+
+  // ── Candidats déterministes (≤5) + empreinte des faits couverts. ──
+  const { candidats, total } = construireCandidats(espaceInterne);
+
+  const sourceState = etatSource(espace);
+
+  // ═══ LA MÉMOIRE LONGITUDINALE (067) ═══
+  //
+  // C'est ici que la chaîne se ferme : consultation → analyse persistée →
+  // résumé du cas. Jusqu'à la migration 067, l'analyse de séance mourait dans
+  // l'état de l'écran et n'avait AUCUN chemin vers le résumé — les deux
+  // fonctionnalités s'ignoraient.
+  //
+  // ⚠️ ON LIT DES RÉSUMÉS DE SÉANCE, JAMAIS 36 NOTES BRUTES. Chaque analyse a
+  // déjà condensé sa séance au moment où elle était fraîche ; le coût du
+  // contexte est donc borné par le nombre d'analyses relues, pas par
+  // l'ancienneté du dossier. C'est ce qui permet à un dossier de trois ans de
+  // tenir dans le même budget qu'un dossier de trois mois.
+  //
+  // Un échec n'interrompt rien : le résumé se génère alors sur les seules
+  // données structurées, comme avant. Une mémoire absente appauvrit la
+  // synthèse ; elle ne doit pas la supprimer.
+  const { data: analysesRows } = await client.rpc("get_recent_session_analyses", {
+    p_patient_id: corps.patientId,
+    p_limit: 5,
+  });
+  const analyses = analysesAnterieures(analysesRows);
+
+  // Les séances analysées sont citables PAR LEUR CONSULTATION — un domaine que
+  // la porte 053 valide déjà. La praticienne peut donc remonter du résumé à la
+  // séance d'origine, sans qu'aucune migration n'ait été nécessaire.
+  const idsAnalyses = new Set(analyses.map((a) => a.consultationId));
+
+  // ═══ LE CONTEXTE LONGITUDINAL STRATIFIÉ (068) ═══
+  //
+  // `build_case_context` rend un socle déterministe, les 6 dernières séances
+  // détaillées, et TOUT le reste agrégé par année. C'est ce qui permet à un
+  // dossier de 50 séances de tenir dans 11 Ko (mesuré :
+  // `scripts/checkpoint-longitudinal.sql`) au lieu de plus de 100 Ko de notes
+  // brutes — et le coût ne croît plus avec l'ancienneté du dossier.
+  const { data: contexteRows, error: erreurContexte } = await client.rpc("build_case_context", {
+    p_id: corps.patientId,
+  });
+  if (erreurContexte !== null) {
+    return reponseEchec(req, "indisponible", "Résumé indisponible.");
+  }
+  const contexte = (Array.isArray(contexteRows) ? contexteRows[0] : contexteRows) as
+    | Record<string, unknown>
+    | null;
+  const socle = contexte?.["socle"] ?? null;
+
+  // ⚠️ L'APERÇU EST DÉTERMINISTE — voir `resume-chronologie.ts`. Nom, âge,
+  // résidence, diagnostics et posologies sont RECOPIÉS du socle SQL. Les faire
+  // rédiger par le modèle aurait été plus court à écrire et indéfendable : une
+  // posologie approximative en tête d'un dossier de psychiatrie n'est pas une
+  // imprécision, c'est une donnée fictive (règle 8).
+  const apercu = construireApercu(socle);
+  if (apercu === null) {
+    return reponseEchec(req, "regle-metier", "Ce dossier n'ouvre pas de résumé.");
+  }
+
+  // Les identifiants citables viennent de la PORTE, pas d'une reconstitution
+  // côté passerelle : la base revalidera exactement la même liste (069).
+  const idsCitables = idsAutorisesDuContexte(contexte);
+  for (const id of idsAnalyses) idsCitables.add(id);
 
   // ── Charge SANS identité patient : zéro Tier-0 chez le fournisseur. ──
   const charge = {
-    faits: {
-      clinique: espace.clinique,
-      traitements: espace.traitements,
-      agenda: espace.agenda,
-    },
+    // Le socle part AUSSI au modèle : il ne le rédige pas, mais il doit le
+    // connaître pour ne pas répéter dans le récit ce que l'aperçu porte déjà.
+    socle,
+    // Les 6 dernières séances, extraits tronqués EN BASE, avec leur analyse.
+    seances_recentes: contexte?.["recentes"] ?? [],
+    // Les années antérieures, agrégées — une ligne par année, pas 44 séances.
+    annees_anterieures: contexte?.["anterieures"] ?? [],
+    // Les faits déjà condensés séance par séance (067).
+    seances_analysees: analyses.map((a) => ({
+      consultation_id: a.consultationId,
+      date: a.date,
+      evaluation: a.assessment,
+      plan: a.plan,
+      evolution: a.evolution,
+    })),
+    // Signaux DÉTERMINISTES conservés du schéma 1 : ils ne sont pas rédigés
+    // par le modèle et valent d'être posés à l'écran tels quels.
     signaux_possibles: candidats.map((c) => ({
       cle: c.cle,
       libelle: c.libelle,
@@ -146,16 +243,16 @@ Deno.serve(async (req) => {
     })),
     consignes: {
       total_signaux: total,
-      plafond_signaux: Math.min(candidats.length, 5),
     },
   };
 
-  const identites = [
-    (espace.identite as { firstName?: unknown }).firstName,
-    (espace.identite as { lastName?: unknown }).lastName,
-    (espace.identite as { recordNumber?: unknown }).recordNumber,
-  ]
-    .filter((v): v is string => typeof v === "string" && v.trim() !== "");
+  // ⚠️ MÊME FRONTIÈRE, ET C'EST ICI QU'ELLE COMPTE LE PLUS. Cette liste était
+  // TOUJOURS VIDE (`firstName` contre `first_name`) : `pseudonymize()` n'avait
+  // rien à masquer et `assertSafe()` rien à chercher. Le filet de la règle 1
+  // était tendu sur du vide et déclarait « conforme » à chaque appel.
+  // Les identités viennent du SOCLE, qui porte les mêmes clés snake_case que
+  // le workspace. Voir le motif complet dans `contrat-workspace.ts`.
+  const identites = identitesDuDossier({ identite: (socle as Record<string, unknown> | null)?.["identite"] });
 
   const blocDonnees = [
     "<<<DONNEES_DOSSIER>>>",
@@ -206,7 +303,7 @@ Deno.serve(async (req) => {
   } catch {
     brut = null;
   }
-  let contenu = validerContenuResume(brut, espace, candidats);
+  let contenu = assemblerSchema2(apercu, brut, idsCitables);
 
   if (contenu === null) {
     const reformulation = await llm({
@@ -231,7 +328,7 @@ Deno.serve(async (req) => {
     } catch {
       brut = null;
     }
-    contenu = validerContenuResume(brut, espace, candidats);
+    contenu = assemblerSchema2(apercu, brut, idsCitables);
   }
 
   if (contenu === null) {
@@ -251,6 +348,18 @@ Deno.serve(async (req) => {
     },
   );
   if (erreurSauvegarde !== null) {
+    // ⚠️ LA PORTE REFUSE, ET IL FAUT SAVOIR POURQUOI. Sans cette trace, un
+    // refus légitime (le modèle a cité une référence inexistante — la double
+    // barrière fait son travail) est indiscernable d'un défaut de forme dans
+    // notre propre charge. Les deux rendaient le même écran, et c'est ce qui a
+    // fait chercher au mauvais endroit.
+    // Le message des `RAISE` de 053/055 est écrit par NOUS et ne contient
+    // aucune donnée patient — que des noms de sections et de domaines.
+    console.error(JSON.stringify({
+      event: "resume.sauvegardeRefusee",
+      code: erreurSauvegarde.code ?? null,
+      message: erreurSauvegarde.message,
+    }));
     return reponseEchec(req, "regle-metier", "Le résumé a été refusé par une règle du dossier.");
   }
   const resume = (sauvegardeRows as ReadonlyArray<unknown> | null)?.[0];

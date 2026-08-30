@@ -40,6 +40,12 @@
     // couvrent ce code, au même titre que les portes 026 sans Docker
     // joignable — un blocage déjà connu, pas un nouveau. La relecture
     // manuelle en tient lieu jusqu'à ce que `deno check` soit disponible.
-    "supabase/functions"
+    "supabase/functions",
+    // Les tests unitaires ont leur propre configuration (`tsconfig.test.json`)
+    // parce qu'eux SEULS importent le code Deno de `supabase/functions/`, avec
+    // l'extension `.ts` que Deno impose. Les vérifier ici obligerait à poser
+    // `allowImportingTsExtensions` sur toute l'application, pour le besoin de
+    // deux fichiers. `pnpm typecheck` lance les deux configurations.
+    "tests"
   ]
 }

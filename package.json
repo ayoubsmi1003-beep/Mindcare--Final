@@ -8,8 +8,10 @@
     "build": "next build",
     "start": "node scripts/garde-origine.mjs && next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit",
-    "postinstall": "node scripts/sync-wakeword-runtime.mjs"
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.test.json",
+    "postinstall": "node scripts/sync-wakeword-runtime.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.0",
@@ -35,6 +37,7 @@
     "postcss": "^8.4.49",
     "supabase": "^2.113.0",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "vitest": "^3.2.7"
   }
 }

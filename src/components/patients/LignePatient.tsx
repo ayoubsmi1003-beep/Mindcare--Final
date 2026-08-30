@@ -30,6 +30,13 @@ export function LignePatient({
   readonly patient: PatientListItem;
 }): React.JSX.Element {
   const naissance = dateCivile(patient.birthDate);
+  // L'âge ARRIVE CALCULÉ par la porte (066) — voir `PatientListItem.age` et
+  // l'en-tête de `format.ts`. Il ne se dérive pas de `birthDate` ici : la
+  // référence de temps serait l'horloge du poste, pas celle du serveur.
+  // `null` tant que 066 n'est pas appliquée : la ligne s'affiche sans âge,
+  // exactement comme avant, plutôt que de montrer une valeur inventée.
+  const age =
+    patient.age === null ? null : `${String(patient.age)} ${fr.patients.ageAnnees}`;
 
   return (
     <li className="list-none border-b border-rule last:border-b-0">
@@ -40,7 +47,13 @@ export function LignePatient({
             dit « cette ligne s'ouvre » sans qu'aucun mot ne le dise. La
             pastille d'identité reste la marque — un patient n'est pas un
             statut, il n'a pas de couleur propre (voir Avatar). */
-        className="group flex min-h-target-lg items-center gap-4 px-3 py-3 no-underline transition-colors duration-quick ease-out hover:bg-sunken"
+        /* V8 — LA LIGNE RESPIRE, ET LE SURVOL EST UN MATÉRIAU.
+           `min-h-rang` (52 px) au lieu de 44 : un tableau dense n'est pas un
+           tableau serré, c'est un tableau dont chaque ligne se vise du doigt.
+           Le fond de survol passe du gris `sunken` au matériau menthe le plus
+           clair — la même famille que le reste du produit, au lieu du gris
+           par défaut d'un composant de framework. */
+        className="group flex min-h-rang items-center gap-4 rounded-xl px-3 py-3 no-underline transition duration-quick ease-out hover:bg-tuile-menthe"
       >
         <Avatar prenom={patient.firstName} nom={patient.lastName} taille="normale" />
 
@@ -49,7 +62,15 @@ export function LignePatient({
             {patient.lastName} {patient.firstName}
           </span>
           <span className="font-ui text-label font-medium tracking-label text-ink-500">
-            <span className="rounded bg-sunken px-2 py-1 font-num text-label font-semibold tabular-nums">{patient.recordNumber}</span>
+            <span className="rounded-md bg-sunken px-2 py-1 font-num text-eyebrow font-semibold tabular-nums text-ink-700 group-hover:bg-card">{patient.recordNumber}</span>
+            {age === null ? null : (
+              <>
+                {" · "}
+                {/* L'âge avant la date : en lecture clinique c'est lui qu'on
+                    cherche, la date de naissance ne sert qu'à l'identitovigilance. */}
+                <span className="tabular-nums text-ink-700">{age}</span>
+              </>
+            )}
             {naissance === null ? null : (
               <>
                 {" · "}
@@ -82,11 +103,11 @@ export function LignePatient({
 
 export function EnTeteAnnuaire(): React.JSX.Element {
   return (
-    <div className="flex items-center gap-4 border-b border-rule bg-sunken px-4 pb-2 pt-3">
-      <span className="grow font-ui text-label font-medium tracking-label text-ink-500">
+    <div className="flex items-center gap-4 rounded-t-2xl border-b border-rule bg-tete-tableau px-4 pb-3 pt-3.5">
+      <span className="grow font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-ink-500">
         {fr.patients.titre}
       </span>
-      <span className="hidden shrink-0 font-ui text-label font-medium tracking-label text-ink-500 tablet:inline">
+      <span className="hidden shrink-0 font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-ink-500 tablet:inline">
         {fr.patients.telephone}
       </span>
     </div>

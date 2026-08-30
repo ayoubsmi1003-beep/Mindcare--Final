@@ -33,9 +33,29 @@ export const MAX_SIGNAUX_AFFICHES = 5;
 export const MAX_PHRASES_EN_BREF = 4;
 export const MAX_TEXTE_ITEM = 320;
 
+/**
+ * Les six domaines citables, RECOPIÉS DE LA PORTE (053, `v_domaines`).
+ *
+ * ⚠️ CETTE LISTE DOIT RESTER IDENTIQUE À CELLE DE LA MIGRATION. La base est
+ * l'autorité : elle refuse tout le résumé sur un domaine inconnu. Ici, on
+ * refuse seulement LA CITATION — un item perd sa source, le résumé survit.
+ */
+export const DOMAINES_SOURCE = [
+  "diagnostic",
+  "echelle",
+  "prescription",
+  "consultation",
+  "rdv",
+  "document",
+] as const;
+
 export interface SourceRef {
-  readonly t: "diagnostic" | "echelle" | "prescription" | "consultation" | "rdv";
+  readonly t: (typeof DOMAINES_SOURCE)[number];
   readonly id: string;
+}
+
+function estDomaineConnu(t: string): t is SourceRef["t"] {
+  return (DOMAINES_SOURCE as readonly string[]).includes(t);
 }
 
 /** Forme minimale du workspace consommée ici — le reste n'est jamais lu. */
@@ -173,8 +193,15 @@ function nettoyerItem(item: ItemBrut, idsAutorises: ReadonlySet<string>): ItemRe
       const t = (s as { t?: unknown }).t;
       const id = (s as { id?: unknown }).id;
       if (typeof t !== "string" || typeof id !== "string") continue;
+      // ⚠️ LE DOMAINE SE VÉRIFIE, IL NE SE CASTE PAS. `t as SourceRef["t"]`
+      // laissait passer n'importe quelle chaîne inventée par le modèle ; la
+      // porte refusait alors le résumé ENTIER (« Type de source inconnu. »,
+      // P0001) et la praticienne n'obtenait rien du tout. Mesuré en production
+      // le 2026-08-30. Écarter la citation fautive coûte une source ; refuser
+      // le résumé coûte le résumé.
+      if (!estDomaineConnu(t)) continue;
       if (!idsAutorises.has(id)) continue; // citation sans fait réel → retirée
-      sources.push({ t: t as SourceRef["t"], id });
+      sources.push({ t, id });
     }
   }
   return { texte, sources };
@@ -210,23 +237,49 @@ export function validerContenuResume(
   brut: unknown,
   espace: EspacePourResume,
   candidats: readonly CandidatSignal[],
+  /**
+   * Identifiants citables EN PLUS de ceux du workspace.
+   *
+   * Sert la mémoire longitudinale (067) : une analyse de séance est rattachée à
+   * une consultation, et c'est LA CONSULTATION qui est citée — un domaine que
+   * la porte 053 valide déjà. Aucune migration n'est nécessaire pour ancrer un
+   * fait venu d'une analyse, et la praticienne peut remonter à la séance
+   * source depuis le résumé.
+   */
+  idsSupplementaires: ReadonlySet<string> = new Set(),
 ): ContenuValide | null {
   if (typeof brut !== "object" || brut === null) return null;
   const o = brut as Record<string, unknown>;
 
   // L'ensemble des faits citables = tout identifiant présent dans le workspace.
+  // ⚠️ LECTURES DÉFENSIVES — CETTE FONCTION EST UN FILTRE DE SÉCURITÉ.
+  // Elle décide quels identifiants un résumé a le droit de citer ; elle doit
+  // donc échouer VIDE, jamais lever. Un `!== null` sur un champ `undefined`
+  // laissait passer, puis le `.id` levait : 500 en production, résumé perdu,
+  // et une porte de grounding hors service. `!= null` couvre les deux absences,
+  // et les tableaux sont vérifiés avant d'être parcourus. Un identifiant
+  // manquant restreint les citations — le défaut sûr.
   const idsAutorises = new Set<string>();
-  if (espace.clinique !== null) {
-    for (const d of espace.clinique.diagnostics) idsAutorises.add(d.id);
-    for (const e of espace.clinique.echelles) {
-      if (typeof e.id === "string") idsAutorises.add(e.id);
+  const clinique = espace.clinique;
+  if (clinique != null) {
+    if (Array.isArray(clinique.diagnostics)) {
+      for (const d of clinique.diagnostics) {
+        if (typeof d?.id === "string") idsAutorises.add(d.id);
+      }
     }
-    if (espace.clinique.derniereConsultation !== null) {
-      idsAutorises.add(espace.clinique.derniereConsultation.id);
+    if (Array.isArray(clinique.echelles)) {
+      for (const e of clinique.echelles) {
+        if (typeof e?.id === "string") idsAutorises.add(e.id);
+      }
+    }
+    const derniereConsultation = clinique.derniereConsultation;
+    if (derniereConsultation != null && typeof derniereConsultation.id === "string") {
+      idsAutorises.add(derniereConsultation.id);
     }
   }
   const px = espace.traitements?.dernierePrescription ?? null;
-  if (px !== null) idsAutorises.add(px.id);
+  if (px != null && typeof px.id === "string") idsAutorises.add(px.id);
+  for (const id of idsSupplementaires) idsAutorises.add(id);
 
   const clesSignaux = new Set(candidats.map((c) => c.cle));
 
@@ -266,10 +319,11 @@ export function validerContenuResume(
     .map((i) => nettoyerItem(i, idsAutorises))
     .filter((i): i is ItemResumeNet => i !== null)
     .slice(0, MAX_ITEMS_PAR_SECTION);
-  if (enBref.length === 1) {
-    enBref = [
-      { ...enBref[0], texte: couperPhrases(enBref[0].texte, MAX_PHRASES_EN_BREF) },
-    ];
+  // `noUncheckedIndexedAccess` ne déduit pas `[0]` d'un `length === 1` : on
+  // lit l'élément, puis on teste CE QU'ON A LU. Même sûreté, sans assertion.
+  const seulEnBref = enBref.length === 1 ? enBref[0] : undefined;
+  if (seulEnBref !== undefined) {
+    enBref = [{ ...seulEnBref, texte: couperPhrases(seulEnBref.texte, MAX_PHRASES_EN_BREF) }];
   }
 
   const contenu: ContenuValide = {

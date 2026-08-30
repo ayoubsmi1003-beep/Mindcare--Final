@@ -53,6 +53,7 @@ import { PanneauTraitements } from "@/components/patients/PanneauTraitements";
 import {
   BandeauHorsLigne,
   BlocErreur,
+  Bouton,
   EtatVide,
   Onglets,
   PanneauOnglet,
@@ -94,6 +95,8 @@ export default function PageFichePatient(): React.JSX.Element {
   const [messageErreur, setMessageErreur] = useState<string | undefined>(undefined);
   const [horsLigne, setHorsLigne] = useState(false);
   const [onglet, setOnglet] = useState<CleOnglet>("vueDEnsemble");
+  /** L'historique se déplie dans le fil, sur geste — jamais à l'ouverture. */
+  const [historiqueOuvert, setHistoriqueOuvert] = useState(false);
 
   const [resumeEtat, setResumeEtat] = useState<ResumeEtat>({
     resume: null,
@@ -346,29 +349,56 @@ export default function PageFichePatient(): React.JSX.Element {
               demandée (règle 6). */}
           <PanneauOnglet cle={actif}>
             {actif === "vueDEnsemble" ? (
-              <div className="grid grid-cols-fiche items-start gap-6">
-                <div className="flex min-w-0 flex-col gap-6">
-                  <CarteResumeCas
-                    etat={{
-                      ...resumeEtat,
-                      resume:
-                        resumeEtat.resume ??
-                        espace.resume ?? 
-                        null,
-                    }}
-                    onEtatChange={setResumeEtat}
-                    onGenerer={generer}
-                    onOuvrirSource={ouvrirSource}
-                  />
-                  {montrerPointSituation ? <PointDeSituation espace={espace} /> : null}
-                  <SectionDepuisDerniere espace={espace} />
-                  <ListeSignaux espace={{ ...espace, resume: resumeEtat.resume ?? espace.resume }} />
-                </div>
+              /* ⚠️ UN SEUL FIL DE LECTURE, ET C'EST TOUT L'ENJEU DE L'ÉCRAN.
+                 La colonne de droite mettait l'identité et la prochaine
+                 échéance EN CONCURRENCE avec l'histoire de la patiente : deux
+                 points d'entrée, deux rythmes, et l'œil qui recommence. Ce qui
+                 y vivait n'a pas disparu — l'identité est déjà dans l'en-tête
+                 collant, qui la suit pendant tout le défilement, et l'échéance
+                 a rejoint le fil, à sa place chronologique. Il reste une
+                 lecture : qui, où en est-on, et ce qui s'est passé. */
+              <div className="mx-auto flex w-full max-w-lecture min-w-0 flex-col gap-8">
+                <CarteResumeCas
+                  etat={{
+                    ...resumeEtat,
+                    resume: resumeEtat.resume ?? espace.resume ?? null,
+                  }}
+                  onEtatChange={setResumeEtat}
+                  onGenerer={generer}
+                  onOuvrirSource={ouvrirSource}
+                />
+                {montrerPointSituation ? <PointDeSituation espace={espace} /> : null}
+                <SectionDepuisDerniere espace={espace} />
+                <ListeSignaux espace={{ ...espace, resume: resumeEtat.resume ?? espace.resume }} />
+                <CarteProchaineEcheance agenda={espace.agenda} documents={espace.documents} />
 
-                <div className="flex min-w-0 flex-col gap-6">
-                  <CarteIdentite espace={espace} />
-                  <CarteProchaineEcheance agenda={espace.agenda} documents={espace.documents} />
-                </div>
+                {/* L'ADMINISTRATIF EN BAS, ET C'EST UN CHOIX DE HIÉRARCHIE, PAS
+                    UN OUBLI. Téléphone, adresse, pièce d'identité : on en a
+                    besoin quelques fois par mois, et cette grille de dix champs
+                    occupait la colonne de droite en permanence, à hauteur d'œil,
+                    en concurrence avec l'histoire de la patiente. Ce qui sert à
+                    chaque ouverture — nom, âge, sexe, numéro de dossier — est
+                    dans l'en-tête collant, visible pendant tout le défilement. */}
+                <CarteIdentite espace={espace} />
+
+                {/* L'HISTORIQUE FERME LE FIL, ET IL EST L'ÉPINE DORSALE :
+                    chaque consultation s'y ouvre d'un clic. Il ne se charge
+                    QUE sur demande — voir `fr.patients.actions.afficherHistorique`
+                    et l'en-tête de `ChronologiePatient`. */}
+                <section className="flex flex-col gap-4 border-t border-rule pt-6">
+                  <h2 className="font-ui text-heading font-semibold tracking-heading text-ink-900">
+                    {fr.patients.onglets.chronologie}
+                  </h2>
+                  {historiqueOuvert ? (
+                    <ChronologiePatient patientId={espace.identite.id} />
+                  ) : (
+                    <span>
+                      <Bouton rang="secondaire" onClick={() => setHistoriqueOuvert(true)}>
+                        {fr.patients.actions.afficherHistorique}
+                      </Bouton>
+                    </span>
+                  )}
+                </section>
               </div>
             ) : null}
 

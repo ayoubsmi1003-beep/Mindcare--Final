@@ -17,7 +17,7 @@ import { z } from "npm:zod@3";
 import { assertSafe, BoundaryViolation, pseudonymize, rehydrate } from "../_shared/pseudonymize.ts";
 import { enTetesCors, reponsePrealable } from "../_shared/cors.ts";
 import { llm } from "../_shared/external-call.ts";
-import { getPromptHash, PROMPT_VERSION, SYSTEM_PROMPT_V1 } from "./prompt.ts";
+import { empreinteTexte, getPromptHash, PROMPT_VERSION, SYSTEM_PROMPT_V1 } from "./prompt.ts";
 import {
   assemblerContexteSeance,
   formaterDonneesStructurees,
@@ -263,6 +263,9 @@ Deno.serve(async (req) => {
   // hors ligne. Un echec ici n'interrompt pas l'analyse : on retombe sur la
   // note precedente seule, et le modele est informe de ce qu'il n'a pas vu.
   let historique: string | null = null;
+  // Compté pour `source_state` : combien de séances antérieures ont nourri
+  // cette analyse. C'est une donnée d'audit — un nombre, jamais un contenu.
+  let nbNotesHistorique = 0;
   const { data: notesRows, error: erreurNotes } = await client.rpc(
     "get_patient_notes_history",
     {
@@ -274,6 +277,7 @@ Deno.serve(async (req) => {
   );
   if (erreurNotes === null && Array.isArray(notesRows) && notesRows.length > 0) {
     historique = formaterHistoriqueNotes(notesRows as readonly NoteHistorique[]).texte;
+    nbNotesHistorique = notesRows.length;
   }
 
   // ── Etape 4 : assemblage par PRESEANCE, budget borne, troncature DITE. ──
@@ -390,8 +394,72 @@ Deno.serve(async (req) => {
     pointsNonExplores: validee.pointsNonExplores.map((p) => rehydrate(p, map)),
   };
 
-  return new Response(JSON.stringify({ ok: true, data: resultat }), {
-    status: 200,
-    headers: { "Content-Type": "application/json", ...enTetesCors(req) },
-  });
+  // ═══ PERSISTANCE — LE CHAÎNON QUI MANQUAIT (067) ═══
+  //
+  // Jusqu'ici, l'analyse était RENDUE et rien de plus : elle vivait dans l'état
+  // React de l'écran. Fermer la consultation la perdait, le dossier n'en
+  // gardait rien, et le résumé du cas ne pouvait pas la consommer — il
+  // n'existait aucune mémoire longitudinale de ce que l'assistant avait
+  // compris d'une séance.
+  //
+  // ⚠️ ON ÉCRIT LE TEXTE RÉHYDRATÉ, PAS LE TEXTE À JETONS. Ce qui est rangé
+  // dans la base est du contenu clinique lisible par la praticienne ; la
+  // pseudonymisation ne protège que le TRAJET vers le fournisseur, elle n'a
+  // aucune raison d'être dans le dossier. Ranger les jetons rendrait l'analyse
+  // illisible dès que la table de correspondance a disparu — c'est-à-dire
+  // immédiatement, puisqu'elle ne quitte jamais cette requête.
+  //
+  // ⚠️ ET L'ÉCHEC D'ÉCRITURE NE DOIT PAS FAIRE PERDRE L'ANALYSE. La
+  // praticienne l'a sous les yeux : la lui retirer parce qu'une écriture
+  // dérivée a échoué serait pire que de ne pas l'avoir persistée. On la rend
+  // avec `persistee: false`, l'écran le dit, et la relance reste possible.
+  // La note clinique, elle, n'a jamais dépendu de cet appel (règle : aucune
+  // panne IA ne bloque la documentation).
+  const empreinteNotes = await empreinteTexte(rawNotes);
+  const etatSource = {
+    notes_hash: empreinteNotes,
+    notes_longueur: rawNotes.length,
+    historique_notes: nbNotesHistorique,
+  };
+
+  let analyseId: string | null = null;
+  let version: number | null = null;
+  const { data: enregistreeRows, error: erreurEnregistrement } = await client.rpc(
+    "save_session_analysis",
+    {
+      p_consultation_id: corps.consultationId,
+      p_content: JSON.stringify(resultat),
+      p_source_state: JSON.stringify(etatSource),
+      p_model: Deno.env.get("SEEKAI_MODEL") ?? Deno.env.get("OPENROUTER_MODEL") ??
+        Deno.env.get("LLM_MODEL") ?? "google/gemini-2.5-flash",
+      p_prompt_version: PROMPT_VERSION,
+      p_prompt_hash: promptHash,
+    },
+  );
+  if (erreurEnregistrement !== null) {
+    // Le message des `RAISE` de 067 est écrit par nous et ne contient aucune
+    // donnée patient — que des noms de champs.
+    console.error(JSON.stringify({
+      event: "analyse.enregistrementRefuse",
+      code: erreurEnregistrement.code ?? null,
+      message: erreurEnregistrement.message,
+    }));
+  } else {
+    const ligne = (enregistreeRows as ReadonlyArray<Record<string, unknown>> | null)?.[0];
+    if (ligne !== undefined) {
+      analyseId = typeof ligne["id"] === "string" ? ligne["id"] : null;
+      version = typeof ligne["version"] === "number" ? ligne["version"] : null;
+    }
+  }
+
+  return new Response(
+    JSON.stringify({
+      ok: true,
+      data: { ...resultat, analyseId, version, persistee: analyseId !== null },
+    }),
+    {
+      status: 200,
+      headers: { "Content-Type": "application/json", ...enTetesCors(req) },
+    },
+  );
 });

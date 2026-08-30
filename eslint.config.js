@@ -299,7 +299,12 @@ const config = [
     languageOptions: {
       parser: tsParser,
       parserOptions: {
-        project: "./tsconfig.json",
+        // DEUX programmes, parce qu'il y a deux périmètres. `tsconfig.json`
+        // exclut `tests/` (qui importe du code Deno avec l'extension `.ts`) ;
+        // `tsconfig.test.json` l'inclut. Les règles type-aware exigent que le
+        // fichier appartienne à UN programme : n'en déclarer qu'un laissait
+        // les tests hors de tout contrôle avec une erreur de parsing.
+        project: ["./tsconfig.json", "./tsconfig.test.json"],
         tsconfigRootDir: import.meta.dirname,
       },
     },
