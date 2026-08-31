@@ -501,6 +501,13 @@ const CLES_DETAIL: Readonly<Record<TimelineLabelKey, readonly string[]>> = {
   // `doc_number` est ÉCARTÉ : un numéro de document est une métadonnée
   // identifiante et citable hors du cabinet. Le type suffit au raisonnement.
   document: ["doc_type"],
+  traitement_commence: ["treatment_id", "action", "medication_raw"],
+  traitement_dose_modifiee: ["treatment_id", "action", "medication_raw"],
+  traitement_horaire_modifie: ["treatment_id", "action", "medication_raw"],
+  traitement_pause: ["treatment_id", "action", "medication_raw"],
+  traitement_repris: ["treatment_id", "action", "medication_raw"],
+  traitement_arrete: ["treatment_id", "action", "medication_raw", "reason"],
+  traitement_renouvele: ["treatment_id", "action", "medication_raw"],
 };
 
 export function projeterTimeline(

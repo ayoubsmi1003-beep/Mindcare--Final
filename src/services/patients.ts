@@ -360,6 +360,29 @@ const RENDEZ_VOUS_RESUME = z.object({
   practitioner_name: z.string().nullable(),
 });
 
+const TRAITEMENT_V2 = z.object({
+  id: z.string(),
+  status: z.enum(["active", "paused", "stopped"]),
+  dose: z.string().nullable(),
+  dose_unit: z.string().nullable(),
+  frequency: z.string().nullable(),
+  timing: z.unknown(),
+  instructions: z.string().nullable(),
+  start_date: z.string(),
+  end_date: z.string().nullable(),
+  stopped_at: z.string().nullable(),
+  stopped_reason: z.string().nullable(),
+  current_version: NOMBRE,
+  created_at: z.string(),
+  updated_at: z.string().nullable().optional(),
+  medication_id: z.string(),
+  medication_raw: z.string().nullable(),
+  brand_name: z.string().nullable(),
+  form: z.string().nullable(),
+  strength: z.string().nullable(),
+  inn: z.string().nullable().optional(),
+});
+
 const ESPACE_TRAVAIL = z.object({
   contrat: z.literal(1),
   genere_a: z.string(),
@@ -383,6 +406,17 @@ const ESPACE_TRAVAIL = z.object({
       nombre_prescriptions: NOMBRE,
     })
     .nullable(),
+  // ADR-028 traitements_v2 — additif, jamais cassant (contrat reste 1).
+  traitements_v2: z
+    .object({
+      actifs: z.array(TRAITEMENT_V2),
+      en_pause: z.array(TRAITEMENT_V2),
+      arretes_recents: z.array(TRAITEMENT_V2),
+      total_actifs: NOMBRE,
+      total: NOMBRE,
+    })
+    .nullable()
+    .optional(),
   agenda: z.object({
     prochain_rendez_vous: RENDEZ_VOUS_RESUME.nullable(),
     dernier_rendez_vous: RENDEZ_VOUS_RESUME.nullable(),
@@ -457,6 +491,29 @@ export interface PrescriptionResume {
   readonly lignes: readonly LignePrescription[];
 }
 
+export interface TraitementV2 {
+  readonly id: string;
+  readonly status: "active" | "paused" | "stopped";
+  readonly dose: string | null;
+  readonly doseUnit: string | null;
+  readonly frequency: string | null;
+  readonly timing: readonly string[];
+  readonly instructions: string | null;
+  readonly startDate: string;
+  readonly endDate: string | null;
+  readonly stoppedAt: string | null;
+  readonly stoppedReason: string | null;
+  readonly currentVersion: number;
+  readonly createdAt: string;
+  readonly updatedAt: string | null;
+  readonly medicationId: string;
+  readonly medicationRaw: string | null;
+  readonly brandName: string | null;
+  readonly form: string | null;
+  readonly strength: string | null;
+  readonly inn: string | null;
+}
+
 export interface RendezVousResume {
   readonly id: string;
   readonly startsAt: string;
@@ -507,6 +564,14 @@ export interface PatientWorkspace {
   readonly traitements: {
     readonly dernierePrescription: PrescriptionResume | null;
     readonly nombrePrescriptions: number;
+  } | null;
+
+  readonly traitementsV2: {
+    readonly actifs: readonly TraitementV2[];
+    readonly enPause: readonly TraitementV2[];
+    readonly arretesRecents: readonly TraitementV2[];
+    readonly totalActifs: number;
+    readonly total: number;
   } | null;
 
   readonly agenda: {
@@ -721,6 +786,33 @@ function versRendezVous(
   };
 }
 
+function versTraitementV2(brut: z.infer<typeof TRAITEMENT_V2>): TraitementV2 {
+  let timing: readonly string[] = [];
+  if (Array.isArray(brut.timing)) timing = (brut.timing as unknown[]).filter((x): x is string => typeof x === "string");
+  return {
+    id: brut.id,
+    status: brut.status,
+    dose: brut.dose,
+    doseUnit: brut.dose_unit,
+    frequency: brut.frequency,
+    timing,
+    instructions: brut.instructions,
+    startDate: brut.start_date,
+    endDate: brut.end_date,
+    stoppedAt: brut.stopped_at,
+    stoppedReason: brut.stopped_reason,
+    currentVersion: brut.current_version,
+    createdAt: brut.created_at,
+    updatedAt: brut.updated_at ?? null,
+    medicationId: brut.medication_id,
+    medicationRaw: brut.medication_raw,
+    brandName: brut.brand_name,
+    form: brut.form,
+    strength: brut.strength,
+    inn: brut.inn ?? null,
+  };
+}
+
 function versEspaceTravail(brut: z.infer<typeof ESPACE_TRAVAIL>): PatientWorkspace {
   return {
     contrat: brut.contrat,
@@ -820,6 +912,17 @@ function versEspaceTravail(brut: z.infer<typeof ESPACE_TRAVAIL>): PatientWorkspa
             nombrePrescriptions: brut.traitements.nombre_prescriptions,
           },
 
+    traitementsV2:
+      brut.traitements_v2 === null || brut.traitements_v2 === undefined
+        ? null
+        : {
+            actifs: brut.traitements_v2.actifs.map(versTraitementV2),
+            enPause: brut.traitements_v2.en_pause.map(versTraitementV2),
+            arretesRecents: brut.traitements_v2.arretes_recents.map(versTraitementV2),
+            totalActifs: brut.traitements_v2.total_actifs,
+            total: brut.traitements_v2.total,
+          },
+
     agenda: {
       prochainRendezVous: versRendezVous(brut.agenda.prochain_rendez_vous),
       dernierRendezVous: versRendezVous(brut.agenda.dernier_rendez_vous),
@@ -883,7 +986,8 @@ export type TimelineEventType =
   | "prescription"
   | "echelle"
   | "rdv"
-  | "document";
+  | "document"
+  | "traitement";
 
 export type TimelineLabelKey =
   | "consultation_ouverte"
@@ -894,7 +998,14 @@ export type TimelineLabelKey =
   | "prescription"
   | "echelle"
   | "rdv"
-  | "document";
+  | "document"
+  | "traitement_commence"
+  | "traitement_dose_modifiee"
+  | "traitement_horaire_modifie"
+  | "traitement_pause"
+  | "traitement_repris"
+  | "traitement_arrete"
+  | "traitement_renouvele";
 
 const EVENEMENT = z.object({
   occurred_at: z.string(),
@@ -907,6 +1018,7 @@ const EVENEMENT = z.object({
     "echelle",
     "rdv",
     "document",
+    "traitement",
   ]),
   label_key: z.enum([
     "consultation_ouverte",
@@ -918,6 +1030,13 @@ const EVENEMENT = z.object({
     "echelle",
     "rdv",
     "document",
+    "traitement_commence",
+    "traitement_dose_modifiee",
+    "traitement_horaire_modifie",
+    "traitement_pause",
+    "traitement_repris",
+    "traitement_arrete",
+    "traitement_renouvele",
   ]),
   practitioner_name: z.string().nullable(),
   detail: z.record(z.string(), z.unknown()),

@@ -597,6 +597,42 @@ J3  tampon  Tests réels, corrections, sauvegardes, formation
 
 ---
 
+### ADR-028 — Treatment State & History : domaine traitements versionné (séparé des prescriptions)
+
+**Date.** 2026-08-31. **Statut.** Proposé et appliqué dans le lot Médicaments & Traitements. **Remplace** l'absence de §8.4 : `prescriptions` ne portent pas l'état thérapeutique. **Ne touche pas** à `app.doc_type` (`ordonnance` reporté, Décision 3 mission).
+
+**1 · Pourquoi `prescriptions` seul est insuffisant.**
+`prescriptions` enregistre *ce qui a été prescrit* (document juridique manuscrit mois 1, `is_handwritten=true`), pas *ce que le patient prend*. Une ligne n'a ni statut ni `stopped_at`, et une `duration_days` prescrite ne dit pas si le traitement est poursuivi, réduit, mis en pause ou arrêté. L'écran `PanneauTraitements.tsx` l'écrit : affirmer `Traitement en cours` sur cette base serait une affirmation clinique fausse lue au moment de décider d'une posologie.
+
+**2 · Pourquoi un domaine propre.**
+Traitement = état longitudinal `50→100→50→paused→resumed→stopped→restart(new episode)` avec conservation intégrale. Prescription = acte ponctuel. Confondre les deux écraserait 5 états en `Sertraline 50 mg` (spec §5). Le domaine `patient_treatments` porte l'état courant, `patient_treatment_history` porte la preuve append-only. Une ordonnance future (`ordonnance`) se lira comme projection de l'état, pas l'inverse.
+
+**3 · Pourquoi courant + append-only.**
+`patient_treatments` est mutable par portes seulement (lecture rapide, 1 ligne par épisode actif). `patient_treatment_history` est immuable (`REVOKE UPDATE/DELETE`, trigger `forbid_history_mutation`, insert seul via porte). Règle 3 : aucun `DELETE` clinique, aucun `UPDATE` qui efface le passé — l'histoire est `previous_values/new_values` + `version`.
+
+**4 · Modèle RLS.**
+Clinique stricte ADR-003 : `patient_treatments` / `history` → `FOR ALL TO authenticated USING (cabinet_id=current_cabinet() AND can_see_clinical(practitioner_id))`. **Aucune policy assistant** : l'assistante lit `medications` (référentiel, `cabinet_id IS NULL OR =current_cabinet()`) mais zéro ligne traitement même en SQL brut. Écritures `SECURITY INVOKER` (RLS décide), lectures patient `SECURITY DEFINER OWNER app_gatekeeper` avec `audit.log_read('fiche'|'liste')` (ADR-019) + `GRANT SELECT` nommé au gatekeeper.
+
+**5 · Audit.**
+`audit.track()` déjà sur `patients, prescriptions…` — étendu à `patient_treatments, patient_treatment_history` (T9). Chaque porte écrit 1 ligne `history` (`action, previous_values/new_values, actor=auth.uid(), consultation_id, reason`) + trigger audit écrit `audit.log{changed_fields, old/new}`. `history` immuable, `audit.log` ajout seul.
+
+**6 · Cycle de vie.**
+Enum `treatment_status('active','paused','stopped')` (Décision 2), `treatment_action('started','dose_changed','schedule_changed','paused','resumed','stopped','renewed')`, `stopped_reason('inefficacite','effets_indesirables','amelioration','decision_clinique','autre')`. Transitions autorisées : `∅→active(start)`, `active→paused`, `paused→active(resume)`, `active|paused→stopped`, `stopped→NEW active(restart via previous_treatment_id)`, `active→active(renew/update)`. Interdits codés en porte : `stopped→paused`, `stopped→active` sur même épisode. Versionnée par `current_version` + `SELECT ... FOR UPDATE` + check optimistic `expected_version`.
+
+**7 · Concurrence.**
+Porte verrouille `SELECT ... FOR UPDATE` sur traitement + vérifie `p_expected_version IS NULL OR =current_version` sinon `409 conflit`. Double-clic / retry / 2 onglets → 1 seul `history.version` incrémenté, l'autre reçoit `conflit — rechargez`. Idempotent côté import catalogue par `source_fingerprint`.
+
+**8 · Relation prescriptions.**
+Prescriptions intactes, FK `medications.id` stables. `patient_treatments.medication_id → medications.id` (même catalogue). `consultation_id` nullable sur traitement : rattache l'acte à la séance ouverte si présente, ne duplique pas la note. Aucune prescription n'est réinterprétée comme état.
+
+**9 · Digital Twin.**
+Twin = read model (STATE §5). `get_patient_workspace` expose `traitements_v2{actifs, en_pause, arretes_recents}` additif (Décision 4, contrat 1 inchangé). Timeline `list_patient_timeline` UNION `patient_treatment_history` (source `treatment`). Jarvis projection `SafeTraitement` dérivée, jamais écrite par IA sans `confirmed_at`.
+
+**10 · Migration.**
+`073_medication_catalog_enrich` (colonnes source raw/normalized/fingerprint/version + GIN) → `074_patient_treatments_state` (tables+types+RLS+index+history immutable) → `075_treatment_gates` (7 portes) → `076_workspace_timeline_treatments` (read gates+timeline+workspace). Idéal 4 fichiers, numéros réels `073,074,075,076` (libres vérifiés 2026-08-31).
+
+---
+
 ## 8. DÉCISIONS EN ATTENTE
 
 | # | Sujet | Nécessaire pour |

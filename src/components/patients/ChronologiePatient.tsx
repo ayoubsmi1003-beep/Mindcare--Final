@@ -48,6 +48,13 @@ const LIBELLES: Readonly<Record<TimelineLabelKey, string>> = {
   echelle: fr.patients.chronologie.echelle,
   rdv: fr.patients.chronologie.rdv,
   document: fr.patients.chronologie.document,
+  traitement_commence: fr.patients.chronologie.traitementCommence,
+  traitement_dose_modifiee: fr.patients.chronologie.traitementDoseModifiee,
+  traitement_horaire_modifie: fr.patients.chronologie.traitementHoraireModifie,
+  traitement_pause: fr.patients.chronologie.traitementPause,
+  traitement_repris: fr.patients.chronologie.traitementRepris,
+  traitement_arrete: fr.patients.chronologie.traitementArrete,
+  traitement_renouvele: fr.patients.chronologie.traitementRenouvele,
 };
 
 /**
@@ -64,6 +71,7 @@ const ICONES: Readonly<Record<TimelineEvent["eventType"], NomIcone>> = {
   echelle: "statistiques",
   rdv: "agenda",
   document: "documents",
+  traitement: "traitements",
 };
 
 /**
@@ -107,6 +115,25 @@ function detailLisible(evenement: TimelineEvent): string | null {
       const statut = texte("status");
       if (statut === null) return null;
       return fr.agenda.statuts[statut as keyof typeof fr.agenda.statuts] ?? null;
+    }
+    case "traitement_commence":
+    case "traitement_dose_modifiee":
+    case "traitement_horaire_modifie":
+    case "traitement_pause":
+    case "traitement_repris":
+    case "traitement_arrete":
+    case "traitement_renouvele": {
+      const med = texte("medication_raw") ?? texte("brand_name");
+      const prev = d["previous_values"] as Record<string, unknown> | null;
+      const next = d["new_values"] as Record<string, unknown> | null;
+      const prevDose = prev ? String((prev)["dose"] ?? "") : "";
+      const nextDose = next ? String((next)["dose"] ?? "") : "";
+      const reason = texte("reason");
+      if (med === null) return reason;
+      if (evenement.labelKey === "traitement_dose_modifiee" && prevDose && nextDose && prevDose !== nextDose) {
+        return `${med} : ${prevDose} → ${nextDose}`;
+      }
+      return reason ? `${med} · ${reason}` : med;
     }
     // Une consultation et une note signée n'ont rien à ajouter : leur libellé
     // dit déjà tout ce que la porte accepte de dire.

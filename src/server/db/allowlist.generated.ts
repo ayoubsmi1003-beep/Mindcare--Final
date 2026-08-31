@@ -41,8 +41,10 @@ export const RPC_AUTORISES: ReadonlySet<string> = new Set([
   "get_my_profile",
   "get_open_consultation",
   "get_patient",
+  "get_patient_treatments",
   "get_patient_workspace",
   "get_sessions_payments_list",
+  "get_treatment_history",
   "issue_document",
   "list_agenda",
   "list_amendments",
@@ -55,22 +57,30 @@ export const RPC_AUTORISES: ReadonlySet<string> = new Set([
   "mark_document_printed",
   "mark_notification_read",
   "nombre_en_lettres",
+  "pause_treatment",
   "propose_jarvis_action",
   "reception_board",
   "record_payment_collected",
   "reject_jarvis_action",
+  "renew_treatment",
+  "restart_treatment",
+  "resume_treatment",
   "save_note",
   "save_raw_notes",
+  "search_medications",
   "search_patients",
   "set_consultation_price",
   "sign_note",
   "start_consultation",
   "start_jarvis_conversation",
+  "start_treatment",
+  "stop_treatment",
   "update_appointment",
   "update_cabinet",
   "update_charge",
   "update_patient",
   "update_profile",
+  "update_treatment",
   "verify_document_hash",
   "void_document",
 ]);
@@ -82,4 +92,4 @@ export const RELATIONS_AUTORISEES: Readonly<Record<string, readonly string[]>> =
 };
 
 /** Nombre d'entrées, pour que le contrôle de démarrage puisse le journaliser. */
-export const NB_RPC = 60;
+export const NB_RPC = 70;

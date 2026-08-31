@@ -32,9 +32,16 @@ import { Icone } from "./ui/Icones";
 import { useSeanceEnCours } from "./useSeanceEnCours";
 
 export function BandeauSeanceEnCours({ role }: { readonly role: UserRole }): React.JSX.Element | null {
-  const { seanceId, afficher } = useSeanceEnCours(role);
+  const { seanceId: brut, afficher } = useSeanceEnCours(role);
 
-  if (!afficher || seanceId === null) return null;
+  if (!afficher || brut === null) return null;
+  // `get_open_consultation` rend un uuid ; selon l'adaptateur la valeur peut arriver
+  // emballée (`{ get_open_consultation: uuid }`). Le service déballe déjà, mais on
+  // reste défensif ici pour éviter `/consultation/[object Object]` en cas de
+  // divergence d'adaptateur.
+  const rec: unknown = brut;
+  const seanceId = typeof brut === "string" ? brut : String((rec as Record<string, unknown>).get_open_consultation ?? brut);
+  if (seanceId === "[object Object]" || seanceId.trim() === "") return null;
 
   return (
     <aside

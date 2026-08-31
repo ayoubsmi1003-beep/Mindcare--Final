@@ -306,12 +306,17 @@ export const fr = {
       echelle: "Échelle administrée",
       rdv: "Rendez-vous",
       document: "Document émis",
+      traitementCommence: "Traitement commencé",
+      traitementDoseModifiee: "Posologie modifiée",
+      traitementHoraireModifie: "Horaires modifiés",
+      traitementPause: "Traitement mis en pause",
+      traitementRepris: "Traitement repris",
+      traitementArrete: "Traitement arrêté",
+      traitementRenouvele: "Traitement renouvelé",
     },
 
     /**
-     * Traitements. ⚠️ AUCUN LIBELLÉ « EN COURS », « ACTIF » NI « ARRÊTÉ » : le
-     * schéma n'a ni `stopped_at` ni statut de ligne (009). Affirmer qu'un
-     * traitement est en cours serait inventer une donnée clinique.
+     * Traitements (historique prescriptions — 009). Conservé pour compat.
      */
     traitements: {
       manuscrite: "Ordonnance manuscrite",
@@ -320,16 +325,80 @@ export const fr = {
       parJour: "fois par jour",
       duree: "Durée",
       jours: "jour(s)",
-      /**
-       * Une fonction plutôt qu'une chaîne à trous : l'accord du pluriel est une
-       * décision de LANGUE, elle appartient à ce fichier. Concaténer « autre » et
-       * un « s » conditionnel dans un composant disperse le français dans le code
-       * et le rend introuvable le jour où il faut le corriger.
-       */
       autresPrescriptions: (n: number): string =>
         n === 1
           ? "1 autre prescription figure au dossier. La chronologie en porte le détail daté."
           : `${String(n)} autres prescriptions figurent au dossier. La chronologie en porte le détail daté.`,
+    },
+
+    /** Traitements V2 — ADR-028 (état + historique). Terminologie clinique. */
+    traitementsV2: {
+      titre: "Traitements",
+      actifs: "actifs",
+      enPause: "en pause",
+      arretesRecents: "arrêtés récemment",
+      ajouter: "Ajouter un traitement",
+      ajouterTitre: "Ajouter un traitement",
+      rechercherPlaceholder: "Rechercher un médicament…",
+      rechercherAide: "Tapez au moins 2 caractères : le catalogue est interrogé côté base.",
+      dose: "Dose",
+      doseUnite: "Unité",
+      frequence: "Fréquence",
+      frequencePlaceholder: "ex. 1 fois/jour",
+      horaires: "Horaires",
+      horairesMatin: "Matin",
+      horairesMidi: "Midi",
+      horairesSoir: "Soir",
+      instructions: "Instructions",
+      instructionsPlaceholder: "À prendre…",
+      dateDebut: "Début",
+      dateFin: "Fin (optionnel)",
+      aucunActif: "Aucun traitement actif.",
+      aucun: "Aucun traitement enregistré. Ajoutez le premier traitement du dossier.",
+      modifier: "Modifier",
+      enregistrer: "Enregistrer",
+      annuler: "Annuler",
+      mettreEnPause: "Mettre en pause",
+      reprendre: "Reprendre",
+      arreter: "Arrêter",
+      renouveler: "Renouveler",
+      redemarrer: "Redémarrer",
+      historique: "Historique",
+      fermer: "Fermer",
+      depuis: "Depuis",
+      modifieIlYa: "Modifié",
+      actif: "Actif",
+      pause: "En pause",
+      arrete: "Arrêté",
+      arreteLe: "Arrêté le",
+      motif: "Motif",
+      motifs: {
+        inefficacite: "Inefficacité",
+        effets_indesirables: "Effets indésirables",
+        amelioration: "Amélioration",
+        decision_clinique: "Décision clinique",
+        autre: "Autre",
+      },
+      confirmerArretTitre: "Arrêter ce traitement ?",
+      confirmerArretCorps: "Cette action conservera l'historique du traitement. Vous pourrez le redémarrer plus tard.",
+      confirmer: "Confirmer",
+      rechercheVide: "Aucun médicament ne correspond à cette recherche.",
+      selectionner: "Sélectionner",
+      traitementCree: "Traitement ajouté.",
+      traitementModifie: "Traitement mis à jour — historique conservé.",
+      traitementArrete: "Traitement arrêté — historique conservé.",
+      erreurConflit: "Ce traitement a été modifié ailleurs. Rechargez et réessayez.",
+      posologieModifiee: "Posologie modifiée",
+      historiqueTitre: "Historique du traitement",
+      histCommence: "Traitement commencé",
+      histDoseModifiee: "Posologie modifiée",
+      histHoraireModifie: "Horaires modifiés",
+      histPause: "Traitement mis en pause",
+      histRepris: "Traitement repris",
+      histArrete: "Traitement arrêté",
+      histRenouvele: "Traitement renouvelé",
+      debutTraitement: "Début du traitement",
+      voirHistorique: "Voir l'historique",
     },
 
     echelle: {

@@ -303,7 +303,7 @@ export default function PageFichePatient(): React.JSX.Element {
             { cle: "chronologie", libelle: fr.patients.onglets.chronologie, icone: "suivi" },
             { cle: "clinique", libelle: fr.patients.onglets.clinique, icone: "statistiques" },
           ] as const)),
-      ...(espace.traitements === null
+      ...((espace.traitements === null && (espace.traitementsV2 === null || espace.traitementsV2 === undefined))
         ? []
         : ([
             {
@@ -408,8 +408,17 @@ export default function PageFichePatient(): React.JSX.Element {
               <PanneauClinique clinique={espace.clinique} />
             ) : null}
 
-            {actif === "traitements" && espace.traitements !== null ? (
-              <PanneauTraitements traitements={espace.traitements} />
+            {actif === "traitements" && (espace.traitements !== null || espace.traitementsV2 !== null) ? (
+              <PanneauTraitements
+                traitements={espace.traitements}
+                traitementsV2={espace.traitementsV2 ?? null}
+                patientId={espace.identite.id}
+                onRefresh={() => {
+                  void getPatientWorkspace(id).then((res) => {
+                    if (res.ok && res.data) setEspace(res.data);
+                  });
+                }}
+              />
             ) : null}
 
             {actif === "rendezVous" ? <PanneauRendezVous agenda={espace.agenda} /> : null}

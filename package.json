@@ -11,7 +11,8 @@
     "typecheck": "tsc --noEmit && tsc -p tsconfig.test.json",
     "postinstall": "node scripts/sync-wakeword-runtime.mjs",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "import:medicaments": "node scripts/import-medicaments.mjs --file docs/Médicaments.xlsx"
   },
   "dependencies": {
     "next": "^15.1.0",
@@ -30,6 +31,7 @@
     "@types/react-dom": "^19.0.0",
     "@typescript-eslint/eslint-plugin": "^8.18.0",
     "@typescript-eslint/parser": "^8.18.0",
+    "adm-zip": "^0.6.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.17.0",
     "eslint-config-next": "^15.1.0",
