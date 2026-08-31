@@ -14,13 +14,31 @@
  * basculement — c'est-à-dire trop tard.
  */
 
+import { httpDbPort } from "./http";
 import type { DbPort } from "./port";
-import { supabaseDbPort } from "./supabase";
 
 let current: DbPort | undefined;
 
+/**
+ * ═══ ADR-001 · LE PORT PAR DÉFAUT EST DÉSORMAIS HTTP ═══════════════════════
+ *
+ * `supabaseDbPort` n'est plus résolu ici. Ce qui a changé n'est pas seulement
+ * la destination : c'est ce que le NAVIGATEUR détient. Avant, il portait la clé
+ * `anon` et un JWT en `localStorage` ; maintenant il ne porte qu'un cookie
+ * `httpOnly` qu'il ne peut pas lire, et la base n'est joignable que par
+ * `/api/db/*`.
+ *
+ * ⚠️ `db()` NE BASCULE PAS VERS `pg` CÔTÉ SERVEUR, et ce n'est pas un oubli.
+ * On aurait pu détecter `typeof window === "undefined"` et rendre l'adaptateur
+ * `pg` — c'est même le réflexe. Ce serait un piège : un service importé par
+ * mégarde dans un Route Handler court-circuiterait alors la frontière HTTP et
+ * s'exécuterait avec le rôle que le pool porte à cet instant, SANS que
+ * `withCaller` ait posé d'identité. Une seule règle de résolution, pas de
+ * contexte ambiant : côté serveur, on construit `faireePgPort(q)`
+ * EXPLICITEMENT, à partir d'un `Querier` qu'on a dû obtenir de `withCaller`.
+ */
 export function db(): DbPort {
-  return current ?? supabaseDbPort;
+  return current ?? httpDbPort;
 }
 
 export function setDbPort(port: DbPort | undefined): void {

@@ -3,24 +3,109 @@
 # Toute sortie non vide = ne pas commiter. C'est un fait, pas une opinion.
 fail=0
 
-# 1 — aucune sortie réseau hors passerelle
+# 1 — LE POINT DE SORTIE UNIQUE (ADR-001 / phase 5, remplace la version cloud)
 #
-# Exemption NOMMÉE (V-JARVIS-CORE) : `src/services/db/supabase.ts` appelle la
-# passerelle Edge DU PROJET (`${NEXT_PUBLIC_SUPABASE_URL}/functions/v1/…`) en
-# flux — le même unique chemin d'accès que ADR-019/020, pas une sortie externe.
-# OpenRouter, Groq et ElevenLabs restent derrière `_shared/external-call.ts`,
-# seul point de sortie du monde extérieur (règle 1). L'URL vient de
-# l'environnement : le littéral `https://` ne peut donc pas s'y trouver —
-# l'exemption ne désarme rien aujourd'hui ; elle documente l'intention et fait
-# échouer immédiatement tout futur appel direct collé dans l'adaptateur.
-out=$(grep -rn "fetch(['\"]https://" --include="*.ts" --include="*.tsx" src/ supabase/ 2>/dev/null \
-      | grep -v "_shared/external-call.ts" \
-      | grep -v "^src/services/db/supabase\.ts:")
-[ -n "$out" ] && { echo "🔴 fetch externe hors passerelle :"; echo "$out"; fail=1; }
+# ═══ POURQUOI CE CONTRÔLE A CHANGÉ DE NATURE ══════════════════════════════
+#
+# L'ancienne version cherchait `fetch("https://` dans `src/` et `supabase/`,
+# avec une exemption nommée pour `src/services/db/supabase.ts`. Elle reposait
+# sur deux hypothèses qui ne tiennent plus :
+#   · la passerelle vivait dans `supabase/functions/`, donc AUCUN appel réseau
+#     n'était légitime dans `src/` ;
+#   · une sortie s'écrivait forcément avec un littéral `https://`.
+#
+# La seconde était déjà fausse : `fetch(url)` où `url` est calculée passait
+# sous le radar. La première ne l'est plus depuis que la passerelle a été
+# portée dans `src/server/egress/`.
+#
+# Le mécanisme PRINCIPAL est désormais la règle ESLint
+# `local/no-fetch-hors-passerelle`, qui ferme par le CHEMIN DU FICHIER — la
+# seule chose qu'un contrôle statique puisse réellement décider — et couvre
+# donc `fetch(url)` comme `fetch("https://…")`.
+#
+# Ce qui suit est le SECOND FILET, et il ajoute deux choses qu'ESLint ne fait
+# pas : il vérifie que la passerelle EXISTE (on ne désarme pas un garde-fou en
+# supprimant son sujet), et il ne peut pas être éteint par un fichier de
+# configuration.
 
-# 2 — aucun secret côté client
-out=$(grep -rn "SERVICE_ROLE\|GROQ_API_KEY\|OPENROUTER_API_KEY\|SEEKAI_API_KEY\|NEW_API_KEY" src/ 2>/dev/null)
-[ -n "$out" ] && { echo "🔴 secret côté client :"; echo "$out"; fail=1; }
+# 1a · la passerelle doit exister. Sans ce contrôle, supprimer le fichier
+#      rendrait la règle ESLint sans objet et le préflight silencieux.
+PASSERELLE="src/server/egress/external-call.ts"
+[ -f "$PASSERELLE" ] || {
+  echo "🔴 la passerelle de sortie a disparu : $PASSERELLE"
+  echo "   Sans elle, plus rien ne borne les appels externes (règle 1)."; fail=1; }
+
+# 1b · aucun littéral d'URL externe hors de la passerelle. Ce motif est plus
+#      large que l'ancien : il attrape `fetch(`, mais AUSSI une URL externe
+#      écrite n'importe où dans src/ (constante, tableau de fournisseurs).
+#      `supabase/functions/` reste couvert tant que le dossier existe : il
+#      disparaît en phase 6.
+out=$(grep -rnE '"https?://' --include="*.ts" --include="*.tsx" src/ 2>/dev/null       | grep -v "^src/server/egress/external-call\.ts:"       | sed -e 's|//.*$||' | grep -E '"https?://'       | grep -viE 'invalid\.local|example\.(com|org)|schema|w3\.org|localhost')
+[ -n "$out" ] && { echo "🔴 URL externe hors passerelle :"; echo "$out"; fail=1; }
+
+# 1c · la règle ESLint est-elle toujours ARMÉE ? Elle a déjà été neutralisée
+#      une fois par un doublon de clé `rules:` — en JavaScript, la seconde
+#      écrase la première, sans erreur. Mesuré : une sonde `fetch("https://…")`
+#      passait le lint sans un mot. On vérifie donc sa présence.
+grep -q "local/no-fetch-hors-passerelle" eslint.config.js || {
+  echo "🔴 la règle ESLint du point de sortie unique a disparu d'eslint.config.js."
+  echo "   Le mécanisme principal est désarmé ; le grep seul ne suffit pas."; fail=1; }
+
+# 2 — AUCUN SECRET CÔTÉ CLIENT (ADR-001 / phase 5, contrôle renforcé)
+#
+# ═══ POURQUOI CE CONTRÔLE A DÛ CHANGER, ET POURQUOI IL EST PLUS FORT ═══════
+#
+# L'ancienne version refusait tout nom de clé de fournisseur n'importe où dans
+# `src/`. Elle reposait sur une prémisse devenue fausse : « `src/` est du code
+# navigateur ». C'était vrai tant que la passerelle vivait dans
+# `supabase/functions/` ; depuis le portage, elle est dans
+# `src/server/egress/`, et `src/server/**` ne traverse JAMAIS vers le client.
+#
+# Assouplir en retirant simplement `src/server/` du grep aurait affaibli le
+# contrôle. On le remplace donc par un contrôle en DEUX temps, dont le second
+# est bien plus fort que tout ce qui existait :
+#
+#   2a · les noms de clés n'apparaissent QUE dans `src/server/**` ;
+#   2b · le PAQUET NAVIGATEUR CONSTRUIT ne contient ni les noms, ni les
+#        VALEURS des secrets. C'est la vérification qui compte vraiment : elle
+#        ne raisonne pas sur l'intention du code, elle lit ce qui est livré.
+
+SECRETS_NOMS="SERVICE_ROLE|GROQ_API_KEY|OPENROUTER_API_KEY|SEEKAI_API_KEY|NEW_API_KEY|ELEVENLABS_API_KEY|MINDCARE_DATABASE_URL"
+
+# 2a · hors de `src/server/**`, ces noms n'ont rien à faire dans src/.
+out=$(grep -rnE "$SECRETS_NOMS" src/ 2>/dev/null | grep -v "^src/server/")
+[ -n "$out" ] && {
+  echo "🔴 nom de secret hors de src/server/ :"; echo "$out"
+  echo "   Seul src/server/** est garanti de ne pas traverser vers le navigateur."; fail=1; }
+
+# 2b · le paquet livré. Ne s'exécute que si un build existe — sinon on le DIT,
+#      au lieu de laisser croire que le contrôle a été fait.
+if [ -d .next/static ]; then
+  out=$(grep -rlE "$SECRETS_NOMS" .next/static/ 2>/dev/null)
+  [ -n "$out" ] && {
+    echo "🔴 nom de secret DANS LE PAQUET NAVIGATEUR :"; echo "$out"; fail=1; }
+
+  # Les VALEURS, en aveugle : on ne les affiche jamais, on ne rend que le nom
+  # de la variable dont la valeur a fuité. Personne n'a besoin de lire le
+  # secret pour savoir qu'il est publié.
+  if [ -f .env ]; then
+    while IFS= read -r ligne; do
+      nom=${ligne%%=*}
+      valeur=${ligne#*=}
+      # On ignore les valeurs courtes ou vides : elles produiraient des faux
+      # positifs (« true », « cloud ») sans rien prouver.
+      [ ${#valeur} -lt 16 ] && continue
+      case "$nom" in
+        *KEY|*SECRET|*PASSWORD|*TOKEN|*DATABASE_URL)
+          if grep -rqF -- "$valeur" .next/static/ 2>/dev/null; then
+            echo "🔴 la VALEUR de $nom se trouve dans le paquet navigateur."; fail=1
+          fi ;;
+      esac
+    done < <(grep -vE "^\s*#|^\s*$" .env 2>/dev/null)
+  fi
+else
+  echo "ℹ️  contrôle 2b non exécuté : aucun build dans .next/static (lancer pnpm build)."
+fi
 
 # 3 — aucun audio sur disque
 out=$(find . -name "*.webm" -o -name "*.wav" -o -name "*.ogg" 2>/dev/null | grep -v node_modules)
@@ -364,6 +449,120 @@ out=$(find src -type f \( -iname "*.ts" -o -iname "*.tsx" \) 2>/dev/null \
 [ -n "$out" ] && {
   echo "🔴 V1.1 : \"inattendu\" utilisé comme code hors de errors.ts/fr.ts :"; echo "$out"
   echo "   Chaque échec porte sa cause réelle (technical + context), jamais un aveu générique."; fail=1; }
+
+# 11 — ADR-001 / phase 2 : l'identité reste de portée TRANSACTION.
+#
+# ═══ POURQUOI CE CONTRÔLE EST STATIQUE ALORS QU'UN TEST SERAIT PLUS FORT ═════
+#
+# Il l'est parce que le test, lui, NE MORD PAS — mesuré, pas supposé.
+# `tests/integration/identite-pool.test.ts` a été relancé après avoir remplacé
+# `SET LOCAL ROLE` par `SET ROLE` et `set_config(…, true)` par `false` : les 7
+# tests sont restés VERTS. La raison est le `DISCARD ALL` du `finally`, qui
+# efface aussi les réglages de portée SESSION avant de rendre la connexion au
+# pool. Le comportement observable est donc identique dans les deux cas, et
+# aucun test de bout en bout ne peut distinguer le verrou 1 du verrou 3.
+#
+# La conséquence à retenir : la sécurité reposerait alors ENTIÈREMENT sur
+# `DISCARD ALL`, sans que personne ne l'ait décidé ni ne s'en aperçoive. Le
+# défaut ne se verrait qu'au premier chemin qui contourne le `finally`.
+#
+# D'où un contrôle de TEXTE, qui est le seul endroit où la différence existe.
+# Il ne remplace pas les tests : il couvre exactement ce qu'ils ne peuvent pas
+# voir. La propriété SQL elle-même (« l'identité ne survit pas à sa
+# transaction ») reste prouvée EN BASE par scripts/checkpoint-pg-local.sh.
+ENVELOPPE="src/server/db/withCaller.ts"
+if [ -f "$ENVELOPPE" ]; then
+  # a) les deux formes de portée transaction doivent être présentes.
+  grep -q "SET LOCAL ROLE" "$ENVELOPPE" || {
+    echo "🔴 phase 2 : $ENVELOPPE ne pose plus le rôle par SET LOCAL ROLE."
+    echo "   Le rôle survivrait à la transaction et servirait la requête suivante."; fail=1; }
+  grep -q "set_config('request.jwt.claim.sub', \$1, true)" "$ENVELOPPE" || {
+    echo "🔴 phase 2 : $ENVELOPPE ne pose plus l'identité en portée transaction."
+    echo "   Le 3ᵉ argument de set_config doit être 'true' (SET LOCAL)."; fail=1; }
+
+  # b) et aucune forme de portée SESSION ne doit apparaître. On dépouille les
+  #    commentaires : ce fichier PARLE abondamment de `SET` pour expliquer le
+  #    danger, et un contrôle qui crie sur sa propre documentation finit
+  #    désarmé (même motif que les contrôles 9d et 10).
+  out=$(sed -e 's|//.*$||' -e '/^[[:space:]]*\*/d' -e '/^[[:space:]]*\/\*/d' "$ENVELOPPE" 2>/dev/null \
+        | grep -nE '"SET ROLE|set_config\([^)]*, *false *\)')
+  [ -n "$out" ] && {
+    echo "🔴 phase 2 : réglage de portée SESSION dans $ENVELOPPE :"; echo "$out"
+    echo "   Une identité de portée session fuit vers la requête suivante du pool."; fail=1; }
+
+  # c) le pool ne s'emprunte que d'ici. ESLint le dit déjà ; on le redit en
+  #    grep parce qu'une règle ESLint s'éteint par un fichier de configuration,
+  #    et que ce chemin-là mérite deux serrures.
+  #    `import type … from "pg"` est EXCLU, et ce n'est pas une complaisance :
+  #    un import de type est effacé à la compilation, n'embarque rien dans le
+  #    paquet et n'ouvre aucune connexion. `pgPort.ts` a besoin de
+  #    `QueryResultRow` pour typer ses lignes. Ce qu'on traque est l'accès à une
+  #    CONNEXION — donc `obtenirPool()` et les imports de VALEUR.
+  out=$(grep -rn "obtenirPool()\|from \"pg\"\|from 'pg'" --include="*.ts" --include="*.tsx" src/ 2>/dev/null \
+        | grep -v "^src/server/db/pool\.ts:" \
+        | grep -v "^src/server/db/withCaller\.ts:" \
+        | grep -vE ':[0-9]+:import type ')
+  [ -n "$out" ] && {
+    echo "🔴 phase 2 : le pool PostgreSQL est emprunté hors de withCaller :"; echo "$out"
+    echo "   pg ne réinitialise pas une connexion : elle porterait l'identité précédente."; fail=1; }
+fi
+
+# 12 — ADR-001 / phase 3 : `withAuthGate` reste confinée au chemin d'authentification.
+#
+# `withAuthGate()` ouvre une transaction SANS endosser de rôle : elle reste sous
+# `mindcare_app`, à qui 070 §5 accorde EXECUTE sur les quatre portes
+# d'authentification. C'est légitime là, et seulement là — ces portes doivent
+# tourner AVANT qu'une identité existe.
+#
+# Ailleurs, ce serait la fuite exacte que la phase 2 ferme : une requête de
+# données passée par cette enveloppe ne poserait ni rôle ni identité, donc
+# `auth.uid()` rendrait NULL et la RLS ne filtrerait sur RIEN. Aujourd'hui elle
+# échouerait en `permission denied` (mindcare_app est NOINHERIT et n'a aucun
+# privilège de table) — mais cette protection tient à un attribut de rôle, pas à
+# l'intention. Si `mindcare_app` recevait un jour le moindre GRANT de table, le
+# garde-fou tomberait sans bruit. On ferme donc aussi par le chemin d'appel.
+GARDE="src/server/db/withCaller.ts"
+if [ -f "$GARDE" ]; then
+  # Commentaires dépouillés, même motif qu'aux contrôles 9d, 10 et 11b : ces
+  # fichiers PARLENT de `withAuthGate` pour expliquer pourquoi ils ne s'en
+  # servent pas, et un contrôle qui crie sur sa propre documentation finit
+  # désarmé. Mesuré : sans ce dépouillement, `sign-in/route.ts` déclenchait le
+  # rouge pour une phrase d'en-tête.
+  out=$(find src -type f \( -iname "*.ts" -o -iname "*.tsx" \) 2>/dev/null         | grep -v "^src/server/db/withCaller\.ts$"         | grep -v "^src/server/auth/"         | while IFS= read -r f; do
+            sed -e 's|//.*$||' -e '/^[[:space:]]*\*/d' -e '/^[[:space:]]*\/\*/d' "$f" 2>/dev/null               | grep -n "withAuthGate" | sed "s|^|$f:|"
+          done)
+  [ -n "$out" ] && {
+    echo "🔴 phase 3 : withAuthGate appelée hors du chemin d'authentification :"; echo "$out"
+    echo "   Cette enveloppe n'endosse aucun rôle : la RLS ne filtrerait sur rien."; fail=1; }
+
+  # Le cookie de session ne doit jamais quitter le pot de cookies. `signIn` rend
+  # `{ userId }` et rien d'autre — c'est ce qui permet à DbPort de garder la
+  # signature qu'il avait du temps de Supabase.
+  out=$(grep -rn "jeton" --include="route.ts" src/app/api/auth/ 2>/dev/null         | grep -E "NextResponse\.json|data:"         | grep -v "^[^:]*:[0-9]*: *//"         | grep -v "session\.jeton, optionsCookie")
+  [ -n "$out" ] && {
+    echo "🔴 phase 3 : un jeton de session apparaît dans un corps de réponse :"; echo "$out"
+    echo "   Le jeton part en cookie httpOnly, jamais dans le JSON."; fail=1; }
+fi
+
+# 13 — ADR-001 / phase 4 : l'allowlist de la frontière est À JOUR et TOTALE.
+#
+# `/api/db/rpc` exécute une fonction SQL dont le nom vient du réseau. Sa borne
+# est `src/server/db/allowlist.generated.ts`, DÉRIVÉE des appels réels de
+# `src/services/**`. Une liste tenue à la main dérive dans les deux sens, et le
+# sens dangereux ne produit aucun symptôme : un nom qui reste ouvert alors que
+# plus personne ne l'appelle.
+#
+# Le générateur ÉCHOUE si un `db().rpc()` reçoit un nom non littéral — c'est ce
+# qui rend l'extraction totale plutôt que « ce qu'on a su lire ». Ce contrôle
+# relaie donc deux garanties d'un coup : la liste est à jour, ET elle est
+# complète.
+if [ -f scripts/gen-db-allowlist.mjs ]; then
+  out=$(node scripts/gen-db-allowlist.mjs --check 2>&1) || {
+    echo "🔴 phase 4 : allowlist de la frontière de données périmée ou incomplète :"
+    printf '%s
+' "$out" | sed 's/^/   /'
+    fail=1; }
+fi
 
 [ $fail -eq 0 ] && echo "✅ preflight vert"
 exit $fail

@@ -15,6 +15,15 @@ const supabaseImportMessage =
 const nodeModuleMessage =
   "createRequire/node:module interdit côté navigateur. Tout accès aux données passe exclusivement par src/services/*.";
 
+// ADR-001 / phase 2 — le pilote PostgreSQL n'est joignable que depuis
+// `src/server/db/pool.ts`. Ce n'est pas une préférence de rangement : `pg` ne
+// réinitialise PAS une connexion entre deux emprunts au pool, donc un
+// `pool.connect()` posé ailleurs rendrait une connexion portant encore les
+// `SET` — et l'identité — de la requête précédente. Tout emprunt passe par
+// `withCaller()`, qui pose `SET LOCAL` et rend la connexion propre.
+const pgImportMessage =
+  "Le pilote PostgreSQL ne s'importe que dans src/server/db/pool.ts. Passer par withCaller().";
+
 // I3 — MÉCANISME PRINCIPAL : contrainte de résolution de module, pas une
 // liste de formes syntaxiques. On tente d'abord `eslint-plugin-import-x` /
 // `no-restricted-paths` (résolution via glob de chemin) : abandonné après
@@ -132,12 +141,82 @@ function makeNoRestrictedModuleRule(isForbiddenPackageName, message) {
 
 const isSupabasePackage = (name) => name === "@supabase/supabase-js" || name === "@supabase/ssr" || name.startsWith("@supabase/");
 
+
+// ═══ ADR-001 / phase 5 — LE POINT DE SORTIE UNIQUE ═════════════════════════
+//
+// C'est la SEULE garantie que le portage des fonctions Deno affaiblit, et il
+// faut le dire franchement : avant, `src/` ne contenait aucun appel réseau
+// sortant, parce que la passerelle vivait dans `supabase/functions/`. Un grep
+// « aucun `fetch("https://` dans src/ » suffisait donc.
+//
+// Maintenant, `src/` est plein de `fetch("/api/…")` parfaitement légitimes, et
+// la passerelle y vit aussi. Le grep historique ne suffit plus : il ne voit que
+// les littéraux `https://` et manque déjà `fetch(url)` où `url` est calculée.
+//
+// On ferme donc par le CHEMIN DU FICHIER plutôt que par la forme de l'argument,
+// ce qui est la seule chose qu'un contrôle statique peut réellement décider.
+// Trois fichiers seulement peuvent appeler `fetch` :
+//   · `src/server/egress/external-call.ts` — la passerelle, seul endroit
+//     autorisé à parler au monde extérieur (règle 1) ;
+//   · `src/services/db/http.ts` — le port navigateur, qui n'appelle QUE des
+//     chemins relatifs de la même origine ;
+//   · `src/services/reveil-openwakeword.ts` — vérifie la présence d'un fichier
+//     ONNX servi localement, aucune sortie réseau.
+//
+// `scripts/preflight.sh` (contrôle 1) redouble cette règle en grep ET vérifie
+// que la passerelle EXISTE : on ne doit pas pouvoir désarmer le garde-fou en
+// supprimant son sujet.
+const FICHIERS_FETCH_AUTORISES = [
+  "src/server/egress/external-call.ts",
+  "src/services/db/http.ts",
+  "src/services/reveil-openwakeword.ts",
+];
+
+function makeNoFetchRule() {
+  return {
+    meta: { type: "problem", schema: [] },
+    create(context) {
+      // Séparateur Windows normalisé. `String.fromCharCode(92)` est
+      // l'antislash : on l'écrit ainsi pour ne dépendre d'aucune couche
+      // d'échappement (le fichier a déjà été cassé deux fois par là).
+      const chemin = context.filename.split(String.fromCharCode(92)).join("/");
+      const autorise = FICHIERS_FETCH_AUTORISES.some((f) => chemin.endsWith(f));
+      if (autorise) return {};
+      return {
+        CallExpression(node) {
+          if (node.callee.type === "Identifier" && node.callee.name === "fetch") {
+            context.report({
+              node,
+              message:
+                "Appel réseau interdit ici. Toute sortie passe par " +
+                "src/server/egress/external-call.ts (règle 1).",
+            });
+          }
+          if (
+            node.callee.type === "MemberExpression" &&
+            node.callee.property.type === "Identifier" &&
+            node.callee.property.name === "fetch"
+          ) {
+            context.report({
+              node,
+              message:
+                "Appel réseau interdit ici (globalThis.fetch / window.fetch). " +
+                "Toute sortie passe par src/server/egress/external-call.ts.",
+            });
+          }
+        },
+      };
+    },
+  };
+}
+
 const localPlugin = {
   rules: {
     "no-supabase-resolution": makeNoRestrictedModuleRule(
       isSupabasePackage,
       supabaseImportMessage,
     ),
+    "no-fetch-hors-passerelle": makeNoFetchRule(),
   },
 };
 
@@ -358,6 +437,29 @@ const config = [
           ],
         },
       ],
+      // ADR-001 / phase 2 — `pg` est traité par la variante TYPESCRIPT de la
+      // règle, et pas par celle du dessus, pour une seule raison : elle sait
+      // distinguer un import de TYPE d'un import de VALEUR (`allowTypeImports`).
+      //
+      // La distinction n'est pas cosmétique. `import type { QueryResultRow }`
+      // est effacé à la compilation : il n'embarque rien dans le paquet et
+      // n'ouvre aucune connexion. `pgPort.ts` en a besoin pour typer ses lignes,
+      // et le lui refuser pousserait soit vers un `any`, soit vers une exception
+      // de fichier — c'est-à-dire à élargir la surface réelle pour satisfaire un
+      // contrôle qui visait autre chose. Ce qu'on ferme est l'accès à une
+      // CONNEXION, donc l'import de valeur.
+      //
+      // `scripts/preflight.sh` (contrôle 11c) applique exactement la même
+      // exclusion, en grep. Les deux doivent rester d'accord.
+      "@typescript-eslint/no-restricted-imports": [
+        "error",
+        {
+          paths: [{ name: "pg", message: pgImportMessage, allowTypeImports: true }],
+          patterns: [
+            { group: ["pg/*"], message: pgImportMessage, allowTypeImports: true },
+          ],
+        },
+      ],
       // I9 — le motif de double assertion est interdit partout, y compris
       // dans les fichiers de config racine.
       // I10 EN ENTIER (couleur + dimension) à la même portée (6ᵉ passe).
@@ -394,6 +496,13 @@ const config = [
     // « I10 s'arrête à src/ » — c'est cette formulation-là qui a produit ROUGE 6.
     files: ["src/**/*.ts", "src/**/*.tsx"],
     rules: {
+      // ⚠️ UN SEUL BLOC `rules` PAR OBJET DE CONFIGURATION. La première
+      // rédaction en avait posé DEUX dans cet objet : en JavaScript, la
+      // seconde clé écrase la première, et la règle du point de sortie était
+      // donc silencieusement absente. Mesuré — une sonde
+      // `fetch("https://…")` déposée dans `src/services/` passait le lint
+      // sans un mot. Ne pas rouvrir un second bloc ici.
+      "local/no-fetch-hors-passerelle": "error",
       "no-restricted-syntax": [
         "error",
         ...typeAssertionSyntax,
@@ -510,9 +619,18 @@ const config = [
     //
     // I9/I10 restent pleinement appliquées : parler à la base ne dispense ni
     // des types, ni des tokens.
-    files: ["src/services/db/supabase.ts"],
+    // `src/server/db/pool.ts` — le second adaptateur annoncé juste au-dessus
+    // (ADR-001). Seul fichier autorisé à importer `pg`, pour la raison écrite
+    // dans `pgImportMessage` : une connexion empruntée hors de `withCaller()`
+    // porte encore l'identité de la requête précédente. La liste reste
+    // NOMINATIVE — c'est ce qui oblige à relire un diff quand elle s'allonge.
+    // `src/services/db/supabase.ts` a disparu en phase 6 : la liste ne nomme
+    // plus que le pool PostgreSQL. Elle reste NOMINATIVE — c'est ce qui oblige
+    // à relire un diff quand elle s'allonge.
+    files: ["src/server/db/pool.ts"],
     rules: {
       "no-restricted-imports": "off",
+      "@typescript-eslint/no-restricted-imports": "off",
       "local/no-supabase-resolution": "off",
     },
   },

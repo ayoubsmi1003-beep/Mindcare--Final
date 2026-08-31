@@ -33,7 +33,20 @@ export default defineConfig({
   },
   test: {
     environment: "node",
-    include: ["tests/unit/**/*.test.ts"],
+    // `tests/integration/**` — ADR-001, phase 2. Ces tests-là EXIGENT une vraie
+    // base PostgreSQL et ne simulent rien : le défaut qu'ils cherchent (une
+    // identité qui survit à sa transaction et fuit vers la requête suivante)
+    // vit dans le comportement de PostgreSQL et du pilote, pas dans notre code.
+    // Un simulacre prouverait seulement que le simulacre est cohérent.
+    //
+    // Sans `MINDCARE_TEST_DATABASE_URL`, ils s'IGNORENT en le disant — ils ne
+    // passent pas au vert en silence. C'est la même exigence que les
+    // `checkpoint-*.sql` : ce qu'on ne peut pas prouver n'est pas vert.
+    include: ["tests/unit/**/*.test.ts", "tests/integration/**/*.test.ts"],
+    // L'ouverture d'une connexion et l'entrelacement volontaire dépassent le
+    // défaut de 5 s sur un poste chargé.
+    testTimeout: 30_000,
+    hookTimeout: 30_000,
     // Aucune donnée patient ne doit jamais atteindre un test : les fixtures
     // sont écrites à la main dans les fichiers de test, jamais lues en base.
     watch: false,

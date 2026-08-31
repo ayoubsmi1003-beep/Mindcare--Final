@@ -1,6 +1,13 @@
 {
-  // Les tests unitaires, et EUX SEULS, type-vérifient le code Deno de
-  // `supabase/functions/`. Le tsconfig principal l'exclut délibérément (voir
+  // ⚠️ REPOINTÉ EN PHASE 5. Ces tests visaient `supabase/functions/_shared/`,
+  // c'est-à-dire les copies DENO. Depuis le portage, l'application utilise
+  // `src/server/jarvis/` : laisser les tests sur les anciennes copies aurait
+  // produit le pire des résultats — des tests verts qui ne mesurent plus le
+  // code livré. Les deux fichiers ont d'ailleurs divergé (gardes de type
+  // ajoutés pour satisfaire le lint, absent de `supabase/functions/`).
+  //
+  // Historique conservé pour mémoire : les tests unitaires type-vérifiaient le
+  // code Deno de `supabase/functions/`. Le tsconfig principal l'exclut délibérément (voir
   // son commentaire : `Deno` et les spécificateurs `npm:` n'existent pas sous
   // `moduleResolution: "bundler"`), et cette décision n'est pas remise en
   // cause ici. Mais un module PUR importé par un test — `resume-cas.ts`,
@@ -15,6 +22,6 @@
     "noEmit": true,
     "types": ["node"]
   },
-  "include": ["tests/**/*.ts", "supabase/functions/_shared/resume-cas.ts", "supabase/functions/_shared/contrat-workspace.ts", "supabase/functions/_shared/resume-chronologie.ts"],
+  "include": ["tests/**/*.ts", "src/server/jarvis/resume-cas.ts", "src/server/jarvis/contrat-workspace.ts", "src/server/jarvis/resume-chronologie.ts"],
   "exclude": ["node_modules"]
 }

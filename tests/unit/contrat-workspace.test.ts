@@ -22,12 +22,12 @@
  */
 import { describe, expect, it } from "vitest";
 
-import { adapterEspace, analyserEspacePorte } from "../../supabase/functions/_shared/contrat-workspace.ts";
+import { adapterEspace, analyserEspacePorte } from "@/server/jarvis/contrat-workspace";
 import {
   construireCandidats,
   DOMAINES_SOURCE,
   validerContenuResume,
-} from "../../supabase/functions/_shared/resume-cas.ts";
+} from "@/server/jarvis/resume-cas";
 
 /** La forme RÉELLE de `clinique`/`traitements`/`agenda`, en snake_case. */
 const CHARGE_PORTE = {
