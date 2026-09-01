@@ -185,6 +185,34 @@ export function faireePgPort(q: Querier, contexte = "pg"): PgDataPort {
       try {
         const { texte, valeurs } = construireRpc(nom, args);
         const lignes = await q.query<QueryResultRow>(texte, valeurs);
+        // PostgREST « déplie » les fonctions scalaires (RETURNS jsonb / boolean …)
+        // : `data` est la valeur elle-même, pas une ligne. `pg` rend toujours
+        // des lignes : `SELECT * FROM app.fn()` sur un scalaire rend UNE ligne
+        // d'UNE colonne nommée comme la fonction. `asRows()` du temps de
+        // supabase-js reconditionnait déjà ce cas en `[valeur]` (ou `[]` si
+        // null). On reproduit la règle ici — voir aussi `clientSql.deplierScalaire`
+        // qui fait la même chose côté serveur Jarvis, mais en rendant la valeur
+        // nue (l'appelant y lit `data === true`).
+        if (lignes.length === 1) {
+          const premiere = lignes[0] as Record<string, unknown>;
+          const cles = Object.keys(premiere);
+          if (cles.length === 1 && cles[0] === nom) {
+            const valeur = premiere[nom];
+            if (valeur === null || valeur === undefined) {
+              return ok([] as readonly T[]);
+            }
+            if (Array.isArray(valeur)) {
+              return ok(valeur as readonly T[]);
+            }
+            // `valeur` narrowe ici à `{}` (unknown moins null/undefined/tableau),
+            // qui ne recouvre pas suffisamment `T` pour un cast direct — passer
+            // par une variable explicitement `unknown` type le flux au lieu de
+            // forcer un double cast `as X as Y`, que `no-restricted-syntax`
+            // interdit précisément pour cette raison.
+            const enveloppe: unknown = [valeur];
+            return ok(enveloppe as readonly T[]);
+          }
+        }
         return ok(lignes as readonly T[]);
       } catch (brut) {
         return err(toAppError(brut, `${contexte}.rpc:${nom}`));

@@ -1,0 +1,148 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# Empaquetage Windows — §I du plan Electron (étape 9).
+#
+# CE QUE CE FICHIER DÉCIDE, ET POURQUOI CHAQUE LIGNE EXISTE.
+#
+# L'artefact produit ici est la SEULE chose que la praticienne installe. Tout
+# ce qui y entre entre chez elle, définitivement : un `.env` de développeur,
+# une fixture de test, un tableur de médicaments, un script de checkpoint qui
+# parle à une base qui n'est pas la sienne. La règle 8 de CLAUDE.md (« aucune
+# donnée fictive dans une fonctionnalité livrée ») se joue en grande partie
+# dans ce fichier.
+#
+# D'où le choix structurant : `files` est une LISTE BLANCHE, pas une liste
+# d'exclusions. Une liste d'exclusions oublie en silence le fichier ajouté
+# demain ; une liste blanche refuse par défaut et oblige à nommer. Ce que
+# `files` ne nomme pas n'existe pas dans le paquet.
+# ═══════════════════════════════════════════════════════════════════════════
+
+appId: os.mindcare.cabinet
+# `productName` est ce que voient le menu Démarrer, la barre des tâches, le
+# panneau « Applications et fonctionnalités » et le nom du dossier
+# d'installation. `package.json#name` (`mindcare-os`) reste l'identifiant
+# technique ; les deux ne se confondent pas.
+productName: MindCare OS
+# La VERSION vient de `package.json` — source unique. Elle nomme
+# l'installateur, s'affiche dans « Applications et fonctionnalités », et est
+# ce que `app.getVersion()` rend au canal preload `mindcare:version`.
+copyright: Cabinet de psychiatrie — MindCare OS
+
+directories:
+  # PAS `build/` : ce nom est ignoré par git (cf. `.gitignore`), et l'icône de
+  # l'application est un livrable VERSIONNÉ, pas un artefact reconstruit sur
+  # la machine de build.
+  buildResources: build-ressources
+  output: dist
+
+# ── Contenu de app.asar — liste blanche ───────────────────────────────────
+#
+# Le paquet applicatif ne contient QUE le processus principal et le preload
+# compilés. Pas de `node_modules` (le processus principal n'importe
+# qu'`electron` et des modules natifs de Node), pas de `src/`, pas de
+# `scripts/`, pas de `docs/`, pas de `tests/`, pas de `.env`. Le backend
+# Next.js, lui, ne vit pas dans l'asar : il doit être exécutable par un
+# processus fils, et un fichier dans une archive asar ne l'est pas — il est
+# livré en ressource (voir `extraResources`).
+files:
+  - "!**/*"
+  - "dist-electron/main/**/*.js"
+  # `.cjs`, pas `.js` : le preload compile en CommonJS (voir la note sur
+  # `.cts` dans electron/preload/index.cts) — sans cette entrée, l'artefact
+  # embarquait un preload absent et Electron échouait avant même d'afficher
+  # une fenêtre.
+  - "dist-electron/preload/**/*.cjs"
+  - "package.json"
+
+asar: true
+
+# ── Ressources hors archive ───────────────────────────────────────────────
+#
+# Déposées telles quelles dans `resources/` à côté de `app.asar`, parce
+# qu'elles doivent être LUES OU EXÉCUTÉES par autre chose qu'Electron :
+# `node server.js` pour le backend, `psql -f` pour le SQL, `initdb.exe` /
+# `pg_ctl.exe` pour le cluster.
+extraResources:
+  # `resources/serveur` est assemblé par `scripts/preparer-paquet.mjs` : la
+  # sortie autonome de Next, `public/`, `supabase/{bootstrap,migrations}` et
+  # les trois seuls scripts livrés. Une racine unique, parce que le serveur,
+  # `verifier-base.mjs` et `provisionnement.ts` cherchent tous leurs fichiers
+  # relativement à leur dossier parent.
+  - from: resources/serveur
+    to: serveur
+  # Binaires PostgreSQL 16 empaquetés (§C). Peuplé avant l'empaquetage, puis
+  # ÉLAGUÉ par `scripts/elaguer-pgsql.mjs` (`pnpm pgsql:elaguer`, ou
+  # automatiquement dans `pnpm build:desktop`) au strict nécessaire
+  # d'exécution — voir `resources/pgsql/README.md`. Le dossier est présent
+  # dans le dépôt (avec son README) pour que cette entrée ne casse jamais la
+  # configuration ; `scripts/verifier-paquet.mjs` refuse un paquet où seul le
+  # README subsiste.
+  - from: resources/pgsql
+    to: pgsql
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  # ⚠️ L'ICÔNE DE L'APPLICATION. Dérivée de `docs/electron.icon.svg`, source
+  # unique et versionnée, par `pnpm icone:generer`. Sept tailles (16 → 256)
+  # dans un seul `.ico` : Windows choisit selon le contexte, et une icône
+  # mono-taille se voit rééchantillonnée dans la barre des tâches.
+  icon: build-ressources/icon.ico
+  artifactName: MindCare Setup ${version}.exe
+  # Aucune signature de code : l'application est installée par le cabinet
+  # lui-même, depuis un artefact qu'il reçoit en main propre. Rendre ce choix
+  # EXPLICITE évite qu'un jour une signature échoue silencieusement.
+  forceCodeSigning: false
+
+# Aucune dépendance native dans l'asar (le processus principal n'importe
+# qu'`electron` et `node:*`) : rien à recompiler, et une étape de moins qui
+# peut échouer sur la machine de build.
+npmRebuild: false
+
+# ── Aucune publication, aucun descripteur de mise a jour ──────────────────
+#
+# ⚠️ MESURE, PAS SUPPOSE. Sans cette ligne, electron-builder DEDUIT une cible
+# de publication du dépôt git (`git remote`) et dépose dans l'installation un
+# `resources/app-update.yml` nommant un dépôt GitHub public. Le poste du
+# cabinet se retrouverait porteur d'un descripteur de mise à jour automatique
+# vers un dépôt que personne n'a décidé de lui donner — pour un mécanisme qui
+# n'existe pas : §E du plan pose que la mise à jour, c'est lancer le Setup
+# suivant, qui remplace le dossier d'application et laisse
+# `%ProgramData%\MindCare` intact.
+publish: null
+
+nsis:
+  # ── Installation PAR MACHINE, et pourquoi elle est obligatoire ───────────
+  #
+  # L'application enregistre un SERVICE Windows (`mindcare-postgres`, §C du
+  # plan) et écrit `%ProgramData%\MindCare`. Les deux exigent des droits
+  # d'administrateur. Une installation par utilisateur donnerait une
+  # application qui s'installe sans bruit puis échoue au premier démarrage,
+  # là où l'élévation demande UNE fois l'autorisation, au bon moment.
+  perMachine: true
+  allowElevation: true
+  # Assistant complet plutôt qu'installation en un clic : la praticienne doit
+  # pouvoir lire ce qui va se passer et choisir le disque — sur un poste de
+  # cabinet, le disque système n'est pas toujours celui qui a la place.
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: MindCare OS
+  installerIcon: build-ressources/icon.ico
+  uninstallerIcon: build-ressources/icon.ico
+  installerHeaderIcon: build-ressources/icon.ico
+  uninstallDisplayName: MindCare OS ${version}
+  # ⚠️ LE DOSSIER DE DONNÉES DU CABINET NE SE DÉSINSTALLE PAS.
+  # `deleteAppDataOnUninstall: false` couvre `%APPDATA%\MindCare` (journaux) ;
+  # `%ProgramData%\MindCare` (le cluster PostgreSQL, le fichier
+  # d'environnement, les sauvegardes) n'est de toute façon jamais écrit par
+  # l'installateur, donc jamais désinstallé. `installer.nsh` rend cette
+  # garantie EXPLICITE et VÉRIFIABLE plutôt qu'implicite.
+  deleteAppDataOnUninstall: false
+  include: build-ressources/installer.nsh
+  # Langue de l'assistant : le poste du cabinet est en français.
+  installerLanguages:
+    - fr_FR
+  language: "1036"

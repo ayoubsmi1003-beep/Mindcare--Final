@@ -61,3 +61,18 @@ scripts/.mesures/
 # scripts/sync-wakeword-runtime.mjs (postinstall). Les MODELES .onnx, eux,
 # sont suivis : ce sont des choix de produit, pas une dependance.
 public/wakeword/ort/
+
+# Sortie compilee du processus principal/preload Electron (pnpm build:electron)
+# — regeneree depuis electron/*.ts, jamais un livrable source.
+dist-electron/
+
+# Empaquetage bureau (Electron, etape 9). Deux artefacts RECONSTRUITS, jamais
+# des sources :
+#   · `resources/serveur/` est assemble par `scripts/preparer-paquet.mjs` a
+#     partir de la sortie autonome de Next — une COPIE de fichiers deja
+#     versionnes ailleurs ;
+#   · `resources/pgsql/` recoit ~200 Mio de binaires PostgreSQL telecharges
+#     chez l'editeur. Son README, lui, est suivi : c'est la procedure.
+resources/serveur/
+resources/pgsql/*
+!resources/pgsql/README.md

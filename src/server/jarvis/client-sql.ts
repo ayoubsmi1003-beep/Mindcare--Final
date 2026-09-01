@@ -98,13 +98,17 @@ export interface ClientSql {
  * colonne, nommée COMME LA FONCTION. Une fonction TABLE qui rendrait par
  * hasard une seule colonne ne porterait pas ce nom-là.
  */
-function deplierScalaire(nom: string, lignes: readonly Record<string, unknown>[]): unknown {
+function deplierScalaire(nom: string, lignes: readonly unknown[]): unknown {
   if (lignes.length !== 1) return lignes;
   const ligne = lignes[0];
   if (ligne === undefined) return lignes;
+  // `faireePgPort` déplie déjà les scalaires pour la frontière HTTP (DbPort) :
+  // un booléen arrive ici comme `[true]` et non comme `[{fn: true}]`. On le
+  // rend scalaire pour les appelants qui écrivent `data === true`.
+  if (ligne === null || typeof ligne !== "object") return ligne;
   const cles = Object.keys(ligne);
   if (cles.length !== 1 || cles[0] !== nom) return lignes;
-  return ligne[nom];
+  return (ligne as Record<string, unknown>)[nom];
 }
 
 /**

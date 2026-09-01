@@ -31,6 +31,8 @@ import type { Result } from "../result";
 import { err, ok } from "../result";
 import type {
   DbPort,
+  EtatInstallation,
+  ProvisionnementOwner,
   RpcArgs,
   SelectSpec,
   SessionInfo,
@@ -187,6 +189,25 @@ export const httpDbPort: DbPort = {
     const r = await poster<null>("/api/auth/sign-out", {}, "http.signOut");
     return r.ok ? ok(undefined) : err(r.error);
   },
+
+  getInstallationStatus: async () => {
+    // Mêmes raisons que `getSession` : jamais mis en cache, l'état bascule
+    // une fois pour toutes.
+    let reponse: Response;
+    try {
+      reponse = await fetch("/api/auth/etat-installation", {
+        method: "GET",
+        credentials: "same-origin",
+        cache: "no-store",
+      });
+    } catch (brut) {
+      return err(toAppError(brut, "http.getInstallationStatus"));
+    }
+    return lireEnveloppe<EtatInstallation>(reponse, "http.getInstallationStatus");
+  },
+
+  provisionOwnerAccount: (entree: ProvisionnementOwner) =>
+    poster<{ userId: string }>("/api/auth/provisionner", entree, "http.provisionOwnerAccount"),
 
   getSession: async () => {
     // `GET`, et jamais mis en cache : la route fait glisser `last_seen_at`.

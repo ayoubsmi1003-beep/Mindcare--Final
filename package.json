@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "description": "Logiciel de gestion du cabinet de psychiatrie — dossiers, agenda, consultations, documents, comptabilite.",
+  "author": "Cabinet MindCare",
+  "main": "dist-electron/main/index.js",
   "scripts": {
     "dev": "node scripts/garde-origine.mjs && node scripts/verifier-base.mjs && next dev",
     "build": "next build",
@@ -12,7 +15,13 @@
     "postinstall": "node scripts/sync-wakeword-runtime.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
-    "import:medicaments": "node scripts/import-medicaments.mjs --file docs/Médicaments.xlsx"
+    "import:medicaments": "node scripts/import-medicaments.mjs --file docs/Médicaments.xlsx",
+    "build:electron": "tsc -p electron/tsconfig.json",
+    "dev:electron": "pnpm build:electron && node scripts/dev-electron.mjs",
+    "icone:generer": "node scripts/generer-icone.mjs",
+    "build:desktop": "node scripts/preparer-paquet.mjs && node scripts/elaguer-pgsql.mjs && pnpm build:electron && electron-builder --win && node scripts/verifier-paquet.mjs",
+    "pgsql:elaguer": "node scripts/elaguer-pgsql.mjs",
+    "verifier:paquet": "node scripts/verifier-paquet.mjs"
   },
   "dependencies": {
     "next": "^15.1.0",
@@ -33,6 +42,8 @@
     "@typescript-eslint/parser": "^8.18.0",
     "adm-zip": "^0.6.0",
     "autoprefixer": "^10.4.20",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
     "eslint": "^9.17.0",
     "eslint-config-next": "^15.1.0",
     "eslint-plugin-react-hooks": "^5.1.0",

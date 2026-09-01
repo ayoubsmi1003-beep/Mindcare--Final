@@ -564,5 +564,25 @@ if [ -f scripts/gen-db-allowlist.mjs ]; then
     fail=1; }
 fi
 
+# 14 — Plan Electron §D/§I : l'artefact empaqueté ne contient rien d'interdit.
+#
+# CE CONTRÔLE NE CONSTRUIT RIEN. Empaqueter prend plusieurs minutes et exige
+# les binaires PostgreSQL : l'imposer à chaque commit rendrait le preflight
+# inutilisable, donc contourné. Il vérifie le DERNIER artefact produit, quand
+# il y en a un — c'est-à-dire exactement au moment où la question se pose :
+# juste avant de livrer un installateur.
+#
+# Ce qu'il refuse — `.env`, `tests/`, `checkpoint-*`, `docs/*.xlsx`, cartes de
+# source, URL PostgreSQL avec identifiants — vit dans
+# `scripts/verifier-paquet.mjs`, à côté de la liste blanche qu'il éprouve,
+# plutôt que dupliqué ici en motifs qui divergeraient.
+if [ -d dist/win-unpacked ] && [ -f scripts/verifier-paquet.mjs ]; then
+  out=$(node scripts/verifier-paquet.mjs 2>&1) || {
+    echo "🔴 plan Electron §I : l'artefact empaqueté viole la liste blanche :"
+    printf '%s
+' "$out" | sed 's/^/   /'
+    fail=1; }
+fi
+
 [ $fail -eq 0 ] && echo "✅ preflight vert"
 exit $fail

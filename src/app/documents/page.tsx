@@ -276,9 +276,20 @@ export default function DocumentsPage(): React.JSX.Element {
     // Page A5 propre : le HTML figé est enveloppé sans autre chrome.
     // Le style injecté force `margin:0` à la fois sur @page ET sur html/body,
     // garantissant zéro texte automatique même si la feuille globale tarde.
+    //
+    // ⚠️ `.doc-racine` EST OBLIGATOIRE ICI, ET SON ABSENCE PRODUISAIT UNE
+    // IMPRESSION VIERGE. `headStyles` copie tokens.css EN ENTIER, y compris
+    // sa règle `@media print { body > *:not(.doc-racine) { display:none
+    // !important } }` — écrite pour l'ANCIEN mécanisme d'impression
+    // (`PortailImpression`, qui imprimait la fenêtre principale). Cette
+    // règle s'applique aussi dans l'iframe, puisque la feuille de styles
+    // copiée ne fait pas de distinction : sans ce wrapper, le document
+    // injecté est un enfant direct de `<body>` SANS la classe `doc-racine`,
+    // donc `display:none !important` — la feuille imprimée sort blanche,
+    // alors même que le contenu est bien présent dans le DOM de l'iframe.
     idoc.open();
     idoc.write(
-      `<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><title></title>${headStyles}<style>@page{size:A5 portrait;margin:0 !important}html,body{margin:0 !important;padding:0 !important;background:white !important} .doc-feuille{box-shadow:none !important;border-radius:0 !important;margin:0 auto !important}</style></head><body>${html}</body></html>`,
+      `<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><title></title>${headStyles}<style>@page{size:A5 portrait;margin:0 !important}html,body{margin:0 !important;padding:0 !important;background:white !important} .doc-feuille{box-shadow:none !important;border-radius:0 !important;margin:0 auto !important}</style></head><body><div class="doc-racine">${html}</div></body></html>`,
     );
     idoc.close();
     // Attendre le chargement des styles puis imprimer depuis l'iframe uniquement.
@@ -456,7 +467,14 @@ export default function DocumentsPage(): React.JSX.Element {
         {dossier === null ? (
           <div className="grid min-h-0 flex-1 grid-cols-1 gap-4 overflow-hidden lg:grid-cols-espace-liste">
             {/* Global recent */}
-            <div className="flex min-h-0 flex-col gap-3 overflow-y-auto">
+            {/* V8 — LE VOLET EST UNE SURFACE, PLUS UNE COLONNE NUE.
+                Les trois zones de cet écran (liste, choix du dossier, aperçu)
+                flottaient directement sur le sol : sans bord ni fond, rien ne
+                disait où finissait l'une et où commençait l'autre, et l'aperçu
+                vide se lisait comme une moitié d'écran cassée. Une carte par
+                volet, et l'aperçu redevient un emplacement qui attend un
+                document plutôt qu'un trou. */}
+            <div className="flex min-h-0 flex-col gap-4 overflow-y-auto rounded-2xl border border-rule bg-card p-5 shadow-carte">
               <h2 className="font-ui text-heading font-semibold text-ink-900">Documents récents</h2>
               <PanneauEtat etat={listeGlobal} onReessayer={() => void chargerGlobal()} lignesSquelette={3}>
                 {(docs) => docs.length === 0 ? (
@@ -473,7 +491,14 @@ export default function DocumentsPage(): React.JSX.Element {
               </div>
             </div>
             {/* Viewer */}
-            <div className="flex min-h-0 flex-col gap-3 overflow-y-auto">
+            {/* V8 — LE VOLET EST UNE SURFACE, PLUS UNE COLONNE NUE.
+                Les trois zones de cet écran (liste, choix du dossier, aperçu)
+                flottaient directement sur le sol : sans bord ni fond, rien ne
+                disait où finissait l'une et où commençait l'autre, et l'aperçu
+                vide se lisait comme une moitié d'écran cassée. Une carte par
+                volet, et l'aperçu redevient un emplacement qui attend un
+                document plutôt qu'un trou. */}
+            <div className="flex min-h-0 flex-col gap-4 overflow-y-auto rounded-2xl border border-rule bg-card p-5 shadow-carte">
               {succesCreation ? (
                 <div className="rounded-lg border border-positive bg-positive-bg p-4">
                   <p className="font-ui text-body font-medium text-positive">Document créé</p>
@@ -486,7 +511,7 @@ export default function DocumentsPage(): React.JSX.Element {
               ) : null}
               {erreurOuverture ? <BlocErreur message={erreurOuverture} /> : null}
               {ouvert === null ? (
-                <EtatVide message={fr.documents.vide.aucunDocumentOuvert} icone="documents" />
+                <EtatVide message={fr.documents.vide.aucunDocumentOuvert} scene="documentVide" />
               ) : (
                 <>
                   <ViewerHeader
@@ -536,7 +561,14 @@ export default function DocumentsPage(): React.JSX.Element {
         ) : (
           <div className="grid min-h-0 flex-1 grid-cols-1 gap-4 overflow-hidden lg:grid-cols-espace-liste">
             {/* Colonne gauche: Liste patient + émission */}
-            <div className="flex min-h-0 flex-col gap-3 overflow-y-auto">
+            {/* V8 — LE VOLET EST UNE SURFACE, PLUS UNE COLONNE NUE.
+                Les trois zones de cet écran (liste, choix du dossier, aperçu)
+                flottaient directement sur le sol : sans bord ni fond, rien ne
+                disait où finissait l'une et où commençait l'autre, et l'aperçu
+                vide se lisait comme une moitié d'écran cassée. Une carte par
+                volet, et l'aperçu redevient un emplacement qui attend un
+                document plutôt qu'un trou. */}
+            <div className="flex min-h-0 flex-col gap-4 overflow-y-auto rounded-2xl border border-rule bg-card p-5 shadow-carte">
               <PanneauEtat etat={liste} onReessayer={() => void chargerListe(dossier.id)} lignesSquelette={3}>
                 {(docs) => {
                   const filt = listeFiltree ?? docs;
@@ -566,14 +598,21 @@ export default function DocumentsPage(): React.JSX.Element {
             </div>
 
             {/* Colonne droite: Viewer */}
-            <div className="flex min-h-0 flex-col gap-3 overflow-y-auto">
+            {/* V8 — LE VOLET EST UNE SURFACE, PLUS UNE COLONNE NUE.
+                Les trois zones de cet écran (liste, choix du dossier, aperçu)
+                flottaient directement sur le sol : sans bord ni fond, rien ne
+                disait où finissait l'une et où commençait l'autre, et l'aperçu
+                vide se lisait comme une moitié d'écran cassée. Une carte par
+                volet, et l'aperçu redevient un emplacement qui attend un
+                document plutôt qu'un trou. */}
+            <div className="flex min-h-0 flex-col gap-4 overflow-y-auto rounded-2xl border border-rule bg-card p-5 shadow-carte">
               {emission && !dossierIncomplet ? (
                 <>
                   <p className="font-ui text-label text-ink-500">{fr.documents.emission.apercuAvertissement}</p>
                   <FeuilleApercu type={type} patient={dossier} saisie={saisie} />
                 </>
               ) : ouvert === null ? (
-                <EtatVide message={fr.documents.vide.aucunDocumentOuvert} icone="documents" />
+                <EtatVide message={fr.documents.vide.aucunDocumentOuvert} scene="documentVide" />
               ) : (
                 <>
                   <ViewerHeader doc={ouvert} zoom={zoom} onZoom={setZoom} imprimable={imprimable} onImprimer={() => void imprimer()} onVoid={() => setShowVoid(true)} markers={markers} />

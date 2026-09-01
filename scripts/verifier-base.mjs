@@ -66,11 +66,23 @@ const RACINE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
  * pas dotenv, on lit ce que `.env.example` décrit. Et JAMAIS de journalisation
  * des valeurs : ce fichier porte le mot de passe de la base.
  */
+/**
+ * ⚠️ `MINDCARE_ENV_FILE`, quand elle est posée, REMPLACE la liste normale
+ * `.env.local` / `.env` — elle ne s'y AJOUTE PAS. C'est le mécanisme par
+ * lequel la coquille Electron packagée (§F du plan) pointe ce contrôle vers
+ * `%ProgramData%\MindCare\mindcare.env` sans jamais retomber, même en cas de
+ * fichier absent, sur le `.env` d'un dépôt de développement qui pourrait se
+ * trouver sur la même machine. `pnpm dev`/`pnpm start` ne posent jamais cette
+ * variable : leur comportement reste exactement celui d'avant.
+ */
 function chargerEnv() {
-  for (const nom of [".env.local", ".env"]) {
+  const fichierExplicite = process.env["MINDCARE_ENV_FILE"];
+  const candidats = fichierExplicite !== undefined ? [fichierExplicite] : [".env.local", ".env"];
+  for (const nom of candidats) {
+    const chemin = fichierExplicite !== undefined ? nom : path.join(RACINE, nom);
     let texte;
     try {
-      texte = readFileSync(path.join(RACINE, nom), "utf8");
+      texte = readFileSync(chemin, "utf8");
     } catch {
       continue; // absent : normal
     }

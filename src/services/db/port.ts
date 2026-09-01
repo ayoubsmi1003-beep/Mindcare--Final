@@ -73,6 +73,25 @@ export interface SessionInfo {
   readonly userId: string;
 }
 
+/** État du premier lancement — voir `085_etat_provisionnement.sql`. */
+export interface EtatInstallation {
+  readonly environment: string | null;
+  readonly provisionne: boolean;
+}
+
+/** Les neuf champs du premier lancement — voir `084_provision_owner_account.sql`. */
+export interface ProvisionnementOwner {
+  readonly cabinetNom: string;
+  readonly cabinetAdresse: string;
+  readonly cabinetTelephone: string;
+  readonly praticienNomComplet: string;
+  readonly praticienTitre: string;
+  readonly praticienNumeroOrdre: string;
+  readonly praticienTelephone: string;
+  readonly email: string;
+  readonly motDePasse: string;
+}
+
 export interface DbPort {
   /** Lecture d'une relation exposée (table ou vue). */
   readonly select: <T>(spec: SelectSpec) => Promise<Result<readonly T[]>>;
@@ -96,6 +115,18 @@ export interface DbPort {
   readonly signIn: (credentials: SignInCredentials) => Promise<Result<SessionInfo>>;
   readonly signOut: () => Promise<Result<void>>;
   readonly getSession: () => Promise<Result<SessionInfo | null>>;
+
+  /**
+   * Le premier lancement (§D, phase Bureau Windows) — même famille que
+   * `signIn`/`signOut`/`getSession` : deux opérations pauvres, pré-session,
+   * qui vivent dans le port pour la même raison que l'authentification (voir
+   * plus haut). `getInstallationStatus` dit s'il faut montrer l'écran de
+   * configuration ; `provisionOwnerAccount` ne s'exécute qu'une fois.
+   */
+  readonly getInstallationStatus: () => Promise<Result<EtatInstallation>>;
+  readonly provisionOwnerAccount: (
+    entree: ProvisionnementOwner,
+  ) => Promise<Result<{ readonly userId: string }>>;
 
   /**
    * Appel d'une Edge Function — S6. Seule voie vers la passerelle Jarvis

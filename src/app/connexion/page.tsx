@@ -22,18 +22,43 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { FormulaireConnexion } from "@/components/FormulaireConnexion";
 import { MarqueMindCare, MotifFeuilles } from "@/components/ui/Icones";
 import { fr } from "@/i18n/fr";
 import { signIn } from "@/services/auth";
+import { getInstallationStatus } from "@/services/onboarding";
 
 export default function PageConnexion(): React.JSX.Element {
   const router = useRouter();
   const [enCours, setEnCours] = useState(false);
   const [messageErreur, setMessageErreur] = useState<string | undefined>(undefined);
   const [horsLigne, setHorsLigne] = useState(false);
+
+  /**
+   * Premier lancement (§D, phase Bureau Windows) : une installation
+   * `self-hosted` sans compte réel n'a rien à faire sur cet écran — la
+   * praticienne n'a encore aucun identifiant à saisir. `cloud-dev` (le
+   * développement) n'est JAMAIS concerné : y rediriger sans cesse casserait
+   * `pnpm dev`, où aucun compte n'est provisionné par ce chemin.
+   *
+   * Échec de la sonde (hors ligne, base injoignable) → on reste sur cet
+   * écran : `signIn` produira alors son propre message, plus informatif que
+   * de bloquer avant même d'avoir tenté quoi que ce soit.
+   */
+  useEffect(() => {
+    let annule = false;
+    void getInstallationStatus().then((result) => {
+      if (annule || !result.ok) return;
+      if (result.data.environment === "self-hosted" && !result.data.provisionne) {
+        router.replace("/premiere-configuration");
+      }
+    });
+    return () => {
+      annule = true;
+    };
+  }, [router]);
 
   function handleSubmit(email: string, motDePasse: string): void {
     setEnCours(true);

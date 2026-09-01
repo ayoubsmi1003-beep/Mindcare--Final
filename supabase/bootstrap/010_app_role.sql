@@ -136,6 +136,30 @@ BEGIN
       text, text, text, text, text, uuid,
       integer, integer, integer, numeric, text, integer) TO mindcare_app;
   END IF;
+
+  -- ── La porte du premier lancement (084) — MÊME PIÈGE, MÊME REMÈDE, une
+  -- QUATRIÈME fois. `084_provision_owner_account.sql` accorde `EXECUTE` à
+  -- `mindcare_app` dans le même bloc conditionnel que 070/071 : sur une base
+  -- neuve le rôle n'existe pas encore à cet instant, le bloc est sauté, et
+  -- sans la contrepartie ci-dessous le premier lancement Electron ne pourrait
+  -- jamais créer le compte réel de la praticienne — la seule porte d'entrée
+  -- vers une base par ailleurs entièrement vide (§D du plan Bureau Windows).
+  IF EXISTS (SELECT 1 FROM pg_proc p JOIN pg_namespace n ON n.oid = p.pronamespace
+              WHERE n.nspname = 'app' AND p.proname = 'provision_owner_account') THEN
+    GRANT USAGE ON SCHEMA app TO mindcare_app;
+    GRANT EXECUTE ON FUNCTION app.provision_owner_account(
+      text, text, text, text, text, text, text, text, text) TO mindcare_app;
+  END IF;
+
+  -- ── La porte de statut de premier lancement (085) — CINQUIÈME occurrence ──
+  -- `085_etat_provisionnement.sql` accorde délibérément AUCUN grant à
+  -- `mindcare_app` (elle s'applique avant que ce rôle existe, cf. son propre
+  -- en-tête) : c'est ENTIÈREMENT ce bloc-ci qui ouvre l'accès. Sans lui,
+  -- l'écran de premier lancement ne saurait jamais s'il doit s'afficher.
+  IF EXISTS (SELECT 1 FROM pg_proc p JOIN pg_namespace n ON n.oid = p.pronamespace
+              WHERE n.nspname = 'app' AND p.proname = 'etat_provisionnement') THEN
+    GRANT EXECUTE ON FUNCTION app.etat_provisionnement() TO mindcare_app;
+  END IF;
 END $$;
 
 COMMENT ON ROLE mindcare_app IS

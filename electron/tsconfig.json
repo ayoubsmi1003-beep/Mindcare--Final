@@ -1,0 +1,36 @@
+{
+  // Compilation SÉPARÉE de celle de Next (racine `tsconfig.json`) : le
+  // processus principal Electron et le preload tournent sous Node pur, pas
+  // dans le bundler de Next, et doivent être ÉMIS en JavaScript exécutable —
+  // contrairement au reste du dépôt où `noEmit: true` (le bundler s'en charge).
+  //
+  // `pnpm typecheck` (racine) couvre déjà ces fichiers pour la VÉRIFICATION de
+  // types, puisque `tsconfig.json` racine inclut `**/*.ts` sans exclure
+  // `electron/`. Ce fichier-ci ne sert qu'à la PRODUCTION du JavaScript que
+  // `pnpm build:electron` place dans `dist-electron/`.
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "outDir": "../dist-electron",
+    "rootDir": ".",
+    "noEmit": false
+  },
+  // `.cts` : le preload (electron/preload/index.cts) — TypeScript émet
+  // toujours ce fichier en CommonJS, quel que soit "module" ci-dessus,
+  // parce qu'Electron charge tout preload via `require`. Sans `.cts` ici,
+  // `tsc` l'ignorait silencieusement (aucune erreur, aucun fichier émis) —
+  // trouvé par `--listEmittedFiles` : la liste s'arrêtait à `main/`.
+  "include": ["**/*.ts", "**/*.cts"]
+}

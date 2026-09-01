@@ -53,4 +53,6 @@ export type {
   RpcArgs,
   SessionInfo,
   SignInCredentials,
+  EtatInstallation,
+  ProvisionnementOwner,
 } from "./port";

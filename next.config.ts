@@ -55,6 +55,26 @@ const nextConfig: NextConfig = {
    * `.next/static/`.
    */
   serverExternalPackages: ["pg"],
+
+  /**
+   * ═══ SORTIE AUTONOME, UNIQUEMENT QUAND ON EMPAQUETTE ═════════════════════
+   *
+   * §I du plan : le paquet Electron embarque le backend Next.js EXISTANT,
+   * pas une réécriture. `output: "standalone"` produit `.next/standalone/` —
+   * `server.js` plus le sous-ensemble EXACT de `node_modules` que le serveur
+   * atteint réellement. C'est ce qui permet de livrer le backend sans
+   * embarquer les 900 Mio de `node_modules` du dépôt, et sans lui donner
+   * accès à ce qu'il n'utilise pas (les scripts de mesure, Playwright, les
+   * outils de checkpoint) : la liste blanche de §I commence ici, au traçage.
+   *
+   * ⚠️ CONDITIONNÉ À UNE VARIABLE, ET C'EST DÉLIBÉRÉ. Le plan pose que le
+   * DÉVELOPPEMENT NE CHANGE PAS. `pnpm build` et `pnpm start` doivent produire
+   * et servir exactement ce qu'ils produisaient hier ; seul
+   * `pnpm build:desktop` (qui pose `MINDCARE_PAQUET=1`) demande la sortie
+   * autonome. Une option globale aurait fait porter à toute l'équipe le coût
+   * d'un mode dont seul l'installateur a besoin.
+   */
+  ...(process.env["MINDCARE_PAQUET"] === "1" ? { output: "standalone" as const } : {}),
 };
 
 export default nextConfig;

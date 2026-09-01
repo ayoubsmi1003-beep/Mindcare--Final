@@ -355,7 +355,23 @@ const config = [
     // et criait à l'accès base interdit — une alerte portant sur un artefact,
     // pas sur du code écrit. Un garde-fou qui crie sur ses propres sous-produits
     // finit par ne plus être lu.
-    ignores: [".next/**", "node_modules/**", "supabase/functions/**", ".claude/**", ".eval-out/**"],
+    // `resources/**` et `dist/**` : SORTIES D'EMPAQUETAGE (plan Electron §I),
+    // au même titre que `.next/**`. `resources/serveur/` est une COPIE de la
+    // sortie autonome de Next — le code de Next lui-même, plus le nôtre déjà
+    // compilé. Le linter y trouvait `node:module` dans `server.js` et dans le
+    // runtime ONNX empaqueté, et criait une règle écrite pour NOTRE code
+    // source côté navigateur. Linter un artefact reconstruit, c'est juger un
+    // dépôt sur du code que personne n'y a écrit.
+    ignores: [
+      ".next/**",
+      "node_modules/**",
+      "supabase/functions/**",
+      ".claude/**",
+      ".eval-out/**",
+      "resources/**",
+      "dist/**",
+      "dist-electron/**",
+    ],
   },
   {
     linterOptions: {
