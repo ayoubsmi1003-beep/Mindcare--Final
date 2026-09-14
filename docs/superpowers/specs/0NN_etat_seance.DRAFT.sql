@@ -1,0 +1,49 @@
+-- DRAFT — NE JAMAIS POSER TEL QUEL DANS supabase/migrations/.
+--
+-- Phase 2 du cockpit consultation : persistance queryable de l'état clinique
+-- de séance (humeur, anxiété, sommeil, énergie, …). Dessiné pour décision
+-- humaine (AGENTS.md §5 : colonne/table/porte hors 01-SCHEMA/ADR → stop).
+--
+-- Conditions d'activation (toutes, sans exception) :
+--   1. Revue humaine de ce fichier + ADR dédié (domaines, polarités, bornes).
+--   2. Renommage en `0NN_etat_seance.sql` avec le prochain numéro libre,
+--      posé DANS `supabase/migrations/` (jamais d'édit d'une migration
+--      appliquée, jamais de DROP sur un objet DEFINER).
+--   3. Extension `scripts/checkpoint-s5.sh` (allowlist, RLS, cloison,
+--      idempotence) + e2e du badge peuplé, AVANT tout usage écran.
+--
+-- Invariants repris du socle (008/026/037) :
+--   · une écriture = une porte, jamais d'INSERT direct depuis l'UI ;
+--   · lectures sensibles en SECURITY DEFINER OWNER app_gatekeeper (NOBYPASSRLS),
+--     écritures en SECURITY INVOKER, REVOKE PUBLIC/service_role ;
+--   · toute lecture nominative journalise `audit.log_read('fiche')` AVANT la
+--     jointure d'identité (règle 6, ADR-019) ;
+--   · cloison ADR-003 : zéro ligne hors périmètre, jamais d'erreur oracle ;
+--   · montants interdits ici (aucune colonne prix, cf. 037) ;
+--   · `timestamptz` + bornes Africa/Algiers côté appelant.
+
+-- ─── Table ────────────────────────────────────────────────────────────────
+-- CREATE TABLE app.seance_etat (
+--   consultation_id uuid NOT NULL REFERENCES app.consultations (id),
+--   domaine         text NOT NULL,          -- vocabulaire fermé, cf. ADR Phase 2
+--   valeur_num      numeric NULL,           -- échelle 1–10 le cas échéant
+--   valeur_txt      text NULL,              -- état segmenté (bon/correct/…) le cas échéant
+--   created_by      uuid NOT NULL,          -- app.uid() à l'écriture
+--   created_at      timestamptz NOT NULL DEFAULT now(),
+--   PRIMARY KEY (consultation_id, domaine)  -- idempotence : réécrire = upsert
+-- );
+-- CREATE INDEX ... ; GRANT/REVOKE ... ; trg_audit ... (même patron que 067).
+
+-- ─── Portes ───────────────────────────────────────────────────────────────
+-- app.save_etat_seance(p_consultation_id uuid, p_domaine text, p_num numeric,
+--                       p_txt text)
+--   · INVOKER, FOR UPDATE sur la consultation (anti-double-clic) ;
+--   · refuse : séance close, séance d'une consœur (via appointment, cf. 026),
+--     note verrouillée (cohérence : l'état fige avec la note) ;
+--   · allowlist stricte des domaines (refuse l'inconnu, ne l'ignore pas).
+--
+-- app.get_etat_seance(p_consultation_id uuid)
+--   · DEFINER OWNER app_gatekeeper, log_read('fiche') avant identité ;
+--   · rend les lignes (consultation_id, domaine) — jamais d'agrégat inventé ;
+--   · le DELTA se calcule côté lecture existante (échelles) ou côté TS
+--     (`sensDelta`, déjà testé), pas en base.

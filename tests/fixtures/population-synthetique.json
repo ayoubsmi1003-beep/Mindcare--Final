@@ -1,0 +1,164 @@
+{
+  "_lisezMoi": [
+    "POPULATION SYNTHÉTIQUE DU CABINET — SOURCE DE VÉRITÉ UNIQUE.",
+    "",
+    "Toutes ces personnes sont FICTIVES. Aucune ne correspond à un dossier réel,",
+    "aucun identifiant n'est repris d'un document existant. La règle 8 de",
+    "CLAUDE.md interdit une donnée fictive dans une fonctionnalité LIVRÉE ; ce",
+    "fichier ne décrit que la base de DÉVELOPPEMENT, jamais un semis livré.",
+    "",
+    "POURQUOI DES RÔLES ET NON DES UUID. Un fichier qui figerait 71 identifiants",
+    "deviendrait faux au premier reprovisionnement de la base, et personne ne le",
+    "saurait avant qu'un test ne mente. On décrit donc des RÔLES — « le dossier le",
+    "plus riche », « le groupe d'homonymes » — et le script d'application les",
+    "attribue par un classement déterministe. Même base, même attribution.",
+    "",
+    "POURQUOI DES NOMS RÉALISTES. « essaydepatient142 » se cherche mal, se dicte",
+    "mal, et ne ressemble à rien de ce que la praticienne prononcera. Un jeu",
+    "d'essai qui ne ressemble pas à l'usage ne teste pas l'usage : la",
+    "reconnaissance vocale, la recherche par nom et les homonymes ne se mesurent",
+    "que sur des noms qui se comportent comme de vrais noms."
+  ],
+
+  "roles": [
+    {
+      "role": "vedette",
+      "prenom": "Karim",
+      "nom": "Djilali",
+      "pourquoi": "Le dossier le plus fourni. Il porte le parcours complet d'Alexa : dossier, traitements, résumé du cas, dernière consultation, prochain rendez-vous, paiements. C'est le « A » de la bascule A → B → A."
+    },
+    {
+      "role": "bascule-b",
+      "prenom": "Mahmoud",
+      "nom": "Saidi",
+      "pourquoi": "Deuxième dossier le plus fourni. C'est le « B » de la bascule : il doit être aussi crédible que le A, sinon la bascule se teste contre un dossier vide."
+    },
+    {
+      "role": "traitements",
+      "prenom": "Yacine",
+      "nom": "Boudiaf",
+      "pourquoi": "Le dossier qui porte le plus de traitements. Sert aux questions de posologie et aux formulations en darija sur le médicament."
+    },
+    {
+      "role": "documents",
+      "prenom": "Amine",
+      "nom": "Belkacem",
+      "pourquoi": "Le seul dossier porteur de documents. Sans lui, la capacité documents se testerait sur un état vide."
+    },
+    {
+      "role": "resume",
+      "prenom": "Sofiane",
+      "nom": "Meziane",
+      "pourquoi": "Porte des résumés de cas — « résume le cas de … » a de quoi résumer."
+    },
+    {
+      "role": "agenda",
+      "prenom": "Nabil",
+      "nom": "Cherif",
+      "pourquoi": "Rendez-vous et consultation : sert aux questions d'agenda nominatives."
+    }
+  ],
+
+  "homonymes": {
+    "prenom": "Mohammed",
+    "nom": "Sadli",
+    "combien": 7,
+    "pourquoi": [
+      "SEPT dossiers portant EXACTEMENT le même nom. C'est la fixture de sécurité",
+      "la plus importante du dépôt : « le dossier de Mohammed Sadli » doit rendre",
+      "une recherche et RIEN d'autre — zéro lecture patient, zéro écriture, et une",
+      "demande de précision.",
+      "",
+      "⚠️ ILS SONT CHOISIS PARMI LES DOSSIERS SANS AUCUNE RELATION. Si un homonyme",
+      "portait des consultations, un test d'ambiguïté qui échouerait lirait de",
+      "vraies données au lieu de rien — l'échec serait plus grave que le défaut",
+      "qu'il cherche."
+    ]
+  },
+
+  "voisin": {
+    "prenom": "Karim",
+    "nom": "Djellali",
+    "pourquoi": [
+      "Le presque-homonyme de Karim DJILALI, à deux lettres près. Il fabrique les",
+      "deux cas dont la sécurité dépend, avec les mêmes données :",
+      "  · « Karim Djilali » (nom complet)  → UN seul dossier  → résolution sûre ;",
+      "  · « Karim » (prénom seul)          → DEUX dossiers    → clarification.",
+      "C'est aussi le cas de variation phonétique : Djilali / Djellali est",
+      "exactement le genre d'écart qu'une dictée produit."
+    ]
+  },
+
+  "remplissage": [
+    { "prenom": "Salim", "nom": "Achour" },
+    { "prenom": "Saber", "nom": "Bouaicha" },
+    { "prenom": "Walid", "nom": "Benali" },
+    { "prenom": "Samir", "nom": "Haddad" },
+    { "prenom": "Riad", "nom": "Mansouri" },
+    { "prenom": "Farid", "nom": "Zerrouki" },
+    { "prenom": "Hakim", "nom": "Lounis" },
+    { "prenom": "Lyes", "nom": "Ferhat" },
+    { "prenom": "Rachid", "nom": "Bouzid" },
+    { "prenom": "Toufik", "nom": "Kaci" },
+    { "prenom": "Bilal", "nom": "Amrani" },
+    { "prenom": "Anis", "nom": "Slimani" },
+    { "prenom": "Adel", "nom": "Ouali" },
+    { "prenom": "Djamel", "nom": "Brahimi" },
+    { "prenom": "Kamel", "nom": "Hamdi" },
+    { "prenom": "Mourad", "nom": "Larbi" },
+    { "prenom": "Nassim", "nom": "Rahmani" },
+    { "prenom": "Omar", "nom": "Talbi" },
+    { "prenom": "Redouane", "nom": "Bensalem" },
+    { "prenom": "Tarek", "nom": "Chikhi" },
+    { "prenom": "Younes", "nom": "Merabet" },
+    { "prenom": "Abdelhak", "nom": "Yahiaoui" },
+    { "prenom": "Brahim", "nom": "Tounsi" },
+    { "prenom": "Chakib", "nom": "Belhadj" },
+    { "prenom": "Fouad", "nom": "Nedjar" },
+    { "prenom": "Khaled", "nom": "Sahraoui" },
+    { "prenom": "Lotfi", "nom": "Khelifi" },
+    { "prenom": "Nadir", "nom": "Bouras" },
+    { "prenom": "Rafik", "nom": "Aissaoui" },
+    { "prenom": "Zakaria", "nom": "Djebbar" },
+    { "prenom": "Amina", "nom": "Hammouche" },
+    { "prenom": "Nadia", "nom": "Kadri" },
+    { "prenom": "Yasmine", "nom": "Messaoudi" },
+    { "prenom": "Lila", "nom": "Ramdani" },
+    { "prenom": "Souad", "nom": "Seddiki" },
+    { "prenom": "Fatiha", "nom": "Ziani" },
+    { "prenom": "Meriem", "nom": "Guerroudj" },
+    { "prenom": "Hanane", "nom": "Laribi" },
+    { "prenom": "Sabrina", "nom": "Oukaci" },
+    { "prenom": "Karima", "nom": "Berrada" },
+    { "prenom": "Nawel", "nom": "Idir" },
+    { "prenom": "Samia", "nom": "Nait Slimane" },
+    { "prenom": "Wassila", "nom": "Tahar" },
+    { "prenom": "Zohra", "nom": "Bouhadja" },
+    { "prenom": "Dalila", "nom": "Meddour" },
+    { "prenom": "Feriel", "nom": "Ait Ali" },
+    { "prenom": "Imane", "nom": "Boukhalfa" },
+    { "prenom": "Kahina", "nom": "Ouyahia" },
+    { "prenom": "Leila", "nom": "Zeghdoud" },
+    { "prenom": "Malika", "nom": "Cherifi" },
+    { "prenom": "Nesrine", "nom": "Belaid" },
+    { "prenom": "Rym", "nom": "Hadjadj" },
+    { "prenom": "Sarah", "nom": "Benyoucef" },
+    { "prenom": "Warda", "nom": "Mokrani" },
+    { "prenom": "Ilyes", "nom": "Rebai" },
+    { "prenom": "Massinissa", "nom": "Ould Ali" },
+    { "prenom": "Sid Ali", "nom": "Ghezali" },
+    { "prenom": "Zineddine", "nom": "Bourahla" },
+    { "prenom": "Mehdi", "nom": "Terki" },
+    { "prenom": "Ammar", "nom": "Boudjema" },
+    { "prenom": "Hocine", "nom": "Lakhdari" },
+    { "prenom": "Djaffar", "nom": "Saadi" },
+    { "prenom": "Rabah", "nom": "Ghomri" },
+    { "prenom": "Smail", "nom": "Aouichat" },
+    { "prenom": "Tayeb", "nom": "Benkhelifa" },
+    { "prenom": "Noureddine", "nom": "Hamlaoui" },
+    { "prenom": "Boualem", "nom": "Chergui" },
+    { "prenom": "Abderrahim", "nom": "Sebti" },
+    { "prenom": "Madjid", "nom": "Ferradj" },
+    { "prenom": "Slimane", "nom": "Debbache" }
+  ]
+}
