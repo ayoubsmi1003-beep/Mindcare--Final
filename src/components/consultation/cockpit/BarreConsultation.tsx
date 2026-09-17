@@ -98,8 +98,11 @@ export function BarreConsultation({
             <span className="font-medium text-ink-500">{cockpit.tarifVoir}</span>
           </button>
         )}
+        {/* UN SEUL GESTE PRINCIPAL : `Signer`/`Terminer` décide, `Enregistrer`
+            n'est qu'un flush explicite de l'autosave — rang discret pour ne
+            jamais concurrencer l'action juridique. */}
         <span className="ms-auto flex flex-wrap items-center gap-2">
-          <Bouton rang="secondaire" onClick={enregistrer} disabled={envoi}>
+          <Bouton rang="discret" onClick={enregistrer} disabled={envoi}>
             {fr.actions.enregistrer}
           </Bouton>
           {peutClore ? (

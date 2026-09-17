@@ -7,7 +7,6 @@ import {
   Bouton,
   EtatVide,
   PastilleIcone,
-  Squelette,
 } from "@/components/ui";
 import { Icone } from "@/components/ui/Icones";
 import { PanneauHistorique } from "@/components/consultation/PanneauHistorique";
@@ -180,13 +179,12 @@ export function RailContexte({
               action={<Bouton onClick={onReessayer}>{fr.actions.reessayer}</Bouton>}
             />
           ) : dossier === undefined ? (
+            // UN SEUL GESTE DE CHARGEMENT : le CTA vit dans la colonne patient
+            // (état partagé) — le rail dit l'attente au lieu de la dupliquer.
+            // Aucune lecture ne part d'ici (O5) : `onCharger` n'est plus appelé
+            // depuis ce rail.
             <div className="flex flex-col gap-3 rounded-2xl border border-rule bg-card p-5 shadow-carte">
-              <Squelette lignes={2} />
-              <div>
-                <Bouton rang="secondaire" onClick={onCharger}>
-                  {cockpit.railCharger}
-                </Bouton>
-              </div>
+              <p className="font-ui text-body text-ink-500">{cockpit.railAttente}</p>
             </div>
           ) : dossier === null ? (
             <EtatVide message={cockpit.contexteInaccessible} icone="patients" />
@@ -216,8 +214,11 @@ export function RailContexte({
                 </div>
               )}
 
-              <CourbeEchelles echelles={dossier.clinique?.echelles ?? []} />
-
+              {/* Ordre = priorité de lecture en séance : dernière séance, puis
+                  traitement (ce qui agit), puis courbe (la preuve longi-
+                  tudinale), jamais l'inverse. Pas de repli : chaque carte
+                  porte déjà son propre contenant, les imbriquer serait deux
+                  cartes l'une dans l'autre. */}
               <div className="flex flex-col gap-4 rounded-2xl border border-rule bg-card p-5 shadow-carte">
                 <TitreRail
                   icone="traitements"
@@ -234,9 +235,14 @@ export function RailContexte({
                   />
                 )}
               </div>
+
+              <CourbeEchelles echelles={dossier.clinique?.echelles ?? []} />
             </>
           )}
           {jarvis}
+          {/* Bumper : l'orbe flottant ne doit jamais recouvrir le dernier
+              contenu du rail — même patron que la barre de consultation. */}
+          <div aria-hidden="true" className="h-16" />
         </div>
       ) : null}
     </aside>

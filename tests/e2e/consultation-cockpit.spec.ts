@@ -105,12 +105,13 @@ test.describe("COCKPIT — poste de travail clinique", () => {
     });
     await expect(page.locator("body")).toContainText(/\d{2}:\d{2}:\d{2}/);
 
-    // Chargeurs : la colonne patient ET le rail proposent le MÊME geste
-    // explicite (budget d'ouverture : zéro lecture dossier sans clic, état
-    // partagé, un seul appel au premier clic).
+    // Chargeur UNIQUE : la colonne patient porte le SEUL geste explicite
+    // (budget d'ouverture : zéro lecture dossier sans clic, état partagé, un
+    // seul appel au premier clic) ; le rail dit l'attente au lieu de dupliquer
+    // le CTA (P1-1, critique 22/40).
     await expect(
       page.getByRole("button", { name: /Charger le contexte patient/i }),
-    ).toHaveCount(2);
+    ).toHaveCount(1);
 
     // Focus : cocher ne réécrit rien tant qu'on n'applique pas.
     await page.getByRole("button", { name: "Anxiété", exact: true }).click();

@@ -130,22 +130,25 @@ test.describe("CRITICAL CHAIN — full clinical journey", () => {
       await page.waitForTimeout(2500); // auto-save 2s
       await expect(page.locator("body")).toContainText(/Enregistré|Enregistrement/i, { timeout: 5_000 });
     }
-    const subj = page.getByRole("textbox", { name: "Subjectif" });
+    // `exact` : le cockpit ajoute un champ « Mes formules — Subjectif » dont le
+    // nom contient « Subjectif » — sans exactitude, le sélecteur est ambigu
+    // (strict-mode). L'intention reste l'éditeur SOAP lui-même.
+    const subj = page.getByRole("textbox", { name: "Subjectif", exact: true });
     if (await subj.count() > 0) {
       await subj.fill("Patient rapporte anxiété depuis 3 semaines, ruminations.");
       await page.waitForTimeout(2500);
     }
-    const obj = page.getByRole("textbox", { name: "Objectif" });
+    const obj = page.getByRole("textbox", { name: "Objectif", exact: true });
     if (await obj.count() > 0) {
       await obj.fill("Humeur anxieuse, contact conservé, pas d'idées suicidaires.");
       await page.waitForTimeout(2500);
     }
-    const assessField = page.getByRole("textbox", { name: "Évaluation" });
+    const assessField = page.getByRole("textbox", { name: "Évaluation", exact: true });
     if (await assessField.count() > 0) {
       await assessField.fill("État anxieux, à suivre.");
       await page.waitForTimeout(2500);
     }
-    const planField = page.getByRole("textbox", { name: "Conduite à tenir" });
+    const planField = page.getByRole("textbox", { name: "Conduite à tenir", exact: true });
     if (await planField.count() > 0) {
       await planField.fill("Revoir dans 2 semaines, techniques de relaxation.");
       await page.waitForTimeout(2500);

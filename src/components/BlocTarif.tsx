@@ -66,9 +66,10 @@ export function BlocTarif({
       // écran d'argent est pire qu'une absence.
       setPaiement(null);
       setMessageErreur(result.error.message);
-      // Lecture en échec : on ne PRÉTEND pas savoir. L'écran de séance gardera
-      // son bouton, et c'est la base qui tranchera — un refus vaut mieux
-      // qu'une commande masquée sur une information qu'on n'a pas.
+      // Lecture en échec : on ne PRÉTEND pas savoir (état inconnu). Terminer
+      // reste retiré tant que le tarif n'est pas résolu, et c'est la base qui
+      // tranche en dernier (037) — un bouton absent vaut mieux qu'une clôture
+      // proposée pour être refusée.
       onEtatTarif?.(undefined);
       return;
     }
