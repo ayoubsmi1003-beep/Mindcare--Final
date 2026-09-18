@@ -52,14 +52,17 @@ import {
   LienBouton,
   Squelette,
 } from "@/components/ui";
-import { BandeCalendrier } from "@/components/finance/BandeCalendrier";
+import { Icone, type NomIcone } from "@/components/ui/Icones";
 import { PanneauEtat, type EtatDonnees } from "@/components/finance/EtatPanneau";
-import { PanneauAnatomie } from "@/components/finance/PanneauAnatomie";
 import { PanneauAttention } from "@/components/finance/PanneauAttention";
-import { PanneauEvolution } from "@/components/finance/PanneauEvolution";
+import {
+  CompositionV8,
+  EvolutionV8,
+  PoulsV8,
+  SerieJournaliereV8,
+} from "@/components/finance/PanneauxV8";
 import { SelecteurPeriode } from "@/components/finance/SelecteurPeriode";
 import { TableauSeances } from "@/components/finance/TableauSeances";
-import { TuilesPulse } from "@/components/finance/TuilesPulse";
 import { ModaleCharge, TableauCharges } from "@/components/finance/TableauCharges";
 import { fr } from "@/i18n/fr";
 import {
@@ -217,9 +220,8 @@ export default function FinancesPage(): React.JSX.Element {
         return;
       }
       setModale(undefined);
-      // Les charges changent le RÉSULTAT NET : les deux vues se rechargent.
-      void chargerCharges(periode);
-      void chargerApercu(periode);
+      // Perf: les deux lectures sont indépendantes → parallèle.
+      await Promise.all([chargerCharges(periode), chargerApercu(periode)]);
     },
     [chargerApercu, chargerCharges, modale, periode],
   );
@@ -232,8 +234,7 @@ export default function FinancesPage(): React.JSX.Element {
         setCharges({ statut: "erreur", message: r.error.message });
         return;
       }
-      void chargerCharges(periode);
-      void chargerApercu(periode);
+      await Promise.all([chargerCharges(periode), chargerApercu(periode)]);
     },
     [chargerApercu, chargerCharges, periode],
   );
@@ -272,7 +273,7 @@ export default function FinancesPage(): React.JSX.Element {
       role={utilisateur.role}
       nomComplet={utilisateur.fullName}
       onDeconnexion={deconnecter}
-      actions={<SelecteurPeriode periode={periode} onChange={changerPeriode} />}
+      actions={<SelecteurPeriode periode={periode} onChange={changerPeriode} compact />}
       sansGouttiere
     >
       {/* `h-full` + `overflow-hidden` : la page NE DÉFILE PAS. Ce qui ne tient
@@ -396,48 +397,122 @@ export default function FinancesPage(): React.JSX.Element {
  * hauteur réduite, sans numéro de jour. La rangée 1 ne se replie JAMAIS.
  */
 function TuilesEtRangees({ apercu }: { readonly apercu: ApercuCaisse }): React.JSX.Element {
+  const t = fr.finances;
+
   return (
-    <>
+    <div className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto pb-2">
+      {/* RANGÉE 1 — LE POULS. Cinq tuiles, dont une vedette. Ne se replie
+          JAMAIS sous cinq colonnes au-dessus de `desktop` : c'est la ligne
+          que la médecin lit en premier le matin. */}
       <div className="shrink-0">
-        <TuilesPulse pulse={apercu.pulse} />
+        <PoulsV8 pulse={apercu.pulse} calendrier={apercu.calendrier} />
       </div>
 
-      {/* 40 / 32 / 28 — Évolution, Anatomie, Attention. `gridTemplateColumns`
-          en style INLINE parce que l'échelle Tailwind du dépôt ne porte pas de
-          gabarit à trois fractions inégales et que la syntaxe arbitraire est
-          interdite (I10). Une seule colonne sous 1280 : trois panneaux de
-          ~300 px côte à côte deviennent illisibles avant de devenir petits. */}
-      <div className="grid min-h-0 flex-1 grid-cols-un gap-3 desktop:grid-cols-finance">
-        <div className="min-h-0 rounded-xl border border-rule bg-card p-4 shadow-lift2">
-          <PanneauEvolution serie={apercu.evolution} />
-        </div>
-        <div className="min-h-0 rounded-xl border border-rule bg-card p-4 shadow-lift2">
-          <PanneauAnatomie
+      {/* RANGÉE 2 — LA SÉRIE JOURNALIÈRE, EN DOMINANTE.
+          Elle remplace la bande de 31 cases du bas de l'écran V6, qui disait
+          « plus » ou « moins » sans jamais dire COMBIEN. Elle passe en tête
+          parce qu'elle répond à la question du mois en cours ; l'évolution
+          sur six mois, elle, répond à une question de saison. */}
+      <PanneauFinance
+        titre={t.calendrier.titre}
+        aide={t.calendrier.aide}
+        icone="finances"
+        ton="menthe"
+      >
+        <SerieJournaliereV8 jours={apercu.calendrier} />
+      </PanneauFinance>
+
+      {/* RANGÉE 3 — 40 / 32 / 28. Évolution · Composition · Attention.
+          Une seule colonne sous 1280 : trois panneaux de ~300 px côte à côte
+          deviennent illisibles avant de devenir petits. */}
+      <div className="grid grid-cols-un gap-4 desktop:grid-cols-finance">
+        <PanneauFinance
+          titre={t.evolution.titre}
+          aide={t.evolution.aide}
+          icone="statistiques"
+          ton="azur"
+        >
+          <EvolutionV8 serie={apercu.evolution} />
+        </PanneauFinance>
+
+        <PanneauFinance titre={t.anatomie.titre} icone="suivi" ton="lavande">
+          <CompositionV8
             revenus={apercu.composition.revenus_par_type}
             charges={apercu.composition.charges_par_categorie}
+            totalRevenus={apercu.pulse.revenu_periode}
+            totalCharges={apercu.pulse.charges_periode}
           />
-        </div>
-        <div className="min-h-0 rounded-xl border border-rule bg-card p-4 shadow-lift2">
+        </PanneauFinance>
+
+        <PanneauFinance titre={t.attention.titre} icone="documents" ton="ambre">
           <PanneauAttention
             impayesTotal={apercu.attention.impayes_total}
             impayesCount={apercu.attention.impayes_count}
             plusAncienJours={apercu.attention.plus_ancien_impaye_jours}
             echeances={apercu.attention.echeances_a_venir}
           />
-        </div>
+        </PanneauFinance>
       </div>
+    </div>
+  );
+}
 
-      {/* Rangée 3. `hidden` sous 900 px de haut n'existe pas en CSS pur côté
-          Tailwind : on réduit la hauteur et on masque les numéros à la place,
-          ce qui garde l'information et supprime le débordement. */}
-      <div className="shrink-0 rounded-xl border border-rule bg-card p-3 shadow-lift2">
-        <div className="hidden desktop:block">
-          <BandeCalendrier jours={apercu.calendrier} />
+/**
+ * UN PANNEAU DE FINANCES.
+ *
+ * Même grammaire que le panneau du tableau de bord — pastille de famille,
+ * titre dans la surface, aide sur la même ligne — parce que deux écrans du
+ * même produit qui encadrent leurs graphiques de deux façons différentes se
+ * lisent comme deux produits.
+ *
+ * ⚠️ LA PASTILLE PORTE UNE FAMILLE, PAS UN STATUT. `ambre` sur « À votre
+ * attention » ne dit pas « alerte » : le rouge est un budget réservé à la
+ * perte de donnée (§4 règle 1), et un impayé de huit jours n'en est pas une.
+ */
+function PanneauFinance({
+  titre,
+  aide,
+  icone,
+  ton,
+  children,
+}: {
+  readonly titre: string;
+  readonly aide?: string;
+  readonly icone: NomIcone;
+  readonly ton: "menthe" | "azur" | "lavande" | "ambre";
+  readonly children: React.ReactNode;
+}): React.JSX.Element {
+  // Écrites en toutes lettres : Tailwind balaye le source et ne résout aucune
+  // interpolation. `bg-tuile-${ton}` ne serait jamais émis.
+  const pastilles = {
+    menthe: "bg-tuile-menthe text-emeraude-700",
+    azur: "bg-tuile-azur text-azure-700",
+    lavande: "bg-tuile-lavande text-violet-700",
+    ambre: "bg-tuile-ambre text-ambre-700",
+  } as const;
+
+  return (
+    <section className="flex min-w-0 flex-col gap-4 rounded-2xl border border-rule bg-card p-5 shadow-carte">
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+        <div className="flex min-w-0 items-center gap-3">
+          <span
+            aria-hidden="true"
+            className={[
+              "inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg shadow-douce",
+              pastilles[ton],
+            ].join(" ")}
+          >
+            <Icone nom={icone} taille={20} />
+          </span>
+          <h2 className="min-w-0 truncate font-ui text-heading font-bold tracking-heading text-ink-900">
+            {titre}
+          </h2>
         </div>
-        <div className="desktop:hidden">
-          <BandeCalendrier jours={apercu.calendrier} compact />
-        </div>
+        {aide === undefined ? null : (
+          <p className="min-w-0 truncate font-ui text-label text-ink-500">{aide}</p>
+        )}
       </div>
-    </>
+      {children}
+    </section>
   );
 }

@@ -17,6 +17,8 @@
  * est la frontière : rien de ce qui s'y trouve ne traverse vers le client.
  */
 
+import { readFileSync } from "node:fs";
+
 import { Pool, type PoolConfig } from "pg";
 
 /**
@@ -27,14 +29,39 @@ import { Pool, type PoolConfig } from "pg";
  * configuration manquante doit empêcher le démarrage, pas le deviner.
  */
 function lireUrl(): string {
-  const url = process.env.MINDCARE_DATABASE_URL;
-  if (url === undefined || url.trim() === "") {
-    throw new Error(
-      "MINDCARE_DATABASE_URL est absente. Le serveur ne peut pas démarrer sans " +
-        "savoir à quelle base il parle.",
-    );
+  let url = process.env.MINDCARE_DATABASE_URL;
+  if (url !== undefined && url.trim() !== "") return url;
+  // En paquet Electron, la variable vit dans MINDCARE_ENV_FILE (ProgramData),
+  // pas dans l'environnement hérité. Charger à la demande, sans écraser
+  // une variable déjà posée (même priorité que verifier-base.mjs).
+  const fichierEnv = process.env.MINDCARE_ENV_FILE;
+  if (fichierEnv !== undefined && fichierEnv.trim() !== "") {
+    try {
+      const texte = readFileSync(fichierEnv, "utf8");
+      for (const ligne of texte.split("\n")) {
+        const nette = ligne.trim();
+        if (nette === "" || nette.startsWith("#")) continue;
+        const egal = nette.indexOf("=");
+        if (egal <= 0) continue;
+        const cle = nette.slice(0, egal).trim();
+        if (cle === "MINDCARE_DATABASE_URL" && url === undefined) {
+          let valeur = nette.slice(egal + 1).trim();
+          if ((valeur.startsWith('"') && valeur.endsWith('"')) || (valeur.startsWith("'") && valeur.endsWith("'"))) {
+            valeur = valeur.slice(1, -1);
+          }
+          url = valeur;
+          break;
+        }
+      }
+      if (url !== undefined && url.trim() !== "") return url;
+    } catch {
+      // fichier illisible : on retombe sur l'erreur ci-dessous
+    }
   }
-  return url;
+  throw new Error(
+    "MINDCARE_DATABASE_URL est absente. Le serveur ne peut pas démarrer sans " +
+      "savoir à quelle base il parle.",
+  );
 }
 
 /**

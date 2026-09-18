@@ -172,17 +172,30 @@ export function Rail({ role, nomComplet, onDeconnexion }: RailProps): React.JSX.
   return (
     <nav
       aria-label={fr.coquille.navigationPrincipale}
-      className="sur-chrome flex h-full w-rail-compact shrink-0 flex-col gap-6 overflow-hidden border-r border-chrome-rule bg-chrome-900 px-3 py-5 desktop:w-rail"
+      /* V8 — LE RAIL EST UN MATÉRIAU, PLUS UN APLAT.
+         Trois arrêts très rapprochés (`bg-rail`) plus un halo de marque en
+         haut (`bg-rail-halo`, dans sa propre couche) : la profondeur qu'un
+         aplat ne peut pas avoir. AUCUN CONTRASTE D'ENCRE NE BOUGE — les trois
+         arrêts sont tous plus sombres que --chrome-900 ou son égal, donc les
+         15.6 / 9.00 / 4.72:1 mesurés en V7 restent des planchers. */
+      className="sur-chrome relative flex h-full w-rail-compact shrink-0 flex-col gap-6 overflow-hidden bg-rail px-3 py-5 desktop:w-rail"
     >
-      <div className="flex items-center gap-3 px-2">
-        <MarqueMindCare taille={24} titre="MindCare OS" />
-        <span
-          className={[
-            "font-ui text-heading font-semibold tracking-heading text-chrome-ink",
-            LIBELLE_REPLIABLE,
-          ].join(" ")}
-        >
-          MindCare
+      <span aria-hidden="true" className="pointer-events-none absolute inset-0 bg-rail-halo" />
+
+      <div className="relative flex items-center gap-3 px-2">
+        <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-vedette-aube text-on-brand shadow-tuile">
+          <MarqueMindCare taille={20} titre="MindCare OS" />
+        </span>
+        <span className={["min-w-0", LIBELLE_REPLIABLE].join(" ")}>
+          <span className="block truncate font-ui text-heading font-extrabold tracking-title text-chrome-ink">
+            MindCare
+          </span>
+          {/* Le sous-titre du produit — présent dans la référence, absent en
+              V7. Il coûte 14 px et il dit ce qu'est le logiciel, ce qu'aucun
+              autre endroit de l'interface ne fait. */}
+          <span className="block truncate font-ui text-eyebrow uppercase tracking-eyebrow text-chrome-ink-faint">
+            {fr.coquille.marqueSousTitre}
+          </span>
         </span>
       </div>
 
@@ -196,14 +209,14 @@ export function Rail({ role, nomComplet, onDeconnexion }: RailProps): React.JSX.
           qui défile donne les deux propriétés qui comptent : le bloc se pose en
           bas quand il y a la place, et il reste ATTEIGNABLE par défilement
           quand il n'y en a pas. Jamais coupé. */}
-      <div className="flex min-h-0 flex-1 flex-col gap-6 overflow-y-auto">
+      <div className="relative flex min-h-0 flex-1 flex-col gap-6 overflow-y-auto">
         {groupes.map((groupe) => (
           <div key={groupe.titre} className="flex flex-col gap-1">
             {/* Le titre de groupe s'efface au repli : à 68px il n'y a pas de
                 place, et son rôle — regrouper — est déjà tenu par l'espacement. */}
             <span
               className={[
-                "px-3 pb-1 font-ui text-label font-medium tracking-label text-chrome-ink-faint",
+                "px-3 pb-2 font-ui text-eyebrow font-semibold uppercase tracking-eyebrow text-chrome-ink-faint",
                 LIBELLE_REPLIABLE,
               ].join(" ")}
             >
@@ -222,7 +235,7 @@ export function Rail({ role, nomComplet, onDeconnexion }: RailProps): React.JSX.
                       <div
                         aria-disabled="true"
                         title={fr.coquille.ecranAVenir}
-                        className="flex min-h-target items-center justify-center gap-3 rounded-lg px-3 py-2 text-chrome-ink-faint desktop:justify-between"
+                        className="flex min-h-target-lg items-center justify-center gap-3 rounded-xl px-3 py-2.5 text-chrome-ink-faint desktop:justify-between"
                       >
                         <span className="flex items-center gap-3">
                           <Icone nom={ecran} taille={20} />
@@ -257,10 +270,14 @@ export function Rail({ role, nomComplet, onDeconnexion }: RailProps): React.JSX.
                       href={`/${ecran}`}
                       aria-current={actif ? "page" : undefined}
                       className={[
-                        "flex min-h-target items-center justify-center gap-3 rounded-lg px-3 py-2 font-ui text-body no-underline transition duration-quick ease-out desktop:justify-start",
+                        /* V8 — L'ÉTAT ACTIF EST UN MATÉRIAU, pas un aplat plus
+                           clair : dégradé de marque + lueur + filet interne.
+                           C'est ce qui le fait lire comme une pièce POSÉE sur
+                           le rail plutôt que comme une case cochée. */
+                        "flex min-h-target-lg items-center justify-center gap-3 rounded-xl px-3 py-2.5 font-ui text-body no-underline transition duration-quick ease-out desktop:justify-start",
                         actif
-                          ? "bg-chrome-actif font-semibold text-chrome-ink"
-                          : "font-regular text-chrome-ink-soft hover:bg-chrome-survol hover:text-chrome-ink",
+                          ? "bg-rail-actif font-bold text-on-brand shadow-glow-rail shadow-filet"
+                          : "font-medium text-chrome-ink-soft hover:bg-chrome-survol hover:text-chrome-ink",
                       ].join(" ")}
                     >
                       <Icone nom={ecran} taille={20} />
@@ -273,11 +290,14 @@ export function Rail({ role, nomComplet, onDeconnexion }: RailProps): React.JSX.
           </div>
         ))}
 
-        <div className="mt-auto flex shrink-0 flex-col gap-2 border-t border-chrome-rule pt-4">
-          <div className="flex items-center gap-3 px-1">
+        {/* V8 — le compte devient une CARTE de chrome plutôt qu'une ligne sous
+            un filet : c'est le seul bloc du rail qui parle de la personne
+            connectée, et une surface le dit mieux qu'un séparateur. */}
+        <div className="mt-auto flex shrink-0 flex-col gap-1 rounded-2xl bg-chrome-voile-faible p-2 shadow-filet">
+          <div className="flex items-center gap-3 px-1 py-1">
             <span
               aria-hidden="true"
-              className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-chrome-voile font-ui text-label font-semibold text-chrome-ink"
+              className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-vedette-aube font-ui text-label font-bold text-on-brand"
             >
               {monogrammeCompte(nomComplet)}
             </span>
@@ -300,7 +320,7 @@ export function Rail({ role, nomComplet, onDeconnexion }: RailProps): React.JSX.
             type="button"
             onClick={onDeconnexion}
             title={fr.actions.seDeconnecter}
-            className="flex min-h-target items-center justify-center gap-3 rounded-lg px-3 py-2 font-ui text-body font-regular text-chrome-ink-soft transition duration-quick ease-out hover:bg-chrome-survol hover:text-chrome-ink desktop:justify-start"
+            className="flex min-h-target items-center justify-center gap-3 rounded-xl px-3 py-2 font-ui text-body font-medium text-chrome-ink-soft transition duration-quick ease-out hover:bg-chrome-survol hover:text-chrome-ink desktop:justify-start"
           >
             <Icone nom="deconnexion" taille={20} />
             <span className={LIBELLE_REPLIABLE}>{fr.actions.seDeconnecter}</span>

@@ -17,6 +17,7 @@ import type { ReactNode } from "react";
 import { fr } from "@/i18n/fr";
 
 import { Icone, type NomIcone } from "./Icones";
+import { Scene, type NomScene } from "./Illustrations";
 
 /**
  * Bandeau hors ligne.
@@ -101,11 +102,25 @@ export function EtatVide({
   action,
   icone,
   titre,
+  scene,
 }: {
   readonly message: string;
   readonly action?: ReactNode;
   readonly icone?: NomIcone;
   readonly titre?: string;
+  /**
+   * Une SCÈNE plutôt qu'un médaillon.
+   *
+   * ⚠️ RÉSERVÉE AUX GRANDS VIDES — un volet entier, une journée sans
+   * rendez-vous, une conversation qui n'a pas commencé. Dans une carte de
+   * colonne latérale, une illustration de 130 px occupe plus de place que
+   * l'explication qu'elle accompagne, et la hiérarchie s'inverse : on regarde
+   * le dessin au lieu de lire la phrase qui dit quoi faire.
+   *
+   * Elle REMPLACE le médaillon, elle ne s'y ajoute pas : deux symboles pour
+   * le même vide, l'un sous l'autre, se lisent comme un défaut de rendu.
+   */
+  readonly scene?: NomScene;
 }): React.JSX.Element {
   return (
     /*
@@ -122,17 +137,31 @@ export function EtatVide({
       il ne meuble pas.
     */
     <div className="flex flex-col items-center gap-4 px-4 py-6 text-center">
-      {icone === undefined ? null : (
-        <span
-          aria-hidden="true"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-sunken text-ink-500"
-        >
-          <Icone nom={icone} taille={20} />
+      {/* V8 — LE MÉDAILLON. Le disque `bg-sunken` de V7 était un rectangle
+          gris de plus dans un écran de rectangles gris : il disait « il
+          manque quelque chose » au lieu de « il n'y a rien, et c'est normal ».
+          Trois couches ici — un halo de marque très doux, un disque en
+          matériau, l'icône — pour qu'un « rien » soit COMPOSÉ.
+
+          ⚠️ IL NE REMPLACE PAS LA PHRASE, il l'accompagne. La règle du
+          contrat d'UX qui compte n'a jamais été « pas d'illustration » mais
+          « dis POURQUOI c'est vide et propose un geste » : le message et
+          l'action restent obligatoires, et ils sont juste en dessous. */}
+      {scene !== undefined ? <Scene nom={scene} taille={136} /> : null}
+
+      {scene !== undefined || icone === undefined ? null : (
+        <span aria-hidden="true" className="relative inline-flex items-center justify-center">
+          <span className="absolute h-18 w-18 rounded-full bg-grad-empty opacity-disabled" />
+          <span className="relative inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-tuile-menthe text-emeraude-700 shadow-douce">
+            <Icone nom={icone} taille={24} />
+          </span>
         </span>
       )}
       <div className="flex max-w-form flex-col gap-2">
         {titre === undefined ? null : (
-          <p className="font-ui text-heading font-semibold text-ink-900">{titre}</p>
+          <p className="font-editorial text-title font-semibold tracking-title text-ink-900">
+            {titre}
+          </p>
         )}
         <p className="font-ui text-body font-regular text-ink-500">{message}</p>
       </div>

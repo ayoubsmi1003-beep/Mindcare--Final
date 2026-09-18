@@ -19,9 +19,15 @@
     // Deno impose l'extension `.ts` dans les imports ; TypeScript l'autorise
     // sous ce drapeau tant qu'il n'émet rien. `pnpm test` n'émet rien.
     "allowImportingTsExtensions": true,
+    // M08 : les operateurs .mjs (scripts/) n'ont pas de declarations et
+    // allowJs est false dans le programme principal. Ce programme de test les
+    // RESOUT sans les verifier (checkJs reste false, comme a l'execution
+    // vitest) : les imports statiques depuis tests/ type-checkent, le .mjs
+    // lui-meme reste hors verification. Ne pas activer dans tsconfig.json.
+    "allowJs": true,
     "noEmit": true,
     "types": ["node"]
   },
-  "include": ["tests/**/*.ts", "src/server/jarvis/resume-cas.ts", "src/server/jarvis/contrat-workspace.ts", "src/server/jarvis/resume-chronologie.ts"],
+  "include": ["tests/**/*.ts", "src/server/jarvis/resume-cas.ts", "src/server/jarvis/contrat-workspace.ts", "src/server/jarvis/resume-chronologie.ts", "src/server/jarvis/contexte-seance.ts"],
   "exclude": ["node_modules"]
 }

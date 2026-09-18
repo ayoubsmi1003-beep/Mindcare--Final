@@ -38,7 +38,10 @@ export function SectionDepuisDerniere({
         faits.push({
           texte:
             e.scaleName +
-            " â€” " +
+            // Tiret cadratin PROPRE. Il a longtemps ete "â€”" ici :
+            // un tiret UTF-8 relu en Latin-1, donc affiche tel quel a l ecran,
+            // au milieu du nom d une echelle clinique.
+            " — " +
             fr.patients.echelle.dernierScore +
             (e.dernier.score === null ? "" : " " + String(e.dernier.score)),
           date: e.dernier.date,

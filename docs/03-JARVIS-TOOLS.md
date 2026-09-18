@@ -9,7 +9,8 @@ Prérequis : `00-DECISIONS.md`, `01-SCHEMA.md`, `02-SECURITY-BOUNDARY.md`
 
 ---
 
-## 0. ÉTAT RÉEL AU 2026-08-26 — ADR-027
+## 0. ÉTAT RÉEL — relevé initial 2026-08-26 (ADR-027), recompte vérifié 2026-09-06
+(Phase 5 : 22 lectures + 7 écritures — voir registres cités, pas cette page).
 
 > ⚠️ **CE QUI SUIT AUX §3 ET §4 EST LA CIBLE DE CONCEPTION, PAS L'IMPLÉMENTATION.**
 > Ce document a été écrit avant le code. La liste ci-dessous est ce que le dépôt
@@ -21,21 +22,24 @@ Prérequis : `00-DECISIONS.md`, `01-SCHEMA.md`, `02-SECURITY-BOUNDARY.md`
 booléen se teste, et un test s'oublie. `jarvis-boucle.ts` n'importe que le
 registre de lecture et n'a donc **aucun chemin d'appel** vers une écriture.
 
-### Lecture — `src/services/jarvis-capacites.ts` (16)
+### Lecture — `src/services/jarvis-capacites.ts` (22, `LECTURES :992`)
 `search_patients` · `get_patient_context` · `get_patient_timeline` ·
 `get_patient_documents` · `get_next_patient` · `get_today_agenda` ·
 `get_agenda_range` · `get_appointment` · `get_waiting_room` · `get_consultation` ·
 `get_day_revenue` · `get_period_revenue` · `get_outstanding_payments` ·
-`brief_prochain_patient` · `brief_matinal` · `brief_finance`
+`get_notifications` · `get_system_status` · `get_current_medications` ·
+`get_consultation_history` · `get_patient_financial_summary` ·
+`brief_prochain_patient` · `brief_matinal` · `brief_finance` ·
+`draft_patient_message`
 
 Chacune **délègue** à un service existant et rend un DTO `Safe*` — le type de
 retour est contraint à une union fermée, donc une capacité qui rendrait une ligne
 brute **ne compile pas**.
 
-### Écriture — `src/services/jarvis-ecritures.ts` (4)
+### Écriture — `src/services/jarvis-ecritures.ts` (7, `ECRITURES :567`)
 `reschedule_appointment` · `cancel_appointment` · `mark_patient_arrived` ·
-`record_payment_collected`
-Plus les deux historiques de 033 : `create_appointment` · `set_consultation_price`.
+`record_payment_collected` · `create_appointment` · `set_consultation_price` ·
+`create_document_draft` (7e écriture, admise par 063 — voir ci-dessous).
 
 Cycle **PROPOSE → CONFIRM → EXECUTE → VERIFY → LOG**. La précondition s'exécute
 *avant* de poser la ligne `proposed` — une carte qui annonce un décalage vers un
@@ -48,10 +52,10 @@ suppression, export, envoi de message, changement de permission. Le refus vient
 de la **contrainte `jarvis_tool_allowlist` en base** (033, étendue par 063), pas
 du client : un nom hors liste fait échouer l'`INSERT`, avant toute carte.
 
-`create_document_draft` est admis par 063 **mais absent du registre client** : le
-brouillon exige un contrat de variables par type que Jarvis ne sait pas encore
-composer sans risquer d'inventer un contenu (règle 8). La contrainte SQL borne ce
-qui est POSSIBLE, le registre borne ce qui est OFFERT.
+`create_document_draft`, admis par 063, a rejoint le registre client (7e écriture,
+`ecritures.ts:513`, `ECRITURES :573`) avec son contrat de variables par type :
+la règle 8 est portée par le schéma Zod + la porte, pas par l'absence du registre.
+La contrainte SQL borne ce qui est POSSIBLE, le registre borne ce qui est OFFERT.
 
 ### Ce que MindCare ne sait pas, et que Jarvis doit dire
 Ni **aftercare**, ni **check-ins**, ni **humeur**, ni **sommeil**, ni
@@ -499,4 +503,4 @@ carte de confirmation + test d'acceptation. **Dans cet ordre, avant la première
 
 ---
 
-*Fin du document. Prochain livrable : `04-DESIGN-SYSTEM.md` — tokens, typographie, composants, à produire avant tout écran dans Claude Design.*
+*Fin du document. Le système visuel vit dans `docs/design-system/` (remplace `04-DESIGN-SYSTEM.md`, supprimé — voir DOC-AUTHORITY §1).*

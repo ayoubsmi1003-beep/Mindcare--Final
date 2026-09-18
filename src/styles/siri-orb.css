@@ -32,8 +32,31 @@
     conic-gradient(from calc(var(--angle) * 1) at 20% 80%, var(--c1), transparent 10% 90%, var(--c1)),
     conic-gradient(from calc(var(--angle) * -2) at 85% 10%, var(--c3), transparent 20% 80%, var(--c3));
   box-shadow: inset var(--bg) 0 0 var(--shadow-spread) calc(var(--shadow-spread) * 0.2);
-  filter: blur(var(--blur-amount)) contrast(var(--contrast-amount));
+  filter: blur(var(--blur-amount)) contrast(var(--contrast-amount)) saturate(1.25);
   animation: siri-rotate var(--animation-duration) linear infinite;
+  will-change: transform;
+}
+
+/* V10 — états Alexa : même orbe émeraude, vitesse + halo portent le sens.
+   idle=repos lent, ecoute=vif + halo fort, traitement=pulse, parole=flottement,
+   confirmation=scale bref. Couleurs via var(--c1..c3), jamais de littéral. */
+.siri-orb[data-etat="ecoute"]::before {
+  animation-duration: 6s;
+  filter: blur(var(--blur-amount)) contrast(var(--contrast-amount)) saturate(1.5) brightness(1.08);
+}
+
+.siri-orb[data-etat="traitement"]::before {
+  animation-duration: 3s;
+}
+
+.siri-orb[data-etat="parole"]::before {
+  animation-duration: 8s;
+  filter: blur(var(--blur-amount)) contrast(var(--contrast-amount)) saturate(1.6) brightness(1.12);
+}
+
+.siri-orb[data-etat="confirmation"]::before {
+  animation-duration: 2s;
+  filter: blur(var(--blur-amount)) contrast(var(--contrast-amount)) saturate(1.4) brightness(1.15);
 }
 
 .siri-orb::after {

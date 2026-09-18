@@ -44,6 +44,8 @@ import { fileURLToPath } from "node:url";
 
 import pg from "pg";
 
+import { garantirBaseLocale } from "./lib/base-locale.mjs";
+
 const RACINE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 /**
@@ -109,6 +111,42 @@ function chargerEnv() {
 
 chargerEnv();
 
+/**
+ * ═══ POURQUOI `--allow-degraded` A ÉTÉ RETIRÉ ══════════════════════════════
+ *
+ * Il laissait `pnpm dev` démarrer « sain » alors que PostgreSQL manquait :
+ * le navigateur atteignait Next.js, puis CHAQUE `/api/auth/sign-in` rendait
+ * 503 et `getInstallationStatus` « indisponible » — la panne LM54.3, qui ne
+ * se voyait qu'À L'ÉCRAN, jamais au terminal. Un état de service « normal »
+ * avec la dépendance obligatoire absente est exactement ce qu'un contrôle
+ * de démarrage existe pour empêcher.
+ *
+ * Le remplacement est le contraire du silence : AVANT de refuser, on tente
+ * de RÉPARER la cause la plus fréquente (Docker Desktop pas encore prêt au
+ * boot, conteneur arrêté) via `garantirBaseLocale()`, qui attend le démon,
+ * démarre le conteneur et prouve `pg_isready`. Si la base ne PEUT pas être
+ * prête, le refus nomme l'organe et la conduite à tenir.
+ *
+ * `MINDCARE_SKIP_DB_WAIT=1` (CI sans Docker, tests hors ligne) SAUTE
+ * L'ATTENTE mais garde le contrôle complet : la connexion doit alors
+ * réussir au premier essai, sinon refus. Rien ne passe en silence.
+ */
+const SKIP_DB_WAIT = process.env.MINDCARE_SKIP_DB_WAIT === "1";
+
+/**
+ * Les erreurs de TRANSPORT (le serveur n'est pas joignable) par opposition
+ * aux erreurs PostgreSQL (le serveur a répondu « non »). Seules les premières
+ * justifient d'attendre ; les secondes sont un refus ferme immédiat.
+ */
+function estConnexionRefusee(e) {
+  if (e?.code === "ECONNREFUSED") return true;
+  const msg = String(e?.message ?? "");
+  return msg.includes("ECONNREFUSED");
+}
+
+/** Le nombre de tentatives de connexion quand on n'attend pas la base. */
+const TENTATIVES_SANS_ATTENTE = 2;
+
 function refuser(titre, detail, lignes = []) {
   console.error("");
   console.error("╔══════════════════════════════════════════════════════════════╗");
@@ -147,16 +185,92 @@ if (attendues.length === 0) {
 // l'application, c'est une sonde.
 const client = new pg.Client({ connectionString: url, connectionTimeoutMillis: 5000 });
 
-try {
-  await client.connect();
-} catch (e) {
+/**
+ * ═══ ATTENDRE QUE LA DÉPENDANCE OBLIGATOIRE SOIT PRÊTE ══════════════════════
+ *
+ * Docker Desktop démarre au boot du PC et peut prendre des dizaines de
+ * secondes ; le conteneur `mc-p3` y est attaché mais peut être arrêté.
+ * Chacun de ces états produisait un ECONNREFUSED au premier essai — et,
+ * avec l'ancien `--allow-degraded`, un démarrage « sain » d'une application
+ * cassée.
+ *
+ * On ne lance donc le contrôle de schéma QU'UNE FOIS la base prouvée prête :
+ *   1. attendre/garantir le cycle de vie local (démon, conteneur,
+ *      pg_isready) — UNIQUEMENT si l'URL vise le conteneur de développement
+ *      `mc-p3` (127.0.0.1:55441). Le paquet installé, lui, parle au service
+ *      Windows PostgreSQL (port 54333) que l'orchestrateur Electron gère
+ *      par ses propres états : y chercher Docker serait chercher le mauvais
+ *      organe ;
+ *   2. tant que la connexion applicative échoue par TRANSPORT, retenter —
+ *      c'est la fenêtre de course entre « pg_isready dit oui » et « la
+ *      première connexion applicative passe » ;
+ *   3. une erreur PostgreSQL (rôle, mot de passe, base absente) est un
+ *      refus ferme immédiat : attendre ne réparerait rien.
+ */
+function viseConteneurDev(u) {
+  try {
+    const parsed = new URL(u);
+    return (
+      (parsed.hostname === "127.0.0.1" || parsed.hostname === "localhost") &&
+      parsed.port === "55441"
+    );
+  } catch {
+    return false;
+  }
+}
+
+async function connecterAvecAttente() {
+  if (!SKIP_DB_WAIT && viseConteneurDev(url)) {
+    const garantie = await garantirBaseLocale(url);
+    if (!garantie.ok) {
+      refuser(
+        `La base locale n'a pas pu être rendue prête (étape : ${garantie.etape}).`,
+        garantie.action ?? garantie.erreur ?? "Cause inconnue.",
+      );
+    }
+  }
+
+  const budgetMs = SKIP_DB_WAIT ? 5_000 : 20_000;
+  const echeance = Date.now() + budgetMs;
+  let derniereErreur;
+  for (let tentative = 1; ; tentative += 1) {
+    try {
+      await client.connect();
+      return; // prêt — le contrôle de schéma suit
+    } catch (e) {
+      derniereErreur = e;
+      if (!estConnexionRefusee(e)) break; // refus PostgreSQL : ferme, ne retente pas
+      if (Date.now() >= echeance) break;
+      if (SKIP_DB_WAIT && tentative >= TENTATIVES_SANS_ATTENTE) break;
+      await new Promise((r) => setTimeout(r, 500));
+    }
+  }
+
   // Volontairement sans le message brut : il contient l'URL de connexion,
   // donc le mot de passe de la base.
   refuser(
     "La base de donnees ne repond pas.",
-    `Verifier que le service PostgreSQL est demarre. (${e?.code ?? e?.name ?? "erreur"})`,
+    `Verifier que le service PostgreSQL est demarre. (${
+      derniereErreur?.code ?? derniereErreur?.name ?? "erreur"
+    })`,
+    [
+      // Le conseil suit la CIBLE : mc-p3/Docker en développement, service
+      // Windows PostgreSQL dans le paquet installé (port 54333, géré par
+      // l'orchestrateur Electron — cf. electron/main/orchestrateur.ts).
+      ...(viseConteneurDev(url)
+        ? [
+            "Le conteneur de developpement est mc-p3 (Docker, 127.0.0.1:55441).",
+            "Lancer Docker Desktop puis relancer, ou verifier : docker ps -a --filter name=mc-p3",
+          ]
+        : ["Le service Windows PostgreSQL (mindcare-postgres) doit etre demarre."]),
+      ...(SKIP_DB_WAIT
+        ? ["MINDCARE_SKIP_DB_WAIT=1 est pose : aucune attente de base locale n'a eu lieu."]
+        : []),
+    ],
   );
 }
+
+await connecterAvecAttente();
 
 try {
   /**

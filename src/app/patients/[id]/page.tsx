@@ -67,6 +67,7 @@ import {
   definirPatientActif,
   effacerPatientActif,
 } from "@/services/patient-actif";
+import { purgerContexteSession } from "@/services/conversation";
 import { genererResumeCas } from "@/services/resume-cas";
 import { startConsultation } from "@/services/consultations";
 import type { SourceResume } from "@/services/patients";
@@ -176,13 +177,34 @@ export default function PageFichePatient(): React.JSX.Element {
   }, [espace]);
 
   function deconnecter(): void {
-    effacerPatientActif();
+    // Phase 3 : la cible Jarvis et le contexte d'outil meurent avec la
+    // session — une reconnexion ne doit jamais réutiliser le patient d'avant.
+    purgerContexteSession();
     void signOut().then(() => {
       router.replace("/connexion");
     });
   }
 
   function ouvrirModification(): void {
+    /**
+     * ⚠️ ON RELIT LE DOSSIER, ET L'OPTIMISATION D'AVANT NE TIENT PLUS.
+     *
+     * Ce bloc reconstruisait le `Patient` depuis `espace` pour économiser un
+     * appel — « `getPatient` n'était qu'une relecture de ce que `espace` porte
+     * déjà ». Depuis 088, c'est faux : `marital_status` vit sur la table, donc
+     * `get_patient` (SETOF app.patients) le rend, tandis que le contrat jsonb
+     * de `get_patient_workspace` (047/048) ne le porte pas.
+     *
+     * Reconstruire ici afficherait « non renseignée » à une praticienne dont le
+     * dossier dit « mariée » — un champ faux dans un FORMULAIRE, c'est-à-dire à
+     * un endroit où il sera relu puis réenregistré. L'appel supplémentaire est
+     * porté par un geste explicite (« Modifier »), jamais par l'ouverture de
+     * l'écran : le budget d'ouverture d'ADR-PERF §2 reste à un appel.
+     */
+    if (espace === null || espace === undefined) {
+      setErreurModification(fr.patients.ficheIntrouvable);
+      return;
+    }
     setErreurModification(undefined);
     void getPatient(id).then((result) => {
       if (!result.ok) {

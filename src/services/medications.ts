@@ -89,6 +89,65 @@ export async function searchMedications(
   return ok(parsed.data.map(toItem));
 }
 
+const VARIANT_ROW = z.object({
+  id: z.string(),
+  raw_name: z.string(),
+  inn: z.string(),
+  brand_name: z.string().nullable(),
+  form: z.string().nullable(),
+  strength: z.string().nullable(),
+});
+
+export interface MedicationVariant {
+  readonly id: string;
+  readonly rawName: string;
+  readonly inn: string;
+  readonly brandName: string | null;
+  readonly form: string | null;
+  readonly strength: string | null;
+}
+
+/**
+ * Autres dosages catalogue du même médicament (même DCI, même forme quand
+ * connue) — porte `app.get_medication_variants` (082). Peuple la liste
+ * déroulante de changement de dose ; `medication_id` du traitement reste
+ * immuable, cette porte ne sert qu'à choisir un TEXTE de dose existant.
+ */
+export async function getMedicationVariants(
+  medicationId: string,
+): Promise<Result<readonly MedicationVariant[]>> {
+  const result = await db().rpc<unknown>("get_medication_variants", {
+    p_medication_id: medicationId,
+  });
+  if (!result.ok) {
+    log.error("medications.dosages", logFieldsFor(result.error));
+    return err(result.error);
+  }
+  const parsed = z.array(VARIANT_ROW).safeParse(result.data);
+  if (!parsed.success) {
+    log.error("medications.dosages", {
+      code: "regle-metier",
+      context: `zod:${parsed.error.issues.map((i) => i.path.join(".")).join(",")}`,
+    });
+    return err({
+      code: "regle-metier",
+      message: "Réponse catalogue incohérente.",
+      technical: "schema",
+      context: "rpc:get_medication_variants",
+    });
+  }
+  return ok(
+    parsed.data.map((r) => ({
+      id: r.id,
+      rawName: r.raw_name,
+      inn: r.inn,
+      brandName: r.brand_name,
+      form: r.form,
+      strength: r.strength,
+    })),
+  );
+}
+
 export async function getMedication(
   id: string,
 ): Promise<Result<MedicationCatalogItem | null>> {

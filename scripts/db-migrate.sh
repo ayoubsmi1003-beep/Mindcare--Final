@@ -163,6 +163,37 @@ if [ $rc_versions -ne 0 ] && printf '%s' "$sortie_versions" | grep -qE '42P01|do
   applied=""
 fi
 
+# ---------------------------------------------------------------------------
+# Le bootstrap de compatibilité a-t-il été joué ?
+# ---------------------------------------------------------------------------
+# Sur un PostgreSQL NU, les migrations ne peuvent pas s'appliquer telles quelles :
+# 003 référence `auth.users`, 35 fichiers appellent `auth.uid()`, et 001 accorde
+# des droits à `anon`/`authenticated`/`service_role`. Ces objets venaient de la
+# plateforme Supabase ; en local ils viennent de
+# `supabase/bootstrap/000_platform_compat.sql`, joué UNE FOIS par l'installateur.
+#
+# SANS CE CONTRÔLE, L'ÉCHEC SERAIT TARDIF ET TROMPEUR : 001 et 002 passeraient,
+# puis 003 échouerait sur « relation auth.users does not exist ». On aurait alors
+# une base à moitié migrée et un message qui accuse une migration parfaitement
+# correcte. Refuser AVANT d'écrire coûte un message ; s'arrêter au milieu coûte
+# un diagnostic.
+#
+# `to_regprocedure` rend NULL au lieu de lever quand la fonction n'existe pas :
+# c'est exactement le test « est-elle là ? » sans avoir à intercepter d'erreur.
+sortie_boot=$(psql_run -qtAX -c "\"SELECT to_regprocedure('auth.uid()') IS NOT NULL\"" 2>&1)
+if [ $? -ne 0 ] || ! printf '%s' "$sortie_boot" | tr -d '\r' | grep -q '^t$'; then
+  echo "ROUGE — le bootstrap de compatibilité n'a pas été joué sur cette base."
+  echo
+  echo "      auth.uid() est introuvable. Les migrations 003 et suivantes"
+  echo "      échoueraient, en laissant la base à moitié migrée."
+  echo
+  echo "      Jouer d'abord, une seule fois :"
+  echo "        psql \"\$DATABASE_URL\" -v ON_ERROR_STOP=1 -f supabase/bootstrap/000_platform_compat.sql"
+  echo
+  echo "VERDICT : ROUGE — rien n'a été écrit."
+  exit 1
+fi
+
 if [ $rc_versions -ne 0 ]; then
   echo "ROUGE — impossible de lire app.schema_migrations."
   echo

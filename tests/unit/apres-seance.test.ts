@@ -30,7 +30,9 @@ vi.mock("../../src/services/log", () => ({
   log: { warn: vi.fn(), info: vi.fn(), error: vi.fn() },
 }));
 
-const { enchainerApresSeance } = await import("../../src/services/apres-seance");
+const { cleConfirmationApresSeance, enchainerApresSeance } = await import(
+  "../../src/services/apres-seance"
+);
 
 const OK_ANALYSE = {
   ok: true as const,
@@ -132,5 +134,71 @@ describe("sans patient", () => {
     expect(genererResumeCas).not.toHaveBeenCalled();
     expect(suivi.analyse).toBe("ignoree");
     expect(suivi.resume).toBe("ignoree");
+  });
+});
+
+describe("séance sans notes (`regle-metier` n'est pas un échec)", () => {
+  it("marque l'analyse `ignoree` mais génère QUAND MÊME le résumé", async () => {
+    // La route rend `regle-metier` quand `raw_notes` est vide (SOAP seul, ou
+    // clôture sans notes — gelé à la clôture, mig. 026, rien à « relancer »).
+    // Le résumé (`build_case_context`, 068) agrège le reste du dossier : le
+    // sauter laisserait un résumé périmé affiché comme à jour.
+    analyzeSession.mockResolvedValue(ECHEC("regle-metier", "Aucune note à analyser pour cette séance."));
+    genererResumeCas.mockResolvedValue(OK_RESUME);
+
+    const suivi = await enchainerApresSeance("c1", "p1");
+
+    expect(genererResumeCas).toHaveBeenCalledTimes(1);
+    expect(suivi.analyse).toBe("ignoree");
+    expect(suivi.resume).toBe("faite");
+    expect(suivi.message).toBeNull();
+  });
+
+  it("rapporte l'échec du résumé quand il suit un sans-objet", async () => {
+    analyzeSession.mockResolvedValue(ECHEC("regle-metier", "Aucune note à analyser pour cette séance."));
+    genererResumeCas.mockResolvedValue(ECHEC("hors-ligne", "Le réseau est indisponible."));
+
+    const suivi = await enchainerApresSeance("c1", "p1");
+
+    expect(suivi.analyse).toBe("ignoree");
+    expect(suivi.resume).toBe("echouee");
+    expect(suivi.message).toBe("Le réseau est indisponible.");
+  });
+});
+
+describe("la confirmation affichée pour chaque état", () => {
+  // La correspondance état → clé `fr.feedback.apresSeance` vivait inline dans
+  // `clore()` : six branches non testées, dont deux portent le correctif
+  // `regle-metier`. Chaque ligne ci-dessous est un état que l'écran traverse
+  // réellement après une clôture.
+  const cas: ReadonlyArray<readonly [string, string | null, string | null]> = [
+    ["analyse en cours", "en-cours/attente", "analyseEnCours"],
+    ["analyse en panne", "echouee/ignoree", "analyseEchouee"],
+    ["sans objet, résumé pas encore parti", "ignoree/attente", "analyseSansObjet"],
+    ["résumé en cours (avec analyse)", "faite/en-cours", "resumeEnCours"],
+    ["résumé en cours (sans objet)", "ignoree/en-cours", "resumeEnCours"],
+    ["résumé en panne", "faite/echouee", "resumeEchoue"],
+    ["tout à jour", "faite/faite", "terminee"],
+    ["sans objet puis résumé à jour", "ignoree/faite", "analyseSansObjet"],
+    ["état initial jamais émis", "attente/attente", null],
+  ];
+  it.each(cas)("%s → %s", (_libelle, etat, attendue) => {
+    const [analyse, resume] = (etat as string).split("/");
+    expect(
+      cleConfirmationApresSeance({
+        analyse: analyse as "attente" | "en-cours" | "faite" | "echouee" | "ignoree",
+        resume: resume as "attente" | "en-cours" | "faite" | "echouee" | "ignoree",
+        message: null,
+      }),
+    ).toBe(attendue);
+  });
+
+  it("sans patient (`ignoree`/`ignoree`) : garde le message courant", () => {
+    // `clore()` a posé « Séance terminée. » avant l'enchaînement : un retour
+    // non-`null` ici l'écraserait — et un retour `analyseSansObjet` mentirait,
+    // le résumé n'ayant même pas été tenté.
+    expect(
+      cleConfirmationApresSeance({ analyse: "ignoree", resume: "ignoree", message: null }),
+    ).toBeNull();
   });
 });

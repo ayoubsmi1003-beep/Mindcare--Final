@@ -78,6 +78,14 @@ function registreScripte(nom, reponse, { lent = false } = {}) {
           nom,
           description: "capacité de test",
           budgetOctets: 10_000,
+          // ⚠️ CE CHAMP N'EST PAS DÉCORATIF. `estPatientSpecifique` le lit pour
+          // savoir si la porte d'ambiguïté doit couvrir la capacité. Il
+          // manquait ici, et la première version de cette porte levait une
+          // `TypeError` qui rompait le tour entier — un faux incomplet a donc
+          // trouvé un vrai défaut. La fonction répond désormais « oui » en
+          // l'absence de déclaration (repli sûr), et ce faux déclare ce que le
+          // vrai registre déclare.
+          champsAttendus: "query",
           lancer: async (args, ctx) => {
             appels.push(args);
             if (lent) {
@@ -210,14 +218,24 @@ console.log("\nB3 — les budgets se déclenchent et Jarvis AVOUE");
     r.ok ? "terminé" : "ERREUR",
   );
   verdict(
-    `MAX_TOURS_OUTIL (${BUDGETS.MAX_TOURS_OUTIL}) borne les allers au modèle`,
-    vus.length === BUDGETS.MAX_TOURS_OUTIL,
-    `${vus.length} appels`,
+    `les EXÉCUTIONS sont bornées à MAX_TOURS_OUTIL (${BUDGETS.MAX_TOURS_OUTIL})`,
+    appels.length === BUDGETS.MAX_TOURS_OUTIL,
+    `${appels.length} exécution(s)`,
   );
   verdict(
-    "la capacité n'est pas appelée plus que les itérations",
-    appels.length <= BUDGETS.MAX_TOURS_OUTIL,
-    `${appels.length} appels`,
+    "UN seul appel final de verbalisation au plus",
+    vus.length === BUDGETS.MAX_TOURS_OUTIL + 1,
+    `${vus.length} appels transport`,
+  );
+  verdict(
+    "l'appel final porte tous les résultats au modèle",
+    vus[BUDGETS.MAX_TOURS_OUTIL]?.resultatsOutils?.length === BUDGETS.MAX_TOURS_OUTIL,
+    `${vus[BUDGETS.MAX_TOURS_OUTIL]?.resultatsOutils?.length ?? 0} résultat(s)`,
+  );
+  verdict(
+    "l'appel final ne réécrit pas la demande",
+    vus[BUDGETS.MAX_TOURS_OUTIL]?.persisterDemande === false,
+    String(vus[BUDGETS.MAX_TOURS_OUTIL]?.persisterDemande),
   );
   verdict(
     "Jarvis AVOUE au lieu d'inventer",
@@ -351,16 +369,16 @@ console.log("\nB8 — interruption : ce qui est reçu reste, marqué honnêtemen
 console.log("\nB9 — cible unique : changer de patient jette le contexte précédent");
 {
   reinitialiserCarte();
-  definirCible({ id: "uuid-nadia", libelle: "BELKACEM Nadia", numeroDossier: "D-1", origine: "ecran" });
-  const refA = carte().patient("uuid-nadia", "BELKACEM Nadia");
-  const changeA = definirCible({ id: "uuid-karim", libelle: "MEZIANE Karim", numeroDossier: "D-2", origine: "ecran" });
+  definirCible({ id: "uuid-mahmoud-saidi-djilali", libelle: "DJILALI Karim", numeroDossier: "D-1", origine: "ecran" });
+  const refA = carte().patient("uuid-mahmoud-saidi-djilali", "DJILALI Karim");
+  const changeA = definirCible({ id: "uuid-mahmoud-saidi", libelle: "SAIDI Mahmoud", numeroDossier: "D-2", origine: "ecran" });
   verdict("changer de patient est signalé comme un CHANGEMENT", changeA === true, "true");
   verdict(
     "l'ancien jeton ne résout plus rien après purge",
     carte().resoudre(refA) === null,
     "carte purgée",
   );
-  const refB = carte().patient("uuid-karim", "MEZIANE Karim");
+  const refB = carte().patient("uuid-mahmoud-saidi", "SAIDI Mahmoud");
   verdict(
     "aucun nom du patient précédent ne subsiste dans la carte",
     !carte().identites().some((i) => /nadia|belkacem/i.test(i)),
@@ -368,10 +386,10 @@ console.log("\nB9 — cible unique : changer de patient jette le contexte préc�
   );
   verdict(
     "le rendu du nouveau jeton donne le NOUVEAU patient",
-    carte().rendre(`{{${refB}}}`) === "MEZIANE Karim",
+    carte().rendre(`{{${refB}}}`) === "SAIDI Mahmoud",
     carte().rendre(`{{${refB}}}`),
   );
-  const rappel = definirCible({ id: "uuid-karim", libelle: "MEZIANE Karim", numeroDossier: "D-2", origine: "ecran" });
+  const rappel = definirCible({ id: "uuid-mahmoud-saidi", libelle: "SAIDI Mahmoud", numeroDossier: "D-2", origine: "ecran" });
   verdict("redéfinir la MÊME cible ne purge pas inutilement", rappel === false, "false");
   effacerCible();
 }

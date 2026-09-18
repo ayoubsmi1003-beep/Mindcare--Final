@@ -47,6 +47,11 @@ import type {
   TimelineEvent,
   TimelineLabelKey,
 } from "./patients";
+import type {
+  PatientTreatments,
+  Treatment,
+  TreatmentStatus,
+} from "./patient-treatments";
 
 // ═══════════════════════════════════════════════════════════════════════════
 // 1 · PROVENANCE — d'où vient chaque fait, et quand
@@ -340,6 +345,54 @@ export interface SourceCreneau {
   readonly practitionerName?: string | null;
 }
 
+/**
+ * ═══ L'HEURE DU CABINET, PAS CELLE DE POSTGRES ═══
+ *
+ * ⚠️ DÉFAUT MESURÉ AU NAVIGATEUR LE 2026-09-06, ET IL DÉCALAIT LES RENDEZ-VOUS
+ * D'UNE HEURE DANS LA BOUCHE D'ALEXA.
+ *
+ * La base rend l'instant absolu : `2026-09-06T16:41:00+00:00`. L'écran Agenda
+ * l'affiche « 17:41 – 18:11 » — il formate avec `Intl` en `Africa/Algiers`,
+ * comme tout le reste de l'interface. La projection d'Alexa, elle, envoyait la
+ * chaîne BRUTE au modèle, qui en lisait les chiffres du cadran et annonçait
+ * « 16:41 ». Deux écrans du même produit donnaient deux heures pour un même
+ * rendez-vous, et c'est Alexa qui avait tort.
+ *
+ * ⚠️ CE N'EST PAS « AJOUTER UNE HEURE ». On ne déplace pas l'instant : on
+ * l'EXPRIME dans le calendrier du cabinet, offset compris
+ * (`2026-09-06T17:41:00+01:00`). L'instant est rigoureusement le même — un
+ * `Date.parse` des deux formes rend la même valeur, ce qui laisse `dureeMinutes`
+ * et toute comparaison inchangés. Ce qui change, c'est que le cadran lu
+ * naïvement est désormais le BON.
+ *
+ * Le décalage est CALCULÉ, jamais écrit en dur à `+01:00` : l'Algérie n'observe
+ * pas l'heure d'été aujourd'hui, mais un décalage codé en dur est une hypothèse
+ * silencieuse sur une décision politique. Même technique que `decalageAlger`
+ * dans `jarvis-contexte.ts` — une seule façon de faire dans le dépôt.
+ *
+ * Conforme à la règle que `jarvis-contexte.ts` énonce déjà : « LE MODÈLE NE
+ * CALCULE AUCUNE DATE ». Lui demander de convertir un fuseau, c'était lui
+ * demander un calcul de date — et il se trompait.
+ */
+const FUSEAU_CABINET = "Africa/Algiers";
+
+export function enHeureCabinet(iso: string): string {
+  const instant = Date.parse(iso);
+  // Une chaîne illisible est rendue TELLE QUELLE : deviner une heure serait
+  // fabriquer une donnée clinique.
+  if (Number.isNaN(instant)) return iso;
+
+  // `sv-SE` rend « YYYY-MM-DD HH:mm:ss » — le seul format local qui soit déjà
+  // trié et parsable sans réassemblage manuel.
+  const murale = new Date(instant).toLocaleString("sv-SE", { timeZone: FUSEAU_CABINET });
+  const minutes = Math.round((Date.parse(`${murale.replace(" ", "T")}Z`) - instant) / 60_000);
+  const signe = minutes < 0 ? "-" : "+";
+  const abs = Math.abs(minutes);
+  const hh = String(Math.floor(abs / 60)).padStart(2, "0");
+  const mm = String(abs % 60).padStart(2, "0");
+  return `${murale.replace(" ", "T")}${signe}${hh}:${mm}`;
+}
+
 /** Durée en minutes — lue si la source la porte, calculée sinon. */
 function dureeMinutes(e: SourceCreneau): number {
   if (typeof e.durationMinutes === "number") return e.durationMinutes;
@@ -366,15 +419,18 @@ export function projeterCreneau(e: SourceCreneau, carte: CarteIdentite): SafeCre
   // 047 l'exclut déjà de la chronologie pour la même raison — on ne le
   // réintroduit pas par une autre porte.
   return {
-    ref: carte.rendezVous(e.id, e.startsAt),
+    ref: carte.rendezVous(e.id, enHeureCabinet(e.startsAt)),
     ...(patient === undefined ? {} : { patient }),
     ...(praticien === undefined ? {} : { praticien }),
-    debut: e.startsAt,
-    fin: e.endsAt,
+    debut: enHeureCabinet(e.startsAt),
+    fin: enHeureCabinet(e.endsAt),
+    // `dureeMinutes` reste calculé sur les instants d'ORIGINE : la conversion
+    // ne déplace rien, mais lire la durée sur les chaînes converties inviterait
+    // le prochain lecteur à croire qu'elle le pourrait.
     dureeMinutes: dureeMinutes(e),
     statut: e.status,
     type: e.kind,
-    arriveA: e.arrivedAt,
+    arriveA: e.arrivedAt === null ? null : enHeureCabinet(e.arrivedAt),
   };
 }
 
@@ -405,10 +461,10 @@ export function projeterWorkspace(
   ): SafeCreneau | null => {
     if (r === null) return null;
     return {
-      ref: carte.rendezVous(r.id, r.startsAt),
+      ref: carte.rendezVous(r.id, enHeureCabinet(r.startsAt)),
       patient: ref,
-      debut: r.startsAt,
-      fin: r.endsAt,
+      debut: enHeureCabinet(r.startsAt),
+      fin: enHeureCabinet(r.endsAt),
       dureeMinutes: Math.max(
         0,
         Math.round((Date.parse(r.endsAt) - Date.parse(r.startsAt)) / 60_000),
@@ -540,7 +596,35 @@ export function projeterRecetteDuJour(
 ): SafeFinanceContext {
   return {
     periode,
-    encaisseDzd: r.totalDzd,
+    /**
+     * ⚠️ `total_dzd` N'EST PAS L'ENCAISSÉ — MESURÉ AU NAVIGATEUR LE 2026-09-06.
+     *
+     * `app.day_revenue` rend `total_dzd` = SUM(amount_dzd) sur TOUS les
+     * paiements du jour, encaissés ou non, et `attente_dzd` = la part dont
+     * `collected_at` est nul. Le champ `encaisseDzd` recevait `total_dzd` : il
+     * contenait donc DÉJÀ l'attente, et Jarvis répondait « 74 000 DA encaissés
+     * aujourd'hui » là où `app.dashboard_today` — qui filtre pourtant les mêmes
+     * lignes sur `collected_at IS NOT NULL`, aux mêmes bornes Africa/Algiers —
+     * comptait 27 000. Les 47 000 d'écart étaient l'impayé, annoncé comme de
+     * l'argent en caisse.
+     *
+     * C'est mot pour mot le défaut que le contrat de `SafeFinanceContext`
+     * interdit vingt lignes plus haut : « les fusionner ici ferait dire à Jarvis
+     * “vous avez fait 40 000 DA aujourd'hui” alors que 15 000 n'ont pas été
+     * encaissés ». Le contrat avait raison ; c'est l'implémentation qui a
+     * dévié. On corrige l'implémentation, jamais le contrat.
+     *
+     * La soustraction est EXACTE, pas une approximation : `attente_dzd` est le
+     * sous-ensemble complémentaire exact de `total_dzd` sur les mêmes lignes
+     * (`collected_at IS NULL` contre `IS NOT NULL`), donc
+     * `total − attente = SUM FILTER (collected_at IS NOT NULL)` — la définition
+     * même de l'encaissé, et la valeur que `dashboard_today` rend déjà. Entiers
+     * en dinars, aucun flottant (ADR-018).
+     *
+     * ⚠️ ON NE REND PAS LES DEUX CHIFFRES ÉGAUX. Ils mesurent deux choses
+     * différentes et doivent continuer de différer : facturé ≠ encaissé.
+     */
+    encaisseDzd: r.totalDzd - r.attenteDzd,
     enAttenteDzd: r.attenteDzd,
     enAttenteNombre: r.attenteNombre,
     seances: r.seances,
@@ -661,10 +745,227 @@ export function projeterConsultation(
 }
 
 /**
+ * L'état du système local tel que le modèle a le droit de le connaître.
+ *
+ * ⚠️ AUCUNE DONNÉE PATIENT, AUCUN CHIFFRE FINANCIER, AUCUN IDENTIFIANT.
+ * Un environnement, deux horodatages et un compte d'entrées de carte — le
+ * compte seul, jamais le contenu : la carte vit en mémoire locale et ne
+ * franchit jamais la frontière (`jarvis-identite.ts`).
+ */
+export interface SafeSystemContext {
+  readonly environnement: "cloud-dev" | "self-hosted";
+  /** `YYYY-MM-DD`, calendrier du cabinet — jamais recalculé par le modèle. */
+  readonly aujourdHui: string;
+  /** Instant de la lecture, ISO 8601. */
+  readonly maintenant: string;
+  /** Nombre d'entrées frappées sur la carte du tour — un compte, pas un contenu. */
+  readonly entreesCarte: number;
+  readonly provenance: readonly SourceContexte[];
+}
+
+export function projeterSysteme(params: {
+  readonly environnement: "cloud-dev" | "self-hosted";
+  readonly aujourdHui: string;
+  readonly maintenant: string;
+  readonly entreesCarte: number;
+}): SafeSystemContext {
+  return {
+    environnement: params.environnement,
+    aujourdHui: params.aujourdHui,
+    maintenant: params.maintenant,
+    entreesCarte: params.entreesCarte,
+    provenance: [source("deployment.getDeploymentEnvironment")],
+  };
+}
+
+/**
  * Mesure la taille RÉELLE d'un contexte, pour les budgets du §6.1 du plan.
  * Sérialisation exacte plutôt qu'une estimation par nombre de champs : c'est
  * la charge sérialisée qui part, c'est donc elle qu'on borne.
  */
 export function mesurerOctets(contexte: unknown): number {
   return new TextEncoder().encode(JSON.stringify(contexte ?? null)).length;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// 4 · PHASE 2 ALEXA — médicaments, historique des séances, finance patient
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * Un traitement tel que le modèle a le droit de le connaître.
+ *
+ * ⚠️ `instructions` est ÉCARTÉ : texte libre saisi par la praticienne, il
+ * peut nommer un tiers ou porter une consigne nominative. La désignation, la
+ * dose et la fréquence suffisent à répondre « que prend ce patient ? ».
+ */
+export interface SafeTraitement {
+  readonly designation: string | null;
+  readonly dose: string | null;
+  readonly frequence: string | null;
+  readonly statut: TreatmentStatus;
+  readonly debuteLe: string;
+  readonly arreteLe: string | null;
+}
+
+function projeterTraitement(t: Treatment): SafeTraitement {
+  return {
+    designation: t.medicationRaw || t.brandName || t.inn || null,
+    dose: t.dose,
+    frequence: t.frequency,
+    statut: t.status,
+    debuteLe: t.startDate,
+    arreteLe: t.stoppedAt,
+  };
+}
+
+/**
+ * EN COURS vs HISTORIQUE — deux blocs, jamais fondus.
+ *
+ * `null` = domaine clinique hors droit. La décision vient de la BASE
+ * (`can_see_clinical` dans `get_patient_workspace`, propagée par le `null`
+ * de forme) : ici on la recopie, on ne la reteste pas (règle 4).
+ */
+export interface SafeMedicamentsContext {
+  readonly patient: RefPatient;
+  readonly enCours: {
+    readonly actifs: readonly SafeTraitement[];
+    readonly enPause: readonly SafeTraitement[];
+  } | null;
+  readonly historique: {
+    readonly arretesRecents: readonly SafeTraitement[];
+    readonly dernierePrescriptionLe: string | null;
+    readonly nombrePrescriptions: number;
+    /**
+     * TOUJOURS `true` : `get_patient_workspace` ne détaille que la DERNIÈRE
+     * prescription, et aucune porte n'expose l'historique complet. Le modèle
+     * doit le savoir pour ne pas conclure « il n'a jamais pris autre chose ».
+     */
+    readonly historiqueIncomplet: boolean;
+  } | null;
+  readonly provenance: readonly SourceContexte[];
+}
+
+export function projeterMedicaments(
+  patient: RefPatient,
+  traitements: PatientTreatments,
+  historique: {
+    readonly dernierePrescriptionLe: string | null;
+    readonly nombrePrescriptions: number;
+  } | null,
+): SafeMedicamentsContext {
+  const provenance: readonly SourceContexte[] = [
+    source("app.get_patient_treatments"),
+    source("app.get_patient_workspace"),
+  ];
+  if (historique === null) {
+    return { patient, enCours: null, historique: null, provenance };
+  }
+  return {
+    patient,
+    enCours: {
+      actifs: traitements.actifs.map(projeterTraitement),
+      enPause: traitements.enPause.map(projeterTraitement),
+    },
+    historique: {
+      arretesRecents: traitements.arretesRecents.map(projeterTraitement),
+      dernierePrescriptionLe: historique.dernierePrescriptionLe,
+      nombrePrescriptions: historique.nombrePrescriptions,
+      historiqueIncomplet: true,
+    },
+    provenance,
+  };
+}
+
+/**
+ * Retire le contenu des notes NON SIGNÉES d'un historique de séances.
+ *
+ * Un brouillon n'est pas un fait du dossier : le modèle ne doit ni le citer
+ * ni le résumer. La séance reste listée (date, type, clôture) — seule la
+ * charge clinique disparaît.
+ */
+export function sansNotesNonSignees(
+  seances: readonly SafeConsultationContext[],
+): SafeConsultationContext[] {
+  return seances.map((s) =>
+    s.note !== null && s.note.signee ? s : { ...s, note: null },
+  );
+}
+
+export interface SafeHistoriqueSeances {
+  readonly patient: RefPatient;
+  readonly seances: readonly SafeConsultationContext[];
+  readonly tronque: boolean;
+  readonly provenance: readonly SourceContexte[];
+}
+
+export function projeterHistoriqueSeances(
+  patient: RefPatient,
+  seances: readonly SafeConsultationContext[],
+  tronque = false,
+): SafeHistoriqueSeances {
+  return {
+    patient,
+    seances,
+    tronque,
+    provenance: [source("app.list_patient_timeline"), source("app.get_consultation")],
+  };
+}
+
+/**
+ * Une séance et son paiement, réduits au nécessaire : quand, combien,
+ * encaissé ou non. Ni numéro de reçu (métadonnée identifiante et citable),
+ * ni nom — le patient est le jeton du contexte.
+ */
+export interface SafeFinancePatientSeance {
+  readonly le: string;
+  /** `null` = tarif non fixé (ou séance non visible) — compté à part, jamais dans les totaux. */
+  readonly montantDzd: number | null;
+  readonly encaisse: boolean;
+  readonly creeLe: string | null;
+}
+
+export interface SafeFinancePatient {
+  readonly patient: RefPatient;
+  readonly seances: readonly SafeFinancePatientSeance[];
+  /** Sommes ENTIÈRES calculées ici, en local — jamais par le modèle. */
+  readonly totalEncaisseDzd: number;
+  readonly totalEnAttenteDzd: number;
+  readonly nombreEnAttente: number;
+  readonly sansTarifNombre: number;
+  /** `false` = des séances plus anciennes existent : les totaux sont partiels, et dits partiels. */
+  readonly complet: boolean;
+  readonly provenance: readonly SourceContexte[];
+}
+
+export function projeterFinancePatient(
+  patient: RefPatient,
+  seances: readonly SafeFinancePatientSeance[],
+  complet: boolean,
+): SafeFinancePatient {
+  let encaisse = 0;
+  let attente = 0;
+  let nombreAttente = 0;
+  let sansTarif = 0;
+  for (const s of seances) {
+    if (s.montantDzd === null) {
+      sansTarif++;
+      continue;
+    }
+    if (s.encaisse) {
+      encaisse += s.montantDzd;
+    } else {
+      attente += s.montantDzd;
+      nombreAttente++;
+    }
+  }
+  return {
+    patient,
+    seances,
+    totalEncaisseDzd: encaisse,
+    totalEnAttenteDzd: attente,
+    nombreEnAttente: nombreAttente,
+    sansTarifNombre: sansTarif,
+    complet,
+    provenance: [source("app.list_patient_timeline"), source("app.get_consultation_payment")],
+  };
 }

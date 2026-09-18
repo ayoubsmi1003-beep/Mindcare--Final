@@ -29,7 +29,8 @@
 import { useEffect, useState } from "react";
 
 import { fr } from "@/i18n/fr";
-import { Icone } from "./ui/Icones";
+import { SiriOrb } from "./ui/siri-orb";
+import { Bouton } from "./ui/Bouton";
 import type { CarteConfirmation as DonneesCarte } from "@/services/jarvis-tools";
 
 /** Anti-clic réflexe. Le chiffre vient de `SPRINT-V1.md` §V2.5, pas d'un ressenti. */
@@ -74,9 +75,12 @@ export function CarteConfirmation({
             il désigne exactement ceci. */}
         <span
           aria-hidden="true"
-          className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-ai-100 bg-card text-ai-600 shadow-lift1"
+          className="inline-flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-md border border-ai-100 bg-card shadow-lift1"
         >
-          <Icone nom="jarvis" taille={20} />
+          <SiriOrb
+            size="32px"
+            animationDuration={18}
+          />
         </span>
         <h3 className="m-0 min-w-0 font-ui text-body font-semibold text-ink-900">
           {carte.titre}
@@ -103,26 +107,20 @@ export function CarteConfirmation({
       </dl>
 
       <div className="flex justify-end gap-2">
-        <button
-          type="button"
-          onClick={onAnnuler}
-          disabled={enCours}
-          className="inline-flex min-h-target cursor-pointer items-center rounded-md border border-rule bg-card px-4 font-ui text-body text-ink-700 shadow-lift1 transition duration-quick ease-soft hover:bg-sunken disabled:cursor-not-allowed disabled:opacity-disabled"
-        >
+        <Bouton type="button" rang="secondaire" taille="compact" onClick={onAnnuler} disabled={enCours}>
           {fr.jarvis.carte.annuler}
-        </button>
+        </Bouton>
 
-        <button
+        <Bouton
           type="button"
+          rang="principal"
+          taille="compact"
           onClick={onConfirmer}
           disabled={!confirmerActif}
-          // `aria-disabled` en plus de `disabled` : un lecteur d'écran annonce
-          // alors l'indisponibilité momentanée au lieu de sauter le bouton.
-          aria-disabled={!confirmerActif}
-          className="inline-flex min-h-target cursor-pointer items-center rounded-md border-0 bg-action-600 px-4 font-ui text-body font-medium text-paper shadow-lift1 transition duration-quick ease-soft hover:bg-action-700 hover:shadow-lift2 disabled:cursor-default disabled:bg-ink-100 disabled:text-ink-300 disabled:shadow-none"
+          chargement={enCours}
         >
           {delaiEcoule ? fr.jarvis.carte.confirmer : fr.jarvis.carte.patienter}
-        </button>
+        </Bouton>
       </div>
     </section>
   );

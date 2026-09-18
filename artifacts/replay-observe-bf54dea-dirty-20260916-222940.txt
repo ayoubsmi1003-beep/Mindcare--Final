@@ -1,0 +1,52 @@
+M09 REPLAY
+rev=bf54dea-dirty kind=observe date=2026-09-16T21:29:40.413Z duree=0s
+goldens_hash=223f48d8c61537dd… schema=m08-schema-v1 prompts=e074ac56f36d285f…
+PASS    compile-intentions pass=0 fail=0 notrun=0
+PASS    compile-services pass=0 fail=0 notrun=0
+PASS    compile-frontiere pass=0 fail=0 notrun=0
+PASS    typecheck pass=0 fail=0 notrun=0
+PASS    typecheck-tests pass=0 fail=0 notrun=0
+PASS    lint-m08 pass=0 fail=0 notrun=0
+PASS    vitest pass=0 fail=0 notrun=0
+NOT RUN vitest-integration pass=0 fail=0 notrun=1 :: MINDCARE_TEST_DATABASE_URL absente
+PASS    eval-frontiere pass=0 fail=0 notrun=0
+PASS    eval-boucle pass=0 fail=0 notrun=0
+PASS    eval-chaine pass=0 fail=0 notrun=0
+PASS    eval-ecritures pass=0 fail=0 notrun=0
+PASS    eval-briefs pass=0 fail=0 notrun=0
+PASS    eval-reveil pass=0 fail=0 notrun=0
+PASS    eval-micro-partage pass=0 fail=0 notrun=0
+PASS    eval-endpointage pass=0 fail=0 notrun=0
+PASS    eval-machine-voix pass=0 fail=0 notrun=0
+PASS    eval-lecture-voix pass=0 fail=0 notrun=0
+PASS    eval-registre pass=0 fail=0 notrun=0
+PASS    eval-sans-suppression pass=0 fail=0 notrun=0
+PASS    eval-injection pass=0 fail=0 notrun=0
+PASS    eval-routage pass=0 fail=0 notrun=0
+PASS    eval-v2 pass=0 fail=0 notrun=0
+PASS    eval-intentions pass=0 fail=0 notrun=0
+PASS    eval-conversation pass=0 fail=0 notrun=0
+PASS    eval-knowledge-fixture pass=0 fail=0 notrun=0
+PASS    eval-reveil-pipeline pass=0 fail=0 notrun=0
+NOT RUN eval-contexte-seance pass=0 fail=0 notrun=1 :: source supabase/functions/_shared/contexte-seance.ts absente (pre-existant)
+NOT RUN eval-resume-cas pass=0 fail=0 notrun=1 :: source supabase/functions/_shared/resume-cas.ts absente (pre-existant)
+NOT RUN eval-knowledge-db pass=0 fail=0 notrun=1 :: migration 092 + embeddings reels + cross-encoder non deployes ici (M07 en cours)
+NOT RUN live-model-quality pass=0 fail=0 notrun=1 :: aucun modele pine/disponible pour la qualite live (variance free-tier 5s-180s)
+NOT RUN e2e pass=0 fail=0 notrun=1 :: exigent pnpm start + /api/health ; la porte ne lance pas de serveurs
+PASS    schema-golden pass=0 fail=0 notrun=0
+PASS    garde-modeles pass=0 fail=0 notrun=0
+PASS    garde-chemin-execution pass=0 fail=0 notrun=0
+PASS    garde-porte-execute pass=0 fail=0 notrun=0
+PASS    garde-boucle-sans-ecritures pass=0 fail=0 notrun=0
+PASS    garde-trois-portes pass=0 fail=0 notrun=0
+PASS    garde-secrets-build pass=0 fail=0 notrun=0
+PASS    integrite-validateur pass=0 fail=0 notrun=0
+PASS    preuve-mutation pass=0 fail=0 notrun=0
+PASS    scan-pii pass=0 fail=0 notrun=0
+PASS    scan-pii pass=6 fail=0 notrun=0
+========================
+PASS: 6
+FAIL: 0
+NOT RUN: 6
+CAS: 108 (non-mappes: 108)
+VERDICT: PASS

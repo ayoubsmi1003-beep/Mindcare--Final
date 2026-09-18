@@ -170,6 +170,7 @@ function transportEnregistreur(
           conversationId: "c1",
           interrompu: false,
           persiste: true,
+          preuves: [],
         },
       };
     }
@@ -182,6 +183,7 @@ function transportEnregistreur(
         conversationId: "c1",
         interrompu: false,
         persiste: true,
+        preuves: [],
       },
     };
   };

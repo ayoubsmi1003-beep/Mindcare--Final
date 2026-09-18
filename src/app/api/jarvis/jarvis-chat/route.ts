@@ -55,9 +55,29 @@ import { env } from "@/server/env";
 import { echec, identite } from "../_commun";
 
 import type { LlmMessage } from "@/server/egress/external-call";
-import { llm, llmStream } from "@/server/egress/external-call";
+import { llm, llmStream, resolveModel } from "@/server/egress/external-call";
+import {
+  classerCharge,
+  MESSAGE_REFUS_FRONTIERE,
+  messagePorteUnSignalPatient,
+} from "@/server/egress/classification";
+import {
+  classifierIntent,
+  construirePromptClassifieur,
+  INTENT_PROMPT_VERSION,
+  type ResultatClassification,
+} from "@/server/jarvis/classifieur-intentions";
+import { intentionChaineeOperationnelle } from "@/server/jarvis/intention-chainee";
 import { assertSafe, BoundaryViolation, pseudonymize, rehydrate } from "@/server/jarvis/pseudonymize";
-import { classer, enveloppeDonnees, type Chemin } from "@/server/jarvis/routing";
+import { lireProposition } from "@/server/jarvis/proposition";
+import { recupererPreuves } from "@/server/jarvis/preuves-recherche";
+import { construireBlocPreuves } from "@/shared/jarvis/preuves";
+import {
+  estPropositionCompatible,
+  type IntentValide,
+} from "@/shared/jarvis/intentions";
+import { classerMultilingue } from "@/shared/jarvis/normalisation";
+import { enveloppeDonnees, type Chemin } from "@/shared/jarvis/routing";
 import {
   DESCRIPTION_OUTILS,
   empreinte,
@@ -149,6 +169,115 @@ const REFUS =
  * et Jarvis deviendrait inutilisable. Un garde-fou qui refuse le cas normal
  * n'est pas prudent, il est faux.
  */
+/**
+ * M01 — INTENTION STRUCTUREE.
+ *
+ * Le classifieur vit DERRIERE `classerMultilingue()` : jamais appele sur un
+ * refus, jamais avant l'identite. Il ne resout personne, n'autorise rien,
+ * n'execute rien — il NOMME l'intention, que le schema strict valide et que
+ * la table fermee confronte a la proposition du modele, ici meme, cote
+ * serveur. La boucle et le client n'ont pas change : ils ne voient qu'une
+ * proposition compatible ou un texte.
+ *
+ * Le chemin deterministe GAGNE la selection du chemin (jamais de montee
+ * connaissance→patient sur ordre du modele) ; un desaccord ou un ecarte
+ * retombe sur le comportement historique (cas B), un UNKNOWN/ASK_CLARIFICATION
+ * confiant rend une clarification (cas C).
+ */
+
+// Coupe-circuit d'exploitation : `INTENT_CLASSIFIER_ENABLED=false` restaure
+// l'octet-pour-octet historique. Absent = active. Lu via `process.env`
+// direct pour ne pas elargir le schema `env.ts` en M01.
+function classifieurActif(): boolean {
+  return process.env.INTENT_CLASSIFIER_ENABLED !== "false";
+}
+
+/**
+ * Clarifications serveur — memes libelles que l'ecran (`fr.ts`
+ * `jarvis.contexte.preciserPatient`), ici en constantes comme REFUS :
+ * ce sont des reponses de passerelle, pas des chaines d'interface.
+ */
+const CLARIFICATION_PATIENT = "De quel patient parlez-vous ?";
+const CLARIFICATION_INCOMPRIS =
+  "Je ne suis pas sûr de comprendre. Pouvez-vous préciser ?";
+
+/** L'intention operationnelle qui contraint ce tour, + son run_id de tracage. */
+interface IntentionDuTour {
+  readonly intent: IntentValide;
+  readonly runId: string;
+}
+
+/**
+ * Appelle le classifieur quand c'est son tour : jamais sur refus, jamais si
+ * coupe par l'exploitation. Rend `null` = chemin historique, sans intention.
+ * `turnId` reprend le `clientTurnId` (exige en flux) ou `sans-tour` en
+ * historique — le `runId`, lui, est toujours frais.
+ */
+async function classifierIntentSiUtile(
+  message: string,
+  conversationId: string,
+  turnId: string | undefined,
+  chemin: Chemin,
+  hashPromptIntent: string,
+): Promise<{ classification: ResultatClassification | null; runId: string }> {
+  const runId = crypto.randomUUID();
+  if (chemin === "refus" || !classifieurActif()) {
+    return { classification: null, runId };
+  }
+  // M05 — le classifieur NLU recoit le message SEUL, mais un message nommant
+  // un patient est deja C1 : aucun cloud ne le lit. Repli deterministe
+  // historique (cas B), sans appel reseau. `classifierIntent` re-applique le
+  // meme filtre en profondeur ; cette sortie precoce evite le cout.
+  if (messagePorteUnSignalPatient(message)) {
+    return { classification: null, runId };
+  }
+  const classification = await classifierIntent(
+    message,
+    { conversationId, turnId: turnId ?? "sans-tour", runId },
+    {
+      completer: (messages, opts) =>
+        appelerModeleClassifieur(messages, opts.timeoutMs, hashPromptIntent, runId),
+    },
+  );
+  return { classification, runId };
+}
+
+/**
+ * Cas C : l'intention confiant UNKNOWN/ASK_CLARIFICATION court-circuite le
+ * second appel modele — une clarification, zero outil, chemin conserve pour
+ * la persistance.
+ */
+function clarificationPrecoce(
+  classification: ResultatClassification | null,
+): "demande-patient" | "incompris" | null {
+  if (classification?.statut !== "valide") return null;
+  if (classification.intent.name === "ASK_CLARIFICATION") return "demande-patient";
+  if (classification.intent.name === "UNKNOWN") return "incompris";
+  return null;
+}
+
+function texteClarification(kind: "demande-patient" | "incompris"): string {
+  return kind === "demande-patient" ? CLARIFICATION_PATIENT : CLARIFICATION_INCOMPRIS;
+}
+
+/**
+ * L'intention qui contraint le chemin patient : operationnelle, confiante
+ * (garantie par le classifieur), sur chemin patient. GENERAL_KNOWLEDGE et les
+ * meta ne contraignent pas — comportement historique.
+ */
+function intentionOperationnelle(
+  classification: ResultatClassification | null,
+  chemin: Chemin,
+  runId: string,
+): IntentionDuTour | null {
+  if (classification?.statut !== "valide" || chemin !== "patient") return null;
+  const intent = classification.intent;
+  if (intent.name === "GENERAL_KNOWLEDGE" || intent.name === "UNKNOWN" || intent.name === "ASK_CLARIFICATION") {
+    return null;
+  }
+  return { intent, runId };
+}
+
 const MAX_DOSSIERS_CONTEXTE = 5;
 const MAX_CARACTERES_CHAMP = 120;
 
@@ -337,6 +466,18 @@ function estCorpsValide(v: unknown): v is CorpsRequete {
   // En flux, l'idempotence n'est pas facultative.
   if (mode === "flux" && turn === undefined) return false;
 
+  // M03 : `runId` de tour, genere cote client, opaque. Valide et ignore
+  // par ailleurs : il sert la correlation cliente des appels d'un meme
+  // tour et n'entre ni dans l'audit (028 : `sessionToken` par appel,
+  // non-correle) ni dans aucune decision.
+  const runId = (v as { runId?: unknown }).runId;
+  if (
+    runId !== undefined &&
+    !(typeof runId === "string" && runId.length >= 1 && runId.length <= 80)
+  ) {
+    return false;
+  }
+
   // ── Bornes de la boucle ──
   const ctx = (v as { contexte?: unknown }).contexte;
   if (ctx !== undefined && JSON.stringify(ctx).length > MAX_CAR_CONTEXTE) return false;
@@ -356,6 +497,22 @@ function estCorpsValide(v: unknown): v is CorpsRequete {
     return false;
   }
 
+  // M02 : intention chainee (repli client) — deux chaines bornees. Le
+  // serveur ne prend que nom + conversation : l'intent est RECONSTRUIT et
+  // revalide dans `intention-chainee.ts`, jamais recopie du corps.
+  const chainee = (v as { intentionChainee?: unknown }).intentionChainee;
+  if (chainee !== undefined) {
+    if (typeof chainee !== "object" || chainee === null) return false;
+    const corpsChaine = chainee as { nom?: unknown; conversationId?: unknown };
+    if (typeof corpsChaine.nom !== "string" || corpsChaine.nom.length === 0 || corpsChaine.nom.length > 40) {
+      return false;
+    }
+    const convChainee = corpsChaine.conversationId;
+    if (typeof convChainee !== "string" || convChainee.length === 0 || convChainee.length > 80) {
+      return false;
+    }
+  }
+
   const persistD = (v as { persisterDemande?: unknown }).persisterDemande;
   if (persistD !== undefined && typeof persistD !== "boolean") return false;
 
@@ -368,6 +525,10 @@ function estCorpsValide(v: unknown): v is CorpsRequete {
  *
  * Même motif de mobile qu'`assertSafe` : deux définitions du « numéro de
  * téléphone » divergeraient, et la plus laxiste gagnerait en silence.
+ *
+ * M05 — etendue aux UUID, numeros de dossier et jetons stables : un UUID ou
+ * un `{{PATIENT_001}}` ne nomme personne sans la base, mais les deux sont
+ * stables d'un appel a l'autre et prouvent une derive de dossier.
  */
 function porteUnMotifIdentifiant(charge: string): boolean {
   return (
@@ -379,8 +540,25 @@ function porteUnMotifIdentifiant(charge: string): boolean {
     // faux.
     /\b0[5-7]\d{8}\b/.test(charge) ||
     /(?:\+|00)213\s?\d[\d\s.-]{7,}/.test(charge) ||
-    /\b[\w.+-]+@[\w-]+\.[\w.-]+\b/.test(charge)
+    /\b[\w.+-]+@[\w-]+\.[\w.-]+\b/.test(charge) ||
+    /[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/i.test(charge) ||
+    /\bD-\d[\d.\-_/]*\d\b/.test(charge) ||
+    /\{\{[^}]*\}\}/.test(charge) ||
+    /PATIENT_\d+/.test(charge)
   );
+}
+
+/**
+ * M05 — pre-filtre MISSION sur la charge entiere, avant tout appel modele.
+ * Le garde de motifs ci-dessus est la premiere passe (rapide, locale) ;
+ * `classerCharge` est l'arbitre (noms, references, injection, C3). Les deux
+ * doivent dire AUTORISER pour que la charge parte. La frontiere autoritaire
+ * reste `llm()`/`llmStream()` : ce pre-filtre evite le cout, il ne remplace
+ * pas la porte.
+ */
+function chargeBloqueeParEgress(messages: readonly LlmMessage[]): boolean {
+  if (porteUnMotifIdentifiant(JSON.stringify(messages))) return true;
+  return classerCharge(messages, null).decision === "BLOQUER";
 }
 
 /**
@@ -477,57 +655,7 @@ function reponseOk(req: Request, donnees: unknown): Response {
   });
 }
 
-/**
- * Le modèle doit rendre `{"type":"texte",…}` ou `{"type":"outil",…}`. Tout le
- * reste est une réponse malformée, et une réponse malformée n'est jamais
- * « rattrapée » en devinant l'intention : on rend une erreur. Deviner, ici,
- * reviendrait à exécuter ce que le modèle n'a pas su demander proprement.
- */
-function lireProposition(brut: string):
-  | { readonly type: "texte"; readonly reponse: string }
-  | { readonly type: "outil"; readonly nom: string; readonly args: unknown }
-  | null {
-  // ── Nettoyage DÉTERMINISTE, jamais une devinette d'intention ──
-  // Mesuré avec les modèles à raisonnement de la famille nemotron : la
-  // réflexion interne peut se déverser en balises <think>…</think> et le JSON
-  // peut être encadré de clôtures markdown PARTOUT, pas seulement aux extrêmes.
-  // On retire ces deux habillages connus, puis on tente le parse ; si le reste
-  // n'est pas l'enveloppe attendue, c'est une erreur — comme toujours ici.
-  const sansReflexion = brut.replace(/<think>[\s\S]*?<\/think>/gi, "");
-  const sansClotures = sansReflexion.replace(/```(?:json)?/gi, "");
 
-  let candidat = sansClotures.trim();
-  let valeur: unknown;
-  try {
-    valeur = JSON.parse(candidat);
-  } catch {
-    // Dernier ressource de FORME : l'objet compris entre la première et la
-    // dernière accolade. Si ça ne parse pas davantage, on abandonne —
-    // reconstruire l'intention du modèle n'existe pas dans ce fichier.
-    const debut = candidat.indexOf("{");
-    const fin = candidat.lastIndexOf("}");
-    if (debut < 0 || fin <= debut) return null;
-    candidat = candidat.slice(debut, fin + 1);
-    try {
-      valeur = JSON.parse(candidat);
-    } catch {
-      return null;
-    }
-  }
-  if (typeof valeur !== "object" || valeur === null) return null;
-
-  const o = valeur as Record<string, unknown>;
-  if (o["type"] === "texte" && typeof o["reponse"] === "string") {
-    return { type: "texte", reponse: o["reponse"] };
-  }
-  if (o["type"] === "outil" && typeof o["nom"] === "string") {
-    // `args` n'est PAS validé ici : la validation stricte (Zod) vit côté
-    // client, dans `jarvis-tools.ts`, avec les cinq schémas. La dupliquer ici
-    // créerait deux vérités qui divergeraient au premier changement.
-    return { type: "outil", nom: o["nom"], args: o["args"] ?? {} };
-  }
-  return null;
-}
 
 // ── Persistance canonique — V-JARVIS-CORE ─────────────────────────────────────
 // Les portes de 058 sont idempotentes : un rejeu rend false sans doublon, et
@@ -583,6 +711,10 @@ async function persisterReponse(
     return false;
   }
 }
+
+// ── Preuves documentaires M07 — V-JARVIS-CORE ───────────────────────────────
+// Voir `server/jarvis/preuves-recherche.ts` (testable, rpc injecté) : la
+// route ne fait que brancher le `client` porteur du JWT.
 
 // ── Écrivain SSE ─────────────────────────────────────────────────────────────
 
@@ -704,7 +836,17 @@ export async function POST(req: Request): Promise<Response> {
   // ═══ LA DÉCISION, ENSUITE ═══
   // Avant tout accès base, avant le modèle. Un refus n'a besoin de rien
   // d'autre que de la phrase — mais il a besoin d'une identité.
-  const routage = classer(message);
+  // ⚠️ `classerMultilingue` EST `classer` APPELÉ DEUX FOIS, PAS UN AUTRE
+  // CLASSIFIEUR. Il unit `classer(message)` et `classer(forme canonique)` en
+  // prenant le MAXIMUM sur le treillis `refus > patient > connaissance` : le
+  // verdict n'est jamais moins restrictif qu'avant. `routing.ts` est inchangé.
+  //
+  // ⚠️ `message` — L'ORIGINAL — RESTE CE QUE LE MODÈLE REÇOIT, plus bas. La
+  // forme canonique ne sert qu'à classer et ne quitte jamais cette ligne :
+  // l'envoyer au modèle le ferait répondre en français à une question posée en
+  // arabe, et la consigne de langue du prompt deviendrait inapplicable.
+  // Représentation de routage ≠ représentation de réponse.
+  const routage = classerMultilingue(message);
 
   // ── Interrupteurs d'exploitation — V-JARVIS-CORE ──
   // Secrets Supabase, lus à chaque appel : couper Jarvis ne se fait JAMAIS en
@@ -712,6 +854,41 @@ export async function POST(req: Request): Promise<Response> {
   if (env().JARVIS_ENABLED === "false") {
     return echec("indisponible", "Assistant indisponible.");
   }
+
+  // M01 : intention structuree, derriere le routage, jamais sur refus.
+  const hashPromptIntent = await empreinte(construirePromptClassifieur());
+  const { classification, runId } = await classifierIntentSiUtile(
+    message,
+    corps.conversationId,
+    corps.clientTurnId,
+    routage.chemin,
+    hashPromptIntent,
+  );
+  // M02 : repli chaine — le serveur reconstruit l'intent (nom + fil
+  // SEULEMENT), le revalide, l'exclut des metas/ecritures et le borne a la
+  // conversation du tour. Ne remplit que les creneaux vides : un classifieur
+  // decide (ni UNKNOWN ni ASK) n'est jamais ecrase ; un ASK respecte.
+  const intentionChainee = intentionChaineeOperationnelle(
+    (corps as { intentionChainee?: { nom?: unknown; conversationId?: unknown } }).intentionChainee ?? null,
+    classification,
+    routage.chemin,
+    corps.conversationId,
+  );
+  const clarificationBrute = clarificationPrecoce(classification);
+  // M02 : une intention chainee valide remplit le creneau UNKNOWN (« Et
+  // avant ? ») — pas de cas C. « demande-patient » (ASK) n'est jamais
+  // supprime : le classifieur demande, on respecte.
+  const clarification =
+    intentionChainee !== null && clarificationBrute === "incompris" ? null : clarificationBrute;
+  const intentionPatient =
+    intentionOperationnelle(classification, routage.chemin, runId) ??
+    (intentionChainee === null ? null : { intent: intentionChainee, runId });
+  // M02 : escalade du suivi nu. « Et avant ? » route en connaissance (le
+  // routeur ne voit pas le fil) ; une intention chainee valide et bornee
+  // fait remonter CE tour vers le patient — jamais un refus (rendu avant),
+  // jamais contre un savoir decide ou un ASK (inlet nul dans ces cas : la
+  // condition contient intentionChainee, pas le seul chemin).
+  const escaladeChainee = routage.chemin === "connaissance" && intentionChainee !== null;
   // Streaming coupé par l'exploitation → dégradation GRACIEUSE : la demande
   // flux reçoit l'enveloppe JSON historique ; le client sait reconnaître un
   // Content-Type application/json et s'y aligner.
@@ -725,17 +902,41 @@ export async function POST(req: Request): Promise<Response> {
       return reponseOk(req, { chemin: "refus" satisfies Chemin, type: "texte", reponse: REFUS });
     }
 
-    if (routage.chemin === "connaissance") {
-      const hash = await empreinte(PROMPT_CONNAISSANCE);
+    // M01 cas C : clarification sans second appel modele.
+    if (clarification !== null && classification?.statut === "valide") {
+      return reponseOk(req, {
+        chemin: routage.chemin,
+        type: "texte",
+        reponse: texteClarification(clarification),
+        intent: classification.intent.name,
+        runId,
+      });
+    }
+
+    if (routage.chemin === "connaissance" && !escaladeChainee) {
+      // M07 — preuves gouvernées AVANT le modèle (hybride-live slice 3 :
+      // lexical + BGE-M3 local, calibration A3 ; modèle absent → lexical
+      // seul, dégradation honnête vers vide). Le bloc est une DONNÉE, pas une instruction.
+      const preuves = await recupererPreuves(client, message);
+      const bloc = construireBlocPreuves(preuves);
+      const systemeConnaissance =
+        bloc === "" ? PROMPT_CONNAISSANCE : `${PROMPT_CONNAISSANCE}\n\n${bloc}`;
+      // Empreinte du texte système EXACT (prompt + bloc de preuves).
+      const hash = await empreinte(systemeConnaissance);
+      const messagesConnaissance = [
+        { role: "system" as const, content: systemeConnaissance },
+        { role: "user" as const, content: message },
+      ] satisfies readonly LlmMessage[];
+      // M05 — un C1 mal route vers connaissance ne part jamais comme C4.
+      if (chargeBloqueeParEgress(messagesConnaissance)) {
+        return echec("frontiere", MESSAGE_REFUS_FRONTIERE);
+      }
       const resultat = await llm({
         purpose: "jarvis",
         promptVersion: `${PROMPT_VERSION}-connaissance`,
         promptHash: hash,
         sessionToken: crypto.randomUUID(),
-        messages: [
-          { role: "system" as const, content: PROMPT_CONNAISSANCE },
-          { role: "user" as const, content: message },
-        ],
+        messages: messagesConnaissance,
       });
 
       if (!resultat.ok) {
@@ -747,10 +948,12 @@ export async function POST(req: Request): Promise<Response> {
         reponse: resultat.data,
         /** Le registre est RENDU par l'interface, pas produit par le modèle. */
         registre: "connaissance-generale",
+        /** M07 — preuves gouvernées (fil), validées par le client. */
+        preuves,
       });
     }
 
-    const patient = await cheminPatientPayload(message, corps);
+    const patient = await cheminPatientPayload(message, corps, intentionPatient);
     if (!patient.ok) {
       return echec(patient.code, patient.message);
     }
@@ -776,7 +979,9 @@ export async function POST(req: Request): Promise<Response> {
         await persisterTour(client, corps.conversationId, tourId, message);
       }
 
-      ecriture.envoyer({ t: "chemin", chemin: routage.chemin });
+      // M02 : un tour escaladé ANNONCE le patient — l'écran suit le chemin
+      // réellement emprunté, pas celui du routage aveugle au fil.
+      ecriture.envoyer({ t: "chemin", chemin: escaladeChainee ? ("patient" satisfies Chemin) : routage.chemin });
 
       if (routage.chemin === "refus") {
         const persiste = await persisterReponse(client, corps.conversationId, tourId, "refus", REFUS);
@@ -788,14 +993,40 @@ export async function POST(req: Request): Promise<Response> {
         return;
       }
 
-      if (routage.chemin === "connaissance") {
-        const hash = await empreinte(PROMPT_CONNAISSANCE);
-        // Battement pendant TOUTE la durée du flux — jusqu'au DERNIER fragment,
-        // pas jusqu'aux en-têtes : trouvé par mesure (instrument E1, gap de
-        // 28 s sans frame), le fournisseur accepte la connexion en ~2 s puis
-        // reste muet pendant sa phase de réflexion. Le silence réseau est
-        // couvert par le watchdog du fournisseur ; celui du client mesure les
-        // FRAMES, que ce battement maintient vivantes.
+      // M01 cas C en flux : clarification persiste comme une reponse normale.
+      if (clarification !== null && classification?.statut === "valide") {
+        const texte = texteClarification(clarification);
+        const persiste = await persisterReponse(client, corps.conversationId, tourId, routage.chemin, texte);
+        ecriture.envoyer({
+          t: "fin",
+          payload: { chemin: routage.chemin, type: "texte", reponse: texte, intent: classification.intent.name, runId },
+          persiste,
+        });
+        return;
+      }
+
+      if (routage.chemin === "connaissance" && !escaladeChainee) {
+        // M07 — preuves gouvernées AVANT le modèle (même discipline qu'en
+        // historique : hybride-live slice 3, dégradation honnête vers vide).
+        const preuves = await recupererPreuves(client, message);
+        const bloc = construireBlocPreuves(preuves);
+        const systemeConnaissanceFlux =
+          bloc === "" ? PROMPT_CONNAISSANCE : `${PROMPT_CONNAISSANCE}\n\n${bloc}`;
+        const hash = await empreinte(systemeConnaissanceFlux);
+        const messagesConnaissanceFlux = [
+          { role: "system" as const, content: systemeConnaissanceFlux },
+          ...historiqueVersMessages(corps.historique),
+          { role: "user" as const, content: message },
+        ] satisfies readonly LlmMessage[];
+        // M05 — meme pre-filtre qu'en historique : l'historique rejoue
+        // peut porter des noms des tours precedents.
+        if (chargeBloqueeParEgress(messagesConnaissanceFlux)) {
+          ecriture.envoyer({ t: "erreur", code: "frontiere", message: MESSAGE_REFUS_FRONTIERE });
+          return;
+        }
+        // Battement pendant TOUTE la duree du flux (mesure instrument E1) :
+        // le fournisseur reflechit en silence apres ~2 s, et le watchdog
+        // client mesure les FRAMES, que ce battement maintient vivantes.
         const battement = setInterval(() => {
           ecriture.envoyer({ t: "attente" });
         }, 2_000);
@@ -806,11 +1037,7 @@ export async function POST(req: Request): Promise<Response> {
             promptHash: hash,
             sessionToken: crypto.randomUUID(),
             signal: req.signal,
-            messages: [
-              { role: "system" as const, content: PROMPT_CONNAISSANCE },
-              ...historiqueVersMessages(corps.historique),
-              { role: "user" as const, content: message },
-            ],
+            messages: messagesConnaissanceFlux,
           });
 
           if (!resultat.ok) {
@@ -863,6 +1090,8 @@ export async function POST(req: Request): Promise<Response> {
               type: "texte",
               reponse: complet,
               registre: "connaissance-generale",
+              /** M07 — preuves gouvernées (fil), validées par le client. */
+              preuves,
             },
             persiste,
           });
@@ -877,7 +1106,7 @@ export async function POST(req: Request): Promise<Response> {
         ecriture.envoyer({ t: "attente" });
       }, 2_000);
       try {
-        const patient = await cheminPatientPayload(message, corps);
+        const patient = await cheminPatientPayload(message, corps, intentionPatient);
         if (!patient.ok) {
           ecriture.envoyer({ t: "erreur", code: patient.code, message: patient.message });
           return;
@@ -937,16 +1166,50 @@ async function persisterReponseFluxDepuisPayload(
  * strict et la réhydratation vivent ICI, une seule fois. Le mode flux y ajoute
  * seulement son battement de cœur autour de l'attente.
  */
+/**
+ * L'unique appel modele du classifieur NLU — defini APRES les branches de
+ * refus pour que la propriete structurale « le refus rend avant tout appel
+ * de modele » reste lisible en positions par le test qui l'exprime
+ * (`jarvis-routage-multilingue.test.ts`). Fonction hoistee : l'ordre d'appel
+ * est inchange (jamais sur refus, voir `classifierIntentSiUtile`), seul le
+ * texte bouge.
+ */
+async function appelerModeleClassifieur(
+  messages: readonly { readonly role: "system" | "user"; readonly content: string }[],
+  timeoutMs: number,
+  hashPromptIntent: string,
+  runId: string,
+): Promise<{ readonly texte: string | null; readonly modele: string }> {
+  const r = await llm({
+    purpose: "jarvis",
+    promptVersion: INTENT_PROMPT_VERSION,
+    promptHash: hashPromptIntent,
+    // Le run_id EST le sessionToken : l'audit chaine le franchissement NLU.
+    sessionToken: runId,
+    messages,
+    timeoutMs,
+  });
+  if (!r.ok) return { texte: null, modele: resolveModel() };
+  return { texte: r.data, modele: resolveModel() };
+}
+
 async function cheminPatientPayload(
   message: string,
   corps: CorpsRequete,
+  intention: IntentionDuTour | null = null,
 ): Promise<{ ok: true; data: unknown } | { ok: false; code: string; message: string }> {
   // La description des capacités vient du REGISTRE client quand il l'envoie ;
   // `DESCRIPTION_OUTILS` reste le repli pour les appelants historiques (mode
   // non-flux, instruments HTTP) qui ne connaissent pas le registre.
+  // M01 : l'intention validee cadre la proposition — une famille d'outils,
+  // jamais un nom impose. La mention reste dans le message ; on ne la duplique pas.
+  const blocIntention =
+    intention === null
+      ? ""
+      : `\n\nIntention validee : ${intention.intent.name}. Propose UNIQUEMENT un outil de cette famille, ou reponds en texte simple pour demander une precision. N'invente aucun nom d'outil.`;
   const systeme = `${PROMPT_PATIENT}
 
-${corps.capacites ?? DESCRIPTION_OUTILS}`;
+${corps.capacites ?? DESCRIPTION_OUTILS}${blocIntention}`;
   const hash = await empreinte(systeme);
 
   // Le contexte d'outil n'entre QUE dans cette branche. Il est présenté comme
@@ -1061,6 +1324,13 @@ ${corps.capacites ?? DESCRIPTION_OUTILS}`;
     return { ok: false, code: "indisponible", message: "Assistant indisponible." };
   }
 
+  // M05 — l'arbitre mission sur la charge entiere : noms, references personne,
+  // injection, C3 sans recu. Le garde de motifs reste (premiere passe) et la
+  // porte autoritaire `llm()` re-tranche sur les memes octets.
+  if (classerCharge(messages, null).decision === "BLOQUER") {
+    return { ok: false, code: "frontiere", message: MESSAGE_REFUS_FRONTIERE };
+  }
+
   const resultat = await llm({
     purpose: "jarvis",
     promptVersion: `${PROMPT_VERSION}-patient`,
@@ -1078,6 +1348,25 @@ ${corps.capacites ?? DESCRIPTION_OUTILS}`;
     return { ok: false, code: "indisponible", message: "Assistant indisponible." };
   }
 
+  // M01 : proposition hors famille de l'intention validee = zero execution.
+  // La boucle ne verra qu'un texte de clarification ; l'outil devine reste au sol.
+  if (
+    intention !== null &&
+    proposition.type === "outil" &&
+    !estPropositionCompatible(intention.intent.name, proposition.nom)
+  ) {
+    return {
+      ok: true,
+      data: {
+        chemin: "patient" satisfies Chemin,
+        type: "texte" as const,
+        reponse: CLARIFICATION_INCOMPRIS,
+        intent: intention.intent.name,
+        runId: intention.runId,
+      },
+    };
+  }
+
   const rendue =
     proposition.type === "texte"
       ? { type: "texte" as const, reponse: rehydrate(proposition.reponse, carteTier0) }
@@ -1085,6 +1374,11 @@ ${corps.capacites ?? DESCRIPTION_OUTILS}`;
           type: "outil" as const,
           nom: proposition.nom,
           args: rehydraterProfond(proposition.args, carteTier0),
+          // M04 : echo de l'intention validee qui a autorise cette proposition
+          // (famille verifiee ci-dessus). Additif : les clients qui l'ignorent
+          // gardent leur comportement ; la boucle l'emploie comme signal de
+          // filtre par iteration, revalide, jamais comme une autorisation.
+          ...(intention === null ? {} : { intent: intention.intent.name }),
         };
 
   return { ok: true, data: { chemin: "patient" satisfies Chemin, ...rendue } };

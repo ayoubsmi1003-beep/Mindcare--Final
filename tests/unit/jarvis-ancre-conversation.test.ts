@@ -88,6 +88,7 @@ function depsScriptees(
           conversationId: p.conversationId,
           persiste: false,
           interrompu: false,
+          preuves: [],
         } satisfies TourFlux),
       );
     },

@@ -15,8 +15,14 @@
  * La racine `/` n'est PAS touchée : elle redirige vers /patients comme avant
  * (règle 10 — le moindre geste hors périmètre coûte plus cher qu'il ne rend).
  *
- * LES CINQ ÉTATS (05-UX §1) sont portés par chaque écran, zone par zone ; le
- * garde de session ci-dessous suit le patron exact de `/agenda`.
+ * LES CINQ ÉTATS (05-UX §1) sont portés par chaque écran, zone par zone.
+ *
+ * ⚠️ LE GARDE DE SESSION NE SUIT PLUS `/agenda`, ET C'EST DÉLIBÉRÉ. Il suivait
+ * son `?? "assistant"`, qui est juste là-bas — `/agenda` n'en change que le
+ * rail. Ici, le même défaut fait changer de PORTE et de MÉTIER : il rendait le
+ * poste d'accueil à la praticienne dès que son profil ne se lisait pas. Cette
+ * route suit désormais le patron des écrans récents (consultation, finances,
+ * documents, Alexa) : `utilisateur === null` est une ERREUR, pas un rôle.
  */
 
 "use client";
@@ -49,6 +55,7 @@ import { TableauDeBordPraticienne } from "@/components/tableauDeBord/TableauDeBo
 import {
   BandeauHorsLigne,
   BlocErreur,
+  Bouton,
   LienBouton,
   Squelette,
 } from "@/components/ui";
@@ -57,8 +64,13 @@ import { useSessionEcran } from "@/components/useSessionEcran";
 import { fr } from "@/i18n/fr";
 
 export default function PageTableauDeBord(): React.JSX.Element {
-  const { utilisateur, sessionTranchee, horsLigne: horsLigneSession, deconnecter } =
-    useSessionEcran();
+  const {
+    utilisateur,
+    sessionTranchee,
+    horsLigne: horsLigneSession,
+    deconnecter,
+    reessayer,
+  } = useSessionEcran();
 
   // Session tranchée NÉGATIVEMENT : sortie explicite, pas un vide muet.
   if (sessionTranchee === false) {
@@ -85,10 +97,36 @@ export default function PageTableauDeBord(): React.JSX.Element {
     );
   }
 
-  // Profil ILLISIBLE mais session valide : le défaut sûr d'/agenda — on
-  // affiche avec la composition la plus étroite plutôt que de bloquer un
-  // écran qui marche. La RLS reste la seule frontière sur la donnée.
-  const role = utilisateur?.role ?? "assistant";
+  /**
+   * ⚠️ ICI, LE DÉFAUT ÉTROIT CHANGE DE MÉTIER — voir `fr.tableauDeBord
+   * .profilIllisible` pour le raisonnement complet.
+   *
+   * `?? "assistant"` tenait ici depuis l'origine, copié du patron d'`/agenda`
+   * où il est juste : là-bas il ne change que le rail, l'écran reste le même et
+   * il fonctionne. Sur cette route, il fait basculer d'`app.dashboard_today`
+   * vers `app.reception_board` — la praticienne reçoit le poste d'accueil.
+   *
+   * On applique donc le patron des écrans récents (consultation, finances,
+   * documents, Alexa), qui traitent tous `utilisateur === null` en ERREUR :
+   * un profil qu'on n'a pas pu lire est une panne qui se dit, pas un rôle qui
+   * se suppose. La RLS reste, comme toujours, la seule frontière sur la donnée
+   * — ce correctif ne protège rien, il arrête de mentir.
+   */
+  if (utilisateur === null) {
+    return (
+      <main className="flex flex-col gap-4 p-8">
+        {horsLigneSession ? <BandeauHorsLigne /> : null}
+        <BlocErreur
+          message={
+            horsLigneSession ? fr.erreurs["hors-ligne"] : fr.tableauDeBord.profilIllisible
+          }
+          action={<Bouton onClick={reessayer}>{fr.actions.reessayer}</Bouton>}
+        />
+      </main>
+    );
+  }
+
+  const role = utilisateur.role;
 
   // Praticiennes : V4 est livrée. L'écran du matin, en UN appel serveur
   // (`app.dashboard_today`, 059) — le placeholder honnête qui tenait ici depuis
@@ -97,7 +135,7 @@ export default function PageTableauDeBord(): React.JSX.Element {
     return (
       <AppShell
         role={role}
-        nomComplet={utilisateur?.fullName ?? ""}
+        nomComplet={utilisateur.fullName}
         onDeconnexion={deconnecter}
         titre={fr.tableauDeBord.salutation}
         sousTitre={fr.tableauDeBord.sousTitre}
@@ -115,7 +153,7 @@ export default function PageTableauDeBord(): React.JSX.Element {
   return (
     <AppShell
       role={role}
-      nomComplet={utilisateur?.fullName ?? ""}
+      nomComplet={utilisateur.fullName}
       onDeconnexion={deconnecter}
       sansGouttiere
     >

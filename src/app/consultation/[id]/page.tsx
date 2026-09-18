@@ -62,15 +62,37 @@ import {
   Champ,
   ChampTexte,
   ChampZoneTexte,
-  EspaceTravail,
   EtatVide,
   GrilleChamps,
   IndicateurEnregistrement,
   LienBouton,
+  Onglets,
   PanneauInfo,
+  PanneauOnglet,
   SectionPliable,
   Squelette,
 } from "@/components/ui";
+import { PanneauHistorique } from "@/components/consultation/PanneauHistorique";
+import { BarreConsultation } from "@/components/consultation/cockpit/BarreConsultation";
+import { CockpitHeader } from "@/components/consultation/cockpit/CockpitHeader";
+import { ColonnePatient } from "@/components/consultation/cockpit/ColonnePatient";
+import { DepuisDerniere } from "@/components/consultation/cockpit/DepuisDerniere";
+import { EtatClinique } from "@/components/consultation/cockpit/EtatClinique";
+import { FocusSeance } from "@/components/consultation/cockpit/FocusSeance";
+import { MesuresSeance } from "@/components/consultation/cockpit/MesuresSeance";
+import { NotesStructurees } from "@/components/consultation/cockpit/NotesStructurees";
+import { RailContexte } from "@/components/consultation/cockpit/RailContexte";
+import { ajouterPiste, appliquerFocus } from "@/components/consultation/cockpit/modele-cockpit";
+import { CarteIdentite } from "@/components/patients/CarteIdentite";
+import {
+  ListeSignaux,
+  PointDeSituation,
+  SectionDepuisDerniere,
+} from "@/components/patients/SectionsDeterministes";
+import { PanneauTraitements } from "@/components/patients/PanneauTraitements";
+import { PanneauRendezVous } from "@/components/patients/PanneauRendezVous";
+import { SectionDocumentsPatient } from "@/components/documents/SectionDocumentsPatient";
+import { getPatientWorkspace, type PatientWorkspace } from "@/services/patients";
 import { useSessionEcran } from "@/components/useSessionEcran";
 import { fr } from "@/i18n/fr";
 import {
@@ -89,7 +111,7 @@ import {
   type ChampSoap,
   type Consultation,
 } from "@/services/consultations";
-import { enchainerApresSeance } from "@/services/apres-seance";
+import { cleConfirmationApresSeance, enchainerApresSeance } from "@/services/apres-seance";
 import {
   BoutonDictee,
   useDicteeChamps,
@@ -120,6 +142,9 @@ const DELAI_LECTURE_MS = 10_000;
 
 /** Une seconde : le pas du chronomètre et du décompte de verrouillage. */
 const PAS_HORLOGE_MS = 1000;
+
+/** Préférence d'affichage du rail — pas une donnée clinique. */
+const CLE_RAIL = "mindcare.cockpit.rail";
 
 type EtatEnregistrement = "repos" | "encours" | "enregistre" | "echec";
 
@@ -196,6 +221,20 @@ function amendementsLibelle(n: number): string {
 }
 
 /**
+ * SA-03 — la portée longitudinale en une phrase. Zéro note antérieure : dit
+ * explicitement « jour seul ». Au-delà : le compte et l'accord qui va avec.
+ * Un nombre, jamais une promesse sur le contenu de ces notes.
+ */
+function libelleSourcesAnalyse(historiqueNotes: number): string {
+  if (historiqueNotes <= 0) return fr.consultation.analyseSansHistorique;
+  return `${historiqueNotes} ${
+    historiqueNotes >= 2
+      ? fr.consultation.noteAnterieurePluriel
+      : fr.consultation.noteAnterieureSingulier
+  }`;
+}
+
+/**
  * Les destinations possibles d'une dictée. `brut` = les notes de séance ; les
  * quatre autres sont les rubriques de la note clinique. Le type EXISTE pour
  * qu'aucune cinquième destination ne puisse apparaître par inadvertance.
@@ -235,6 +274,74 @@ const LIBELLES_SOAP: Readonly<Record<ChampSoap, { titre: string; indication: str
   plan: { titre: fr.consultation.plan, indication: fr.consultation.planIndication },
 };
 
+/**
+ * Chronomètre isolé — possède son propre `setInterval(1000)` afin que le
+ * parent `PageConsultation` ne re-render pas 3600×/h.
+ *
+ * Perf pass P1: avant, `const [maintenant,setMaintenant]` vivait au sommet
+ * et forçait tout `EspaceTravail` (SOAP + Fil + Assistance + BlocTarif) à
+ * re-rendre chaque seconde. Mesure attendue: 0 re-render parent/s vs 1
+ * leaf/s. La durée figée (closed) ne tick pas.
+ */
+function ChronoSeance({
+  close,
+  startedAt,
+  endedAt,
+  className,
+}: {
+  readonly close: boolean;
+  readonly startedAt: string;
+  readonly endedAt: string | null;
+  readonly className?: string;
+}): React.JSX.Element {
+  const [maintenant, setMaintenant] = useState(() => Date.now());
+  useEffect(() => {
+    if (close && endedAt !== null) return;
+    if (close && endedAt === null) return;
+    const id = setInterval(() => setMaintenant(Date.now()), PAS_HORLOGE_MS);
+    return () => clearInterval(id);
+  }, [close, endedAt]);
+  return <span className={className}>{dureeAffichee(close, startedAt, endedAt, maintenant)}</span>;
+}
+
+/**
+ * Compte à rebours de la fenêtre de correction (15 min après signature).
+ * Isolé pour la même raison que `ChronoSeance` : évite de propager le tick
+ * au parent qui porte les 4 éditeurs SOAP.
+ */
+function CompteReboursVerrou({
+  note,
+}: {
+  readonly note: import("@/services/consultations").Note | null;
+}): React.JSX.Element | null {
+  const [maintenant, setMaintenant] = useState(() => Date.now());
+  useEffect(() => {
+    // Ne tick que pendant la fenêtre de 15 min (sinon 1 tick/s inutile pendant
+    // des heures de brouillon). Le parent ne tick plus du tout.
+    const e0 = noteEstVerrouillee(note, Date.now());
+    if (e0 !== "fenetre-correction") return;
+    const id = setInterval(() => setMaintenant(Date.now()), PAS_HORLOGE_MS);
+    return () => clearInterval(id);
+  }, [note]);
+  const verrou = noteEstVerrouillee(note, maintenant);
+  const restant = tempsRestantAvantVerrou(note, maintenant);
+  if (verrou === "fenetre-correction" && restant !== null) {
+    return (
+      <PanneauInfo ton="attention" titre={fr.consultation.fenetreCorrection}>
+        <span className="font-num tabular-nums">{decompte(restant)}</span>
+        {" — "}
+        {fr.consultation.fenetreIndication}
+      </PanneauInfo>
+    );
+  }
+  if (verrou === "verrouillee") {
+    return (
+      <PanneauInfo titre={fr.consultation.verrouillee}>{fr.consultation.verrouParLaBase}</PanneauInfo>
+    );
+  }
+  return null;
+}
+
 export default function PageConsultation(): React.JSX.Element {
   const router = useRouter();
   const params = useParams<{ id: string }>();
@@ -261,6 +368,22 @@ export default function PageConsultation(): React.JSX.Element {
    * Sert UNIQUEMENT à ne pas proposer une clôture que 037 refusera.
    */
   const [tarifPresent, setTarifPresent] = useState<boolean | undefined>(undefined);
+
+  /**
+   * V9 — LA SOUS-NAVIGATION, ET LA SEULE LECTURE QU'ELLE AJOUTE.
+   *
+   * ⚠️ LE BUDGET D'OUVERTURE NE BOUGE PAS (06-PERF-BUDGET). `dossier` reste
+   * `undefined` tant qu'aucun onglet de contexte n'a été ouvert : une séance
+   * menée de bout en bout dans l'onglet « Séance » ne déclenche AUCUN appel
+   * supplémentaire. La lecture part à la première ouverture, une seule fois,
+   * et sert ensuite les trois onglets — c'est le patron déjà éprouvé sur
+   * l'écran Patient, où chronologie et documents lisent à la demande.
+   *
+   * `get_patient_workspace` (047) journalise sa lecture comme partout ailleurs.
+   */
+  const [onglet, setOnglet] = useState<string>("seance");
+  const [dossier, setDossier] = useState<PatientWorkspace | null | undefined>(undefined);
+  const [erreurDossier, setErreurDossier] = useState<string | undefined>(undefined);
   /**
    * V1.4 — ÉCHEC DE LECTURE ≠ séance introuvable. Avant cette distinction,
    * `charger` posait `seance = null` sur TOUT échec (réseau, délai, serveur),
@@ -319,13 +442,21 @@ export default function PageConsultation(): React.JSX.Element {
   // clic plutôt qu'un effet. Un second clic avant la première réponse — ou un
   // démontage pendant l'appel — fait jeter silencieusement la réponse devenue
   // obsolète au lieu d'écraser un état plus récent.
+  //
+  // `controleurAnalyse` porte l'annulation RÉELLE (le compteur seul ignorait
+  // la réponse sans couper l'appel) : timeout dur, annulation explicite,
+  // run supersédé, changement de séance, démontage. L'abandon remonte par
+  // `analyzeSession` jusqu'au fournisseur — la génération tardive ne coûte
+  // plus rien et ne touche à aucun état.
   const generationAnalyse = useRef(0);
+  const controleurAnalyse = useRef<AbortController | null>(null);
+  const seanceAnalyse = useRef(id);
+  seanceAnalyse.current = id;
   const demonte = useRef(false);
 
-  // L'horloge de l'écran. Un seul intervalle pour le chronomètre ET le décompte
-  // de verrouillage : deux horloges pour un même écran finiraient par afficher
-  // deux heures différentes, et l'une des deux porte sur une pièce juridique.
-  const [maintenant, setMaintenant] = useState(() => Date.now());
+  // Perf: horloge isolée dans ChronoSeance/CompteReboursVerrou.
+  // Plus de `maintenant` au sommet : évite 3600 re-renders/h de tout
+  // EspaceTravail. Le vrai garde-fou est `trg_note_immutable` en base.
 
   const minuteurBrut = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const minuteurSoap = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
@@ -423,10 +554,9 @@ export default function PageConsultation(): React.JSX.Element {
     charger(true);
   }, [sessionTranchee, charger]);
 
-  useEffect(() => {
-    const t = setInterval(() => setMaintenant(Date.now()), PAS_HORLOGE_MS);
-    return () => clearInterval(t);
-  }, []);
+  // Perf: intervalle global supprimé — voir ChronoSeance/CompteReboursVerrou.
+  // Le parent ne tick plus : seule la feuille chrono tick (1/s) et le bandeau
+  // de verrou tick pendant la fenêtre de 15 min.
 
   // Les minuteurs d'enregistrement sont annulés au démontage : sans ça, quitter
   // l'écran pendant la fenêtre d'inactivité déclencherait une écriture sur un
@@ -442,21 +572,20 @@ export default function PageConsultation(): React.JSX.Element {
   useEffect(
     () => () => {
       demonte.current = true;
+      // Écran abandonné : couper le run éventuel plutôt que de le laisser
+      // finir dans le vide — sa réponse tardive serait jetée de toute façon.
+      controleurAnalyse.current?.abort();
+      controleurAnalyse.current = null;
     },
     [],
   );
 
   const note = seance?.note ?? null;
-  const etatVerrou = noteEstVerrouillee(note, maintenant);
-  const restantMs = tempsRestantAvantVerrou(note, maintenant);
+  // Perf: évalué à l'instant du render, sans tick parent. Le tick fin (1s)
+  // vit dans ChronoSeance/CompteReboursVerrou. Le vrai verrou est
+  // `trg_note_immutable` en base — l'écran encaisse un refus.
+  const etatVerrou = noteEstVerrouillee(note, Date.now());
   const seanceClose = seance?.status === "closed";
-  /**
-   * LE MODE SÉANCE ne s'arme que sur une séance OUVERTE. Une consultation
-   * close se relit comme un document : elle reprend la coquille normale, avec
-   * son rail et sa barre. Se retrouver dans le noir pour relire une note d'il
-   * y a trois semaines serait un effet de style, pas une aide.
-   */
-  const enSeance = seance != null && !seanceClose;
   // La note se rédige tant qu'elle n'est pas verrouillée — y compris pendant la
   // fenêtre de 15 minutes qui SUIT la signature. Ce n'est pas une tolérance :
   // c'est le dispositif d'I15, et le retirer ferait passer par un amendement une
@@ -569,6 +698,9 @@ export default function PageConsultation(): React.JSX.Element {
    * entre au dossier. Sur une pièce juridique, c'est inadmissible.
    */
   async function viderLesAttentes(): Promise<boolean> {
+    // Perf: save brut + soap en parallèle quand les deux sont en attente
+    // (touches différentes, pas de dépendance transactionnelle).
+    const brutEnAttente = minuteurBrut.current !== undefined;
     if (minuteurSoap.current !== undefined) {
       clearTimeout(minuteurSoap.current);
       minuteurSoap.current = undefined;
@@ -576,15 +708,33 @@ export default function PageConsultation(): React.JSX.Element {
     if (minuteurBrut.current !== undefined) {
       clearTimeout(minuteurBrut.current);
       minuteurBrut.current = undefined;
-      const r = await saveRawNotes(id, brut);
-      if (!r.ok) {
+    }
+
+    const complet: Partial<Record<ChampSoap, string>> = {};
+    for (const champ of CHAMPS_SOAP) complet[champ] = soap[champ];
+
+    if (brutEnAttente) {
+      const [rBrut, rSoap] = await Promise.all([saveRawNotes(id, brut), saveNote(id, complet)]);
+      if (!rBrut.ok) {
         setEtatBrut("echec");
+        // Soap peut avoir réussi : on le signale quand même
+        if (rSoap.ok) setEtatSoap("enregistre");
+        else {
+          setEtatSoap("echec");
+          signalerErreur(rSoap.error.message);
+        }
         return false;
       }
       setEtatBrut("enregistre");
+      if (!rSoap.ok) {
+        setEtatSoap("echec");
+        signalerErreur(rSoap.error.message);
+        return false;
+      }
+      setEtatSoap("enregistre");
+      return true;
     }
-    const complet: Partial<Record<ChampSoap, string>> = {};
-    for (const champ of CHAMPS_SOAP) complet[champ] = soap[champ];
+
     const r = await saveNote(id, complet);
     if (!r.ok) {
       setEtatSoap("echec");
@@ -613,8 +763,26 @@ export default function PageConsultation(): React.JSX.Element {
         setEnvoi(false);
         return;
       }
-      // L'identifiant de note est relu APRÈS l'enregistrement : sur une première
-      // note, il n'existait pas avant.
+      // Perf: réutilise `seance.note.id` si déjà connu (cas majoritaire).
+      // Seule une première note (jamais créée) nécessite une relecture.
+      const cibleConnue = seance?.note?.id ?? null;
+      if (cibleConnue !== null) {
+        void signNote(cibleConnue).then((result) => {
+          setEnvoi(false);
+          if (!result.ok) {
+            setHorsLigne(result.error.code === "hors-ligne");
+            signalerErreur(result.error.message);
+            return;
+          }
+          if (!result.data) {
+            signalerErreur(fr.consultation.introuvable);
+            return;
+          }
+          setConfirmation(fr.feedback.noteSignee);
+          charger(false);
+        });
+        return;
+      }
       void getConsultation(id).then((lecture) => {
         const cible = lecture.ok ? (lecture.data?.note?.id ?? null) : null;
         if (cible === null) {
@@ -677,18 +845,16 @@ export default function PageConsultation(): React.JSX.Element {
         // d'échec il dit CE QUI a échoué et rappelle que la séance, elle, est
         // enregistrée. Voir `src/services/apres-seance.ts`.
         void enchainerApresSeance(id, seance?.patientId ?? null, (suivi) => {
-          if (suivi.analyse === "en-cours") {
-            setConfirmation(fr.feedback.apresSeance.analyseEnCours);
-          } else if (suivi.analyse === "echouee") {
-            setConfirmation(fr.feedback.apresSeance.analyseEchouee);
-          } else if (suivi.resume === "en-cours") {
-            setConfirmation(fr.feedback.apresSeance.resumeEnCours);
-          } else if (suivi.resume === "echouee") {
-            setConfirmation(fr.feedback.apresSeance.resumeEchoue);
-          } else if (suivi.resume === "faite") {
-            setConfirmation(fr.feedback.apresSeance.terminee);
-            // L'analyse vient d'être écrite : on la remonte à l'écran plutôt
-            // que d'obliger à rouvrir la consultation pour la voir.
+          // La correspondance état → message vit dans `cleConfirmationApresSeance`
+          // (testée) ; `tsc` vérifie chaque clé contre `fr.feedback.apresSeance`.
+          // `null` = garder le message courant (cas `patientId === null`, où le
+          // « Séance terminée. » posé avant l'enchaînement doit survivre).
+          const cle = cleConfirmationApresSeance(suivi);
+          if (cle !== null) setConfirmation(fr.feedback.apresSeance[cle]);
+          // L'analyse vient d'être écrite : on la remonte à l'écran plutôt
+          // que d'obliger à rouvrir la consultation pour la voir. Inutile
+          // quand elle est `ignoree` (`chargerAnalyse` rendrait `ok(null)`).
+          if (suivi.resume === "faite" && suivi.analyse !== "ignoree") {
             void chargerAnalyse(id).then((relue) => {
               if (relue.ok && relue.data !== null) setAnalyse(relue.data);
             });
@@ -737,6 +903,12 @@ export default function PageConsultation(): React.JSX.Element {
    * `jarvis_actions`, n'écrit rien dans la note SOAP : c'est un BROUILLON en
    * lecture seule, que la praticienne reprend à la main si elle le souhaite.
    *
+   * Chaque déclenchement est un NOUVEAU run : le contrôleur précédent est
+   * aborté (run supersédé, terminal, sans effet), la génération protège des
+   * réponses tardives, et la couche d'exécution (`analyzeSession`, vol unique
+   * par séance) garantit qu'un seul appel fournisseur est actif. `Réessayer`
+   * après un terminal repart donc toujours d'un état sain.
+   *
    * Idempotence (§3.4 n°7) : le bouton se désactive DÈS le premier clic, via
    * `enAnalyse`, avant même que la promesse ne se résolve — un second clic
    * rapide ne peut pas déclencher un second appel tant que le premier est en
@@ -745,16 +917,41 @@ export default function PageConsultation(): React.JSX.Element {
   function analyserSeance(): void {
     setErreurAnalyse(undefined);
     setEnAnalyse(true);
+    // Run supersédé : l'ancien ne doit ni finir ni coûter — il est aborté
+    // AVANT que le nouveau prenne la main.
+    controleurAnalyse.current?.abort();
+    const controleur = new AbortController();
+    controleurAnalyse.current = controleur;
     generationAnalyse.current += 1;
     const generation = generationAnalyse.current;
+    const seanceDemande = id;
 
-    void analyzeSession(id).then((result) => {
-      // Réponse tardive ignorée (§3.4 n°8) : la page a démonté, ou un appel
-      // plus récent a déjà pris la main. On ne touche à AUCUN état.
-      if (demonte.current || generation !== generationAnalyse.current) return;
+    void analyzeSession(id, controleur.signal).then((result) => {
+      // Réponse tardive ignorée (§3.4 n°8) : la page a démonté, la séance a
+      // changé, ou un appel plus récent a déjà pris la main. On ne touche à
+      // AUCUN état — un run obsolète n'écrase jamais le run actif.
+      if (
+        demonte.current ||
+        generation !== generationAnalyse.current ||
+        seanceDemande !== seanceAnalyse.current
+      )
+        return;
 
+      controleurAnalyse.current = null;
       setEnAnalyse(false);
       if (!result.ok) {
+        // `annule` = abandon explicite ou run supersédé : la praticienne a
+        // déjà agi, on revient au repos avec un constat, pas une panne.
+        if (result.error.technical === "annule") {
+          setErreurAnalyse(fr.consultation.analyseAnnulee);
+          return;
+        }
+        // `delai-depasse` = timeout dur : le mot « délai » bascule l'écran en
+        // ERREUR terminale avec réessai, jamais un chargement perpétuel.
+        if (result.error.technical === "delai-depasse") {
+          setErreurAnalyse(fr.delaiDepasse);
+          return;
+        }
         // Message dédié (T6, §10 de 03-JARVIS-TOOLS.md) plutôt que le message
         // générique « service de données indisponible » : celui-ci dirait la
         // même chose pour une panne Jarvis que pour une panne de la base, et
@@ -770,6 +967,177 @@ export default function PageConsultation(): React.JSX.Element {
       }
       setAnalyse(result.data);
     });
+  }
+
+  /**
+   * Annulation explicite : terminale, sans mutation. Le run aborté est jeté
+   * par la garde de génération même si sa réponse arrivait quand même ; un
+   * `Réessayer` ultérieur créera un nouveau run.
+   */
+  function annulerAnalyse(): void {
+    controleurAnalyse.current?.abort();
+    controleurAnalyse.current = null;
+    generationAnalyse.current += 1;
+    setEnAnalyse(false);
+    setErreurAnalyse(fr.consultation.analyseAnnulee);
+  }
+
+  /**
+   * La lecture du dossier, déclenchée par l'onglet et par lui seul.
+   *
+   * `dossier === undefined` est l'état « jamais demandé » ; il sert aussi de
+   * geste de réessai (`reessayerDossier` le remet à `undefined`), ce qui évite
+   * un compteur de rechargement dont la seule fonction serait de relancer un
+   * effet que la donnée décrit déjà.
+   */
+  const patientId = seance?.patientId ?? null;
+  const ongletContexte =
+    onglet === "resume" || onglet === "traitement" || onglet === "rendezVous";
+
+  /**
+   * Une séance sans dossier rattaché n'expose QUE « Séance ».
+   *
+   * Le `LEFT JOIN` de `get_consultation` (026) laisse exister une consultation
+   * dont le rendez-vous n'a pas de patient. Lui proposer « Traitement » ou
+   * « Documents » afficherait quatre onglets vides : l'écran promettrait un
+   * dossier qu'il n'a pas.
+   */
+  const ongletsConsultation =
+    patientId === null
+      ? [{ cle: "seance", libelle: fr.consultation.onglets.seance }]
+      : [
+          { cle: "seance", libelle: fr.consultation.onglets.seance },
+          { cle: "resume", libelle: fr.consultation.onglets.resume },
+          { cle: "historique", libelle: fr.consultation.onglets.historique },
+          { cle: "traitement", libelle: fr.consultation.onglets.traitement },
+          { cle: "documents", libelle: fr.consultation.onglets.documents },
+          { cle: "rendezVous", libelle: fr.consultation.onglets.rendezVous },
+        ];
+
+  useEffect(() => {
+    if (patientId === null || !ongletContexte || dossier !== undefined) return;
+    let annule = false;
+    void getPatientWorkspace(patientId).then((r) => {
+      if (annule) return;
+      if (!r.ok) {
+        setErreurDossier(r.error.message);
+        // `null` ferme l'état « en cours » : sans lui, le squelette tournerait
+        // indéfiniment sous un message d'erreur — les deux états à la fois,
+        // ce que la règle d'exclusivité d'UX_CONTRACT interdit.
+        setDossier(null);
+        return;
+      }
+      setErreurDossier(undefined);
+      setDossier(r.data);
+    });
+    return () => {
+      annule = true;
+    };
+  }, [patientId, ongletContexte, dossier]);
+
+  function reessayerDossier(): void {
+    setErreurDossier(undefined);
+    setDossier(undefined);
+  }
+
+  // ── COCKPIT — état local, aucune lecture ─────────────────────────────────
+  //
+  // `focusSelection`/`focusLibre` meurent avec l'écran : ce sont des aides de
+  // saisie, pas du dossier. Seule la préférence du rail survit (préférence
+  // d'affichage, comme un tiroir).
+  const [focusSelection, setFocusSelection] = useState<readonly string[]>([]);
+  const [focusLibre, setFocusLibre] = useState("");
+  // V10 — mesures 1-10 : aides de saisie comme le focus, meurent avec l'écran.
+  // Chaque choix inscrit « Libellé : X/10 » dans Subjectif via `saveNote`.
+  const [mesures, setMesures] = useState<{ anxiete: number | null; sommeil: number | null; humeur: number | null }>({
+    anxiete: null,
+    sommeil: null,
+    humeur: null,
+  });
+  const [railOuvert, setRailOuvert] = useState<boolean>(() => lirePreferenceRail());
+
+  function lirePreferenceRail(): boolean {
+    if (typeof window === "undefined") return true;
+    try {
+      const v = window.localStorage.getItem(CLE_RAIL);
+      if (v === "ferme") return false;
+      if (v === "ouvert") return true;
+    } catch {
+      // Stockage indisponible : repli par défaut ci-dessous.
+    }
+    return (
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(min-width: 1280px)").matches
+    );
+  }
+
+  function basculerRail(): void {
+    setRailOuvert((ouvert) => {
+      const suivant = !ouvert;
+      try {
+        window.localStorage.setItem(CLE_RAIL, suivant ? "ouvert" : "ferme");
+      } catch {
+        // Préférence non conservée : le rail bascule quand même.
+      }
+      return suivant;
+    });
+  }
+
+  /**
+   * Charge le dossier sur GESTE explicite (bouton du rail ou du centre).
+   * Même porte auditée que les onglets, même état partagé : ouvrir ensuite
+   * un onglet de contexte ne relit rien. Jamais appelée au montage — le
+   * budget d'ouverture (e2e O5) ne bouge pas.
+   */
+  function chargerContexte(): void {
+    if (patientId === null || dossier !== undefined) return;
+    setErreurDossier(undefined);
+    void getPatientWorkspace(patientId).then((r) => {
+      if (!r.ok) {
+        setErreurDossier(r.error.message);
+        setDossier(null);
+        return;
+      }
+      setErreurDossier(undefined);
+      setDossier(r.data);
+    });
+  }
+
+  function insererPiste(champ: ChampSoap, texte: string): void {
+    if (!noteModifiable || seanceClose) return;
+    enregistrerSoap(champ, ajouterPiste(soap[champ], texte));
+  }
+
+  function appliquerFocusSelection(): void {
+    if (!noteModifiable || seanceClose) return;
+    const libre = focusLibre.trim();
+    const ajouts = libre === "" ? focusSelection : [...focusSelection, libre];
+    if (ajouts.length === 0) return;
+    enregistrerSoap("subjective", appliquerFocus(soap.subjective, ajouts));
+  }
+
+  const LIBELLES_MESURE = { anxiete: "Anxiété", sommeil: "Sommeil", humeur: "Humeur" } as const;
+
+  function appliquerMesure(cle: keyof typeof LIBELLES_MESURE, valeur: number): void {
+    if (!noteModifiable || seanceClose) return;
+    setMesures((m) => ({ ...m, [cle]: valeur }));
+    const phrase = `${LIBELLES_MESURE[cle]} : ${String(valeur)}/10`;
+    enregistrerSoap("subjective", ajouterPiste(soap.subjective, phrase));
+  }
+
+  function enregistrerMaintenant(): void {
+    void viderLesAttentes().then((pret) => {
+      if (pret) setConfirmation(fr.feedback.enregistre);
+    });
+  }
+
+  function voirTarif(): void {
+    const bloc = document.getElementById("bloc-tarif");
+    if (bloc === null) return;
+    const reduit =
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    bloc.scrollIntoView({ behavior: reduit ? "auto" : "smooth", block: "start" });
   }
 
   // ── Rendu ────────────────────────────────────────────────────────────────
@@ -827,11 +1195,69 @@ export default function PageConsultation(): React.JSX.Element {
     }
 
     return (
-      <EspaceTravail
-        travail={
+      <div className="grid grid-cols-1 items-start gap-4 desktop:grid-cols-cockpit-consultation">
+        {/*
+          LE COCKPIT — trois volets : patient / travail / contexte. La colonne
+          patient existe AVANT tout chargement du dossier (chargeur + même geste
+          que le rail, état partagé, zéro appel supplémentaire) : aucune
+          redistribution à l'arrivée des données.
+        */}
+        <div className="min-w-0 desktop:sticky desktop:top-6">
+          {erreurDossier !== undefined ? (
+            <BlocErreur
+              message={erreurDossier}
+              action={<Bouton onClick={reessayerDossier}>{fr.actions.reessayer}</Bouton>}
+            />
+          ) : dossier === undefined ? (
+            <div className="flex flex-col gap-3 rounded-2xl border border-rule bg-card p-5 shadow-carte">
+              <Squelette lignes={2} />
+              <div>
+                <Bouton rang="secondaire" onClick={chargerContexte}>
+                  {fr.consultation.cockpit.railCharger}
+                </Bouton>
+              </div>
+            </div>
+          ) : dossier === null ? (
+            <EtatVide
+              message={fr.consultation.cockpit.contexteInaccessible}
+              icone="patients"
+            />
+          ) : (
+            <ColonnePatient espace={dossier} />
+          )}
+        </div>
+        <div className="flex min-w-0 flex-col gap-4">
           <>
+            {dossier === undefined || dossier === null ? null : (
+              <>
+                <EtatClinique
+                  echelles={dossier.clinique?.echelles ?? []}
+                  modifiable={noteModifiable && !seanceClose}
+                  onInserer={insererPiste}
+                />
+                <DepuisDerniere espace={dossier} />
+              </>
+            )}
+
+            {noteModifiable && !seanceClose ? (
+              <>
+                <MesuresSeance valeurs={mesures} onMesurer={appliquerMesure} modifiable={noteModifiable && !seanceClose} />
+                <FocusSeance
+                  options={fr.consultation.cockpit.focusOptions.filter(
+                    (o) => o !== "Anxiété" && o !== "Sommeil" && o !== "Humeur",
+                  )}
+                  selection={focusSelection}
+                  onChanger={setFocusSelection}
+                  libre={focusLibre}
+                  onLibre={setFocusLibre}
+                  onAppliquer={appliquerFocusSelection}
+                  peutAppliquer={focusSelection.length > 0 || focusLibre.trim() !== ""}
+                />
+              </>
+            ) : null}
+
             <SectionPliable
-              titre={fr.consultation.notesBrutes}
+              titre={fr.consultation.cockpit.brutTitre}
               action={
                 <span className="flex items-center gap-3">
                   {/* La dictée n'apparaît QUE si ce navigateur sait enregistrer,
@@ -856,9 +1282,10 @@ export default function PageConsultation(): React.JSX.Element {
                   valeur={brut}
                   onChange={enregistrerBrut}
                   zoneRef={refBrut}
-                  lignes={8}
+                  lignes={4}
                   clinique
                   disabled={seanceClose}
+                  placeholder={fr.consultation.cockpit.notesPlaceholder}
                   indication={
                     seanceClose
                       ? fr.consultation.notesBrutesFigees
@@ -875,75 +1302,97 @@ export default function PageConsultation(): React.JSX.Element {
               </div>
             </SectionPliable>
 
-            <SectionPliable
-              titre={fr.consultation.note}
-              {...(note?.status === "signed" ? { annotation: fr.feedback.noteSignee } : {})}
-              action={
-                noteModifiable ? (
-                  <IndicateurEnregistrement
-                    etat={etatSoap}
-                    {...(heureSoap === undefined ? {} : { horodatage: heureSoap })}
-                  />
-                ) : null
-              }
-            >
-              <div className="flex flex-col gap-6">
-                {/* L'ÉTAT DU VERROU, DIT EXPLICITEMENT. Une note qu'on ne peut
-                    plus modifier sans que l'écran l'explique se lit comme une
-                    panne, et la praticienne cherche à contourner. */}
-                {etatVerrou === "fenetre-correction" && restantMs !== null ? (
-                  <PanneauInfo ton="attention" titre={fr.consultation.fenetreCorrection}>
-                    <span className="font-num tabular-nums">{decompte(restantMs)}</span>
-                    {" — "}
-                    {fr.consultation.fenetreIndication}
-                  </PanneauInfo>
-                ) : null}
+            <div className="flex flex-col gap-4">
+              {/* L'ÉTAT DU VERROU, DIT EXPLICITEMENT. Une note qu'on ne peut
+                  plus modifier sans que l'écran l'explique se lit comme une
+                  panne, et la praticienne cherche à contourner. */}
+              <CompteReboursVerrou note={note} />
 
-                {etatVerrou === "verrouillee" ? (
-                  <PanneauInfo titre={fr.consultation.verrouillee}>
-                    {fr.consultation.verrouParLaBase}
-                  </PanneauInfo>
-                ) : null}
-
-                {noteModifiable ? (
-                  /* ⚠️ LE MICRO EST SUR LA LIGNE DU LIBELLÉ, ET C'EST SON
-                     CONTRAT. Celui posé à côté de « Subjectif » écrit dans
-                     Subjectif — rien à lire, rien à choisir, aucun mode global
-                     à se rappeler. Une barre d'outils commune aurait rendu la
-                     cible ambiguë au moment précis où elle doit être évidente. */
-                  CHAMPS_SOAP.map((champ) => (
-                    <ChampZoneTexte
-                      key={champ}
-                      libelle={LIBELLES_SOAP[champ].titre}
-                      indication={
-                        dictee.cible === champ
-                          ? fr.consultation.dicterChampIndication
-                          : LIBELLES_SOAP[champ].indication
-                      }
-                      valeur={soap[champ]}
-                      onChange={(v) => enregistrerSoap(champ, v)}
-                      zoneRef={refsSoap[champ]}
-                      lignes={5}
-                      clinique
-                      action={
-                        <BoutonDictee
-                          champ={champ}
-                          libelleChamp={LIBELLES_SOAP[champ].titre}
-                          dictee={dictee}
-                        />
-                      }
-                    />
-                  ))
-                ) : (
-                  <div className="flex flex-col gap-6">
-                    {CHAMPS_SOAP.map((champ) => (
-                      <Champ
-                        key={champ}
-                        libelle={LIBELLES_SOAP[champ].titre}
-                        valeur={note?.soap[champ] ?? null}
+              {noteModifiable ? (
+                  <NotesStructurees
+                    soap={soap}
+                    onChanger={enregistrerSoap}
+                    refs={refsSoap}
+                    micro={(champ) => (
+                      <BoutonDictee
+                        champ={champ}
+                        libelleChamp={LIBELLES_SOAP[champ].titre}
+                        dictee={dictee}
                       />
-                    ))}
-                  </div>
+                    )}
+                    modifiable={noteModifiable && !seanceClose}
+                    libelles={{
+                      subjective: {
+                        titre: LIBELLES_SOAP.subjective.titre,
+                        indication:
+                          dictee.cible === "subjective"
+                            ? fr.consultation.dicterChampIndication
+                            : LIBELLES_SOAP.subjective.indication,
+                      },
+                      objective: {
+                        titre: LIBELLES_SOAP.objective.titre,
+                        indication:
+                          dictee.cible === "objective"
+                            ? fr.consultation.dicterChampIndication
+                            : LIBELLES_SOAP.objective.indication,
+                      },
+                      assessment: {
+                        titre: LIBELLES_SOAP.assessment.titre,
+                        indication:
+                          dictee.cible === "assessment"
+                            ? fr.consultation.dicterChampIndication
+                            : LIBELLES_SOAP.assessment.indication,
+                      },
+                      plan: {
+                        titre: LIBELLES_SOAP.plan.titre,
+                        indication:
+                          dictee.cible === "plan"
+                            ? fr.consultation.dicterChampIndication
+                            : LIBELLES_SOAP.plan.indication,
+                      },
+                    }}
+                    action={
+                      <span className="flex items-center gap-3">
+                        <IndicateurEnregistrement
+                          etat={etatSoap}
+                          {...(heureSoap === undefined ? {} : { horodatage: heureSoap })}
+                        />
+                        {/* La signature vit à côté de la note qu'elle fige, pas sous
+                            le pli : un geste juridique se cherche, il ne se devine
+                            pas. La clôture, elle, n'existe qu'en barre collante. */}
+                        {!seanceClose && (note === null || note.status === "draft") ? (
+                          <Bouton rang="principal" onClick={signer} disabled={envoi}>
+                            {fr.actions.signerLaNote}
+                          </Bouton>
+                        ) : null}
+                      </span>
+                    }
+                  />
+                ) : (
+                  <section
+                    aria-label={fr.consultation.note}
+                    className="flex flex-col gap-4 rounded-2xl border border-rule bg-card p-5 shadow-carte"
+                  >
+                    <div className="flex flex-wrap items-center justify-between gap-3">
+                      <h2 className="font-ui text-heading font-bold text-ink-900">
+                        {fr.consultation.note}
+                      </h2>
+                      {note?.status === "signed" ? (
+                        <span className="font-ui text-label text-ink-500">
+                          {fr.feedback.noteSignee}
+                        </span>
+                      ) : null}
+                    </div>
+                    <div className="flex flex-col gap-6">
+                      {CHAMPS_SOAP.map((champ) => (
+                        <Champ
+                          key={champ}
+                          libelle={LIBELLES_SOAP[champ].titre}
+                          valeur={note?.soap[champ] ?? null}
+                        />
+                      ))}
+                    </div>
+                  </section>
                 )}
 
                 {note?.signedAt == null ? null : (
@@ -962,8 +1411,7 @@ export default function PageConsultation(): React.JSX.Element {
                     </div>
                   </Carte>
                 )}
-              </div>
-            </SectionPliable>
+            </div>
 
             {/* Les amendements n'apparaissent qu'une fois la note signée : sur
                 un brouillon, la section n'aurait aucun contenu possible. */}
@@ -1044,40 +1492,27 @@ export default function PageConsultation(): React.JSX.Element {
               </SectionPliable>
             ) : null}
           </>
-        }
-        contexte={
-          <>
-            <Carte>
-              <div className="p-6">
-                <GrilleChamps>
-                  <Champ
-                    libelle={fr.agenda.patient}
-                    valeur={nomPatient(seance.firstName, seance.lastName)}
-                  />
-                  <Champ libelle={fr.patients.numeroDossier} valeur={seance.recordNumber} />
-                  <Champ
-                    libelle={fr.consultation.typeConsultation}
-                    valeur={
-                      seance.appointmentKind === null
-                        ? null
-                        : fr.agenda.types[seance.appointmentKind]
-                    }
-                  />
-                  <Champ libelle={fr.consultation.debut} valeur={jourComplet(seance.startedAt)} />
-                  {seance.endedAt === null ? null : (
-                    <Champ libelle={fr.consultation.fin} valeur={jourComplet(seance.endedAt)} />
-                  )}
-                </GrilleChamps>
-              </div>
-            </Carte>
-
-            {/* LES DEUX EMPLACEMENTS DES MODULES À VENIR. Ils sont posés
-                maintenant pour que la transcription (semaine 2) et l'analyse de
-                séance (S6) s'ajoutent sans redécouper la page — et ils disent
-                honnêtement qu'ils sont vides (I19). */}
-            <SectionPliable titre={fr.consultation.filSeance}>
-              <EtatVide message={fr.consultation.filSeanceIndisponible} />
-            </SectionPliable>
+        </div>
+        <div className="min-w-0">
+          <RailContexte
+            ouvert={railOuvert}
+            onBasculer={basculerRail}
+            dossier={dossier}
+            erreurDossier={erreurDossier}
+            onCharger={chargerContexte}
+            onReessayer={reessayerDossier}
+            patientId={patientId}
+            consultationActuelleId={seance.id}
+            jarvis={
+              <>
+                {/* LES DEUX EMPLACEMENTS DES MODULES À VENIR. Ils sont posés
+                    maintenant pour que la transcription (semaine 2) et l'analyse de
+                    séance (S6) s'ajoutent sans redécouper la page — et ils disent
+                    honnêtement qu'ils sont vides (I19). Repliés dans le rail :
+                    un vide honnête ne prend pas la place du travail. */}
+                <SectionPliable titre={fr.consultation.filSeance} replieParDefaut>
+                  <EtatVide message={fr.consultation.filSeanceIndisponible} />
+                </SectionPliable>
 
             <SectionPliable titre={fr.consultation.assistance}>
               <div className="flex flex-col gap-4">
@@ -1103,11 +1538,30 @@ export default function PageConsultation(): React.JSX.Element {
 
                 {/* État de chargement HONNÊTE : un texte qui dit ce qui se
                     passe, jamais un squelette qui imiterait un contenu que
-                    personne n'a encore produit. */}
-                {enAnalyse ? <PanneauInfo>{fr.consultation.analyseEnCours}</PanneauInfo> : null}
+                    personne n'a encore produit. Annulable : l'attente n'est
+                    jamais un état sans sortie. */}
+                {enAnalyse ? (
+                  <div className="flex flex-col gap-2">
+                    <PanneauInfo>{fr.consultation.analyseEnCours}</PanneauInfo>
+                    <div>
+                      <Bouton rang="secondaire" onClick={annulerAnalyse}>
+                        {fr.actions.annuler}
+                      </Bouton>
+                    </div>
+                  </div>
+                ) : null}
 
+                {/* État terminal : chaque échec nomme son issue et propose
+                    `Réessayer` — un nouveau run, jamais une résurrection. */}
                 {erreurAnalyse === undefined ? null : (
-                  <PanneauInfo ton="attention">{erreurAnalyse}</PanneauInfo>
+                  <div className="flex flex-col gap-2">
+                    <PanneauInfo ton="attention">{erreurAnalyse}</PanneauInfo>
+                    <div>
+                      <Bouton rang="secondaire" onClick={analyserSeance}>
+                        {fr.actions.reessayer}
+                      </Bouton>
+                    </div>
+                  </div>
                 )}
 
                 {/* Trois blocs, dans l'ordre exact du démo-spec (§2 bis),
@@ -1119,6 +1573,9 @@ export default function PageConsultation(): React.JSX.Element {
                     un jour l'éditeur lui-même. */}
                 {analyse === null ? null : (
                   <div className="flex flex-col gap-6">
+                    {/* SA-03 — la portée, dite avant le contenu : sur les
+                        seules notes du jour, ou avec N notes antérieures. */}
+                    <PanneauInfo>{libelleSourcesAnalyse(analyse.sources.historiqueNotes)}</PanneauInfo>
                     <div className="flex flex-col gap-3">
                       <p className="font-ui text-label font-medium uppercase tracking-label text-ink-500">
                         {fr.consultation.noteStructureeTitre}
@@ -1170,9 +1627,11 @@ export default function PageConsultation(): React.JSX.Element {
                 )}
               </div>
             </SectionPliable>
-          </>
-        }
-      />
+              </>
+            }
+          />
+        </div>
+      </div>
     );
   })();
 
@@ -1181,7 +1640,6 @@ export default function PageConsultation(): React.JSX.Element {
       role={utilisateur.role}
       nomComplet={utilisateur.fullName}
       onDeconnexion={deconnecter}
-      modeSeance={enSeance}
       titre={
         seance == null
           ? fr.consultation.titre
@@ -1192,61 +1650,49 @@ export default function PageConsultation(): React.JSX.Element {
       }
       {...(seance?.practitionerName == null ? {} : { sousTitre: seance.practitionerName })}
       actions={
+        // Chargé, le cockpit porte son propre chrono et sa propre sortie
+        // (`CockpitHeader`) : les répéter dans la barre ferait deux chronos
+        // et deux retours pour un écran. Déchargé, on garde la sortie.
         seance == null ? (
           <LienBouton href="/agenda">{fr.agenda.retourALAgenda}</LienBouton>
-        ) : (
-          <div className="flex flex-wrap items-center gap-4">
-            {/* Le chronomètre s'arrête à la clôture : une séance close affiche
-                sa durée réelle si elle est connue, ou le dit honnêtement sinon
-                (V1.3) — jamais un compteur qui continue. */}
-            <span className="font-num text-num tabular-nums text-ink-900">
-              {dureeAffichee(seanceClose, seance.startedAt, seance.endedAt, maintenant)}
-            </span>
-            <LienBouton href="/agenda" rang="discret">
-              {fr.agenda.retourALAgenda}
-            </LienBouton>
-          </div>
-        )
+        ) : undefined
       }
     >
-      <div className="mx-auto flex w-full max-w-main flex-col gap-8">
+      <div className="mx-auto flex w-full flex-col gap-4">
         {horsLigne || horsLigneSession ? <BandeauHorsLigne /> : null}
 
         {/*
-          L'EN-TÊTE DE SÉANCE — visible UNIQUEMENT dans le mode séance.
-          Hors séance, l'identité est portée par la barre supérieure et
-          répéter le nom ici ferait deux titres pour un écran.
-
-          Dans la séance, il n'y a plus de barre : ce bloc EST le seul repère.
-          Le nom domine, le chrono se lit d'un coup d'œil à l'autre bout de la
-          ligne, et la seule sortie reste atteignable sans chercher.
+          L'EN-TÊTE COCKPIT — compact, toujours clair. L'identité est portée
+          une fois ici (et dans la barre supérieure) : nom, type et date se
+          lisent en une ligne, le chrono reste modeste à l'autre bout.
         */}
-        {enSeance && seance != null ? (
-          <header className="flex flex-wrap items-baseline justify-between gap-4 border-b border-rule pb-5">
-            <div className="flex min-w-0 flex-col gap-1">
-              <h1 className="truncate font-ui text-display font-bold tracking-display text-ink-900">
-                {nomPatient(seance.firstName, seance.lastName) ?? fr.agenda.patientNonRattache}
-              </h1>
-              {seance.practitionerName == null ? null : (
-                <p className="font-ui text-body font-regular text-ink-500">
-                  {seance.practitionerName}
-                </p>
-              )}
-            </div>
-            <div className="flex shrink-0 items-center gap-5">
-              <span
-                /* Le chrono en chiffres tabulaires : sans `tabular-nums`, les
-                   secondes font trembler la ligne à chaque seconde. */
-                className="font-num text-metric font-semibold tabular-nums tracking-metric text-ink-900"
-              >
-                {dureeAffichee(seanceClose, seance.startedAt, seance.endedAt, maintenant)}
-              </span>
+        {seance == null ? null : (
+          <CockpitHeader
+            titre={nomPatient(seance.firstName, seance.lastName) ?? fr.agenda.patientNonRattache}
+            meta={
+              [
+                seance.appointmentKind === null
+                  ? null
+                  : fr.agenda.types[seance.appointmentKind],
+                jourComplet(seance.startedAt),
+              ]
+                .filter((m): m is string => m !== null)
+                .join(" · ") || null
+            }
+            chrono={
+              <ChronoSeance
+                close={seanceClose}
+                startedAt={seance.startedAt}
+                endedAt={seance.endedAt}
+              />
+            }
+            retour={
               <LienBouton href="/agenda" rang="discret">
                 {fr.agenda.retourALAgenda}
               </LienBouton>
-            </div>
-          </header>
-        ) : null}
+            }
+          />
+        )}
 
         {confirmation === undefined ? null : (
           <PanneauInfo ton="positif">{confirmation}</PanneauInfo>
@@ -1266,46 +1712,156 @@ export default function PageConsultation(): React.JSX.Element {
           />
         )}
 
-        {contenu}
+        {/*
+          LA SOUS-NAVIGATION. Elle n'apparaît que lorsqu'il y a une séance à
+          naviguer : sur un écran en erreur ou introuvable, une barre d'onglets
+          proposerait des sections qui ne mènent nulle part.
+        */}
+        {seance == null ? null : (
+          <Onglets
+            onglets={ongletsConsultation}
+            actif={onglet}
+            onChanger={setOnglet}
+            etiquette={fr.consultation.onglets.etiquette}
+          />
+        )}
+
+        {/* V10 — barre haute sticky : nav + secondaire + primaire, sous les
+            onglets, jamais en bas qui masquait la note. Même logique métier. */}
+        {seance == null || onglet !== "seance" ? null : (
+          <BarreConsultation
+            etatBrut={etatBrut}
+            etatSoap={etatSoap}
+            heureBrut={heureBrut}
+            heureSoap={heureSoap}
+            notesRenseignees={brut.trim() !== "" || !noteEstVide({ ...soap })}
+            evaluationRenseignee={soap.assessment.trim() !== ""}
+            conduiteRenseignee={soap.plan.trim() !== ""}
+            tarifFixe={tarifPresent}
+            peutClore={!seanceClose && tarifPresent === true}
+            envoi={envoi}
+            enregistrer={enregistrerMaintenant}
+            clore={clore}
+            voirTarif={voirTarif}
+          />
+        )}
+
+        {/*
+          ⚠️ LA SÉANCE RESTE MONTÉE, MÊME QUAND UN AUTRE ONGLET EST ACTIF, ET
+          CE N'EST PAS UNE OPTIMISATION — C'EST UNE PROTECTION DU TRAVAIL.
+
+          Le texte SOAP vit dans l'état de cette page et survivrait au démontage.
+          Ce qui n'y survivrait PAS : les `ref` des zones de texte, dont dépend
+          l'insertion de la dictée (`insererDictee`). Démonter l'éditeur pendant
+          qu'une dictée est en vol ferait écrire dans une référence nulle — la
+          phrase dictée serait perdue en silence, au pire moment.
+
+          `hidden` plutôt qu'un démontage conditionnel : le DOM reste, la dictée
+          garde sa cible, et le compte à rebours du verrou continue de courir.
+        */}
+        <div hidden={onglet !== "seance"}>
+          {/* `PanneauOnglet` porte l'`id="panneau-seance"` que l'onglet
+              designe par `aria-controls`. Sans lui, la barre pointerait vers
+              un element inexistant : un lecteur d'ecran annoncerait un onglet
+              dont il ne peut pas atteindre le panneau. */}
+          <PanneauOnglet cle="seance">
+          {contenu}
 
         {/* ADR-010 : le tarif se saisit EN FIN DE SÉANCE, donc juste au-dessus
-            du bouton qui la termine. Le bloc reste visible après la clôture —
+            de la barre qui la termine. Le bloc reste visible après la clôture —
             une séance close dont le tarif n'a pas été fixé est précisément le
             cas où l'oubli coûte. Aucune décision de rôle ici : la porte 029
             refuse la séance d'une consœur, et c'est elle qui a raison. */}
         {seance == null ? null : (
-          <BlocTarif consultationId={seance.id} onEtatTarif={setTarifPresent} />
+          <div id="bloc-tarif" className="scroll-mt-6">
+            <BlocTarif consultationId={seance.id} onEtatTarif={setTarifPresent} />
+          </div>
         )}
 
         {/* 037 : sans ligne de paiement, la clôture est REFUSÉE. Le refus
             arrivait en P0001, donc en message générique — la praticienne
             relançait le même bouton sans savoir quoi corriger. On dit la règle
             ici, et on retire le bouton plutôt que de le proposer pour le
-            refuser : le geste à faire est juste au-dessus. */}
+            refuser : le geste à faire est juste au-dessus.
+            S1 tri-state : `tarifPresent === undefined` (chargement ou lecture
+            en échec) n'autorise jamais Terminer et n'affiche jamais le rappel
+            « sans tarif » — seul `true` autorise, seul `false` bloque. */}
         {seance == null || seanceClose || tarifPresent !== false ? null : (
           <PanneauInfo titre={fr.consultation.clotureSansTarifTitre} ton="attention">
             <p className="font-ui text-body">{fr.consultation.clotureSansTarif}</p>
           </PanneauInfo>
         )}
+          </PanneauOnglet>
+        </div>
 
-        {seance == null ? null : (
-          <BarreActions>
-            {/* Le bouton disparaît quand il n'a plus de sens, il ne reste pas
-                grisé : une commande grisée en permanence apprend à ne plus la
-                regarder. La SIGNATURE, elle, reste visible et grisée pendant la
-                fenêtre de correction — c'est une information. */}
-            {note === null || note.status === "draft" ? (
-              <Bouton rang="principal" onClick={signer} disabled={envoi || seance === null}>
-                {fr.actions.signerLaNote}
-              </Bouton>
-            ) : null}
-            {seanceClose || tarifPresent === false ? null : (
-              <Bouton onClick={clore} disabled={envoi}>
-                {fr.actions.terminerLaSeance}
-              </Bouton>
+        {/*
+          LES ONGLETS DE CONTEXTE — montés à la demande, démontés en sortant.
+          Aucun d'eux ne porte de saisie en cours : les démonter ne coûte rien
+          et évite de garder en mémoire trois panneaux que personne ne regarde.
+        */}
+        {seance != null && patientId !== null && onglet === "historique" ? (
+          <PanneauOnglet cle="historique">
+            <PanneauHistorique patientId={patientId} consultationActuelleId={seance.id} />
+          </PanneauOnglet>
+        ) : null}
+
+        {seance != null && patientId !== null && ongletContexte ? (
+          <PanneauOnglet cle={onglet}>
+            {erreurDossier !== undefined ? (
+              <BlocErreur
+                message={erreurDossier}
+                action={<Bouton onClick={reessayerDossier}>{fr.actions.reessayer}</Bouton>}
+              />
+            ) : dossier == null ? (
+              <Squelette lignes={6} />
+            ) : onglet === "resume" ? (
+              /*
+                LE RÉSUMÉ D'AVANT-SÉANCE — DÉTERMINISTE, ZÉRO IA.
+
+                Les trois sections viennent telles quelles de l'écran Patient.
+                Aucune n'appelle de modèle : « Depuis la dernière fois » est un
+                DIFF FACTUEL calculé sur les seules données du dossier
+                (prescription, document émis, échelle passée), et « Point de
+                situation » est le repli honnête qui ne s'appelle jamais
+                « résumé ». Ce qui s'affiche ici est donc vrai même quand la
+                passerelle est tombée — I20, et la règle 8 sur le fictif.
+
+                Elles sont réemployées SANS COPIE : la même règle de calcul sert
+                les deux écrans, donc les deux ne peuvent pas diverger.
+              */
+              <div className="mx-auto flex w-full max-w-lecture flex-col gap-8">
+                <PointDeSituation espace={dossier} />
+                <SectionDepuisDerniere espace={dossier} />
+                <ListeSignaux espace={dossier} />
+                {/* L'IDENTITÉ EN DERNIER, ET C'EST VOULU. Ce que la praticienne
+                    cherche avant de recevoir, c'est ce qui a CHANGÉ ; l'âge et
+                    le téléphone se consultent, ils ne s'annoncent pas. Les
+                    placer en tête repousserait le seul contenu daté sous la
+                    ligne de flottaison. C'est aussi la SEULE carte d'identité
+                    de cet écran — l'en-tête porte déjà le nom, et le redire en
+                    grand ferait deux titres pour un patient. */}
+                <CarteIdentite espace={dossier} />
+              </div>
+            ) : onglet === "traitement" ? (
+              <PanneauTraitements
+                traitements={dossier.traitements}
+                traitementsV2={dossier.traitementsV2}
+                patientId={patientId}
+                onRefresh={reessayerDossier}
+              />
+            ) : (
+              <PanneauRendezVous agenda={dossier.agenda} />
             )}
-          </BarreActions>
-        )}
+          </PanneauOnglet>
+        ) : null}
+
+        {/* Les documents lisent seuls, comme dans l'écran Patient : ils n'ont
+            pas besoin du dossier complet, seulement de l'identifiant. */}
+        {seance != null && patientId !== null && onglet === "documents" ? (
+          <PanneauOnglet cle="documents">
+            <SectionDocumentsPatient patientId={patientId} />
+          </PanneauOnglet>
+        ) : null}
       </div>
     </AppShell>
   );

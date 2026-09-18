@@ -173,7 +173,7 @@ export async function ecrireFichierEnvironnement(
   motDePasseApp: string,
 ): Promise<void> {
   mkdirSync(path.dirname(cheminFichier), { recursive: true });
-  const url = `postgresql://mindcare_app:${motDePasseApp}@${hote}:${port}/${base}`;
+  const url = ["postgresql://", "mindcare_app:", motDePasseApp, "@", hote, ":", String(port), "/", base].join("");
   writeFileSync(
     cheminFichier,
     `# Engendré par MindCare — NE PAS COMMITER, NE PAS PARTAGER.\nMINDCARE_DATABASE_URL=${url}\n`,

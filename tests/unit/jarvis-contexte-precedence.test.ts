@@ -223,6 +223,7 @@ describe("4bis. après une ambiguïté, AUCUNE capacité patient ne s'exécute",
         conversationId: params.conversationId,
         persiste: false,
         interrompu: false,
+        preuves: [],
       });
 
     // ⚠️ LES JETONS SONT FRAPPÉS POUR DE VRAI, ET C'EST INDISPENSABLE.

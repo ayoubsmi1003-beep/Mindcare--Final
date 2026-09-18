@@ -55,11 +55,33 @@ au runtime strict : les six exécutables que le code appelle réellement
 StackBuilder, `pgbench`, `pg_regress`…), les DLL qu'ils importent VRAIMENT
 (lues dans leur table d'imports PE, résolues récursivement — jamais devinées
 à l'œil), et les seules extensions que les migrations créent (`pgcrypto`,
-`uuid-ossp`, `pg_trgm`, `unaccent`, plus `plpgsql` et `dict_snowball` que
+`uuid-ossp`, `pg_trgm`, `unaccent`, `vector` (M07, § pgvector ci-dessous),
+plus `plpgsql` et `dict_snowball` que
 `initdb` charge lui-même, inconditionnellement). Le résultat est vérifié par
-un VRAI cluster — `initdb`, démarrage, les quatre extensions, un appel réel
+un VRAI cluster — `initdb`, démarrage, les cinq extensions, un appel réel
 à `unaccent()`, `pg_dump` puis `pg_restore` — avant d'être accepté ; en cas
 d'échec, rien n'est perdu : le script restaure ce qu'il avait mis de côté.
 
 Environ 160 Mio → ~55 Mio. Ne JAMAIS repeupler ce dossier sans relancer
 l'élagage avant `pnpm build:desktop`.
+
+## pgvector (M07 — RAG gouvernée)
+
+La migration `092_knowledge_rag.sql` exige `CREATE EXTENSION vector`.
+Le zip EDB ne la fournit pas : l'artefact est donc ajouté ici **avant**
+l'élagage, qui le conserve automatiquement (découverte par grep des
+`CREATE EXTENSION`, fermeture PE, preuve par cluster réel incluant
+`CREATE EXTENSION vector`).
+
+Artefact épinglé (prouvé contre EDB 16.15 le 2026-09-15, Gate B Phase 1) :
+
+- version : **0.8.6** (`share/extension/vector.control`, `default_version`)
+- `lib/vector.dll` — SHA-256 :
+  `57984F7662DFC1AF443884D4F9D79ED4D50D16C8143C817B1E96BCB6DCCA43EB`
+- `share/extension/vector.control` + `vector--0.8.6.sql` + chaîne complète
+  de montée en version `vector--0.1.0--…--0.8.6.sql`
+- `scripts/verifier-paquet.mjs` §4 refuse tout paquet dont la DLL, le
+  `.control`, le script de base ou la parité des scripts diffèrent.
+
+Toute reconstruction volontaire de cet artefact met à jour ce pin —
+et prouve le nouvel artefact avant (mission M07).

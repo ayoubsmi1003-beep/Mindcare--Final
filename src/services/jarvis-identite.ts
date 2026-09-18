@@ -123,6 +123,35 @@ export class CarteIdentite {
     reel: string,
     libelle: string,
     identites: readonly string[] = [],
+    /**
+     * ⚠️ LE LIBELLÉ N'EST PAS TOUJOURS UNE IDENTITÉ — MESURÉ AU NAVIGATEUR LE
+     * 2026-09-06, ET C'EST CE QUI FAISAIT TOURNER JARVIS EN ROND.
+     *
+     * `projeterCreneau` frappe le rendez-vous avec son HEURE DE DÉBUT comme
+     * libellé : `carte.rendezVous(e.id, e.startsAt)`. Le libellé étant ajouté
+     * d'office aux identités à masquer, `assainir` remplaçait ensuite CHAQUE
+     * occurrence de cette chaîne — y compris le champ `debut` du créneau
+     * lui-même. Le modèle recevait :
+     *
+     *     { ref:"RDV_001", debut:"{{RDV_001}}", fin:"2026-09-06T17:11:00+00:00" }
+     *
+     * — un créneau sans heure de début, pendant que `fin` survivait intact.
+     * L'asymétrie est la signature du défaut : `endsAt` n'est le libellé de
+     * personne. Ne pouvant pas répondre « qui vient aujourd'hui » avec une
+     * donnée mutilée, le modèle redemandait l'agenda ; la déduplication
+     * renvoyait le même résultat ; le garde de répétition finissait par rompre
+     * le tour sur « Je tourne en rond ». Le garde a bien fait son travail —
+     * il masquait une corruption de données en amont.
+     *
+     * Un horodatage n'identifie personne : il ne franchit rien de plus en
+     * clair, et il est de toute façon déjà envoyé en `fin` et `dureeMinutes`.
+     * Le masquer ne protégeait rien et détruisait la réponse.
+     *
+     * ⚠️ LE DÉFAUT RESTE `true`. Un patient DOIT voir son libellé masqué —
+     * c'est « BELKACEM Nadia ». Seul l'appelant qui SAIT que son libellé est
+     * une donnée de structure passe `false`, et il n'y en a qu'un.
+     */
+    masquerLibelle = true,
   ): Ref {
     const existante = this.#parReel.get(reel);
     if (existante !== undefined) return existante;
@@ -135,7 +164,11 @@ export class CarteIdentite {
     // chez l'appelant : le pare-feu les consomme telles quelles, et une chaîne
     // vide y ferait masquer tout le texte.
     const propres = Array.from(
-      new Set([libelle, ...identites].map((v) => v.trim()).filter((v) => v.length >= 2)),
+      new Set(
+        [...(masquerLibelle ? [libelle] : []), ...identites]
+          .map((v) => v.trim())
+          .filter((v) => v.length >= 2),
+      ),
     );
 
     this.#parRef.set(ref, { ref, reel, libelle, identites: propres });
@@ -156,8 +189,14 @@ export class CarteIdentite {
   patient(reel: string, libelle: string, identites: readonly string[] = []): RefPatient {
     return this.frapper("PATIENT", reel, libelle, identites) as RefPatient;
   }
+  /**
+   * Le libellé d'un rendez-vous est son HEURE DE DÉBUT (voir `projeterCreneau`),
+   * donc une donnée de structure et non une identité : il sert à RENDRE le
+   * jeton à l'écran, jamais à masquer. D'où `masquerLibelle = false` — sans
+   * quoi le champ `debut` du créneau se masque lui-même.
+   */
   rendezVous(reel: string, libelle: string): RefRendezVous {
-    return this.frapper("RDV", reel, libelle) as RefRendezVous;
+    return this.frapper("RDV", reel, libelle, [], false) as RefRendezVous;
   }
   document(reel: string, libelle: string, identites: readonly string[] = []): RefDocument {
     return this.frapper("DOC", reel, libelle, identites) as RefDocument;
@@ -176,6 +215,29 @@ export class CarteIdentite {
   }
 
   /**
+   * Identifiant réel → libellé d'affichage, ou `null`.
+   *
+   * ⚠️ N'OUVRE AUCUNE SURFACE NOUVELLE. Le libellé rendu ici est exactement
+   * celui que `rendre()` écrit déjà dans l'écran, et la carte n'existe que dans
+   * le navigateur : rien ne franchit la frontière qui ne la franchissait pas.
+   *
+   * Elle existe pour l'ANCRE DE CONVERSATION. La boucle, à la fin d'un tour,
+   * connaît l'identifiant RÉEL du patient qu'elle a effectivement lu (elle vient
+   * de résoudre les arguments) mais pas son libellé — et une cible sans libellé
+   * ne peut ni s'afficher dans la puce de contexte, ni alimenter le masquage du
+   * tour suivant. On relit donc ce que la carte du tour détient déjà.
+   *
+   * ⚠️ ELLE NE DÉCIDE DE RIEN. Un libellé n'est pas une autorisation : l'ancre
+   * qu'il sert à construire est une aide de conversation, et le tour suivant
+   * repasse intégralement par la résolution, la RLS et les portes SQL.
+   */
+  libellePourIdentifiant(reel: string): string | null {
+    const ref = this.#parReel.get(reel);
+    if (ref === undefined) return null;
+    return this.#parRef.get(ref)?.libelle ?? null;
+  }
+
+  /**
    * Remplace récursivement toute chaîne `{{REF}}` par l'identifiant réel, dans
    * une structure d'arguments rendue par le modèle.
    *
@@ -190,6 +252,19 @@ export class CarteIdentite {
       const seul = /^\{\{([A-Z]+_\d+)\}\}$/.exec(valeur);
       if (seul !== null) {
         const nom = seul[1];
+        if (nom === undefined) return null;
+        return this.resoudre(nom);
+      }
+      // ── Référence NUE entière — ajout du 2026-09-03, mesuré, pas supposé ──
+      // Le modèle rend `{"patientId": "PATIENT_001"}` sans accolades (live :
+      // « medicaments de ayoub salmi » → `regle-metier` → aveu après 3 tours).
+      // ÉGALITÉ STRICTE sur toute la valeur, jamais une sous-chaîne : soit
+      // elle EST le jeton frappé ce tour-ci, soit elle est invalide — aucune
+      // confusion d'identité possible, et l'inconnu rend `null` comme la forme
+      // à accolades. Le milieu de chaîne reste refusé (ci-dessous).
+      const nue = /^([A-Z]+_\d+)$/.exec(valeur);
+      if (nue !== null) {
+        const nom = nue[1];
         if (nom === undefined) return null;
         return this.resoudre(nom);
       }

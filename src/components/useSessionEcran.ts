@@ -31,6 +31,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { getSession, signOut } from "@/services/auth";
+import { purgerContexteSession } from "@/services/conversation";
 import { getCurrentUser, type CurrentUser } from "@/services/authz";
 
 export interface SessionEcran {
@@ -63,6 +64,17 @@ export interface SessionEcran {
   readonly sessionTranchee: boolean | undefined;
   readonly horsLigne: boolean;
   readonly deconnecter: () => void;
+  /**
+   * Rejoue la résolution session → profil, et remet l'écran en CHARGEMENT
+   * pendant qu'elle court.
+   *
+   * POURQUOI ELLE EXISTE. Un écran qui compose PAR RÔLE ne peut pas se
+   * contenter d'annoncer « profil illisible » : il doit offrir le geste qui
+   * répare. Sans cette fonction, le seul recours était `window.location
+   * .reload()` — un rechargement complet qui refait toutes les lectures
+   * métier de l'écran pour relire UNE ligne d'annuaire.
+   */
+  readonly reessayer: () => void;
 }
 
 export function useSessionEcran(): SessionEcran {
@@ -70,6 +82,7 @@ export function useSessionEcran(): SessionEcran {
   const [utilisateur, setUtilisateur] = useState<CurrentUser | null | undefined>(undefined);
   const [sessionTranchee, setSessionTranchee] = useState<boolean | undefined>(undefined);
   const [horsLigne, setHorsLigne] = useState(false);
+  const [tentative, setTentative] = useState(0);
 
   useEffect(() => {
     let annule = false;
@@ -95,22 +108,45 @@ export function useSessionEcran(): SessionEcran {
       setSessionTranchee(true);
       void getCurrentUser().then((profil) => {
         if (annule) return;
+        // ⚠️ LA CAUSE REMONTE, PARCE QUE L'ÉCRAN EN A BESOIN POUR CHOISIR SA
+        // PHRASE. `getCurrentUser()` rend `null` pour quatre raisons — pas de
+        // session, pas de ligne, rôle inconnu, transport en panne — et un écran
+        // qui les confond dit « votre profil est illisible » à quelqu'un dont
+        // le Wi-Fi vient simplement de tomber. Le bandeau hors ligne est déjà
+        // la bonne réponse à ce cas-là : on le pose ici aussi.
+        if (!profil.ok && profil.error.code === "hors-ligne") setHorsLigne(true);
         setUtilisateur(profil.ok ? profil.data : null);
       });
     });
     return () => {
       annule = true;
     };
-  }, [router]);
+  }, [router, tentative]);
 
   // `replace` et pas `push` : le bouton Retour ne doit pas ramener sur un écran
   // de dossiers après une déconnexion volontaire, sur un poste que le patient
   // suivant voit.
   function deconnecter(): void {
+    // Phase 3 : la cible Jarvis et le contexte d'outil meurent avec la
+    // session — une reconnexion ne doit jamais réutiliser le patient d'avant.
+    purgerContexteSession();
     void signOut().then(() => {
       router.replace("/connexion");
     });
   }
 
-  return { utilisateur, sessionTranchee, horsLigne, deconnecter };
+  /**
+   * Remettre les trois états à leur valeur d'ouverture N'EST PAS cosmétique :
+   * sans cela, l'écran garde son ERREUR affichée pendant que la nouvelle
+   * tentative court, et les deux états coexistent — ce que la règle
+   * d'exclusivité d'`UX_CONTRACT.md` interdit.
+   */
+  function reessayer(): void {
+    setUtilisateur(undefined);
+    setSessionTranchee(undefined);
+    setHorsLigne(false);
+    setTentative((n) => n + 1);
+  }
+
+  return { utilisateur, sessionTranchee, horsLigne, deconnecter, reessayer };
 }

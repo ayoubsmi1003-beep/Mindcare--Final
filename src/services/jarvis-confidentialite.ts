@@ -109,6 +109,34 @@ function echapper(valeur: string): string {
 }
 
 /**
+ * Motif d'identité à FRONTIÈRES UNICODE — le correctif du fail-closed B1,
+ * trouvé au navigateur le 2026-09-03, pas par relecture.
+ *
+ * DEUX collisions partageaient la même cause — une comparaison en sous-chaîne
+ * nue (`includes` / regex sans bornes) là où il faut une comparaison en MOT :
+ *   1. Un dossier nommé « Patient » (données synthétiques, 2 dossiers) rendait
+ *      `{{PATIENT_001}}` — le jeton lui-même — déclencheur de `verifierSortant`,
+ *      et corrompait au passage la référence (`PATIENT_001` → `{{PATIENT_00X}}_001`).
+ *      Tout tour touchant ce dossier échouait FERME, déterminisme total.
+ *   2. La même sur-sensibilité guettait tout prénom court (« Ali » dans
+ *      « qualité ») : un garde-fou qui refuse le cas normal n'est pas prudent,
+ *      il est faux.
+ *
+ * ⚠️ `\b` NE SUFFIT PAS, ET CE N'EST PAS UNE PRÉFÉRENCE. `\b` est ASCII-only
+ * même sous drapeau `u` : un nom commençant par une accentuée (« Élise ») n'y
+ * a aucune frontière. Les gardes négatifs Unicode ci-dessous traitent lettres,
+ * chiffres ET `_` comme matière de mot — le `_` protège `PATIENT_001`.
+ *
+ * ⚠️ MASQUE ET VÉRIFIE PARTAGENT CE MOTIF, ET C'EST LE POINT. Deux sensibilités
+ * différentes rouvrent exactement ce défaut dans un sens ou dans l'autre :
+ * un masque plus étroit que la vérification refait du fail-closed fantôme,
+ * l'inverse laisse passer.
+ */
+function motifIdentite(identite: string): RegExp {
+  return new RegExp(`(?<![\\p{L}\\p{N}_])${echapper(identite)}(?![\\p{L}\\p{N}_])`, "giu");
+}
+
+/**
  * Masque dans `texte` toute identité connue de la carte, par le jeton du
  * dossier correspondant.
  *
@@ -128,7 +156,7 @@ export function masquerIdentites(texte: string, carte: CarteIdentite): string {
     if (identite.length < 3) continue;
     const ref = carte.refPourIdentite(identite);
     if (ref === null) continue;
-    sortie = sortie.replace(new RegExp(echapper(identite), "giu"), `{{${ref}}}`);
+    sortie = sortie.replace(motifIdentite(identite), `{{${ref}}}`);
   }
   return sortie;
 }
@@ -207,9 +235,35 @@ function assainirBrut(valeur: unknown, carte: CarteIdentite): unknown {
  * C'est ce qui lui permet de vérifier ce que la passerelle ne peut pas vérifier
  * sans se faire livrer la chose même qu'elle protège (voir l'en-tête).
  */
+/**
+ * Les FEUILLES textuelles d'une charge — les valeurs, jamais les clés.
+ *
+ * Le vérifieur ci-dessous testait `JSON.stringify(charge)` ENTIER, clés
+ * comprises — pendant que le masqueur les ignore (voir `assainirBrut` : les
+ * clés sont notre schéma, pas des données). Dès qu'un dossier porte un nom
+ * qui est aussi un mot de schéma — « Patient » et la clé `"patient"`, présente
+ * dans chaque créneau — le garde refuse une charge que le masque a pourtant
+ * correctement traitée. Même famille que le jeton `{{PATIENT_*}}` : comparer
+ * des mots de structure à des noms de personnes, c'est confondre la carte et
+ * le territoire dans les deux sens.
+ */
+function feuillesTextuelles(valeur: unknown, acc: string[]): string[] {
+  if (typeof valeur === "string") {
+    acc.push(valeur);
+  } else if (Array.isArray(valeur)) {
+    for (const v of valeur) feuillesTextuelles(v, acc);
+  } else if (typeof valeur === "object" && valeur !== null) {
+    for (const v of Object.values(valeur as Record<string, unknown>)) feuillesTextuelles(v, acc);
+  }
+  return acc;
+}
+
 export function verifierSortant(charge: unknown, carte: CarteIdentite): void {
   const texte = JSON.stringify(charge ?? null);
-  const foin = normaliser(texte);
+  // Identités : feuilles SEULES (voir `feuillesTextuelles`). Les motifs
+  // (téléphone, courriel) restent testés sur la chaîne entière, inchangés :
+  // aucune clé de notre schéma ne porte de chiffres ni d'arobase.
+  const foin = feuillesTextuelles(charge, []).map((f) => normaliser(f));
 
   for (const identite of carte.identites()) {
     const valeur = identite.trim();
@@ -217,7 +271,20 @@ export function verifierSortant(charge: unknown, carte: CarteIdentite): void {
     // dans des mots ordinaires, et le garde refuserait le cas normal. Un
     // garde-fou qui refuse le cas normal n'est pas prudent, il est faux.
     if (valeur.length < 3) continue;
-    if (foin.includes(normaliser(valeur))) throw new FuiteDetectee("identite");
+    // Même frontière qu'au masquage (voir `motifIdentite`) : le jeton
+    // `{{PATIENT_001}}` contient « patient » en sous-chaîne, et « qualité »
+    // contient « ali » — ni l'un ni l'autre n'est la personne.
+    const cible = motifIdentite(normaliser(valeur));
+    // `motifIdentite` porte le drapeau `g` (exigé par `replace` au masquage) :
+    // un `test()` répété sur le même objet reprendrait au `lastIndex` précédent
+    // et raterait la feuille suivante. On réarme à chaque feuille.
+    if (
+      foin.some((feuille) => {
+        cible.lastIndex = 0;
+        return cible.test(feuille);
+      })
+    )
+      throw new FuiteDetectee("identite");
   }
 
   if (

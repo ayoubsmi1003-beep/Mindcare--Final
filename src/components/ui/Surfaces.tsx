@@ -51,20 +51,30 @@ export type NiveauCarte = NiveauDecor | NiveauPorteur;
  * est réservé au mobilier FLOTTANT (panneau Jarvis, ⌘K), qui ne se compose pas
  * avec `Carte`.
  */
+/*
+ * V8 — LES OMBRES PASSENT DE `lift*` À LA FAMILLE TEINTÉE.
+ *
+ * `lift1/2/3` sont des gris neutres. Posés sur le sol V8, qui porte un voile
+ * de quatre teintes, ils se lisent comme de la saleté plutôt que comme de la
+ * lumière — c'est visible dès qu'on met les deux versions côte à côte, et
+ * c'est l'un des défauts qui faisaient paraître V7 plat malgré des ombres
+ * correctement dosées.
+ *
+ * Le changement est fait ICI, sur la primitive partagée, plutôt que dans les
+ * quarante écrans qui composent une `Carte` : une carte oubliée se verrait
+ * immédiatement, une carte parmi quarante ne se verrait jamais.
+ */
 const NIVEAUX: Record<NiveauCarte, string> = {
-  // V2 — L2 structure + L1 ambient : teinte subtile, radius XL, ombre plus diffuse
-  primaire: "bg-card border-rule shadow-lift2",
-  // Second plan encastré — reste sunken
+  primaire: "bg-card border-rule shadow-carte",
+  // Second plan encastré — creusé, donc sans ombre : une surface en retrait
+  // qui porterait une ombre portée avancerait au lieu de reculer.
   secondaire: "bg-sunken border-rule shadow-none",
-  // Affordance action — tinté marque mais reste L5 sélectif
-  action: "bg-action-50 border-action-100 shadow-lift1",
-  // Jarvis — voile violet très contenu
-  ia: "bg-ai-50 border-ai-100 shadow-lift1",
-  // Porteurs valeur — blanc franc, élévation minimale, radius affiné
-  clinique: "bg-card border-rule shadow-lift1",
-  financier: "bg-card border-rule shadow-lift1",
-  // Document — papier objet, ombre plus marquée pour feuille
-  document: "bg-card border-ink-100 shadow-lift2",
+  action: "bg-action-50 border-action-100 shadow-douce",
+  ia: "bg-ai-50 border-ai-100 shadow-douce",
+  clinique: "bg-card border-rule shadow-douce",
+  financier: "bg-card border-rule shadow-douce",
+  // Document — un papier posé, l'ombre la plus marquée du jeu de cartes.
+  document: "bg-card border-ink-100 shadow-elevee",
 };
 
 interface CarteBase {
@@ -109,11 +119,13 @@ export function Carte(props: CarteProps): React.JSX.Element {
   return (
     <div
       className={[
-        "rounded-xl border",
+        // V8 — `rounded-2xl` (26px). Une carte à 10 px se lit comme un
+        // composant de framework, à 26 px comme une surface dessinée.
+        "rounded-2xl border",
         NIVEAUX[niveau],
         lueur ? "shadow-glow-brand" : "",
         interactive
-          ? "transition duration-quick ease-out hover:border-action-500 hover:shadow-lift3"
+          ? "transition duration-quick ease-out hover:border-action-500 hover:shadow-elevee"
           : "transition duration-quick ease-soft",
       ].join(" ")}
     >
@@ -150,18 +162,21 @@ export function PastilleIcone({
   readonly ton?: "action" | "ia" | "info" | "neutre";
   readonly taille?: "normale" | "grande";
 }): React.JSX.Element {
+  /* V8 — les pastilles prennent le MATÉRIAU de leur famille plutôt qu'un
+   * aplat clair bordé. Même information, même contraste d'icône ; ce qui
+   * change est que la pastille cesse d'être un rectangle de plus. */
   const tons = {
-    action: "bg-action-50 text-action-600 border border-action-100",
-    ia: "bg-ai-50 text-ai-600 border border-ai-100",
-    info: "bg-info-50 text-info-600 border border-info-100",
-    neutre: "bg-sunken text-ink-500 border border-rule",
+    action: "bg-tuile-menthe text-emeraude-700 border border-emeraude-100",
+    ia: "bg-tuile-lavande text-violet-700 border border-violet-100",
+    info: "bg-tuile-azur text-azure-700 border border-azure-100",
+    neutre: "bg-tuile-neutre text-ink-500 border border-rule",
   } as const;
 
   return (
     <span
       aria-hidden
       className={[
-        "inline-flex items-center justify-center rounded-xl shadow-lift1",
+        "inline-flex items-center justify-center rounded-xl shadow-douce",
         taille === "grande" ? "h-11 w-11" : "h-9 w-9",
         tons[ton],
       ].join(" ")}

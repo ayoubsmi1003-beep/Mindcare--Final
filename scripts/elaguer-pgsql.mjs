@@ -459,7 +459,7 @@ async function testerCluster() {
       { env: envPsql },
     );
 
-    etape("✅ cluster élagué : initdb, démarrage, quatre extensions, unaccent(), pg_dump, pg_restore — tous réussis.");
+    etape(`✅ cluster élagué : initdb, démarrage, ${EXTENSIONS_REQUISES.length} extensions (${EXTENSIONS_REQUISES.join(", ")}), unaccent(), pg_dump, pg_restore — tous réussis.`);
   } finally {
     if (serveur !== null) {
       spawnSync(bin.pgCtl, ["stop", "--pgdata", dataDir, "--mode", "fast"]);

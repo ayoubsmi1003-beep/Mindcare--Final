@@ -1,0 +1,10 @@
+M09 REPLAY
+rev=bf54dea-dirty kind=compare date=2026-09-16T21:29:44.364Z duree=0s
+goldens_hash=223f48d8c61537dd… schema=m08-schema-v1 prompts=e074ac56f36d285f…
+PASS    comparaison-runs pass=1 fail=0 notrun=0
+========================
+PASS: 1
+FAIL: 0
+NOT RUN: 0
+CAS: 108 (non-mappes: 0)
+VERDICT: PASS

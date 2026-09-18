@@ -282,13 +282,22 @@ export function formaterDonneesStructurees(clinique: unknown, traitements: unkno
 export interface AmendementNote {
   readonly reason?: string | null;
   readonly body?: string | null;
-  readonly created_at?: string | null;
+  readonly created_at?: string | Date | null;
 }
 
-/** Une ligne rendue par `app.get_patient_notes_history` (migration 065). */
+/**
+ * Une ligne rendue par `app.get_patient_notes_history` (migration 065).
+ *
+ * ⚠️ `started_at` EST `string | Date`, ET C'EST MESURÉ, PAS DEVINÉ. PostgREST
+ * rendait les `timestamptz` en chaînes ISO ; `pg` direct les rend en objets
+ * `Date`. Typer `string` seul a fait lever `started_at.slice` en production
+ * dès que l'historique existait — l'analyse tombait AVANT tout appel modèle.
+ * Les deux formes se normalisent par `instantMs` / `dateCourte` ci-dessous,
+ * jamais par un `.slice()` nu.
+ */
 export interface NoteHistorique {
   readonly consultation_id?: string | null;
-  readonly started_at?: string | null;
+  readonly started_at?: string | Date | null;
   readonly note_status?: string | null;
   readonly signed_at?: string | null;
   readonly subjective?: string | null;
@@ -296,6 +305,33 @@ export interface NoteHistorique {
   readonly assessment?: string | null;
   readonly plan?: string | null;
   readonly amendments?: readonly AmendementNote[] | null;
+}
+
+/**
+ * Millisecondes d'une date lue en base (chaîne ISO ou `Date` `pg`), ou null.
+ * Le jour calendaire rendu est UTC dans les deux cas — `slice(0, 10)` d'une
+ * chaîne ISO comme `toISOString()` lisent la partie date UTC — donc identique
+ * à ce que PostgREST produisait avant le portage.
+ */
+function instantMs(valeur: unknown): number | null {
+  if (typeof valeur === "string") {
+    const ms = Date.parse(valeur);
+    return Number.isNaN(ms) ? null : ms;
+  }
+  if (valeur instanceof Date) {
+    const ms = valeur.getTime();
+    return Number.isNaN(ms) ? null : ms;
+  }
+  return null;
+}
+
+/** `YYYY-MM-DD`, ou null si la valeur n'est pas une date lisible. */
+function dateCourte(valeur: unknown): string | null {
+  if (typeof valeur === "string") return valeur.slice(0, 10);
+  if (valeur instanceof Date && !Number.isNaN(valeur.getTime())) {
+    return valeur.toISOString().slice(0, 10);
+  }
+  return null;
 }
 
 export interface HistoriqueRendu {
@@ -346,13 +382,13 @@ export function formaterHistoriqueNotes(
     .filter((n) => corpsNote(n) !== "")
     .slice()
     .sort((a, b) => {
-      const da = Date.parse(a.started_at ?? "");
-      const db = Date.parse(b.started_at ?? "");
+      const da = instantMs(a.started_at);
+      const db = instantMs(b.started_at);
       // Une date illisible part en fin de liste : elle ne doit ni évincer une
       // note datée, ni faire basculer l'ordre au hasard du parsing.
-      if (Number.isNaN(da) && Number.isNaN(db)) return 0;
-      if (Number.isNaN(da)) return 1;
-      if (Number.isNaN(db)) return -1;
+      if (da === null && db === null) return 0;
+      if (da === null) return 1;
+      if (db === null) return -1;
       return db - da;
     });
 
@@ -366,7 +402,7 @@ export function formaterHistoriqueNotes(
   const retenues: { note: NoteHistorique; rendu: string }[] = [];
   let total = 0;
   for (const n of utiles) {
-    const date = n.started_at?.slice(0, 10) ?? "date inconnue";
+    const date = dateCourte(n.started_at) ?? "date inconnue";
     // Le statut est un FAIT porté au modèle, pas un filtre : une note non
     // signée reste de la matière écrite par la praticienne, mais elle ne fait
     // pas foi comme une note signée.
@@ -375,7 +411,7 @@ export function formaterHistoriqueNotes(
       .filter((a) => (a.body ?? "").trim() !== "")
       .map(
         (a) =>
-          `  ↳ Amendement du ${a.created_at?.slice(0, 10) ?? "?"}` +
+          `  ↳ Amendement du ${dateCourte(a.created_at) ?? "?"}` +
           `${a.reason?.trim() ? ` (${a.reason.trim()})` : ""} : ${(a.body ?? "").trim()}`,
       );
 

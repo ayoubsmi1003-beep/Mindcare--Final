@@ -43,6 +43,7 @@ import { GrilleSemaine, repartition } from "@/components/GrilleSemaine";
 import {
   BandeauHorsLigne,
   BlocErreur,
+  Bouton,
   Chiffre,
   EtatVide,
   LienBouton,
@@ -50,6 +51,7 @@ import {
   Squelette,
 } from "@/components/ui";
 import { useSessionEcran } from "@/components/useSessionEcran";
+import { Tuile } from "@/components/ui/Tuile";
 import { fr } from "@/i18n/fr";
 import {
   listAgenda,
@@ -276,22 +278,46 @@ export default function PageAgenda(): React.JSX.Element {
       <div className="flex min-w-0 flex-col gap-8">
         {/* ── Période, chiffres, navigation ──────────────────────────────── */}
         <div className="flex flex-col gap-4">
-          <div className="flex flex-wrap items-center gap-4">
-            <h2 className="font-ui text-title font-semibold text-ink-900">
-              {vue === "semaine"
-                ? `${fr.agenda.semaine.titre} ${jour(debut.toISOString()) ?? ""} ${fr.agenda.semaine.au} ${jour(finSemaine.toISOString()) ?? ""}`
-                : fr.agenda.aujourdhui}
-            </h2>
+          <h2 className="font-ui text-heading font-bold tracking-heading text-ink-900">
+            {vue === "semaine"
+              ? `${fr.agenda.semaine.titre} ${jour(debut.toISOString()) ?? ""} ${fr.agenda.semaine.au} ${jour(finSemaine.toISOString()) ?? ""}`
+              : fr.agenda.aujourdhui}
+          </h2>
 
-            <Chiffre valeur={placees.length} libelle={fr.agenda.semaine.seancesCetteSemaine} />
-            <Chiffre
-              valeur={Math.max(0, creneauxTotal - creneauxOccupes)}
-              libelle={fr.agenda.semaine.creneauxLibres}
+          {/*
+            V8 — LES TROIS CHIFFRES DE LA SEMAINE DEVIENNENT DES TUILES.
+            Ils vivaient en pastilles posées à la suite du titre, à la même
+            taille que le texte courant : trois nombres que l'œil devait
+            chercher au milieu d'une phrase. Ce sont les seuls agrégats de
+            l'écran, et un agrégat est ce que la tuile existe pour porter.
+
+            ⚠️ AUCUN CHIFFRE N'EST AJOUTÉ. Ce sont exactement les trois
+            valeurs déjà calculées par cet écran — séances placées, créneaux
+            restants, demandes en attente. Le « taux d'occupation » de la
+            référence n'apparaît pas : il supposerait une capacité de cabinet
+            qu'aucune table ne déclare.
+          */}
+          <div className="grid grid-cols-un gap-4 tablet:grid-cols-trois">
+            <Tuile
+              ton="menthe"
+              icone="agenda"
+              etiquette={fr.agenda.semaine.seancesCetteSemaine}
+              valeur={String(placees.length)}
             />
-            <Chiffre
-              valeur={enAttente.length}
-              libelle={fr.agenda.semaine.demandesEnAttente}
-              attention={enAttente.length > 0}
+            <Tuile
+              ton="azur"
+              icone="horloge"
+              etiquette={fr.agenda.semaine.creneauxLibres}
+              valeur={String(Math.max(0, creneauxTotal - creneauxOccupes))}
+            />
+            {/* `ambre` et non un ton d'alerte : une demande en attente est un
+                geste à faire, pas un incident. Le rouge reste un budget
+                réservé à la perte de donnée (§4 règle 1). */}
+            <Tuile
+              ton={enAttente.length > 0 ? "ambre" : "neutre"}
+              icone="patients"
+              etiquette={fr.agenda.semaine.demandesEnAttente}
+              valeur={String(enAttente.length)}
             />
           </div>
 
@@ -402,24 +428,16 @@ function BoutonPeriode({
   readonly actif?: boolean;
 }): React.JSX.Element {
   return (
-    <button
+    <Bouton
       type="button"
+      rang="secondaire"
+      taille="compact"
       onClick={onClick}
       /* L'état sélectionné est porté par `aria-pressed` ET par le contraste,
          jamais par la seule couleur (§4 règle 4). */
-      aria-pressed={actif}
-      className={[
-        "min-h-target cursor-pointer rounded-md border px-4 py-2",
-        "font-ui text-label",
-        "transition duration-quick ease-soft",
-        "outline-none focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset",
-        actif
-          ? // Sélectionné : fond plein et graisse. Deux signaux, pas un.
-            "border-brand-600 bg-brand-600 font-semibold text-paper shadow-lift1"
-          : "border-rule bg-card font-regular text-ink-700 hover:border-ink-300 hover:bg-sunken",
-      ].join(" ")}
+      enfonce={actif}
     >
       {libelle}
-    </button>
+    </Bouton>
   );
 }

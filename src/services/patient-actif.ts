@@ -19,6 +19,11 @@ export interface PatientActif {
   readonly id: string;
   readonly nom: string;
   readonly numero: string;
+  /**
+   * Époque (ms) de pose — Phase 3. L'écran y lit l'ÂGE du contexte affiché
+   * (« il y a N min ») ; la VALIDITÉ (TTL) vit dans `jarvis-contexte`.
+   */
+  readonly etablieA: number;
 }
 
 type Abonne = (p: PatientActif | null) => void;
@@ -30,8 +35,11 @@ function notifier(): void {
   for (const a of abonnes) a(courant);
 }
 
-export function definirPatientActif(patient: PatientActif): void {
-  courant = patient;
+export function definirPatientActif(
+  patient: Omit<PatientActif, "etablieA">,
+  maintenantMs: number = Date.now(),
+): void {
+  courant = { ...patient, etablieA: maintenantMs };
   notifier();
 }
 

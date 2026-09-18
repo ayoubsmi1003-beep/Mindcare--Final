@@ -1,0 +1,47 @@
+{
+  "phase": "MESURE-ALEXA-REPRO-LOCALE",
+  "date": "2026-09-03T21:26:04.641Z",
+  "modele": "qwen/qwen3-next-80b-a3b-instruct",
+  "lignes": [
+    {
+      "verdict": "info",
+      "label": "0 · modèle effectif (nom seul)",
+      "detail": "qwen/qwen3-next-80b-a3b-instruct"
+    },
+    {
+      "verdict": "vert",
+      "label": "0 · DEV_ACCOUNT_PASSWORD présent",
+      "detail": "valeur jamais affichée"
+    },
+    {
+      "verdict": "vert",
+      "label": "1 · /api/health",
+      "detail": "status=200"
+    },
+    {
+      "verdict": "vert",
+      "label": "2 · sign-in owner.dev",
+      "detail": "status=200 code=ok en 645 ms"
+    },
+    {
+      "verdict": "vert",
+      "label": "3 · search_patients (RLS + porte)",
+      "detail": "status=200 dossiers=5"
+    },
+    {
+      "verdict": "vert",
+      "label": "4 · consultation cible portant des notes",
+      "detail": "notes=7 car."
+    },
+    {
+      "verdict": "vert",
+      "label": "5 · jarvis-chat (connaissance)",
+      "detail": "http=200 chemin=connaissance en 6927 ms"
+    },
+    {
+      "verdict": "vert",
+      "label": "6 · jarvis-analyze-session",
+      "detail": "http=200 code=ok persistee=true v=1 en 2663 ms"
+    }
+  ]
+}

@@ -36,6 +36,7 @@
 import { useId, useState } from "react";
 
 import { fr } from "@/i18n/fr";
+import { Bouton } from "./ui/Bouton";
 import { Icone, MarqueMindCare } from "./ui/Icones";
 
 export interface FormulaireConnexionProps {
@@ -172,34 +173,18 @@ export function FormulaireConnexion({
           />
         </div>
 
-        <button
-          type="submit"
-          disabled={enCours}
-          aria-busy={enCours}
-          /* ⚠️ `--brand-500` PENDANT L'ENVOI, ET SURTOUT PAS `--brand-400`.
-           *
-           * L'ancienne palette employait ici son ton 400. Le renommage v2
-           * aurait donné `--brand-400` — le ton du LOGO, bien plus clair que
-           * son prédécesseur : le libellé blanc du bouton y tombe à ≈ 2.2:1,
-           * très en dessous du plancher de 4.5:1. Un bouton lisible au repos
-           * devenait illisible exactement pendant qu'il annonce « Connexion
-           * en cours… », c'est-à-dire au moment où on le lit.
-           *
-           * C'est le piège du renommage : un mappage 1:1 entre deux rampes
-           * qui n'ont pas la même clarté déplace des contrastes sans rien
-           * changer d'apparent dans le code. `--brand-500` tient le plancher
-           * et reste visiblement en retrait de l'état actif. */
-          className={[
-            "mt-2 flex min-h-target-lg w-full cursor-pointer items-center justify-center gap-2 rounded-md border-0 px-5 py-3",
-            "font-ui text-body font-semibold text-paper shadow-lift1",
-            "transition duration-quick ease-soft",
-            enCours
-              ? "cursor-default bg-brand-500 shadow-none"
-              : "bg-action-600 hover:bg-action-700 hover:shadow-lift2 active:bg-action-900 active:shadow-lift1",
-          ].join(" ")}
-        >
-          {enCours ? fr.connexion.connexionEnCours : fr.actions.seConnecter}
-        </button>
+        <div className="mt-2">
+          <Bouton
+            type="submit"
+            rang="principal"
+            taille="large"
+            pleineLargeur
+            disabled={enCours}
+            chargement={enCours}
+          >
+            {enCours ? fr.connexion.connexionEnCours : fr.actions.seConnecter}
+          </Bouton>
+        </div>
       </form>
     </div>
   );

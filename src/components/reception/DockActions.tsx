@@ -6,6 +6,7 @@
 
 import Link from "next/link";
 import { fr } from "@/i18n/fr";
+import { Bouton, LienBouton } from "@/components/ui/Bouton";
 import { Icone } from "@/components/ui/Icones";
 import type { RdvAccueil, PaiementAccueil } from "@/services/reception";
 import { heure } from "@/components/AgendaPieces";
@@ -24,27 +25,17 @@ export function DockActions({ journee, paiements, onRechercheFocus }: Props): Re
 
   return (
     <div className="flex shrink-0 flex-wrap items-center gap-2 rounded-lg border border-rule bg-card px-3 py-2 shadow-lift1">
-      <Link
-        href="/agenda/nouveau"
-        className="inline-flex min-h-target items-center gap-2 rounded-full bg-brand-600 px-4 font-ui text-body font-medium text-on-brand no-underline hover:bg-brand-700"
-      >
+      <LienBouton href="/agenda/nouveau" rang="principal" taille="compact">
         <Icone nom="agenda" taille={16} />
         {fr.reception.dock.nouveauRdv}
-      </Link>
-      <button
-        type="button"
-        onClick={onRechercheFocus}
-        className="inline-flex min-h-target items-center gap-2 rounded-full border border-rule bg-sunken px-4 font-ui text-body font-medium text-ink-700 hover:bg-card"
-      >
+      </LienBouton>
+      <Bouton type="button" rang="secondaire" taille="compact" onClick={onRechercheFocus}>
         <Icone nom="recherche" taille={16} />
         {fr.reception.dock.rechercher}
-      </button>
-      <Link
-        href="/agenda"
-        className="inline-flex min-h-target items-center gap-2 rounded-full border border-rule bg-sunken px-4 font-ui text-body font-medium text-ink-700 no-underline hover:bg-card"
-      >
+      </Bouton>
+      <LienBouton href="/agenda" rang="secondaire" taille="compact">
         {fr.reception.dock.voirAgenda}
-      </Link>
+      </LienBouton>
       <span className="hidden items-center gap-3 pl-2 font-ui text-label text-ink-500 desktop:inline-flex">
         <span className="h-4 w-px bg-rule" aria-hidden="true" />
         {premier ? (

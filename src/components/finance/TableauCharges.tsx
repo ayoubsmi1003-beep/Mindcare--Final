@@ -168,21 +168,15 @@ export function ModaleCharge({
             </legend>
             <div className="flex flex-wrap gap-2">
               {CATEGORIES.map((c) => (
-                <button
+                <Bouton
                   key={c}
                   type="button"
-                  aria-pressed={categorie === c}
+                  taille="compact"
+                  enfonce={categorie === c}
                   onClick={() => setCategorie(c)}
-                  className={[
-                    "rounded-full px-3 py-2 font-ui text-label transition-colors",
-                    "duration-quick ease-out",
-                    categorie === c
-                      ? "bg-brand-600 text-on-brand"
-                      : "bg-sunken text-ink-700 hover:bg-brand-100",
-                  ].join(" ")}
                 >
                   {libelleCategorie(c)}
-                </button>
+                </Bouton>
               ))}
             </div>
           </fieldset>
@@ -246,15 +240,15 @@ export function TableauCharges({
       {liste.lignes.length === 0 ? (
         <p className="font-ui text-body text-ink-500">{t.aucune}</p>
       ) : (
-        <div className="overflow-x-auto rounded-lg bg-card shadow-lift1">
+        <div className="overflow-x-auto rounded-2xl border border-rule bg-card shadow-carte">
           <table className="w-full border-collapse">
             <thead>
-              <tr className="border-b border-rule">
+              <tr className="border-b border-rule bg-tete-tableau">
                 {[t.intitule, t.categorie, t.montant, t.type, t.frequence, t.echeance].map((h) => (
                   <th
                     key={h}
                     scope="col"
-                    className="px-4 py-3 text-left font-ui text-label font-medium text-ink-500"
+                    className="whitespace-nowrap px-4 py-3 text-left font-ui text-label font-semibold text-ink-700"
                   >
                     {h}
                   </th>
@@ -266,8 +260,8 @@ export function TableauCharges({
             </thead>
             <tbody>
               {liste.lignes.map((c) => (
-                <tr key={c.id} className="border-b border-rule last:border-0">
-                  <td className="px-4 py-3 font-ui text-body text-ink-900">{c.intitule}</td>
+                <tr key={c.id} className="border-b border-rule transition duration-quick last:border-0 hover:bg-action-50 even:bg-sunken">
+                  <td className="max-w-48 truncate px-4 py-3 font-ui text-body font-medium text-ink-900">{c.intitule}</td>
                   <td className="px-4 py-3">
                     <Badge ton="neutre">{libelleCategorie(c.categorie)}</Badge>
                   </td>

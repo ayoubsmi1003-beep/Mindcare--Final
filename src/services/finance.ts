@@ -163,7 +163,18 @@ export function formaterDzd(montant: number): string {
   for (let i = 0; i < chiffres.length; i += 1) {
     // Séparateur tous les trois chiffres en partant de la droite. ` ` est
     // l'espace fine insécable : le montant ne se coupe pas en fin de ligne.
-    if (i > 0 && (chiffres.length - i) % 3 === 0) groupe += " ";
+    // ⚠️ ESPACE INSÉCABLE ORDINAIRE (U+00A0), PLUS L'ESPACE FINE (U+202F) —
+    // ET C'EST UN DÉFAUT VU À L'ÉCRAN, PAS UNE PRÉFÉRENCE TYPOGRAPHIQUE.
+    // U+202F n'a pas de glyphe dans Plus Jakarta Sans, la fonte d'interface
+    // V8 : le navigateur le rend à une chasse quasi nulle, et « 90 000 DZD »
+    // s'affichait « 90000 DZD » dans TOUTES les tuiles de Finances. Un montant
+    // sans séparateur de milliers se lit de travers d'un ordre de grandeur —
+    // sur un écran d'argent, c'est le pire défaut possible.
+    // U+00A0 est le séparateur de milliers standard en typographie française,
+    // il est présent dans toutes les fontes du dépôt, et il reste INSÉCABLE :
+    // le montant ne se coupe toujours pas en fin de ligne. Il vaut aussi pour
+    // les documents imprimés (Newsreader), où il est également correct.
+    if (i > 0 && (chiffres.length - i) % 3 === 0) groupe += " ";
     groupe += chiffres[i];
   }
 

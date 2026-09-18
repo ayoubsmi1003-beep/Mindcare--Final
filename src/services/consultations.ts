@@ -250,7 +250,7 @@ export interface StartConsultationInput {
 export async function startConsultation(
   input: StartConsultationInput,
 ): Promise<Result<string>> {
-  const result = await db().rpc<string>("start_consultation", {
+  const result = await db().rpc<Record<string, string>>("start_consultation", {
     p_patient_id: input.patientId,
     p_appointment_id: input.appointmentId,
   });
@@ -260,7 +260,8 @@ export async function startConsultation(
     return err(result.error);
   }
 
-  const id = result.data[0];
+  const brut = result.data[0] as unknown;
+  const id = typeof brut === "string" ? brut : brut !== null && typeof brut === "object" ? (Object.values(brut as Record<string, unknown>)[0] as string | undefined) : undefined;
   if (id === undefined || id === null) {
     // La porte rend toujours un identifiant en cas de succès. Une réponse vide
     // signifie que la RLS a refusé sans lever — on ne rend PAS un succès, sinon
@@ -275,14 +276,20 @@ export async function startConsultation(
 
 /** L'identifiant de la séance ouverte de l'appelante, ou `null`. Ne journalise rien en base. */
 export async function getOpenConsultation(): Promise<Result<string | null>> {
-  const result = await db().rpc<string>("get_open_consultation", {});
+  const result = await db().rpc<Record<string, string>>("get_open_consultation", {});
 
   if (!result.ok) {
     log.error("consultation.encours", logFieldsFor(result.error));
     return err(result.error);
   }
 
-  return ok(result.data[0] ?? null);
+  const brut = result.data[0] as unknown;
+  if (brut === undefined || brut === null) return ok(null);
+  if (typeof brut === "string") return ok(brut);
+  // `SELECT * FROM app.get_open_consultation()` rend `{ get_open_consultation: uuid }` côté pgPort
+  // et une forme similaire côté Supabase — on déballe la première valeur.
+  const valeur = Object.values(brut as Record<string, unknown>)[0];
+  return ok(typeof valeur === "string" ? valeur : null);
 }
 
 export async function getConsultation(id: string): Promise<Result<Consultation | null>> {

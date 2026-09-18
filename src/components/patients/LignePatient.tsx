@@ -53,16 +53,16 @@ export function LignePatient({
            Le fond de survol passe du gris `sunken` au matériau menthe le plus
            clair — la même famille que le reste du produit, au lieu du gris
            par défaut d'un composant de framework. */
-        className="group flex min-h-rang items-center gap-4 rounded-xl px-3 py-3 no-underline transition duration-quick ease-out hover:bg-tuile-menthe"
+        className="group flex min-h-rang items-center gap-4 rounded-xl px-3 py-3 no-underline transition duration-quick ease-out hover:bg-action-50"
       >
         <Avatar prenom={patient.firstName} nom={patient.lastName} taille="normale" />
 
         <span className="flex min-w-0 grow flex-col gap-1">
-          <span className="min-w-0 break-words font-ui text-body font-bold tracking-body text-ink-900">
+          <span className="min-w-0 break-words font-ui text-body font-semibold text-ink-900">
             {patient.lastName} {patient.firstName}
           </span>
-          <span className="font-ui text-label font-medium tracking-label text-ink-500">
-            <span className="rounded-md bg-sunken px-2 py-1 font-num text-eyebrow font-semibold tabular-nums text-ink-700 group-hover:bg-card">{patient.recordNumber}</span>
+          <span className="font-ui text-label font-medium text-ink-500">
+            <span className="rounded-md bg-sunken px-2 py-1 font-num text-label font-semibold tabular-nums text-ink-700 group-hover:bg-card">{patient.recordNumber}</span>
             {age === null ? null : (
               <>
                 {" · "}
@@ -104,10 +104,10 @@ export function LignePatient({
 export function EnTeteAnnuaire(): React.JSX.Element {
   return (
     <div className="flex items-center gap-4 rounded-t-2xl border-b border-rule bg-tete-tableau px-4 pb-3 pt-3.5">
-      <span className="grow font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-ink-500">
+      <span className="grow font-ui text-label font-semibold text-ink-700">
         {fr.patients.titre}
       </span>
-      <span className="hidden shrink-0 font-ui text-eyebrow font-bold uppercase tracking-eyebrow text-ink-500 tablet:inline">
+      <span className="hidden shrink-0 font-ui text-label font-semibold text-ink-700 tablet:inline">
         {fr.patients.telephone}
       </span>
     </div>

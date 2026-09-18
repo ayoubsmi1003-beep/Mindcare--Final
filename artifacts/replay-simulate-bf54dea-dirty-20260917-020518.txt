@@ -1,0 +1,41 @@
+M09 REPLAY
+rev=bf54dea-dirty kind=simulate date=2026-09-17T01:05:41.014Z duree=22s
+goldens_hash=223f48d8c61537dd… schema=m08-schema-v1 prompts=56daf7ff09f6add1…
+PASS    compile-intentions pass=1 fail=0 notrun=0
+PASS    compile-services pass=1 fail=0 notrun=0
+PASS    compile-frontiere pass=1 fail=0 notrun=0
+PASS    eval-frontiere pass=49 fail=0 notrun=0
+PASS    eval-boucle pass=42 fail=0 notrun=0
+PASS    eval-chaine pass=28 fail=0 notrun=0
+PASS    eval-ecritures pass=26 fail=0 notrun=0
+PASS    eval-briefs pass=44 fail=0 notrun=0
+PASS    eval-reveil pass=24 fail=0 notrun=0
+PASS    eval-micro-partage pass=24 fail=0 notrun=0
+PASS    eval-endpointage pass=18 fail=0 notrun=0
+PASS    eval-machine-voix pass=28 fail=0 notrun=0
+PASS    eval-lecture-voix pass=16 fail=0 notrun=0
+PASS    eval-registre pass=26 fail=0 notrun=0
+PASS    eval-sans-suppression pass=7 fail=0 notrun=0
+PASS    eval-injection pass=11 fail=0 notrun=0
+PASS    eval-routage pass=120 fail=0 notrun=0
+PASS    eval-v2 pass=25 fail=0 notrun=0
+PASS    eval-intentions pass=70 fail=0 notrun=0
+PASS    eval-conversation pass=256 fail=0 notrun=0
+PASS    eval-knowledge-fixture pass=329 fail=0 notrun=0
+PASS    schema-golden pass=4 fail=0 notrun=0
+PASS    preuve-mutation pass=1 fail=0 notrun=0
+NOT RUN eval-reveil-pipeline pass=0 fail=0 notrun=1 :: modele ONNX public/wakeword absent ou voix humaine NON MESUREE
+NOT RUN eval-contexte-seance pass=0 fail=0 notrun=1 :: source supabase/functions/_shared/contexte-seance.ts absente (pre-existant)
+NOT RUN eval-resume-cas pass=0 fail=0 notrun=1 :: source supabase/functions/_shared/resume-cas.ts absente (pre-existant)
+NOT RUN live-model-quality pass=0 fail=0 notrun=1 :: aucun modele pine pour la qualite live (variance free-tier 5s-180s)
+NOT RUN live-reexecution pass=0 fail=0 notrun=1 :: re-execution live interdite en M09 (texte brut + UUID stables vers le fournisseur)
+NOT RUN model-comparison-live pass=0 fail=0 notrun=1 :: comparaison live interdite en M09 (meme motif)
+NOT RUN e2e pass=0 fail=0 notrun=1 :: exigent pnpm start + /api/health ; le replayer ne lance pas de serveurs
+NOT RUN eval-knowledge-db pass=0 fail=0 notrun=1 :: mesure opt-in : passer --avec-base (ecarts R&D nommes, jamais gate par defaut)
+PASS    scan-pii pass=8 fail=0 notrun=0
+========================
+PASS: 1159
+FAIL: 0
+NOT RUN: 8
+CAS: 108 (non-mappes: 0)
+VERDICT: PASS

@@ -369,6 +369,7 @@ const config = [
       ".claude/**",
       ".eval-out/**",
       "resources/**",
+      "serveur/**",
       "dist/**",
       "dist-electron/**",
     ],
@@ -650,6 +651,21 @@ const config = [
       "local/no-supabase-resolution": "off",
     },
   },
+  {
+    // Processus principal Electron — §H du plan : doit sonder PostgreSQL et
+    // /api/health en local, et afficher une fenêtre d'erreur FR en cas d'échec.
+    // `pg` et `fetch` y sont légitimes (hors navigateur, hors RLS). La fenêtre
+    // d'erreur porte ses couleurs en dur (data URL sans tokens.css) — autorisé
+    // ici seulement, pas dans `src/`.
+    files: ["electron/**/*.ts", "electron/**/*.cts"],
+    rules: {
+      "no-restricted-imports": "off",
+      "@typescript-eslint/no-restricted-imports": "off",
+      "local/no-supabase-resolution": "off",
+      "local/no-fetch-hors-passerelle": "off",
+      "no-restricted-syntax": "off",
+    },
+  },
   // L'override qui vivait ici pour `supabase/functions/**/*.ts` (node:module
   // et l'import Supabase autorisés) est devenu mort : le dossier entier est
   // maintenant dans les `ignores` globaux ci-dessus (S6), pour la raison qui
@@ -684,6 +700,18 @@ const config = [
   // résiduelle : le contrôle 4 de preflight balaye ce fichier pour les hex 6/8
   // chiffres, et il n'est jamais livré au navigateur. Précédent identique et
   // déjà accepté plus haut (bloc `**/*.js`).
+  {
+    // Tests e2e — Playwright `response.json(): any` est inévitable (API
+    // externe). On autorise `any` circonscrit ici, pas dans src/.
+    files: ["tests/**/*.ts"],
+    rules: {
+      "@typescript-eslint/no-unsafe-assignment": "off",
+      "@typescript-eslint/no-unsafe-member-access": "off",
+      "@typescript-eslint/no-unsafe-call": "off",
+      "@typescript-eslint/no-unsafe-return": "off",
+      "@typescript-eslint/no-unsafe-argument": "off",
+    },
+  },
   {
     // `.mts`/`.cts` : cf. ROUGE 7, bloc `**/*.ts` plus haut.
     files: ["*.ts", "*.tsx", "*.mts", "*.cts", "*.js", "*.jsx", "*.mjs", "*.cjs"],

@@ -15,6 +15,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
+import { SiriOrb } from "@/components/ui/siri-orb";
 import { fr } from "@/i18n/fr";
 import type { EtatConversationPublique } from "@/services/conversation";
 import {
@@ -69,17 +70,24 @@ export function FilJarvis({
     <div className="flex flex-col gap-3" role="log" aria-live="polite" aria-label={fr.jarvis.titre}>
       {etat.tours.length === 0 && !fluxEnCours && (
         <div className="grid justify-items-center gap-4 px-4 py-10 text-center">
-          <span aria-hidden className="inline-flex h-16 w-16 rounded-full bg-grad-orb shadow-glow-ai" />
+          <SiriOrb
+            size="132px"
+            animationDuration={18}
+          />
           <p className="m-0 font-ui text-body text-ink-700" style={{ maxWidth: "28ch" }}>
             {fr.jarvis.invite}
           </p>
-          {!compact && (
-            <ul className="mt-1 flex list-none flex-wrap justify-center gap-2 p-0">
-              {[fr.jarvis.amorce1, fr.jarvis.amorce2, fr.jarvis.amorce3].map((amorce) => (
-                <li key={amorce}>{amorce}</li>
-              ))}
-            </ul>
-          )}
+          {/* ⚠️ LES AMORCES NE SONT PLUS RENDUES ICI, ET C'EST UNE CORRECTION
+              VUE À L'ÉCRAN. L'écran Alexa les affichait DEUX FOIS : cette
+              liste, en texte inerte au milieu du fil, et les pastilles
+              cliquables sous le fil, qui elles remplissent le champ. Deux
+              exemplaires de la même phrase, à quatre cents pixels l'un de
+              l'autre, dont un seul répond au clic — on essaie forcément le
+              mauvais. Une seule copie survit : celle qui fait quelque chose,
+              dans `app/jarvis/page.tsx`.
+
+              `compact` (le panneau latéral) n'en montrait déjà aucune ; le
+              comportement des deux surfaces est donc désormais le même. */}
         </div>
       )}
 
@@ -115,10 +123,26 @@ export function FilJarvis({
           <div key={tour.id} className="flex flex-col gap-1">
             {tour.registre === "connaissance-generale" && (
               <span className="inline-flex items-center gap-1 pl-1 font-ui text-label tracking-label text-ai-600">
-                <Icone nom="jarvis" taille={16} />
+                <span aria-hidden className="inline-flex h-4 w-4 shrink-0 items-center justify-center overflow-hidden rounded-full">
+                  <SiriOrb
+                    size="16px"
+                    animationDuration={18}
+                  />
+                </span>
                 {fr.jarvis.registreConnaissance}
               </span>
             )}
+            {/* M07 — preuves gouvernées : titre + section + version (données
+                C4, jamais d'identifiant). Absentes = réponse sans source. */}
+            {(tour.preuves ?? []).map((preuve) => (
+              <span
+                key={`${preuve.titre}-${preuve.version}-${preuve.section ?? "?"}`}
+                className="pl-1 font-ui text-label tracking-label text-ink-500"
+              >
+                {preuve.titre}
+                {preuve.section === null ? "" : ` · ${preuve.section}`} · v{preuve.version}
+              </span>
+            ))}
             <div className="flex items-end gap-1">
               <p
                 className={[

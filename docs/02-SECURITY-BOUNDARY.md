@@ -73,8 +73,8 @@ aux métadonnées.
 ## 3. LA PASSERELLE DE PSEUDONYMISATION
 
 ### 3.1 Emplacement et forme
-- **Un seul fichier :** `supabase/functions/_shared/pseudonymize.ts`
-- **Un seul point de sortie :** `supabase/functions/_shared/external-call.ts`
+- **Un seul fichier :** `src/server/jarvis/pseudonymize.ts`
+- **Un seul point de sortie :** `src/server/egress/external-call.ts`
 - **Aucun** `fetch()` vers un domaine externe ailleurs dans le dépôt. Vérifié en CI (§8.3).
 
 ### 3.2 Contrat
@@ -212,7 +212,7 @@ Coupure Wi-Fi = perte de séance inacceptable.
 
 ### 5.1 Passerelle unique
 ```ts
-// _shared/llm.ts — SEUL endroit où OpenRouter est appelé
+// src/server/egress/external-call.ts — SEUL endroit où un fournisseur externe est appelé
 export async function llm(req: {
   purpose: 'live_insight' | 'note_draft' | 'intake_triage' | 'jarvis';
   messages: Message[];
@@ -341,7 +341,7 @@ GRANT SELECT ON app.intake_forms, app.intake_questions TO intake_writer;
 ```bash
 # CI — échoue si un fetch externe existe hors passerelle
 grep -rn "fetch(['\"]https://" --include="*.ts" --include="*.tsx" src/ supabase/ \
-  | grep -v "_shared/external-call.ts" \
+  | grep -v "src/server/egress/external-call.ts" \
   && echo "❌ APPEL EXTERNE HORS PASSERELLE" && exit 1
 ```
 

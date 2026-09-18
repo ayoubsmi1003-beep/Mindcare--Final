@@ -40,7 +40,7 @@ export function ColonnePatient({
       <div className="flex items-start gap-4">
         <Avatar prenom={identite.firstName} nom={identite.lastName} taille="grande" />
         <div className="flex min-w-0 flex-col gap-1">
-          <p className="truncate font-ui text-heading font-bold text-ink-900">
+          <p className="truncate font-ui text-heading font-semibold text-ink-900">
             {identite.firstName} {identite.lastName}
           </p>
           {civilite === "" ? null : (
@@ -60,7 +60,7 @@ export function ColonnePatient({
 
       {clinique !== null && clinique.diagnostics.length > 0 ? (
         <div className="flex flex-col gap-2 border-t border-rule pt-4">
-          <p className="font-ui text-label font-semibold uppercase tracking-label text-ink-500">
+          <p className="font-ui text-label font-semibold text-ink-700">
             {cockpit.diagnosticsTitre}
           </p>
           <ul className="m-0 flex list-none flex-wrap gap-2 p-0">

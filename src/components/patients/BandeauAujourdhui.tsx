@@ -9,6 +9,7 @@
 
 import { Badge } from "@/components/ui";
 import { Icone } from "@/components/ui";
+import { SiriOrb } from "@/components/ui/siri-orb";
 import { fr } from "@/i18n/fr";
 import { heure } from "@/components/patients/format";
 import type { PatientWorkspace, RendezVousResume } from "@/services/patients";
@@ -42,7 +43,12 @@ export function BandeauAujourdhui({
   const resumeChip =
     espace.resume === null ? (
       <span className="inline-flex items-center gap-1.5 font-ui text-label tracking-label text-ink-500">
-        <Icone nom="jarvis" taille={20} className="text-ai-500" />
+        <span aria-hidden className="inline-flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-full">
+          <SiriOrb
+            size="20px"
+            animationDuration={18}
+          />
+        </span>
         {fr.patients.resume.videTitre}
       </span>
     ) : espace.resume.aJour ? (
@@ -52,7 +58,12 @@ export function BandeauAujourdhui({
       </span>
     ) : (
       <span className="inline-flex items-center gap-1.5 font-ui text-label tracking-label text-attention-ink">
-        <Icone nom="jarvis" taille={20} className="text-attention" />
+        <span aria-hidden className="inline-flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-full">
+          <SiriOrb
+            size="20px"
+            animationDuration={18}
+          />
+        </span>
         {fr.patients.resume.modifieDepuis}
       </span>
     );

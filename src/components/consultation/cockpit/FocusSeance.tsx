@@ -45,13 +45,17 @@ export function FocusSeance({
     >
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-3">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-ambre-100 bg-tuile-ambre text-ambre-700 shadow-douce">
+          <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-ambre-100 bg-tuile-ambre text-ambre-700 shadow-douce">
             <Icone nom="fleche" taille={20} />
           </span>
           <div className="flex min-w-0 flex-col">
-            <h2 className="font-ui text-heading font-bold text-ink-900">{cockpit.focusTitre}</h2>
-            {selection.length === 0 ? null : (
-              <p className="font-ui text-label tabular-nums text-ink-500">
+            <h2 className="font-ui text-heading font-semibold text-ink-900">{cockpit.focusTitre}</h2>
+            {selection.length === 0 ? (
+              <p className="m-0 font-ui text-label font-medium text-ink-500">
+                Sujets de la séance — un clic = sélectionné
+              </p>
+            ) : (
+              <p className="m-0 font-ui text-label tabular-nums text-ink-500">
                 {`${String(selection.length)} · ${selection.join(", ")}`}
               </p>
             )}
@@ -64,10 +68,11 @@ export function FocusSeance({
           <Bouton
             key={option}
             rang="secondaire"
+            taille="compact"
             enfonce={selection.includes(option)}
             onClick={() => basculer(option)}
           >
-            {option}
+            <span className="truncate">{option}</span>
           </Bouton>
         ))}
       </div>

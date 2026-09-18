@@ -2,10 +2,16 @@
 # en Phase 1 (aucune image livrée) — postinstall refusé, surface réduite sur le
 # poste qui héberge aussi la base clinique.
 allowBuilds:
+  # electron : son postinstall télécharge le binaire Electron correspondant à
+  # la version épinglée dans package.json — sans lui, `pnpm exec electron`
+  # n'a rien à exécuter. Phase Bureau Windows (Electron), voir le plan
+  # `mindcare-os-robust-wigderson.md`.
+  electron: true
   # esbuild : transpileur de Vitest (lanceur de tests unitaires). Son binaire
   # natif est posé par son postinstall ; sans lui, `pnpm test` ne démarre pas.
   # Autorisé pour cette raison précise, et pour aucune autre.
   esbuild: true
+  onnxruntime-node: true
   protobufjs: true
   sharp: false
   # unrs-resolver : binaire natif requis par l'outillage ESLint/Next

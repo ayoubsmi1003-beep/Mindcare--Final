@@ -27,13 +27,43 @@ import { db } from "./db";
 import { logFieldsFor } from "./errors";
 import { executerTour } from "./jarvis-boucle";
 import { capaciteEcriture } from "./jarvis-ecritures";
-import { adopterPatientActif } from "./jarvis-contexte";
+import {
+  adopterPatientActif,
+  ancreApplicable,
+  besoinDeClarification,
+  cibleValide,
+  definirCible,
+  effacerCible,
+  TTL_CONTEXTE_MS,
+} from "./jarvis-contexte";
+import { classerMultilingue } from "@/shared/jarvis/normalisation";
+import type { NomIntention } from "@/shared/jarvis/intentions";
+import type { PreuveConnnaissance } from "@/shared/jarvis/preuves";
+import type { VerdictResolution } from "@/shared/jarvis/resolution-references";
+import {
+  activerCaptationLive,
+  AnneauLive,
+  captationLiveActivee,
+  construireRecordApprobation,
+  construireRecordLiveV2,
+  empreinteAction,
+  empreinteExecution,
+  exporterAnneauV1,
+  exporterAnneauV2,
+  hacherFnv1a,
+  type EntreeAppelLive,
+  type EntreePreuveLive,
+  type EntreeResolutionLive,
+  type ExportLive,
+  type ExportLiveV2,
+  type LiveRunRecordV2,
+} from "@/shared/jarvis/enregistrement-live";
+import { effacerPatientActif } from "./patient-actif";
 import { carte as carteIdentite } from "./jarvis-identite";
 import {
   confirmerAction,
   estOutilConnu,
   estOutilEcriture,
-  executerAction,
   outilGetAgenda,
   outilSearchPatients,
   proposerAction,
@@ -42,6 +72,8 @@ import {
   type CarteConfirmation,
   type ToolEcriture,
 } from "./jarvis-tools";
+import { executerEcritureConfirmee } from "./jarvis-execution";
+import { garderPropos } from "./jarvis-garde-lecture";
 import { log } from "./log";
 import { err, ok, type Result } from "./result";
 import type { AppError } from "./errors";
@@ -72,6 +104,12 @@ export interface TourConversation {
   readonly texte: string;
   /** Registre annoncé par la passerelle sur le chemin connaissance (ADR-023). */
   readonly registre?: "connaissance-generale";
+  /**
+   * M07 — preuves gouvernées du tour (chemin connaissance seul). Éphémères
+   * (le carnet 058 ne les persiste pas) : elles décrivent la réponse
+   * affichée, jamais un état à relire.
+   */
+  readonly preuves?: readonly PreuveConnnaissance[];
   /** La réponse a-t-elle été écrite en base ? false → mention visible. */
   readonly persiste?: boolean;
   /** Interrompu avant fin : ce qui est affiché est ce qui est arrivé. */
@@ -190,12 +228,216 @@ let contextePraticienId: string | null = null;
 let patientActifCourant: PatientActif | null = null;
 
 /**
+ * ═══ L'ANCRE DE CONVERSATION ═══
+ *
+ * Ce qu'un tour a effectivement lu, retenu pour aider à comprendre le tour
+ * SUIVANT. « Montre-moi le dossier de Karim Djilali » puis « et ses
+ * traitements ? » : sans elle, le second tour ne sait de qui l'on parle et
+ * demande. C'est une aide de compréhension, rien d'autre.
+ *
+ * ⚠️ CE N'EST JAMAIS UNE AUTORISATION, ET TROIS PROPRIÉTÉS L'EN EMPÊCHENT.
+ *   1. Elle ne porte qu'un identifiant que le SERVEUR a déjà accepté de lire au
+ *      tour précédent — la boucle ne la propose qu'après une exécution réussie.
+ *   2. Elle se pose comme une CIBLE ordinaire, donc le tour suivant repasse par
+ *      la carte d'identité, Zod, la porte SQL et la RLS. Elle n'injecte aucun
+ *      identifiant dans une capacité et ne court-circuite rien.
+ *   3. Tout ce qui est plus fort la couvre : l'écran, une cible encore valide,
+ *      une désignation explicite, une ambiguïté. Elle ne sert que dans le
+ *      silence des autres signaux.
+ *
+ * ⚠️ ELLE NE SE POSE QU'AU DÉBUT DU TOUR SUIVANT, JAMAIS À LA FIN DU TOUR QUI
+ * LA PRODUIT. Poser une cible appelle `definirCible`, qui PURGE la carte
+ * d'identité — c'est un invariant de sécurité, pas un détail. La purger à la
+ * fin d'un tour reviendrait à démonter la carte pendant que le tour s'en sert
+ * encore. Au début du tour suivant, en revanche, `executerTour` s'apprête de
+ * toute façon à la réinitialiser (`jarvis-boucle.ts`, « la carte est neuve à
+ * chaque tour ») : la purge y est sans effet observable.
+ */
+let ancreEnAttente: { readonly id: string; readonly libelle: string; readonly poseeA: number } | null =
+  null;
+
+/**
+ * ═══ M09 slice 3 · ANNEAU LIVE — MÉMOIRE, JAMAIS PERSISTÉ ═══
+ *
+ * Les records PII-safe des tours (voir `shared/jarvis/enregistrement-live`)
+ * s'accumulent ici, bornés, quand la captation est activée (OFF par défaut).
+ * Lecture opérateur/debug via `exporterCaptationLive()` ; rien ne survit au
+ * rechargement, rien ne part au réseau, rien ne touche aux portes.
+ */
+const anneauCaptation = new AnneauLive<LiveRunRecordV2>();
+
+/** Exporte la captation live au contrat `m09-live-v1` (gelé, projection des v1). */
+export function exporterCaptationLive(): ExportLive {
+  return exporterAnneauV1(anneauCaptation);
+}
+
+/** Exporte la captation live au contrat `m09-live-v2` (v1 + approbations). */
+export function exporterCaptationLiveV2(): ExportLiveV2 {
+  return exporterAnneauV2(anneauCaptation);
+}
+
+/** Bascule explicite de la captation (tests + affordance future, défaut OFF). */
+export { activerCaptationLive };
+
+/** Remise à zéro de l'anneau (tests uniquement — jamais en production). */
+export function reinitialiserCaptationLive(): void {
+  anneauCaptation.vider();
+}
+
+/**
+ * M09 slice 3 · capte UN tour vers l'anneau (appelée au seul site post-bilan).
+ * OFF → rien (zéro coût observable) ; ON → record PII-safe. Testable sans
+ * boucle : le `BilanTour` scripté suffit (jamais de DB, jamais de modèle).
+ */
+export function capterTour(
+  bilan: {
+    readonly runId: string;
+    readonly chemin: string | null;
+    readonly interrompu: boolean;
+    readonly persiste: boolean;
+    readonly appels: readonly EntreeAppelLive[];
+    readonly preuves: readonly EntreePreuveLive[];
+    readonly nbSnapshots: number;
+    readonly propositionInconnue: { readonly nom: string } | null;
+    readonly resolution: EntreeResolutionLive | null;
+  },
+  dureeMs: number,
+): void {
+  if (!captationLiveActivee()) return;
+  // Enveloppe v2 (outilsFp dérivés de bilan.appels par le constructeur) ;
+  // l'export v1 reste projeté sans recalcul (contrat gelé).
+  anneauCaptation.pousser(
+    construireRecordLiveV2(
+      {
+        runId: bilan.runId,
+        chemin: bilan.chemin,
+        interrompu: bilan.interrompu,
+        persiste: bilan.persiste,
+        dureeMs,
+        appels: bilan.appels,
+        preuves: bilan.preuves,
+        nbSnapshots: bilan.nbSnapshots,
+        propositionInconnue: bilan.propositionInconnue,
+        resolution: bilan.resolution,
+      },
+      null,
+    ),
+  );
+}
+
+/**
+ * M09 reliquat · capte UNE approbation vers l'anneau (geste humain +
+ * constat M06). OFF → rien (zéro coût observable) ; ON → record v2 dont
+ * le corps v1 est minimal (`chemin: inconnu`, sans appel ni preuve) et
+ * dont `approbation` porte la liaison (actionFp, issue, runFp
+ * opportuniste). Testable sans boucle ni base.
+ */
+export function capterApprobation(
+  approbation: {
+    readonly runFp: string | null;
+    readonly actionFp: string;
+    readonly issue: string;
+    readonly executionFp?: string | null;
+    readonly dureeMs: number;
+  },
+): void {
+  if (!captationLiveActivee()) return;
+  anneauCaptation.pousser(construireRecordApprobation(approbation));
+}
+
+/**
+ * ═══ M02 · CONTEXTE DE TRAVAIL — MIROIR, JAMAIS AUTORITÉ ═══
+ *
+ * Ce que le tour précédent a retenu (intent prouvé par ses exécutions +
+ * patient du verdict), pour chaîner un suivi nu (« Et avant ? »). Trois
+ * propriétés l'empêchent de devenir une seconde identité :
+ *   1. `patientId` est REVALIDÉ contre le fil vivant à chaque lecture
+ *      (cible TTL-valide ou ancre applicable) — divergé = jeté, jamais
+ *      deviné ;
+ *   2. il ne sert qu'au CHAÎNAGE (choix d'un nom d'intent), jamais à
+ *      désigner : la désignation reste cible/ancre/sonde ;
+ *   3. même cycle de vie que l'ancre (mémoire module, purge session,
+ *      TTL identique), jamais persisté — aucun `patient_id` nouveau en base.
+ */
+let travailEnCours: {
+  readonly conversationId: string;
+  readonly intentionPrecedente: NomIntention | null;
+  readonly patientId: string | null;
+  readonly patientLibelle: string | null;
+  readonly poseA: number;
+} | null = null;
+
+/**
+ * Lit le miroir s'il est utilisable pour chaîner : même conversation, frais,
+ * avec un fil, et SURTOUT fil vivant identique au miroir. Tout écart rend
+ * `null` — le tour suivant classifie frais ou clarifie.
+ *
+ * Exportée pour les tests d'isolement (l'isolement inter-conversations est
+ * une propriété de SÉCURITÉ — elle s'éprouve, elle ne se relit pas).
+ */
+export function lireTravailValide(
+  conversationId: string,
+  maintenantMs: number = Date.now(),
+): { readonly conversationId: string; readonly intentionPrecedente: NomIntention | null; readonly patientId: string } | null {
+  const t = travailEnCours;
+  if (t === null || t.conversationId !== conversationId) return null;
+  if (t.patientId === null || maintenantMs - t.poseA >= TTL_CONTEXTE_MS) return null;
+  const cible = cibleValide(maintenantMs);
+  const filId =
+    cible !== null
+      ? cible.id
+      : ancreEnAttente !== null &&
+          ancreApplicable(ancreEnAttente, patientActifCourant !== null, maintenantMs)
+        ? ancreEnAttente.id
+        : null;
+  if (filId === null || filId !== t.patientId) return null;
+  return { conversationId: t.conversationId, intentionPrecedente: t.intentionPrecedente, patientId: t.patientId };
+}
+
+/**
+ * Retient le legs d'un tour — ou l'oublie. Seul un verdict UNIQUE (avec
+ * patient) pose un miroir ; tout le reste (ambigu, non résolu, aucun,
+ * échec, interruption) EFFACE : après un tour qui n'a rien conclu, le
+ * suivant ne chaîne sur rien.
+ *
+ * Exportée pour les tests (même raison que `lireTravailValide`).
+ */
+export function retenirTravail(
+  conversationId: string,
+  resolution:
+    | { readonly verdict: VerdictResolution; readonly intentionRetenu: NomIntention | null }
+    | undefined,
+): void {
+  const patient = resolution?.verdict.patient;
+  if (patient === undefined) {
+    travailEnCours = null;
+    return;
+  }
+  travailEnCours = {
+    conversationId,
+    intentionPrecedente: resolution?.intentionRetenu ?? null,
+    patientId: patient.id,
+    patientLibelle: patient.libelle,
+    poseA: Date.now(),
+  };
+}
+
+/**
  * Les arguments VALIDÉS de la carte en attente. Mémorisés parce que la
  * VÉRIFICATION post-exécution en a besoin : sans eux, on saurait qu'une action
  * a eu lieu mais pas à quoi comparer son effet. Purgés en même temps que la
  * carte — une décision prise, ils n'ont plus aucune raison d'exister.
  */
 let argumentsCarte: unknown = null;
+
+/**
+ * M09 reliquat · empreinte du tour proposant, mémorisée avec la carte.
+ * Le `runId` brut ne franchit jamais la projection (même discipline que
+ * `log.ts`) : seule voyage l'empreinte, identique au `empreinteRun` du
+ * record du tour — la jointure est opportuniste, jamais une donnée.
+ * Purgée en même temps que la carte.
+ */
+let empreinteRunCarte: string | null = null;
 
 /**
  * Appelé par l'abonnement patient-actif des écrans qui montent Jarvis.
@@ -206,13 +448,46 @@ let argumentsCarte: unknown = null;
  * `PATIENT_001` continuerait de désigner Nadia pendant qu'on parle de Karim —
  * une erreur d'identité dans un dossier médical, produite par un cache.
  */
-export function definirContextePatient(patient: PatientActif | null): void {
+export function definirContextePatient(
+  patient: PatientActif | null,
+  maintenantMs: number = Date.now(),
+): void {
   patientActifCourant = patient;
-  const change = adopterPatientActif(patient);
+  const change = adopterPatientActif(patient, maintenantMs);
   if (change) {
     contexteDossiers = [];
     contextePraticienId = null;
   }
+}
+
+/**
+ * Purge TOUT le contexte de la session — Phase 3.
+ *
+ * Appelée à la déconnexion et par [Changer] : cible, patient-actif et contexte
+ * d'outil du tour précédent. Rien ne survit : ni en mémoire module, ni — il
+ * n'y en a jamais eu — en base (les tours persistés ne portent aucun
+ * `patient_id`, 058).
+ */
+export function purgerContexteSession(): void {
+  patientActifCourant = null;
+  // [Changer] et la déconnexion effacent AUSSI l'ancre. Quitter un patient et
+  // continuer d'y répondre par pronom au tour suivant serait le contraire de
+  // « quitter, c'est quitter ».
+  ancreEnAttente = null;
+  // M02 : le miroir part avec tout le reste — quitter, c'est quitter.
+  travailEnCours = null;
+  contexteDossiers = [];
+  contextePraticienId = null;
+  effacerCible();
+  effacerPatientActif();
+}
+
+/**
+ * [Changer] du bandeau de contexte : quitter explicitement le patient courant.
+ * Même purge que la déconnexion — quitter, c'est quitter.
+ */
+export function quitterContexte(): void {
+  purgerContexteSession();
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -425,6 +700,7 @@ async function proposerEcritureRegistre(
   nom: string,
   args: unknown,
   demande: string,
+  runId: string | null = null,
 ): Promise<boolean> {
   const capacite = capaciteEcriture(nom);
   if (capacite === null) return false;
@@ -473,6 +749,9 @@ async function proposerEcritureRegistre(
   // Mémorisé pour la VÉRIFICATION post-exécution : sans les arguments, on ne
   // saurait pas quoi relire ni à quoi comparer.
   argumentsCarte = prepare.data.args;
+  // M09 reliquat · liaison tour→approbation : l'empreinte seule (jamais le
+  // runId brut), purgée avec la carte. `null` = carte sans tour d'origine.
+  empreinteRunCarte = runId === null ? null : hacherFnv1a(`m09-live-v1:${runId}`);
   publier();
   return true;
 }
@@ -481,6 +760,7 @@ async function proposerEcriture(
   nom: ToolEcriture,
   args: unknown,
   demande: string,
+  runId: string | null = null,
 ): Promise<void> {
   const valides =
     nom === "create_appointment"
@@ -519,11 +799,17 @@ async function proposerEcriture(
       nom === "create_appointment" ? fr.jarvis.carte.creerRendezVous : fr.jarvis.carte.fixerTarif,
     champs,
   };
+  // M09 reliquat · voir `proposerEcritureRegistre` (même liaison, même purge).
+  empreinteRunCarte = runId === null ? null : hacherFnv1a(`m09-live-v1:${runId}`);
   publier();
 }
 
 /**
- * CONFIRMER → EXÉCUTER → **VÉRIFIER**. Trois temps, trois appels distincts.
+ * CONFIRMER → EXÉCUTER → **VÉRIFIER** → GARDER. La confirmation pose
+ * `confirmed_at` dans son propre appel (l'ordre reste démontrable) ; puis le
+ * chemin d'exécution partagé M06 (`jarvis-execution.ts`) exécute par
+ * `actionId`, relit avec les arguments canoniques, et ne rend `ok` que si la
+ * garde constate le succès prouvé — la même issue que le tableau de bord.
  *
  * ⚠️ LA VÉRIFICATION EST LE TEMPS QUE V-JARVIS-CORE N'AVAIT PAS, et son absence
  * était un mensonge en puissance. `executerAction` refuse déjà de lire un
@@ -540,58 +826,57 @@ async function proposerEcriture(
 export async function accepterCarte(): Promise<void> {
   const carte = interne.carteEcriture;
   if (carte === null) return;
+  const debut = Date.now();
+  const actionFp = empreinteAction(carte.actionId);
+  const runFp = empreinteRunCarte;
 
   const confirmation = await confirmerAction(carte.actionId);
   if (!confirmation.ok) {
+    // Porte de confirmation en refus : rien n'est exécuté ; le constat est
+    // tracé comme bloqué (même honnêteté que M06, jamais « c'est fait »).
+    capterApprobation({
+      runFp,
+      actionFp,
+      issue: "bloquee",
+      executionFp: null,
+      dureeMs: Date.now() - debut,
+    });
     ajouterTour({ role: "systeme", texte: confirmation.error.message });
     interne.carteEcriture = null;
     argumentsCarte = null;
+    empreinteRunCarte = null;
     publier();
     return;
   }
 
-  const execution = await executerAction(carte.actionId);
+  // Les arguments PRÉPARÉS qui viennent d'être sérialisés dans `tool_args` :
+  // ils disent QUOI RELIRE, jamais quoi autoriser (l'exécution est pilotée
+  // par `actionId` seul). `null` (carte historique) = invérifiable = l'issue
+  // partagée le dit honnêtement au lieu d'annoncer « enregistré ».
   const args = argumentsCarte;
+  const issue = await executerEcritureConfirmee({
+    actionId: carte.actionId,
+    outil: carte.outil,
+    argsCanoniques: args,
+  });
+  // M09 reliquat · le constat vérifié rejoint l'anneau (liaison action +
+  // issue + tour proposant), sans toucher au chemin d'exécution.
+  capterApprobation({
+    runFp,
+    actionFp,
+    issue: issue.issue,
+    executionFp: empreinteExecution(actionFp, issue.issue),
+    dureeMs: issue.dureeMs,
+  });
   interne.carteEcriture = null;
   argumentsCarte = null;
+  empreinteRunCarte = null;
 
-  if (!execution.ok) {
-    ajouterTour({ role: "systeme", texte: execution.error.message });
-    publier();
-    return;
-  }
-
-  // ── LE TROISIÈME TEMPS ──
-  const capacite = capaciteEcriture(carte.outil);
-
-  // ⚠️ UNE CAPACITÉ QUI EXIGE UNE RELECTURE ET DONT LES ARGUMENTS MANQUENT NE
-  // TOMBE PAS DANS LA BRANCHE HISTORIQUE. Sans ce test, un défaut interne
-  // (arguments perdus entre la proposition et la confirmation) ferait annoncer
-  // « enregistré » pour une écriture dont on n'a rien relu — c'est-à-dire
-  // exactement le « c'est fait » non prouvé que §9 interdit. L'écriture a bien
-  // eu lieu, la porte l'atteste ; ce qu'on ne sait pas, c'est son RÉSULTAT, et
-  // c'est ça qu'il faut dire.
-  if (capacite !== null && args === null) {
-    ajouterTour({ role: "systeme", texte: fr.jarvis.ecriture.nonVerifiee });
-    publier();
-    return;
-  }
-
-  if (capacite !== null && args !== null) {
-    const verifie = await capacite.verifier(args, execution.data);
-    ajouterTour(
-      verifie.ok
-        ? { role: "jarvis", texte: `${carte.titre} — ${fr.jarvis.ecriture.verifiee}` }
-        : { role: "systeme", texte: verifie.error.message },
-    );
-    publier();
-    return;
-  }
-
-  // Les deux outils historiques de 033 n'ont pas de relecture déclarée. On dit
-  // « enregistré » — ce que la porte garantit — et pas « vérifié », qu'on n'a
-  // pas fait. La nuance est le contraire d'un détail.
-  ajouterTour({ role: "jarvis", texte: `${carte.titre} — ${fr.feedback.enregistre}` });
+  ajouterTour(
+    issue.ok
+      ? { role: "jarvis", texte: `${carte.titre} — ${fr.jarvis.ecriture.verifiee}` }
+      : { role: "systeme", texte: issue.message },
+  );
   publier();
 }
 
@@ -599,9 +884,20 @@ export async function accepterCarte(): Promise<void> {
 export async function refuserCarte(): Promise<void> {
   const carte = interne.carteEcriture;
   if (carte === null) return;
+  const debut = Date.now();
   await refuserAction(carte.actionId);
+  // Refus humain = terminal (NEG-1) : tracé comme bloqué, rien ne s'exécute
+  // par un chemin détourné.
+  capterApprobation({
+    runFp: empreinteRunCarte,
+    actionFp: empreinteAction(carte.actionId),
+    issue: "bloquee",
+    executionFp: null,
+    dureeMs: Date.now() - debut,
+  });
   interne.carteEcriture = null;
   argumentsCarte = null;
+  empreinteRunCarte = null;
   ajouterTour({ role: "systeme", texte: fr.actions.annuler });
   publier();
 }
@@ -627,6 +923,73 @@ export async function envoyer(messageBrut: string): Promise<void> {
   interne.erreur = null;
   interne.saisie = "";
   ajouterTour({ role: "humain", texte: message });
+  // ⚠️ LE REFUS PASSE DEVANT LA CLARIFICATION, ET C'EST UNE QUESTION D'AUDIT.
+  //
+  // Quatre formulations mesurées le 2026-09-07 sont À LA FOIS classées `refus`
+  // par la frontière ADR-023 et reconnues comme référence pronominale :
+  // « dois-je augmenter sa posologie ? », « faut-il arrêter son traitement ? »,
+  // « nzidlo la dose? », « نزيدلو الدوز؟ ». Les deux premières sont du FRANÇAIS
+  // et se comportaient déjà ainsi AVANT la passe multilingue — ce n'est pas une
+  // régression de Slice 2, c'est un ordre qui n'avait jamais été tranché.
+  //
+  // Demander « de quel patient parlez-vous ? » à une question dont la réponse
+  // est « non » quelle que soit la personne est doublement fautif : cela laisse
+  // croire qu'un nom débloquerait la réponse, et cela INVITE la praticienne à
+  // nommer quelqu'un sans nécessité. Surtout, la clarification est un échange
+  // purement local : elle ne laisse AUCUNE trace, là où le refus est écrit dans
+  // la conversation. L'ordre inverse effaçait donc l'audit précisément sur la
+  // classe de demandes la plus sensible — une décision thérapeutique visant une
+  // personne.
+  //
+  // Sauter la clarification ici n'ouvre rien : le chemin `refus` ne consulte
+  // aucun contexte, n'appelle aucun outil, ne joint aucun modèle et rend une
+  // constante. C'est le verdict le PLUS restrictif du treillis, pas une
+  // dérogation.
+  // ── L'ANCRE DE CONVERSATION, ÉVALUÉE AVANT LA CLARIFICATION ──
+  //
+  // Elle n'est utilisable que dans le SILENCE de tout ce qui la domine :
+  //   · aucun dossier ouvert à l'écran        → l'écran gagne (rang 2) ;
+  //   · aucune cible encore valide            → le fil en cours gagne ;
+  //   · elle-même non périmée                 → expiré vaut absent, comme la
+  //     cible, et pour la même raison : on ne parle plus du même patient un
+  //     quart d'heure plus tard.
+  //
+  // On la LIT ici sans rien écrire. L'écriture n'a lieu que si le tour part
+  // réellement — sinon une clarification refusée laisserait une cible posée
+  // par un tour qui n'a jamais eu lieu.
+  const ancre = ancreEnAttente;
+  const ancreUtilisable = ancreApplicable(ancre, patientActifCourant !== null);
+
+  if (
+    !ancreUtilisable &&
+    classerMultilingue(message).chemin !== "refus" &&
+    besoinDeClarification(message)
+  ) {
+    // Phase 3 : pronom sans cible TTL-valide — on demande, on ne devine pas.
+    // Zéro appel modèle, zéro écriture base : les deux tours restent locaux
+    // (aucun `patient_id` n'est donc persisté, il n'y en a d'ailleurs jamais).
+    ajouterTour({ role: "jarvis", texte: fr.jarvis.contexte.preciserPatient });
+    interne.etat = "composition";
+    publier();
+    return;
+  }
+
+  // Le tour part : l'ancre devient une cible ordinaire. `definirCible` purge la
+  // carte, ce qui est sans effet ici — `executerTour` la réinitialise dans sa
+  // première instruction. Au-delà de cette ligne, l'ancre n'existe plus en tant
+  // que telle : il n'y a qu'une cible, soumise aux mêmes règles que toutes les
+  // autres, et le serveur reste seul juge de ce qu'il accepte de lire.
+  if (ancreUtilisable && ancre !== null) {
+    definirCible({
+      id: ancre.id,
+      libelle: ancre.libelle,
+      // Le jeton ne porte pas le numéro de dossier. `assemblerAmorce` écarte
+      // les entrées vides ; on ne fabrique pas un numéro pour combler un trou.
+      numeroDossier: "",
+      origine: "recherche",
+    });
+  }
+
   interne.etat = "envoi";
   publier();
 
@@ -643,8 +1006,11 @@ export async function envoyer(messageBrut: string): Promise<void> {
   const controleur = new AbortController();
   controleurEnCours = controleur;
 
+  // M09 slice 3 · début du tour (durée live ; horodatage seul, jamais clinique).
+  const debutTour = Date.now();
   const bilan = await executerTour(
-    { message, conversationId: demarrage.data },
+    // M02 : le miroir revalidé (ou `null`) — la boucle chaîne ou ignore.
+    { message, conversationId: demarrage.data, travail: lireTravailValide(demarrage.data) },
     {
       onChemin: () => {
         interne.etat = "flux";
@@ -668,6 +1034,11 @@ export async function envoyer(messageBrut: string): Promise<void> {
   });
 
   if (!bilan.ok) {
+    // Tour en échec (passerelle, réseau, interruption de transport) : rien n'a
+    // été conclu, donc rien n'est ancré — et l'ancre précédente tombe.
+    // M02 : le miroir tombe aussi — un échec ne lègue rien.
+    retenirTravail(demarrage.data, undefined);
+    ancreEnAttente = null;
     console.info("[conversation] tour erreur:", JSON.stringify({
       code: bilan.error.code,
       technical: bilan.error.technical,
@@ -682,6 +1053,58 @@ export async function envoyer(messageBrut: string): Promise<void> {
   }
 
   const r = bilan.data;
+
+  // M09 slice 3 · couture live : le bilan PII-safe vers l'anneau, rien d'autre.
+  // OFF par défaut (`captationLiveActivee`) ; la projection fermée vit dans
+  // `shared/jarvis/enregistrement-live` (texte, ancre, args, snapshots,
+  // conversationId/patientId : jamais lus, jamais rendus). Les tours en échec
+  // (pas de `BilanTour`) ne laissent aucun record — même honnêteté que M06.
+  if (captationLiveActivee()) {
+    capterTour(
+      {
+        runId: r.runId,
+        chemin: r.chemin,
+        interrompu: r.interrompu,
+        persiste: r.persiste,
+        appels: r.appels,
+        preuves: r.preuves,
+        nbSnapshots: r.snapshots.length,
+        propositionInconnue: r.propositionInconnue,
+        resolution:
+          r.resolution === undefined
+            ? null
+            : {
+                etat: r.resolution.verdict.etat,
+                intentionChainee: r.resolution.intentionChainee,
+                intentionRetenu: r.resolution.intentionRetenu,
+              },
+      },
+      Date.now() - debutTour,
+    );
+  }
+
+  // M02 : le legs du tour (miroir revalidé au tour suivant, ou oubli).
+  retenirTravail(demarrage.data, r.resolution);
+
+  // ── L'ancre du tour suivant, posée AVANT tout retour anticipé ──
+  //
+  // ⚠️ REMPLACEMENT, JAMAIS ACCUMULATION — et `null` EST un remplacement.
+  // Un tour ambigu, en échec, interrompu, en attente de confirmation, ou qui a
+  // touché plusieurs dossiers rend `null` et EFFACE donc l'ancre précédente.
+  // L'ancre ne vaut que pour le tour qui vient de se terminer : un tour qui n'a
+  // rien conclu ne laisse pas survivre la conclusion d'un tour plus ancien.
+  // Sans cela, une ambiguïté au tour 3 puis « et ses traitements ? » au tour 4
+  // seraient silencieusement sauvés par l'ancre du tour 2 — exactement le
+  // rattrapage que la porte d'ambiguïté existe pour empêcher.
+  //
+  // ⚠️ ET ELLE EST POSÉE ICI, PAS EN FIN DE FONCTION. Trois retours anticipés
+  // suivent (proposition d'écriture, outil inconnu, arguments invalides) : une
+  // affectation placée après eux aurait laissé l'ancre du tour PRÉCÉDENT
+  // survivre à un tour qui ne l'a pas reconduite.
+  ancreEnAttente =
+    r.ancreCandidate === null
+      ? null
+      : { id: r.ancreCandidate.id, libelle: r.ancreCandidate.libelle, poseeA: Date.now() };
 
   /**
    * ⚠️ LE RENDU D'IDENTITÉ SE FAIT ICI, ET NULLE PART AILLEURS. Le modèle a
@@ -711,6 +1134,9 @@ export async function envoyer(messageBrut: string): Promise<void> {
   remplacerTour(tourJarvis.id, {
     texte: rendre(r.texte),
     ...(r.chemin === "connaissance" && { registre: "connaissance-generale" }),
+    // M07 — preuves du `fin` canonique (validées par le transport) ; un tour
+    // interrompu ou sans champ garde l'absence (jamais d'invention ici).
+    ...(r.chemin === "connaissance" && r.preuves.length > 0 && { preuves: r.preuves }),
     persiste: r.persiste,
     porteUneIdentite: carteIdentite().porteUneReference(r.texte),
   });
@@ -719,7 +1145,7 @@ export async function envoyer(messageBrut: string): Promise<void> {
    * ── Capacité hors du registre de LECTURE ──
    *
    * La boucle ne l'a pas exécutée et n'a aucun chemin pour le faire. Deux cas :
-   *   · un outil d'ÉCRITURE des cinq historiques → carte de confirmation (L2) ;
+   *   · un outil d'ÉCRITURE du registre (sept, 063) → carte de confirmation (L2) ;
    *   · un nom inconnu → refus nommé, rien n'est modifié.
    *
    * ⚠️ AUCUNE ÉCRITURE NE S'EXÉCUTE ICI. `proposerEcriture` pose une ligne
@@ -730,15 +1156,28 @@ export async function envoyer(messageBrut: string): Promise<void> {
   if (r.propositionInconnue !== null) {
     const { nom, args } = r.propositionInconnue;
     interne.etat = "composition";
+    // M06 — garde de lecture : le tour se termine sur une écriture proposée,
+    // donc RIEN n'est exécuté. Si le texte du modèle constatait un
+    // accomplissement, il est remplacé par la phrase de proposition honnête
+    // (jamais « c'est fait » sur du non-vérifié). Sans écriture proposée, le
+    // texte est laissé intact (limite M08, voir `jarvis-garde-lecture.ts`).
+    const garde = garderPropos({
+      texte: rendre(r.texte),
+      ecritureProposee: capaciteEcriture(nom) !== null,
+    });
+    if (garde.verdict === "REFORMULER") {
+      log.warn("jarvis.garde.lecture", { code: garde.raison });
+      remplacerTour(tourJarvis.id, { texte: fr.jarvis.ecriture.proposee });
+    }
     publier();
     // 063 d'abord : les quatre écritures du registre, avec précondition et
     // vérification. Les deux outils historiques de 033 restent en repli.
-    if (await proposerEcritureRegistre(nom, args, message)) {
+    if (await proposerEcritureRegistre(nom, args, message, r.runId)) {
       publier();
       return;
     }
     if (estOutilConnu(nom) && estOutilEcriture(nom)) {
-      await proposerEcriture(nom, args, message);
+      await proposerEcriture(nom, args, message, r.runId);
       publier();
       return;
     }

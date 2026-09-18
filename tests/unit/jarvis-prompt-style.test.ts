@@ -50,6 +50,8 @@ describe("registre de réponse", () => {
   it("la version de prompt suit le changement de registre (trace d'audit)", () => {
     // Elle est écrite telle quelle dans `jarvis_actions` : deux registres
     // différents ne doivent jamais porter la même version.
-    expect(PROMPT_VERSION).toBe("v3.1");
+    // v3.2 (M07) : le chemin connaissance reçoit le bloc PREUVES_DOCUMENTAIRES.
+    expect(PROMPT_VERSION).toBe("v3.2");
+    expect(PROMPT_CONNAISSANCE).toMatch(/PREUVES_DOCUMENTAIRES/);
   });
 });

@@ -18,7 +18,7 @@ Elles ne se discutent pas et ne se contournent jamais.
 
 **1 — Aucune donnée identifiante patient ne quitte la machine.**
 Ni vers un cloud, ni dans un log, ni dans une requête de télémétrie, ni dans un message
-d'erreur affiché. Tout appel externe passe par `_shared/external-call.ts`, **point de
+d'erreur affiché. Tout appel externe passe par `src/server/egress/external-call.ts`, **point de
 sortie unique**, après pseudonymisation. Un `fetch('https://…')` ailleurs n'est pas une
 entorse de style : c'est l'architecture qui tombe.
 
@@ -74,10 +74,10 @@ Une idée hors périmètre se note dans `STATE.md`, elle ne se code pas.
 |---|---|
 | Framework | **Next.js 15, App Router**, React 19 |
 | Langage | TypeScript strict (`strict`, `noUncheckedIndexedAccess`) |
-| Écritures | **Server Actions** — aucune API REST versionnée (ADR-003) |
-| Base | **Supabase** — Postgres 15, RLS, Auth, Storage |
-| Accès données | **`DbPort`** (`query`, `rpc`, `paginate`) — ADR-020 |
-| Adaptateur | `src/services/db/supabase.ts` — **seul fichier autorisé à importer `@supabase/supabase-js`** |
+| Écritures | Routes internes **`/api/*`** (`db/select`, `db/rpc`) — aucune API REST versionnée (ADR-003) |
+| Base | **PostgreSQL 16 local auto-hébergé** — RLS, Auth locale, Electron embarqué (ADR-001) |
+| Accès données | **`DbPort`** (`select`, `rpc`, auth, provision) — ADR-020 |
+| Adaptateur | `src/server/db/pool.ts` — **seul fichier autorisé à importer `pg`** (valeur) |
 | SQL | Écrit à la main, dans les migrations. **Pas d'ORM.** |
 | Validation | Zod, sur chaque entrée |
 | Style | Tailwind + jetons de `src/styles/tokens.css` |
@@ -97,9 +97,9 @@ par une erreur de compilation — pas par une consigne.
 
 ```
 src/
-  app/                     routes App Router, Server Actions
+  app/                     routes App Router + routes `/api/*` internes
   services/
-    db/supabase.ts         SEUL import de @supabase/supabase-js
+    db/http.ts             adaptateur navigateur (même origine, cookie httpOnly)
     db/port.ts             l'interface DbPort
     <domaine>.ts           patients, agenda, consultations, finance, documents, jarvis
     log.ts                 journal — porte toujours la cause, jamais un nom
@@ -178,7 +178,7 @@ un trou est une anomalie comptable. La période se calcule en `Africa/Algiers`.
 1. Fonctionne avec des données réelles, pas un jeu d'essai
 2. RLS vérifiée pour les 3 rôles — même ceux dont le front n'existe pas encore
 3. Se dégrade proprement si le réseau tombe
-4. Les 5 états de 05-UX-CONTRACT.md sont écrits ET déclenchables à la demande
+4. Les 5 états de docs/design-system/UX_CONTRACT.md sont écrits ET déclenchables à la demande
 5. Jetons du design system respectés — aucun hex hors tokens.css
 6. Budget de 06-PERF-BUDGET.md tenu, mesuré en build
 7. Checkpoint vert reproductible par script

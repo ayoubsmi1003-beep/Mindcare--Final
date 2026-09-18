@@ -107,6 +107,14 @@ export const fr = {
         "Séance terminée et enregistrée. L'analyse n'a pas pu être générée — elle se relance depuis la séance.",
       resumeEchoue:
         "Séance terminée et enregistrée. Le résumé du cas n'a pas pu être mis à jour — la version précédente reste affichée.",
+      /**
+       * Séance close SANS notes brutes (`regle-metier` de
+       * `jarvis-analyze-session`) : rien n'a échoué, et rien n'est à
+       * relancer (`raw_notes` est gelé à la clôture, mig. 026). Le résumé
+       * du cas, lui, est quand même mis à jour depuis le dossier.
+       */
+      analyseSansObjet:
+        "Séance terminée et enregistrée. Aucune note de séance à analyser — le résumé du cas est mis à jour à partir du dossier.",
     },
     certificatGenere: "Certificat généré.",
     confirme: "Confirmé.",
@@ -130,6 +138,33 @@ export const fr = {
      * la praticienne décide encore si elle ouvre le bon logiciel.
      */
     accroche: "Le poste de travail du cabinet.",
+  },
+
+  /**
+   * L'écran de premier lancement (§D, phase Bureau Windows). Il ne s'affiche
+   * qu'une fois, sur une base fraîchement installée : voir
+   * `/api/auth/etat-installation` et `085_etat_provisionnement.sql`.
+   */
+  premierLancement: {
+    titre: "Configuration du cabinet",
+    accroche: "Dernière étape avant de commencer : le cabinet et votre compte.",
+    sectionCabinet: "Le cabinet",
+    champCabinetNom: "Nom du cabinet",
+    champCabinetAdresse: "Adresse",
+    champCabinetTelephone: "Téléphone du cabinet",
+    sectionPraticien: "Votre compte",
+    champPraticienNomComplet: "Nom complet",
+    champPraticienTitre: "Titre (Dr., …)",
+    champPraticienNumeroOrdre: "Numéro d'ordre",
+    champPraticienTelephone: "Téléphone",
+    champEmail: "E-mail",
+    champMotDePasse: "Mot de passe",
+    aideMotDePasse: "Au moins 10 caractères.",
+    boutonValider: "Créer le cabinet",
+    enCours: "Création en cours…",
+    succes: "Cabinet créé. Vous pouvez maintenant vous connecter.",
+    allerConnexion: "Aller à la connexion",
+    erreurConflit: "Cette configuration a déjà été effectuée.",
   },
 
   /**
@@ -229,6 +264,26 @@ export const fr = {
     sexe: "Sexe",
     sexeM: "Homme",
     sexeF: "Femme",
+
+    /**
+     * 088 — LA SITUATION FAMILIALE, ET CE QU'ELLE IMPRIME.
+     *
+     * ⚠️ CE CHAMP N'EST PAS PUREMENT ADMINISTRATIF : `app.civilite` en dérive la
+     * civilité des certificats — « Mlle » pour une femme célibataire, « Mme »
+     * partout ailleurs, y compris quand la case est vide. L'indication le dit à
+     * la praticienne, parce qu'un champ dont l'effet est invisible se remplit
+     * au hasard, et que l'effet ici s'imprime sur un document remis au patient.
+     */
+    situationFamiliale: "Situation familiale",
+    situationFamilialeIndication:
+      "Sert aussi la civilité des certificats : « Mlle » pour une femme célibataire, « Mme » sinon.",
+    situations: {
+      celibataire: "Célibataire",
+      en_couple: "En couple",
+      marie: "Marié(e)",
+      divorce: "Divorcé(e)",
+      veuf: "Veuf / Veuve",
+    },
     age: "Âge",
     ageAnnees: "ans",
 
@@ -342,6 +397,8 @@ export const fr = {
       rechercherPlaceholder: "Rechercher un médicament…",
       rechercherAide: "Tapez au moins 2 caractères : le catalogue est interrogé côté base.",
       dose: "Dose",
+      doseAutre: "Autre dosage (saisie libre)",
+      doseChargement: "Dosages…",
       doseUnite: "Unité",
       frequence: "Fréquence",
       frequencePlaceholder: "ex. 1 fois/jour",
@@ -777,6 +834,42 @@ export const fr = {
    */
   consultation: {
     titre: "Consultation",
+
+    /**
+     * V9 — LA SOUS-NAVIGATION DE LA CONSULTATION.
+     *
+     * ⚠️ CES ONGLETS NE DÉPLACENT AUCUNE DONNÉE, ILS DÉPLACENT UN TRAJET. Ce
+     * que la praticienne devait aller chercher dans `/patients/[id]` — en
+     * quittant sa saisie — est désormais atteignable sans quitter la séance.
+     * Les portes SQL, la RLS et les traces de lecture sont exactement les
+     * mêmes : c'est la même donnée, lue par les mêmes portes, au même titre.
+     *
+     * « Séance » d'abord, toujours : c'est le travail, et il ne se démonte
+     * jamais. Les autres onglets lisent à leur PREMIÈRE ouverture seulement,
+     * pour que le budget d'ouverture de l'écran (06-PERF-BUDGET) ne bouge pas.
+     */
+    onglets: {
+      etiquette: "Sections de la consultation",
+      seance: "Séance",
+      resume: "Résumé",
+      historique: "Séances précédentes",
+      traitement: "Traitement",
+      documents: "Documents",
+      rendezVous: "Rendez-vous",
+    },
+    historiqueIndication:
+      "Ouvrez une date pour relire cette séance sans quitter la consultation en cours.",
+    historiqueLire: "Lire la séance",
+    historiqueReplier: "Replier",
+    historiqueVide:
+      "Ce dossier n'a aucune séance antérieure. La première consultation est celle qui est ouverte.",
+    historiqueSansDossier:
+      "Cette séance n'est rattachée à aucun dossier : il n'y a pas d'historique à relire.",
+    historiqueSansNote:
+      "Cette séance n'a pas de note rédigée. Rien n'a été perdu : aucune note n'y a jamais été ouverte.",
+    historiqueAnalyse: "Analyse enregistrée de cette séance",
+    dossierIllisible:
+      "Le dossier du patient n'a pas pu être lu. La séance en cours est intacte et reste utilisable. Réessayez.",
     surTitreSeance: "SÉANCE EN COURS",
     surTitreClose: "SÉANCE CLOSE",
     /**
@@ -901,6 +994,15 @@ export const fr = {
     analyseAucuneNote: "Aucune note de séance à analyser pour l'instant.",
     analyseIndisponible:
       "Assistant indisponible. Le reste de l'écran reste pleinement utilisable — notes, note clinique et signature ne dépendent pas d'Alexa.",
+    analyseAnnulee: "Analyse annulée. Aucune donnée n'a été modifiée.",
+    /* SA-03 — la portée longitudinale, dite explicitement : une analyse sur
+       les seules notes du jour ne doit jamais se lire comme une synthèse
+       d'historique. Les deux formes singulier/pluriel suivent le motif
+       d'`amendementsLibelle` (le français accorde à partir de deux). */
+    noteAnterieureSingulier: "note antérieure prise en compte",
+    noteAnterieurePluriel: "notes antérieures prises en compte",
+    analyseSansHistorique:
+      "Analyse fondée sur les seules notes de la séance — sans historique antérieur.",
     noteStructureeTitre: "Note structurée",
     evolutionTitre: "Évolution depuis la dernière fois",
     evolutionAucune: "Aucune consultation antérieure à comparer.",
@@ -912,6 +1014,65 @@ export const fr = {
     nonEnregistre: "Non enregistré",
     nonEnregistreIndication:
       "La dernière saisie n'a pas pu être envoyée. Le texte reste affiché à l'écran ; ne fermez pas cet onglet avant qu'il soit enregistré.",
+    cockpit: {
+      etatTitre: "État clinique",
+      echellesTitre: "Échelles",
+      diagnosticsTitre: "Diagnostics",
+      etatVide: "Aucune échelle ni diagnostic à afficher pour l'instant.",
+      premiereMesure: "Première mesure — sans comparaison.",
+      hausse: "en hausse",
+      baisse: "en baisse",
+      stable: "Stable",
+      inserer: "Inscrire",
+      diagnosticPrincipal: "Principal",
+      focusTitre: "Focus de la séance",
+      focusOptions: [
+        "Anxiété",
+        "Sommeil",
+        "Humeur",
+        "Traitement",
+        "Travail",
+        "Relations",
+        "Événement récent",
+      ],
+      focusLibre: "Autre (préciser…)",
+      focusAppliquer: "Inscrire dans Subjectif",
+      pistes: {
+        subjective: ["Humeur stable, sans idée noire", "Sommeil conservé", "Anxiété contenue"],
+        objective: ["Contact adapté", "Discours cohérent", "Aucun trouble du comportement"],
+        assessment: ["État stable", "Amélioration partielle", "À réévaluer"],
+        plan: ["Poursuivre le traitement", "Revoir dans un mois", "Bilan à prévoir"],
+      },
+      favorisTitre: "Mes formules",
+      favoriMemoriser: "Mémoriser la formulation",
+      favoriRetirer: "Retirer",
+      notesPlaceholder: "Commencer à écrire ou dicter…",
+      railTitre: "Contexte",
+      railReplier: "Replier le contexte",
+      railDeplier: "Afficher le contexte",
+      railCharger: "Charger le contexte patient",
+      railAttente:
+        "Le contexte du dossier apparaîtra ici une fois chargé depuis la colonne patient.",
+      contexteInaccessible: "Le contexte clinique n'est pas accessible avec ce rôle.",
+      derniereTitre: "Séance précédente",
+      sansPrecedente: "Aucune séance précédente disponible.",
+      aujourdhui: "Aujourd'hui",
+      sansProchain: "Aucun rendez-vous à venir.",
+      traitementTitre: "Traitement actuel",
+      traitementVide: "Aucun traitement actif",
+      traitementModifier: "Modifier",
+      tarifFixe: "Tarif fixé",
+      tarifManquant: "Tarif à fixer",
+      tarifVoir: "Voir",
+      /* Cockpit V-next — clés additives pour la composition 3 volets.
+         Aucune clé existante n'est renommée ni déplacée. */
+      patientTitre: "Patient",
+      notesTitre: "Notes de la consultation",
+      depuisTitre: "Depuis la dernière séance",
+      courbeVide: "Pas assez d'historique pour tracer une courbe.",
+      prochainTitre: "Prochain rendez-vous",
+      brutTitre: "Brouillon de séance",
+    },
   },
 
   /**
@@ -1475,6 +1636,8 @@ export const fr = {
    * et aucun ne distingue « introuvable » de « hors périmètre » (ADR-003).
    */
   jarvis: {
+    bulleOuvrir: "Ouvrir Alexa",
+    bulleEnAttente: "Ouvrir Alexa — une proposition attend votre décision",
     titre: "Alexa",
 
     /**
@@ -1485,6 +1648,13 @@ export const fr = {
     contexte: {
       patientActif: "Patient actif",
       retirer: "Retirer le contexte patient",
+      /** Phase 3 — le bandeau de contexte TTL. */
+      contexteTitre: "Contexte",
+      ilYaNMin: (n: number): string =>
+        n <= 0 ? "à l'instant" : `il y a ${String(n)} min`,
+      changer: "Changer de contexte",
+      /** Demandée quand un pronom ne résout vers aucune cible TTL-valide. */
+      preciserPatient: "De quel patient parlez-vous ?",
     },
     ouvrir: "Ouvrir Alexa",
     fermer: "Fermer",
@@ -1576,6 +1746,14 @@ export const fr = {
       seanceIntrouvable: "Je ne retrouve pas cette séance. Rien n'a été préparé.",
       nonVerifiee:
         "L'action a été tentée, mais je n'ai pas pu vérifier qu'elle a bien abouti. Vérifiez à l'écran avant de compter dessus.",
+      /**
+       * M06 — repli de la garde de lecture : le tour se termine sur une
+       * proposition, donc RIEN n'est exécuté. Si le texte du modèle
+       * constatait un accomplissement, il est remplacé par ceci — jamais
+       * « c'est fait » sur du non-vérifié.
+       */
+      proposee:
+        "Vérifiez cette proposition puis confirmez-la. Rien n'a été modifié pour l'instant.",
       verifiee: "C'est fait, et je l'ai vérifié.",
     },
 
@@ -1784,6 +1962,28 @@ export const fr = {
   tableauDeBord: {
     salutation: "Bonjour Docteur",
     sousTitre: "Votre journée",
+
+    /**
+     * ⚠️ PROFIL ILLISIBLE N'EST PAS « ASSISTANTE », ET LES CONFONDRE A DÉJÀ
+     * COÛTÉ UN INCIDENT.
+     *
+     * Cette route compose DEUX PRODUITS distincts : le tableau de bord de la
+     * praticienne sur `app.dashboard_today`, le poste d'accueil sur
+     * `app.reception_board`. Quand le profil ne se lit pas, retomber sur « la
+     * composition la plus étroite » ne rend pas un écran dégradé — il rend LE
+     * MÉTIER DE QUELQU'UN D'AUTRE, avec ses files d'attente et ses paiements.
+     *
+     * C'est la signature exacte de l'incident « owner voit Réception », que
+     * `tests/e2e/role-resolution.spec.ts` verrouille. Sa cause d'alors — deux
+     * migrations non appliquées, donc 503 sur chaque `/api/db/*` — a été
+     * corrigée ; le CHEMIN qui transformait cette panne en changement de métier
+     * était, lui, toujours là. Un rôle qu'on n'a pas lu ne se devine pas.
+     *
+     * Le défaut étroit reste JUSTE sur `/agenda` et `/patients` : là, il ne
+     * change que la composition du rail, l'écran affiché reste le même.
+     */
+    profilIllisible:
+      "Votre profil n'a pas pu être lu, donc votre tableau de bord n'est pas affiché. Aucune donnée n'a été modifiée et votre session reste ouverte. Réessayez ; si cela se reproduit, reconnectez-vous.",
 
     /**
      * V8 — LE BANDEAU D'ACCUEIL ET LE POULS DE LA JOURNÉE.

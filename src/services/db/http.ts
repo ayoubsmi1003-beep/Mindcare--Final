@@ -145,18 +145,81 @@ async function lireEnveloppe<T>(reponse: Response, contexte: string): Promise<Re
     return err(erreurDepuisCodeFrontiere(code, contexte));
   }
 
-  // Pas de code exploitable — une 502 d'un mandataire, une page d'erreur HTML,
-  // un corps tronqué. On laisse `toAppError` classer, ce qui donnera
-  // `inattendu` plutôt qu'une affirmation fausse sur la cause.
+  // ═══ PAS DE CODE EXPLOITABLE — ET LE STATUT PORTE L'INFORMATION ══════════
+  //
+  // LM54.3 : une 503 d'un mandataire (page HTML, corps tronqué, ou un code
+  // que la frontière ne connaît pas) retombait sur `toAppError({ status })`
+  // → `inattendu`, c'est-à-dire « panique à investiguer » là où le statut
+  // disait déjà « la dépendance de données manque ». Réciproquement, une 401
+  // sans corps devenait `inattendu` au lieu de « session expirée ».
+  //
+  // Le statut HTTP EST une information de classement fiable pour les deux
+  // cas où il suffit à lui seul :
+  //   · 503 → `indisponible` : le service de données manque, rien n'est perdu ;
+  //   · 401 → `non-authentifie` : la session a cessé d'être valable.
+  // Tout le reste (502 d'un mandataire, corps malformé, 500) reste du
+  // ressort de `toAppError` : on ne devine pas une cause que le statut ne
+  // porte pas.
+  if (reponse.status === 503) {
+    return err(erreurDepuisCodeFrontiere("indisponible", contexte));
+  }
+  if (reponse.status === 401) {
+    return err(erreurDepuisCodeFrontiere("non-authentifie", contexte));
+  }
+
+  // Une 502 d'un mandataire, une page d'erreur HTML, un corps tronqué. On
+  // laisse `toAppError` classer, ce qui donnera `inattendu` plutôt qu'une
+  // affirmation fausse sur la cause.
   return err(toAppError({ status: reponse.status }, contexte));
+}
+
+/**
+ * LM54.3 — normalise l'échec de transport AVANT classification.
+ *
+ * Une `DOMException` d'interruption (délai dépassé) porte `code` NUMÉRIQUE
+ * `0` — le champ historique du DOM, pas un code d'erreur applicatif. Or
+ * `isNetworkFailure` de `errors.ts` refuse d'écouter `name` dès que
+ * `raw.code` est défini et non vide : `0 !== ""` est vrai, donc une
+ * `AbortError` de délai était classée `inattendu` au lieu de `hors-ligne`.
+ * Mesuré par `tests/unit/http-classification.test.ts` (« délai dépassé »).
+ *
+ * On ne touche pas à `errors.ts` (sa table SQLSTATE/Supabase est la source
+ * de vérité du dépôt) : on traduit ICI, à la frontière, en un objet que
+ * `isNetworkFailure` sait lire — `TypeError`/`AbortError`/`NetworkError`
+ * sont tous dans `NOMS_TRANSPORT`, sans `code`.
+ */
+function normaliserEchecTransport(brut: unknown): unknown {
+  if (brut instanceof Error) {
+    const traduit = new Error(brut.message);
+    traduit.name = brut.name;
+    return traduit;
+  }
+  return brut;
 }
 
 /**
  * Un `fetch` qui ne lève jamais. Une coupure réseau doit devenir `hors-ligne`,
  * pas une exception qui traverse la couche de services — c'est la promesse de
  * `src/services/result.ts`, et elle vaut ici comme partout.
+ *
+ * ═══ LM54.3 — DISTINGUER LES CAUSES DE TRANSPORT, NE PAS LES FONDRE ═════════
+ *
+ * Un `TypeError` de `fetch` peut vouloir dire trois choses différentes, et
+ * le diagnostic n'est pas le même :
+ *   · réseau coupé / serveur absent → `hors-ligne` : rien n'est perdu, la
+ *     consultation continue (I20) ;
+ *   · délai dépassé (`AbortError`) → toujours `hors-ligne`, mais le nom
+ *     d'origine est conservé dans `cause`, pour que le journal distingue
+ *     « personne ne répond » de « la réponse tarde » ;
+ *   · réponse qui n'est PAS du JSON (page d'erreur d'un mandataire,
+ *     HTML tronqué) → c'est le `lireEnveloppe` ci-dessous qui la classe.
  */
-async function poster<T>(chemin: string, corps: unknown, contexte: string): Promise<Result<T>> {
+async function poster<T>(
+  chemin: string,
+  corps: unknown,
+  contexte: string,
+  signal?: AbortSignal,
+): Promise<Result<T>> {
   let reponse: Response;
   try {
     reponse = await fetch(chemin, {
@@ -164,9 +227,14 @@ async function poster<T>(chemin: string, corps: unknown, contexte: string): Prom
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(corps),
       credentials: "same-origin",
+      // `RequestInit.signal` accepte `AbortSignal | null`, jamais `undefined`,
+      // et `exactOptionalPropertyTypes` refuse de confondre les deux. On étale
+      // la clé plutôt que de poser `undefined` — même règle que
+      // `invokeFunctionStream`.
+      ...(signal !== undefined && { signal }),
     });
   } catch (brut) {
-    return err(toAppError(brut, contexte));
+    return err(toAppError(normaliserEchecTransport(brut), contexte));
   }
   return lireEnveloppe<T>(reponse, contexte);
 }
@@ -242,8 +310,8 @@ export const httpDbPort: DbPort = {
    * Conséquence à connaître : Jarvis, la dictée et la voix sont HORS SERVICE
    * entre la phase 4 et la phase 5. Les écrans cliniques, eux, fonctionnent.
    */
-  invokeFunction: <T>(name: string, body: unknown) =>
-    poster<T>(`/api/jarvis/${encodeURIComponent(name)}`, body, `http.invoke:${name}`),
+  invokeFunction: <T>(name: string, body: unknown, signal?: AbortSignal) =>
+    poster<T>(`/api/jarvis/${encodeURIComponent(name)}`, body, `http.invoke:${name}`, signal),
 
   invokeFunctionStream: async (name: string, body: unknown, signal?: AbortSignal) => {
     let reponse: Response;

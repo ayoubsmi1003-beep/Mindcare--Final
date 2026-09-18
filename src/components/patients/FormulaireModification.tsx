@@ -40,7 +40,9 @@ import {
   updatePatient,
   type EmergencyContact,
   type Patient,
+  SITUATIONS_FAMILIALES,
   type Sexe,
+  type SituationFamiliale,
   type PatientChanges,
 } from "@/services/patients";
 
@@ -63,6 +65,7 @@ export function FormulaireModification({
   const [nom, setNom] = useState(patient.lastName);
   const [naissance, setNaissance] = useState(patient.birthDate ?? "");
   const [sexe, setSexe] = useState<string>(patient.sex ?? "");
+  const [situation, setSituation] = useState<string>(patient.maritalStatus ?? "");
   const [telephone, setTelephone] = useState(patient.phone);
   const [telephoneAlt, setTelephoneAlt] = useState(patient.phoneAlt ?? "");
   const [adresse, setAdresse] = useState(patient.address ?? "");
@@ -122,6 +125,18 @@ export function FormulaireModification({
     // jusqu'à la porte.
     const sexeChoisi: Sexe | null = sexe === "M" ? "M" : sexe === "F" ? "F" : null;
     if (sexeChoisi !== patient.sex) changes.sex = sexeChoisi;
+
+    // Même précaution que pour le sexe : on RAMÈNE la chaîne du sélecteur au
+    // type de la colonne (`app.marital_status`) au lieu de l'assurer. Une
+    // valeur inattendue vaut « non renseignée » — c'est-à-dire « Mme » à
+    // l'impression — jamais un cast qui la porterait jusqu'à la porte.
+    const situationChoisie: SituationFamiliale | null =
+      (SITUATIONS_FAMILIALES as readonly string[]).includes(situation)
+        ? (situation as SituationFamiliale)
+        : null;
+    if (situationChoisie !== patient.maritalStatus) {
+      changes.maritalStatus = situationChoisie;
+    }
     const tel = normaliserTelephone(telephone);
     const telAlt = normaliserTelephone(telephoneAlt);
     if (tel !== patient.phone) changes.phone = tel;
@@ -226,6 +241,19 @@ export function FormulaireModification({
             { valeur: "", libelle: fr.etats.texteAbsent },
             { valeur: "M", libelle: fr.patients.sexeM },
             { valeur: "F", libelle: fr.patients.sexeF },
+          ]}
+        />
+        <ChampSelection
+          libelle={fr.patients.situationFamiliale}
+          indication={fr.patients.situationFamilialeIndication}
+          valeur={situation}
+          onChange={setSituation}
+          options={[
+            { valeur: "", libelle: fr.etats.texteAbsent },
+            ...SITUATIONS_FAMILIALES.map((v) => ({
+              valeur: v,
+              libelle: fr.patients.situations[v],
+            })),
           ]}
         />
         <ChampTexte

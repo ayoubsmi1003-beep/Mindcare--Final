@@ -173,6 +173,7 @@ describe("ambiguïté — ne jamais deviner, purger", () => {
         conversationId: params.conversationId,
         persiste: false,
         interrompu: false,
+        preuves: [],
       };
       return ok(bilan);
     };

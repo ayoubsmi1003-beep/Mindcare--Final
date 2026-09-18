@@ -24,22 +24,31 @@
  *    verticale de cartes. Chaque écran compose désormais selon son travail :
  *    le bento est un outil, pas l'identité du produit.
  *
- * 4. L'ASSISTANT N'EST PLUS UNE BULLE FLOTTANTE. Son lanceur était une
- *    pastille en bas à droite ; il est maintenant le champ de commande de la
- *    barre supérieure. Même ⌘K, même panneau — mais l'assistant appartient à
- *    l'instrument au lieu d'être posé dessus.
+ * 4. L'ASSISTANT SE LANCE PAR UNE BULLE FLOTTANTE — et V7 disait l'inverse.
+ *    V7 avait remplacé la bulle par le champ de commande de la barre, pour que
+ *    l'assistant « appartienne à l'instrument au lieu d'être posé dessus ».
+ *    Arbitrage praticienne du 2026-09-08 : retour à la bulle, et retrait du
+ *    champ de commande — UN seul lanceur.
+ *
+ *    ⚠️ Ce que le raisonnement de V7 avait manqué : cette coquille ne rend pas
+ *    la barre en mode séance. Le lanceur unique de V7 disparaissait donc
+ *    pendant une consultation, c'est-à-dire là où l'assistante sert le plus, ne
+ *    laissant que `⌘K` — un raccourci que rien n'annonce. La bulle ne dépend
+ *    d'aucune barre. Même ⌘K, même panneau.
  */
 
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 import { fr, type NomEcran } from "@/i18n/fr";
 import type { UserRole } from "@/services/authz";
 
 import { BandeauSeanceEnCours } from "./BandeauSeanceEnCours";
 import { BootVoix } from "./BootVoix";
+import { BulleAlexa } from "./BulleAlexa";
+import { PaletteCommande } from "./PaletteCommande";
 import { PanneauJarvis } from "./PanneauJarvis";
 import { Rail } from "./coquille/Rail";
 import { Topbar } from "./coquille/Topbar";
@@ -119,6 +128,9 @@ export function AppShell({
    * lecteurs sont frères.
    */
   const [alexaOuvert, setAlexaOuvert] = useState(false);
+  const [paletteOuverte, setPaletteOuverte] = useState(false);
+  const ouvrirAlexa = useCallback(() => setAlexaOuvert(true), []);
+  const changerAlexa = useCallback((v: boolean) => setAlexaOuvert(v), []);
 
   /**
    * ⚠️ CE `role !==` EST UNE COMPOSITION D'INTERFACE, PAS UN CONTRÔLE DE
@@ -164,7 +176,7 @@ export function AppShell({
             titre={titreEffectif}
             {...(sousTitre === undefined ? {} : { sousTitre })}
             {...(actions === undefined ? {} : { actions })}
-            {...(avecAlexa ? { onOuvrirCommande: () => setAlexaOuvert(true) } : {})}
+            avecAlexa={avecAlexa}
           />
         )}
 
@@ -176,10 +188,12 @@ export function AppShell({
           id="contenu-principal"
           className={[
             "min-h-0 flex-1 overflow-y-auto",
-            sansGouttiere ? "" : "px-6 py-6",
+            sansGouttiere ? "" : "px-4 py-4",
           ].join(" ")}
         >
-          {children}
+          <div key={chemin} className="animate-fondu-monte motion-reduce:animate-none">
+            {children}
+          </div>
         </main>
       </div>
 
@@ -188,7 +202,9 @@ export function AppShell({
       {avecAlexa ? (
         <>
           <BootVoix />
-          <PanneauJarvis ouvert={alexaOuvert} onChangerOuvert={setAlexaOuvert} />
+          <BulleAlexa ouvert={alexaOuvert} onOuvrir={ouvrirAlexa} />
+          <PanneauJarvis ouvert={alexaOuvert} onChangerOuvert={changerAlexa} />
+          <PaletteCommande ouvert={paletteOuverte} onChangerOuvert={setPaletteOuverte} />
         </>
       ) : null}
     </div>

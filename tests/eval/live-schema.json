@@ -1,0 +1,19 @@
+{
+  "$comment": "M09 slice 3 — contrat canonique des records live (captation PII-safe, anneau mémoire, jamais de texte patient). ASCII volontaire.",
+  "version": "m09-live-v1",
+  "mission": "M09",
+  "kind": "live",
+  "clesRacine": ["mission", "kind", "contrat", "horodatage", "records"],
+  "clesRecord": ["schema", "empreinteRun", "horodatage", "chemin", "interrompu", "persiste", "dureeMs", "appels", "nbAppels", "preuves", "nbPreuves", "nbSnapshots", "propositionInconnue", "resolution", "empreinte"],
+  "clesAppel": ["capacite", "ms", "ok", "code", "deduplique"],
+  "clesPreuve": ["titre", "section", "version"],
+  "clesResolution": ["etat", "intentionChainee", "intentionRetenu"],
+  "chemins": ["connaissance", "patient", "refus", "inconnu"],
+  "regles": {
+    "aucunIdentifiantBrut": "runId/toolCallId/patient/conversation/textes : jamais en clair, que des empreintes FNV-1a",
+    "aucunTexte": "ni réponse, ni extrait, ni mention, ni libellé, ni args d'outils, ni snapshots",
+    "clesFermees": "clé hors allowlist = FAIL (schéma strict anti-dérive, comme m09-replay-v1)",
+    "cheminFerme": "chemin inconnu rendu 'inconnu', jamais en pass-through",
+    "empreinteStable": "même bilan → même empreinte ; l'horodatage en est exclu"
+  }
+}

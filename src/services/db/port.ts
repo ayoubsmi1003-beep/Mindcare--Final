@@ -135,8 +135,12 @@ export interface DbPort {
    * `body` voyage tel quel en JSON ; la fonction cible répond `{ ok, data |
    * error }` (même convention que `Result<T>`), et l'adaptateur la traduit ici
    * — l'appelant ne voit jamais la forme brute de la réponse HTTP.
+   *
+   * `signal` optionnel pour annulation bout-en-bout (timeout dur, annulation
+   * utilisateur, démontage composant) : l'abandon remonte jusqu'au fetch
+   * serveur, donc jusqu'au fournisseur — la génération s'arrête vraiment.
    */
-  readonly invokeFunction: <T>(name: string, body: unknown) => Promise<Result<T>>;
+  readonly invokeFunction: <T>(name: string, body: unknown, signal?: AbortSignal) => Promise<Result<T>>;
 
   /**
    * Appel STREAMING d'une Edge Function — V-JARVIS-CORE.

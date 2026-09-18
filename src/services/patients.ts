@@ -96,9 +96,34 @@ export interface Patient extends PatientListItem {
   readonly idDocumentNumber: string | null;
   readonly idDocumentIssuer: string | null;
   readonly emergencyContact: EmergencyContact | null;
+  /**
+   * 088. `null` = NON RENSEIGNÉE, et ce n'est pas « célibataire ».
+   *
+   * La distinction compte au-delà du dossier : `app.civilite` imprime « Mlle »
+   * pour une femme célibataire et « Mme » partout ailleurs, `null` compris.
+   * Confondre l'absence avec une valeur ferait imprimer une civilité que
+   * personne n'a saisie sur un certificat remis au patient.
+   */
+  readonly maritalStatus: SituationFamiliale | null;
 }
 
 export type Sexe = "M" | "F";
+
+/** 088. Reflète exactement l'enum `app.marital_status`. */
+export type SituationFamiliale =
+  | "celibataire"
+  | "en_couple"
+  | "marie"
+  | "divorce"
+  | "veuf";
+
+export const SITUATIONS_FAMILIALES: readonly SituationFamiliale[] = [
+  "celibataire",
+  "en_couple",
+  "marie",
+  "divorce",
+  "veuf",
+];
 
 export interface PatientSearchFilters {
   readonly query?: string;
@@ -128,6 +153,7 @@ interface PatientRow extends SearchRow {
   readonly id_document_number: string | null;
   readonly id_document_issuer: string | null;
   readonly emergency_contact: unknown;
+  readonly marital_status: SituationFamiliale | null;
 }
 
 function toListItem(row: SearchRow): PatientListItem {
@@ -262,6 +288,7 @@ export async function getPatient(id: string): Promise<Result<Patient | null>> {
     idDocumentNumber: row.id_document_number,
     idDocumentIssuer: row.id_document_issuer,
     emergencyContact: versContactUrgence(row.emergency_contact),
+    maritalStatus: row.marital_status,
   });
 }
 
@@ -282,6 +309,12 @@ const IDENTITE = z.object({
   birth_date: z.string().nullable(),
   age: NOMBRE.nullable(),
   sex: z.enum(["M", "F"]).nullable(),
+  // 089. `nullish` et non `nullable` : une base servie par une version
+  // antérieure du contrat n'envoie pas la clé du tout, et l'écran doit
+  // continuer d'ouvrir la fiche plutôt que d'échouer sur un champ d'affichage.
+  marital_status: z
+    .enum(["celibataire", "en_couple", "marie", "divorce", "veuf"])
+    .nullish(),
   is_active: z.boolean(),
 });
 
@@ -536,6 +569,7 @@ export interface PatientWorkspace {
     readonly birthDate: string | null;
     readonly age: number | null;
     readonly sex: Sexe | null;
+    readonly maritalStatus: SituationFamiliale | null;
     readonly isActive: boolean;
   };
 
@@ -826,6 +860,7 @@ function versEspaceTravail(brut: z.infer<typeof ESPACE_TRAVAIL>): PatientWorkspa
       birthDate: brut.identite.birth_date,
       age: brut.identite.age,
       sex: brut.identite.sex,
+      maritalStatus: brut.identite.marital_status ?? null,
       isActive: brut.identite.is_active,
     },
 
@@ -1156,6 +1191,7 @@ export interface PatientChanges {
   readonly idDocumentIssuer?: string | null;
   readonly emergencyContact?: EmergencyContact | null;
   readonly notesAdmin?: string | null;
+  readonly maritalStatus?: SituationFamiliale | null;
 }
 
 /** La correspondance camel → snake, écrite en toutes lettres. */
@@ -1171,6 +1207,7 @@ const CHAMPS_MODIFIABLES = {
   idDocumentIssuer: "id_document_issuer",
   emergencyContact: "emergency_contact",
   notesAdmin: "notes_admin",
+  maritalStatus: "marital_status",
 } as const satisfies Readonly<Record<keyof PatientChanges, string>>;
 
 // Miroir exact de la contrainte `patients_phone_format` (004). La vérifier ici
@@ -1226,6 +1263,13 @@ const MODIFICATIONS = z.object({
     .nullable()
     .optional(),
   notesAdmin: z.string().nullable().optional(),
+  // Le `z.enum` REFUSE ici ce que l'enum Postgres refuserait de toute façon.
+  // L'intérêt n'est pas la protection — 088 est l'autorité — mais le message :
+  // un refus de saisie parle français, un `invalid input value for enum` non.
+  maritalStatus: z
+    .enum(["celibataire", "en_couple", "marie", "divorce", "veuf"])
+    .nullable()
+    .optional(),
 });
 
 function erreurDeSaisie(chemins: string): AppError {
@@ -1304,6 +1348,7 @@ export async function updatePatient(
 function versPatient(row: PatientRow): Patient {
   return {
     ...toListItem(row),
+    maritalStatus: row.marital_status,
     cabinetId: row.cabinet_id,
     practitionerId: row.practitioner_id,
     sex: row.sex,
@@ -1462,6 +1507,9 @@ const CREATION = z.object({
   phone: z.string().trim().regex(FORMAT_TELEPHONE),
   birthDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).nullish(),
   sex: z.enum(["M", "F"]).nullish(),
+  maritalStatus: z
+    .enum(["celibataire", "en_couple", "marie", "divorce", "veuf"])
+    .nullish(),
   phoneAlt: z.string().trim().regex(FORMAT_TELEPHONE).nullish(),
   address: z.string().nullish(),
   idDocumentNumber: z.string().nullish(),
@@ -1509,6 +1557,12 @@ export async function creerPatient(
   };
   if (d.birthDate) charge.birth_date = d.birthDate;
   if (d.sex !== undefined && d.sex !== null) charge.sex = d.sex;
+  // 089. La clé n'est envoyée QUE si elle porte une valeur : `create_patient`
+  // refuse une clé inconnue, mais une clé connue à `null` écrirait « non
+  // renseignée » — ce qui est déjà le défaut. On n'envoie donc rien.
+  if (d.maritalStatus !== undefined && d.maritalStatus !== null) {
+    charge.marital_status = d.maritalStatus;
+  }
   if (d.phoneAlt !== undefined && d.phoneAlt !== null && d.phoneAlt !== "") {
     charge.phone_alt = d.phoneAlt;
   }

@@ -42,8 +42,10 @@ import type { Practitioner } from "@/services/practitioners";
 import {
   creerPatient,
   normaliserTelephone,
+  SITUATIONS_FAMILIALES,
   telephoneValide,
   type Patient,
+  type SituationFamiliale,
 } from "@/services/patients";
 
 function ouNull(valeur: string): string | null {
@@ -85,6 +87,7 @@ export function FormulaireCreation({
   const [telephone, setTelephone] = useState("");
   const [naissance, setNaissance] = useState("");
   const [sexe, setSexe] = useState("");
+  const [situation, setSituation] = useState("");
   const [telephoneAlt, setTelephoneAlt] = useState("");
   const [adresse, setAdresse] = useState("");
   const [pieceNumero, setPieceNumero] = useState("");
@@ -170,6 +173,9 @@ export function FormulaireCreation({
       phone: normaliserTelephone(telephone),
       ...(naissance !== "" ? { birthDate: naissance } : {}),
       ...(sexe === "M" || sexe === "F" ? { sex: sexe } : {}),
+      ...((SITUATIONS_FAMILIALES as readonly string[]).includes(situation)
+        ? { maritalStatus: situation as SituationFamiliale }
+        : {}),
       ...(telAlt !== null ? { phoneAlt: telAlt } : {}),
       ...(adresseNette !== null ? { address: adresseNette } : {}),
       ...(pieceNum !== null ? { idDocumentNumber: pieceNum } : {}),
@@ -280,6 +286,19 @@ export function FormulaireCreation({
                 { valeur: "", libelle: fr.etats.texteAbsent },
                 { valeur: "M", libelle: fr.patients.sexeM },
                 { valeur: "F", libelle: fr.patients.sexeF },
+              ]}
+            />
+            <ChampSelection
+              libelle={fr.patients.situationFamiliale}
+              indication={fr.patients.situationFamilialeIndication}
+              valeur={situation}
+              onChange={setSituation}
+              options={[
+                { valeur: "", libelle: fr.etats.texteAbsent },
+                ...SITUATIONS_FAMILIALES.map((v) => ({
+                  valeur: v,
+                  libelle: fr.patients.situations[v],
+                })),
               ]}
             />
             <ChampTexte

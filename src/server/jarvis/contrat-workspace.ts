@@ -329,6 +329,24 @@ export interface AnalyseAnterieure {
 }
 
 /**
+ * Date calendaire lue sur une ligne `pg` — chaîne ISO ou `Date`.
+ *
+ * MÊME CAUSE que `dateCourte` de `contexte-seance.ts`, autre victime : ici
+ * pas de levée (le garde `texte()` rendait null sur un `Date`), mais une
+ * PERTE SILENCIEUSE — chaque analyse antérieure était écartée, et le résumé
+ * longitudinal perdait sa mémoire sans un seul journal. Local et dupliqué à
+ * dessein : les deux modules restent importables par les évals hors ligne
+ * sans dépendance croisée.
+ */
+function dateLue(v: unknown): string | null {
+  if (typeof v === "string") return v === "" ? null : v.slice(0, 10);
+  if (v instanceof Date && !Number.isNaN(v.getTime())) {
+    return v.toISOString().slice(0, 10);
+  }
+  return null;
+}
+
+/**
  * Lit les lignes de `app.get_recent_session_analyses` (067).
  *
  * ═══ POURQUOI LE RÉSUMÉ PASSE PAR LÀ, ET NON PAR LES NOTES BRUTES ═══
@@ -352,7 +370,7 @@ export function analysesAnterieures(lignes: unknown): AnalyseAnterieure[] {
   for (const l of lignes) {
     if (!estObjet(l)) continue;
     const consultationId = texte(l["consultation_id"]);
-    const date = texte(l["generated_at"]);
+    const date = dateLue(l["generated_at"]);
     const contenu = estObjet(l["content"]) ? l["content"] : null;
     if (consultationId === null || date === null || contenu === null) continue;
     const note = estObjet(contenu["noteStructuree"]) ? contenu["noteStructuree"] : {};

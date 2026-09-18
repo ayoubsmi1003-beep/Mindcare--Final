@@ -155,14 +155,22 @@ export function PanneauHistorique({
 
   return (
     <div className="flex flex-col gap-3">
-      <p className="font-ui text-label text-ink-500">{fr.consultation.historiqueIndication}</p>
+      <p className="font-ui text-label font-medium text-ink-500">{fr.consultation.historiqueIndication}</p>
 
-      <ol className="flex flex-col gap-2">
+      {/* V10 — timeline 21st.dev : rail vertical + pastille date, cartes premium */}
+      <ol className="relative flex flex-col gap-3 pl-6 before:absolute before:bottom-2 before:left-2 before:top-2 before:w-px before:bg-rule">
         {evenements.map((e) => {
           const estOuvert = ouvert === e.eventId;
           const detail = details[e.eventId];
           return (
-            <li key={e.eventId}>
+            <li key={e.eventId} className="relative">
+              <span
+                aria-hidden="true"
+                className={[
+                  "absolute -left-6 top-5 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-2 border-card shadow-douce",
+                  estOuvert ? "bg-action-600" : "bg-ink-300",
+                ].join(" ")}
+              />
               <Carte niveau="secondaire">
                 {/*
                   La DATE est le bouton. Pas une ligne avec un chevron discret

@@ -26,8 +26,9 @@ import { useCallback, useEffect, useState } from "react";
 import { AppShell } from "@/components/AppShell";
 import { FilJarvis } from "@/components/FilJarvis";
 import { SaisieJarvis } from "@/components/SaisieJarvis";
+import { SiriOrb } from "@/components/ui/siri-orb";
 import { useSessionEcran } from "@/components/useSessionEcran";
-import { BandeauHorsLigne, BlocErreur, LienBouton, Squelette } from "@/components/ui";
+import { BandeauHorsLigne, BlocErreur, Bouton, LienBouton, Squelette } from "@/components/ui";
 import { fr } from "@/i18n/fr";
 import {
   abonnerConversation,
@@ -92,12 +93,33 @@ export default function JarvisPage(): React.JSX.Element {
 
   return (
     <AppShell role={utilisateur.role} nomComplet={utilisateur.fullName} onDeconnexion={deconnecter}>
-      <div className="mx-auto flex h-full min-h-0 w-full max-w-lecture flex-col gap-3">
-        {/* En-tête sobre : l'orbe suffit à identifier qui parle ici. */}
-        <div className="flex items-center gap-3">
-          <span aria-hidden className="inline-flex h-8 w-8 shrink-0 rounded-full bg-grad-orb shadow-glow-ai" />
-          <h1 className="m-0 font-ui text-heading font-semibold text-ink-900">{fr.jarvis.titre}</h1>
-        </div>
+      {/* Fond Alexa — aurora verte, le fil restant opaque (§4.2 : noms,
+          dates et montants jamais sur dégradé). */}
+      <div className="relative -m-4 min-h-full overflow-hidden p-4">
+        <span
+          aria-hidden="true"
+          className="fond-aurore-alexa pointer-events-none absolute inset-0"
+        />
+      <div className="relative mx-auto flex h-full min-h-0 w-full max-w-lecture flex-col gap-4">
+        {/*
+          ALEXA RUIXEN-VERT — hero centré menthe : gros orbe émeraude à états,
+          titre unique, disclaimer. Pas de 2e launcher ici (bulle globale).
+        */}
+        <header className="relative flex shrink-0 flex-col items-center gap-3 overflow-hidden rounded-3xl bg-vedette-vert px-5 py-8 text-center shadow-vedette">
+          <span aria-hidden="true" className="pointer-events-none absolute inset-0 bg-reflet" />
+          <span aria-hidden className="relative inline-flex h-24 w-24 animate-flottement-doux items-center justify-center overflow-hidden rounded-full motion-reduce:animate-none">
+            <SiriOrb
+              size="96px"
+              etat={etat.carteEcriture !== null ? "ecoute" : "idle"}
+            />
+          </span>
+          <h2 className="relative m-0 font-ui text-title font-semibold text-on-brand">
+            Alexa
+          </h2>
+          <p className="relative m-0 max-w-lecture font-ui text-label font-medium text-on-brand">
+            {fr.disclaimer}
+          </p>
+        </header>
 
         {horsLigneSession ? <BandeauHorsLigne /> : null}
 
@@ -114,7 +136,7 @@ export default function JarvisPage(): React.JSX.Element {
             <Squelette lignes={6} />
           </div>
         ) : (
-          <div className="min-h-0 flex-1 overflow-y-auto pr-1">
+          <div className="min-h-0 flex-1 overflow-y-auto rounded-2xl border border-rule bg-card p-4 shadow-carte">
             <FilJarvis etat={etat} />
           </div>
         )}
@@ -122,28 +144,31 @@ export default function JarvisPage(): React.JSX.Element {
         {/* Amorces — visibles seulement sur conversation vide ; chaque clic
             remplit le champ, où la phrase reste éditable avant envoi. */}
         {etat.tours.length === 0 && !etat.chargementHistorique && (
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap justify-center gap-2">
             {[fr.jarvis.amorce1, fr.jarvis.amorce2, fr.jarvis.amorce3].map((amorce) => (
-              <button
+              <Bouton
                 key={amorce}
                 type="button"
+                rang="secondaire"
+                taille="compact"
                 onClick={() => choisirAmorce(amorce)}
-                className="cursor-pointer rounded-full border border-rule bg-card px-3 py-1.5 font-ui text-label text-ink-700 shadow-lift0 transition duration-quick ease-soft hover:bg-sunken hover:text-ink-900"
               >
-                {amorce}
-              </button>
+                <span className="truncate">{amorce}</span>
+              </Bouton>
             ))}
           </div>
         )}
 
-        <footer className="border-t border-rule pt-3">
+        <footer className="rounded-3xl border border-rule bg-glass-panel px-4 pb-4 pt-3 shadow-elevee backdrop-blur-glass">
           <SaisieJarvis
             etat={etat}
             onEnvoyer={soumettre}
             onChangerSaisie={changerSaisie}
             onInterrompre={interrompre}
           />
+          <p className="m-0 mt-2 text-center font-ui text-label text-ink-500">{fr.disclaimer}</p>
         </footer>
+      </div>
       </div>
     </AppShell>
   );

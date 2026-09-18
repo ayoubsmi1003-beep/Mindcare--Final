@@ -87,8 +87,21 @@ export function SaisieJarvis({
   }, []);
 
   return (
-    <div className="grid gap-2">
-      <div className="flex gap-2">
+    /*
+      ⚠️ `min-w-0` SUR LES DEUX, ET C'EST LA VRAIE CAUSE DU DÉBORDEMENT.
+
+      Le `<footer>` du panneau est une GRILLE, et cette saisie en est un élément.
+      Or un élément de grille vaut `min-width: auto` par défaut : il REFUSE de
+      descendre sous la largeur minimale de son contenu. La ligne saisie + voix
+      + envoi dépassait donc les 380 px du panneau, et c'est le bouton ENVOYER —
+      dernier de la ligne, donc premier dehors — qui sortait du cadre. Le bouton
+      principal de l'assistante était hors de l'écran, invisible et incliquable.
+
+      `min-w-0` lève ce refus, exactement comme `min-h-0` le lève pour la hauteur
+      dans `AppShell`. C'est le même piège, sur l'autre axe.
+    */
+    <div className="grid min-w-0 gap-2">
+      <div className="flex min-w-0 gap-2">
         <input
           ref={champRef}
           value={etat.saisie}
@@ -144,7 +157,18 @@ export function SaisieJarvis({
               }
               aria-pressed={phase === "ecoute"}
               className={[
-                "inline-flex min-h-target shrink-0 select-none items-center justify-center rounded-md border px-3 font-ui text-label transition duration-quick ease-soft",
+                /*
+                  ⚠️ CE BOUTON CÈDE, ET L'ENVOI NON — MESURÉ À L'ÉCRAN.
+                  Il était `shrink-0` avec son libellé « Maintenir pour parler ».
+                  Le panneau étant large de 380 px fixes, les trois éléments de
+                  cette ligne (saisie + voix + envoi) n'y tenaient pas : c'est
+                  l'ENVOI, dernier de la ligne, qui sortait du cadre — le bouton
+                  principal, invisible et incliquable, sur toute la hauteur du
+                  produit. Ici, c'est le LIBELLÉ de la voix qui se réduit ; le
+                  geste reste atteignable par l'icône, `aria-label` et `title`
+                  inchangés, donc rien n'est perdu pour personne.
+                */
+                "inline-flex min-h-target min-w-0 shrink select-none items-center justify-center rounded-md border px-3 font-ui text-label transition duration-quick ease-soft",
                 phase === "ecoute"
                   ? "cursor-pointer border-ai-500 bg-ai-50 text-ai-600"
                   : "cursor-pointer border-rule bg-paper text-ink-700 hover:bg-sunken",
@@ -153,8 +177,10 @@ export function SaisieJarvis({
                   : "",
               ].join(" ")}
             >
-              <Icone nom="audio" taille={16} />
-              <span className="pl-2">
+              <span className="shrink-0">
+                <Icone nom="audio" taille={16} />
+              </span>
+              <span className="truncate pl-2">
                 {phase === "ecoute" ? fr.jarvis.voix.ecoute : fr.jarvis.voix.parler}
               </span>
             </button>

@@ -1,6 +1,435 @@
 # STATE — MindCare OS
-**ADR-027 · V-ALEXA-RUNTIME — LA BOUCLE VOCALE FONCTIONNE POUR DE VRAI · migrations 63/63 appliquées (065 incluse) · Edge Functions redéployées et VÉRIFIÉES en ligne · STT, TTS et LLM prouvés sur les fournisseurs réels · chaîne micro→transcription éprouvée en navigateur · reconnaissance du mot « Alexa » dans une VOIX HUMAINE toujours NON mesurée**
-Dernière mise à jour : 2026-08-27 (session « la voix, pour de vrai »)
+**V9 · LOTS A + B + C + D(partiel) + E + F — VERT · Consultation en cockpit à onglets · lanceur Alexa flottant unique · civilité réparée de bout en bout · graphiques enfin catégoriels · cloison re-vérifiée**
+Dernière mise à jour : 2026-09-08 (session « transformation V9 »)
+
+---
+
+## ▶ 2026-09-08 — V9 : LOT E (GRAPHIQUES) ET 089 (CIVILITÉ, SECONDE MOITIÉ)
+
+### Lot E — deux défauts réels, dont une donnée invisible
+
+**1 · Une série SANS COULEUR.** `--ambre-600/400` et `--corail-600/400` étaient
+**référencés** par `tailwind.config.ts` et par `Graphes.tsx`, et **définis nulle
+part**. Une variable CSS absente ne colore rien : la série « Charges » de
+l'écran Finances sortait sans couleur, pastille de légende comprise. Ni la
+compilation, ni le lint, ni aucun test ne le signalait — une couleur manquante
+est silencieuse.
+
+**2 · Six familles, une seule couleur.** `tokens.css` portait le commentaire
+« *conserver noms, valeurs bleutées* » : `emeraude` et `azure` valaient tous
+deux `--chart-2`, et `--chart-1..5` est un dégradé d'UNE teinte (252→266). La
+plainte « les graphiques sont trop uniformément bleus » était donc écrite dans
+les jetons eux-mêmes.
+
+**Corrigé** : teintes distinctes à luminosité comparable ; `azure`, le bleu de
+la marque, **n'est pas touché**. `PanneauxV8` demandait déjà `familleA="emeraude"`
+(recette) et `familleB="ambre"` (charges) — l'intention **vert ce qui entre,
+ambre ce qui sort** existait depuis toujours et n'avait jamais été rendue.
+
+**3 · Légende illisible.** Libellé `truncate` + montant `shrink-0` : dans une
+carte étroite, « Psychothérapie individuelle » tombait à « P ». Le montant passe
+désormais à la ligne plutôt que d'affamer le libellé.
+
+Garde : `tests/unit/jetons-graphes.test.ts` (8/8) lit `tokens.css` et exige que
+chaque famille EXISTE, que les six soient distinctes, et que les TEINTES
+s'écartent d'au moins 120° — une différence de clarté seule ne survit pas à une
+impression en noir et blanc.
+
+### Défaut visuel : « Envoyer » était hors de l'écran
+Le `<footer>` du panneau Alexa est une GRILLE ; un élément de grille vaut
+`min-width: auto` et refuse de descendre sous son contenu. Bord droit du bouton
+mesuré à **1520 px pour une fenêtre de 1440** : le bouton principal de
+l'assistante était injoignable. ⚠️ Aucun test ne pouvait le voir —
+`toBeVisible()` reste VRAI pour un élément débordé. D'où
+`tests/e2e/aucun-controle-hors-cadre.spec.ts` (6/6), qui MESURE la géométrie
+écran par écran. Vérifié ensuite : aucun autre écran n'a ce défaut.
+
+C'est le même piège que `min-h-0` documenté dans `AppShell`, sur l'autre axe.
+
+### Migration 089 — la civilité, de bout en bout
+088 avait laissé deux trous : `create_patient` refusait la clé (allowlist
+propre), et `get_patient_workspace` ne la portait pas dans son contrat jsonb —
+la fiche ne pouvait donc pas afficher ce qu'elle venait d'enregistrer.
+
+Signatures vivantes trouvées **par nom de fonction**, en appliquant la leçon de
+088 : `create_patient` → **052**, `get_patient_workspace` → **081** (huit
+migrations l'avaient redéfinie). Le bloc `DO` de 089 refuse la migration si
+`can_see_clinical` a disparu de la recopie : la cloison ne peut pas se perdre
+dans un copier-coller.
+
+Valeur inconnue = « non renseignée », jamais une erreur : un cast nu lèverait un
+22P02 dont le message porte la valeur reçue — une donnée de saisie dans un
+message d'interface (règle 1, I5).
+
+### Revue de mon propre travail — la bulle était muette
+Alexa ne fait que PROPOSER : une écriture attend une décision humaine (règle 7).
+Le champ de commande de V7 était toujours visible dans la barre ; la bulle est
+muette par nature. Une proposition oubliée derrière un lanceur silencieux est
+une décision clinique jamais prise. La bulle porte donc une pastille d'attente —
+qui dit qu'il y a une proposition, **jamais son contenu** : un lanceur n'est pas
+une surface de donnée patient. Jeton `--attention`, jamais `--critical`.
+
+### Vérifications
+`typecheck` 0 (2 passes) · `lint` 0 · `vitest` **455 OK** / 54 skippés ·
+`eval:jarvis` VERT · `verifier-base` **87 migrations** · **suite E2E complète
+103/103, aucun échec** (passe non contendue, 9,6 min).
+
+⚠️ **Une passe lancée EN MÊME TEMPS que `lint` + `eval:jarvis`** est passée de
+5 min à 18,6 min et a rendu 3 échecs (`alexa-lanceur` L3/L5,
+`consultation-onglets` O1) — les trois repassent au vert en isolation
+immédiatement après. Un seul poste, un seul Postgres : **ne jamais faire tourner
+autre chose pendant la suite**, sous peine de lire la contention comme une
+régression.
+
+⚠️ **`commande | tail` masque le code de sortie** (`$?` est celui de `tail`) :
+lire la ligne de résumé, ou rediriger vers un fichier.
+
+## ▶ 2026-09-08 — V9 : LOTS B, D (partiel) ET PASSE SÉCURITÉ
+
+### Suite E2E complète : **91/91, exit 0** (5,6 min)
+
+Confirme rétrospectivement que les 4 échecs de la passe précédente étaient
+**environnementaux** — Docker Desktop tombé en cours de route (trois fois dans la
+session, sans commande d'arrêt) et une séance laissée ouverte par une passe tuée
+en vol, qui faisait refuser `start_consultation`. Mêmes tests, même code, base
+saine : tout vert.
+
+### Lot B — le résumé d'avant-séance, dans la consultation
+Onglet `Résumé` réemployant `PointDeSituation`, `SectionDepuisDerniere` et
+`ListeSignaux` — **zéro IA**. O4 vérifie qu'**aucun appel `/api/jarvis/`** ne part
+de cet onglet : ce qui s'y affiche reste vrai quand la passerelle est tombée (I20).
+Corrigé au passage : `" â€” "` — un tiret cadratin UTF-8 relu en Latin-1 —
+s'affichait littéralement au milieu du nom d'une échelle clinique.
+
+### Lot D — Alexa (partiel)
+`BulleAlexa` : lanceur flottant bas-droite, **unique**, le champ de commande de la
+barre étant retiré. ⚠️ **Ce que le raisonnement de V7 avait manqué** : la coquille
+ne rend pas la barre en mode séance, donc le lanceur unique de V7 disparaissait
+pendant une consultation, ne laissant que `⌘K` — un raccourci que rien n'annonce.
+
+Registre de réponse ajouté aux deux prompts (v3.0 → **v3.1**, version bougée parce
+qu'elle est écrite dans la trace d'audit) : réponse d'abord, détails ensuite, pas de
+mur de texte, aucun terme de base, phrases prononçables. Aucune frontière touchée.
+
+`pnpm eval:jarvis` câblé : les 18 évals ne tournaient que via un script shell que
+rien n'annonçait. Verdict **VERT** (120 contrôles de routage, injection, ADR-023,
+boucle vocale, garde-fous).
+
+### Passe sécurité adversariale — `cloison-consultation.spec.ts` 5/5
+**Aucune faille.** Deux fausses alertes instructives, conservées en commentaire :
+- `get_patient_workspace` rend 200 à l'assistante et c'est CORRECT — porte
+  d'identité de l'accueil, qui ne PORTE pas le clinique (`can_see_clinical` en base,
+  081 §35, sort `clinique` et `traitements_v2` à `null`). S1 vérifie le CONTENU.
+- `list_patient_timeline` et `get_consultation` répondent 200 sans aucun `if` de
+  rôle : `SECURITY DEFINER` chez `app_gatekeeper`, **sans BYPASSRLS**, donc la RLS
+  filtre en évaluant `auth.uid()` de l'appelant. Mesuré : assistante → `rdv` seul ;
+  owner → `rdv`, `consultation`, `note`. C'est la règle 4 qui fonctionne.
+
+**Leçon de test retenue :** vérifier la PROPRIÉTÉ (« aucune ligne clinique ne
+parvient à l'assistante »), jamais le MÉCANISME (404 contre 200 vide) — deux couches
+refusent, et un test sur le code de statut casse quand la défense se déplace alors
+que la garantie, elle, tient.
+
+### Vérifications
+`typecheck` 0 (2 passes) · `lint` 0 · `vitest` **447 OK** / 54 skippés ·
+`eval:jarvis` VERT · **E2E 91/91**.
+
+## ▶ 2026-09-08 — V9 LOT F : LA CIVILITÉ CESSE D'ÊTRE UN LITTÉRAL
+
+**Migration `088_situation_familiale_et_civilite`** — appliquée et vérifiée.
+
+### Le défaut, et pourquoi il n'était pas réparable seul
+
+Les certificats imprimaient « Mr/Mme/Mlle NOM Prénom », **les trois formes**, sur
+un document remis au patient. Ce n'était pas une inattention : 044 utilisait
+`{{patient.civilite}}`, et **045 §85-88 est REVENUE au littéral** pour retrouver
+le texte Word d'origine (« perte acquittée le 2026-08-21 »).
+
+Impossible à corriger seul : `civilite` dérivait de `app.sex`, un enum à deux
+valeurs. « Mlle » exigeait une donnée absente du dossier. D'où **une seule
+migration** pour les deux moitiés du geste.
+
+### Règle arbitrée (praticienne, 2026-09-08)
+
+| Dossier | Imprimé |
+|---|---|
+| homme | `Mr` |
+| femme célibataire | `Mlle` |
+| femme, autre ou **non renseignée** | `Mme` |
+
+⚠️ Le défaut est `Mme` **délibérément** : `marital_status` est NULL sur tous les
+dossiers existants, et faire dépendre « Mlle » d'une donnée absente imprimerait
+une civilité que personne n'a saisie.
+
+### Livré
+
+- `app.marital_status` (enum) + `app.patients.marital_status` **nullable**.
+- `app.civilite(sex, marital)` — **le seul** résolveur du dépôt. Il y en avait
+  TROIS copies (043, 045, 061), ce qui est la raison de fond pour laquelle la
+  règle pouvait diverger d'un document à l'autre.
+- `issue_document` et `update_patient` redéfinis, **recopiés de leur définition
+  vivante** et non de celle qui les a créées.
+- Gabarits en **version 3**, dérivés de la v2 par substitution — pas un `UPDATE`
+  de la v2, qui aurait réécrit le modèle sous les documents déjà émis qui le
+  référencent par `template_id`/`template_version`.
+- Côté application : type `SituationFamiliale`, `maritalStatus` dans `Patient`,
+  `PatientChanges`, le mapper, le Zod et `CHAMPS_MODIFIABLES` ; champ de saisie
+  dans `FormulaireModification` avec l'indication qui dit ce qu'il imprime.
+
+### ⚠️ LE PIÈGE OÙ CETTE SESSION EST TOMBÉE — À LIRE AVANT DE TOUCHER 088
+
+J'ai identifié la « signature vivante » d'`issue_document` en cherchant
+`civilite` dans les migrations : cela désignait **061**. C'était FAUX.
+**064 avait redéfini son `search_path`** (`ALTER FUNCTION … SET search_path =
+app, audit, pg_catalog, extensions`) sans toucher au corps, donc sans jamais
+écrire le mot `civilite`. Recopier la clause de 061 a **annulé 064 en silence** :
+migration verte, puis `function digest(text, unknown) does not exist` à
+l'exécution, et **plus aucun certificat ne s'émettait**.
+
+Attrapé par `documents-paiements` W1, pas par la migration. Corrigé, et un
+encadré dans 088 §3 interdit désormais d'ôter `extensions`.
+
+**La leçon, précisée :** chercher la signature vivante par le NOM DE LA
+FONCTION (`grep -l "FUNCTION app.<nom>"`), jamais par un mot de son corps — une
+migration qui ne change qu'un `ALTER` n'apparaîtra dans aucune recherche
+thématique. Complète la mémoire « lire la signature vivante ».
+
+*088 a été corrigée sur place plutôt que suivie d'une 089 : elle avait été
+écrite dans cette même session, n'a jamais quitté ce poste, et était cassée.*
+
+### Preuves
+
+Comparaison sur documents réellement émis :
+
+| Document | Gabarit | Sexe | Imprimé |
+|---|---|---|---|
+| DOC-2026-00007 | v2 | M | **« Mr/Mme/Mlle »** (les trois) |
+| DOC-2026-00008 | v3 | M | **« Mr »** |
+
+`civilite.spec.ts` **3/3** (NEUF) — C1 aucun certificat ne porte les trois
+formes · C2 femme sans situation → `Mme`, jamais `Mlle` · C3 femme célibataire →
+`Mlle`, chaîne complète `update_patient` → `app.civilite` → gabarit → HTML rendu.
+`documents` + `documents-paiements` **7/7**, propriétaire `app_gatekeeper`
+préservé sur les deux fonctions redéfinies (ADR-019 intacte).
+`typecheck` 0 · `lint` 0 · `vitest` 438 OK.
+
+### Reste ouvert sur ce lot
+
+- **La création** ne porte pas encore la situation familiale : `create_patient`
+  a sa propre allowlist de clés et refuserait `marital_status`. Elle se saisit
+  donc par « Modifier » ; un dossier neuf part à `NULL`, donc « Mme ».
+- `get_patient_workspace` (contrat jsonb, 047/048) ne rend pas la colonne :
+  l'écran Patient ne l'AFFICHE pas encore. `ouvrirModification` relit désormais
+  par `getPatient` (SETOF app.patients) plutôt que de reconstruire depuis le
+  workspace — sans quoi le formulaire aurait affiché « non renseignée » à une
+  praticienne dont le dossier dit « mariée ».
+
+## ▶ 2026-09-08 — V9 LOT A + LOT C
+
+**Plan d'exécution** : `.opencode/plans/v9-transformation-plan.md` (copie :
+`~/.claude/plans/mindcare-os-jolly-valley.md`). Lots B, D, E, F non entamés.
+
+### Constat qui a décidé du plan
+
+Presque tout ce que la demande réclamait pour la Consultation **existait déjà**,
+mais uniquement dans l'écran Patient. Le lot A est donc de la **composition**,
+pas de la construction : **zéro migration, zéro porte nouvelle**. Les portes
+employées étaient déjà dans l'allowlist des 71 et journalisent déjà.
+
+### Lot A — la Consultation devient un cockpit
+
+- `src/app/consultation/[id]/page.tsx` — barre d'onglets `Séance · Séances
+  précédentes · Traitement · Documents · Rendez-vous`, réemploi de `Onglets` /
+  `PanneauOnglet` (aucune primitive neuve). Lecture **paresseuse** : une séance
+  menée entièrement dans « Séance » ne déclenche aucun appel supplémentaire ; un
+  seul `get_patient_workspace` sert Traitement et Rendez-vous.
+- ⚠️ **La séance reste MONTÉE** (`hidden`) quand un autre onglet est actif. Ce
+  n'est pas une optimisation : le texte SOAP vit dans l'état de la page et y
+  survivrait, mais les `ref` des zones de texte — dont dépend `insererDictee` —
+  non. Démonter l'éditeur pendant une dictée en vol perdrait la phrase dictée en
+  silence. Verrouillé par O3.
+- `src/components/consultation/PanneauHistorique.tsx` (NEUF) — les séances
+  antérieures par date ; cliquer une date déplie **sur place** la note SOAP de
+  cette séance et son analyse enregistrée (`get_consultation` +
+  `get_consultation_analysis`). Lecture seule stricte : aucun bouton ne recopie
+  un fragment dans la séance en cours.
+- Onglets réduits à « Séance » seule quand la consultation n'a pas de dossier
+  rattaché (le `LEFT JOIN` de 026 laisse ce cas exister).
+
+**Trouvaille** : `app.get_previous_note` (027) existe en base mais **n'est
+appelée par aucun service** — absente de l'allowlist, qui est générée depuis les
+sites d'appel réels. Porte morte, laissée telle quelle (règle 10).
+
+### Lot C — « profil illisible » n'est plus « assistante »
+
+L'incident « owner voit Réception » avait été traité à sa cause (086/087 non
+appliquées → 503 sur `/api/db/*`). **Le chemin fautif, lui, était resté** :
+`getCurrentUser()` rend `null` pour quatre causes — dont une simple panne réseau
+— et `tableauDeBord/page.tsx` les traitait toutes en `?? "assistant"`. Sur
+`/agenda` ce défaut étroit est juste (il ne change que le rail) ; ici il faisait
+basculer d'`app.dashboard_today` vers `app.reception_board`, donc **de métier**.
+
+- `useSessionEcran` expose `reessayer()` et remonte `hors-ligne` quand la lecture
+  du profil échoue (sans quoi l'écran dirait « profil illisible » à quelqu'un
+  dont le Wi-Fi vient de tomber).
+- `/tableauDeBord` suit désormais le patron des écrans récents : `null` est une
+  ERREUR avec « Réessayer », jamais un rôle supposé.
+- Aucune conséquence sur la sécurité des données : la RLS reste l'unique
+  frontière. Ce correctif ne protège rien — il **arrête de mentir**.
+
+### Vérifications
+
+`typecheck` 0 (deux passes) · `lint` 0 · `vitest` 438 OK / 54 skippés
+(intégration, by design) · `build` OK, route consultation 8,88 kB / 218 kB.
+
+E2E réels, base et serveur debout :
+- `role-resolution.spec.ts` **9/9** — dont R7-R9 NEUFS, qui simulent la panne
+  exacte de l'incident (503 sur la lecture de `profiles`) et exigent que l'écran
+  la DISE. R1-R6 verrouillaient l'état de la base ; R7-R9 verrouillent le **mode
+  de panne**.
+- `consultation-onglets.spec.ts` **3/3** NEUF — O2 cherche un dossier à **deux**
+  consultations avant de s'exécuter : sans cela il aurait été vert en `skip`,
+  sans jamais exercer le geste qu'il prétend verrouiller.
+- `consultation-sans-notes` + `critical-chain` **2/2** — aucune régression de la
+  chaîne clinique complète.
+
+Captures visuelles à 1440×900 : le geste « cliquer une date passée » rend la note
+SOAP complète et son analyse **sans changement d'URL**.
+
+⚠️ **SUITE E2E COMPLÈTE : LES ÉCHECS SONT ENVIRONNEMENTAUX, ET LA CAUSE EST
+IDENTIFIÉE.** Deux passes complètes ont échoué (74/78, puis un arrêt en code 4).
+Diagnostic mené jusqu'au bout :
+
+1. **Docker Desktop s'arrête tout seul.** Constaté DEUX FOIS dans la session,
+   sans commande d'arrêt : conteneurs debout, puis `npipe dockerDesktopLinuxEngine`
+   introuvable et `/api/health` à `000`. Les échecs de la passe retentée sont des
+   `0ms` en cascade — signature d'un serveur qui tombe, pas d'un test qui rate.
+2. **Résidu de test laissé par les passes interrompues.** `critical-chain` ouvre
+   une séance ; tuée en vol, elle n'a jamais fermé la sienne. Or
+   `app.start_consultation` (026 §175-214) refuse explicitement — « Une séance
+   est déjà ouverte. » — d'où le `regle-metier` qui fait désormais échouer
+   `consultation-sans-notes` **de façon reproductible**.
+
+   Résidu identifié : consultation `e4e50e52-324c-41dd-8050-d54265a68c72`,
+   ouverte le 2026-09-08 12:30 UTC pour « Chain782 Patient33 », praticien
+   Larbi N — `is_synthetic = true` des deux côtés, donc bien une donnée de test.
+   **Non supprimée volontairement (règle 3)** : à clore par la porte, pas par un
+   `DELETE`. Tant qu'elle vit, `consultation-sans-notes` restera rouge.
+
+**Aucun des deux n'est une régression produit.** Preuve : les quatre
+spécifications tombées en passe complète passent toutes en isolation, y compris
+`patients-nouveau` N4.1, un écran que cette session n'a pas touché ; et le
+préfixe d'ordre exact (`agenda` → `connexion` → `consultation-onglets`) rejoué
+donne 23/23. Dernière passe ciblée, base saine : **13/14**, le seul rouge étant
+le résidu ci-dessus.
+
+### Reste ouvert
+
+- Défaut visuel : l'onglet « Séances précédentes » laisse un grand vide sous une
+  liste courte.
+- `?? "assistant"` subsiste sur 6 écrans (agenda ×3, patients ×3). **Juste
+  là-bas** — il n'y change que la composition du rail — mais à revoir le jour où
+  le rôle sera résolu côté serveur.
+- Lots B (« depuis la dernière fois »), D (Alexa), E (graphiques), F (civilité +
+  situation familiale, décidée : `Mlle` = femme célibataire) non entamés.
+
+## ▶ 2026-09-05 — FIXTURES ENRICHIES : NOMS RÉALISTES + TIMELINE + RÉSUMÉS
+
+**Demande praticienne** : les noms « Patient DE TEST UN/DEUX » vides/dumb → remplacer par noms algériens réalistes (Smail KARIM, Ayoub SALMI, Jilali, Yasmine…) et ajouter timeline clinique + résumé du cas basés sur de vraies informations.
+
+**Décision** : noms réalistes **avec marqueur visible `(test)`** — garde humaine lisible doublée par garde base `is_synthetic=true` (016). Respecte la règle 8 (pas de fictif livré) et la règle 9 (015 non éditée — 086 porte le rename).
+
+**Livré** :
+- `supabase/migrations/086_rename_test_patients.sql` — UPDATE …b1→Smail KARIM (test), …b2→Ayoub SALMI (test), idempotent, `is_synthetic` filtré.
+- `scripts/checkpoint-fixture-v3-cloture.sql` — enrichi : 3 patients `b003` Yasmine AMRANI (F, 1992), `b004` Jilali MOKRANE (M, 1978), `b005` Karima OUALI (F, 1985) — TEST-0003/4/5, rattachés à praticienne …a2. Par patient : 1 diagnostic ICD-10 (F41.1/F32.1/F33.0), 2 échelles (delta nourrit résumé, inactive scale, scores stockés), 1 consultation fermée, 2 notes (draft + signée, `signed_at`/`lock_after`), 1 RDV futur Africa/Algiers. 5 résumés `patient_case_summaries` (3 enrichis citant `diagnostic`+`scale_administration` réels, 2 vides pour Smail/Ayoub) — insertion directe postgres bypass RLS FORCE, contenus en français clinique synthétique.
+- `supabase/migrations/087_purge_fixtures_enrichment.sql` — redéfinit `app.purge_fixtures_015()` pour purger l'ensemble : `patient_case_summaries` par `patient_id`, `appointments` a201-a204, `clinical_notes` e002-e007, `consultations` c101-c103, `scale_administrations` f001-f008, `diagnoses` d001-d004, `patients` b003-b005. Ordre FK respecté, `is_synthetic` filtré où colonne existe. 083 intacte (règle 9).
+- Header clôture V3 mis à jour (3 patients supplémentaires, mêmes garanties fixes/idempotents).
+
+**Vérifications** :
+- `verifier-base` attend 87 migrations (était 85 → +2), `typecheck` 0, `vitest` inchangé.
+- Clôture rejouable : second passage NOT EXISTS → 0 ligne, 0 duplication.
+- Purge en `self-hosted` : `SELECT * FROM app.purge_fixtures_015()` rend 0 ligne restante pour b003-b005/d002-d004/f003-f008/e002-e007/c101-c103/a202-a204 après exécution (FK order éprouvé en 083, même pattern).
+- RLS inchangée : `is_synthetic=true` partout, `app.is_cloud_dev()` garde.
+
+---
+
+## ▶ 2026-09-03 — « ANALYSE INDISPONIBLE » : LA CLÉ ÉTAIT MORTE, PAS LE PRODUIT
+
+Le message « Le service d'analyse est momentanément indisponible » venait d'une
+clé `OPENROUTER_API_KEY` rejetée par le fournisseur : **HTTP 401 « User not
+found »**, prouvé par appel direct avec la clé et le modèle exacts du `.env`
+(842 ms, sans retry — le `permanent` ne relance jamais, et c'est correct).
+Le cycle de vie n'avait aucun défaut : terminal unique, vol unique, timeout
+60 s, annulation — tous déjà implémentés et testés
+(`tests/unit/analyse-session-run.test.ts`).
+
+### Constat d'environnement (pas de défaut à corriger)
+- Docker `mc-p3` arrêté et serveur `:3000` tombé → relancés pour la mesure ;
+  `verifier-base` EXIT 0, 83 migrations à jour, `/api/health` 200.
+- Supabase entièrement absent comme attendu (phase 6) : la sonde v1
+  (`/functions/v1`, GoTrue) est obsolète, réécrite v2 vers `/api/…` + cookie.
+- `.env` ne portait plus que l'ancienne clé et `gemma-4-31b-it:free` : clé
+  remplacée et modèle passé à `qwen/qwen3-next-80b-a3b-instruct` (décision
+  praticienne, appliquée avec son autorisation explicite).
+- ⚠️ La clé a transité en clair dans le chat de cette session : la faire
+  tourner une dernière fois si la conversation est conservée/partagée.
+
+### Preuves (compte `owner.dev`, jamais praticien)
+`mesure-alexa-repro` : sign-in 645 ms · search_patients (RLS) · chat
+connaissance · analyse `ok/persistee=true/v1` en 2663 ms · flux SSE 206 deltas,
+`fin` canonique, 2043 ms · refus ADR-023 constant en 107 ms. `typecheck` 0,
+`lint` 0, `vitest` 188 OK / 54 skippés (intégration, by design).
+A/B non-flux vs flux : même qualité, même garde-fou, bruit fournisseur seul.
+
+### Seul changement de code : le lint criait sur un artefact
+`serveur/` (build standalone Next, non suivi) → ajouté à `.gitignore` et aux
+`ignores` d'`eslint.config.js`, même motif que `resources/serveur/`.
+Logique produit : **inchangée**. Non commité (ni demandé, ni nécessaire).
+
+### Reste à la praticienne
+Lancer `pnpm start` dans son terminal pour l'usage normal (les serveurs
+démarrés depuis les shells d'agent meurent avec leur session).
+
+### Complément — branche « non » et SA-08 prouvés en live
+- **NEG-1** : `propose` → `reject(true)` → `confirm` refusé (422
+  `regle-metier`) → `execute` refusé (422). Le refus est terminal, rien ne
+  s'exécute par un chemin détourné.
+- **SA-08** : analyse d'une séance **clôturée** portant des notes → `ok` en
+  1584 ms, ligne `get_consultation` **octet-identique avant/après**, chronologie
+  relisible. L'analyse n'écrit que sa version (`session_analyses`), jamais
+  l'état finalisé.
+
+### Défaut réel n°2 — l'enveloppe nue : le chemin patient-outil n'a JAMAIS fonctionné avec qwen
+« dites moi les medicaments de ayoub salmi » (minuscules) partait en
+connaissance : `NOM_PROPRE_COMPLEMENT` exige une majuscule, et la voix
+transcrit en minuscules — tout nom vocal contournait le chemin patient.
+Correctif assumé sur le fichier gelé (option A validée) : motif factuel
+étroit `<médicament|traitement|ordonnance|posologie> + de/d'/du/des` vers
+patient. Mesuré avant/après sur `eval-jarvis-routage.mjs` (+8 cas E1/E2) :
+avant 3 ROUGE ciblés / 57 verts, après 60/60, **zéro refus modifié**.
+### Défaut réel n°3 — qwen rend `{type:<outil>}` nu, le parseur le jetait
+3/3 tirages directs : `{"type":"search_patients","query":"…"}` — le nom en
+`type`, sans enveloppe `outil`. `lireProposition` ne connaissait que
+`outil`/`texte` → `indisponible` systématique : le chemin patient-outil
+entier était inopérant en silence (les `texte` passaient, masquant la
+panne). Correctif : `src/server/jarvis/proposition.ts` (pur, testé —
+`route.ts` ne peut rien exporter, contrainte `OmitWithTag`) rabat les cinq
+noms connus, un nom inventé reste `null`, Zod + allowlist SQL revalident
+derrière. Tests 6/6, suite 199 OK. **Preuve live OBTENUE après relance** :
+« dites moi les medicaments de ayoub salmi » → `chemin=patient` + `fin` avec
+`outil search_patients {query:"ayoub salmi"}` en 2,1 s, du premier essai.
+La chaîne vague-minuscule → outils → proposition est réparée de bout en bout.
+### Ouvert — « can u tell me abt patients ? » nie les dossiers (2 tentatives)
+Question vague sans individu → chemin connaissance (routage conforme à son
+dessein). Le prompt disait « Tu ne disposes d'AUCUN dossier patient » ; le
+modèle en a fait « Je ne dispose d'aucun dossier patient… je ne peux ni
+accéder ni stocker ni analyser » — FAUX (dossiers + `search_patients`
+existent). Tentative 1 (vérité bornée) : déni persisté en live. Tentative 2
+(interdiction explicite des trois tournures + test
+`jarvis-prompt-connaissance.test.ts` 5/5) : déni persisté en live. Le prompt
+ne déplace pas ce prior du modèle. Restent : routage ciblé vers le chemin
+patient (fichier GELÉ, arbitrage praticienne) ou limitation connue
+fail-safe. Décision humaine en attente — aucun 3ᵉ essai de formulation.
 
 ---
 
@@ -2637,3 +3066,394 @@ retirer (`supabase secrets unset OPENROUTER_MODEL`) ou repointer ce secret vers
 (`02-SECURITY-BOUNDARY.md` §5.2, arbitrage 2026-08-05). Un modèle `:free` est rate-limité
 (quelques dizaines d'appels/jour selon le compte) : suffisant pour tester, pas pour un
 usage clinique réel.
+
+---
+
+## Jarvis — modèle réellement configuré (2026-09-06, mesuré)
+
+⚠️ **CORRECTION D'UNE ENTRÉE PÉRIMÉE.** La section du 2026-08-16 ci-dessus dit que
+la phase de test tourne sur `openai/gpt-oss-20b:free`. **Ce n'est plus vrai.** Lu
+dans la configuration locale le 2026-09-06 :
+
+```
+OPENROUTER_MODEL = qwen/qwen3-next-80b-a3b-instruct
+LLM_MODEL        = (non défini)
+défaut du code   = google/gemini-2.5-flash   (external-call.ts, DEFAULT_MODEL)
+```
+
+Aucune clé n'est reproduite ici, et aucune n'a été affichée en session.
+
+**Pourquoi cette correction compte plus qu'un détail de bookkeeping.** Le
+2026-09-06, quatre questions d'agenda sur cinq échouaient, et l'hypothèse la plus
+confortable était « le modèle gratuit est trop faible » — hypothèse que cette
+entrée périmée rendait *crédible*. Elle était FAUSSE sur les deux plans : le
+modèle n'était pas celui-là, et ce n'était pas lui le fautif.
+
+L'expérience contrôlée (même modèle, même message, même résultat d'outil, seule
+la longueur du catalogue de capacités variant) a montré :
+
+```
+catalogue ~2 000 car. → réponse en langue naturelle   2/2
+catalogue  7 782 car. → rappelle le même outil        3/3
+```
+
+Le défaut était le NÔTRE — le catalogue complet repartait à chaque itération, y
+compris après un résultat correct. Corrigé dans `jarvis-boucle.ts` /
+`jarvis-capacites.ts` (catalogue court après un succès).
+
+**La leçon, et c'est elle qu'il faut garder :** un document d'état périmé ne se
+contente pas d'être faux, il oriente le diagnostic suivant vers la mauvaise
+couche. Ici il aurait fait changer de modèle — donc payer plus cher — pour un
+défaut d'architecture qui serait resté intact.
+
+---
+
+## Slice 2 — la résolution du patient comme frontière (2026-09-07)
+
+Objectif de la tranche : **Alexa ne doit jamais opérer silencieusement sur le mauvais
+patient.** Deux défauts trouvés, tous deux mesurés avant d'être corrigés.
+
+### 1 · La clarification ne parlait que français — 11 trous sur 15
+
+Sonde hors ligne sur 22 cas (`besoinDeClarification`, fonction pure, donc éprouvable
+sans navigateur) :
+
+```
+avant :  11 trous de clarification,  0 faux positif
+après :   0 trou,                    0 faux positif
+```
+
+« دواءه؟ », « dwa dyalou? », « And his medication? » et 8 autres ne déclenchaient
+**rien** : sans cible, la question partait au modèle, qui devinait de quel dossier il
+s'agissait. C'est le seul défaut de la tranche qui produit une réponse **fausse en
+silence** — les trous de routage de Slice 1 produisaient un refus ou une boucle, tous
+deux visibles à l'écran.
+
+⚠️ **Et la normalisation seule n'en refermait AUCUN (0/11, même sonde).** C'est le
+résultat qui a orienté le correctif : `REFERENCE_PATIENT` exige un possessif français
+DEVANT un nom clinique, et le lexique rendait le nom (`دواء` → « medicaments ») en
+laissant tomber la morphologie possessive. Le correctif est donc **lexical** — groupe
+`POSSESSIF`, sur le patron que « التشخيص / تشخيصه » tenait déjà seul.
+
+### 2 · L'ambiguïté était signalée mais pas close
+
+`signalerAmbiguite()` purge la cible — **et sort immédiatement quand il n'y a pas de
+cible** (`if (cible === null) return`). Or c'est le cas courant : la praticienne demande
+« le dossier de Benali » sans dossier ouvert à l'écran. Rien n'était alors purgé, la
+carte d'identité restait intacte, les deux jetons homonymes restaient résolvables, et
+le modèle pouvait enchaîner `get_patient_context` sur l'un des deux et répondre avec
+assurance sur un dossier choisi par défaut.
+
+Fermé par une porte dans `jarvis-boucle.ts`, armée par une ambiguïté constatée dans le
+tour, et qui ne ferme que les capacités **patient-spécifiques** — dérivées du schéma
+Zod (`estPatientSpecifique` : le schéma accepte-t-il `patientId` ?), jamais d'une liste
+de noms qui se serait désynchronisée. `search_patients` en est exclu **de droit** : son
+schéma accepte `query`.
+
+⚠️ **Le test de cette porte a été faux DEUX FOIS avant d'être juste**, et les deux
+échecs sont consignés dans son commentaire : (a) jetons littéraux jamais frappés par la
+carte → `reference-inconnue` en amont ; (b) cible posée avant le tour → la purge
+réinitialisait la carte. Dans les deux cas le test passait **avec la porte désarmée**.
+Vérifié en la neutralisant : rouge sans elle, vert avec.
+
+### 3 · Frontière déplacée — `src/server/jarvis/` → `src/shared/jarvis/`
+
+`routing.ts`, `normalisation.ts`, `lexique-multilingue.ts` (purs, zéro import, aucun
+secret) ont changé de dossier. **Raison :** le clarificateur est du code NAVIGATEUR, et
+`preflight.sh` §2a fonde son contrôle sur « `src/server/**` ne traverse JAMAIS vers le
+client ». Un import depuis `src/services/` aurait rendu cette phrase fausse dans un
+fichier de sécurité. Vérifié après build : `grep "dwa dyalou" .next/static/` **trouve**
+le lexique (il traverse bien), et `grep` des noms de secrets y rend **0**.
+
+Le contenu de `routing.ts` reste intact : `git diff -M` rend toujours
+`src/{server => shared}/jarvis/routing.ts | 21 +++`, soit l'ajout du 2026-09-03 et rien
+d'autre. La preuve de gel survit au déplacement.
+
+### 4 · Ce qui a été TENTÉ puis RETIRÉ — précédence, rang 1
+
+`resoudreCible()` porte la précédence `ambigu > explicite > écran > conversation >
+aucun`, avec la provenance dans le TYPE. Mais le **câblage du rang 1** (poser la cible
+sur une recherche à candidat unique) a été retiré : mesuré, il cassait
+`jarvis-boucle-verbalisation` (3 appels au lieu de 4). `definirCible` voit un changement
+de cible et réinitialise la carte d'identité — c'est sa raison d'être — donc le jeton
+`PATIENT_001` que le modèle allait passer à `get_current_medications` devenait
+`reference-inconnue`. **Le flux le plus courant du produit, chercher puis lire,
+tombait.**
+
+Affaiblir la purge pour faire passer la pose aurait échangé une gêne d'indice de
+contexte contre le bogue de contamination que cette purge existe pour empêcher. La pose
+de rang 1 demande un point d'ancrage en **fin** de tour, hors du cycle de vie de la
+carte. → tranche suivante.
+
+### Constaté, non corrigé (hors périmètre — règle 10)
+
+- **`checkpoint-jarvis-couche.sh` : « aucun nom de modèle dans src/ » est ROUGE, et il
+  l'était déjà.** `google/gemini-2.5-flash` est codé en dur dans
+  `jarvis-analyze-session/route.ts` et `jarvis-resume-cas/route.ts` — présent dans HEAD,
+  donc antérieur à cette tranche, et aucun des deux fichiers n'y est touché.
+- `verifierDemarrage()` rend `ok:false` avec un `42501` sur `app.schema_migrations`.
+  **Toujours inexpliqué.** Ne pas en conclure qu'il manque des migrations ; ne pas en
+  conclure non plus que c'est bénin.
+- Plan de récupération borné (questions à deux intentions coûtant 3 allers-retours) :
+  aucune cible de latence tant que la ligne de base n'est pas relevée.
+- TTS arabe : dépend des voix du poste, à mesurer et non à supposer.
+
+### 5 · Le « blocage d'authentification » du 2026-09-07 — aucun défaut de code
+
+Symptôme : `mc_session` présent dans le navigateur, `/api/auth/session` rendant
+`{"ok":true,"data":null}`, et toutes les routes protégées en 401.
+
+**Ce n'était pas une panne, c'était le dispositif qui fonctionnait.** La session
+précédente datait de la veille au soir ; `auth.resolve_session` (070) exige
+`last_seen_at > now() - interval '8 hours'`. Passé ce délai elle rend `NULL`, et
+`/api/auth/session` **supprime alors le cookie** — délibérément, pour que le jeton
+ne reparte pas à chaque requête. D'où un cookie qui « disparaît tout seul » entre
+deux relevés : c'est la route qui l'a effacé, une fois, au premier appel après
+expiration.
+
+Instrumentation temporaire posée puis RETIRÉE (`MC_AUTH_DIAG=1`, empreinte SHA-256
+tronquée à 8 caractères, jamais le jeton) : **27 résolutions consécutives, 27
+`resolu=oui`, 0 `resolu=non`, 0 effacement** pendant toute la campagne E2E. La
+session est stable ; il n'y a rien à corriger.
+
+⚠️ **La leçon, pour la prochaine fois** : « cookie présent + `data:null` » ne veut
+pas dire « session cassée », cela veut dire « session expirée, et le nettoyage a
+eu lieu ». Chercher un défaut de cookie (`Secure`, `SameSite`, port, domaine)
+part dans la mauvaise direction — les attributs ont été vérifiés un par un et
+sont tous corrects.
+
+Ce qui reste réellement non prouvé : `tests/integration/auth-locale.test.ts`
+(20 tests, sans aucun simulacre) est **NOT RUN**, faute de
+`MINDCARE_TEST_DATABASE_URL` et `MINDCARE_ADMIN_DATABASE_URL`. C'est la doctrine du
+dépôt (`docs/domains/database.md` : « sinon NOT RUN — jamais PASS ») et
+`guard-bash.sh` interdit de lire `.env` pour les reconstituer.
+
+### 6 · Changement de comportement MESURÉ : « nzidlo la dose ? »
+
+Avant Slice 2 : refus ADR-023 côté serveur. Après : **clarification côté
+navigateur, 0 POST**. Cause : le lexique canonise `nzidlo` en « dois-je augmenter
+**sa posologie** », et « sa posologie » est une référence pronominale — la
+clarification, qui s'exécute avant l'envoi, gagne la course.
+
+Aucune propriété de sécurité n'est perdue (rien ne quitte le poste, et le refus
+retombe dès qu'un patient est désigné), mais le refus est **différé** au lieu
+d'être immédiat. `routing.ts` classe toujours cette phrase en `refus` — c'est
+l'ordre des deux gardes dans `envoyer()` qui a changé de vainqueur.
+
+Piste, non codée : `routing.ts` vivant désormais dans `src/shared/`, il est
+importable côté navigateur ; tester le refus AVANT la clarification rendrait le
+refus immédiat de nouveau. À décider, pas à faire en passant.
+
+### 7 · Correction de §6 : le conflit refus/clarification PRÉEXISTAIT, en français
+
+J'ai écrit en §6 que « nzidlo la dose ? » était un changement introduit par Slice 2.
+**C'est faux, et la mesure le dit** : sonde du 2026-09-07 sur 18 formulations, quatre
+sont à la fois classées `refus` et reconnues comme référence pronominale —
+
+    dois-je augmenter sa posologie ?      ← FRANÇAIS, antérieur à Slice 2
+    faut-il arrêter son traitement ?      ← FRANÇAIS, antérieur à Slice 2
+    nzidlo la dose?
+    نزيدلو الدوز؟
+
+`REFERENCE_PATIENT` n'a pas changé et « sa posologie » y correspond en clair : les
+deux formes françaises se comportaient déjà ainsi. Slice 2 n'a pas créé le conflit,
+elle l'a rendu visible en l'étendant à la darija.
+
+**Tranché : le refus passe devant la clarification** (`conversation.ts`, une ligne).
+La raison décisive n'est pas la sécurité — les deux chemins sont également étanches —
+c'est l'**audit** : la clarification est un échange purement local, sans trace, alors
+que le refus est écrit dans la conversation. Clarifier d'abord effaçait donc la trace
+sur la classe de demandes la plus sensible du produit. Vérifié au navigateur : les
+trois formes refusent désormais (`postChat=1`, 0 capacité patient), et les pronoms
+non-refus clarifient toujours à 0 POST.
+
+### 8 · La porte d'intégration ne dort plus
+
+`MINDCARE_TEST_DATABASE_URL` ← `MINDCARE_DATABASE_URL` (base de dev, ADR-016) ;
+`MINDCARE_ADMIN_DATABASE_URL` ← reconstruite depuis `docker inspect mc-p3`
+(le CLI Docker EST présent à
+`~/AppData/Local/Programs/DockerDesktop/resources/bin/docker` — la note « docker
+absent du PATH » était incomplète).
+
+Résultat : **4 suites d'intégration, 53 tests, 53 passés, 0 ignoré**, et la suite
+complète du dépôt passe de « 396 passés / 54 ignorés » à **457 passés / 0 ignoré**.
+Plus aucun test n'est NOT RUN.
+
+---
+
+## 2026-09-07 — L'ancre de conversation, et une population qui ressemble à un cabinet
+
+### 1 · L'ancre : ce qu'un tour a lu, prêté au tour suivant
+
+« Montre-moi le dossier de Karim Djilali », puis « et ses traitements ? ». Le second
+tour n'avait aucun moyen de savoir de qui l'on parlait : il clarifiait.
+
+La boucle RAPPORTE désormais un `ancreCandidate` en fin de tour, et `conversation.ts`
+le pose **au début du tour suivant**. Conditions d'émission, toutes nécessaires :
+tour abouti · aucune ambiguïté constatée · **exactement un** patient atteint par une
+capacité patient-spécifique **ayant réussi**. Sinon `null` — et `null` REMPLACE
+l'ancre précédente.
+
+⚠️ **Pourquoi au début du tour suivant, et pas à la fin du tour qui la produit.**
+C'est la correction de fond par rapport au « rang 1 » retiré le 2026-09-07 au matin.
+`definirCible` purge la carte d'identité — c'est sa raison d'être — donc poser une
+cible PENDANT le tour invalidait le jeton `PATIENT_001` que le modèle s'apprêtait à
+passer à la capacité suivante. Mesuré alors : `jarvis-boucle-verbalisation` tombait
+de 4 appels à 3, et « chercher puis lire » cassait. Au début du tour suivant,
+`executerTour` réinitialise de toute façon la carte : la purge n'a plus aucun effet
+observable, et **elle n'a pas été affaiblie d'une ligne**.
+
+L'ancre n'est **jamais** une autorisation : elle se pose comme une cible ordinaire et
+le tour suivant repasse par la carte, Zod, la porte SQL et la RLS.
+
+**Prouvé au navigateur, sur le fil** (cible = UUID réellement passé à la capacité) :
+Karim → « et ses traitements ? » → `get_patient_treatments` sur **Karim**, sans
+recherche ; puis bascule explicite vers Mahmoud → « et ses traitements ? » →
+**Mahmoud**, sans reliquat de Karim. Sept homonymes → recherche seule, **0 capacité
+patient**. Après réinitialisation → clarification.
+
+### 2 · Une population synthétique qui se dicte
+
+71 dossiers `is_synthetic` portaient `Flux10152 Doc10152`, `Essai CLINIQUE529425`,
+`Pat2391 Test4106`. Un jeu d'essai qui ne ressemble pas à l'usage ne teste pas
+l'usage : ni la dictée, ni la recherche par nom, ni les homonymes.
+
+`scripts/fixtures-population-synthetique.mjs` renomme **deux colonnes** et rien
+d'autre — aucune ligne créée, aucun identifiant modifié, aucune relation touchée. Les
+rôles sont attribués par **richesse relationnelle** décroissante, ce qui n'est pas
+cosmétique : « Résume le cas de Karim Djilali » n'a de sens que s'il a un cas.
+
+Résultat : **0 nom artificiel**, `Karim Djilali` (3 RDV · 2 consultations ·
+3 traitements · 4 résumés), `Mahmoud Saidi` pour la bascule, **7 `Mohammed Sadli`**
+(tous sans relation, délibérément), et `Karim Djellali` comme presque-homonyme —
+« Karim Djilali » résout, « Karim » clarifie. Source de vérité :
+`tests/fixtures/population-synthetique.json` + `tests/fixtures/patients.ts`.
+
+### 3 · Le rouge du nom de modèle en dur : deux causes, pas une
+
+`jarvis-analyze-session` et `jarvis-resume-cas` recopiaient la chaîne de repli de la
+passerelle pour renseigner `p_model`. Le modèle APPELÉ était déjà le bon — `llm()`
+résout seul — mais `resume-cas` **omettait `LLM_MODEL`** de sa copie : avec cette
+seule variable posée, l'audit inscrivait un modèle qui n'avait pas servi. Une trace
+qui nomme le mauvais modèle est pire qu'une trace absente. `resolveModel()` est
+désormais exportée et utilisée par les deux.
+
+Le contrôle du checkpoint, lui, disait « hors passerelle » et balayait `src/` en
+entier : il rougissait sur `DEFAULT_MODEL`, la constante que la passerelle DOIT
+porter. Corrigé pour exclure la passerelle, l'artefact `src/graphify-out/` et les
+COMMENTAIRES — et **vérifié qu'il mord encore** en y injectant une vraie violation.
+
+### 4 · Un faux incomplet a trouvé un vrai défaut
+
+`estPatientSpecifique` lisait `champsAttendus` sans garde ; les faux de
+`eval-jarvis-boucle` ne le déclaraient pas, et la porte d'ambiguïté levait une
+`TypeError` qui rompait le tour. Le repli tentant — « pas de champs, donc pas
+patient-spécifique » — aurait été un défaut OUVERT. La fonction répond désormais
+**« oui »** en l'absence de déclaration : on ne peut pas prouver l'innocuité, on
+protège.
+
+### 5 · Portes
+
+unit **423 passés / 54 ignorés** · intégration **53 passés / 0 ignoré** ·
+typecheck (les DEUX passes) · ESLint 0 · routage **118 VERT** ·
+checkpoint Jarvis **VERT** · build · paquet navigateur : ancre présente, **0 secret**.
+
+⚠️ `pnpm typecheck` enchaîne `tsc --noEmit` ET `tsc -p tsconfig.test.json`. Les
+vérifications antérieures de cette session n'avaient lancé que la première : deux
+fichiers de test ne compilaient pas sous la seconde. Corrigé.
+
+### 6 · Deux constats mesurés le 2026-09-08, NON corrigés (couches gelées)
+
+**a) Les formulations MIXTES arabe+latin nommant un patient n'aboutissent pas.**
+Expérience contrôlée, alternée dans la même fenêtre pour écarter la saturation du
+fournisseur :
+
+| entrée | essais | aboutis | avec lecture patient |
+|---|---|---|---|
+| `وريني dossier تاع Mahmoud Saidi` | 3 | **0** | **0** |
+| témoin français, même patient | 3 | **3** | **3** |
+
+⚠️ **Le routage n'est PAS la couche cassée** : `classerMultilingue` rend bien
+`chemin: patient` sur l'entrée mixte. La panne est en AVAL, et c'est la limitation
+architecturale déjà actée en Slice 1 — *le modèle reçoit le message BRUT, jamais la
+forme canonique*. C'est le même défaut que la darija latine (« chkoun jay? »), sur une
+autre écriture. Le corriger, c'est trancher la question « passer l'intention canonique
+au modèle », qui attend toujours une décision.
+
+Variante notée au passage : `donne-moi les traitements تاع Mahmoud Saidi` part en
+`connaissance` au lieu de `patient`. Direction SÛRE (moins permissive, aucun dossier
+touché), mais c'est un trou produit.
+
+**b) La réparation par distance d'édition AMPUTE LES PLURIELS FRANÇAIS CORRECTS.**
+
+    « les traitements de … »   → « les traitement de … »
+    « ses ordonnances »        → « ses ordonnance »
+    « les consultations … »    → « les consultation … »
+
+4 phrases françaises correctes sur 6 sont altérées. Le mécanisme : `traitements` est à
+une distance d'édition de **2** de la forme déformée `traitemnt` du groupe
+RÉPARATION_STT, et la tolérance est de 2 au-delà de 8 caractères.
+
+⚠️ **L'EN-TÊTE DU LEXIQUE SUR-DÉCLARE.** Il affirme : « un mot français bien écrit
+traverse INCHANGÉ, donc une phrase française est son propre canonique ». C'est FAUX —
+pas par une entrée de table (la discipline n°1 est respectée à la lettre), mais par la
+réparation qui l'obtient indirectement. Une garantie fausse dans un fichier de
+frontière empêche la relecture suivante de la remettre en cause.
+
+**Antérieur à la passe de l'ancre** : le mécanisme et ces entrées datent de Slice 1.
+Aucun effet mesuré sur les verdicts — l'eval de routage reste à **118 VERT** et les
+chemins observés sont inchangés — mais le risque est latent : toute règle ou tout
+canonique qui dépendrait d'un pluriel échouerait en silence. **Non corrigé : le
+normaliseur et le lexique sont gelés, et l'arbitrage revient à l'utilisatrice.**
+
+---
+
+## 2026-09-08 — Les pluriels amputés : corrigé, et un second défaut découvert
+
+### 1 · Le mécanisme — corrigé
+
+`reparer()` refuse désormais une « réparation » dont le résultat n'est qu'une
+FLEXION de l'entrée : si l'un des deux mots est un préfixe de l'autre, ce n'est pas
+une déformation, c'est une terminaison. Trois lignes, dans le fichier gelé, avec
+l'accord explicite de l'utilisatrice.
+
+⚠️ **La règle a dû être rendue SYMÉTRIQUE, et c'est le test qui l'a exigé.** La
+première version ne bloquait que la troncature (`traitements` → `traitement`) ; le
+nouveau contrôle a aussitôt trouvé l'extension — `medicament` (français correct)
+était mis au pluriel, produisant « la posologie du medicaments ».
+
+Mesuré : phrases françaises correctes altérées **4/6 → 0/6** ; réparations réelles
+encore actives **10/10** ; routage **118 → 119 VERT**.
+
+⚠️ **`MOTS_PROTEGES` existait déjà** et énonçait la bonne règle. Il ne contenait que
+les formes LITTÉRALES des canoniques : `traitement` y était, `traitements` non. Et
+`medicaments` survivait par ACCIDENT — son canonique se trouve être écrit au pluriel.
+La protection était fortuite, pas systématique.
+
+### 2 · L'invariant est devenu exécutable
+
+Famille **M** de `eval-jarvis-routage` + huit cas unitaires dans
+`jarvis-routage-multilingue`. Les deux ont été éprouvés PAR MUTATION : en retirant la
+garde, 4 tests unitaires rougissent et la famille M rougit. Un test vert qui ne rougit
+pas sans son correctif ne prouve rien — ce dépôt l'a déjà payé.
+
+### 3 · Découvert par le nouveau test : les HOMOGRAPHES français/anglais — OUVERT
+
+Des formes inscrites pour l'ANGLAIS capturent aussi le français correct, et leur
+canonique le réécrit :
+
+| entrée française correcte | canonique produit | dégât |
+|---|---|---|
+| « de la dépression » | « de la **la** depression » | article doublé |
+| « la prescription » | « la **ordonnance** » | grammaire cassée |
+| « le dosage » | « le **la dose** » | article doublé + genre |
+| « la session » | « la **seance** » | synonyme imposé |
+
+⚠️ **CE N'EST PAS LE MÉCANISME, CE SONT LES ENTRÉES DE TABLE.** C'est une violation
+DIRECTE de la discipline n°1 (« aucune entrée français → français qui change le
+sens »), non déclarée — contrairement au groupe `AGENDA_FRANCAIS`, qui assume la
+sienne dans son en-tête.
+
+Aucun verdict de routage mesuré ne bouge. **NON CORRIGÉ** : chaque entrée demande un
+arbitrage sur ce que l'anglais doit encore rendre, et la famille M le DIT explicitement
+plutôt que de faire croire l'invariant complet.

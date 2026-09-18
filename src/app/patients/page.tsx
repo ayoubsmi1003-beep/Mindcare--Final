@@ -50,6 +50,7 @@ import {
 } from "@/components/ui";
 import { fr } from "@/i18n/fr";
 import { getSession, signOut } from "@/services/auth";
+import { purgerContexteSession } from "@/services/conversation";
 import { getCurrentUser, type CurrentUser } from "@/services/authz";
 import { searchPatients, type PatientListItem } from "@/services/patients";
 import type { Page } from "@/services/result";
@@ -191,6 +192,8 @@ export default function PagePatients(): React.JSX.Element {
   // bouton Retour ne doit pas ramener sur un écran de dossiers après une
   // déconnexion volontaire, sur un poste que le patient suivant voit.
   function deconnecter(): void {
+    // Phase 3 : aucun contexte patient ne survit à la session.
+    purgerContexteSession();
     void signOut().then(() => {
       router.replace("/connexion");
     });
@@ -297,11 +300,11 @@ export default function PagePatients(): React.JSX.Element {
 
       {!chargement && page !== undefined && page.rows.length > 0 ? (
         <>
-          <p className="font-ui text-label tracking-label tabular-nums text-ink-500">
+          <p className="font-ui text-label font-medium tabular-nums text-ink-500">
             {page.total} {fr.patients.comptage} · {fr.patients.listeActifsSeulement}
           </p>
 
-          <div className="mt-4 overflow-hidden rounded-xl border border-rule bg-card shadow-lift2">
+          <div className="mt-4 overflow-hidden rounded-2xl border border-rule bg-card shadow-carte">
             <EnTeteAnnuaire />
             <ul className="m-0 list-none p-0">
               {page.rows.map((patient) => (

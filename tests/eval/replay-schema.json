@@ -1,0 +1,24 @@
+{
+  "$comment": "M09 — contrat canonique des rapports de replay (simulation hors-ligne, hashes, jamais de texte patient). ASCII volontaire.",
+  "version": "m09-replay-v1",
+  "clesRacine": ["mission", "kind", "replay", "live", "gate_version", "verdict_rule", "git_revision", "timestamp", "duree_s", "verdict", "suites", "totaux", "cas", "provenance", "not_run_reasons", "comparaison"],
+  "missions": ["M09"],
+  "kinds": ["simulate", "observe", "compare"],
+  "verdicts": ["PASS", "FAIL", "NOT RUN"],
+  "clesSuite": ["nom", "statut", "pass_count", "fail_count", "not_run_count", "cles_vertes", "cles_rouges", "not_run_reason", "required_environment", "latence_ms", "detail"],
+  "clesCas": ["famille", "id", "empreinte", "verdict"],
+  "familles": ["intentions", "conversation", "connaissance"],
+  "verdictsCas": ["PASS", "FAIL", "non-mappe"],
+  "clesProvenance": ["goldens_hash", "schema_version", "prompts_hash", "prompts_versions", "fichiers_goldens"],
+  "clesTotaux": ["suites", "PASS", "FAIL", "NOT RUN", "cas", "cas_non_mappes"],
+  "regles": {
+    "idObligatoire": "tout cas porte famille+id non vides ; doublon (famille/id) = FAIL",
+    "champInconnu": "cle hors allowlist = FAIL (schema strict anti-derive)",
+    "enumInvalide": "valeur hors enum = FAIL",
+    "typeInvalide": "type inattendu = FAIL",
+    "jsonMalforme": "rapport illisible = FAIL (jamais NOT RUN)",
+    "verdictGlobal": "FAIL si une suite FAIL ; sinon NOT RUN si NOT RUN structurel ; sinon PASS",
+    "replayHonnete": "replay=true et live=false exiges ; kind=compare exige une section comparaison non nulle",
+    "aucunTextePatient": "le rapport ne porte que des hashes/ids/verdicts/metriques, jamais de texte libre patient"
+  }
+}

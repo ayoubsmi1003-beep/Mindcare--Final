@@ -1,0 +1,42 @@
+{
+  "$comment": "M08 — contrat canonique des cas golden. Familles supportees sans reecriture destructive : intentions (M01), conversation (M02), connaissance (M07 fixture + prod). ASCII volontaire (eval-out + grep).",
+  "version": "m08-schema-v1",
+  "familles": {
+    "intentions": {
+      "fichier": "tests/eval/jarvis-intentions.golden.json",
+      "cleCas": "cas",
+      "clesRacine": ["_doc", "cas"],
+      "clesCas": ["id", "input", "langue", "categorie", "sortieModele", "attendu", "note"],
+      "clesAttendu": ["statut", "raison", "intent", "patientMention", "missingInformation", "pronomSansAntecedent", "homonymePossible", "outil", "clarification", "refus"],
+      "statuts": ["valide", "ecarte"],
+      "raisonsEcarte": ["invalide", "indisponible", "confiance-basse"],
+      "outilsNulsAutorisesPour": ["GENERAL_KNOWLEDGE", "ASK_CLARIFICATION", "UNKNOWN"]
+    },
+    "conversation": {
+      "fichier": "tests/eval/jarvis-conversation.golden.json",
+      "cleCas": "scripts",
+      "clesRacine": ["version", "note", "patients", "scripts"],
+      "clesScript": ["id", "description", "conversationId", "setup", "tours", "resolutionOff"],
+      "clesSetup": ["cible", "origine"],
+      "clesTour": ["input", "sonde", "sondeQueries", "sondeErreur", "rechercheModele", "reponses", "resolutionOff", "attendu"],
+      "clesAttendu": ["verdict", "source", "patient", "intentionChainee", "intentionRetenu", "sondes", "executesPatients", "transports", "clarification", "ciblePreservee", "porteDeFil", "propositionInconnue"],
+      "verdicts": ["unique", "ambigu", "nonResolu", "aucun"]
+    },
+    "connaissance": {
+      "fichier": "tests/eval/knowledge.golden.json",
+      "cleCas": "cas",
+      "clesRacine": ["$comment", "$meta", "interdites", "cas"],
+      "clesCas": ["id", "requete", "langue", "issue", "gold", "acceptable", "hard_negatives", "forbidden", "expected_no_answer", "expected_version", "citation_contient", "motif"],
+      "langues": ["fr", "ar", "darija"],
+      "issues": ["pertinent", "faible", "aucune"]
+    }
+  },
+  "regles": {
+    "idObligatoire": "tout cas/script porte un id non vide ; doublon dans un fichier = FAIL",
+    "champInconnu": "cle hors allowlist = FAIL (schema strict anti-derive)",
+    "enumInvalide": "valeur hors enum = FAIL",
+    "typeInvalide": "type inattendu = FAIL",
+    "jsonMalforme": "fichier illisible = FAIL (jamais NOT RUN)",
+    "optionnelNonApplicable": "un attendu optionnel absent n est pas une erreur ; un attendu exige par le harness mais absent du cas est detecte a l execution, pas ici"
+  }
+}

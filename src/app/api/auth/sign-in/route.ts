@@ -88,10 +88,31 @@ export async function POST(requete: Request): Promise<NextResponse> {
     // circulant sur le réseau du cabinet sans que personne ne l'ait décidé.
     asserterCoherenceCookie(h.get("host") ?? undefined);
     session = await ouvrirSession(email, password);
-  } catch {
+  } catch (e) {
     // La base est injoignable, ou la configuration du cookie est incohérente.
-    // Aucun détail ne sort : le message de PostgreSQL peut citer l'URL de
-    // connexion, donc le mot de passe de la base.
+    //
+    // ═══ POURQUOI ON JOURNALISE L'ORGANE, PAS SEULEMENT LE CODE ═══════════
+    //
+    // LM54.3 : des sessions entières ont cherché la cause côté client
+    // (`http.ts`, extensions navigateur) parce que le serveur rendait
+    // « indisponible » sans rien dire d'autre. Le 503 au client reste
+    // correct — il ne doit porter AUCUN détail, le message de PostgreSQL
+    // peut citer l'URL de connexion, donc le mot de passe. Mais le JOURNAL
+    // du serveur, lui, doit permettre de distinguer en une ligne :
+    //   · `ECONNREFUSED`/`ETIMEDOUT` → la dépendance de données manque
+    //     (Docker/conteneur/mc-p3) — la panne qu'on vient de rendre
+    //     impossible au DÉMARRAGE, mais qui peut frapper EN COURS de
+    //     session ;
+    //   · une erreur de cohérence de cookie → la configuration, pas la base ;
+    //   · tout le reste (rôle, migration) → la base a répondu « non ».
+    //
+    // On ne journalise que `.name`/`.code` — jamais `.message` (V1.1, I5).
+    const nom = e instanceof Error ? e.name : undefined;
+    const codeErreur = e instanceof Error ? (e as { code?: string }).code : undefined;
+    console.error(
+      `[sign-in] 503 indisponible — cause technique: ${codeErreur ?? nom ?? "inconnue"} ` +
+        `(contexte: ouverture de session / cohérence cookie)`,
+    );
     return NextResponse.json({ ok: false, code: "indisponible" }, { status: 503 });
   }
 

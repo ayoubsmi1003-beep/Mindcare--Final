@@ -34,6 +34,10 @@
  *                  Le motif nu apparaît légitimement dans le code qui
  *                  CONSTRUIT l'URL (`provisionnement.ts`) ; ce qui ne doit
  *                  jamais apparaître, c'est un mot de passe déjà écrit.
+ * · un paquet SANS pgvector complet (M07, §4 ci-dessous : DLL épinglée par
+ *   SHA-256 + `.control` + script de base de la version déclarée + parité
+ *   des scripts de montée en version) — sans quoi la migration 092 ne peut
+ *   pas s'appliquer sur le poste du cabinet.
  *
  * ═══ CE QUE CE SCRIPT NE PRÉTEND PAS FAIRE ═════════════════════════════════
  *
@@ -41,6 +45,7 @@
  * (contrôle 2b de `preflight.sh`, déjà en place), ni la surface du preload,
  * ni les permissions Electron : ce sont les tests de sécurité de l'étape 13.
  */
+import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -169,10 +174,14 @@ const REQUIS = [
   ["app.asar!/dist-electron/preload/index.cjs", "le preload"],
   ["resources/serveur/server.js", "le backend Next.js autonome"],
   ["resources/serveur/scripts/verifier-base.mjs", "le contrôle de schéma au démarrage"],
+  ["resources/serveur/scripts/lib/base-locale.mjs", "le cycle de vie de la base (dépendance de verifier-base)"],
   ["resources/serveur/scripts/garde-origine.mjs", "la garde de port"],
   ["resources/serveur/scripts/sauvegarde.mjs", "la sauvegarde"],
   ["resources/serveur/supabase/bootstrap/010_app_role.sql", "le bootstrap du rôle applicatif"],
   ["resources/pgsql/bin/initdb.exe", "les binaires PostgreSQL empaquetés"],
+  ["resources/pgsql/lib/vector.dll", "l'extension pgvector (M07, RAG)"],
+  ["resources/pgsql/share/extension/vector.control", "le contrôle d'extension pgvector"],
+  ["resources/pgsql/share/extension/vector--0.8.6.sql", "le script de base pgvector 0.8.6"],
 ];
 
 const manquants = REQUIS.filter(([f]) => !inventaire.includes(f));
@@ -207,6 +216,65 @@ for (const relatif of surDisque) {
 }
 if (porteurs.length > 0) {
   refuser("une URL PostgreSQL avec identifiants est empaquetée :", porteurs.slice(0, 10));
+}
+
+// ── 4. Contrat pgvector (M07) — fail-closed ─────────────────────────────────
+//
+// `CREATE EXTENSION vector` (migration 092) exige dans le paquet : la DLL
+// prouvée contre EDB 16.15, le `.control` dont la version par défaut est
+// vérifiée, le script de base correspondant, et l'INTÉGRALITÉ des scripts
+// de montée en version présents dans l'arbre source (`nmake install` les
+// copie tous ; electron-builder ne doit en perdre aucun en route).
+//
+// La DLL est compilée depuis la source officielle, pas téléchargée : son
+// SHA-256 est donc épinglé. Toute reconstruction volontaire met à jour
+// cette constante — et prouve le nouvel artefact avant (mission M07).
+// Source : tag v0.8.6, commit 8ee86c96f0fd72390f890aa8a336fda6d3ab4c6c.
+const VECTOR_DLL_SHA256_ATTENDU =
+  "57984F7662DFC1AF443884D4F9D79ED4D50D16C8143C817B1E96BCB6DCCA43EB";
+
+const cheminDllVector = path.join(CIBLE, "resources", "pgsql", "lib", "vector.dll");
+if (existsSync(cheminDllVector)) {
+  const reel = createHash("sha256").update(readFileSync(cheminDllVector)).digest("hex").toUpperCase();
+  if (reel !== VECTOR_DLL_SHA256_ATTENDU) {
+    refuser("vector.dll ne correspond pas à l'artefact prouvé (M07) :", [
+      `attendu ${VECTOR_DLL_SHA256_ATTENDU}`,
+      `lu      ${reel}`,
+      "→ reconstruire depuis la source officielle v0.8.6 et prouver avant d'empaqueter.",
+    ]);
+  }
+}
+
+const cheminControlVector = path.join(CIBLE, "resources", "pgsql", "share", "extension", "vector.control");
+if (existsSync(cheminControlVector)) {
+  const control = readFileSync(cheminControlVector).toString("latin1");
+  const version = /^\s*default_version\s*=\s*'([^']+)'/m.exec(control)?.[1];
+  if (version === undefined) {
+    refuser("vector.control illisible :", ["default_version introuvable"]);
+  } else if (!existsSync(path.join(CIBLE, "resources", "pgsql", "share", "extension", `vector--${version}.sql`))) {
+    refuser("le script de base pgvector manque pour la version déclarée :", [
+      `vector.control déclare default_version='${version}'`,
+      `resources/pgsql/share/extension/vector--${version}.sql absent`,
+    ]);
+  }
+}
+
+// Parité source → paquet des scripts de montée en version : ce qui a été
+// prouvé dans `resources/pgsql/` du dépôt doit se retrouver dans l'artefact.
+// Référence = l'arbre source (déterministe), jamais un simple compteur.
+const dirExtensionSource = path.join(RACINE, "resources", "pgsql", "share", "extension");
+const dirExtensionPaquet = path.join(CIBLE, "resources", "pgsql", "share", "extension");
+if (!existsSync(dirExtensionSource)) {
+  refuser("l'arbre source pgvector est absent du dépôt :", [dirExtensionSource]);
+} else {
+  const attendus = readdirSync(dirExtensionSource).filter((f) => f.startsWith("vector--") && f.endsWith(".sql"));
+  if (attendus.length === 0) {
+    refuser("aucun script vector--*.sql dans l'arbre source :", [dirExtensionSource]);
+  }
+  const perdus = attendus.filter((f) => !inventaire.includes(`resources/pgsql/share/extension/${f}`));
+  if (perdus.length > 0) {
+    refuser("des scripts de montée en version pgvector ont été perdus à l'empaquetage :", perdus.slice(0, 10));
+  }
 }
 
 if (echecs === 0) console.log("✅ paquet conforme à la liste blanche du plan (§I)");

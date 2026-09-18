@@ -20,6 +20,7 @@ import {
   type EntreeFormulairePremierLancement,
 } from "@/components/FormulairePremierLancement";
 import { MarqueMindCare, MotifFeuilles } from "@/components/ui/Icones";
+import { LienBouton } from "@/components/ui/Bouton";
 import { fr } from "@/i18n/fr";
 import { getInstallationStatus, provisionOwnerAccount } from "@/services/onboarding";
 
@@ -111,13 +112,9 @@ export default function PagePremiereConfiguration(): React.JSX.Element | null {
               <p role="status" className="m-0 font-ui text-body text-ink-900">
                 {fr.premierLancement.succes}
               </p>
-              <button
-                type="button"
-                onClick={() => router.replace("/connexion")}
-                className="flex min-h-target-lg w-full cursor-pointer items-center justify-center gap-2 rounded-md border-0 bg-action-600 px-5 py-3 font-ui text-body font-semibold text-paper shadow-lift1 transition duration-quick ease-soft hover:bg-action-700 hover:shadow-lift2 active:bg-action-900 active:shadow-lift1"
-              >
+              <LienBouton href="/connexion" rang="principal" taille="large" pleineLargeur>
                 {fr.premierLancement.allerConnexion}
-              </button>
+              </LienBouton>
             </div>
           ) : (
             <FormulairePremierLancement

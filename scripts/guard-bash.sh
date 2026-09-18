@@ -46,7 +46,7 @@ printf '%s' "$cmd" | grep -Eq '[A-Za-z0-9_-]\.(webm|wav|ogg|mp3|m4a)([^A-Za-z0-9
 
 # 6 — sortie réseau depuis le shell
 printf '%s' "$cmd" | grep -Eq '(curl|wget|Invoke-WebRequest)[[:space:]]+[^|;&]*https?://' \
-  && block "appel réseau depuis le shell. Une seule porte de sortie : _shared/external-call.ts."
+  && block "appel réseau depuis le shell. Une seule porte de sortie : src/server/egress/external-call.ts."
 
 # 7 — docs/archive : illisible et inaccessible, quel que soit le chemin d'accès.
 # La deny-list de settings.json ne couvre que les outils qu'elle nomme ; ici on ferme

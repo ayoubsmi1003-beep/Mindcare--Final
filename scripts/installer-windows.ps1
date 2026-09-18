@@ -52,7 +52,10 @@ function Rouge($t)     { Write-Host "  STOP $t" -ForegroundColor Red }
 $psql = Join-Path $PgBin "psql.exe"
 if (-not (Test-Path $psql)) {
   Rouge "psql introuvable dans $PgBin."
-  Write-Host "  Installer PostgreSQL 15 ou plus recent, puis relancer avec -PgBin."
+  Write-Host "  Installer PostgreSQL 16 ou plus recent, puis relancer avec -PgBin."
+  Write-Host "  (16, pas 15 : les migrations 010/020 utilisent GRANT ... WITH INHERIT,"
+  Write-Host "   une clause introduite par PostgreSQL 16 - verifie contre une chaine"
+  Write-Host "   de migration complete, 000 a 083, le 2026-09-01.)"
   exit 1
 }
 

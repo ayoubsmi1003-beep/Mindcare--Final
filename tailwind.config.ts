@@ -13,6 +13,10 @@ import type { Config } from "tailwindcss";
 //      borderWidth) — un jeu minimal fermé, faute de token dédié.
 const config: Config = {
   content: ["./src/**/*.{ts,tsx}"],
+  // VERT SAUGE — `dark` s'active par classe `.dark` (tokens.css porte la pâte
+  // sombre exacte). Pas de bascule automatique : le poste du cabinet reste en
+  // clair par défaut, la bascule viendra en phase 2 (libellés gelés fr.ts).
+  darkMode: "class",
   // `darkMode` est délibérément ABSENT, et les couleurs `night.*` ne sont pas
   // exposées : 04-DESIGN-SYSTEM ne définit que 4 jetons nocturnes, sans rampe
   // d'encre ni contrastes vérifiés. Les laisser disponibles rendrait
@@ -31,7 +35,10 @@ const config: Config = {
         100: "var(--ink-100)",
       },
       paper: "var(--paper)",
-      card: "var(--card)",
+      card: {
+        DEFAULT: "var(--card)",
+        foreground: "var(--card-foreground)",
+      },
       sunken: "var(--sunken)",
       rule: "var(--rule)",
       // ADR-022 — la rampe de marque a remplacé `teal.*`, dont le nom n'existe
@@ -141,6 +148,52 @@ const config: Config = {
         voile: "var(--chrome-voile)",
         "voile-faible": "var(--chrome-voile-faible)",
       },
+      // ── CANONIQUE 21st.dev — exposition directe ────────────────────────
+      background: "var(--background)",
+      foreground: "var(--foreground)",
+      primary: {
+        DEFAULT: "var(--primary)",
+        foreground: "var(--primary-foreground)",
+      },
+      secondary: {
+        DEFAULT: "var(--secondary)",
+        foreground: "var(--secondary-foreground)",
+      },
+      muted: {
+        DEFAULT: "var(--muted)",
+        foreground: "var(--muted-foreground)",
+      },
+      accent: {
+        DEFAULT: "var(--accent)",
+        foreground: "var(--accent-foreground)",
+      },
+      destructive: {
+        DEFAULT: "var(--destructive)",
+        foreground: "var(--destructive-foreground)",
+      },
+      border: "var(--border)",
+      input: "var(--input)",
+      ring: "var(--ring)",
+      popover: {
+        DEFAULT: "var(--popover)",
+        foreground: "var(--popover-foreground)",
+      },
+      chart: {
+        1: "var(--chart-1)",
+        2: "var(--chart-2)",
+        3: "var(--chart-3)",
+        4: "var(--chart-4)",
+        5: "var(--chart-5)",
+      },
+      sidebar: {
+        DEFAULT: "var(--sidebar)",
+        foreground: "var(--sidebar-foreground)",
+        border: "var(--sidebar-border)",
+        accent: "var(--sidebar-accent)",
+        primary: "var(--sidebar-primary)",
+        "primary-foreground": "var(--sidebar-primary-foreground)",
+        ring: "var(--sidebar-ring)",
+      },
       // Le sol du contenu, neutre-froid — remplace le lavage teinté de marque.
       canevas: "var(--canevas)",
       "tete-tableau": "var(--tete-tableau-bg)",
@@ -159,6 +212,78 @@ const config: Config = {
         rule: "var(--night-rule)",
         ink: "var(--night-ink)",
         "ink-soft": "var(--night-ink-soft)",
+      },
+
+      // ── V8 « AURORA » — LES SIX FAMILLES ──────────────────────────────
+      //
+      // V7 n'exposait DÉLIBÉRÉMENT pas `violet.*` ni `azure.*` : la couche de
+      // rôle (`ai.*`, `info.*`) devait rester le seul chemin d'accès, faute de
+      // quoi n'importe quelle surface pouvait s'écrire `bg-violet-500` et la
+      // contrainte ne contraignait plus rien. Cette raison reste valable POUR
+      // LES SURFACES, et elle est maintenue : `ai.*` et `info.*` demeurent la
+      // porte des surfaces d'assistante et d'information.
+      //
+      // Ce qu'elle ne couvrait pas, c'est le GRAPHIQUE. Un anneau de
+      // composition à sept parts a besoin de sept teintes distinguables, et
+      // aucune couche de rôle ne peut les nommer — « la troisième part » n'est
+      // pas un rôle. Ces six familles sont donc la palette de SÉRIE et de
+      // TUILE : elles nomment une teinte, pas un sens. Le contrôle qui remplace
+      // celui du rôle est la relecture d'usage — une famille employée sur une
+      // surface d'action au lieu de `action.*` est un défaut visible.
+      //
+      // ⚠️ AUCUN TON 400 OU PLUS CLAIR NE PORTE DE TEXTE SUR BLANC. Ce sont
+      // des remplissages, des traits et des fonds de pastille. Le ton porteur
+      // de texte de chaque famille est son 700.
+      emeraude: {
+        700: "var(--emeraude-700)",
+        600: "var(--emeraude-600)",
+        500: "var(--emeraude-500)",
+        400: "var(--emeraude-400)",
+        200: "var(--emeraude-200)",
+        100: "var(--emeraude-100)",
+        50: "var(--emeraude-050)",
+      },
+      aqua: {
+        700: "var(--aqua-700)",
+        600: "var(--aqua-600)",
+        500: "var(--aqua-500)",
+        400: "var(--aqua-400)",
+        200: "var(--aqua-200)",
+        100: "var(--aqua-100)",
+        50: "var(--aqua-050)",
+      },
+      azure: {
+        700: "var(--azure-700)",
+        600: "var(--azure-600)",
+        400: "var(--azure-400)",
+        200: "var(--azure-200)",
+        100: "var(--azure-100)",
+        50: "var(--azure-050)",
+      },
+      violet: {
+        700: "var(--violet-700)",
+        600: "var(--violet-600)",
+        500: "var(--violet-500)",
+        400: "var(--violet-400)",
+        200: "var(--violet-200)",
+        100: "var(--violet-100)",
+        50: "var(--violet-050)",
+      },
+      ambre: {
+        700: "var(--ambre-700)",
+        600: "var(--ambre-600)",
+        400: "var(--ambre-400)",
+        200: "var(--ambre-200)",
+        100: "var(--ambre-100)",
+        50: "var(--ambre-050)",
+      },
+      corail: {
+        700: "var(--corail-700)",
+        600: "var(--corail-600)",
+        400: "var(--corail-400)",
+        200: "var(--corail-200)",
+        100: "var(--corail-100)",
+        50: "var(--corail-050)",
       },
     },
     spacing: {
@@ -195,6 +320,13 @@ const config: Config = {
       40: "var(--s-40)",
       64: "var(--s-64)",
       72: "var(--s-72)",
+      // V8 — les hauteurs d'aire de tracé. Sans ces jetons, `h-44` sur un
+      // graphique ne produit AUCUNE règle et l'aire s'effondre à zéro pixel.
+      28: "var(--s-28)",
+      36: "var(--s-36)",
+      44: "var(--s-44)",
+      48: "var(--s-48)",
+      56: "var(--s-56)",
     },
     borderRadius: {
       // "none" est la valeur nulle universelle : pas de token dédié dans §3
@@ -208,10 +340,23 @@ const config: Config = {
       // `rounded-2xl` était mort dans 12 endroits, dont l'en-tête héros de
       // Surfaces.tsx lui-même — il rendait donc un angle droit.
       "2xl": "var(--r-2xl)",
+      // V8 — le rayon des surfaces VEDETTES (bandeau d'accueil, panneau de
+      // l'assistante, en-tête d'identité). Une carte ordinaire ne le prend
+      // jamais : c'est le rayon qui dit « ceci n'est pas une carte de plus ».
+      "3xl": "var(--r-3xl)",
       full: "var(--r-full)",
     },
     fontFamily: {
       ui: ["var(--font-ui)"],
+      // V8 — LA VOIX ÉDITORIALE. Fraunces était émise depuis V3 et n'avait
+      // AUCUNE classe pour la consommer : `--font-display` existait, aucun
+      // écran ne pouvait l'écrire. Elle porte désormais les trois moments où
+      // le produit s'adresse à quelqu'un plutôt que d'afficher une donnée —
+      // la salutation du tableau de bord, l'écran de connexion, les états
+      // vides. Jamais une valeur, jamais un libellé d'interface : une
+      // didone à fort contraste est illisible à 12 px, et l'employer comme
+      // fonte d'interface détruirait le signal qu'elle porte.
+      editorial: ["var(--font-display)"],
       doc: ["var(--font-doc)"],
       ar: ["var(--font-ar)"],
       num: ["var(--font-num)"],
@@ -255,10 +400,26 @@ const config: Config = {
         "0%, 100%": { opacity: "1" },
         "50%": { opacity: ".5" },
       },
+      // Mobilier seul — jamais une donnée clinique (§4 règle 5).
+      "fondu-monte": {
+        "0%": { opacity: "0", transform: "translateY(10px)" },
+        "100%": { opacity: "1", transform: "translateY(0)" },
+      },
+      "flottement-doux": {
+        "0%, 100%": { transform: "translateY(0)" },
+        "50%": { transform: "translateY(-5px)" },
+      },
+      "halo-pulse": {
+        "0%, 100%": { opacity: ".55", transform: "scale(1)" },
+        "50%": { opacity: ".9", transform: "scale(1.06)" },
+      },
     },
     animation: {
       none: "none",
       respire: "respire var(--d-scene) var(--e-soft) infinite",
+      "fondu-monte": "fondu-monte var(--d-normal) var(--e-out) both",
+      "flottement-doux": "flottement-doux 4s var(--e-soft) infinite",
+      "halo-pulse": "halo-pulse 2.4s var(--e-soft) infinite",
     },
     // Échelle typographique §3 — taille/interligne/interlettrage par rôle de
     // texte, jamais par valeur libre (`text-xl`, `text-[15px]` fermés).
@@ -325,6 +486,18 @@ const config: Config = {
           letterSpacing: "var(--text-metric-tracking)",
         },
       ],
+      // V8 — LA MÉTRIQUE DE TUILE. `metric` (44px) est la valeur dominante
+      // d'un écran ; `chiffre` (28px) est celle qui se lit à quatre de front
+      // dans une rangée de tuiles. Sans ce second palier, une rangée de
+      // tuiles n'avait le choix qu'entre écraser sa valeur en `title` ou
+      // laisser quatre `metric` se disputer la même page.
+      chiffre: [
+        "var(--text-chiffre-size)",
+        {
+          lineHeight: "var(--text-chiffre-leading)",
+          letterSpacing: "var(--text-chiffre-tracking)",
+        },
+      ],
       num: [
         "var(--text-num-size)",
         {
@@ -345,6 +518,7 @@ const config: Config = {
     // variables que ci-dessus, pas de nouvelle échelle parallèle.
     lineHeight: {
       metric: "var(--text-metric-leading)",
+      chiffre: "var(--text-chiffre-leading)",
       display: "var(--text-display-leading)",
       title: "var(--text-title-leading)",
       heading: "var(--text-heading-leading)",
@@ -357,6 +531,7 @@ const config: Config = {
     },
     letterSpacing: {
       metric: "var(--text-metric-tracking)",
+      chiffre: "var(--text-chiffre-tracking)",
       display: "var(--text-display-tracking)",
       title: "var(--text-title-tracking)",
       heading: "var(--text-heading-tracking)",
@@ -379,6 +554,8 @@ const config: Config = {
       // titre qu'un dégradé : elle module le contraste.
       "glow-brand": "var(--glow-brand)",
       "glow-ai": "var(--glow-ai)",
+      // V10 — glow rail restrained : halo subtil item actif, jamais flashy.
+      "glow-rail": "var(--glow-rail-subtil)",
       // v9 — l'entrée active du rail : la lueur de marque ET le filet interne,
       // composés en un seul jeton (`--glow-nav`) parce que deux utilitaires
       // `shadow-*` ne s'additionnent pas.
@@ -386,6 +563,23 @@ const config: Config = {
       // Le filet interne haut d'une surface élevée sur fond coloré : la lumière
       // rasante qui donne l'épaisseur sans ajouter d'ombre.
       sheen: "var(--layer-sheen)",
+
+      // ── V8 — LA PROFONDEUR TEINTÉE ─────────────────────────────────
+      // `lift1/2/3` restent pour ne rien casser, mais les quatre ombres V8
+      // les remplacent partout où une surface est redessinée : elles sont
+      // TEINTÉES vert-bleu profond, là où `lift*` est un gris neutre. Une
+      // ombre grise posée sur un sol coloré se lit comme de la saleté, pas
+      // comme de la lumière — c'est visible dès qu'on met les deux côte à
+      // côte, et c'est l'un des défauts qui faisaient paraître V7 plat.
+      douce: "var(--ombre-douce)",
+      carte: "var(--ombre-carte)",
+      elevee: "var(--ombre-elevee)",
+      // Sous une surface en DÉGRADÉ uniquement : une ombre de cette force
+      // sous une carte blanche la ferait flotter au lieu de la poser.
+      vedette: "var(--ombre-vedette)",
+      tuile: "var(--ombre-tuile)",
+      // Le filet interne clair — l'épaisseur d'une surface sombre, sans ombre.
+      filet: "var(--filet-clair)",
     },
     // LES TROIS DÉGRADÉS D'ADR-022, ET LES FAMILLES D'AGRÉGAT D'ADR-025.
     //
@@ -413,6 +607,39 @@ const config: Config = {
       "grad-tile-positive": "var(--grad-tile-positive)",
       "grad-tile-coral": "var(--grad-tile-coral)",
       "grad-avatar": "var(--grad-avatar)",
+
+      // ── V8 « AURORA » — LES MATÉRIAUX ──────────────────────────────
+      //
+      // DEUX FAMILLES, ET LA DISTINCTION EST CE QUI EMPÊCHE LE DÉGRADÉ DE
+      // REDEVENIR DE LA DÉCORATION.
+      //
+      // `tuile-*` : CLAIRES, trois arrêts pastel avec dérive de teinte,
+      // encre `ink-900` par-dessus. Surface d'un AGRÉGAT — un compteur, un
+      // total, une part. Une tuile compte, elle ne décrit personne.
+      //
+      // `vedette-*` : PROFONDES, encre blanche, réservées au MOBILIER —
+      // bandeau d'accueil, panneau de l'assistante, en-tête d'identité.
+      // Jamais derrière une dose, un score, un montant en tableau ou une
+      // note clinique (§4.2, inchangé depuis ADR-022).
+      "tuile-menthe": "var(--grad-tuile-menthe)",
+      "tuile-azur": "var(--grad-tuile-azur)",
+      "tuile-lavande": "var(--grad-tuile-lavande)",
+      "tuile-ambre": "var(--grad-tuile-ambre)",
+      "tuile-corail": "var(--grad-tuile-corail)",
+      "tuile-neutre": "var(--grad-tuile-neutre)",
+      "vedette-nuit": "var(--grad-vedette-nuit)",
+      "vedette-ia": "var(--grad-vedette-ia)",
+      "vedette-vert": "var(--grad-vedette-vert)",
+      "vedette-marque": "var(--grad-vedette-marque)",
+      "vedette-aube": "var(--grad-vedette-aube)",
+      // Le reflet se pose PAR-DESSUS une vedette, dans une couche à part :
+      // c'est une source de lumière, donc une épaisseur. Décor pur.
+      reflet: "var(--grad-reflet)",
+      rail: "var(--grad-rail)",
+      "rail-halo": "var(--grad-rail-halo)",
+      "rail-actif": "var(--grad-rail-actif)",
+      "orbe-aurore": "var(--grad-orbe-aurore)",
+      "voile-aurore": "var(--voile-aurore)",
     },
     // Le verre décore le mobilier, jamais la donnée (§4 règle 2). Ses valeurs
     // viennent de --glass-*, définies en T1.2 (04-DESIGN-SYSTEM §4.1).
@@ -552,6 +779,11 @@ const config: Config = {
       "espace-jour": "minmax(0, 1.6fr) minmax(0, 1fr)",
       "espace-document": "minmax(0, 20rem) minmax(0, 1fr) minmax(0, 26rem)",
       fiche: "repeat(auto-fit, minmax(var(--card-column-min), 1fr))",
+      // Cockpit consultation — la bande d'état clinique : autant de tuiles
+      // que la largeur du centre en accueille, jamais moins de 150 px par
+      // tuile, jamais de débordement. `--tuile-clinique-min` est un jeton
+      // déclaré dans tokens.css, pas une valeur libre.
+      "tuiles-cliniques": "repeat(auto-fit, minmax(var(--tuile-clinique-min), 1fr))",
       // La coquille : navigation fixe + contenu fluide. Sous la rupture
       // `tablet`, le rail se REPLIE en icônes (`app-compact`) au lieu de passer
       // au-dessus du contenu — §3 enfin tenu, cf. `--grid-nav-compact`.
@@ -579,6 +811,12 @@ const config: Config = {
       // Nommée ici plutôt qu'en syntaxe arbitraire (I10), même motif que
       // `finance`. `minmax(0,…)` autorise chaque colonne à se comprimer.
       cockpit: "minmax(0, 2fr) minmax(0, 1fr)",
+      // Consultation — 3 volets : patient (compact) / travail (héros) / contexte.
+      // `minmax(0,…)` autorise chaque volet à se comprimer sans pousser la page
+      // en débordement horizontal — même motif que `finance`/`reception`.
+      "cockpit-consultation": "minmax(0, 15rem) minmax(0, 1fr) minmax(0, 21rem)",
+      "cockpit-consultation-ferme": "minmax(0, 15rem) minmax(0, 1fr)",
+      "cockpit-consultation-etroit": "minmax(0, 1fr)",
       reception: "minmax(0, 1.35fr) minmax(0, 0.85fr) minmax(0, 0.8fr)",
       // Pulse réception : 4 tuiles carrées
       receptionPulse: "repeat(4, minmax(0, 1fr))",
@@ -586,6 +824,10 @@ const config: Config = {
       // Bento reception
       receptionMiddle: "minmax(0, 1.85fr) minmax(0, 1fr)",
       receptionBottom: "minmax(0, 1fr) minmax(0, 1.45fr) minmax(0, 1fr)",
+      // V8.1 — la rangée A du tableau de bord : fil de la journée (large) et
+      // panneau Alexa. Nommée ici plutôt qu'en syntaxe arbitraire (I10), même
+      // motif que `finance`/`reception`.
+      tableauDeBordA: "minmax(0, 2fr) minmax(0, 1fr)",
     },
     // Largeurs de grille §3 — source unique tokens.css, aucune valeur ici.
     maxWidth: {
@@ -628,6 +870,8 @@ const config: Config = {
         topbar: "var(--topbar-hauteur)",
         rang: "var(--rang-hauteur)",
         "rang-dense": "var(--rang-hauteur-dense)",
+        // Le cercle Flow : 220% du bouton, voir `--flow-cercle` (tokens.css).
+        cercle: "var(--flow-cercle)",
       },
       minHeight: {
         topbar: "var(--topbar-hauteur)",
@@ -636,6 +880,8 @@ const config: Config = {
       width: {
         rail: "var(--rail-largeur)",
         "rail-compact": "var(--rail-compact)",
+        // Le cercle Flow : 220% du bouton, voir `--flow-cercle` (tokens.css).
+        cercle: "var(--flow-cercle)",
       },
       maxWidth: {
         rail: "var(--rail-largeur)",

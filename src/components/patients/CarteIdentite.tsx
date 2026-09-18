@@ -19,7 +19,7 @@ import { fr } from "@/i18n/fr";
 import type { PatientWorkspace } from "@/services/patients";
 
 import { BlocAdresse } from "./BlocAdresse";
-import { dateCivile, sexeLisible } from "./format";
+import { dateCivile, sexeLisible, situationLisible } from "./format";
 
 /**
  * Le contact d'urgence, en une phrase plutôt qu'en trois champs : « Nom
@@ -73,6 +73,13 @@ export function CarteIdentite({
           }
         />
         <Champ libelle={fr.patients.sexe} valeur={sexeLisible(identite.sex)} />
+        {/* 089. Affichée à côté du sexe parce que c'est de là que sort la
+            civilité imprimée sur les certificats — les lire séparément ferait
+            chercher l'explication d'un « Mlle » ailleurs dans le dossier. */}
+        <Champ
+          libelle={fr.patients.situationFamiliale}
+          valeur={situationLisible(identite.maritalStatus)}
+        />
         <Champ libelle={fr.patients.telephone} valeur={contact.phone} />
         <Champ libelle={fr.patients.telephoneSecondaire} valeur={contact.phoneAlt} />
       </GrilleChamps>

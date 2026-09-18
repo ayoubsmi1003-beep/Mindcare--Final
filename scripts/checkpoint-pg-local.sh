@@ -11,19 +11,32 @@
 #
 # VERT / ROUGE / BLOQUÉ (code 2), comme les autres checkpoints du dépôt.
 #
-# ═══ POURQUOI POSTGRESQL 17 ET NON 15 ════════════════════════════════════════
+# ═══ POURQUOI PG16 + PGVECTOR, ET NON 15 OU 17 VANILLA ════════════════════════
 # La migration 020 écrit `GRANT authenticated TO app_gatekeeper WITH INHERIT
 # TRUE`. Cette clause est une SYNTAXE POSTGRESQL 16+ ; sur 15 elle est une
 # erreur de syntaxe, et la chaîne s'arrête à la migration 020. Mesuré, pas
 # supposé. Le raisonnement même de 020 et 021 porte sur la sémantique
-# d'héritage figée au GRANT, introduite en 16. La cible est donc 17, la version
-# du projet d'origine — descendre de version n'est pas une option de confort.
+# d'héritage figée au GRANT, introduite en 16.
+# La migration 092 exige de plus l'extension `vector` (pgvector 0.8.6,
+# HNSW cosine m=16 ef_construction=64) : une image vanilla, 16 ou 17, échoue
+# sur `CREATE EXTENSION vector`. La cible est donc pgvector/pgvector:0.8.6-pg16
+# (PostgreSQL 16.15 + pgvector 0.8.6) — le même couple majeur+extension que le
+# runtime canonique EDB 16.15 du paquet et que le conteneur de développement
+# `mc-p3` depuis la réconciliation M07.
 
 set -uo pipefail
 cd "$(dirname "$0")/.." || exit 1
 
+# Sous Git Bash (MSYS), un argument qui commence par `/` est converti en
+# chemin Windows AVANT d'atteindre docker : `docker exec … -f /tmp/x.sql`
+# devenait `-f C:/Users/…/Temp/x.sql`, introuvable DANS le conteneur (échec
+# mesuré, pas supposé). On neutralise la conversion pour tout le script :
+# les redirections `>/tmp/…` restent gérées par bash lui-même et continuent
+# d'atteindre le vrai /tmp de l'hôte.
+export MSYS_NO_PATHCONV=1
+
 CONTENEUR="mindcare-checkpoint-pg"
-PGIMAGE="postgres:17"
+PGIMAGE="pgvector/pgvector:0.8.6-pg16"
 PGPASS="checkpoint-jetable"
 
 fail=0
@@ -63,7 +76,10 @@ done
 
 # `datlocprovider` est de type "char", pas text : sans le cast explicite, `||`
 # ne sait pas choisir d'opérateur et la requête échoue au lieu de mesurer.
-v=$(q "SELECT datlocprovider::text||' '||coalesce(datlocale,'?') FROM pg_database WHERE datname='mindcare';" | tail -1)
+# `datlocale` n'existe qu'en PostgreSQL 17+ : sur PG16 on lit `daticulocale`
+# (ICU) avec repli sur `datcollate` — les deux rendent « i fr-DZ » sur un
+# cluster initialisé `--locale-provider=icu --icu-locale=fr-DZ`.
+v=$(q "SELECT datlocprovider::text||' '||coalesce(daticulocale, datcollate, '?') FROM pg_database WHERE datname='mindcare';" | tail -1)
 case "$v" in
   "i fr-DZ") green "cluster en ICU fr-DZ (classement des noms accentués)" ;;
   *)         red   "cluster en ICU fr-DZ" "lu=$v" ;;
@@ -184,6 +200,30 @@ if [ -n "$pid" ] && [ -n "${av:-}" ]; then
   [ "${ap:-0}" -gt "${av:-0}" ] 2>/dev/null && green "la porte patient journalise la lecture (${av}→${ap})" \
                                             || red "la porte patient journalise la lecture" "avant=$av après=$ap"
 fi
+
+# ─── 7 · le contrat vectoriel M07 (migration 092) ────────────────────────────
+# La chaîne vient de s'appliquer SANS MODIFICATION, donc 092 est passée sur
+# ce runtime. On mesure ici ce qu'elle a posé : extension, colonne 1024d,
+# index HNSW aux paramètres de la migration, portes de lecture, RLS.
+v=$(q "SELECT extversion FROM pg_extension WHERE extname='vector';" | tail -1)
+[ "$v" = "0.8.6" ] && green "extension vector 0.8.6" \
+                   || red "extension vector 0.8.6" "lu=$v"
+
+v=$(q "SELECT reloptions::text FROM pg_class WHERE relname='knowledge_chunks_embedding_hnsw';" | tail -1)
+[ "$v" = "{m=16,ef_construction=64}" ] && green "HNSW m=16 ef_construction=64 (vector_cosine_ops)" \
+                                       || red "HNSW m=16 ef_construction=64" "lu=$v"
+
+v=$(q "SELECT format_type(atttypid, atttypmod) FROM pg_attribute WHERE attrelid='app.knowledge_chunks'::regclass AND attname='embedding';" | tail -1)
+[ "$v" = "vector(1024)" ] && green "colonne embedding vector(1024)" \
+                           || red "colonne embedding vector(1024)" "lu=$v"
+
+v=$(num "$(q "SELECT count(*) FROM pg_proc WHERE proname IN ('search_knowledge_lexical','search_knowledge_vector');")")
+[ "$v" = "2" ] && green "portes search_knowledge_lexical + search_knowledge_vector" \
+               || red "portes search_knowledge_lexical/vector" "trouvées=$v"
+
+v=$(num "$(q "SELECT count(*) FROM pg_class c JOIN pg_namespace n ON n.oid=c.relnamespace WHERE n.nspname='app' AND c.relname IN ('knowledge_sources','knowledge_chunks') AND c.relrowsecurity;")")
+[ "$v" = "2" ] && green "RLS sur knowledge_sources + knowledge_chunks" \
+               || red "RLS sur knowledge_sources/chunks" "trouvées=$v"
 
 echo
 if [ "$fail" = "0" ]; then echo "VERDICT : VERT — $n contrôles, le schéma tient sur PostgreSQL nu."; exit 0

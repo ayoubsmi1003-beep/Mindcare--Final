@@ -63,7 +63,7 @@ SELECT 'B1 · numéro sans trou P-990x', :'pid' IS NOT NULL;
 DO $$
 BEGIN
   BEGIN
-    PERFORM app.create_patient('{"first_name":"Autre","last_name":"V3CREATION","phone":"05 00 11 22 33","birth_date":"1990-03-04","practitioner_id":"' || (SELECT ident_prat::text FROM _ctx) || '"}');
+    PERFORM app.create_patient('{"first_name":"Nadir","last_name":"Ghanem","phone":"05 00 11 22 33","birth_date":"1990-03-04","practitioner_id":"' || (SELECT ident_prat::text FROM _ctx) || '"}');
     INSERT INTO _v3_resultats VALUES ('B2 · doublon dur refusé', false);
   EXCEPTION WHEN unique_violation THEN
     INSERT INTO _v3_resultats VALUES ('B2 · doublon dur refusé', true);

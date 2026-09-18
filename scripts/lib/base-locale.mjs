@@ -5,7 +5,8 @@
  * ═══ POURQUOI CE MODULE EXISTE ══════════════════════════════════════════════
  *
  * `MINDCARE_DATABASE_URL` pointe sur `127.0.0.1:55441` — le conteneur Docker
- * `mc-p3` (postgres:17, ICU fr-DZ, reconstruit en phase 3-6 de pg-local).
+ * `mc-p3` (pgvector/pgvector:0.8.6-pg16 : PostgreSQL 16.15 + pgvector 0.8.6,
+ * ICU fr-DZ, reconstruit en phase 3-6 de pg-local puis réconcilié PG16+M07).
  * Ce conteneur vit dans le Docker Desktop du poste. Trois états réels, mesurés
  * au fil des sessions :
  *
@@ -65,7 +66,7 @@ import { createConnection } from "node:net";
  * à deviner.
  */
 export const CONTENEUR_DEV = "mc-p3";
-export const IMAGE_DEV = "postgres:17";
+export const IMAGE_DEV = "pgvector/pgvector:0.8.6-pg16";
 export const PORT_HOTE = 55441;
 export const HOTE = "127.0.0.1";
 

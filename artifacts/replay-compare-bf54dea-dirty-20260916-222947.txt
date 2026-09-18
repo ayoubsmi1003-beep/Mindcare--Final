@@ -1,0 +1,10 @@
+M09 REPLAY
+rev=bf54dea-dirty kind=compare date=2026-09-16T21:29:47.366Z duree=0s
+goldens_hash=223f48d8c61537dd… schema=m08-schema-v1 prompts=e074ac56f36d285f…
+FAIL    comparaison-runs pass=0 fail=80 notrun=0 :: suite:eval-reveil-pipeline, suite:live-reexecution, suite:model-comparison-live, suite:typecheck, suite:typecheck-tests
+========================
+PASS: 0
+FAIL: 1
+NOT RUN: 0
+CAS: 108 (non-mappes: 108)
+VERDICT: FAIL

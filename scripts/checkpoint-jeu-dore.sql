@@ -50,8 +50,15 @@ BEGIN
   FOR n IN 1..20 LOOP
     -- `create_patient` rend `SETOF app.patients` : on prend la ligne, donc `.id`.
     SELECT (app.create_patient(json_build_object(
-      'first_name', 'Prenom' || n,
-      'last_name',  'JeuDore' || n,
+      -- ⚠️ « BELLOUMI » EST ABSENT DU VIVIER DE `population-synthetique.json`,
+      -- ET CE N'EST PAS UN HASARD. Ce patronyme sert aussi de JETON DE
+      -- RECHERCHE plus bas (`search_patients('Belloumi', …)` doit rendre
+      -- exactement 20). Un nom présent dans la population persistante y
+      -- ajouterait ses propres dossiers et ferait rougir un compte qui n'a rien
+      -- à voir avec ce que le checkpoint mesure. Si ce nom rejoint un jour le
+      -- vivier, c'est ce fichier qu'il faut changer, pas le compte attendu.
+      'first_name', 'Amine',
+      'last_name',  'Belloumi' || n,
       -- Numéro valide au format attendu par `patients_phone_format`.
       'phone',      '05' || lpad(n::text, 8, '0'),
       'sex',        CASE WHEN n % 2 = 0 THEN 'F' ELSE 'M' END,
@@ -182,9 +189,9 @@ UNION ALL
 -- l'avantage de mesurer ce que l'application voit réellement.
 SELECT 'numeros de dossier distincts (par la porte)',
        (SELECT count(DISTINCT s.record_number)::text
-          FROM app.search_patients('JeuDore', 100, 0) s), '20',
+          FROM app.search_patients('Belloumi', 100, 0) s), '20',
        CASE WHEN (SELECT count(DISTINCT s.record_number)
-                    FROM app.search_patients('JeuDore', 100, 0) s) = 20
+                    FROM app.search_patients('Belloumi', 100, 0) s) = 20
             THEN 'VERT' ELSE 'ROUGE' END
 UNION ALL
 -- Et la preuve qu'ADR-019 tient toujours : la table elle-même reste fermée.
@@ -281,9 +288,9 @@ END $garde$;
 SET LOCAL request.jwt.claim.sub = '00000000-0000-0000-0000-0000000000a2';
 
 SELECT 'patientes du jeu dore visibles par la Dr #2' AS mesure,
-       (SELECT count(*)::text FROM app.search_patients('JeuDore', 100, 0)) AS obtenu,
+       (SELECT count(*)::text FROM app.search_patients('Belloumi', 100, 0)) AS obtenu,
        '0' AS attendu,
-       CASE WHEN (SELECT count(*) FROM app.search_patients('JeuDore', 100, 0)) = 0
+       CASE WHEN (SELECT count(*) FROM app.search_patients('Belloumi', 100, 0)) = 0
             THEN 'VERT' ELSE 'ROUGE' END AS verdict;
 
 -- ---------------------------------------------------------------------------

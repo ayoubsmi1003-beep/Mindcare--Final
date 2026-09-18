@@ -99,6 +99,21 @@ export const HOMONYMES: readonly PatientFictif[] = Array.from({ length: 7 }, (_,
   fictif(`00e${String(i + 1).padStart(3, "0")}`, "Mohammed", "Sadli", `D-4${String(i + 1).padStart(2, "0")}`),
 );
 
+/**
+ * M02 — la patiente du test de bascule explicite (« Et pour Nadia, … »),
+ * et du test d'isolement inter-conversations (conversation B).
+ */
+export const NADIA = fictif("00d505", "Nadia", "Belkacem", "D-305");
+
+/**
+ * M02 — le trio d'homonymes « Mohamed » (prénom seul → 3 dossiers →
+ * clarification listée). Distinct des sept « Mohammed Sadli » (double m,
+ * autre orthographe — la sonde sous-chaîne ne les confond pas).
+ */
+export const MOHAMED_A = fictif("00d606", "Mohamed", "Benali", "D-306");
+export const MOHAMED_B = fictif("00d607", "Mohamed", "Cherif", "D-307");
+export const MOHAMED_C = fictif("00d608", "Mohamed", "Amine", "D-308");
+
 /** Une praticienne fictive, pour les tests qui en ont besoin. */
 export const PRATICIENNE = {
   id: "00000000-0000-4000-8000-0000000000f1",

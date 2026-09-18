@@ -48,7 +48,7 @@ correctif jugé sur du bruit.
 rouge, au même titre qu'un test RLS qui échoue.
 
 **Les 100 ms de premier contenu ne dépendent d'aucun réseau.** C'est le squelette
-(`05-UX-CONTRACT.md` §2). Ils sont donc toujours atteignables, quelle que soit la base.
+(`design-system/UX_CONTRACT.md` §2). Ils sont donc toujours atteignables, quelle que soit la base.
 
 ---
 

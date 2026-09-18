@@ -11,7 +11,7 @@
  */
 
 export { Bouton, LienBouton, BarreActions } from "./Bouton";
-export type { RangBouton, BoutonProps } from "./Bouton";
+export type { RangBouton, TailleBouton, BoutonProps } from "./Bouton";
 
 export {
   Carte,

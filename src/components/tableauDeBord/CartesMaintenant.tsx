@@ -115,15 +115,25 @@ export function CarteSuivant({
   suivant,
   onDemarrer,
   demarrageEnCours,
+  compacte = false,
 }: {
   readonly suivant: CreneauDuJour | null;
   readonly onDemarrer: (creneau: CreneauDuJour) => void;
   readonly demarrageEnCours: boolean;
+  /**
+   * V8 — RETOUR UTILISATEUR : le tableau de bord débordait de la fenêtre.
+   * `compacte` réduit le rembourrage interne quand la carte partage une
+   * rangée avec deux graphiques plutôt que d'occuper une colonne entière —
+   * c'est le même contenu, juste moins de respiration autour de lui.
+   */
+  readonly compacte?: boolean;
 }): React.JSX.Element {
   if (suivant === null) {
     return (
       <Carte niveau="clinique">
-        <EtatVide icone="agenda" message={fr.tableauDeBord.maintenant.aucunSuivant} />
+        <div className={compacte ? "p-2" : undefined}>
+          <EtatVide icone="agenda" message={fr.tableauDeBord.maintenant.aucunSuivant} />
+        </div>
       </Carte>
     );
   }
@@ -134,7 +144,7 @@ export function CarteSuivant({
 
   return (
     <Carte niveau="clinique">
-      <div className="flex h-full flex-col gap-4 p-6">
+      <div className={["flex h-full flex-col", compacte ? "gap-3 p-4" : "gap-4 p-6"].join(" ")}>
         <div className="flex items-center justify-between gap-3">
           <Intitule>{fr.tableauDeBord.maintenant.suivant}</Intitule>
           {suivant.status === "arrived" ? (

@@ -8,8 +8,8 @@
  * une condition ici. On ne trouvera dans ce fichier aucun `if (role === …)` :
  * ce serait un bug de conception (règle 4 de CLAUDE.md), pas une optimisation.
  *
- * Passe par `db()`, jamais par un client Supabase — I3, ADR-020. Le seul
- * fichier autorisé à importer le SDK Supabase est `src/services/db/supabase.ts`.
+ * Passe par `db()`, jamais par un client direct — I3, ADR-020. Côté serveur,
+  * le seul import `pg` (valeur) autorisé vit dans `src/server/db/pool.ts`.
  */
 
 import { db } from "./db";

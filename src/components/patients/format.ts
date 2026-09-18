@@ -24,7 +24,7 @@
  */
 
 import { fr } from "@/i18n/fr";
-import type { Sexe } from "@/services/patients";
+import type { Sexe, SituationFamiliale } from "@/services/patients";
 
 const FORMAT_HEURE = new Intl.DateTimeFormat("fr-FR", {
   hour: "2-digit",
@@ -99,6 +99,19 @@ export function moisLong(iso: string | null): string | null {
 export function sexeLisible(sexe: Sexe | null): string | null {
   if (sexe === null) return null;
   return sexe === "M" ? fr.patients.sexeM : fr.patients.sexeF;
+}
+
+/**
+ * 089. La situation familiale, en français.
+ *
+ * ⚠️ ELLE N'EST PAS QUE DÉCORATIVE : `app.civilite` en dérive la civilité des
+ * certificats — « Mlle » pour une femme célibataire, « Mme » partout ailleurs,
+ * y compris quand la case est vide. Un `null` ici veut dire « on ne sait pas »,
+ * jamais « célibataire ».
+ */
+export function situationLisible(situation: SituationFamiliale | null): string | null {
+  if (situation === null) return null;
+  return fr.patients.situations[situation];
 }
 
 /**

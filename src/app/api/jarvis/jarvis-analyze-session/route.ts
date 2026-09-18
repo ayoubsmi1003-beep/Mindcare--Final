@@ -12,14 +12,13 @@
  * corps, lui, ne bouge pas.
  */
 import { clientSql } from "@/server/jarvis/client-sql";
-import { env } from "@/server/env";
 
 import { echec, identite } from "../_commun";
 
 import { z } from "zod";
 
 import { assertSafe, BoundaryViolation, pseudonymize, rehydrate } from "@/server/jarvis/pseudonymize";
-import { llm } from "@/server/egress/external-call";
+import { llm, resolveModel } from "@/server/egress/external-call";
 import { empreinteTexte, getPromptHash, PROMPT_VERSION, SYSTEM_PROMPT_V1 } from "./prompt";
 import {
   assemblerContexteSeance,
@@ -194,7 +193,8 @@ export async function POST(req: Request): Promise<Response> {
   // La RLS s'applique exactement comme un appel direct depuis le navigateur
   // (L3, `03-JARVIS-TOOLS.md` §1 : « Jarvis hérite des permissions de la
   // praticienne connectée, n'élève jamais »). `db: { schema: "app" }` reprend
-  // la convention de `src/services/db/supabase.ts`.
+  // la convention historique de l'adaptateur (le fichier `db/supabase.ts`
+  // n'existe plus depuis la migration pg locale, ADR-001).
   // `userId` vient du cookie de session, jamais du corps : les portes voient
   // `auth.uid()` et la RLS arbitre exactement comme pour un appel direct
   // depuis le navigateur.
@@ -340,12 +340,17 @@ export async function POST(req: Request): Promise<Response> {
   ];
 
   // ── Étape 6 : appel, validation, UNE reformulation maximum (§3.4 n°9). ──
+  // `signal: req.signal` — l'annulation remonte jusqu'au fetch fournisseur :
+  // un écran qui timeout, une navigation ou une analyse supersédée coupe
+  // vraiment la génération (et son coût), au lieu de la laisser finir dans
+  // le vide. Une issue interrompue reste une erreur nommée côté client.
   const premierAppel = await llm({
     purpose: "jarvis",
     promptVersion: PROMPT_VERSION,
     promptHash,
     messages,
     sessionToken,
+    signal: req.signal,
   });
 
   if (!premierAppel.ok) {
@@ -355,11 +360,14 @@ export async function POST(req: Request): Promise<Response> {
   let validee = validerEtNettoyer(premierAppel.data);
 
   if (validee === null) {
+    // Même abandon sur la reformulation : un client déjà parti ne doit pas
+    // payer un second appel modèle pour une réponse que personne ne lira.
     const reformulation = await llm({
       purpose: "jarvis",
       promptVersion: PROMPT_VERSION,
       promptHash,
       sessionToken,
+      signal: req.signal,
       messages: [
         ...messages,
         { role: "user" as const, content: "Le format n'était pas respecté. Réponds STRICTEMENT au format JSON demandé, sans aucun texte hors du JSON." },
@@ -424,8 +432,9 @@ export async function POST(req: Request): Promise<Response> {
       p_consultation_id: corps.consultationId,
       p_content: JSON.stringify(resultat),
       p_source_state: JSON.stringify(etatSource),
-      p_model: env().SEEKAI_MODEL ?? env().OPENROUTER_MODEL ??
-        env().LLM_MODEL ?? "google/gemini-2.5-flash",
+      // Le modèle RÉELLEMENT résolu par la passerelle, pas une copie de sa
+      // chaîne de repli : l'audit doit nommer ce qui a servi.
+      p_model: resolveModel(),
       p_prompt_version: PROMPT_VERSION,
       p_prompt_hash: promptHash,
     },
@@ -446,10 +455,22 @@ export async function POST(req: Request): Promise<Response> {
     }
   }
 
+  // SA-03 — la portée longitudinale voyage avec le résultat (des comptes,
+  // jamais du contenu) : l'écran dit explicitement sur quoi l'analyse est
+  // fondée, au lieu de laisser croire à un historique complet. La même
+  // donnée est persistée (`source_state`, 067) et relue par `chargerAnalyse`.
+  const sourcesPortee = { historiqueNotes: nbNotesHistorique };
+
   return new Response(
     JSON.stringify({
       ok: true,
-      data: { ...resultat, analyseId, version, persistee: analyseId !== null },
+      data: {
+        ...resultat,
+        analyseId,
+        version,
+        persistee: analyseId !== null,
+        sources: sourcesPortee,
+      },
     }),
     {
       status: 200,

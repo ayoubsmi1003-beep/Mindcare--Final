@@ -79,10 +79,13 @@ export function EtatClinique({
         className="flex flex-col gap-4 rounded-2xl border border-rule bg-card p-5 shadow-carte"
       >
         <div className="flex items-center gap-3">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-azure-100 bg-tuile-azur text-azure-700 shadow-douce">
+          <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-azure-100 bg-tuile-azur text-azure-700 shadow-douce">
             <Icone nom="suivi" taille={20} />
           </span>
-          <h2 className="font-ui text-heading font-bold text-ink-900">{cockpit.etatTitre}</h2>
+          <div className="flex min-w-0 flex-col">
+            <h2 className="font-ui text-heading font-semibold text-ink-900">{cockpit.etatTitre}</h2>
+            <p className="m-0 font-ui text-label font-medium text-ink-500">Échelles du dossier — Inscrire recopie en Objectif</p>
+          </div>
         </div>
         <EtatVide message={cockpit.etatVide} icone="suivi" />
       </section>
@@ -103,10 +106,10 @@ export function EtatClinique({
     >
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-3">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-azure-100 bg-tuile-azur text-azure-700 shadow-douce">
+          <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-azure-100 bg-tuile-azur text-azure-700 shadow-douce">
             <Icone nom="suivi" taille={20} />
           </span>
-          <h2 className="font-ui text-heading font-bold text-ink-900">{cockpit.etatTitre}</h2>
+          <h2 className="font-ui text-heading font-semibold text-ink-900">{cockpit.etatTitre}</h2>
         </div>
         <p className="font-ui text-label tabular-nums text-ink-500">
           {cockpit.echellesTitre} · {String(echelles.length)}
@@ -118,7 +121,7 @@ export function EtatClinique({
           <li
             key={e.scaleCode}
             className={[
-              "flex min-w-0 flex-col gap-1 rounded-xl border p-3 shadow-douce",
+              "flex min-w-0 flex-col gap-1 rounded-2xl border p-4 shadow-douce",
               "transition duration-quick ease-out",
               TUILES[i % TUILES.length] ?? "bg-tuile-neutre border-rule",
             ].join(" ")}

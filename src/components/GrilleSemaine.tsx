@@ -216,7 +216,7 @@ export function GrilleSemaine({
         de la faire defiler, et poussait la page entiere. Mesure a 1024 :
         1192px de document pour 1024px de fenetre.
       */}
-      <div className="min-w-0 overflow-x-auto rounded-xl border border-rule bg-card shadow-lift2">
+      <div className="min-w-0 overflow-x-auto rounded-2xl border border-rule bg-card shadow-carte">
         <table
           className="w-full table-fixed border-collapse"
           // La largeur plancher dépend du NOMBRE de colonnes, qui est une
@@ -238,7 +238,7 @@ export function GrilleSemaine({
             <tr>
               {/* L'angle mort en haut à gauche reste vide et discret : il ne
                   porte rien, il ne doit donc rien attirer. */}
-              <th scope="col" className="border-b border-rule bg-sunken" />
+              <th scope="col" className="border-b border-rule bg-tete-tableau" />
               {colonnesJours.map((jourColonne, i) => {
                 const nbSeances = lignesHeures.reduce((total, h) => {
                   const c = parCase.get(`${i}-${h}`);
@@ -256,7 +256,7 @@ export function GrilleSemaine({
                       // cherche en premier vingt fois par jour ; la teinter en
                       // teal la ferait concurrencer les cartes, qui codent déjà
                       // la famille de consultation.
-                      estAujourdhui ? "bg-brand-50" : "bg-sunken",
+                      estAujourdhui ? "bg-action-50" : "bg-tete-tableau",
                     ].join(" ")}
                   >
                     <div className="flex flex-col gap-1">
@@ -434,13 +434,13 @@ function CarteRendezVous({ entree }: { readonly entree: AgendaEntry }): React.JS
       // Le liseré de famille reste à gauche : c'est le seul repère qui survit à
       // la vision périphérique quand on balaie une semaine entière.
       className={[
-        "group flex min-h-target min-w-0 flex-col gap-1 rounded-md py-2 pl-3 pr-2",
+        "group flex min-h-target min-w-0 flex-col gap-1 rounded-xl border border-rule py-2 pl-3 pr-2",
         "border-l-kind no-underline",
         // Pas de translation au survol : une carte qui se soulève déplace la
         // cible qu'on vise, et sur une grille dense on vise beaucoup. v9 —
         // la carte gagne une élévation de repos : elle se détache du fond de
         // cellule avant même le survol, et le survol l'accentue.
-        "shadow-lift1 transition duration-quick ease-soft hover:shadow-lift2",
+        "shadow-douce transition duration-quick ease-soft hover:shadow-carte",
         "outline-none focus-visible:outline focus-visible:outline-action-600 focus-visible:outline-offset",
       ].join(" ")}
       style={{ borderLeftColor: jetons.accent, background: jetons.fond }}

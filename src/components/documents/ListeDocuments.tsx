@@ -64,11 +64,11 @@ export function ListeDocuments({
               <div className="flex items-start justify-between gap-3">
                 <div className="flex min-w-0 items-start gap-3">
                   <PastilleIcone nom="documents" ton={annule ? "neutre" : "action"} />
-                  <div className="flex min-w-0 flex-col gap-1">
-                    <p className="truncate font-ui text-body font-medium text-ink-900">
+                  <div className="flex min-w-0 flex-col gap-1.5">
+                    <p className="truncate font-ui text-body font-medium leading-body text-ink-900">
                       {fr.documents.types[d.docType]}
                     </p>
-                    <p className="flex flex-wrap items-center gap-2 font-ui text-label text-ink-500">
+                    <p className="flex flex-wrap items-center gap-x-2 gap-y-0.5 font-ui text-label leading-label text-ink-500">
                       {d.patientNom !== null || d.patientPrenom !== null ? (
                         <span className="font-medium text-ink-700">
                           {[d.patientNom, d.patientPrenom].filter(Boolean).join(" ")}

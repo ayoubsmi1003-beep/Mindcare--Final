@@ -62,6 +62,51 @@ Toute lecture et écriture de donnée clinique est tracée : qui, quoi, quand, d
 
 ---
 
+## 2bis. ÉTAT ACTUEL — 2026-09-05
+
+> Cette section dit ce qui est VRAI AUJOURD'HUI, sans obliger à reconstruire
+> l'histoire depuis les amendements. L'historique ci-dessous reste la preuve ;
+> en cas d'écart entre cette section et une migration appliquée, **la migration
+> gagne** (DOC-AUTHORITY §1).
+
+**Socle.** Next.js 15 App Router · TypeScript strict · Server Actions (aucune
+API REST versionnée) · Supabase Postgres 15 · accès via `DbPort`
+(`src/services/db/port.ts` : `select`, `rpc`, auth) ; seul
+`src/services/db/supabase.ts` importe `@supabase/supabase-js` (ADR-020).
+Montants `integer amount_dzd` (ADR-018). Bornes de journée en
+`Africa/Algiers`. Interface en français, aucune chaîne en dur (ADR-008).
+
+**Données.** Phase cloud encadrée (ADR-016) : `cloud-dev`, données
+**synthétiques uniquement** (`is_synthetic`, trigger `assert_synthetic_when_cloud`) ;
+comptes dev `…a1`/`…a2` connectables, `…a3` inconnectable. Lecture dossier par
+`app.search_patients` / `app.get_patient` (+ `app.get_patient_workspace`,
+`app.list_patient_timeline`) ; `SELECT` direct révoqué (ADR-019). Écritures par
+portes `SECURITY INVOKER` (RLS décide) ; lectures sensibles par portes
+`app_gatekeeper` (ADR-021). Agenda : 5 portes, plage ≤ 62 jours, transition par
+déclencheur (ADR-021). Traitements : `patient_treatments` + `patient_treatment_history`
+append-only, 7 portes (ADR-028). Documents : portes 030, cycle
+DRAFT→…→AUDIT exigé (pas encore d'ADR dédiée — voir §9). 87 migrations, max 087.
+
+**Alexa/Jarvis.** Assistant = **Jarvis**, mot de réveil = **Alexa** (ADR-027).
+Runtime : `executerTour` (boucle bornée, budgets en `jarvis-contexte.ts`),
+22 capacités de lecture + 7 d'écriture, cycle
+PROPOSE→CONFIRM→EXECUTE→VERIFY→AUDIT, vérification par relecture obligatoire
+pour les écritures du registre (les outils historiques 033 annoncent
+« enregistré », pas « vérifié »). Identité côté application (`PATIENT_001`,
+carte purgée par tour, TTL cible 15 min). Routage `refus > patient >
+connaissance`, fichiers `routing.ts`/`normalisation.ts` **gelés**.
+Sortie unique : `src/server/egress/external-call.ts`. Voix : `VOICE_PROVIDER`
+cloud (Groq + ElevenLabs, double verrou `is_cloud_dev`) ; `SpeechRecognition`
+interdite (ADR-024).
+
+**Design.** Autorité visuelle : `docs/design-system/` (remplace les supprimés
+`04-DESIGN-SYSTEM.md` et `05-UX-CONTRACT.md`, DOC-AUTHORITY §1) ; source unique
+des valeurs : `src/styles/tokens.css`. Direction V8 « Aurora » : six familles
+(emeraude, aqua, azure, violet, ambre, corail), dégradés mobilier/agrégats
+uniquement, §4.2 (donnée clinique opaque) et Mode Séance non négociables.
+
+---
+
 ## 3. ARCHITECTURE DECISION RECORDS
 
 ### ADR-001 — Supabase auto-hébergé dès J1 (jamais Supabase Cloud)
@@ -330,6 +375,29 @@ trg_appt_transition                       -- BEFORE UPDATE, sur la TABLE
 
 
 
+### ADR-022 — Palette v2 : la couleur revient, la donnée reste opaque
+**Statut. SUPERSEDÉE par ADR-025 le 2026-08-24. Section reconstituée le
+2026-09-05 — jamais rédigée comme section autonome, contenu préservé depuis ses
+sources, rien d'inventé.**
+
+**Sources.** D-19 (`DOC-AUTHORITY.md` §3bis) · `SPRINT-V1.md` §V3 (« Prérequis :
+ADR-022 approuvé », palette dérivée du vrai logo `#7CB5AC` pipetté) ·
+`SESSION-CONTRACTS.md` §V3 (liste fermée des dégradés, contrôle « ✗ un dégradé
+hors liste ») · `docs/design-system/DESIGN_TOKENS.md:71` (rampe brand depuis le
+teal pipetté) et `DESIGN_DECISIONS.md:21`.
+
+**Contenu préservé.** Teal du logo comme unique famille de marque ; azur/violet
+réservés aux graphiques ; dégradés autorisés sur agrégats et mobilier,
+**interdits derrière toute valeur clinique** (§4.2) ; Mode Séance sobre ; liste
+fermée des emplois de dégradé.
+
+**Pourquoi supersedée.** ADR-025 lève la liste fermée (permission explicite de
+l'utilisatrice) et ajoute indigo/azur élargi/ambre/corail. §4.2 et Mode Séance
+survivent (repris en ADR-025, V8-AURORA §4). Référence code résiduelle :
+`Surfaces.tsx:199`, `CartesMaintenant.tsx:41`, `EnTetePatient.tsx:5`,
+`connexion/page.tsx:94` citent encore « ADR-022 » pour §4.2 — lire « §4.2
+(ADR-022→ADR-025) ».
+
 ### ADR-023 — Jarvis répond en psychiatre sur la connaissance, jamais sur le patient
 **Date.** 2026-08-09. **Amende** L4 de `03-JARVIS-TOOLS.md`. **Ne l'annule pas.**
 
@@ -373,6 +441,50 @@ la référence.
 
 **Contrôle de checkpoint (V2).** Les sept questions du tableau ci-dessus, posées
 telles quelles. Sept comportements conformes, ou V2 est rouge.
+
+#### Amendement du 2026-09-05 — trois modes explicites (CONNAISSANCE · CONTEXTE CLINIQUE · OPÉRATIONS)
+
+**CONNAISSANCE.** Savoir général (critères DSM, interactions, pharmacologie
+générale, concepts). Autorisé avec caveats : aide-mémoire, jamais source
+primaire (le Vidal reste la référence) ; posologies avec fourchettes usuelles,
+jamais présentées comme vérifiées.
+
+**CONTEXTE CLINIQUE.** Toute question impliquant un patient identifié. Alexa
+peut : relire le contexte borné, résumer des faits, surface des observations
+documentées, signaler le manque, suggérer des questions à explorer. Alexa ne
+peut PAS : diagnostiquer, prescrire, déclarer un risque suicidaire, inventer un
+fait clinique, conclure à la place du clinicien. Formulation :
+*« éléments évoquant… — à évaluer »*, jamais *« le patient est… »*.
+
+**OPÉRATIONS.** Toute action sur MindCare OS (agenda, recherche patient,
+traitements, documents, finance, impression, RDV). Régime :
+autorisation → confirmation → exécution → vérification → audit (ADR-029…
+ADR-033, ADR-027 décision 4). La mention *« Aide à la décision — le jugement
+clinique appartient au praticien. »* reste permanente.
+
+---
+
+### ADR-024 — La voix bascule par un flag, jamais par le navigateur
+**Statut. ACTIVE. Section rédigée le 2026-09-05 — jamais rédigée comme section
+autonome, contenu préservé depuis ses sources, rien d'inventé.**
+
+**Sources.** D-21 (`DOC-AUTHORITY.md` §3bis) · `SPRINT-V1.md` §V2.4 et §6 ·
+`MODULE-MAP.md:88,111` · `SESSION-CONTRACTS.md:66,68` · implémentation :
+`src/server/env.ts:49`, `src/server/egress/external-call.ts:808-917,1094`,
+`src/app/api/jarvis/jarvis-voice-in|out/route.ts`.
+
+**Contenu préservé.** `VOICE_PROVIDER=cloud` (Groq `whisper-large-v3-turbo` +
+ElevenLabs) en développement synthétique, `=local` (whisper.cpp + Piper) dès le
+premier patient réel ; le passage au local est une installation, pas un
+développement (jour de la migration). Double verrou côté serveur :
+`VOICE_PROVIDER=cloud` **et** `app.is_cloud_dev()`, fail-closed. Audio en
+RAM uniquement, jamais persisté (ADR-009). L'API `SpeechRecognition` du
+navigateur est **interdite dans les deux modes** (elle envoie l'audio à Google,
+aucun flag ne l'éteint).
+
+**Complétée par ADR-027** (mot de réveil : assistant = Jarvis, mot prononcé =
+Alexa ; écoute locale auto-hébergée, zéro réseau pendant l'écoute) **et ADR-035**
+(la voix comme canal du même runtime).
 
 ---
 
@@ -425,6 +537,66 @@ avec une cinquième famille non vérifiée.
 et `04-DESIGN-SYSTEM.md` — et `tokens.css`, seule source de valeurs (I10). Aucun
 écran n'est modifié ici. L'implémentation sur les composants et les pages suit dans
 un lot séparé, une fois la palette et sa doc stabilisées.
+
+#### Amendement du 2026-09-05 — constitution visuelle premium (v3.1)
+
+**Principe.** MindCare OS est un **poste de travail clinique premium**, pas un
+template SaaS/IA générique. Premium, coloré, sophistiqué, dense sans fouillis,
+riche, moderne, cliniquement lisible, cohérent, accessible. Référence
+d'implémentation : `docs/design-system/V8-AURORA.md` (en cas d'écart avec
+`tokens.css`, `tokens.css` gagne) ; les détails d'implémentation vivent dans
+`docs/design-system/`, jamais dans un ADR (§26 du mandat : les chemins
+`docs/04-DESIGN-SYSTEM.md` cités ci-dessus désignent désormais ce répertoire,
+fichier supprimé — DOC-AUTHORITY §1).
+
+**Autorisé.** Dégradés sophistiqués à but sémantique (tuiles d'agrégat claires,
+mobilier profond — grammaire V8) ; tuiles d'agrégat à fond coloré porteur de
+sens ; iconographie SVG riche et cohérente ; illustrations coutumières duotone
+sans personnage ; graphiques polis main (zéro dépendance) ; hiérarchie en
+couches, profondeur subtile, états visuels signifiants, états vides premium,
+analytique expressive.
+
+**Rejeté (anti-slop).** Templates SaaS/IA génériques ; abus de dégradés
+violet/bleu ; glassmorphism gratuit ; blobs IA décoratifs géants ; dégradés
+sans but sémantique ; faux graphiques et fausses métriques (règle 8) ;
+répétition carte-arrondie-blanche ; bruit visuel ; décoration Dribbble qui nuit
+à la lisibilité clinique.
+
+**Sémantique couleur.** teal = identité MindCare/clinique · indigo =
+Alexa/intelligence · bleu = information/analytique · vert = succès/stable ·
+ambre = attention/en attente · corail/rouge = danger/erreur/destructif.
+Accessibilité obligatoire : texte ≥ 4.5:1 ; **aucune valeur clinique ne dépend
+d'un contraste ambigu, et aucun texte de dose/clinique ne repose sur un
+dégradé** (§4.2, non négociable, mesuré en V8 §4).
+
+**Intégrité des graphiques.** Tout graphique répond à une question
+clinique/opérationnelle avec des **données réelles** et porte : chargement,
+vide, données-insuffisantes, erreur, peuplé, libellés accessibles (+ tableau
+équivalent), unités, plage temporelle, agrégation correcte. Séries non
+qualifiantes : place vide, jamais courbe fabriquée (`Tuile.tsx`, V8 §5).
+Graphiques décoratifs interdits.
+
+**Langage SVG.** Grille 24, trait 1.75, arrondi, `currentColor`,
+`aria-hidden` par défaut pour les icônes (`Icones.tsx`) ; scènes duotone
+(socle disque + arc) sans personnage, jamais sur un dossier actif
+(`Illustrations.tsx`). Pas de décoration SVG ad hoc hors primitives.
+
+### ADR-026 — Référence en suspens, contenu introuvable
+**Statut. STALE — ne rien en déduire. Enregistrée le 2026-09-05.**
+
+**Fait.** Une seule occurrence dans le dépôt actif : ADR-027 « **Étend**
+ADR-023 (les trois chemins) **et ADR-026** sans les remplacer ». Aucune section
+ADR-026, aucune autre citation, aucun contenu récupérable (ni en docs, ni en
+code, ni en migrations). Les ADR-026 de la Constitution archivée (monolithe
+modulaire) appartiennent à une numérotation **morte** (dossier interdit,
+DOC-AUTHORITY §2) et ne doivent pas être importés ici.
+
+**Décision.** Référence marquée stale et conservée comme telle. **Il est
+interdit d'écrire « ADR-026 dit… »** jusqu'à preuve contraire. La frontière dont
+ADR-027 avait besoin — routage multilingue gelé, treillis monotone,
+lexique fermé — n'a jamais porté de numéro : elle est établie pour de bon par
+**ADR-036** ci-dessous, sur la base de l'implémentation mesurée, pas d'une
+filiation inventée.
 
 ### ADR-027 — La couche opérante Jarvis : boucle bornée, frontière de confidentialité, identité côté application
 **Date.** 2026-08-26. **Étend** ADR-023 (les trois chemins) et ADR-026 sans les
@@ -518,6 +690,30 @@ modèles « Hey Jarvis » et « Alexa » ont la même forme `[1,16,96]` mais des
 d'entrée différents (`x.1` contre `onnx::Flatten_0`), donc un nom en dur
 transforme un remplacement de fichier en panne. Et la plomberie prouvée n'est
 pas l'oreille prouvée : aucune voix humaine n'a encore été mesurée.
+
+#### Amendement du 2026-09-05 — valeurs mesurées des budgets (le runtime porte la politique)
+
+Relevé de `src/services/jarvis-contexte.ts:219-235`,
+`src/services/jarvis-boucle.ts:163,192-196,284-285,390,398-406`,
+`src/services/jarvis-capacites.ts:175,344-425` — le LLM ne les négocie jamais :
+
+| Borne | Valeur mesurée | Source |
+|---|---|---|
+| Cycles de raisonnement / tour | ≤ 3 (`MAX_TOURS_OUTIL`) | jarvis-contexte.ts:221 |
+| Appels d'outils / tour | ≤ 6 (`MAX_APPELS_OUTIL`) | jarvis-contexte.ts:223 |
+| Octets de contexte / tour | ≤ 24 000 (`MAX_OCTETS_CONTEXTE`) | jarvis-contexte.ts:225 |
+| Octets de résultat / capacité | budget propre 1 500–12 000, troncature déclarée jamais silencieuse | jarvis-capacites.ts:344-425, boucle.ts:192-196 |
+| Durée / capacité | ≤ 20 s (`MAX_MS_CAPACITE`) | jarvis-contexte.ts:227 |
+| Durée / tour | ≤ 60 s (`MAX_MS_TOUR`) | jarvis-contexte.ts:228 |
+| Écritures / tour | ≤ 1 (`MAX_ECRITURES_PAR_TOUR`) | jarvis-contexte.ts:234 |
+| Appel identique (même outil + mêmes args) | 3ᵉ occurrence rompt le tour (`repetitions >= 2`) ; doublon rejoué depuis le cache marqué `deduplique` | boucle.ts:398-411 |
+| Cible patient (TTL) | 15 min (`TTL_CONTEXTE_MS`) ; expirée = absente | jarvis-contexte.ts:76,93 |
+
+**Non bornés dans le code et donc exigés par ADR-029/031/033** (travail P1) :
+cycles de clarification (proposé : ≤ 2 par tâche), tentatives d'écriture
+(proposé : exécution unique, pas de relance auto — on avoue), budget
+multi-tours d'une même tâche. Les valeurs « proposées » sont des décisions à
+valider par test, pas des mesures.
 
 ---
 
@@ -633,6 +829,148 @@ Twin = read model (STATE §5). `get_patient_workspace` expose `traitements_v2{ac
 
 ---
 
+### ADR-029 — Alexa Task Completion & Bounded Continuation
+**Date.** 2026-09-05. **Étend** ADR-027 (boucle bornée) sans la remplacer.
+
+**Principe.** Alexa est un **orchestrateur borné de flux cliniques et
+opérationnels**, pas un chatbot à outils, pas un agent base autonome, pas un
+LLM libre, pas une source de vérité clinique, pas un remplaçant du médecin, et
+sans autorité directe sur la base. Chaîne obligatoire : médecin → runtime Alexa
+→ intention/tâche → autorisation → capacité enregistrée → porte de domaine →
+base → résultat typé → interprétation → continuation/clarification →
+vérification → réponse → audit. Le LLM est UN composant de raisonnement dans
+cette chaîne.
+
+**Règle critique.** Un appel d'outil réussi NE veut PAS dire que la tâche est
+accomplie. Constaté : `jarvis-boucle.ts:360-370,501-511` termine quand le
+modèle ne propose plus rien — « l'outil a répondu » vaut « terminé ». C'est
+désormais interdit comme critère d'achèvement.
+
+**Une tâche ne se termine que si** : l'objectif est satisfait (vérifié, pas
+supposé) · une clarification du médecin est requise · blocage
+autorisation/sûreté · capacité indisponible · borne de sûreté exigeant l'arrêt ·
+budget épuisé · vérification en échec · plus aucun progrès sûr possible.
+
+**Résultats explicites exigés** — `completed · partial · needs_clarification ·
+blocked · failed · verification_failed · budget_exhausted · no_progress`.
+Écart implémentation (P1) : `BilanTour` (`jarvis-boucle.ts:70-85`) ne porte
+aucun de ces statuts (texte + chemin + interrompu seulement) ; l'aveu
+honnête existe (`bilanAveu` : tropLong, tropDAppels, enBoucle, tropDIterations)
+mais n'est pas typé. Le runtime, pas le
+LLM, attribue le statut.
+
+### ADR-030 — Alexa Task State & Conversational Continuity
+**Date.** 2026-09-05. **Étend** ADR-027 (cible TTL) sans la remplacer.
+
+**Distinction.** État de conversation (de quoi parle-t-on ?) ≠ état de tâche
+(qu'essaie-t-on d'accomplir ?). « Inscris Karim la semaine prochaine » porte un
+état de tâche : but, jeton patient résolu, date, heure, durée, praticien,
+paramètres manquants, statut de confirmation, statut d'exécution.
+
+**Règles.** L'état de tâche vit en mémoire d'exécution du tour, jamais comme
+mémoire clinique persistante ; il suit la carte d'identité (purge par tour,
+changement de cible, TTL 15 min — ADR-027) ; une réponse de clarification
+**reprend** la tâche existante, ne la redémarre pas ; aucun fait clinique n'y
+survit au-delà du cycle (règles 1, 7). Écart implémentation (P1) : seule une
+`CiblePatient` (`jarvis-contexte.ts:49-78`) existe — but, paramètres manquants,
+statuts de confirmation/exécution ne sont pas structurés.
+
+### ADR-031 — Alexa Clarification & Non-Guessing
+**Date.** 2026-09-05. **Complète** ADR-023 et le §7 de `03-JARVIS-TOOLS.md`.
+
+**Règle.** Paramètre d'exécution critique ambigu → `needs_clarification`,
+jamais de devinette : identité patient, médicament, posologie, modification de
+traitement, date/heure de RDV, montant financier, destinataire de document,
+action destructive, acte à portée légale. Le contexte conversationnel anodin
+peut être inféré ; l'ambiguïté critique produit une question, pas une
+exécution. Acquis conservés : `besoinDeClarification` local sans appel
+modèle/base (`jarvis-contexte.ts:199-208`), `ambigu:true` purge la cible,
+multi-résultats rendus `plusieurs` sans choix (`jarvis-tools.ts:210-213`).
+Écart implémentation (P1) : aucun compteur de cycles de clarification —
+proposé ≤ 2 par tâche, au-delà `no_progress` honnête (ADR-029).
+
+### ADR-032 — Alexa Typed Capability/Result Contract
+**Date.** 2026-09-05. **Fige** l'acquis ADR-027 décisions 2 et 5 comme contrat.
+
+**Règle.** Les outils rendent des **faits structurés typés**, jamais de la
+présentation : pas de `"Le patient est Karim à 15h"`, mais source, statut,
+identifiants/jetons autorisés, horodatages, faits métier typés, erreurs,
+informations de vérification. Le LLM met en langue ; il ne manufacture aucun
+fait absent des composants de confiance. Acquis : `SafeToolResult`
+(`jarvis-projections.ts:248-264`), `ValeurSafe` union fermée à 16 membres,
+`champsAttendus` calculés du schéma, `motifEchec` classé (jamais de message de
+base), briefs composés en TypeScript. **Propriété.** Base = vérité persistée ·
+portes = règles métier · RLS = autorisation · projections déterministes =
+contexte IA sûr · application = identité · runtime = politique d'exécution ·
+LLM = interprétation/langue, jamais vérité.
+
+### ADR-033 — Alexa Progress Detection & Loop Prevention
+**Date.** 2026-09-05. **Étend** ADR-027 (budgets, dédup) sans le remplacer.
+
+**Règle.** Alexa détecte l'absence de progrès et termine en sécurité avec un
+statut véridique (ADR-029) ; elle ne boucle jamais parce que le modèle
+redemande un outil. Signaux minimaux : même outil + mêmes args + même résultat
+· appels identiques répétés (acquis : 3ᵉ occurrence identique rompt le tour,
+`jarvis-boucle.ts:400-406`) · clarification sans fin · oscillation de séquence
+· refus d'autorisation répétés · échecs de vérification répétés.
+Écarts implémentation (P1) : oscillation, refus répétés et échecs de
+vérification répétés ne sont pas détectés comme tels — seuls les budgets et la
+dédup identique le sont (`eval-jarvis-boucle` 42 contrôles : étendre la passe,
+pas la contourner).
+
+### ADR-034 — Alexa Data Locality & AI Egress Boundary
+**Date.** 2026-09-05. **Rend explicite** R1/R2 et la décision 2 d'ADR-027.
+**Ne touche pas** à `src/server/egress/external-call.ts`.
+
+**Tiers.** Donnée patient identifiable · donnée clinique sensible · contexte IA
+pseudonymisé · savoir générique. **Règle : l'identifiable ne quitte jamais la
+machine du cabinet.** Tout appel IA externe passe par la passerelle serveur
+unique (`external-call.ts` : `llm`, `llmStream`, `stt`, `tts` — seul `fetch`
+autorisé), après projection liste-blanche → pare-feu déterministe → garde
+fail-closed ; aucun SDK fournisseur côté client ; aucun UUID ni correspondance
+identifiante dans les charges modèle ; `BoundaryPurpose` fermé
+(`jarvis|voix-entree|voix-sortie|resume-cas`) journalisé en
+`audit.log_boundary_crossing` (best-effort avalé, `external-call.ts:599-603` —
+durcir en P0 si le « avalé » masque une panne d'audit). Voix : double verrou
+mesuré (ADR-024). Synthèse vocale : toute réponse portant un jeton passe par la
+synthèse **locale** (acquis STATE 2026-08-26, défaut n°3).
+
+### ADR-035 — Voice as a Delivery Channel into the Same Alexa Runtime
+**Date.** 2026-09-05. **Complète** ADR-024 et ADR-027 (mot de réveil) sans les
+remplacer.
+
+**Règle.** La voix n'est pas un second système intelligent : mot de réveil →
+capture locale → STT → **même runtime Alexa** → capacités → réponse → TTS.
+L'écoute du mot de réveil reste locale (modèles + runtime auto-hébergés,
+zéro réseau) ; conservation d'audio interdite (ADR-009) ; la couche voix ne
+contourne **aucune** borne du canal texte (routage, confirmation, vérification,
+audit). Écart prouvé (STATE 2026-08-27) : reconnaissance d'« Alexa » sur voix
+humaine non mesurée, sortie haut-parleur non entendue — enrôler la mesure
+(`eval-reveil-pipeline.mjs` + `mesure-reveil-navigateur.mjs`) avant toute
+allégation.
+
+### ADR-036 — Frontière de routage multilingue gelée
+**Date.** 2026-09-05. **Établit** (pas : restaure) la borne que la référence
+stale ADR-026 laissait supposer. **Ne touche pas** à `src/shared/jarvis/routing.ts`,
+`normalisation.ts`, `lexique-multilingue.ts`, `proposition.ts`.
+
+**Contenu mesuré, désormais invariant.** Texte brut = charge modèle ; texte
+normalisé = routage seul (normaliseur déterministe, lexique fermé, réparation
+STT bornée) ; union brut+normalisé avec treillis monotone
+(`RANG {connaissance:0, patient:1, refus:2}`, `monotone()`,
+`normalisation.ts:355-407`) ; ordre `refus > patient > connaissance`
+(`routing.ts:247-285`, défaut `connaissance`) ; `proposition.ts` lecteur
+d'enveloppe pur (5 noms connus, nom inventé = `null`, Zod + allowlist SQL
+derrière). Preuves : `eval-jarvis-routage` 60/60 (STATE 2026-09-03, correctif
+voix-minuscules assumé sur fichier gelé, option A validée), `eval-jarvis-v2`
+(ADR-023), `eval-jarvis-injection` (scénario M).
+
+**Gel.** Toute modification exige un nouvel ADR explicite. Correctif ciblé sur
+fichier gelé = amendement daté dans ce registre + mesure avant/après contre
+HEAD (précédents 2026-08-26, 2026-09-03), jamais un commit discret.
+
+---
+
 ## 8. DÉCISIONS EN ATTENTE
 
 | # | Sujet | Nécessaire pour |
@@ -641,6 +979,104 @@ Twin = read model (STATE §5). `get_patient_workspace` expose `traitements_v2{ac
 | P-2 | Durée de rétention des dossiers (DZ : à confirmer) | 01-SCHEMA |
 | P-3 | L'assistante voit-elle le motif de consultation ? *(recommandation : non)* | RLS |
 | P-4 | Accès de la Dr. #2 aux patients partagés ? *(recommandation : non, cloison stricte)* | RLS |
+
+---
+
+## 9. RÉCONCILIATION — 2026-09-05
+
+Mandat : architecture de décision unique, actuelle, exécutoire. Méthode :
+relecture du registre, des docs actives, de l'implémentation et des tests —
+**aucun contenu historique inventé** (les trois numéros manquants sont traités
+en ADR-022/024/026 ci-dessus). La Constitution d'ingénierie v2 reste
+d'autorité supérieure quand elle parle ; elle est archivée et interdite aux
+agents (DOC-AUTHORITY §2) — en cas de conflit, ce registre + les migrations
+appliquées gagnent.
+
+| ADR | Statut actuel | Action 2026-09-05 | Motif |
+|---|---|---|---|
+| 001 | Suspendue (ADR-016) | KEEP | Migration = porte de livraison, conditions intactes |
+| 002 | Active | KEEP | STT Groq via passerelle, complétée par ADR-024/027 |
+| 003 | Active | KEEP | Scoping multi-praticien, socle RLS |
+| 004 | Active | KEEP | Notes append-only, base probatoire |
+| 005 | Active | KEEP | 4 rôles, RLS, front jamais frontière |
+| 006 | Active | KEEP | QR statique + téléphone + validation |
+| 007 | Active | KEEP | OpenRouter via `llm_gateway` unique (impl. : `external-call.ts`) |
+| 008 | Active | KEEP | FR intégral, transcriptions AR, zéro chaîne en dur |
+| 009 | Active | KEEP | Zéro audio persisté |
+| 010 | Active | KEEP | Cash, prix saisi, numérotation sans trou |
+| 011 | Active | KEEP | Moteur à templates, en-tête tranché D-22 |
+| 012 | Active | KEEP | Catalogue ~60 molécules puis enrichi (073, 15k — ADR-028) |
+| 013 | Active | KEEP | Comptes Windows séparés + BitLocker |
+| 014 | Active | KEEP | Sauvegardes chiffrées + restauration prouvée |
+| 015 | Active | KEEP | Aftercare sans garde, bandeau urgence |
+| 016 | Active | KEEP + AMEND mineur | §2bis en donne la lecture actuelle ; amendements a1/a2 intacts |
+| 017 | Active | KEEP | `reason` hors `appointments`, RLS par lignes |
+| 018 | Active | KEEP | Dinars entiers |
+| 019 | Active | KEEP | Lecture par portes qui journalisent, `SELECT` révoqué |
+| 020 | Active | KEEP | `DbPort`, seul `supabase.ts` importe le SDK |
+| 021 | Active | KEEP | 5 portes agenda, `DbPort` n'écrit pas |
+| 022 | **Supersedée (ADR-025)** | Reconstituée comme HISTORIQUE | Jamais section autonome ; sources D-19/SPRINT-V1/SESSION. Rien inventé |
+| 023 | Active | KEEP + AMEND (3 modes) | Frontière connaissance/cas conservée, étendue aux opérations |
+| 024 | Active | Reconstituée comme ACTIVE | Jamais section autonome ; sources D-21 + code voice. Rien inventé |
+| 025 | Active | KEEP + AMEND (constitution v3.1) | Premium explicite + anti-slop + sémantique + charts + SVG |
+| 026 | **Stale** | Enregistrée STALE, remplacée par ADR-036 | Une occurrence (ADR-027), zéro contenu. Interdit de la citer comme règle |
+| 027 | Active | KEEP + AMEND (budgets mesurés) | Boucle, frontière, identité, vérification conservés |
+| 028 | Active | KEEP | Traitements versionnés, 4 concepts séparés |
+| 029–036 | **Nouvelles** | Créées | Invariants réels (achèvement, état, clarification, contrat typé, progrès, localité, voix, routage), pas trivia d'implémentation |
+
+**ADR proposés et refusés.** Constitution visuelle et intégrité des graphiques
+en numéros séparés : **refusés**, fondus dans l'amendement ADR-025 — un ADR =
+invariant, pas un niveau de titre. Observabilité/trace d'exécution :
+**refusée comme ADR** — aucun invariant nouveau (audit append-only +
+`boundary_crossings` + `BilanTour.traceId` existent ; le typage des statuts
+relève d'ADR-029, travail P1 listé au rapport de réconciliation du 2026-09-05).
+Cycle documentaire DRAFT→REVIEW→CONFIRM→GENERATE→AUDIT : **non érigé en ADR** —
+moteur 030 + portes existantes, pas de décision nouvelle ; cycle à établir en
+implémentation (P1, même rapport).
+
+**Références stale purgées.** `docs/04-DESIGN-SYSTEM.md` → `docs/design-system/`
+(§1, amendement ADR-025) ; « ADR-026 » ne porte plus aucune normativité ;
+les citations « ADR-022 » du code désignent §4.2 repris par ADR-025.
+
+---
+
+---
+
+### ADR-037 — M07 remediation R0 : corpus initial + contrat d'évaluation gelés
+**Date.** 2026-09-15. **Statut.** ACTIVE.
+
+**Contexte.** M07 Gate C = FAIL (fondation valide : gouvernance, découpage structurel, schéma 092, abstraction d'embeddings, preuves ; runtime production incomplet : corpus vide, vecteur non câblé, heuristique au lieu du cross-encoder, preuves non branchées sur Jarvis, seuils non épinglés). Le plan de remédiation borné (R0–R6) est accepté. R0 fige les deux décisions amont dont tout l'aval dépend.
+
+**Corpus initial approuvé.**
+- **Corpus A — fiches opérationnelles/gouvernées dérivées du dépôt, provenance explicite :** `docs/00-DECISIONS.md`, `01-SCHEMA.md` (matériau médicaments/schéma pertinent), `02-SECURITY-BOUNDARY.md`, `06-PERF-BUDGET.md`, `DOCUMENT-TEMPLATES-v2.md` — transformés en fiches courtes approuvées. Aucune recommandation clinique inventée.
+- **Corpus B — libellés de référence du catalogue médicaments déjà gouverné (ADR-012/028) :** DCI + marque + forme pharmaceutique + dosage + source + fingerprint/provenance. **Interdit :** posologies, recommandations de traitement, contre-indications, interprétation clinique.
+- **Exclusions explicites.** Les fixtures du golden (`guide-anxiete`, `guide-sevrage`, autres guides cliniques de test) ne deviennent JAMAIS du savoir de production. `fixture:true` reste interdit (`fixture-interdite`, `ingestion.ts:86-87`).
+
+**Règle de classification.** Tout le corpus initial est **C4** (Tier 3 — non personnel, `02-SECURITY-BOUNDARY.md` §2). C1/C2/C3/INCONNU rejetés avant tout embedding (triple verrou : `validerSource` → `passerelleEmbedding` → `external-call.ts`).
+
+**Provenance exigée.** Par source : titre, version, langue (fr/ar/darija), classification C4, provenance {émetteur, référence}, hash sha256 du contenu canonique, approuvé-par/le, revue {relecteur, revue-le, revue-due-le}. Activation `active` = acte humain signé séparé ; supersession par nouvelle version + `superseded_by`, jamais d'édition clinique en place.
+
+**Approbateur.** Propriétaire humain (session R0, choix A explicite, 2026-09-15).
+**Revue.** Propriétaire : praticienne (Dr Larbi N.). Cadence : à chaque incrément de corpus + réexamen au plus tard le 2026-12-15 (`review_due_at` porté par chaque source).
+
+**Seuils gelés (golden v2, 46 cas, mode `--reel` sur portes réelles) :** Recall@5 ≥ 0.90 ; MRR ≥ 0.80 ; nDCG@5 ≥ 0.80 ; E1 exactitude des issues = 46/46 ; gain cross-encoder nDCG@5 ≥ +0.02 vs heuristique, sans régression Recall@5 ; exactitude des citations = 100 % ; wrong-dose = 0 % ; wrong-drug = 0 % ; wrong-version = 0 % ; no-answer recall = 100 % ; violations de gouvernance = 0 ; fencing des preuves = 100 % ; FR 35/35, AR 7/7, darija 4/4 ; deux exécutions consécutives = ordre identique à l'octet ; p95 récupération ≤ 3000 ms, p95 rerank ≤ 1500 ms. (Precision@5 informative uniquement.)
+
+**Gel.** Modifier un seuil = rouvrir R0 (amendement daté, jamais d'édition silencieuse). Étendre le périmètre du corpus = nouvel incrément approuvé par la même voie. R0 approuve un contrat d'ingénierie, PAS une couverture clinique complète.
+
+**Porte suivante.** R1 (manifeste de corpus + chargeur de quarantaine, dry-run, zéro ligne `active`) est la seule porte d'implémentation autorisée — et uniquement sur instruction R1 explicite.
+
+---
+
+### ADR-037-R2 — M07 remediation R2 : recette d'embedding épinglée par mesure locale
+**Date.** 2026-09-16. **Statut.** ACTIVE (addendum — seuils R0 inchangés, aucun seuil modifié).
+
+**Mesure.** `intfloat/multilingual-e5-large` (rev `3d7cfbd…574f3`) vs `BAAI/bge-m3` (rev `5617a9f…b181`), ONNX officiel, CPU local, golden v2 (46 cas : FR 35 / AR 7 / darija 4), définitions de métriques identiques à `eval-knowledge-retrieval.mjs`. Les deux : dim 1024 prouvée, déterminisme à l'octet, Recall@5 = 1.00, seuils ADR-037 compatibles (détail : `artifacts/bench-r2/*.json`).
+
+**Sélection (§21).** `BAAI/bge-m3` : MRR 0.967 vs 0.952, nDCG@5 0.922 vs 0.918, FR (35/46) MRR 0.974 vs 0.955, RSS plus faible (1057 vs 1539 Mo), tête `sentence_embedding` native (= CLS L2-normalisé, cos 1.0 vérifié), contexte long 8192 natif. E5 reste viable/secours documenté. Les deux MIT.
+
+**Recette.** `knowledge/recette-embedding-pinee.json` (provider `local-onnx`, `query_prefix`/`document_prefix` vides, normalisation `l2` native, distance `cosine`, chunker `struct-v1`, SHA-256 artefacts, runtime de production à câbler en R3). Aucune écriture `knowledge_chunks.embedding`, aucune activation, `092` intouchée.
+
+**Porte suivante.** R3 (backfill + hybride staging) — uniquement sur instruction R3 explicite.
 
 ---
 

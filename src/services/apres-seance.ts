@@ -81,6 +81,61 @@ export interface SuiviApresSeance {
   readonly message: string | null;
 }
 
+/**
+ * Clé de `fr.feedback.apresSeance` pour un état donné — ou `null` quand
+ * l'écran garde son message courant.
+ *
+ * ⚠️ CETTE FONCTION EST LE SEUL ENDROIT QUI CONNAÎT LA CORRESPONDANCE
+ * ÉTAT → MESSAGE. Avant elle, la correspondance vivait inline dans le rappel
+ * de `clore()` (`page.tsx`) : six branches non testées, dont deux portent le
+ * correctif `regle-metier`. Une régression silencieuse y réafficherait
+ * « elle se relance depuis la séance » sur une séance sans notes — le défaut
+ * exact qu'on vient de corriger. La page résout la clé (`tsc` vérifie chaque
+ * clé) et ne décide plus rien.
+ *
+ * `null` n'est pas un oubli : trois cas le rendent, et ils sont nommés
+ * ci-dessous — `patientId === null` (`ignoree`/`ignoree`), où la confirmation
+ * « Séance terminée. » posée avant l'enchaînement doit survivre ; `analyse`
+ * encore à `attente`, que `avancer` n'émet jamais (il pose toujours `analyse`
+ * avant d'appeler l'écran) ; et le repli final pour toute combinaison que
+ * personne n'a encore nommée. Dans les trois cas la règle est la même :
+ * garder le message courant plutôt qu'en inventer un.
+ */
+export type CleConfirmationApresSeance =
+  | "analyseEnCours"
+  | "analyseEchouee"
+  | "analyseSansObjet"
+  | "resumeEnCours"
+  | "resumeEchoue"
+  | "terminee";
+
+export function cleConfirmationApresSeance(
+  suivi: SuiviApresSeance,
+): CleConfirmationApresSeance | null {
+  // `attente` : `avancer` pose toujours `analyse` avant d'émettre, donc
+  // l'écran ne voit jamais cet état — mais si un état initial fuitait un
+  // jour jusque-là, écraser le message courant serait pire que le garder.
+  if (suivi.analyse === "attente") return null;
+  if (suivi.analyse === "en-cours") return "analyseEnCours";
+  if (suivi.analyse === "echouee") return "analyseEchouee";
+  // `ignoree`/`ignoree` : `patientId === null`, le résumé n'a même pas été
+  // tenté — `analyseSansObjet` mentirait ici, puisqu'il promet un résumé
+  // mis à jour.
+  if (suivi.analyse === "ignoree" && suivi.resume === "ignoree") return null;
+  // `regle-metier` transitoire : exige `resume === "attente"` pour ne pas
+  // hijacker le cas `patientId === null` ci-dessus.
+  if (suivi.analyse === "ignoree" && suivi.resume === "attente") return "analyseSansObjet";
+  if (suivi.resume === "en-cours") return "resumeEnCours";
+  if (suivi.resume === "echouee") return "resumeEchoue";
+  // Sans objet + résumé à jour : le message sans-objet reste, pas `terminee`
+  // (qui promettrait une analyse qui n'existe pas).
+  if (suivi.resume === "faite") return suivi.analyse === "ignoree" ? "analyseSansObjet" : "terminee";
+  // Repli : toute combinaison émissible est nommée ci-dessus. Un futur état
+  // qui tomberait ici garde le message courant — et son test manque, ce que
+  // la relecture suivante verra à la table de `apres-seance.test.ts`.
+  return null;
+}
+
 const DEPART: SuiviApresSeance = { analyse: "attente", resume: "attente", message: null };
 
 /**
@@ -116,17 +171,32 @@ export async function enchainerApresSeance(
     "L'analyse n'a pas pu être générée.",
   );
   if (!analyse.ok) {
-    // ⚠️ PAS DE RÉSUMÉ SANS ANALYSE. Le générer quand même produirait une
-    // version qui ignore la séance qu'on vient de clore, tout en s'affichant
-    // comme la plus récente : une fausse fraîcheur, plus trompeuse qu'un
-    // manque assumé.
-    log.warn("apresSeance.analyse", { code: analyse.error.code });
-    avancer({ analyse: "echouee", resume: "ignoree", message: analyse.error.message });
-    return suivi;
+    // ⚠️ EXCEPTION : `regle-metier` N'EST PAS UN ÉCHEC. La route rend ce code
+    // quand la séance close n'a aucune note brute à analyser (SOAP seul, ou
+    // clôture sans notes — `raw_notes` est GELÉ à la clôture par
+    // `app.save_raw_notes`, mig. 026, donc rien n'est à « relancer »). Le
+    // résumé (`build_case_context`, 068) agrège données structurées, échelles
+    // et séances antérieures : il a encore du travail, et le sauter laisserait
+    // un résumé périmé affiché comme à jour. On marque l'analyse `ignoree` et
+    // on CONTINUE vers l'étape 2. Tout autre code garde l'ancien comportement
+    // (PANNE → résumé ignoré, sinon fausse fraîcheur).
+    if (analyse.error.code === "regle-metier") {
+      log.warn("apresSeance.analyse", { code: analyse.error.code });
+      avancer({ analyse: "ignoree", resume: "attente", message: null });
+    } else {
+      // ⚠️ PAS DE RÉSUMÉ SANS ANALYSE. Le générer quand même produirait une
+      // version qui ignore la séance qu'on vient de clore, tout en s'affichant
+      // comme la plus récente : une fausse fraîcheur, plus trompeuse qu'un
+      // manque assumé.
+      log.warn("apresSeance.analyse", { code: analyse.error.code });
+      avancer({ analyse: "echouee", resume: "ignoree", message: analyse.error.message });
+      return suivi;
+    }
+  } else {
+    // Analyse produite mais NON RANGÉE : la séance suivante ne la retrouvera
+    // pas, et le résumé ne peut pas s'appuyer dessus. On le dit.
+    avancer({ analyse: analyse.data.persistee ? "faite" : "echouee" });
   }
-  // Analyse produite mais NON RANGÉE : la séance suivante ne la retrouvera
-  // pas, et le résumé ne peut pas s'appuyer dessus. On le dit.
-  avancer({ analyse: analyse.data.persistee ? "faite" : "echouee" });
 
   // ── 2 · Le résumé du cas ────────────────────────────────────────────────
   avancer({ resume: "en-cours" });

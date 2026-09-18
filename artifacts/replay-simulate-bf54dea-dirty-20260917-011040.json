@@ -1,0 +1,1063 @@
+{
+  "mission": "M09",
+  "kind": "simulate",
+  "replay": true,
+  "live": false,
+  "gate_version": "m09-replay-v1",
+  "verdict_rule": "FAIL si un FAIL ; sinon NOT RUN si NOT RUN structurel ; sinon PASS (NOT RUN environnementaux enumeres avec motif, jamais convertis en PASS)",
+  "git_revision": "bf54dea-dirty",
+  "timestamp": "2026-09-17T00:15:31.194Z",
+  "duree_s": 291,
+  "verdict": "FAIL",
+  "suites": [
+    {
+      "nom": "compile-intentions",
+      "statut": "PASS",
+      "pass_count": 1,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "cles_vertes": [
+        "compilation"
+      ],
+      "cles_rouges": [],
+      "not_run_reason": null,
+      "required_environment": null,
+      "latence_ms": null,
+      "detail": null
+    },
+    {
+      "nom": "compile-services",
+      "statut": "PASS",
+      "pass_count": 1,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "cles_vertes": [
+        "compilation"
+      ],
+      "cles_rouges": [],
+      "not_run_reason": null,
+      "required_environment": null,
+      "latence_ms": null,
+      "detail": null
+    },
+    {
+      "nom": "compile-frontiere",
+      "statut": "PASS",
+      "pass_count": 1,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "cles_vertes": [
+        "compilation"
+      ],
+      "cles_rouges": [],
+      "not_run_reason": null,
+      "required_environment": null,
+      "latence_ms": null,
+      "detail": null
+    },
+    {
+      "nom": "eval-knowledge-db",
+      "statut": "FAIL",
+      "pass_count": 65,
+      "fail_count": 63,
+      "not_run_count": 0,
+      "cles_vertes": [
+        "coherence-stack",
+        "mode",
+        "FR-01-prov",
+        "FR-02",
+        "FR-02-gold",
+        "FR-02-top1",
+        "FR-02-cit",
+        "FR-02-ver",
+        "FR-02-prov",
+        "FR-03-prov",
+        "FR-04-prov",
+        "FR-05-prov",
+        "FR-06-prov",
+        "AR-01-prov",
+        "AR-02-prov",
+        "AR-03-prov",
+        "DJ-01-prov",
+        "DJ-02-prov",
+        "DJ-03-prov",
+        "XL-01-prov",
+        "XL-02-prov",
+        "DT-01-prov",
+        "DT-02-prov",
+        "NA-01-prov",
+        "NA-02-prov",
+        "NA-03-prov",
+        "NA-04",
+        "NA-04-prov",
+        "GV-01-prov",
+        "GV-02-prov",
+        "GV-03-prov",
+        "GV-04-prov",
+        "IJ-01-prov",
+        "IJ-02-prov",
+        "IJ-03-prov",
+        "FW-01-prov",
+        "FW-02-prov",
+        "FW-03-prov",
+        "NP-01-prov",
+        "NP-02-prov",
+        "WD-01",
+        "WD-01-gold",
+        "WD-01-top1",
+        "WD-01-cit",
+        "WD-01-ver",
+        "WD-01-prov",
+        "WD-02-prov",
+        "WDOSE-01-prov",
+        "SUP-01-prov",
+        "OVD-01-prov",
+        "TY-01",
+        "TY-01-gold",
+        "TY-01-top1",
+        "TY-01-cit",
+        "TY-01-ver",
+        "TY-01-prov",
+        "TY-02-prov",
+        "TR-01-prov",
+        "AB-01-prov",
+        "DS-01-prov",
+        "FRAR-01-prov",
+        "ARFR-01-prov",
+        "LONG-01-prov",
+        "SHORT-01-prov",
+        "determinisme-rerun"
+      ],
+      "cles_rouges": [
+        "parite-tokens",
+        "FR-01",
+        "FR-03",
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "AR-01",
+        "AR-02",
+        "AR-03",
+        "DJ-01",
+        "DJ-02",
+        "DJ-03",
+        "XL-01",
+        "XL-02",
+        "DT-01",
+        "DT-02",
+        "NA-01",
+        "NA-02",
+        "NA-03",
+        "GV-01",
+        "GV-02",
+        "GV-03",
+        "GV-04",
+        "IJ-01",
+        "IJ-02",
+        "IJ-03",
+        "FW-01",
+        "FW-02",
+        "FW-03",
+        "NP-01",
+        "NP-02",
+        "WD-02",
+        "WDOSE-01",
+        "SUP-01",
+        "OVD-01",
+        "TY-02",
+        "TR-01",
+        "AB-01",
+        "DS-01",
+        "FRAR-01",
+        "ARFR-01",
+        "LONG-01",
+        "SHORT-01",
+        "FR-01",
+        "FR-03",
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "AR-01",
+        "AR-02",
+        "AR-03",
+        "DJ-01",
+        "DJ-02",
+        "DJ-03",
+        "XL-01",
+        "XL-02",
+        "DT-01",
+        "DT-02",
+        "NA-01",
+        "NA-02",
+        "NA-03",
+        "GV-01",
+        "GV-02"
+      ],
+      "not_run_reason": null,
+      "required_environment": null,
+      "latence_ms": 230124,
+      "detail": "exit=1"
+    },
+    {
+      "nom": "schema-golden",
+      "statut": "PASS",
+      "pass_count": 4,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "cles_vertes": [
+        "tests/eval/jarvis-intentions.golden.json",
+        "tests/eval/jarvis-conversation.golden.json",
+        "tests/eval/knowledge.golden.json",
+        "tests/eval/knowledge.golden.prod-2026-09-15.json"
+      ],
+      "cles_rouges": [],
+      "not_run_reason": null,
+      "required_environment": null,
+      "latence_ms": 685,
+      "detail": null
+    },
+    {
+      "nom": "preuve-mutation",
+      "statut": "PASS",
+      "pass_count": 1,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "cles_vertes": [
+        "M01-01-mutee-detectee"
+      ],
+      "cles_rouges": [],
+      "not_run_reason": null,
+      "required_environment": null,
+      "latence_ms": null,
+      "detail": "M01-01 mutee GET_NEXT_PATIENT->GET_TODAY_AGENDA : le harness doit FAIL en citant M01-01"
+    },
+    {
+      "nom": "eval-reveil-pipeline",
+      "statut": "NOT RUN",
+      "pass_count": 0,
+      "fail_count": 0,
+      "not_run_count": 1,
+      "cles_vertes": [],
+      "cles_rouges": [],
+      "not_run_reason": "modele ONNX public/wakeword absent ou voix humaine NON MESUREE",
+      "required_environment": "modele ONNX + voix humaine",
+      "latence_ms": null,
+      "detail": null
+    },
+    {
+      "nom": "eval-contexte-seance",
+      "statut": "NOT RUN",
+      "pass_count": 0,
+      "fail_count": 0,
+      "not_run_count": 1,
+      "cles_vertes": [],
+      "cles_rouges": [],
+      "not_run_reason": "source supabase/functions/_shared/contexte-seance.ts absente (pre-existant)",
+      "required_environment": "source vivante src/server/jarvis/ (re-cablage hors perimetre M09)",
+      "latence_ms": null,
+      "detail": null
+    },
+    {
+      "nom": "eval-resume-cas",
+      "statut": "NOT RUN",
+      "pass_count": 0,
+      "fail_count": 0,
+      "not_run_count": 1,
+      "cles_vertes": [],
+      "cles_rouges": [],
+      "not_run_reason": "source supabase/functions/_shared/resume-cas.ts absente (pre-existant)",
+      "required_environment": "source vivante src/server/jarvis/resume-cas.ts (re-cablage hors perimetre M09)",
+      "latence_ms": null,
+      "detail": null
+    },
+    {
+      "nom": "live-model-quality",
+      "statut": "NOT RUN",
+      "pass_count": 0,
+      "fail_count": 0,
+      "not_run_count": 1,
+      "cles_vertes": [],
+      "cles_rouges": [],
+      "not_run_reason": "aucun modele pine pour la qualite live (variance free-tier 5s-180s)",
+      "required_environment": "modele pine ou runtime local M13",
+      "latence_ms": null,
+      "detail": null
+    },
+    {
+      "nom": "live-reexecution",
+      "statut": "NOT RUN",
+      "pass_count": 0,
+      "fail_count": 0,
+      "not_run_count": 1,
+      "cles_vertes": [],
+      "cles_rouges": [],
+      "not_run_reason": "re-execution live interdite en M09 (texte brut + UUID stables vers le fournisseur)",
+      "required_environment": "cabinet d'eval isole + revue de minimisation (decision humaine)",
+      "latence_ms": null,
+      "detail": null
+    },
+    {
+      "nom": "model-comparison-live",
+      "statut": "NOT RUN",
+      "pass_count": 0,
+      "fail_count": 0,
+      "not_run_count": 1,
+      "cles_vertes": [],
+      "cles_rouges": [],
+      "not_run_reason": "comparaison live interdite en M09 (meme motif)",
+      "required_environment": "runtime local M13 + cabinet isole",
+      "latence_ms": null,
+      "detail": null
+    },
+    {
+      "nom": "e2e",
+      "statut": "NOT RUN",
+      "pass_count": 0,
+      "fail_count": 0,
+      "not_run_count": 1,
+      "cles_vertes": [],
+      "cles_rouges": [],
+      "not_run_reason": "exigent pnpm start + /api/health ; le replayer ne lance pas de serveurs",
+      "required_environment": "app demarree + base locale",
+      "latence_ms": null,
+      "detail": null
+    },
+    {
+      "nom": "scan-pii",
+      "statut": "FAIL",
+      "pass_count": 0,
+      "fail_count": 1,
+      "not_run_count": 0,
+      "cles_vertes": [],
+      "cles_rouges": [
+        "scripts/eval-knowledge-db.mjs: uuid-reel e214a52c-ca50…"
+      ],
+      "not_run_reason": null,
+      "required_environment": null,
+      "latence_ms": null,
+      "detail": "goldens + scripts replayer : courriels/telephones/dossiers/UUID reels ; placeholders, corpus IDs declares et prenoms de fixtures admis"
+    }
+  ],
+  "totaux": {
+    "suites": 14,
+    "PASS": 73,
+    "FAIL": 64,
+    "NOT RUN": 7,
+    "cas": 108,
+    "cas_non_mappes": 108
+  },
+  "cas": [
+    {
+      "famille": "intentions",
+      "id": "M01-01",
+      "empreinte": "23666479f7b1026fe330945f98bc2c0abb5ad901c846aeea40f1783fce378ccc",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-02",
+      "empreinte": "4983b0b14f0c43eda2375c59a1c474c1fdb921e69130eb2e1ab7b8370fe2ba77",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-03",
+      "empreinte": "177054e33243ff52458aad6e5571677e64af07c8ee6676343e181d60bc2bfc5d",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-04",
+      "empreinte": "145a0a4403aa91f6a814ffb39464575d2abd1e6dd795a823aed81b07a0a32751",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-05",
+      "empreinte": "d3f976e6f65588065f88384047f3982b36579308312d12143c03ec1eb35ac428",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-06",
+      "empreinte": "097cb03a839d5f575a634d12eaa1f54d79b07352aa6bf8c7c214c654c218b79e",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-07",
+      "empreinte": "eb13bd4fe061a4200eb494ed75d968f7e24aa0eb6a653308258deb190b920402",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-08",
+      "empreinte": "e1f926f028a465eb9318f4de36e0db4826222bec74648c215b6a8e908100449e",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-09",
+      "empreinte": "1ebe8521599abe7cdc85f3ab788d506a5846f49e977e5a11cb8a5984f6eccd6a",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-10",
+      "empreinte": "83acda996bb4368b7630a33baf631f93b6645610b95812fbb7504e391eb6b808",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-11",
+      "empreinte": "20bc8690ebd4777465190d871da405180fb1126933d763c25c096d41b044d905",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-12",
+      "empreinte": "cccd58cb0010155192c36d96c160b59078b6a6b3748eb0cd5a947131af38fd80",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-13",
+      "empreinte": "545f4d906a2df6743047185df3bcbe47483774d7795ba217156081d0597565d4",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-14",
+      "empreinte": "5c37be48383dc7f72bfc93006c5efbbc3b45a2120bfc14834aa165fb64d94647",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-15",
+      "empreinte": "a7ec10289c71f7aed990c4b6c638bc76a644183346e94ec714479d4b1cb0d370",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-16",
+      "empreinte": "afe6d6b9feaa4e660f40f83d873867a873ad5f16c0ff153389e4bbf3fd504502",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-17",
+      "empreinte": "57e1f102ee97a6d9ed1efb45adb6fc0f24f1d4a72d12c7a6bb62304b05933066",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-18",
+      "empreinte": "f6b325669a5aade39798430615852fb1300e3d42f930ae07aea0319df8072def",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-19",
+      "empreinte": "8aaed8781566691571b90ec5df10cb697bf34fcfb009ce39dc173075c5e077fa",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-20",
+      "empreinte": "376714049f6abd820212a88df119b35b9653b3bd2d855d39c0bec2a637b55f9b",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-21",
+      "empreinte": "18c0c7f0ff6f65fe262a9d0f383af84e480d9722cdac81ee82fcda09fd315b41",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-22",
+      "empreinte": "0cefa62859231b7d7a8eecfad954575a0cc8f81eddad7da702fd57a374866e6a",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-23",
+      "empreinte": "4346ed27a38eb4cbef2b8c10e117239aa19f83cbb583bed1ff25ee3c9b6064a3",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-24",
+      "empreinte": "c69c2b958faa75394218319f3c6bcd0c33cbbf101fb5774f142d85a38b531a72",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-25",
+      "empreinte": "712a8f4b436102275efde93139558f3695d63e5d7452e7e631ea3f6d72f18cf4",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-26",
+      "empreinte": "f29487343974c54466b8abd7b6db859a21d881b98ecd19a8436bce27f1ecec03",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-27",
+      "empreinte": "44e9e58117b271f0a9b835773b85bf8b75ccee24b222d3d3a6f7d55c9a1f0df6",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-28",
+      "empreinte": "22f4e706b1e07d6f0b4ac465dfeacb3cdb88b0cb2efa3337131597ffac98884c",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-29",
+      "empreinte": "a4c053dea7b852c9c49888e8833a504ef4c7ce0f51a3571523a08c8f7d25ee33",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-30",
+      "empreinte": "afab220b480be4f3c3b5b77afde5f3eaf1c1b5d3b449eb5a245d8315231bc3e3",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-31",
+      "empreinte": "3d45e070bd26059d81876a2aa92c765778cf7656ed42d94f35d338eca89ca426",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-32",
+      "empreinte": "f919cd410140005d1909f325523b7fcdd18ee5576798c2d2fb65a030cfbf82fd",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-33",
+      "empreinte": "5b62973054f21c6b37e76bcd2d64d19ae06445bd9483070fadc572bdc111f71a",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-34",
+      "empreinte": "a59289a2f09d4f6e9b23ad40b96ed88f6652befdbed5511bafcb3c93fd85e9b5",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-35",
+      "empreinte": "d1db2470460aa6bf0d1ff3bd47b845c46ae6a8dd19129a40b2e34d6b02d0f216",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-36",
+      "empreinte": "a058867df1e37307f2a76ca620c0c61fe7144e59780c1447146df8890c0c39c0",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-37",
+      "empreinte": "e05636fc11c9a8e3910ece78c81a6660cd831c42b8a566f923ef1a96b6f9b185",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-38",
+      "empreinte": "db1160f89288a7354cf1b698f97dc20e3569f88c680d5b4817619f9f6ec0856a",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-39",
+      "empreinte": "71b4c433e2b80f1ed2b3386fafbe937b93b2000ed4d5f1ac9095527fa2605017",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-40",
+      "empreinte": "9a66d41831331de443e7ea1bd217586dbdf2cd1ff5f02d85536c4616590f5f58",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-41",
+      "empreinte": "221eb11bad35ea8c8ae0924377644f81a0807c75352e28fb8197ad2c75d43cc6",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-42",
+      "empreinte": "255ac8a66ae15f4d900f8ac3cb56338c86fed49ecad640b141db59e5e6e9f47c",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-43",
+      "empreinte": "ce4b61646c83178a160c37e36e79d81b3cf04f166c415f1e07740e73c862143d",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-44",
+      "empreinte": "9f30641857a47f47f6f083582dca226d058bdb8b6faad0dbc7bb618dff44e4e6",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-45",
+      "empreinte": "b643c7f11b684df9ddf135bfc59810a0327550697e6b0c1ae6f34fca02d7c2a7",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-46",
+      "empreinte": "4c1147fbe5c75314244b0073b163835a7624b336652079ae08ae42e87959fa10",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "intentions",
+      "id": "M01-47",
+      "empreinte": "72b0107562c43a24cf6dd9892a51d9bc4899fd7626d487eeddd97ae7967f1ba5",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "conversation",
+      "id": "A-chaine-karim-5-tours",
+      "empreinte": "e97ecc0a91ee3943863ddbad649eb95816a162559a0e134e03002cc27d79100f",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "conversation",
+      "id": "B-override-nadia-puis-karim",
+      "empreinte": "e96c2d8a24f233980336ac81844899b6c57f2be3f9b145d3c5269b1ce5b63744",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "conversation",
+      "id": "C-sarah-zero-pas-de-repli",
+      "empreinte": "1235df14b40e0c7fe4e92a20e5b9b928ec4656a3fb85423f981de60333beb82c",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "conversation",
+      "id": "D-mohameds-ambigu",
+      "empreinte": "04ddd0fbd0c7796719adb1b18d67748c280ba9a6ad712caa32244668bf97d595",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "conversation",
+      "id": "E-pronom-sans-antecedent",
+      "empreinte": "16887e3450dd7094f85565c371090a8c8c085859b041b991202d3eeed335f432",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "conversation",
+      "id": "F-ecran-prime",
+      "empreinte": "5cb8aae9679428876d8b317b2793a1caeb4fb37df253a508e9690006963f429f",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "conversation",
+      "id": "G-darija-explicite",
+      "empreinte": "8c2e60a6bd6cbf88d531aa5140b023c1f0a281a322beb760d5946e59bf81584e",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "conversation",
+      "id": "H-injection-donnee",
+      "empreinte": "a02f9454225f97ae437d82c1fff9a92b390d8cb00ba2c6a07f7ce8beb746a321",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "conversation",
+      "id": "I-porte-de-fil",
+      "empreinte": "3c7b4fb1db0fc9d3ff4eb782920e3b385b9c3b125819c9236daff1e941c1248d",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "conversation",
+      "id": "J-coupe-circuit",
+      "empreinte": "dff77be9307a5189ea4ca3ce0ac4a0efeb754602baf4c1653ffc6bbe05fa93cc",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "conversation",
+      "id": "K-sonde-en-panne",
+      "empreinte": "051a3b14c17d6fd2bdf1a4a2d453566d931017b22aed066c35f5c3fa77c86e8a",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "conversation",
+      "id": "L-ecriture-casse-chaine",
+      "empreinte": "2a3b32882b0b6837cdebbb92e4f65acb8fd9d8e5e16fd17408f5fb34f14484b4",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "conversation",
+      "id": "N-darija-chaine-suivi",
+      "empreinte": "50ae4ebc5e650e07cc0e11c2730e8faa46ee330ae5ed336c14b2621c057e3ee8",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "conversation",
+      "id": "O-preparer-consultation-pronom",
+      "empreinte": "8d821a1b90bd28f5c8646c44f00bca1d1ebea1bd16ffe0177ebd67e0b1d9c205",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "conversation",
+      "id": "M-darija-zero-yacine",
+      "empreinte": "60bd11cf912733936451b986e88c41b334648eca95cf1f73db0b3ee1187edd21",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "FR-01",
+      "empreinte": "0386197a4c9eeb3324d5da3feac7a54a59d8b486bf393162446c161e93240d3e",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "FR-02",
+      "empreinte": "57961f18b18af76fde41b81fd60cb9bd9f75cccede4393d54c7aa38eaddf329e",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "FR-03",
+      "empreinte": "d69958028e940dcaa73ecb1c06275b59c539ad20a9267a0f457a4cd42eab5164",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "FR-04",
+      "empreinte": "468111d03008fd653551c7f7bd0f8efaede0caaa3982640afd73e7677f811180",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "FR-05",
+      "empreinte": "400300d06af4a5efde4d9777ef20892c37ee757b4cabb630edfda0604b3aadac",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "FR-06",
+      "empreinte": "c8b9aa3c729296e12105422042bfc3fe01d7477ddf9467a6d2d20a66a49fa842",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "AR-01",
+      "empreinte": "e8654a538535d1e82c5e50ba574c268c611bdfb9d50c3a1c9af62addeb4ea255",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "AR-02",
+      "empreinte": "0366735201ec2ddad266e5b35dfccfaa247b3d949be3ea435eae6f4f9de8cced",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "AR-03",
+      "empreinte": "c27283dd8f3cfed54205daf5b6336bdb3db578c880684619d947678a38eff7fb",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "DJ-01",
+      "empreinte": "486eca469210371f8417d337277fe20a7f561232c62cb2d0364aa7a6660d0668",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "DJ-02",
+      "empreinte": "c93719a2b976ef4a46f9dc24fad022af205445f8a38968010b1fd55a1086e2c9",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "DJ-03",
+      "empreinte": "6929d21d65c773fea6d8283336a30f65045edf3f778393ceb8f7f5b6590332b7",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "XL-01",
+      "empreinte": "4aa5f9f99f0626f05405bdf6a159a0b7939141fd1eacc1a91ef23da9603c9aa9",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "XL-02",
+      "empreinte": "4220c6ff9aa07f8aba5eae91fefbc4d8ae08a659f82b3093716525b7ba4b2cf7",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "DT-01",
+      "empreinte": "8e81922a610c183a10e8372a14a72a1a6b4a18377097b526b071a7da9b74aaee",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "DT-02",
+      "empreinte": "d9eea3661f1343621f42a30c031c1b2f66627453e17a1ce8c4c0893a12a6f6df",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "NA-01",
+      "empreinte": "7ff14728283c2e1e88fc9215c49986cad20a55b23d1d6422d929b373a7b952e0",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "NA-02",
+      "empreinte": "d655f3174a668432732f30ee45153a11a0b6d02c3537b0fb7dc1b81f9ce790c1",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "NA-03",
+      "empreinte": "a3ad6d37a476e649b34de28fbac62086d111715ed16297efd843f794ebac2489",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "NA-04",
+      "empreinte": "9f71e82f08a69d58c8faff12201aaae9206664e1b9c713d3da67cf4399e7d473",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "GV-01",
+      "empreinte": "76f673e448951440d01f3af3fd23b1f88e91645271427c0046c4940b4562fa49",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "GV-02",
+      "empreinte": "08310f1668e5669f2112a3c71aff88d2ce97ac5dd3727794f7fc5f61e6dc2383",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "GV-03",
+      "empreinte": "a640cc04a4dae1a3bcade05335bbdd70f760e5423d730beb66ef58a74c5bc810",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "GV-04",
+      "empreinte": "ee5cf3a2d7f6dd4ac083609ea85f9bc0d54a59503dea616d98ae956d5ee3a170",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "IJ-01",
+      "empreinte": "d33beeb37480690aec8c920691138207d631b8857cc05fbe524f6c428ef63f6b",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "IJ-02",
+      "empreinte": "240045de6e46357982225654cb834b586687a2aa1361b67e57da11f623220a7e",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "IJ-03",
+      "empreinte": "438802fb120f504005390a1ed3dca91a69dad71c7990c008e9e2942a0de337f4",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "FW-01",
+      "empreinte": "7d7335653a2caec0798ed198e8979e4b707fa2e45bd1e41682c939f29b5b3231",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "FW-02",
+      "empreinte": "72690494732ea1b7d1841a7bdefa94b9acb555710693846fb4e6633c62049fc8",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "FW-03",
+      "empreinte": "58bbaca23d04fff5db2961cba92beeaba9cad135b8659b13002338f85287b6c8",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "NP-01",
+      "empreinte": "06c0e37215f9f4eeb64c867556d1fb2d29877d25c8e5ce3c715006f8ca8a35bb",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "NP-02",
+      "empreinte": "57d39f40c17106d8dde3159fc199557da1968a69d8a80de012836a4c3697ef0d",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "WD-01",
+      "empreinte": "56475aa209f01e785165bba2f256c65108794ecda0e9e04fdb1fdadd37e1c562",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "WD-02",
+      "empreinte": "31ed9d202f673e69eaf9882a6d6af9ba27aa3a00ac41d5339c60bd6bb4fb3865",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "WDOSE-01",
+      "empreinte": "080bf4a99099973d5672e81b3a66730a02f3d4b2e28224dab5270894cd8600c3",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "SUP-01",
+      "empreinte": "f03314e6940b4b41dc614aba8f8dfdff5bfe6a1dd5a31f029eaea834d6fcf001",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "OVD-01",
+      "empreinte": "0ead0247f7840153e3ebde4d9c2e943ccef5ee5d1220852812c98ddd9220394e",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "TY-01",
+      "empreinte": "6b17c8d7986acc1c1fc6237955d9afd00f4650401f131d84473f2468a1765dde",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "TY-02",
+      "empreinte": "89b1ab73c8177fee3a67f1f32e81f0ecdd4cbf61eea2312153e0734a29ee96e8",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "TR-01",
+      "empreinte": "d61c4479d423f40af14bcbab4ed4c348efdd528908a8258af2c21472313fe7b4",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "AB-01",
+      "empreinte": "803c5b0c1d045ac6a9fa45d8419fcca42b36821b7b0f8d2f1caaaa8ea67fb085",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "DS-01",
+      "empreinte": "7b0c78a3359177814a19e019f52aa427efd1eabfed6cdb3d08bfa3aa3525e1ee",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "FRAR-01",
+      "empreinte": "9e588c2dbf1744b7fc5cbdbe6f853329cbf010f70d2523b1b8338ed1c30f4755",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "ARFR-01",
+      "empreinte": "920679c1419551cbbd9867043d174d7d67470f8460723ae927f499f28494b2f0",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "LONG-01",
+      "empreinte": "d29ee1cbc88b5f4241e9f81991f7e3eb1d5e3c7a49209f2eb7911fdb910c1dab",
+      "verdict": "non-mappe"
+    },
+    {
+      "famille": "connaissance",
+      "id": "SHORT-01",
+      "empreinte": "7856c4bc952461f27de5f5c3344ccfce738e94c5b3b1b7af07f5e960c9f3f0c5",
+      "verdict": "non-mappe"
+    }
+  ],
+  "provenance": {
+    "goldens_hash": "223f48d8c61537dd2f1e34a7f0a45cde0b86fadd91034f6637a0266a8d26ae67",
+    "schema_version": "m08-schema-v1",
+    "prompts_hash": "56daf7ff09f6add1eefe949a88e09ec680c94c81cae43bd0e12fbff078023492",
+    "prompts_versions": [
+      "v3.0",
+      "v3.1",
+      "v3.2",
+      "PROMPT_VERSION = \"v3.2\"",
+      "PROMPT_VERSION = \"intent-v1\""
+    ],
+    "fichiers_goldens": [
+      {
+        "fichier": "tests/eval/jarvis-intentions.golden.json",
+        "sha256": "1974814fb6c9dad13d35077c2d25888f1c3d33a2c9931e80bcba32d6868a7dd9"
+      },
+      {
+        "fichier": "tests/eval/jarvis-conversation.golden.json",
+        "sha256": "da73ddbc34e20ec40acf7f19169e4f76f1261377c5df35b005cb262a99ca546a"
+      },
+      {
+        "fichier": "tests/eval/knowledge.golden.json",
+        "sha256": "93dc66401e2180a9cafe72ffc611fcc2910850cb4350bc4b7dfcbf8884a55a12"
+      }
+    ]
+  },
+  "not_run_reasons": [
+    {
+      "suite": "eval-reveil-pipeline",
+      "reason": "modele ONNX public/wakeword absent ou voix humaine NON MESUREE",
+      "required_environment": "modele ONNX + voix humaine"
+    },
+    {
+      "suite": "eval-contexte-seance",
+      "reason": "source supabase/functions/_shared/contexte-seance.ts absente (pre-existant)",
+      "required_environment": "source vivante src/server/jarvis/ (re-cablage hors perimetre M09)"
+    },
+    {
+      "suite": "eval-resume-cas",
+      "reason": "source supabase/functions/_shared/resume-cas.ts absente (pre-existant)",
+      "required_environment": "source vivante src/server/jarvis/resume-cas.ts (re-cablage hors perimetre M09)"
+    },
+    {
+      "suite": "live-model-quality",
+      "reason": "aucun modele pine pour la qualite live (variance free-tier 5s-180s)",
+      "required_environment": "modele pine ou runtime local M13"
+    },
+    {
+      "suite": "live-reexecution",
+      "reason": "re-execution live interdite en M09 (texte brut + UUID stables vers le fournisseur)",
+      "required_environment": "cabinet d'eval isole + revue de minimisation (decision humaine)"
+    },
+    {
+      "suite": "model-comparison-live",
+      "reason": "comparaison live interdite en M09 (meme motif)",
+      "required_environment": "runtime local M13 + cabinet isole"
+    },
+    {
+      "suite": "e2e",
+      "reason": "exigent pnpm start + /api/health ; le replayer ne lance pas de serveurs",
+      "required_environment": "app demarree + base locale"
+    }
+  ],
+  "comparaison": null
+}

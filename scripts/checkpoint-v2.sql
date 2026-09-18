@@ -159,6 +159,33 @@ BEGIN
 END $$;
 SELECT pg_temp.verdict('C11 · reject → rejected', st = 'rejected', 'state=' || st) FROM r_c11;
 
+-- C11b/C11c — NEG-1 complet (M06) : propose → reject → confirm LÈVE →
+-- execute LÈVE, état toujours `rejected`, aucun affecté, zéro mutation métier.
+-- C11 prouvait le rejet ; C7 l'exécution sans confirmation ; ici la séquence
+-- entière, refusée aux deux portes.
+DO $$
+DECLARE v_id uuid; v_conf_leve boolean := false; v_exec_leve boolean := false;
+BEGIN
+  v_id := app.propose_jarvis_action(gen_random_uuid(), 'annule', 'create_appointment',
+            '{"patient_id":"00000000-0000-0000-0000-0000000000b1"}');
+  PERFORM app.reject_jarvis_action(v_id);
+  BEGIN PERFORM app.confirm_jarvis_action(v_id);
+  EXCEPTION WHEN others THEN v_conf_leve := true;
+  END;
+  BEGIN PERFORM app.execute_jarvis_action(v_id);
+  EXCEPTION WHEN others THEN v_exec_leve := true;
+  END;
+  CREATE TEMP TABLE r_c11bc AS
+  SELECT v_conf_leve AS conf_leve, v_exec_leve AS exec_leve,
+    (SELECT state::text FROM app.jarvis_actions WHERE id = v_id) AS st,
+    (SELECT affected_id FROM app.jarvis_actions WHERE id = v_id) AS aff;
+END $$;
+SELECT pg_temp.verdict('C11b · confirm après reject lève', conf_leve,
+  CASE WHEN conf_leve THEN 'exception levée' ELSE 'CONFIRMÉE APRÈS REJET' END) FROM r_c11bc;
+SELECT pg_temp.verdict('C11c · execute après reject lève, zéro mutation',
+  exec_leve AND st = 'rejected' AND aff IS NULL,
+  'leve=' || exec_leve || ' state=' || st || ' affected=' || coalesce(aff::text,'NULL')) FROM r_c11bc;
+
 -- C12 — outil hors allowlist refusé par la porte, message lisible
 DO $$
 DECLARE v_ok boolean := false;
@@ -208,6 +235,33 @@ END $$;
 SELECT pg_temp.verdict('C15 · chemin nominal : executed + RDV réel',
   st = 'executed' AND aff IS NOT NULL AND n = 1,
   'state=' || st || ' rdv=' || n || coalesce(' err=' || err, '')) FROM r_c15;
+
+-- C17 — exécution dupliquée, même `actionId` (M06) : le second `execute` LÈVE
+-- et UNE SEULE ligne métier existe. Prouve la suppression de doublon par
+-- machine d'état (`FOR UPDATE` + `executed <> confirmed`) — PAS une
+-- idempotence d'affaires : rejouer l'opération métier reste interdit.
+DO $$
+DECLARE v_id uuid; v_aff uuid; v_second_leve boolean := false; v_n integer;
+BEGIN
+  v_id := app.propose_jarvis_action(gen_random_uuid(), 'crée un RDV', 'create_appointment',
+    json_build_object('patient_id','00000000-0000-0000-0000-0000000000b1',
+                      'practitioner_id','00000000-0000-0000-0000-0000000000a1',
+                      'starts_at', (now() + interval '3 days')::text,
+                      'duration_minutes', 30,
+                      'notes_admin', null,
+                      'kind', 'suivi')::text);
+  PERFORM app.confirm_jarvis_action(v_id);
+  SELECT app.execute_jarvis_action(v_id) INTO v_aff;
+  BEGIN PERFORM app.execute_jarvis_action(v_id);
+  EXCEPTION WHEN others THEN v_second_leve := true;
+  END;
+  SELECT count(*) INTO v_n FROM app.appointments WHERE id = v_aff;
+  CREATE TEMP TABLE r_c17 AS SELECT v_second_leve AS leve, v_n AS n,
+    (SELECT state::text FROM app.jarvis_actions WHERE id = v_id) AS st;
+END $$;
+SELECT pg_temp.verdict('C17 · second execute lève, un seul RDV',
+  leve AND n = 1 AND st = 'executed',
+  'seconde leve=' || leve || ' rdv=' || n || ' state=' || st) FROM r_c17;
 
 -- ═══ 5 · Cloisonnement — mesuré depuis une AUTRE praticienne ═══
 SET request.jwt.claim.sub = '00000000-0000-0000-0000-0000000000a2';

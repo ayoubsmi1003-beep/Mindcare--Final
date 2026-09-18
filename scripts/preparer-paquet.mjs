@@ -45,15 +45,20 @@ const AUTONOME = path.join(RACINE, ".next", "standalone");
 const CIBLE = path.join(RACINE, "resources", "serveur");
 
 /**
- * Les trois seuls scripts que l'application installée exécute (§I) :
+ * Les seuls scripts que l'application installée exécute (§I) :
  * la garde de port, le contrôle de schéma au démarrage, la sauvegarde.
- * `lib/dburl.mjs` est la dépendance interne de `sauvegarde.mjs`.
+ * `lib/dburl.mjs` est la dépendance interne de `sauvegarde.mjs` ;
+ * `lib/base-locale.mjs` celle de `verifier-base.mjs` (LM54.3 — cycle de
+ * vie de la base de développement : dans le paquet installé, le Docker
+ * y est absent et `attendreDemon` rendra son diagnostic structuré au
+ * lieu de casser l'import).
  */
 const SCRIPTS_LIVRES = [
   "garde-origine.mjs",
   "verifier-base.mjs",
   "sauvegarde.mjs",
   path.join("lib", "dburl.mjs"),
+  path.join("lib", "base-locale.mjs"),
 ];
 
 function etape(message) {

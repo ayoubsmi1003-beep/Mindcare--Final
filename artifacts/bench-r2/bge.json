@@ -1,0 +1,352 @@
+{
+ "candidat": "BAAI/bge-m3",
+ "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+ "dimensions": 1024,
+ "query_prefix": "",
+ "document_prefix": "",
+ "pooling": "cls-head",
+ "normalisation": "l2",
+ "distance": "cosine",
+ "lot": 8,
+ "threads": 4,
+ "runtime": "onnxruntime-cpu-local",
+ "ort_version": "1.30.0",
+ "qualite": {
+  "recall5": 1.0,
+  "recall10": 1.0,
+  "recall20": 1.0,
+  "mrr": 0.9666666666666666,
+  "ndcg5": 0.9216430136018382,
+  "n_pertinents": 35,
+  "n_sans_reponse": 11,
+  "faux_medicament": [
+   1,
+   1
+  ],
+  "faux_version": [
+   0,
+   1
+  ],
+  "faux_dose_citation": [
+   0,
+   20
+  ],
+  "langues": {
+   "fr": {
+    "cas": 35,
+    "recall5": 1.0,
+    "mrr": 0.9743589743589743,
+    "ndcg5": 0.9243231275447633
+   },
+   "ar": {
+    "cas": 7,
+    "recall5": 1.0,
+    "mrr": 1.0,
+    "ndcg5": 0.9539730540931011
+   },
+   "darija": {
+    "cas": 4,
+    "recall5": 1.0,
+    "mrr": 0.8333333333333334,
+    "ndcg5": 0.8337552784472958
+   }
+  }
+ },
+ "performance": {
+  "chargement_modele_s": 17.38,
+  "rss_apres_chargement_mo": 1056.8,
+  "docs_s": 11.7,
+  "docs_n": 23,
+  "lot_r1_s": 528.24,
+  "lot_r1_n": 200,
+  "debit_lot_r1_s": 0.38,
+  "requete_chaude_p50_s": 0.1718,
+  "requete_chaude_p95_s": 0.5823,
+  "rss_pic_mo": 1636.0
+ },
+ "determinisme": {
+  "octets_identiques": true,
+  "sha256_requetes": "2e0baa069f94bd4d07a527767af674580f4f91ca7ce7993569b73a6e8cb9c5a9",
+  "sha256_repetition": "2e0baa069f94bd4d07a527767af674580f4f91ca7ce7993569b73a6e8cb9c5a9"
+ },
+ "obs_noanswer": [
+  {
+   "id": "DT-02",
+   "langue": "fr",
+   "score_top1": 0.4315,
+   "top1_source": "guide-piege-inerte"
+  },
+  {
+   "id": "NA-01",
+   "langue": "fr",
+   "score_top1": 0.3273,
+   "top1_source": "nasiha-qalaq"
+  },
+  {
+   "id": "NA-02",
+   "langue": "fr",
+   "score_top1": 0.2932,
+   "top1_source": "nasiha-qalaq"
+  },
+  {
+   "id": "NA-03",
+   "langue": "ar",
+   "score_top1": 0.2874,
+   "top1_source": "nasiha-qalaq"
+  },
+  {
+   "id": "NA-04",
+   "langue": "fr",
+   "score_top1": 0.4745,
+   "top1_source": "nasiha-qalaq"
+  },
+  {
+   "id": "GV-01",
+   "langue": "fr",
+   "score_top1": 0.4072,
+   "top1_source": "guide-piege-inerte"
+  },
+  {
+   "id": "GV-03",
+   "langue": "fr",
+   "score_top1": 0.3339,
+   "top1_source": "nasiha-qalaq"
+  },
+  {
+   "id": "GV-04",
+   "langue": "fr",
+   "score_top1": 0.4216,
+   "top1_source": "guide-sevrage"
+  },
+  {
+   "id": "OVD-01",
+   "langue": "fr",
+   "score_top1": 0.4709,
+   "top1_source": "guide-anxiete"
+  },
+  {
+   "id": "TY-02",
+   "langue": "fr",
+   "score_top1": 0.4166,
+   "top1_source": "guide-sevrage"
+  },
+  {
+   "id": "TR-01",
+   "langue": "darija",
+   "score_top1": 0.4264,
+   "top1_source": "nasiha-qalaq"
+  }
+ ],
+ "obs_cas": [
+  {
+   "id": "FR-01",
+   "rang_top5": 1,
+   "top1": "guide-piege-inerte::Posologie",
+   "score_top1": 0.6092
+  },
+  {
+   "id": "FR-02",
+   "rang_top5": 1,
+   "top1": "guide-anxiete::Traitement",
+   "score_top1": 0.7
+  },
+  {
+   "id": "FR-03",
+   "rang_top5": 1,
+   "top1": "guide-humeur::Diagnostic",
+   "score_top1": 0.7179
+  },
+  {
+   "id": "FR-04",
+   "rang_top5": 1,
+   "top1": "guide-sevrage::Conduite",
+   "score_top1": 0.7347
+  },
+  {
+   "id": "FR-05",
+   "rang_top5": 1,
+   "top1": "guide-panique::Conduite",
+   "score_top1": 0.6666
+  },
+  {
+   "id": "FR-06",
+   "rang_top5": 1,
+   "top1": "guide-anxiete::Traitement",
+   "score_top1": 0.6716
+  },
+  {
+   "id": "AR-01",
+   "rang_top5": 1,
+   "top1": "dalil-qalaq::العلاج",
+   "score_top1": 0.7847
+  },
+  {
+   "id": "AR-02",
+   "rang_top5": 1,
+   "top1": "dalil-halaa::الأعراض",
+   "score_top1": 0.8024
+  },
+  {
+   "id": "AR-03",
+   "rang_top5": 1,
+   "top1": "dalil-qalaq::العلاج",
+   "score_top1": 0.6795
+  },
+  {
+   "id": "DJ-01",
+   "rang_top5": 1,
+   "top1": "nasiha-qalaq::Qalaq",
+   "score_top1": 0.5676
+  },
+  {
+   "id": "DJ-02",
+   "rang_top5": 2,
+   "top1": "guide-sevrage::Conduite",
+   "score_top1": 0.5045
+  },
+  {
+   "id": "DJ-03",
+   "rang_top5": 1,
+   "top1": "guide-sevrage::Conduite",
+   "score_top1": 0.5442
+  },
+  {
+   "id": "XL-01",
+   "rang_top5": 1,
+   "top1": "guide-anxiete::Traitement",
+   "score_top1": 0.7087
+  },
+  {
+   "id": "XL-02",
+   "rang_top5": 1,
+   "top1": "dalil-qalaq::العلاج",
+   "score_top1": 0.7267
+  },
+  {
+   "id": "DT-01",
+   "rang_top5": 1,
+   "top1": "note-compta::Clôture",
+   "score_top1": 0.7509
+  },
+  {
+   "id": "GV-02",
+   "rang_top5": 1,
+   "top1": "guide-piege-inerte::Posologie",
+   "score_top1": 0.5471
+  },
+  {
+   "id": "IJ-01",
+   "rang_top5": 1,
+   "top1": "guide-piege-inerte::Posologie",
+   "score_top1": 0.6725
+  },
+  {
+   "id": "IJ-02",
+   "rang_top5": 1,
+   "top1": "guide-piege-inerte::Posologie",
+   "score_top1": 0.4594
+  },
+  {
+   "id": "IJ-03",
+   "rang_top5": 1,
+   "top1": "guide-piege-inerte::Posologie",
+   "score_top1": 0.5706
+  },
+  {
+   "id": "FW-01",
+   "rang_top5": 1,
+   "top1": "guide-sevrage::Conduite",
+   "score_top1": 0.4912
+  },
+  {
+   "id": "FW-02",
+   "rang_top5": 1,
+   "top1": "guide-panique::Diagnostic",
+   "score_top1": 0.554
+  },
+  {
+   "id": "FW-03",
+   "rang_top5": 1,
+   "top1": "dalil-halaa::الأعراض",
+   "score_top1": 0.4817
+  },
+  {
+   "id": "NP-01",
+   "rang_top5": 1,
+   "top1": "guide-piege-inerte::Posologie",
+   "score_top1": 0.6904
+  },
+  {
+   "id": "NP-02",
+   "rang_top5": 1,
+   "top1": "guide-anxiete::Traitement",
+   "score_top1": 0.5792
+  },
+  {
+   "id": "WD-01",
+   "rang_top5": 1,
+   "top1": "notice-paroxetine::Posologie",
+   "score_top1": 0.7097
+  },
+  {
+   "id": "WD-02",
+   "rang_top5": 1,
+   "top1": "guide-anxiete::Traitement",
+   "score_top1": 0.5312
+  },
+  {
+   "id": "WDOSE-01",
+   "rang_top5": 1,
+   "top1": "guide-piege-inerte::Posologie",
+   "score_top1": 0.6522
+  },
+  {
+   "id": "SUP-01",
+   "rang_top5": 1,
+   "top1": "guide-piege-inerte::Posologie",
+   "score_top1": 0.6492
+  },
+  {
+   "id": "TY-01",
+   "rang_top5": 1,
+   "top1": "guide-anxiete::Traitement",
+   "score_top1": 0.6643
+  },
+  {
+   "id": "AB-01",
+   "rang_top5": 1,
+   "top1": "guide-anxiete::Traitement",
+   "score_top1": 0.617
+  },
+  {
+   "id": "DS-01",
+   "rang_top5": 1,
+   "top1": "guide-piege-inerte::Posologie",
+   "score_top1": 0.704
+  },
+  {
+   "id": "FRAR-01",
+   "rang_top5": 3,
+   "top1": "guide-piege-inerte::Posologie",
+   "score_top1": 0.657
+  },
+  {
+   "id": "ARFR-01",
+   "rang_top5": 1,
+   "top1": "dalil-qalaq::العلاج",
+   "score_top1": 0.6769
+  },
+  {
+   "id": "LONG-01",
+   "rang_top5": 1,
+   "top1": "guide-sevrage::Conduite",
+   "score_top1": 0.6754
+  },
+  {
+   "id": "SHORT-01",
+   "rang_top5": 1,
+   "top1": "guide-sevrage::Conduite",
+   "score_top1": 0.514
+  }
+ ]
+}

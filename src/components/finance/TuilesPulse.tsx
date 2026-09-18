@@ -58,13 +58,13 @@ function Tuile({
   readonly ancre?: boolean;
 }): React.JSX.Element {
   if (ancre) {
-    /* LA TUILE ANCRE — le dégradé de marque, l'encre blanche pure. Elle se
+    /* LA TUILE ANCRE — le dégradé vert profond, encre blanche pure. Elle se
      * trouve sans être lue ; les quatre autres restent au même niveau entre
      * elles — hiérarchiser tout revient à ne rien hiérarchiser. */
     return (
-      <div className="flex min-w-0 flex-col justify-between gap-2 rounded-lg bg-brand-800 px-4 py-3 shadow-lift1">
+      <div className="flex min-w-0 flex-col justify-between gap-2 rounded-2xl bg-vedette-vert px-4 py-4 shadow-vedette">
         <p
-          className="truncate font-ui text-label font-medium text-on-brand"
+          className="truncate font-ui text-label font-semibold text-on-brand"
           title={aide}
         >
           {etiquette}
@@ -84,10 +84,10 @@ function Tuile({
   }
 
   return (
-    <div className="flex min-w-0 flex-col justify-between gap-2 rounded-lg border border-rule bg-card px-4 py-3 shadow-lift1 transition duration-quick ease-soft hover:shadow-lift2">
+    <div className="flex min-w-0 flex-col justify-between gap-2 rounded-2xl border border-rule bg-card px-4 py-4 shadow-carte transition duration-quick ease-soft hover:shadow-elevee">
       <div className="flex items-center justify-between gap-2">
         <p
-          className="truncate font-ui text-label font-medium text-ink-500"
+          className="truncate font-ui text-label font-semibold text-ink-700"
           title={aide}
         >
           {etiquette}
@@ -101,13 +101,13 @@ function Tuile({
           <span
             aria-hidden="true"
             className={[
-              "inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md",
+              "inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl shadow-douce",
               icone === "documents"
-                ? "bg-attention-bg text-attention-ink"
-                : "bg-action-100 text-action-600",
+                ? "border border-ambre-100 bg-tuile-ambre text-attention-ink"
+                : "border border-emeraude-100 bg-tuile-menthe text-action-600",
             ].join(" ")}
           >
-            <Icone nom={icone} taille={16} />
+            <Icone nom={icone} taille={20} />
           </span>
         )}
       </div>

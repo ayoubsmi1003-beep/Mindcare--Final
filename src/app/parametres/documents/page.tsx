@@ -9,6 +9,7 @@ import { Carte } from "@/components/ui/Surfaces";
 import { ChampTexte } from "@/components/ui/Champs";
 import { LienBouton } from "@/components/ui/Bouton";
 import { fr } from "@/i18n/fr";
+import { m09 } from "@/i18n/m09";
 import { getCabinet, getProfil, updateCabinet, updateProfil } from "@/services/cabinet";
 import { getDocumentReadiness, type DocumentReadiness } from "@/services/documents";
 
@@ -141,6 +142,15 @@ export default function ParametresDocumentsPage(): React.JSX.Element {
             <p className="mt-2"><LienBouton href="/documents" rang="secondaire">Retour aux Documents</LienBouton></p>
           </div>
         </Carte>
+
+        {utilisateur.role === "assistant" ? null : (
+          <Carte niveau="secondaire">
+            <div className="p-4 font-ui text-body text-ink-500">
+              <p>{m09.ecran.sousTitre}</p>
+              <p className="mt-2"><LienBouton href="/observabilite" rang="secondaire">{m09.ecran.lienParametres}</LienBouton></p>
+            </div>
+          </Carte>
+        )}
       </div>
     </AppShell>
   );

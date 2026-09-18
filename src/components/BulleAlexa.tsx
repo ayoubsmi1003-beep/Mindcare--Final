@@ -17,12 +17,11 @@
  * `⌘K` reste, inchangé, dans `PanneauJarvis` : ce composant ajoute une porte
  * visible, il n'en retire aucune.
  *
- * ⚠️ ELLE NE DOIT RECOUVRIR AUCUNE COMMANDE. `BarreActions` (« Signer la
- * note », « Terminer la séance ») vit en bas de la colonne de contenu, qui est
- * centrée et plafonnée à `max-w-main` ; la bulle est ancrée au bord droit de la
- * fenêtre. Aux largeurs de travail (≥ 1280 px) les deux ne se rencontrent pas.
- * En dessous, `bottom-24` la remonte au-dessus de la barre d'actions plutôt que
- * de parier sur la marge.
+ * ⚠️ ELLE NE DOIT RECOUVRIR AUCUNE COMMANDE. La barre de consultation est
+ * collante en bas de fenêtre (`sticky bottom-4`, ~110 px à deux rangées) :
+ * `bottom-32` (128 px) la fait flotter au-dessus sur tous les écrans, au
+ * lieu de parier sur la marge. Mesuré consultation, 2026-09-14 : à `bottom-24`
+ * l'orbe recouvrait « Enregistrer ».
  */
 
 "use client";
@@ -67,33 +66,33 @@ export function BulleAlexa({
       onClick={onOuvrir}
       aria-expanded={false}
       aria-label={enAttente ? fr.jarvis.bulleEnAttente : fr.jarvis.bulleOuvrir}
+      title={enAttente ? fr.jarvis.bulleEnAttente : fr.jarvis.bulleOuvrir}
       className={[
-        "group fixed bottom-24 right-6 z-panneau desktop:bottom-8",
-        "flex h-14 w-14 items-center justify-center rounded-full",
-        "border border-ai-100 bg-card shadow-elevee",
-        "transition duration-quick ease-out",
-        "hover:scale-105 hover:shadow-glow-ai",
+        "group fixed bottom-6 right-5 z-panneau",
+        // L'orbe EST le bouton : sphère émeraude + halo pulsant + anneau menthe.
+        // 56px tactiles, transparence totale autour, un seul launcher canonique.
+        "bulle-alexa-ombre flex h-14 w-14 items-center justify-center rounded-full bg-transparent",
+        "ring-1 ring-rule transition duration-quick ease-out",
+        "hover:scale-105 hover:ring-action-600",
         "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-action-600",
-        // `motion-reduce` : l'agrandissement au survol est un confort, pas une
-        // information. Qui demande moins de mouvement n'en perd aucune.
         "motion-reduce:transition-none motion-reduce:hover:scale-100",
       ].join(" ")}
     >
+      {/* Halo pulsant derrière l'orbe — décor pur, jamais d'info. */}
       <span
         aria-hidden="true"
-        className="pointer-events-none inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-full"
+        data-etat={enAttente ? "ecoute" : "idle"}
+        className="halo-alexa pointer-events-none absolute -inset-2 animate-halo-pulse rounded-full motion-reduce:animate-none"
+      />
+      <span
+        aria-hidden="true"
+        className="pointer-events-none relative inline-flex h-14 w-14 animate-flottement-doux items-center justify-center overflow-hidden rounded-full motion-reduce:animate-none"
       >
         {/* Même orbe que le panneau qu'elle ouvre : on reconnaît où l'on va
-            avant de cliquer, exactement comme le faisait la pastille de V8. */}
+            avant de cliquer. Palette émeraude, état idle/ecoute. */}
         <SiriOrb
-          size="40px"
-          animationDuration={22}
-          colors={{
-            bg: "oklch(98% 0.01 264.695)",
-            c1: "oklch(72% 0.16 350)",
-            c2: "oklch(76% 0.14 200)",
-            c3: "oklch(75% 0.15 280)",
-          }}
+          size="56px"
+          etat={enAttente ? "ecoute" : "idle"}
         />
       </span>
 

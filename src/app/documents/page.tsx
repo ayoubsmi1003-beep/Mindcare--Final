@@ -54,6 +54,10 @@ import { getPatient } from "@/services/patients";
 const DELAI_CHARGEMENT_MS = 10_000;
 const TYPE_INITIAL: TypeDocument = "bonne_sante_mentale";
 
+// Perf: headStyles mis en cache après la première impression (50 Ko sérialisés
+// à chaque clic sinon). Le DOM styles ne change pas entre deux impressions.
+let cachedHeadStyles: string | undefined;
+
 interface DossierChoisi {
   readonly id: string;
   readonly firstName: string;
@@ -94,6 +98,8 @@ export default function DocumentsPage(): React.JSX.Element {
   const [succesCreation, setSuccesCreation] = useState<string | null>(null);
 
   const [query, setQuery] = useState("");
+  // Perf: debounced comme Patients (250 ms) — évite list_documents par frappe.
+  const [queryDebounce, setQueryDebounce] = useState("");
   const [filtreType, setFiltreType] = useState<TypeDocument | "">("");
   const [filtreStatut, setFiltreStatut] = useState<StatutDocument | "">("");
   const [readiness, setReadiness] = useState<DocumentReadiness | null>(null);
@@ -102,6 +108,12 @@ export default function DocumentsPage(): React.JSX.Element {
   const [showVoid, setShowVoid] = useState(false);
 
   const generation = useRef(0);
+
+  // Perf: debounce recherche documents (même discipline que patients)
+  useEffect(() => {
+    const t = setTimeout(() => setQueryDebounce(query.trim()), 250);
+    return () => clearTimeout(t);
+  }, [query]);
 
   // ---- readiness (CTA avant échec) ----
   useEffect(() => {
@@ -130,9 +142,9 @@ export default function DocumentsPage(): React.JSX.Element {
   }, []);
 
   const chargerGlobal = useCallback(async () => {
-    setListeGlobal({ statut: "chargement" });
+    setListeGlobal((prev) => (prev.statut === "charge" ? prev : { statut: "chargement" }));
     const r = await listDocuments({
-      query: query.trim() === "" ? null : query.trim(),
+      query: queryDebounce === "" ? null : queryDebounce,
       type: filtreType === "" ? null : filtreType,
       status: filtreStatut === "" ? null : filtreStatut,
       limit: 20,
@@ -140,7 +152,7 @@ export default function DocumentsPage(): React.JSX.Element {
     });
     if (!r.ok) { setListeGlobal({ statut: "erreur", message: r.error.message }); return; }
     setListeGlobal({ statut: "charge", donnees: r.data });
-  }, [query, filtreType, filtreStatut]);
+  }, [queryDebounce, filtreType, filtreStatut]);
 
   // init: global list
   useEffect(() => {
@@ -270,9 +282,12 @@ export default function DocumentsPage(): React.JSX.Element {
       if (iframe.parentNode) iframe.parentNode.removeChild(iframe);
       return;
     }
-    const headStyles = Array.from(document.querySelectorAll('style, link[rel="stylesheet"]'))
-      .map((el) => el.outerHTML)
-      .join("\n");
+    if (cachedHeadStyles === undefined) {
+      cachedHeadStyles = Array.from(document.querySelectorAll('style, link[rel="stylesheet"]'))
+        .map((el) => el.outerHTML)
+        .join("\n");
+    }
+    const headStyles = cachedHeadStyles;
     // Page A5 propre : le HTML figé est enveloppé sans autre chrome.
     // Le style injecté force `margin:0` à la fois sur @page ET sur html/body,
     // garantissant zéro texte automatique même si la feuille globale tarde.
@@ -376,7 +391,7 @@ export default function DocumentsPage(): React.JSX.Element {
 
         {/* Readiness banner */}
         {readiness !== null && !readiness.canIssue ? (
-          <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-attention bg-attention-bg p-4">
+          <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-attention bg-attention-bg p-4 shadow-carte">
             <div className="flex flex-col gap-1">
               <p className="font-ui text-body font-semibold text-attention-ink">En-tête incomplet</p>
               <p className="font-ui text-body text-ink-700">
@@ -386,7 +401,7 @@ export default function DocumentsPage(): React.JSX.Element {
             <LienBouton href="/parametres/documents" rang="secondaire">Compléter les paramètres</LienBouton>
           </div>
         ) : readiness !== null && readiness.canIssue ? (
-          <div className="flex items-center gap-2 rounded-lg border border-positive bg-positive-bg px-4 py-3 font-ui text-body text-positive">
+          <div className="flex items-center gap-2 rounded-2xl border border-positive bg-positive-bg px-4 py-3 font-ui text-body font-medium text-positive shadow-carte">
             <span className="h-2 w-2 rounded-full bg-positive" aria-hidden /> Prêt à émettre · Cabinet configuré
           </div>
         ) : null}

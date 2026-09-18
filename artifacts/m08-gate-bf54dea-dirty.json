@@ -1,0 +1,608 @@
+{
+  "mission": "M08-B",
+  "gate": "pnpm eval:golden",
+  "gate_version": "m08-gate-v1",
+  "verdict_rule": "FAIL si un FAIL ; sinon NOT RUN si NOT RUN structurel ; sinon PASS (NOT RUN environnementaux enumeres avec motif, jamais convertis en PASS)",
+  "git_revision": "bf54dea-dirty",
+  "timestamp": "2026-09-17T11:41:39.964Z",
+  "verdict": "PASS",
+  "duree_s": 142,
+  "suites": [
+    {
+      "name": "compile-intentions",
+      "status": "PASS",
+      "case_count": null,
+      "pass_count": 1,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "compile-services",
+      "status": "PASS",
+      "case_count": null,
+      "pass_count": 1,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "compile-frontiere",
+      "status": "PASS",
+      "case_count": null,
+      "pass_count": 1,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "typecheck",
+      "status": "PASS",
+      "case_count": 1,
+      "pass_count": 1,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "typecheck-tests",
+      "status": "PASS",
+      "case_count": 1,
+      "pass_count": 1,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "lint-m08",
+      "status": "PASS",
+      "case_count": 1,
+      "pass_count": 1,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "vitest",
+      "status": "PASS",
+      "case_count": 1223,
+      "pass_count": 1223,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": "fichiers=89 ignores=1"
+    },
+    {
+      "name": "vitest-integration",
+      "status": "NOT RUN",
+      "case_count": null,
+      "pass_count": 0,
+      "fail_count": 0,
+      "not_run_count": 5,
+      "failed_case_ids": [],
+      "not_run_reason": "MINDCARE_TEST_DATABASE_URL absente",
+      "required_environment": "MINDCARE_TEST_DATABASE_URL",
+      "detail": "5 suites exigeant une vraie base (jamais simulees)"
+    },
+    {
+      "name": "eval-frontiere",
+      "status": "PASS",
+      "case_count": 49,
+      "pass_count": 49,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "eval-boucle",
+      "status": "PASS",
+      "case_count": 42,
+      "pass_count": 42,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "eval-chaine",
+      "status": "PASS",
+      "case_count": 28,
+      "pass_count": 28,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "eval-ecritures",
+      "status": "PASS",
+      "case_count": 26,
+      "pass_count": 26,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "eval-briefs",
+      "status": "PASS",
+      "case_count": 44,
+      "pass_count": 44,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "eval-reveil",
+      "status": "PASS",
+      "case_count": 24,
+      "pass_count": 24,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "eval-micro-partage",
+      "status": "PASS",
+      "case_count": 24,
+      "pass_count": 24,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "eval-endpointage",
+      "status": "PASS",
+      "case_count": 18,
+      "pass_count": 18,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "eval-machine-voix",
+      "status": "PASS",
+      "case_count": 28,
+      "pass_count": 28,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "eval-lecture-voix",
+      "status": "PASS",
+      "case_count": 16,
+      "pass_count": 16,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "eval-registre",
+      "status": "PASS",
+      "case_count": 26,
+      "pass_count": 26,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "eval-sans-suppression",
+      "status": "PASS",
+      "case_count": 7,
+      "pass_count": 7,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "eval-injection",
+      "status": "PASS",
+      "case_count": 11,
+      "pass_count": 11,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "eval-routage",
+      "status": "PASS",
+      "case_count": 120,
+      "pass_count": 120,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "eval-v2",
+      "status": "PASS",
+      "case_count": 25,
+      "pass_count": 25,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "eval-intentions",
+      "status": "PASS",
+      "case_count": 70,
+      "pass_count": 70,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "eval-conversation",
+      "status": "PASS",
+      "case_count": 256,
+      "pass_count": 256,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": null
+    },
+    {
+      "name": "eval-knowledge-fixture",
+      "status": "PASS",
+      "case_count": 329,
+      "pass_count": 329,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": "recall@5-hybride(proxy lexical)=100.0% ; portes SQL + embeddings reels + cross-encoder : NOT RUN"
+    },
+    {
+      "name": "eval-reveil-pipeline",
+      "status": "PASS",
+      "case_count": 11,
+      "pass_count": 11,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": "voix humaine : NON MESUREE par la passe elle-meme (plumbing 11/11)"
+    },
+    {
+      "name": "eval-contexte-seance",
+      "status": "NOT RUN",
+      "case_count": null,
+      "pass_count": 0,
+      "fail_count": 0,
+      "not_run_count": 1,
+      "failed_case_ids": [],
+      "not_run_reason": "source supabase/functions/_shared/contexte-seance.ts absente (pre-existant)",
+      "required_environment": "source vivante src/server/jarvis/ (re-cablage hors perimetre M08)",
+      "detail": null
+    },
+    {
+      "name": "eval-resume-cas",
+      "status": "NOT RUN",
+      "case_count": null,
+      "pass_count": 0,
+      "fail_count": 0,
+      "not_run_count": 1,
+      "failed_case_ids": [],
+      "not_run_reason": "source supabase/functions/_shared/resume-cas.ts absente (pre-existant)",
+      "required_environment": "source vivante src/server/jarvis/resume-cas.ts (re-cablage hors perimetre M08)",
+      "detail": null
+    },
+    {
+      "name": "eval-knowledge-db",
+      "status": "NOT RUN",
+      "case_count": null,
+      "pass_count": 0,
+      "fail_count": 0,
+      "not_run_count": 1,
+      "failed_case_ids": [],
+      "not_run_reason": "migration 092 + embeddings reels + cross-encoder non deployes ici (M07 en cours)",
+      "required_environment": "base M07 + porte embeddings + cross-encoder local",
+      "detail": null
+    },
+    {
+      "name": "live-model-quality",
+      "status": "NOT RUN",
+      "case_count": null,
+      "pass_count": 0,
+      "fail_count": 0,
+      "not_run_count": 1,
+      "failed_case_ids": [],
+      "not_run_reason": "aucun modele pine/disponible pour la qualite live (variance free-tier 5s-180s)",
+      "required_environment": "modele pine ou runtime local M13",
+      "detail": null
+    },
+    {
+      "name": "e2e",
+      "status": "NOT RUN",
+      "case_count": null,
+      "pass_count": 0,
+      "fail_count": 0,
+      "not_run_count": 19,
+      "failed_case_ids": [],
+      "not_run_reason": "exigent pnpm start + /api/health ; la porte ne lance pas de serveurs",
+      "required_environment": "app demarree + base locale",
+      "detail": null
+    },
+    {
+      "name": "schema-golden",
+      "status": "PASS",
+      "case_count": 154,
+      "pass_count": 154,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": "4 fichiers"
+    },
+    {
+      "name": "garde-modeles",
+      "status": "PASS",
+      "case_count": 1,
+      "pass_count": 1,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": "bascule = configuration"
+    },
+    {
+      "name": "garde-chemin-execution",
+      "status": "PASS",
+      "case_count": 1,
+      "pass_count": 1,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": "executerAction <- jarvis-execution"
+    },
+    {
+      "name": "garde-porte-execute",
+      "status": "PASS",
+      "case_count": 1,
+      "pass_count": 1,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": "seule jarvis-tools.ts l invoque"
+    },
+    {
+      "name": "garde-boucle-sans-ecritures",
+      "status": "PASS",
+      "case_count": 1,
+      "pass_count": 1,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": "aucun import — aucun chemin d appel"
+    },
+    {
+      "name": "garde-trois-portes",
+      "status": "PASS",
+      "case_count": 1,
+      "pass_count": 1,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": "propose · confirm · execute"
+    },
+    {
+      "name": "garde-secrets-build",
+      "status": "PASS",
+      "case_count": 1,
+      "pass_count": 1,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": "93 fichiers .next/static : 0 occurrence"
+    },
+    {
+      "name": "integrite-validateur",
+      "status": "PASS",
+      "case_count": 6,
+      "pass_count": 6,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": "5 negatifs doivent FAIL + 1 positif PASS"
+    },
+    {
+      "name": "preuve-mutation",
+      "status": "PASS",
+      "case_count": 1,
+      "pass_count": 1,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": "M01-01 mutee GET_NEXT_PATIENT->GET_TODAY_AGENDA : la porte doit FAIL en citant M01-01"
+    },
+    {
+      "name": "scan-pii",
+      "status": "PASS",
+      "case_count": 10,
+      "pass_count": 10,
+      "fail_count": 0,
+      "not_run_count": 0,
+      "failed_case_ids": [],
+      "not_run_reason": null,
+      "detail": "courriels/telephones/dossiers/UUID reels ; placeholders, corpus IDs declares et prenoms de fixtures admis (synthetiques, ids fictifs)"
+    }
+  ],
+  "totaux": {
+    "suites": 42,
+    "PASS": 2560,
+    "FAIL": 0,
+    "NOT RUN": 28
+  },
+  "categories": {
+    "intentions/apres-Karim": 7,
+    "intentions/agenda": 5,
+    "intentions/patient": 1,
+    "intentions/patient-stt": 1,
+    "intentions/patient-mixte": 1,
+    "intentions/pronom": 3,
+    "intentions/patient-confusion": 3,
+    "intentions/finance": 4,
+    "intentions/dossier": 1,
+    "intentions/brief": 2,
+    "intentions/savoir": 1,
+    "intentions/vague": 2,
+    "intentions/typo": 1,
+    "intentions/refus": 4,
+    "intentions/ambiguite": 2,
+    "intentions/malforme": 1,
+    "intentions/invalide-schema": 1,
+    "intentions/panne": 1,
+    "intentions/confiance-basse": 1,
+    "intentions/invalide-mention": 1,
+    "intentions/injection": 3,
+    "intentions/finance-confusion": 1,
+    "conversation/A-chaine-karim-5-tours": 5,
+    "conversation/B-override-nadia-puis-karim": 1,
+    "conversation/C-sarah-zero-pas-de-repli": 1,
+    "conversation/D-mohameds-ambigu": 1,
+    "conversation/E-pronom-sans-antecedent": 1,
+    "conversation/F-ecran-prime": 1,
+    "conversation/G-darija-explicite": 1,
+    "conversation/H-injection-donnee": 1,
+    "conversation/I-porte-de-fil": 1,
+    "conversation/J-coupe-circuit": 1,
+    "conversation/K-sonde-en-panne": 1,
+    "conversation/L-ecriture-casse-chaine": 1,
+    "conversation/N-darija-chaine-suivi": 2,
+    "conversation/O-preparer-consultation-pronom": 2,
+    "conversation/M-darija-zero-yacine": 1
+  },
+  "langues": {
+    "FR": 30,
+    "Darija": 4,
+    "Arabe": 6,
+    "FR-STT": 1,
+    "Mixte": 2,
+    "EN": 3,
+    "FR-typo": 1,
+    "fr": 35,
+    "ar": 7,
+    "darija": 4
+  },
+  "securite": [
+    "eval-frontiere (49)",
+    "eval-injection (scenario M)",
+    "vitest jarvis-egress-* (71)",
+    "conversation H (injection-donnee) + I (porte-de-fil)",
+    "gardes grep (modeles/chemin/porte/boucle/portes)"
+  ],
+  "rag": [
+    "eval-knowledge-fixture (46 cas : recall/precision/MRR/nDCG/reranker-gain/citation/version/dose)",
+    "NOT RUN : portes SQL 092 + embeddings reels + cross-encoder"
+  ],
+  "failure_honesty": [
+    "eval-ecritures (scenario N : echec avoue)",
+    "conversation K (panne sonde -> indisponible)",
+    "intentions ecarte (invalide/indisponible/confiance-basse)",
+    "vitest jarvis-response-guard + jarvis-execution"
+  ],
+  "grounding": [
+    "knowledge NA-* (sans-reponse exigee) + GV-* (gouvernance exclue)",
+    "conversation C/M (zero-resultat -> clarification nommee)",
+    "NOT RUN : qualite live"
+  ],
+  "environment_requirements": [
+    "node>=20",
+    "tsc+eslint+vitest locaux",
+    "MINDCARE_TEST_DATABASE_URL (integration)",
+    "app demarree (e2e)",
+    "modeles ONNX public/wakeword (pipeline)",
+    "base M07 + embeddings + cross-encoder (retrieval DB)",
+    "modele pine (qualite live)"
+  ],
+  "not_run_reasons": [
+    {
+      "suite": "vitest-integration",
+      "reason": "MINDCARE_TEST_DATABASE_URL absente",
+      "required_environment": "MINDCARE_TEST_DATABASE_URL"
+    },
+    {
+      "suite": "eval-contexte-seance",
+      "reason": "source supabase/functions/_shared/contexte-seance.ts absente (pre-existant)",
+      "required_environment": "source vivante src/server/jarvis/ (re-cablage hors perimetre M08)"
+    },
+    {
+      "suite": "eval-resume-cas",
+      "reason": "source supabase/functions/_shared/resume-cas.ts absente (pre-existant)",
+      "required_environment": "source vivante src/server/jarvis/resume-cas.ts (re-cablage hors perimetre M08)"
+    },
+    {
+      "suite": "eval-knowledge-db",
+      "reason": "migration 092 + embeddings reels + cross-encoder non deployes ici (M07 en cours)",
+      "required_environment": "base M07 + porte embeddings + cross-encoder local"
+    },
+    {
+      "suite": "live-model-quality",
+      "reason": "aucun modele pine/disponible pour la qualite live (variance free-tier 5s-180s)",
+      "required_environment": "modele pine ou runtime local M13"
+    },
+    {
+      "suite": "e2e",
+      "reason": "exigent pnpm start + /api/health ; la porte ne lance pas de serveurs",
+      "required_environment": "app demarree + base locale"
+    }
+  ],
+  "mutation_proof": "PASS",
+  "pii_scan": "PASS",
+  "schema_validation": "PASS",
+  "gate_integrity": "PASS",
+  "suite_versions": {
+    "goldens_hash": "voir git",
+    "schema": "m08-schema-v1"
+  }
+}

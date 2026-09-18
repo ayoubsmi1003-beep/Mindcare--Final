@@ -1,0 +1,149 @@
+{
+  "verts": 25,
+  "rouges": 2,
+  "lignes": [
+    {
+      "verdict": "vert",
+      "label": "S6 · réponse non vide",
+      "detail": "1425 ms · surface:alerte · fraiche:oui"
+    },
+    {
+      "verdict": "vert",
+      "label": "S6 · aucun jeton brut",
+      "detail": "rendu identité ok"
+    },
+    {
+      "verdict": "vert",
+      "label": "S6 · aucune référence irrésolue",
+      "detail": "carte cohérente"
+    },
+    {
+      "verdict": "ROUGE",
+      "label": "S6 · cite 3 ou 13000",
+      "detail": "compte/somme base"
+    },
+    {
+      "verdict": "vert",
+      "label": "S7 · réponse non vide",
+      "detail": "794 ms · surface:alerte · fraiche:oui"
+    },
+    {
+      "verdict": "vert",
+      "label": "S7 · aucun jeton brut",
+      "detail": "rendu identité ok"
+    },
+    {
+      "verdict": "vert",
+      "label": "S7 · aucune référence irrésolue",
+      "detail": "carte cohérente"
+    },
+    {
+      "verdict": "ROUGE",
+      "label": "S7 · cite 14 ou « paiement »",
+      "detail": "natures base"
+    },
+    {
+      "verdict": "vert",
+      "label": "dossiers atteignables",
+      "detail": "25 dossiers (UUID non affichés)"
+    },
+    {
+      "verdict": "vert",
+      "label": "S9 · réponse non vide",
+      "detail": "6043 ms · surface:bulle · fraiche:oui"
+    },
+    {
+      "verdict": "vert",
+      "label": "S9 · aucun jeton brut",
+      "detail": "rendu identité ok"
+    },
+    {
+      "verdict": "vert",
+      "label": "S9 · aucune référence irrésolue",
+      "detail": "carte cohérente"
+    },
+    {
+      "verdict": "vert",
+      "label": "S10 · réponse non vide",
+      "detail": "1873 ms · surface:alerte · fraiche:oui"
+    },
+    {
+      "verdict": "vert",
+      "label": "S10 · aucun jeton brut",
+      "detail": "rendu identité ok"
+    },
+    {
+      "verdict": "vert",
+      "label": "S10 · aucune référence irrésolue",
+      "detail": "carte cohérente"
+    },
+    {
+      "verdict": "vert",
+      "label": "S11 · réponse non vide",
+      "detail": "1301 ms · surface:alerte · fraiche:oui"
+    },
+    {
+      "verdict": "vert",
+      "label": "S11 · aucun jeton brut",
+      "detail": "rendu identité ok"
+    },
+    {
+      "verdict": "vert",
+      "label": "S11 · aucune référence irrésolue",
+      "detail": "carte cohérente"
+    },
+    {
+      "verdict": "vert",
+      "label": "S12 · réponse non vide",
+      "detail": "683 ms · surface:alerte · fraiche:oui"
+    },
+    {
+      "verdict": "vert",
+      "label": "S12 · aucun jeton brut",
+      "detail": "rendu identité ok"
+    },
+    {
+      "verdict": "vert",
+      "label": "S12 · aucune référence irrésolue",
+      "detail": "carte cohérente"
+    },
+    {
+      "verdict": "vert",
+      "label": "AB · réponse non vide",
+      "detail": "9590 ms · surface:bulle · fraiche:oui · aveu-connu"
+    },
+    {
+      "verdict": "vert",
+      "label": "AB · aucun jeton brut",
+      "detail": "rendu identité ok"
+    },
+    {
+      "verdict": "vert",
+      "label": "AB · aucune référence irrésolue",
+      "detail": "carte cohérente"
+    },
+    {
+      "verdict": "vert",
+      "label": "AB · pas la réponse du dossier n°1",
+      "detail": "cible remplacée"
+    },
+    {
+      "verdict": "vert",
+      "label": "charges client→serveur capturées",
+      "detail": "11 POST /api/jarvis/"
+    },
+    {
+      "verdict": "vert",
+      "label": "zéro exception React non capturée",
+      "detail": ""
+    }
+  ],
+  "attendus": {
+    "rdvAujourdhui": 13,
+    "rdvDemain": 1,
+    "encaisseAujourdhui": 47000,
+    "paiementsAttenteNombre": 3,
+    "paiementsAttenteTotal": 13000,
+    "attentionNombre": 14
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "etape": "R4-acquisition",
+  "depot": "celinehoang/bge-reranker-v2-m3-onnx",
+  "revision_depot": "87449985a27bbd817f13ee2338df130bdb532bad",
+  "poids_origine": "BAAI/bge-reranker-v2-m3 (Apache-2.0), revision 953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+  "conversion": "export ONNX communautaire (fp32, external-data) — PAS un artefact BAAI officiel",
+  "fichiers": [
+    {
+      "fichier": "config.json",
+      "octets": 780,
+      "sha256": "dd482ddbc304b13cf9e2b773ad337d743d319a3530465d14f7f7f248fce35fe7"
+    },
+    {
+      "fichier": "tokenizer.json",
+      "octets": 17082900,
+      "sha256": "8bf8afbfd11306bd872018c53bfdf2e160a56f8edbcf49933324404791c148d3"
+    },
+    {
+      "fichier": "tokenizer_config.json",
+      "octets": 1173,
+      "sha256": "7e4c1cc848840aeccdd763458c18dd525eb0f795c992e00ebe9c28554e7db2d4"
+    },
+    {
+      "fichier": "model.onnx",
+      "octets": 614445,
+      "sha256": "77f102be02885c81e5064485c5358e87721856d15ba750ae893480d39903a461"
+    },
+    {
+      "fichier": "model.onnx_data",
+      "octets": 4542177312,
+      "sha256": "c75282ab65d3f53c20a45f637fafbeb7f064cbd6b7c9df01bd8a32e41abe879b"
+    }
+  ],
+  "cache": "C:\\Users\\ABC Informatique\\AppData\\Local\\MindCare\\modeles\\bge-reranker-v2-m3-onnx (hors Git, %LOCALAPPDATA%/MindCare/modeles)",
+  "tokenizer_officiel_baai_sha256": "69564b696052886ed0ac63fa393e928384e0f8caada38c1f4864a9bfbf379c15",
+  "tokenizer_identique_officiel": false,
+  "graphe": {
+    "arch": "XLMRobertaForSequenceClassification",
+    "entrees": [
+      "input_ids",
+      "attention_mask"
+    ],
+    "sortie": "logits",
+    "runtime": "onnxruntime-node CPU, intraOp 4"
+  },
+  "verification": "sonde m07-r4-sonde : ordre pertinent>bruit FR, AR cohérent, déterministe octet-identique",
+  "latence_mesuree": "lot 20 paires CPU : ~7.8-11.4 s (voir passes E/F) — AU-DESSUS du seuil p95-rerank 1500 ms (gel R0) : activation M13 (quantification), défaut production = heuristique",
+  "runtime_donnees_patient": "aucune — inférence 100 % locale, aucun appel réseau au runtime",
+  "tokenizer_note": "SHA différent du tokenizer officiel BAAI (métadonnées, 15 Ko / 17 Mo) ; équivalence fonctionnelle PROUVÉE : mêmes ids sur 4 phrases FR/AR/darija/libellé (m07-tok-diff2)"
+}

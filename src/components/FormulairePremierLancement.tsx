@@ -11,6 +11,7 @@
 import { useId, useState } from "react";
 
 import { fr } from "@/i18n/fr";
+import { Bouton } from "./ui/Bouton";
 import { Icone, MarqueMindCare } from "./ui/Icones";
 
 export interface EntreeFormulairePremierLancement {
@@ -248,21 +249,18 @@ export function FormulairePremierLancement({
           />
         </div>
 
-        <button
-          type="submit"
-          disabled={enCours}
-          aria-busy={enCours}
-          className={[
-            "mt-2 flex min-h-target-lg w-full cursor-pointer items-center justify-center gap-2 rounded-md border-0 px-5 py-3",
-            "font-ui text-body font-semibold text-paper shadow-lift1",
-            "transition duration-quick ease-soft",
-            enCours
-              ? "cursor-default bg-brand-500 shadow-none"
-              : "bg-action-600 hover:bg-action-700 hover:shadow-lift2 active:bg-action-900 active:shadow-lift1",
-          ].join(" ")}
-        >
-          {enCours ? fr.premierLancement.enCours : fr.premierLancement.boutonValider}
-        </button>
+        <div className="mt-2">
+          <Bouton
+            type="submit"
+            rang="principal"
+            taille="large"
+            pleineLargeur
+            disabled={enCours}
+            chargement={enCours}
+          >
+            {enCours ? fr.premierLancement.enCours : fr.premierLancement.boutonValider}
+          </Bouton>
+        </div>
       </form>
     </div>
   );

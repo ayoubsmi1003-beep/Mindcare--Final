@@ -34,6 +34,7 @@ import {
 } from "@/components/ui";
 import { fr } from "@/i18n/fr";
 import { getSession, signOut } from "@/services/auth";
+import { purgerContexteSession } from "@/services/conversation";
 import { getCurrentUser, type CurrentUser } from "@/services/authz";
 import { listPractitioners, type Practitioner } from "@/services/practitioners";
 import {
@@ -172,6 +173,8 @@ export default function PageNouveauDossier(): React.JSX.Element {
   ]);
 
   function deconnecter(): void {
+    // Phase 3 : aucun contexte patient ne survit à la session.
+    purgerContexteSession();
     void signOut().then(() => {
       router.replace("/connexion");
     });

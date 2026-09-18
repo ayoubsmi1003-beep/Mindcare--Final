@@ -180,6 +180,12 @@ export function FilDeLaJournee({
 }): React.JSX.Element {
   if (journee.length === 0) {
     return (
+      /* ⚠️ REVENU À UN MÉDAILLON, PAS UNE SCÈNE — CORRECTION APRÈS RETOUR
+          UTILISATEUR. Une journée vide est l'ÉTAT LE PLUS COURANT de cet
+          écran, pas un grand vide exceptionnel : y mettre l'illustration de
+          136px, réservée aux vides rares, forçait la page entière à défiler
+          pour voir le reste du tableau de bord. Le médaillon compact suffit
+          ici ; la scène reste pour les vrais grands vides (Alexa, Documents). */
       <EtatVide
         icone="agenda"
         message={fr.tableauDeBord.fil.vide}

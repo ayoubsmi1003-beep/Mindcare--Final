@@ -82,12 +82,12 @@ const DUREE_ORB: Record<EtatVoix, number> = {
   desactive: 30,
 };
 
-/** Palette clinique premium (spec tâche) — rose/bleu maîtrisé, calme, médical. */
+/** Palette sauge — jetons (jamais de littéral couleur en TSX). Calme, médical. */
 const COULEURS_CLINIQUES = {
-  bg: "oklch(98% 0.01 264.695)",
-  c1: "oklch(72% 0.16 350)",
-  c2: "oklch(76% 0.14 200)",
-  c3: "oklch(75% 0.15 280)",
+  bg: "var(--chart-5)",
+  c1: "var(--primary)",
+  c2: "var(--chart-2)",
+  c3: "var(--accent)",
 } as const;
 
 interface Props {

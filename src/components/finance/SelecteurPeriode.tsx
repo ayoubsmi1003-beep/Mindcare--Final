@@ -40,10 +40,17 @@ export function SelecteurPeriode({
   periode,
   onChange,
   desactive = false,
+  compact = false,
 }: {
   readonly periode: Periode;
   readonly onChange: (p: Periode) => void;
   readonly desactive?: boolean;
+  /**
+   * Version barre d'outils : une seule rangée pastilles + dates tronquées,
+   * qui tient dans les 56 px d'une Topbar sans déborder ni se couper
+   * (vu Finances, 2026-09-14). Le mode étendu reste la version page.
+   */
+  readonly compact?: boolean;
 }): React.JSX.Element {
   const t = fr.finances.periodes;
   const idGroupe = useId();
@@ -83,6 +90,53 @@ export function SelecteurPeriode({
 
   const jours = nombreDeJours(periode.du, periode.au);
   const valide = periodeEstValide(periode.du, periode.au);
+
+  if (compact) {
+    return (
+      <div
+        role="radiogroup"
+        aria-label={t.legende}
+        className="flex min-w-0 items-center gap-1.5 overflow-x-auto"
+      >
+        {options.map((nom, i) => {
+          const actif = periode.nom === nom;
+          return (
+            <button
+              key={nom}
+              ref={(el) => {
+                boutons.current[i] = el;
+              }}
+              type="button"
+              role="radio"
+              aria-checked={actif}
+              tabIndex={actif ? 0 : -1}
+              disabled={desactive}
+              onClick={() => choisir(nom)}
+              onKeyDown={(e) => auClavier(e, i)}
+              className={[
+                "min-h-9 shrink-0 whitespace-nowrap rounded-full px-3 font-ui text-label font-medium",
+                "transition duration-quick ease-soft",
+                actif
+                  ? "bg-action-600 font-semibold text-on-brand shadow-douce"
+                  : "text-ink-500 hover:bg-muted hover:text-ink-700",
+                desactive ? "opacity-disabled" : "",
+              ].join(" ")}
+            >
+              {t[nom]}
+            </button>
+          );
+        })}
+        {valide ? (
+          <span
+            className="hidden shrink-0 font-num text-label tabular-nums text-ink-500 desktop:inline"
+            title={`${periode.du} → ${periode.au} · ${jours} ${t.jours}`}
+          >
+            {periode.du} → {periode.au}
+          </span>
+        ) : null}
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col gap-3">

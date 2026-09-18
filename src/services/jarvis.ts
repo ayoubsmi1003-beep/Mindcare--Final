@@ -25,6 +25,7 @@ import {
 import { fr } from "@/i18n/fr";
 import { log } from "./log";
 import { err, ok, type Result } from "./result";
+import { validerPreuves, type PreuveConnnaissance } from "@/shared/jarvis/preuves";
 
 export interface AnalyseSeance {
   readonly noteStructuree: NoteSoap;
@@ -42,6 +43,20 @@ export interface AnalyseSeance {
    * exactement ce que faisait la version précédente, pour TOUTES les analyses.
    */
   readonly persistee: boolean;
+  /**
+   * L'étendue longitudinale qui a nourri l'analyse — SA-03. Le pipeline la
+   * connaît déjà (libellé d'historique dans la route, `source_state` persisté
+   * par 067) ; l'exposer ici rend la portée VISIBLE à l'écran au lieu de la
+   * laisser implicite : une analyse sur les seules notes du jour ne doit
+   * jamais se lire comme une synthèse d'historique.
+   */
+  readonly sources: AnalyseSources;
+}
+
+/** Portée longitudinale d'une analyse — des comptes, jamais du contenu. */
+export interface AnalyseSources {
+  /** Nombre de notes de séances antérieures prises en compte (0 = jour seul). */
+  readonly historiqueNotes: number;
 }
 
 interface AnalyseSeanceRow {
@@ -56,6 +71,7 @@ interface AnalyseSeanceRow {
   readonly analyseId?: string | null;
   readonly version?: number | null;
   readonly persistee?: boolean;
+  readonly sources?: { readonly historiqueNotes?: unknown };
 }
 
 /** La ligne rendue par `app.get_consultation_analysis` (067). */
@@ -63,6 +79,75 @@ interface AnalyseEnregistreeRow {
   readonly id: string;
   readonly version: number;
   readonly content: unknown;
+  /** `source_state` persisté (067) — objet ou texte selon l'adaptateur. */
+  readonly source_state?: unknown;
+}
+
+/**
+ * Lit un compte d'historique avec la même défiance que le contenu modèle :
+ * un nombre entier positif ou nul, sinon 0 (« jour seul ») — jamais un écran
+ * cassé ni une portée inventée.
+ */
+function lireHistoriqueNotes(valeur: unknown): number {
+  return typeof valeur === "number" && Number.isInteger(valeur) && valeur >= 0
+    ? valeur
+    : 0;
+}
+
+/** Extrait la portée de `source_state` (objet ou JSON texte), en défaut 0. */
+function lireSourcesEnregistrees(valeur: unknown): AnalyseSources {
+  let objet: unknown = valeur;
+  if (typeof objet === "string") {
+    try {
+      objet = JSON.parse(objet) as unknown;
+    } catch {
+      return { historiqueNotes: 0 };
+    }
+  }
+  if (typeof objet !== "object" || objet === null) return { historiqueNotes: 0 };
+  return {
+    historiqueNotes: lireHistoriqueNotes(
+      (objet as Record<string, unknown>)["historique_notes"],
+    ),
+  };
+}
+
+/**
+ * Durée de vie maximale d'une analyse, tous appelants confondus.
+ *
+ * Alignée sur `BUDGETS.MAX_MS_TOUR` (60 s, `jarvis-contexte.ts`) : le pire cas
+ * serveur tient dans deux appels modèle à 10 s avec une relance transitoire
+ * chacun, plus les lectures de portes — 60 s le couvre avec marge, sans
+ * inventer une borne arbitraire. Au-delà, le run bascule en `timed_out`
+ * terminal : on cesse d'attendre, on libère, l'écran propose `Réessayer`
+ * (nouveau run, jamais résurrection de l'ancien).
+ */
+export const DELAI_ANALYSE_MS = 60_000;
+
+/**
+ * Runs actifs par séance — le vol unique d'exécution (§10).
+ *
+ * Deux déclenchements concurrents pour la MÊME séance (bouton + reprise
+ * d'après-séance, double-clic, voix + texte) partagent le MÊME run et le
+ * MÊME appel fournisseur, au lieu d'empiler des générations payantes en
+ * parallèle. Un `Réessayer` après un état terminal trouve la carte vide et
+ * crée un nouveau run avec un nouvel identifiant — jamais une résurrection.
+ */
+const analysesEnCours = new Map<string, Promise<Result<AnalyseSeance>>>();
+
+/** Un run est-il actif pour cette séance ? Diagnostic UI et tests. */
+export function analyseEnCours(consultationId: string): boolean {
+  return analysesEnCours.has(consultationId);
+}
+
+function nouvelIdentifiantAnalyse(): string {
+  if (typeof crypto.randomUUID === "function") return crypto.randomUUID();
+  const o = new Uint8Array(16);
+  crypto.getRandomValues(o);
+  o[6] = ((o[6] ?? 0) & 0x0f) | 0x40;
+  o[8] = ((o[8] ?? 0) & 0x3f) | 0x80;
+  const h = Array.from(o, (x) => x.toString(16).padStart(2, "0")).join("");
+  return `${h.slice(0, 8)}-${h.slice(8, 12)}-${h.slice(12, 16)}-${h.slice(16, 20)}-${h.slice(20)}`;
 }
 
 /**
@@ -71,33 +156,133 @@ interface AnalyseEnregistreeRow {
  * (garde-fou n°1 de `JARVIS-DEMO-SPEC.md` §2 bis, « Jarvis ne se souvient
  * d'aucun fait clinique »).
  *
+ * ═══ LE CONTRAT DE TERMINAISON ═══
+ * Chaque appel atteint exactement UN état terminal : `succeeded` (ok),
+ * `failed` (erreur nommée), `timed_out` (délai dur dépassé) ou `cancelled`
+ * (abandon : navigation, séance changée, run supersédé). Jamais de `running`
+ * infini, jamais de relance automatique — le retry fournisseur unique vit
+ * déjà dans `external-call.ts`, et la reformulation unique dans la route.
+ *
+ * `signal` porte l'annulation bout-en-bout (timeout dur de l'écran,
+ * annulation utilisateur, démontage) : l'abandon remonte jusqu'au fetch du
+ * port HTTP, donc jusqu'au `req.signal` de la route, donc jusqu'au
+ * fournisseur — la génération s'arrête vraiment. Une réponse arrivée APRÈS
+ * l'abandon est une issue contrôlée, jamais une panne : elle est classée
+ * (`delai-depasse` / `annule`) et logguée en `warn`, exactement comme
+ * `regle-metier`. Un succès tardif est JETÉ, jamais appliqué : un run
+ * supersédé ne peut pas écraser le run actif.
+ *
  * Aucun identifiant patient ici, en succès comme en échec : la trace
  * nominative légale est écrite en base par `get_consultation`, que la
  * passerelle appelle avant tout envoi au modèle (règle 1, I5).
  */
-export async function analyzeSession(consultationId: string): Promise<Result<AnalyseSeance>> {
-  const result = await db().invokeFunction<AnalyseSeanceRow>("jarvis-analyze-session", {
-    consultationId,
-  });
-
-  if (!result.ok) {
-    log.error("jarvis.analyseSeance", logFieldsFor(result.error));
-    return err(result.error);
+export async function analyzeSession(
+  consultationId: string,
+  signal?: AbortSignal,
+  timeoutMs: number = DELAI_ANALYSE_MS,
+): Promise<Result<AnalyseSeance>> {
+  const existante = analysesEnCours.get(consultationId);
+  if (existante !== undefined) return existante;
+  const promesse = executerAnalyse(consultationId, signal, timeoutMs);
+  analysesEnCours.set(consultationId, promesse);
+  try {
+    return await promesse;
+  } finally {
+    if (analysesEnCours.get(consultationId) === promesse) {
+      analysesEnCours.delete(consultationId);
+    }
   }
+}
 
-  return ok({
-    noteStructuree: {
-      subjective: result.data.noteStructuree.subjective,
-      objective: result.data.noteStructuree.objective,
-      assessment: result.data.noteStructuree.assessment,
-      plan: result.data.noteStructuree.plan,
-    },
-    evolution: result.data.evolution,
-    pointsNonExplores: result.data.pointsNonExplores,
-    analyseId: result.data.analyseId ?? null,
-    version: result.data.version ?? null,
-    persistee: result.data.persistee ?? false,
-  });
+async function executerAnalyse(
+  consultationId: string,
+  signal: AbortSignal | undefined,
+  timeoutMs: number,
+): Promise<Result<AnalyseSeance>> {
+  const runId = nouvelIdentifiantAnalyse();
+  const interne = new AbortController();
+  let expire = false;
+  const relais = (): void => interne.abort();
+  signal?.addEventListener("abort", relais, { once: true });
+  const echeance = setTimeout(() => {
+    expire = true;
+    interne.abort();
+  }, timeoutMs);
+
+  try {
+    const result = await db().invokeFunction<AnalyseSeanceRow>(
+      "jarvis-analyze-session",
+      { consultationId },
+      interne.signal,
+    );
+
+    if (!result.ok) {
+      // Timeout dur ou abandon : réponse devenue inutile (délai dépassé,
+      // navigation, séance changée, run supersédé). Issue CONTROLLÉE, pas
+      // une panne — la praticienne a déjà les moyens d'agir (`Réessayer` =
+      // nouveau run), et un `error` l'enverrait chercher un défaut là où il
+      // n'y en a pas.
+      if (expire || interne.signal.aborted) {
+        const issue = {
+          ...result.error,
+          message: fr.delaiDepasse,
+          technical: expire ? "delai-depasse" : "annule",
+        };
+        log.warn("jarvis.analyseSeance", {
+          ...logFieldsFor(issue),
+          context: `analyse:${runId}`,
+        });
+        return err(issue);
+      }
+      // `regle-metier` (séance sans notes à analyser) est une issue métier
+      // ATTENDUE, pas une panne : la route la rend quand `raw_notes` est vide
+      // (séance documentée via SOAP seul, ou close sans notes). La logger en
+      // `error` la rend indiscernable d'une vraie panne (indisponible /
+      // transport) dans la console — d'où le `warn` ici, sur ce seul chemin
+      // post-clôture. Tout autre code reste une erreur.
+      if (result.error.code === "regle-metier") {
+        log.warn("jarvis.analyseSeance", logFieldsFor(result.error));
+      } else {
+        log.error("jarvis.analyseSeance", logFieldsFor(result.error));
+      }
+      return err(result.error);
+    }
+
+    // Succès arrivé APRÈS abandon (timeout, navigation, run supersédé) : il
+    // est JETÉ, jamais appliqué. Le serveur a pu persister une version, mais
+    // l'écran n'en tient pas compte — le run actif (ou l'absence de run) fait
+    // foi, et un `Réessayer` relira l'état durable par `chargerAnalyse`.
+    if (expire || interne.signal.aborted) {
+      const tardif = {
+        code: "indisponible" as const,
+        message: fr.delaiDepasse,
+        technical: expire ? "delai-depasse" : "annule",
+        context: `analyse:${runId}`,
+      };
+      log.warn("jarvis.analyseSeance", logFieldsFor(tardif));
+      return err(tardif);
+    }
+
+    return ok({
+      noteStructuree: {
+        subjective: result.data.noteStructuree.subjective,
+        objective: result.data.noteStructuree.objective,
+        assessment: result.data.noteStructuree.assessment,
+        plan: result.data.noteStructuree.plan,
+      },
+      evolution: result.data.evolution,
+      pointsNonExplores: result.data.pointsNonExplores,
+      analyseId: result.data.analyseId ?? null,
+      version: result.data.version ?? null,
+      persistee: result.data.persistee ?? false,
+      sources: {
+        historiqueNotes: lireHistoriqueNotes(result.data.sources?.historiqueNotes),
+      },
+    });
+  } finally {
+    clearTimeout(echeance);
+    signal?.removeEventListener("abort", relais);
+  }
 }
 
 /**
@@ -152,6 +337,7 @@ export async function chargerAnalyse(
     analyseId: ligne.id,
     version: ligne.version,
     persistee: true,
+    sources: lireSourcesEnregistrees(ligne.source_state),
   });
 }
 
@@ -174,6 +360,12 @@ export type ReponseJarvis =
       readonly reponse: string;
       /** Présent sur le seul chemin connaissance — l'interface affiche le registre. */
       readonly registre?: "connaissance-generale";
+      /**
+       * M07 — preuves gouvernées du chemin connaissance, VALIDÉES à la
+       * réception (`validerPreuves`) : le serveur les calcule, le client ne
+       * leur fait jamais confiance sans les revalider.
+       */
+      readonly preuves?: readonly PreuveConnnaissance[];
     }
   | {
       readonly chemin: CheminJarvis;
@@ -271,7 +463,23 @@ export interface TourFlux {
   /** Concat des deltas réellement reçus. Peut être partiel sur interruption. */
   readonly texte: string;
   /** Proposition d'outil (chemin patient) — JAMAIS validée ici. */
-  readonly proposition: { readonly nom: string; readonly args: unknown } | null;
+  readonly proposition: {
+    readonly nom: string;
+    readonly args: unknown;
+    /**
+     * M04 — echo serveur de l'intention validee sous laquelle la proposition
+     * est emise. Transport brut : ni valide ni interprete ici, la boucle le
+     * revalide (`intentionValideeDe`) avant d'en faire un signal de filtre.
+     * Absent des serveurs qui l'ignorent (repli : chainee, puis historique).
+     */
+    readonly intent?: unknown;
+  } | null;
+  /**
+   * M07 — preuves gouvernées du chemin connaissance, revalidées à chaque
+   * réception. Toujours un tableau (vide = sans source) : l'absence du
+   * champ chez un vieux serveur vaut absence de preuve, jamais erreur.
+   */
+  readonly preuves: readonly PreuveConnnaissance[];
   /** L'ID conversation rendu par `fin` — fait foi pour la suite. */
   readonly conversationId: string | null;
   /** La porte 058 a-t-elle accepté l'écriture ? (absent sur interruption → false) */
@@ -305,6 +513,13 @@ export async function demanderAJarvisEnFlux(
     readonly conversationId: string;
     /** Idempotence du tour — généré PAR LE CLIENT, unique par soumission. */
     readonly clientTurnId: string;
+    /**
+     * M03 - un tour logique Jarvis, genere cote client (boucle). Opaque,
+     * jamais une identite. Transmis tel quel a la passerelle (validee,
+     * sinon ignoree) pour correlation client des appels d'un meme tour.
+     * N'est JAMAIS un `sessionToken` (audit 028 : non-correlation).
+     */
+    readonly runId?: string;
     readonly contextePatientActif?: { readonly id: string; readonly nom: string; readonly numero: string };
     /**
      * ═══ LES TROIS CHAMPS QUI RENDENT LA BOUCLE POSSIBLE ═══
@@ -324,6 +539,17 @@ export async function demanderAJarvisEnFlux(
      * qui est trop laxiste gagnerait en silence.
      */
     readonly contexte?: unknown;
+    /**
+     * M02 — intention chaînée (repli quand le classifieur serveur ne rend
+     * rien de valide). Nom + conversation d'origine SEULEMENT : le serveur
+     * reconstruit l'intent, le revalide, le borne au fil et le soumet à la
+     * compatibilité — il ne fait jamais confiance à cet objet. Additif :
+     * absent la plupart des tours, ignoré par les serveurs qui l'ignorent.
+     */
+    readonly intentionChainee?: {
+      readonly nom: string;
+      readonly conversationId: string;
+    };
     /** Les résultats de capacité du tour, rebouclés vers le modèle. */
     readonly resultatsOutils?: readonly unknown[];
     /**
@@ -356,9 +582,11 @@ export async function demanderAJarvisEnFlux(
     message: params.message,
     conversationId: params.conversationId,
     clientTurnId: params.clientTurnId,
+    ...(params.runId === undefined ? {} : { runId: params.runId }),
     mode: "flux",
     ...(params.contextePatientActif === undefined ? {} : { contextePatientActif: params.contextePatientActif }),
     ...(params.contexte === undefined ? {} : { contexte: params.contexte }),
+    ...(params.intentionChainee === undefined ? {} : { intentionChainee: params.intentionChainee }),
     ...(params.resultatsOutils === undefined || params.resultatsOutils.length === 0
       ? {}
       : { resultatsOutils: params.resultatsOutils }),
@@ -373,6 +601,9 @@ export async function demanderAJarvisEnFlux(
   let chemin: CheminJarvis | null = null;
   let texte = "";
   let proposition: TourFlux["proposition"] = null;
+  // M07 — preuves gouvernées du chemin connaissance, revalidées à `fin`
+  // (vide = sans source ; un vieux serveur sans champ vaut vide aussi).
+  let preuves: readonly PreuveConnnaissance[] = [];
   // La conversation est connue du client AVANT l'appel (porte start) : la
   // passerelle ne renvoie pas d'identifiant dans `fin`.
   const conversationId: string | null = params.conversationId;
@@ -417,9 +648,24 @@ export async function demanderAJarvisEnFlux(
             // affiché tel quel jusqu'ici.
             texte = evenement.payload.reponse;
             proposition = null;
+            // M07 — preuves revalidées (transport, pas frontière) : un champ
+            // absent ou malformé vaut absence de preuve, jamais erreur.
+            preuves = validerPreuves(
+              (evenement.payload as { preuves?: unknown }).preuves,
+            );
           } else {
             texte = "";
-            proposition = { nom: evenement.payload.nom, args: evenement.payload.args };
+            const charge = evenement.payload as {
+              readonly nom: string;
+              readonly args: unknown;
+              readonly intent?: unknown;
+            };
+            // M04 : l'echo `intent` transite tel quel (transport, pas frontiere).
+            proposition = {
+              nom: charge.nom,
+              args: charge.args,
+              ...(charge.intent === undefined ? {} : { intent: charge.intent }),
+            };
           }
         }
         break;
@@ -487,7 +733,7 @@ export async function demanderAJarvisEnFlux(
     // pas une exception. Tester la troncature AVANT l'abandon classait donc
     // chaque Stop en panne (défaut trouvé par l'instrument N4).
     if (signal?.aborted && !finRecu) {
-      return ok({ chemin, texte, proposition, conversationId, persiste: false, interrompu: true });
+      return ok({ chemin, texte, proposition, preuves, conversationId, persiste: false, interrompu: true });
     }
 
     // Fin de flux SANS repli ni fin : corps tronqué — erreur nommée.
@@ -524,8 +770,22 @@ export async function demanderAJarvisEnFlux(
             if (donnees.type === "texte") {
               texte = donnees.reponse;
               rappels.onDelta?.(donnees.reponse);
+              // M07 — même transit des preuves que sur le chemin `fin`.
+              preuves = validerPreuves(
+                (donnees as { preuves?: unknown }).preuves,
+              );
             } else {
-              proposition = { nom: donnees.nom, args: donnees.args };
+              // M04 : meme transit de l'echo `intent` que sur le chemin `fin`.
+              const charge = donnees as {
+                readonly nom: string;
+                readonly args: unknown;
+                readonly intent?: unknown;
+              };
+              proposition = {
+                nom: charge.nom,
+                args: charge.args,
+                ...(charge.intent === undefined ? {} : { intent: charge.intent }),
+              };
             }
           } else {
             throw new ErreurPasserelle("enveloppe-illisible");
@@ -545,18 +805,18 @@ export async function demanderAJarvisEnFlux(
     }
 
     if (signal?.aborted && !finRecu) {
-      return ok({ chemin, texte, proposition, conversationId, persiste: false, interrompu: true });
+      return ok({ chemin, texte, proposition, preuves, conversationId, persiste: false, interrompu: true });
     }
 
     if (!finRecu) {
       return err(offlineError());
     }
 
-    return ok({ chemin, texte, proposition, conversationId, persiste, interrompu: false });
+    return ok({ chemin, texte, proposition, preuves, conversationId, persiste, interrompu: false });
   } catch (cause) {
     // Interruption utilisateur : SUCCÈS partiel, jamais une erreur.
     if (signal?.aborted) {
-      return ok({ chemin, texte, proposition, conversationId, persiste: false, interrompu: true });
+      return ok({ chemin, texte, proposition, preuves, conversationId, persiste: false, interrompu: true });
     }
     if (cause instanceof ErreurPasserelle) {
       return err(erreurDepuisEnveloppeEdge(cause.code, "jarvis:flux"));

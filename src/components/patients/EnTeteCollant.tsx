@@ -1,20 +1,14 @@
 /**
- * En-tête patient COLLANT — le seul meuble en verre du dossier.
- *
- * ⚠️ LE VERRE DÉCORE LE MOBILIER, JAMAIS LA DONNÉE (04 §4.1/§4.2) : l'en-tête
- * collant est explicitement dans la liste des surfaces autorisées, mais le
- * NOM et toute valeur identitaire restent posés sur une surface OPAQUE à
- * l'intérieur — le flou ne doit jamais traverser un texte qu'on lit.
- *
- * UNE action visuellement dominante, calculée par la page (elle seule connaît
- * les RDV du jour) ; Jarvis et Modifier sont des actions secondaires. Pas un
- * mur de boutons.
+ * En-tête patient — carte inline compacte (plus de 2e barre sticky).
+ * Le nom du dossier reste nommé par le chrome (Topbar, sécurité) ; ici,
+ * uniquement l'identité utile + actions, en carte simple qui défile avec
+ * la page au lieu de redoubler la barre supérieure.
  */
 
 import { Avatar } from "@/components/ui";
 import { Badge } from "@/components/ui";
 import { Bouton, LienBouton } from "@/components/ui";
-import { Icone } from "@/components/ui";
+import { SiriOrb } from "@/components/ui/siri-orb";
 import { fr } from "@/i18n/fr";
 import type { PatientWorkspace } from "@/services/patients";
 
@@ -40,17 +34,8 @@ export function EnTeteCollant({
   const i = espace.identite;
 
   return (
-    <header
-      // ⚠️ Le saignement latéral ÉGALE le padding réel de `<main>` (px-6,
-      // AppShell — sans variante tablet). `tablet:-mx-8` débordait de 8 px
-      // par côté à 1280 : header w=1048 > conteneur 1032.
-      className="sticky top-0 z-10 -mx-4 px-4 py-3 tablet:-mx-6 tablet:px-6"
-      style={{
-        background: "var(--glass-panel)",
-        backdropFilter: "var(--glass-blur)",
-      }}
-    >
-      <div className="flex flex-wrap items-center gap-4 rounded-xl border border-rule bg-card px-5 py-4 shadow-lift2">
+    <header className="rounded-xl border border-rule bg-card px-4 py-3 shadow-douce">
+      <div className="flex flex-wrap items-center gap-3">
         <Avatar prenom={i.firstName} nom={i.lastName} taille="grande" />
 
         <div className="min-w-0 grow">
@@ -97,7 +82,12 @@ export function EnTeteCollant({
           {/* Secondaires : icône + libellé accessible (jamais icône muette). */}
           <Bouton rang="secondaire" onClick={onJarvis}>
             <span className="flex items-center gap-2">
-              <Icone nom="jarvis" taille={20} className="text-ai-600" />
+              <span aria-hidden className="inline-flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-full">
+                <SiriOrb
+                  size="20px"
+                  animationDuration={18}
+                />
+              </span>
               {fr.jarvis.titre}
             </span>
           </Bouton>

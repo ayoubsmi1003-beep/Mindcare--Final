@@ -15,12 +15,11 @@
  */
 
 import { clientSql } from "@/server/jarvis/client-sql";
-import { env } from "@/server/env";
 
 import { echec, identite } from "../_commun";
 
 import { assertSafe, BoundaryViolation, pseudonymize } from "@/server/jarvis/pseudonymize";
-import { llm } from "@/server/egress/external-call";
+import { llm, resolveModel } from "@/server/egress/external-call";
 import {
   adapterEspace,
   analyserEspacePorte,
@@ -269,7 +268,11 @@ export async function POST(req: Request): Promise<Response> {
     { role: "user" as const, content: bloqueSans },
   ];
 
-  const modele = env().OPENROUTER_MODEL ?? "google/gemini-2.5-flash";
+  // ⚠️ CETTE LIGNE OMETTAIT `LLM_MODEL`. Avec lui seul posé, l'appel partait
+  // sur ce modèle pendant que l'audit inscrivait le REPLI de la passerelle :
+  // une trace qui nommait un modèle non utilisé, ce qui est pire qu'une trace
+  // absente. On lit désormais `resolveModel()`, la seule source de vérité.
+  const modele = resolveModel();
 
   const premier = await llm({
     purpose: "resume-cas",

@@ -1,11 +1,7 @@
 /**
  * `external-call.ts` — LE SEUL FICHIER DU DÉPÔT QUI APPELLE UN SERVICE EXTERNE.
- * (OpenRouter et SeekAI pour le texte ; depuis V2, Groq pour la transcription et
+ * (OpenRouter pour le texte ; depuis V2, Groq pour la transcription et
  * ElevenLabs pour la synthèse — voir §VOIX en bas de fichier.)
- *
- * SeekAI — https://seekai.cc/v1/chat/completions, OpenAI-compatible.
- * Modèles : `glm-5.3-flash` (Zhipu GLM 5.3 Flash), `kimi-k3` (Moonshot Kimi K3).
- * Clé : `SEEKAI_API_KEY` (repli `NEW_API_KEY` pour compatibilité curl).
  *
  * `scripts/preflight.sh` §1 n'exempte que ce chemin LITTÉRAL du grep
  * anti-fetch. Ne pas renommer ce fichier, même si `02-SECURITY-BOUNDARY.md`
@@ -14,9 +10,9 @@
  * décision de session S6 n°1). Le `fetch()` réel vit ici et nulle part
  * ailleurs.
  *
- * Règle 3 de CLAUDE.md : `OPENROUTER_API_KEY`, `SEEKAI_API_KEY` et la clé
- * `service_role` ne vivent QUE dans l'environnement de cette Edge Function,
- * jamais transmises au client, jamais dans un autre fichier.
+ * Règle 3 de CLAUDE.md : `OPENROUTER_API_KEY` et la clé `service_role` ne
+ * vivent QUE dans l'environnement serveur (`.env`, jamais commité), jamais
+ * transmises au client, jamais dans un autre fichier.
  */
 
 // deno-lint-ignore-file no-explicit-any
@@ -32,6 +28,7 @@
  * développe le raisonnement.
  */
 import { withEgressGate } from "@/server/db/withCaller";
+import { classerCharge, MESSAGE_REFUS_FRONTIERE } from "@/server/egress/classification";
 import { env } from "@/server/env";
 
 export type BoundaryPurpose = "jarvis" | "voix-entree" | "voix-sortie" | "resume-cas";
@@ -171,54 +168,28 @@ function llmErr<T>(code: LlmErrorCode, message: string): LlmResult<T> {
  */
 const DEFAULT_MODEL = "google/gemini-2.5-flash";
 
-function resolveModel(): string {
-  // SeekAI prime si positionné — permet de basculer sans toucher à OPENROUTER_MODEL.
-  // Compatibilité : NEW_API_KEY / SEEKAI_API_KEY curl historique.
-  return (
-    env().SEEKAI_MODEL ??
-    env().OPENROUTER_MODEL ??
-    env().LLM_MODEL ??
-    DEFAULT_MODEL
-  );
-}
-
 /**
- * SeekAI — modèles servis par https://seekai.cc
- * Liste fermée : toute nouvelle entrée exige une ligne dans TARIFS_USD_PAR_MILLION
- * et une vérification de l'OpenAI-compat (stream + usage).
+ * ⚠️ EXPORTÉE PARCE QUE DEUX APPELANTS LA RECOPIAIENT, ET MAL.
+ *
+ * `jarvis-analyze-session` et `jarvis-resume-cas` réécrivaient cette chaîne à
+ * la main pour renseigner `p_model` dans leur trace d'audit. Le modèle
+ * réellement APPELÉ était déjà le bon — `llm()` résout ici, et lui seul — mais
+ * la valeur ENREGISTRÉE venait d'une copie. Deux façons de rater :
+ *
+ *   · `resume-cas` omettait `LLM_MODEL` de sa chaîne. Avec `LLM_MODEL` seul
+ *     posé, l'appel partait sur ce modèle et l'audit inscrivait
+ *     « google/gemini-2.5-flash ». Une trace d'audit qui nomme un modèle qui
+ *     n'a pas été utilisé est pire qu'une trace absente.
+ *   · toute évolution de `DEFAULT_MODEL` ici laissait les deux copies derrière,
+ *     silencieusement.
+ *
+ * L'exporter ne relâche rien : elle ne lit que la configuration, n'ouvre aucune
+ * connexion et ne porte aucun secret. La passerelle reste le SEUL point de
+ * sortie réseau ; c'est le point de sortie qui est gardé, pas la lecture d'un
+ * nom de modèle.
  */
-const SEEKAI_MODELS: ReadonlySet<string> = new Set<string>([
-  "glm-5.3-flash",
-  "kimi-k3",
-]);
-
-/** Endpoint SeekAI — surchargeable pour tests locaux / miroir. */
-const SEEKAI_BASE_URL_DEFAULT = "https://seekai.cc/v1/chat/completions";
-
-function getSeekAiBaseUrl(): string {
-  return env().SEEKAI_BASE_URL ?? SEEKAI_BASE_URL_DEFAULT;
-}
-
-function getSeekAiKey(): string | undefined {
-  const direct = env().SEEKAI_API_KEY;
-  if (direct !== undefined && direct !== "") return direct;
-  // Repli historique : le curl d'exemple utilise $NEW_API_KEY
-  const legacy = env().NEW_API_KEY;
-  if (legacy !== undefined && legacy !== "") return legacy;
-  return undefined;
-}
-
-function isSeekAiModel(model: string): boolean {
-  // Exact + préfixe seekai/ pour un éventuel namespacing futur
-  if (SEEKAI_MODELS.has(model)) return true;
-  if (model.startsWith("seekai/")) return true;
-  // Normalisation : seekai attend sans préfixe fournisseur, mais on accepte
-  // l'écriture préfixée et on la dépouille à l'envoi (voir seekAiProvider).
-  return false;
-}
-
-function stripSeekAiPrefix(model: string): string {
-  return model.startsWith("seekai/") ? model.slice("seekai/".length) : model;
+export function resolveModel(): string {
+  return env().OPENROUTER_MODEL ?? env().LLM_MODEL ?? DEFAULT_MODEL;
 }
 
 /**
@@ -269,13 +240,6 @@ const TARIFS_USD_PAR_MILLION: Readonly<Record<string, { readonly in: number; rea
   // Source : GET /api/v1/models/google/gemini-2.5-flash/endpoints,
   // OpenRouter, relevé le 2026-08-05 — 0,0000003/0,0000025 USD par jeton.
   "google/gemini-2.5-flash": { in: 0.3, out: 2.5 },
-  // SeekAI — tarifs indicatifs seekai.cc au 2026-08-29, à ajuster au relevé réel.
-  // glm-5.3-flash (Zhipu) : flash-tier, ordre de grandeur Gemini Flash.
-  "glm-5.3-flash": { in: 0.2, out: 0.8 },
-  "kimi-k3": { in: 0.4, out: 1.6 },
-  // Alias préfixé — même tarif, évite un null qui masquerait le coût.
-  "seekai/glm-5.3-flash": { in: 0.2, out: 0.8 },
-  "seekai/kimi-k3": { in: 0.4, out: 1.6 },
 };
 
 function estimateCostUsd(model: string, tokensIn: number, tokensOut: number): number | null {
@@ -546,199 +510,11 @@ export const openRouterProvider: LlmProvider = {
 
 
 /**
- * SeekAI — fournisseur secondaire, OpenAI-compatible.
- * Endpoint : https://seekai.cc/v1/chat/completions
- * Modèles : glm-5.3-flash, kimi-k3 (voir SEEKAI_MODELS).
- *
- * Même contrat que openRouterProvider (complete + stream SSE), même
- * gestion timeout / transitoire / usage. Seules différences : URL,
- * clé (SEEKAI_API_KEY || NEW_API_KEY), en-têtes minimaux, et
- * dépouillement du préfixe seekai/ sur le nom de modèle.
+ * Fournisseur unique : OpenRouter. Un seul point de sortie, une seule clé
+ * (`OPENROUTER_API_KEY`, `.env` serveur) — aucun routage par modèle.
  */
-export const seekAiProvider: LlmProvider = {
-  name: "seekai",
-
-  async complete(req) {
-    const clef = getSeekAiKey();
-    if (clef === undefined || clef === "") {
-      throw new Error("configuration: SEEKAI_API_KEY absente");
-    }
-    const controller = new AbortController();
-    const minuteur = setTimeout(() => controller.abort(), req.timeoutMs);
-    const modelEnvoi = stripSeekAiPrefix(req.model);
-    try {
-      const reponse = await fetch(getSeekAiBaseUrl(), {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${clef}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          model: modelEnvoi,
-          messages: req.messages,
-          max_tokens: MAX_OUTPUT_TOKENS,
-          temperature: 0.7,
-        }),
-        signal: controller.signal,
-      });
-      if (!reponse.ok) {
-        const transitoire = reponse.status >= 500 || reponse.status === 429;
-        throw new Error(transitoire ? `transitoire: HTTP ${reponse.status}` : `permanent: HTTP ${reponse.status}`);
-      }
-      const corps: unknown = await reponse.json();
-      if (!isOpenRouterResponse(corps)) {
-        throw new Error("permanent: réponse SeekAI de forme inattendue");
-      }
-      const texte = corps.choices?.[0]?.message?.content;
-      if (texte === undefined) {
-        throw new Error("permanent: réponse SeekAI sans contenu");
-      }
-      return {
-        text: texte,
-        tokensIn: corps.usage?.prompt_tokens ?? 0,
-        tokensOut: corps.usage?.completion_tokens ?? 0,
-      };
-    } catch (cause) {
-      if (controller.signal.aborted) {
-        throw new Error("transitoire: timeout");
-      }
-      if (cause instanceof TypeError) {
-        throw new Error("transitoire: réseau");
-      }
-      throw cause;
-    } finally {
-      clearTimeout(minuteur);
-    }
-  },
-
-  async stream(req) {
-    const clef = getSeekAiKey();
-    if (clef === undefined || clef === "") {
-      throw new Error("configuration: SEEKAI_API_KEY absente");
-    }
-    const controller = new AbortController();
-    const relaisAbandon = () => controller.abort();
-    req.signal?.addEventListener("abort", relaisAbandon, { once: true });
-    let usageFinal: UsageJeton = { tokensIn: null, tokensOut: null };
-    let resoudreUsage!: (u: UsageJeton) => void;
-    let rejeterUsage!: (cause: unknown) => void;
-    const usage = new Promise<UsageJeton>((resoudre, rejeter) => {
-      resoudreUsage = resoudre;
-      rejeterUsage = rejeter;
-    });
-    const modelEnvoi = stripSeekAiPrefix(req.model);
-    try {
-      const reponse = await fetch(getSeekAiBaseUrl(), {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${clef}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          model: modelEnvoi,
-          messages: req.messages,
-          max_tokens: MAX_OUTPUT_TOKENS_FLUX,
-          temperature: 0.7,
-          stream: true,
-          usage: { include: true },
-        }),
-        signal: controller.signal,
-      });
-      if (!reponse.ok) {
-        const transitoire = reponse.status >= 500 || reponse.status === 429;
-        throw new Error(transitoire ? `transitoire: HTTP ${reponse.status}` : `permanent: HTTP ${reponse.status}`);
-      }
-      if (reponse.body === null) {
-        throw new Error("permanent: réponse SeekAI sans corps de flux");
-      }
-      const lecteur = reponse.body.getReader();
-      const decodeur = new TextDecoder();
-      let sortie!: ReadableStreamDefaultController<string>;
-      const deltas = new ReadableStream<string>({
-        start(c) {
-          sortie = c;
-        },
-        cancel() {
-          controller.abort();
-          rejeterUsage(new Error("transitoire: abandon"));
-        },
-      });
-      void (async () => {
-        let tampon = "";
-        let minuteur = setTimeout(() => controller.abort(), req.timeoutMs);
-        const rearmeer = () => {
-          clearTimeout(minuteur);
-          minuteur = setTimeout(() => controller.abort(), req.timeoutMs);
-        };
-        try {
-          while (true) {
-            const { done, value } = await lecteur.read();
-            if (done) break;
-            tampon += decodeur.decode(value, { stream: true });
-            const lignes = tampon.split("\n");
-            tampon = lignes.pop() ?? "";
-            for (const ligne of lignes) {
-              const t = ligne.trim();
-              if (!t.startsWith("data:")) continue;
-              const donnees = t.slice(5).trim();
-              if (donnees === "[DONE]") continue;
-              let evenement: unknown;
-              try {
-                evenement = JSON.parse(donnees);
-              } catch {
-                continue;
-              }
-              const o = evenement as {
-                choices?: ReadonlyArray<{ delta?: { content?: string } }>;
-                usage?: { prompt_tokens?: number; completion_tokens?: number };
-                error?: { message?: string };
-              };
-              if (o.error !== undefined) {
-                throw new Error(`permanent: ${o.error.message ?? "flux fournisseur en erreur"}`);
-              }
-              rearmeer();
-              const frag = o.choices?.[0]?.delta?.content;
-              if (typeof frag === "string" && frag.length > 0) {
-                sortie.enqueue(frag);
-              }
-              if (o.usage !== undefined) {
-                usageFinal = {
-                  tokensIn: o.usage.prompt_tokens ?? null,
-                  tokensOut: o.usage.completion_tokens ?? null,
-                };
-              }
-            }
-          }
-          clearTimeout(minuteur);
-          sortie.close();
-          resoudreUsage(usageFinal);
-        } catch (cause) {
-          clearTimeout(minuteur);
-          sortie.error(cause);
-          rejeterUsage(cause);
-        } finally {
-          req.signal?.removeEventListener("abort", relaisAbandon);
-          lecteur.releaseLock();
-        }
-      })();
-      return { deltas, usage };
-    } catch (cause) {
-      req.signal?.removeEventListener("abort", relaisAbandon);
-      rejeterUsage(cause);
-      if (controller.signal.aborted) {
-        throw new Error("transitoire: timeout");
-      }
-      if (cause instanceof TypeError) {
-        throw new Error("transitoire: réseau");
-      }
-      throw cause;
-    }
-  },
-};
-
-/** Résout le fournisseur d'après le modèle — SeekAI si glm-5.3-flash/kimi-k3, sinon OpenRouter. */
-export function resolveLlmProvider(model: string): LlmProvider {
-  return isSeekAiModel(model) ? seekAiProvider : openRouterProvider;
+export function resolveLlmProvider(_model: string): LlmProvider {
+  return openRouterProvider;
 }
 
 function estTransitoire(cause: unknown): boolean {
@@ -774,6 +550,12 @@ export interface LlmRequest {
   /** uuid aléatoire généré par l'appelant — JAMAIS le patient_id. */
   readonly sessionToken: string;
   readonly timeoutMs?: number;
+  /**
+   * M05 — recu de transformation approuvee (C3). Absent par defaut : sans
+   * recu, un agregat reste bloque. Le recu n'autorise jamais un C1/C2 : les
+   * octets gagnent toujours contre le recu (voir `classification.ts`).
+   */
+  readonly egress?: { readonly transformId?: string };
   /**
    * V-JARVIS-CORE — abandon demandé en aval (client parti, bouton Stop).
    * Remonte jusqu'au fetch fournisseur : la génération s'arrête vraiment.
@@ -853,6 +635,11 @@ async function journaliser(entree: {
  * échec TRANSITOIRE (timeout, 5xx, réseau) — jamais sur un 4xx ni sur un échec
  * de validation, qui vit dans `jarvis-analyze-session/index.ts` et n'appelle
  * donc jamais cette fonction une seconde fois pour cette raison.
+ *
+ * M05 — LA FRONTIERE S'APPLIQUE ICI, AVANT TOUT FOURNISSEUR. `classerCharge`
+ * tranche sur les octets serialises des messages : C1/C2/INCONNU et C3 sans
+ * recu ne donnent JAMAIS lieu a un appel reseau (zero-byte invariant). Le
+ * refus est honnete (`frontiere`) et journalise en metadonnees seules.
  */
 export async function llm(
   req: LlmRequest,
@@ -862,6 +649,29 @@ export async function llm(
   const effectiveProvider = provider ?? resolveLlmProvider(model);
   const timeoutMs = req.timeoutMs ?? TIMEOUT_MS_DEFAUT;
   const depart = Date.now();
+
+  const transformId = req.egress?.transformId;
+  const verdict = classerCharge(
+    req.messages,
+    transformId === undefined ? null : { transformId },
+  );
+  if (verdict.decision === "BLOQUER") {
+    await journaliser({
+      purpose: req.purpose,
+      provider: effectiveProvider.name,
+      model,
+      promptVersion: req.promptVersion,
+      promptHash: req.promptHash,
+      sessionToken: req.sessionToken,
+      charsOut: null,
+      tokensIn: null,
+      tokensOut: null,
+      estimatedCostUsd: null,
+      outcome: "blocked",
+      latencyMs: Date.now() - depart,
+    });
+    return llmErr("frontiere", MESSAGE_REFUS_FRONTIERE);
+  }
 
   let derniereErreur: unknown;
   for (let tentative = 0; tentative < 2; tentative++) {
@@ -949,6 +759,30 @@ export async function llmStream(
   const effectiveProvider = provider ?? resolveLlmProvider(model);
   const timeoutMs = req.timeoutMs ?? TIMEOUT_MS_DEFAUT;
   const depart = Date.now();
+
+  // M05 — meme frontiere que `llm()` : aucun flux ne s'ouvre sur un C1/C2.
+  const transformIdFlux = req.egress?.transformId;
+  const verdictFlux = classerCharge(
+    req.messages,
+    transformIdFlux === undefined ? null : { transformId: transformIdFlux },
+  );
+  if (verdictFlux.decision === "BLOQUER") {
+    await journaliser({
+      purpose: req.purpose,
+      provider: effectiveProvider.name,
+      model,
+      promptVersion: req.promptVersion,
+      promptHash: req.promptHash,
+      sessionToken: req.sessionToken,
+      charsOut: null,
+      tokensIn: null,
+      tokensOut: null,
+      estimatedCostUsd: null,
+      outcome: "blocked",
+      latencyMs: Date.now() - depart,
+    });
+    return llmErr("frontiere", MESSAGE_REFUS_FRONTIERE);
+  }
 
   let flux: FluxTexte;
   try {

@@ -98,6 +98,9 @@ export function CarteProchaineEcheance({
 
   return (
     <Carte niveau="secondaire">
+      {/* Le `Carte` ne pose aucun padding : le contenu le porte, sinon le
+          titre touche la bordure (vu fiche patient, 2026-09-14). */}
+      <div className="flex flex-col p-5">
       <h2 className="mb-4 font-ui text-heading font-semibold tracking-heading text-ink-900">
         {fr.patients.sections.prochaineEcheance}
       </h2>
@@ -125,6 +128,7 @@ export function CarteProchaineEcheance({
             {fr.patients.documentsTotal(documents.nombre)}
           </span>
         </div>
+      </div>
       </div>
     </Carte>
   );

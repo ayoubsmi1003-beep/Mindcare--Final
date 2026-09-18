@@ -61,7 +61,10 @@ test.describe("ALEXA — lanceur flottant", () => {
     await expect(banniere.getByText(/Demander à Alexa/i)).toHaveCount(0);
   });
 
-  test("L3 le raccourci clavier reste, inchange", async ({ page }) => {
+  // M11 — ⌘K ouvre la PALETTE, plus le panneau : la palette est la 3e entrée
+  // de la MÊME conversation (voix, panneau, ⌘K), sur le même store. Le
+  // raccourci ouvre toujours l'assistante — c'est exactement ce que L3 verrouille.
+  test("L3 le raccourci clavier ouvre la palette de commande", async ({ page }) => {
     await login(page);
     await page.goto("/tableauDeBord");
     await expect(page.getByRole("button", { name: /Ouvrir Alexa/i })).toBeVisible({
@@ -70,9 +73,10 @@ test.describe("ALEXA — lanceur flottant", () => {
 
     // La bulle AJOUTE une porte visible, elle n'en retire aucune.
     await page.keyboard.press("Control+k");
-    await expect(page.getByRole("button", { name: /Maintenir pour parler/i })).toBeVisible({
-      timeout: 15_000,
-    });
+    const dialogue = page.getByRole("dialog", { name: /Commande/i });
+    await expect(dialogue).toBeVisible({ timeout: 15_000 });
+    await page.keyboard.press("Escape");
+    await expect(dialogue).toHaveCount(0);
   });
 
   test("L5 le bouton Envoyer tient DANS le panneau", async ({ page }) => {

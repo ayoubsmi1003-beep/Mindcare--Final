@@ -202,7 +202,7 @@ console.log("\nL6 — un texte à identité ne peut PAS partir chez le fournisse
   // `porteUneIdentite = true`, il ne doit JAMAIS être emprunté — on le prouve
   // en constatant qu'aucune instance `Audio` n'a été créée par ce chemin.
   derniereInstance = null;
-  const r = await lireTexte("BELKACEM Nadia, quatorze heures.", true);
+  const r = await lireTexte("DJILALI Karim, quatorze heures.", true);
   await pause();
   verdict("la lecture a eu lieu", r.ok === true, r.ok ? "ok" : r.error.code);
   verdict("AUCUN élément audio distant n'a été créé", derniereInstance === null, "chemin local exclusif");

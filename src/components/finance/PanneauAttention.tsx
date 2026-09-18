@@ -48,7 +48,6 @@ export function PanneauAttention({
 
   return (
     <section className="flex h-full min-h-0 flex-col gap-3" aria-label={t.titre}>
-      <h2 className="font-ui text-heading font-semibold text-ink-900">{t.titre}</h2>
 
       <div
         className={[

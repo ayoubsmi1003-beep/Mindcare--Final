@@ -29,8 +29,8 @@ registre appelle un service, le service appelle une porte SQL.
 | `services/jarvis-projections.ts` | DTO `Safe*` à liste blanche | ne masque rien — il SÉLECTIONNE |
 | `services/jarvis-confidentialite.ts` | pare-feu + garde fail-closed | ne connaît aucune porte SQL |
 | `services/jarvis-contexte.ts` | broker, cible unique, budgets | n'expédie jamais le dossier entier |
-| `services/jarvis-capacites.ts` | registre de LECTURE (16) | ne contient aucune écriture |
-| `services/jarvis-ecritures.ts` | registre d'ÉCRITURE (4) + vérification | n'est pas importé par la boucle |
+| `services/jarvis-capacites.ts` | registre de LECTURE (22, `LECTURES`) | ne contient aucune écriture |
+| `services/jarvis-ecritures.ts` | registre d'ÉCRITURE (7) + vérification | n'est pas importé par la boucle |
 | `services/jarvis-briefs.ts` | briefs composés en TypeScript | ne laisse aucun chiffre au modèle |
 | `services/jarvis-messages.ts` | brouillons de message composés en TypeScript | n'envoie rien — `canal: null`, `envoye: false` par le TYPE |
 | `services/jarvis-boucle.ts` | machine à états, budgets, dédup | n'exécute aucune écriture |
@@ -39,7 +39,7 @@ registre appelle un service, le service appelle une porte SQL.
 | 5 | **Dossiers & Notes** | 🔵 V1/V6 | `/consultation/[id]` · `/documents` | `consultations` · `clinical_notes` · `documents` · portes `030` | feature-builder |
 | 6 | **Finances** | 🔵 V6 | `/finances` | `payments` · portes `029` + `036` | feature-builder |
 
-**Transversal, sans écran propre :** design system (V3) · états d'écran (`05-UX-CONTRACT.md`) ·
+**Transversal, sans écran propre :** design system (V3) · états d'écran (`design-system/UX_CONTRACT.md`) ·
 budget de performance (`06-PERF-BUDGET.md`).
 
 ---
@@ -106,7 +106,7 @@ patients · consultations · appointments
 | Consentement | `consents.patient_id` | idem |
 | Ordonnance | `+ 'ordonnance'` dans l'enum `app.doc_type` | une valeur d'enum, un modèle |
 | 2ᵉ praticien | `appointments.practitioner_id` | **une colonne**, pas une refonte |
-| 2ᵉ cabinet | `clinic_id` déjà présent partout | policies RLS à ajouter |
+| 2ᵉ cabinet | `cabinet_id` déjà présent partout | policies RLS à ajouter |
 | Enveloppe Electron | second adaptateur de `DbPort` (ADR-020) | **aucun service touché** |
 | Voix locale | `VOICE_PROVIDER=local` (ADR-024) | **une variable d'environnement** |
 

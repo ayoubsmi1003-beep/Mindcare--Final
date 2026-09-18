@@ -20,17 +20,19 @@ import {
   abonnerConversation,
   accepterCarte,
   changerSaisie,
+  definirContextePatient,
   effacerErreur,
   envoyer,
   interrompre,
+  quitterContexte,
   refuserCarte,
   type EtatConversationPublique,
 } from "@/services/conversation";
 import {
   abonnerPatientActif,
-  effacerPatientActif,
   type PatientActif,
 } from "@/services/patient-actif";
+import { cibleValide } from "@/services/jarvis-contexte";
 
 import { CarteConfirmation } from "./CarteConfirmation";
 import { FilJarvis } from "./FilJarvis";
@@ -58,26 +60,44 @@ export function PanneauJarvis({
 }: PanneauJarvisProps): React.JSX.Element {
   const [etat, setEtat] = useState<EtatConversationPublique | null>(null);
   const [patientActif, setPatientActif] = useState<PatientActif | null>(null);
+  const [maintenant, setMaintenant] = useState<number>(() => Date.now());
 
   useEffect(() => abonnerConversation(setEtat), []);
-  useEffect(() => abonnerPatientActif(setPatientActif), []);
+  // Phase 3 : l'écran ALIMENTE la cible — `definirContextePatient` n'avait
+  // aucun appelant, la cible restait vide et « son dossier » ne résolvait
+  // jamais vers le dossier ouvert. L'effacement se propage de même (null).
+  useEffect(
+    () =>
+      abonnerPatientActif((p) => {
+        setPatientActif(p);
+        definirContextePatient(p);
+      }),
+    [],
+  );
 
-  // Cmd-K / Ctrl-K ouvre et ferme ; Echap ferme, SAUF si une carte attend une
-  // decision : refermer le panneau sur une proposition en attente la
-  // laisserait `proposed` sans que personne ne sache qu'elle existe. La
-  // dependance suit les publications du store, pas un state local.
+  // Phase 3 : expiré = absent. Toutes les 30 s, une cible dépassée purge les
+  // deux magasins et la puce disparaît — aucun contexte oublié à l'écran.
+  useEffect(() => {
+    if (patientActif === null) return;
+    const minuteur = setInterval(() => {
+      if (cibleValide() === null) quitterContexte();
+      else setMaintenant(Date.now());
+    }, 30_000);
+    return () => clearInterval(minuteur);
+  }, [patientActif]);
+
+  // Echap ferme, SAUF si une carte attend une decision : refermer le panneau
+  // sur une proposition en attente la laisserait `proposed` sans que personne
+  // ne sache qu'elle existe. L'ouverture clavier (Cmd-K / Ctrl-K) appartient
+  // a la palette (M11). La dependance suit les publications du store, pas un
+  // state local.
   useEffect(() => {
     function surTouche(evenement: KeyboardEvent): void {
-      if ((evenement.metaKey || evenement.ctrlKey) && evenement.key.toLowerCase() === "k") {
-        evenement.preventDefault();
-        onChangerOuvert(!ouvert);
-        return;
-      }
       if (evenement.key === "Escape" && etat?.carteEcriture === null) onChangerOuvert(false);
     }
     window.addEventListener("keydown", surTouche);
     return () => window.removeEventListener("keydown", surTouche);
-  }, [etat, ouvert, onChangerOuvert]);
+  }, [etat, onChangerOuvert]);
 
   const soumettre = useCallback(() => {
     if (etat === null) return;
@@ -132,8 +152,11 @@ export function PanneauJarvis({
         </button>
       </header>
 
-      {/* Le contexte patient est EVIDENT, jamais devine. */}
-      {patientActif !== null && (
+      {/* Le contexte patient est EVIDENT, jamais devine — Phase 3 : avec son
+        âge et une sortie explicite. Expiré, il est traité comme absent : la
+        puce disparaît (`cibleValide`, qui purge paresseusement — appel
+        idempotent, convergé par l'abonnement). */}
+      {patientActif !== null && cibleValide() !== null && (
         <div
           role="status"
           className="flex items-center justify-between gap-3 border-b border-ai-100 bg-ai-50 px-4 py-2"
@@ -141,17 +164,20 @@ export function PanneauJarvis({
           <span className="flex min-w-0 items-center gap-2 font-ui text-label text-ai-600">
             <Icone nom="patients" taille={16} />
             <span className="truncate">
-              {fr.jarvis.contexte.patientActif} : {patientActif.nom}
+              {fr.jarvis.contexte.contexteTitre} : {patientActif.nom} ·{" "}
+              {fr.jarvis.contexte.ilYaNMin(
+                Math.max(0, Math.floor((maintenant - patientActif.etablieA) / 60_000)),
+              )}
             </span>
           </span>
           <button
             type="button"
-            onClick={() => effacerPatientActif()}
-            aria-label={fr.jarvis.contexte.retirer}
-            title={fr.jarvis.contexte.retirer}
-            className="inline-flex min-h-target min-w-target shrink-0 cursor-pointer items-center justify-center rounded-md border-0 bg-transparent text-ink-500 transition duration-quick ease-soft hover:bg-ai-100 hover:text-ai-600"
+            onClick={() => quitterContexte()}
+            aria-label={fr.jarvis.contexte.changer}
+            title={fr.jarvis.contexte.changer}
+            className="inline-flex min-h-target shrink-0 cursor-pointer items-center justify-center rounded-md border-0 bg-transparent px-2 font-ui text-label font-semibold text-ai-600 transition duration-quick ease-soft hover:bg-ai-100"
           >
-            <Icone nom="croix" taille={16} />
+            {fr.jarvis.contexte.changer}
           </button>
         </div>
       )}

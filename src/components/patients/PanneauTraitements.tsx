@@ -10,7 +10,12 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { Badge, Bouton, Carte, EtatVide } from "@/components/ui";
 import { fr } from "@/i18n/fr";
-import { searchMedications, type MedicationCatalogItem } from "@/services/medications";
+import {
+  getMedicationVariants,
+  searchMedications,
+  type MedicationCatalogItem,
+  type MedicationVariant,
+} from "@/services/medications";
 import {
   getTreatmentHistory,
   pauseTreatment,
@@ -77,7 +82,12 @@ function PaletteRecherche({
     }
     const t = window.setTimeout(() => {
       setChargement(true);
-      void searchMedications(aq, 10).then((res) => {
+      // 30, pas 10 : à 10 résultats, la liste tenait déjà entière dans
+      // `max-h-96` — rien à défiler, alors que le catalogue (15k lignes) en
+      // proposait davantage. Le conteneur défilait très bien ; il n'avait
+      // simplement rien au-delà du pli. 30 reste loin du catalogue entier
+      // (toujours filtré côté base, jamais chargé en bloc côté client).
+      void searchMedications(aq, 30).then((res) => {
         setChargement(false);
         if (!res.ok) return;
         setResultats(res.data);
@@ -197,6 +207,8 @@ function CarteTraitement({
   const [err, setErr] = useState<string | null>(null);
   const [confirmArret, setConfirmArret] = useState(false);
   const [motif, setMotif] = useState<string>("autre");
+  const [variantes, setVariantes] = useState<readonly MedicationVariant[] | null>(null);
+  const [doseLibre, setDoseLibre] = useState(false);
 
   useEffect(() => {
     setDose(t.dose ?? "");
@@ -205,6 +217,31 @@ function CarteTraitement({
     setTiming(t.timing);
     setInstr(t.instructions ?? "");
   }, [t]);
+
+  // Dosages existants du même médicament — peuple la liste déroulante à
+  // l'ouverture de l'édition, plutôt qu'à chaque rendu de la carte : la
+  // praticienne ne consulte cette liste qu'en modifiant.
+  useEffect(() => {
+    if (!edition) return;
+    let vivant = true;
+    setVariantes(null);
+    void getMedicationVariants(t.medicationId).then((res) => {
+      if (!vivant) return;
+      setVariantes(res.ok ? res.data : []);
+    });
+    return () => {
+      vivant = false;
+    };
+  }, [edition, t.medicationId]);
+
+  // Saisie libre par défaut si la dose actuelle ne correspond à aucun
+  // dosage catalogue connu — sinon la liste déroulante s'ouvrirait sur une
+  // valeur qu'elle ne propose pas.
+  useEffect(() => {
+    if (variantes === null) return;
+    const correspond = variantes.some((v) => v.strength === (t.dose ?? ""));
+    setDoseLibre(!correspond);
+  }, [variantes, t.dose]);
 
   const sauvegarder = useCallback(() => {
     setBusy(true);
@@ -289,7 +326,41 @@ function CarteTraitement({
             <div className="grid grid-cols-2 gap-3">
               <label className="flex flex-col gap-1">
                 <span className="font-ui text-label tracking-label text-ink-500">{fr.patients.traitementsV2.dose}</span>
-                <input value={dose} onChange={(e) => setDose(e.target.value)} placeholder="100 mg" className={SOCLE_INPUT} />
+                {/* Liste déroulante des dosages CATALOGUE du même médicament
+                    (même DCI, même forme) quand il y en a plus d'un — évite la
+                    saisie libre pour un cas que le catalogue connaît déjà.
+                    `medication_id` du traitement n'est jamais modifié : choisir
+                    une option ne change que le TEXTE de la dose. */}
+                {variantes !== null && variantes.length > 1 && !doseLibre ? (
+                  <select
+                    value={dose}
+                    onChange={(e) => {
+                      if (e.target.value === "__libre__") {
+                        setDoseLibre(true);
+                        return;
+                      }
+                      setDose(e.target.value);
+                    }}
+                    className={SOCLE_INPUT}
+                  >
+                    {!variantes.some((v) => v.strength === dose) ? (
+                      <option value={dose}>{dose || fr.patients.traitementsV2.dose}</option>
+                    ) : null}
+                    {variantes.map((v) => (
+                      <option key={v.id} value={v.strength ?? ""}>
+                        {[v.strength, v.form].filter(Boolean).join(" · ") || v.rawName}
+                      </option>
+                    ))}
+                    <option value="__libre__">{fr.patients.traitementsV2.doseAutre}</option>
+                  </select>
+                ) : (
+                  <input
+                    value={dose}
+                    onChange={(e) => setDose(e.target.value)}
+                    placeholder={variantes === null ? fr.patients.traitementsV2.doseChargement : "100 mg"}
+                    className={SOCLE_INPUT}
+                  />
+                )}
               </label>
               <label className="flex flex-col gap-1">
                 <span className="font-ui text-label tracking-label text-ink-500">{fr.patients.traitementsV2.doseUnite}</span>
@@ -306,15 +377,15 @@ function CarteTraitement({
                 {[fr.patients.traitementsV2.horairesMatin, fr.patients.traitementsV2.horairesMidi, fr.patients.traitementsV2.horairesSoir].map((h) => {
                   const active = timing.map((x) => x.toLowerCase()).includes(h.toLowerCase());
                   return (
-                    <button
+                    <Bouton
                       key={h}
                       type="button"
-                      aria-pressed={active}
+                      taille="compact"
+                      enfonce={active}
                       onClick={() => setTiming((prev) => (prev.includes(h) ? prev.filter((x) => x !== h) : [...prev, h]))}
-                      className={`rounded-full border px-3 py-1.5 font-ui text-label transition ${active ? "border-action-600 bg-action-600 text-white" : "border-rule bg-card text-ink-700 hover:bg-muted"}`}
                     >
                       {h}
-                    </button>
+                    </Bouton>
                   );
                 })}
               </div>
@@ -629,7 +700,7 @@ export function PanneauTraitements({
         </Bouton>
       </div>
 
-      {okMsg ? <div className="rounded-xl bg-emerald-50 px-3 py-2 font-ui text-body text-positive">{okMsg}</div> : null}
+      {okMsg ? <div className="rounded-xl bg-positive-bg px-3 py-2 font-ui text-body text-positive">{okMsg}</div> : null}
       {err && !selection ? <div className="rounded-xl bg-critical-bg px-3 py-2 font-ui text-body text-critical">{err}</div> : null}
 
       {selection ? (
@@ -657,15 +728,15 @@ export function PanneauTraitements({
                 {[fr.patients.traitementsV2.horairesMatin, fr.patients.traitementsV2.horairesMidi, fr.patients.traitementsV2.horairesSoir].map((h) => {
                   const active = timing.includes(h);
                   return (
-                    <button
+                    <Bouton
                       key={h}
                       type="button"
-                      aria-pressed={active}
+                      taille="compact"
+                      enfonce={active}
                       onClick={() => setTiming((prev) => (prev.includes(h) ? prev.filter((x) => x !== h) : [...prev, h]))}
-                      className={`rounded-full border px-3 py-1.5 font-ui text-label transition ${active ? "border-action-600 bg-action-600 text-white" : "border-rule bg-card text-ink-700 hover:bg-muted"}`}
                     >
                       {h}
-                    </button>
+                    </Bouton>
                   );
                 })}
               </div>

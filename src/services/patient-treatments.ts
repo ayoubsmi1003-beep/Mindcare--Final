@@ -87,16 +87,26 @@ export interface TreatmentCursor {
   readonly id: string;
 }
 
-// Zod de la table (colonnes snake)
+// Zod de la table (colonnes snake).
+// ⚠️ `medication_raw`/`brand_name`/`form`/`strength`/`inn` sont OPTIONNELS,
+// délibérément. Ce sont des colonnes de `app.medications`, jointes par
+// `get_patient_treatments` (076) — mais les sept portes d'écriture (075)
+// rendent `SETOF app.patient_treatments`, la table nue, sans cette jointure.
+// Les exiger ici faisait échouer TOUTE écriture (start/update/pause/resume/
+// stop/restart/renew) au parse Zod, alors qu'aucun appelant ne lit ces champs
+// sur une réponse d'écriture — chacun rafraîchit ensuite via la porte de
+// lecture, qui les fournit. Constaté à l'écran : « Confirmer » sur un nouveau
+// traitement rendait « la réponse du serveur ne correspond pas au format
+// attendu » alors que l'écriture avait réussi en base.
 const TREATMENT_ROW = z.object({
   id: z.string(),
   patient_id: z.string(),
   medication_id: z.string(),
-  medication_raw: z.string().nullable(),
-  brand_name: z.string().nullable(),
-  form: z.string().nullable(),
-  strength: z.string().nullable(),
-  inn: z.string().nullable(),
+  medication_raw: z.string().nullable().optional(),
+  brand_name: z.string().nullable().optional(),
+  form: z.string().nullable().optional(),
+  strength: z.string().nullable().optional(),
+  inn: z.string().nullable().optional(),
   consultation_id: z.string().nullable(),
   previous_treatment_id: z.string().nullable(),
   status: z.enum(["active", "paused", "stopped"]),
@@ -148,10 +158,10 @@ function toTreatment(r: z.infer<typeof TREATMENT_ROW>): Treatment {
     patientId: r.patient_id,
     medicationId: r.medication_id,
     medicationRaw: r.medication_raw ?? "",
-    brandName: r.brand_name,
-    form: r.form,
-    strength: r.strength,
-    inn: r.inn,
+    brandName: r.brand_name ?? null,
+    form: r.form ?? null,
+    strength: r.strength ?? null,
+    inn: r.inn ?? null,
     consultationId: r.consultation_id,
     previousTreatmentId: r.previous_treatment_id,
     status: r.status,
@@ -196,10 +206,20 @@ export async function getPatientTreatments(
   if (!raw) {
     return ok({ actifs: [], enPause: [], arretesRecents: [], totalActifs: 0, total: 0 });
   }
+  // ⚠️ `patient_id` N'EST PAS PROJETÉ PAR LA PORTE (076 sélectionne ses
+  // colonnes explicitement, sans lui — toutes les lignes appartiennent au
+  // patient filtré, par construction). L'exiger ici faisait échouer TOUT
+  // patient avec ≥1 traitement (`zod:actifs.0.patient_id`, mesuré en live
+  // le 2026-09-03) pendant que les dossiers sans traitement passaient.
+  // Même doctrine que le commentaire en tête de fichier (cas miroir des
+  // portes d'écriture) : on relâche cette SEULE voie de lecture, et on
+  // remplit depuis l'argument — la même valeur que le filtre SQL.
+  // `TREATMENT_ROW` (écritures, table nue) est intouché.
+  const LIGNE_LISTE = TREATMENT_ROW.extend({ patient_id: z.string().optional() });
   const schema = z.object({
-    actifs: z.array(TREATMENT_ROW),
-    en_pause: z.array(TREATMENT_ROW),
-    arretes_recents: z.array(TREATMENT_ROW),
+    actifs: z.array(LIGNE_LISTE),
+    en_pause: z.array(LIGNE_LISTE),
+    arretes_recents: z.array(LIGNE_LISTE),
     total_actifs: z.coerce.number(),
     total: z.coerce.number(),
   });
@@ -211,10 +231,12 @@ export async function getPatientTreatments(
     });
     return err(erreurSchema("get_patient_treatments"));
   }
+  const versTraitement = (r: z.infer<typeof LIGNE_LISTE>): Treatment =>
+    toTreatment({ ...r, patient_id: r.patient_id ?? patientId });
   return ok({
-    actifs: parsed.data.actifs.map(toTreatment),
-    enPause: parsed.data.en_pause.map(toTreatment),
-    arretesRecents: parsed.data.arretes_recents.map(toTreatment),
+    actifs: parsed.data.actifs.map(versTraitement),
+    enPause: parsed.data.en_pause.map(versTraitement),
+    arretesRecents: parsed.data.arretes_recents.map(versTraitement),
     totalActifs: parsed.data.total_actifs,
     total: parsed.data.total,
   });

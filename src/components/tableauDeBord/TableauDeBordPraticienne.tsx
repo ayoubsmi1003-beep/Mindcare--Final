@@ -31,19 +31,20 @@ import {
   BandeauHorsLigne,
   BlocErreur,
   Bouton,
-  LienBouton,
-  Section,
   Squelette,
 } from "@/components/ui";
+import { Icone, type NomIcone } from "@/components/ui/Icones";
 import { fr } from "@/i18n/fr";
 import { getDashboardToday, type CreneauDuJour, type TableauDeBord } from "@/services/dashboard";
 import { aujourdHuiCabinet } from "@/services/finance-calendrier";
 import { startConsultation } from "@/services/consultations";
 
-import { CarteSalleAttente, CarteSeanceEnCours, CarteSuivant } from "./CartesMaintenant";
-import { CarteCaisse, CarteNouveauxPatients, CartePropositions } from "./ColonneContexte";
+import { BandeauAccueil } from "./BandeauAccueil";
+import { BlocBriefMatin } from "./BlocBriefMatin";
+import { CarteSuivant } from "./CartesMaintenant";
+import { CartePropositions } from "./ColonneContexte";
 import { FilDeLaJournee } from "./FilDeLaJournee";
-import { dateLongueCabinet } from "./heures";
+import { ChargeJournee, RepartitionStatuts, TuilesJournee } from "./PoulsJournee";
 
 /** Mêmes cadences que le cockpit d'accueil — une seule discipline dans le produit. */
 const INTERVALLE_TABLEAU_MS = 120_000;
@@ -196,23 +197,37 @@ export function TableauDeBordPraticienne({
       {horsLigneSession ? <BandeauHorsLigne /> : null}
 
       {/*
-        LE CONTEXTE DE LA JOURNEE, EN UNE LIGNE.
-        C'etait une banniere heros de 120 px qui repetait la meme chaine en
-        sur-titre ET en sous-titre. L'identite de l'ecran est montee dans la
-        barre superieure ; ce qui restait d'utile ici — la date, le nombre de
-        seances, combien sont finies — est du CONTEXTE, et tient sur une ligne.
+        ═══════════════════════════════════════════════════════════════════
+        LA COMPOSITION V8.1 — DEUX RANGÉES, PAS TROIS, ET C'EST UNE
+        CORRECTION APRÈS RETOUR UTILISATEUR
+        ═══════════════════════════════════════════════════════════════════
+
+        La première version de V8 empilait : bandeau, tuiles, PUIS fil de la
+        journée pleine hauteur + (charge/répartition) DANS la même colonne,
+        avec Alexa et deux cartes « personne » dans une colonne à part à
+        côté. Additionné, ça dépassait la hauteur d'un écran 1080p et forçait
+        un défilement pour voir la moitié du tableau de bord.
+
+        Deux corrections structurelles :
+
+        1. LA CARTE « SÉANCE EN COURS » DISPARAÎT D'ICI. Elle répétait, en
+           plus grand, ce que le bandeau d'accueil dit déjà (le nom vit sur
+           le bouton « Reprendre la séance », le chrono y tourne déjà). Une
+           carte de plus qui redit la même chose n'ajoute pas d'information,
+           elle ajoute de la hauteur.
+
+        2. LA GRILLE PASSE À 2 RANGÉES DE PANNEAUX ÉGAUX :
+             rangée A : fil de la journée (large) · Alexa
+             rangée B : répartition · charge horaire · patient suivant
       */}
-      <p className="font-ui text-body font-regular text-ink-500">
-        <span className="text-ink-700">{dateLongueCabinet(maintenant)}</span>
-        {t.journee.length === 0 ? null : (
-          <>
-            {" · "}
-            {fr.tableauDeBord.fil.seances.replace("{nombre}", String(t.journee.length))}
-            {" · "}
-            {fr.tableauDeBord.fil.terminees.replace("{nombre}", String(terminees))}
-          </>
-        )}
-      </p>
+      <BandeauAccueil
+        maintenant={maintenant}
+        seanceOuverte={t.seanceOuverte}
+        nombreSeances={t.journee.length}
+        nombreTerminees={terminees}
+      />
+
+      <BlocBriefMatin tableau={t} maintenant={maintenant} />
 
       {/* Une erreur SURVENUE APRÈS un premier chargement réussi ne remplace pas
           l'écran : la journée déjà chargée reste lisible, et l'incident se dit
@@ -228,34 +243,92 @@ export function TableauDeBordPraticienne({
         />
       ) : null}
 
-      <div className="grid grid-cols-un items-stretch gap-4 tablet:grid-cols-trois">
-        <CarteSeanceEnCours seance={t.seanceOuverte} maintenant={maintenant} />
+      <TuilesJournee
+        journee={t.journee}
+        attenteNombre={t.attenteNombre}
+        nouveauxPatientsMois={t.nouveauxPatientsMois}
+        encaisse={t.encaisse}
+      />
+
+      <div className="grid grid-cols-un items-start gap-5 desktop:grid-cols-tableauDeBordA">
+        <Panneau titre={fr.tableauDeBord.fil.titre} icone="agenda">
+          <FilDeLaJournee
+            journee={t.journee}
+            maintenant={maintenant}
+            onDemarrer={(c) => void demarrer(c)}
+            demarrageEnCours={demarrage}
+          />
+        </Panneau>
+
+        <CartePropositions propositions={t.propositions} onMutation={() => void recharger()} />
+      </div>
+
+      <div className="grid grid-cols-un items-stretch gap-5 desktop:grid-cols-trois">
+        <Panneau titre={fr.tableauDeBord.v8.repartitionTitre} icone="suivi">
+          <RepartitionStatuts journee={t.journee} />
+        </Panneau>
+        <Panneau
+          titre={fr.tableauDeBord.v8.chargeTitre}
+          aide={fr.tableauDeBord.v8.chargeAide}
+          icone="statistiques"
+        >
+          <ChargeJournee journee={t.journee} />
+        </Panneau>
         <CarteSuivant
           suivant={t.suivant}
           onDemarrer={(c) => void demarrer(c)}
           demarrageEnCours={demarrage}
+          compacte
         />
-        <CarteSalleAttente nombre={t.attenteNombre} />
-      </div>
-
-      <div className="grid grid-cols-un gap-6 tablet:grid-cols-cockpit">
-        <Section titre={fr.tableauDeBord.fil.titre} icone="agenda">
-          <div className="rounded-xl border border-rule bg-card p-5 shadow-lift1 lg:p-6">
-            <FilDeLaJournee
-              journee={t.journee}
-              maintenant={maintenant}
-              onDemarrer={(c) => void demarrer(c)}
-              demarrageEnCours={demarrage}
-            />
-          </div>
-        </Section>
-
-        <aside className="flex flex-col gap-5">
-          <CarteCaisse caisse={t.encaisse} />
-          <CarteNouveauxPatients nombre={t.nouveauxPatientsMois} />
-          <CartePropositions propositions={t.propositions} onMutation={() => void recharger()} />
-        </aside>
       </div>
     </div>
+  );
+}
+
+/**
+ * UN PANNEAU DE TABLEAU DE BORD.
+ *
+ * Remplace le couple `Section` + carte enveloppe qui écrivait la même chose en
+ * deux composants imbriqués. `Section` posait un titre AU-DESSUS de la carte,
+ * séparé par un filet : le titre appartenait donc à la page et la carte
+ * flottait dessous. Ici le titre est DANS la surface, ce qui les rend
+ * solidaires — c'est la différence entre un panneau et un titre suivi d'une
+ * boîte.
+ *
+ * `aide` est optionnelle et vit sur la même ligne que le titre : la phrase qui
+ * définit ce qu'un graphique montre n'a pas à occuper une ligne pour elle
+ * seule, mais la retirer supprimerait la seule définition de ce qu'on regarde.
+ */
+function Panneau({
+  titre,
+  aide,
+  icone,
+  children,
+}: {
+  readonly titre: string;
+  readonly aide?: string;
+  readonly icone: NomIcone;
+  readonly children: React.ReactNode;
+}): React.JSX.Element {
+  return (
+    <section className="flex min-w-0 flex-col gap-5 rounded-2xl border border-rule bg-card p-5 shadow-carte lg:p-6">
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+        <div className="flex min-w-0 items-center gap-3">
+          <span
+            aria-hidden="true"
+            className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-tuile-menthe text-emeraude-700 shadow-douce"
+          >
+            <Icone nom={icone} taille={20} />
+          </span>
+          <h2 className="min-w-0 truncate font-ui text-heading font-bold tracking-heading text-ink-900">
+            {titre}
+          </h2>
+        </div>
+        {aide === undefined ? null : (
+          <p className="min-w-0 truncate font-ui text-label text-ink-500">{aide}</p>
+        )}
+      </div>
+      {children}
+    </section>
   );
 }

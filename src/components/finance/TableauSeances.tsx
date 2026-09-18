@@ -70,16 +70,16 @@ export function TableauSeances({
       {liste.lignes.length === 0 ? (
         <p className="rounded-xl border border-dashed border-rule bg-sunken px-4 py-8 text-center font-ui text-body font-regular text-ink-500">{t.aucune}</p>
       ) : (
-        <div className="overflow-hidden rounded-xl border border-rule bg-card shadow-lift2">
+        <div className="overflow-hidden rounded-2xl border border-rule bg-card shadow-carte">
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
-                <tr className="border-b border-rule bg-sunken">
+                <tr className="border-b border-rule bg-tete-tableau">
                   {[t.date, t.patient, t.type, t.montant, t.mode, t.statut].map((h) => (
                     <th
                       key={h}
                       scope="col"
-                      className="px-4 py-3 text-left font-ui text-label font-medium tracking-label text-ink-500"
+                      className="whitespace-nowrap px-4 py-3 text-left font-ui text-label font-semibold text-ink-700"
                     >
                       {h}
                     </th>
@@ -89,9 +89,9 @@ export function TableauSeances({
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-rule/60">
+              <tbody className="divide-y divide-rule">
                 {liste.lignes.map((l) => (
-                  <tr key={l.id} className="transition hover:bg-sunken">
+                  <tr key={l.id} className="transition duration-quick hover:bg-action-50 even:bg-sunken">
                     <td className="whitespace-nowrap px-4 py-3.5 font-num text-label font-semibold tabular-nums text-ink-700">
                       {l.date.replace("T", " · ")}
                     </td>

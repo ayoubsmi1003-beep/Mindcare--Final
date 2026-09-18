@@ -52,6 +52,7 @@ function tourFlux(
     conversationId,
     persiste: false,
     interrompu: false,
+    preuves: [],
   };
 }
 

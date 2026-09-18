@@ -67,10 +67,10 @@ export function CarteResumeCas({
          quoi en faire. Ce qui compte n'est pas d'où vient le texte mais s'il
          est juste et sourcé — la provenance est dite une fois, en bas, et
          chaque affirmation porte ses preuves. */
-      className="flex flex-col gap-6 rounded-lg border border-rule bg-card px-6 py-6 shadow-lift1"
+      className="flex flex-col gap-5 rounded-2xl border border-rule bg-card px-5 py-5 shadow-carte"
     >
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <h2 className="font-ui text-display font-semibold tracking-heading text-ink-900">
+        <h2 className="font-ui text-title font-bold tracking-title text-ink-900">
           {fr.patients.resume.titre}
         </h2>
         {r !== null ? <ChipFraicheur resume={r} /> : null}

@@ -74,5 +74,16 @@ dist-electron/
 #   · `resources/pgsql/` recoit ~200 Mio de binaires PostgreSQL telecharges
 #     chez l'editeur. Son README, lui, est suivi : c'est la procedure.
 resources/serveur/
+serveur/
 resources/pgsql/*
 !resources/pgsql/README.md
+
+# Preuves navigateur rejouables (Playwright) : artefacts reconstruits par
+# `mesure-*-navigateur.mjs`, jamais des livrables (même règle que
+# `scripts/.mesures/` ci-dessus — un vert ne voyage pas avec le dépôt).
+playwright-report/
+test-results/
+# Playwright CLI output (may contain credentials)
+.playwright-cli/
+# Scratch SDD (ledgers, briefs, review packages) � jamais commit�.
+.superpowers/

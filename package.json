@@ -15,6 +15,9 @@
     "postinstall": "node scripts/sync-wakeword-runtime.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
+    "eval:jarvis": "bash scripts/checkpoint-jarvis-couche.sh",
+    "eval:golden": "node scripts/eval-golden.mjs",
+    "eval:replay": "node scripts/replay-golden.mjs",
     "import:medicaments": "node scripts/import-medicaments.mjs --file docs/Médicaments.xlsx",
     "build:electron": "tsc -p electron/tsconfig.json",
     "dev:electron": "pnpm build:electron && node scripts/dev-electron.mjs",
@@ -24,7 +27,9 @@
     "verifier:paquet": "node scripts/verifier-paquet.mjs"
   },
   "dependencies": {
+    "@huggingface/tokenizers": "0.2.0",
     "next": "^15.1.0",
+    "onnxruntime-node": "1.30.0",
     "onnxruntime-web": "^1.29.0",
     "pg": "^8.23.0",
     "react": "^19.0.0",
@@ -34,6 +39,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
     "@next/eslint-plugin-next": "^15.1.0",
+    "@playwright/test": "1.62.1",
     "@types/node": "^22.10.0",
     "@types/pg": "^8.23.1",
     "@types/react": "^19.0.0",

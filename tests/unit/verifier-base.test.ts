@@ -139,11 +139,12 @@ describe("verifier-base.mjs — la panne LM54.3 ne peut plus se reproduire", () 
 describe("base-locale.mjs — constantes du cycle de vie", () => {
   it("le conteneur, l'image, l'hôte et le port correspondent à l'installation réelle", async () => {
     const bl = await import(path.join(RACINE, "scripts", "lib", "base-locale.mjs"));
-    // mc-p3, postgres:17, 127.0.0.1:55441 — figés par les phases 3-6 de
-    // pg-local (checkpoints/pg-local/). Toute divergence = la base décrite
+    // mc-p3, pgvector/pgvector:0.8.6-pg16 (PG 16.15 + vector 0.8.6),
+    // 127.0.0.1:55441 — figés par les phases 3-6 de pg-local puis la
+    // réconciliation PG16+M07. Toute divergence = la base décrite
     // dans .env n'est plus celle que le cycle de vie garantit.
     expect(bl.CONTENEUR_DEV).toBe("mc-p3");
-    expect(bl.IMAGE_DEV).toBe("postgres:17");
+    expect(bl.IMAGE_DEV).toBe("pgvector/pgvector:0.8.6-pg16");
     expect(bl.HOTE).toBe("127.0.0.1");
     expect(bl.PORT_HOTE).toBe(55441);
   });

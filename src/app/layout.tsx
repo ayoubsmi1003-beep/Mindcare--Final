@@ -46,12 +46,10 @@
 import type { ReactNode } from "react";
 
 import {
-  Fraunces,
-  Geist,
-  Geist_Mono,
   IBM_Plex_Sans_Arabic,
-  Inter,
-  Newsreader,
+  Merriweather,
+  Montserrat,
+  Source_Code_Pro,
 } from "next/font/google";
 
 import { SyntheticDataBanner } from "@/components/SyntheticDataBanner";
@@ -61,10 +59,15 @@ import { SyntheticDataBanner } from "@/components/SyntheticDataBanner";
 // consommer les variables qu'il déclare.
 import "../styles/tokens.css";
 
-/** Interface — neutre, dense, excellente en petites tailles (§5). */
-const fonteUi = Geist({
+/**
+ * VERT SAUGE — L'INTERFACE EST MONTSERRAT, POLICE CLINIQUE ARRONDISQUE.
+ * Montserrat remplace Inter — le choix du thème sauge : lisibilité à 14px,
+ * chiffres tabulaires via tokens.css, hiérarchie par graisse 400/500/600/700.
+ * Le 800 reste pour les métriques display (44px) où le chiffre devient objet.
+ */
+const fonteUi = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-ui-emise",
   display: "swap",
 });
@@ -74,7 +77,7 @@ const fonteUi = Geist({
  * par `tokens.css` : une colonne de doses qui ne s'aligne pas se lit mal, et
  * elle se lit avec un patient qui parle.
  */
-const fonteNum = Geist_Mono({
+const fonteNum = Source_Code_Pro({
   subsets: ["latin"],
   weight: ["400", "500"],
   variable: "--font-num-emise",
@@ -87,7 +90,7 @@ const fonteNum = Geist_Mono({
  * sera imprimé et signé : la typographie encode l'état juridique du contenu.
  * L'employer comme fonte décorative détruirait exactement ce signal.
  */
-const fonteDoc = Newsreader({
+const fonteDoc = Merriweather({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-doc-emise",
@@ -108,28 +111,13 @@ const fonteAr = IBM_Plex_Sans_Arabic({
 });
 
 /**
- * Interface — Inter. Source principale V2 Vibrant Instrument.
- * Hiérarchie verrouillée : 400 corps / 500 labels / 600 emphase+sections /
- * 700 titres de page / 800 métriques display exceptionnelles uniquement.
- * Toutes les graisses chargées pour éviter faux-gras synthétique au build.
- * Zéro = ovale standard (pas de slash) — voir tokens.css --font-variant-numeric.
+ * Voix éditoriale — Merriweather. Réservée aux moments où le produit
+ * s'adresse à quelqu'un (salutation, connexion, états vides) et aux montants
+ * display : fort contraste à 30-36px. Jamais du texte courant d'interface.
  */
-const fonteInter = Inter({
+const fonteDisplay = Merriweather({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-inter-emise",
-  display: "swap",
-});
-
-/**
- * Chiffres financiers de grande taille — Fraunces. Réservée aux MONTANTS des
- * tuiles Finances et métriques display 800 : forte contraste à 30-36px,
- * illisible à 12. Employée uniquement pour sommes/metrics, jamais texte courant.
- * Ajout 800 pour hiérarchie V2 (800 = moments display exceptionnels uniquement).
- */
-const fonteDisplay = Fraunces({
-  subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+  weight: ["700", "900"],
   variable: "--font-display-emise",
   display: "swap",
 });
@@ -156,7 +144,7 @@ export default function RootLayout({
     <html
       lang="fr"
       suppressHydrationWarning
-      className={`${fonteUi.variable} ${fonteNum.variable} ${fonteDoc.variable} ${fonteAr.variable} ${fonteInter.variable} ${fonteDisplay.variable}`}
+      className={`${fonteUi.variable} ${fonteNum.variable} ${fonteDoc.variable} ${fonteAr.variable} ${fonteDisplay.variable}`}
     >
       {/* ⚠️ COLONNE FLEX, ET CE N'EST PAS COSMÉTIQUE.
           Le bandeau ADR-016 précède la coquille. Tant que `<body>` était un bloc

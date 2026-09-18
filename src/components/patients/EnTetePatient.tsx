@@ -23,7 +23,7 @@
 
 import Link from "next/link";
 
-import { Avatar, Badge, LienBouton } from "@/components/ui";
+import { Avatar, Badge, Bouton, LienBouton } from "@/components/ui";
 import { fr } from "@/i18n/fr";
 import type { PatientWorkspace } from "@/services/patients";
 
@@ -46,8 +46,27 @@ export function EnTetePatient({
   const actualise = heure(espace.genereA);
 
   return (
-    <header className="rounded-lg border border-rule bg-card px-6 py-5">
-      <div className="flex flex-wrap items-start justify-between gap-4">
+    /* ══════════════════════════════════════════════════════════════════════
+       V8 — L'EN-TÊTE D'IDENTITÉ, ET LE COMPROMIS QUI LE REND POSSIBLE
+       ══════════════════════════════════════════════════════════════════════
+
+       Le dossier patient méritait une entrée qui ne ressemble pas à la
+       quinzième carte blanche de l'écran. Mais §4.2 est catégorique : AUCUN
+       DÉGRADÉ DERRIÈRE UN NOM DE PATIENT. Ce n'est pas une préférence — un
+       fond qui varie fait varier le contraste du texte qu'il porte, et un nom
+       lu de travers dans un dossier clinique est une erreur d'identification.
+
+       La composition résout les deux : le BANDEAU est en matériau, la PLAQUE
+       D'IDENTITÉ posée dessus est opaque. Le nom, le numéro de dossier et le
+       téléphone vivent sur du blanc franc ; le dégradé ne porte que les
+       actions et le contexte de rendez-vous, qui ne nomment personne.
+
+       C'est plus fort qu'un aplat de plus : la plaque opaque, détachée sur le
+       matériau, DÉSIGNE l'identité au lieu de la ranger. */
+    <header className="relative overflow-hidden rounded-3xl bg-vedette-aube p-4 shadow-vedette">
+      <span aria-hidden="true" className="pointer-events-none absolute inset-0 bg-reflet" />
+
+      <div className="relative flex flex-wrap items-start justify-between gap-4 rounded-2xl bg-card px-6 py-5 shadow-carte">
         <div className="flex min-w-0 items-start gap-4">
           <Avatar prenom={identite.firstName} nom={identite.lastName} taille="grande" />
 
@@ -55,7 +74,7 @@ export function EnTetePatient({
             {/* Le nom DOMINE : c'est la seule chose qu'on cherche des yeux en
                 revenant sur l'écran. `break-words` parce qu'un nom composé
                 algérien dépasse volontiers la colonne. */}
-            <h1 className="min-w-0 break-words font-ui text-display font-semibold leading-display tracking-display text-ink-900">
+            <h1 className="min-w-0 break-words font-ui text-display font-extrabold leading-display tracking-display text-ink-900">
               {identite.lastName} {identite.firstName}
             </h1>
 
@@ -89,32 +108,30 @@ export function EnTetePatient({
         </div>
 
         <div className="flex shrink-0 flex-wrap items-center gap-3">
-          <LienBouton href="/agenda/nouveau" rang="secondaire">
+          <LienBouton href="/agenda/nouveau" rang="principal">
             {fr.patients.actions.nouveauRendezVous}
           </LienBouton>
-          <button
-            type="button"
-            onClick={onModifier}
-            className="inline-flex min-h-target-lg items-center rounded-md border border-rule bg-card px-4 font-ui text-body text-ink-700 transition-colors duration-quick ease-out hover:bg-sunken"
-          >
+          <Bouton type="button" rang="secondaire" onClick={onModifier}>
             {fr.patients.actions.modifier}
-          </button>
+          </Bouton>
         </div>
       </div>
 
       {/* La ligne de contexte : ce qu'on veut savoir avant de faire entrer
           quelqu'un. Elle n'apparaît que si elle a quelque chose à dire. */}
+      {/* LE CONTEXTE, SUR LE MATÉRIAU. Deux dates de rendez-vous ne nomment
+          personne : elles peuvent vivre sur le dégradé, encre blanche pure. */}
       {prochain === null && derniere === null ? null : (
-        <div className="mt-4 flex flex-wrap items-baseline gap-x-6 gap-y-1 border-t border-rule pt-4">
+        <div className="relative mt-4 flex flex-wrap items-center gap-2 px-2">
           {prochain === null ? null : (
-            <p className="font-ui text-body text-ink-700">
-              <span className="text-ink-500">{fr.patients.sections.prochainRendezVous} : </span>
+            <p className="rounded-full bg-on-brand-surface px-3 py-1.5 font-ui text-label font-medium text-on-brand shadow-filet">
+              <span className="font-semibold">{fr.patients.sections.prochainRendezVous} : </span>
               {prochain}
             </p>
           )}
           {derniere === null ? null : (
-            <p className="font-ui text-body text-ink-700">
-              <span className="text-ink-500">{fr.patients.sections.derniereConsultation} : </span>
+            <p className="rounded-full bg-on-brand-surface px-3 py-1.5 font-ui text-label font-medium text-on-brand shadow-filet">
+              <span className="font-semibold">{fr.patients.sections.derniereConsultation} : </span>
               {derniere}
             </p>
           )}
@@ -125,7 +142,7 @@ export function EnTetePatient({
           agrège sept sources : savoir de quand date l'ensemble vaut mieux que
           sept horodatages qui obligeraient à comparer. */}
       {actualise === null ? null : (
-        <p className="mt-3 font-ui text-label tracking-label text-ink-500">
+        <p className="relative mt-3 px-2 font-ui text-label font-medium tracking-label text-on-brand">
           {fr.patients.actualiseA} {actualise}
         </p>
       )}

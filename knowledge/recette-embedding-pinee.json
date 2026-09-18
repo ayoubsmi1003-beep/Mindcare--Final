@@ -1,0 +1,74 @@
+{
+  "$comment": "M07 R2 — recette d'embedding de production epinglee par mesure locale (2026-09-16). Immuable : tout ecart impose rejet/re-embedding (recetteCompatible, embeddings.ts). Consommee par R3 (backfill + hybride staging). Ne pas editer : nouvelle mesure = nouvelle version de recette.",
+  "artifact_sha256": {
+    "model_onnx": "f84251230831afb359ab26d9fd37d5936d4d9bb5d1d5410e66442f630f24435b",
+    "model_onnx_data": "1eebfb28493f67bba03ce0ef64bfdc7fc5a3bd9d7493f818bb1d78cd798416b4",
+    "tokenizer_json": "6710678b12670bc442b99edc952c4d996ae309a7020c1fa0096dd245c2faf790"
+  },
+  "artifact_size_octets": {
+    "model_onnx": 724923,
+    "model_onnx_data": 2266820608,
+    "tokenizer_json": 17082821
+  },
+  "artifact_storage": "hors Git — cache local poste de mesure (C:\\Users\\ABCINF~1\\AppData\\Local\\Temp\\opencode\\r2bench-hf\\models--BAAI--bge-m3\\snapshots\\5617a9f61b028005a4858fdac845db406aefb181\\onnx) ; M13 packaging decidera du bundle",
+  "bench_artefacts": [
+    "artifacts/bench-r2/bge.json",
+    "artifacts/bench-r2/e5.json"
+  ],
+  "bench_results_winner": {
+    "ar_mrr": 1.0,
+    "ar_ndcg5": 0.954,
+    "ar_recall5": 1.0,
+    "batch_throughput_r1_par_s": 0.38,
+    "chargement_modele_s": 17.38,
+    "cold_start_note": "chargement session ONNX 17.38 s + 1er embed inclus (lot docs 11.7 s / 23)",
+    "darija_mrr": 0.833,
+    "darija_ndcg5": 0.834,
+    "darija_recall5": 1.0,
+    "determinisme_octet_identique": true,
+    "faux_dose_citation": "0/20",
+    "faux_medicament": "1/1 (FR-01 : notice-paroxetine en top-5 — observation, meme ecart chez E5)",
+    "faux_version": "0/1",
+    "fr_mrr": 0.974,
+    "fr_ndcg5": 0.924,
+    "fr_recall5": 1.0,
+    "mrr": 0.967,
+    "ndcg5": 0.922,
+    "recall10": 1.0,
+    "recall20": 1.0,
+    "recall5": 1.0,
+    "requete_chaude_p50_s": 0.1718,
+    "requete_chaude_p95_s": 0.5823,
+    "rss_apres_chargement_mo": 1056.8,
+    "rss_pic_mo": 1636.0,
+    "sha256_requetes": "2e0baa069f94bd4d07a527767af674580f4f91ca7ce7993569b73a6e8cb9c5a9",
+    "seuils_adr037": "recall5>=0.90 OK ; mrr>=0.80 OK ; ndcg5>=0.80 OK (compatibilite substrate, pas de PASS M07)"
+  },
+  "candidate_non_retenu": {
+    "dimensions_prouvees": 1024,
+    "marge_vs_gagnant": "MRR -0.014, nDCG@5 -0.004 ; FR MRR -0.019 ; darija nDCG +0.037 (best-effort)",
+    "model": "intfloat/multilingual-e5-large",
+    "note": "viable (1024d, local, deterministe, seuils compatibles) ; ecarte par la regle §21, pas par echec. Secours documente si BGE bloque en R3.",
+    "quality": {
+      "mrr": 0.952,
+      "ndcg5": 0.918,
+      "recall5": 1.0
+    },
+    "revision": "3d7cfbdacd47fdda877c5cd8a79fbcc4f2a574f3"
+  },
+  "chunking_version": "struct-v1",
+  "dimensions": 1024,
+  "distance": "cosine",
+  "document_prefix": "",
+  "input_preprocessing": "tokenizer.json officiel (revision epinglee), truncation 512, padding lot ; texte brut sans normalisation supplementaire (ni minuscules, ni strip accents)",
+  "licence": "MIT (tag HF license:mit, cardData mit) — deploiement/redistribution locale autorisee",
+  "normalization": "l2 native (tete sentence_embedding ONNX = CLS L2-normalise ; verifie : cos(tete, CLS manuel) = 1.0, norme = 1.0)",
+  "provider": "local-onnx",
+  "query_prefix": "",
+  "recipe_version": "r2-2026-09-16",
+  "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+  "runtime": "onnxruntime CPUExecutionProvider, intra_op 4 threads (substrat de mesure) ; runtime de production (Node/Electron, ex. onnxruntime-node) a cabler en R3 — compatibilite graphe prouvee : entrees (input_ids, attention_mask) int64, sortie sentence_embedding [batch, 1024] float32",
+  "runtime_egress": "aucun — inference 100 % locale, aucun appel reseau au runtime (acquisition des artefacts ci-dessus = telechargement de developpement, pas de dependance runtime)",
+  "selection_rule": "§21 : 1024 prouve les deux ; local les deux ; deterministe les deux ; FR/AR/Darija recall 1.0 les deux ; BGE en tete sur MRR (+0.014) et nDCG@5 (+0.004), FR dominant (35/46) MRR 0.974 vs 0.955 ; RSS plus faible (1057 vs 1539 Mo) ; tete normalisee native (moins de pieces mobiles en prod) ; contexte long 8192 natif (marge R1). E5 reste viable/secours.",
+  "model": "BAAI/bge-m3"
+}
