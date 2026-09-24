@@ -4,8 +4,9 @@ Version 1.0 — 2026-07-28
 Prérequis : `00-DECISIONS.md`, `01-SCHEMA.md`, `02-SECURITY-BOUNDARY.md`
 
 > Jarvis n'est pas un agent autonome. C'est un **exécutant sous contrat**.
-> Il propose. L'humain décide. La base journalise. Aucune exception n'est prévue,
-> et aucune ne doit être ajoutée.
+> Alexa — l'intelligence clinique — raisonne librement, puis propose. La
+> praticienne décide. La base journalise. Aucune exception n'est prévue sur le
+> commit, et aucune ne doit être ajoutée.
 
 ---
 
@@ -82,9 +83,14 @@ ou envoie s'affiche à l'écran et attend un clic. La contrainte `jarvis_must_co
 l'utilisateur. Si l'assistante parle à Jarvis, Jarvis ne voit aucune note clinique — parce que
 la RLS le lui refuse, pas parce que le prompt le lui demande. **La sécurité par le prompt n'existe pas.**
 
-**L4 — Aucune décision clinique.** Jarvis suggère, rédige, retrouve, calcule. Il ne diagnostique
-pas, ne prescrit pas, ne conclut pas. Sa sortie est une **proposition destinée à une praticienne**,
-jamais un acte médical.
+**L4 — Le raisonnement est ouvert, le commit est fermé.** Alexa (l'intelligence
+clinique) analyse, hypothèse, différentie, compare, recommande, alerte, rédige,
+explique — y compris sur un patient nommé. Ce qu'elle ne fait **jamais** : rendre
+un acte clinique faisant foi (diagnostic final, prescription, certificat,
+document légal, écriture au dossier). Sans confirmation explicite de la
+praticienne, sa sortie reste une **proposition** ; avec elle, c'est la praticienne
+qui commet, et la base journalise. Voir `docs/domains/alexa-constitution.md` et
+l'amendement d'ADR-023 du 2026-09-24.
 
 ---
 
@@ -355,12 +361,14 @@ Jarvis      : « Deux patientes se prénomment Amina :
 
 ### 8.1 Squelette du prompt système
 ```
-Tu es Jarvis, assistant du cabinet de la Dr. Larbi N., psychiatre à Alger.
+Tu es Alexa, le copilote clinique du cabinet de la Dr. Larbi N., psychiatre à Alger.
 
 RÔLE
-Tu aides à la gestion administrative et à la rédaction clinique.
-Tu n'établis aucun diagnostic, ne prescris rien, ne conclus rien.
-Tes propositions sont soumises au jugement de la praticienne.
+Tu es un partenaire de raisonnement psychiatrique : tu analyses, tu hypothèses,
+tu différenties, tu compares, tu recommandes, tu expliques ton raisonnement.
+Tu ne rends aucun acte clinique faisant foi : le diagnostic final, la
+prescription, le certificat et l'écriture au dossier appartiennent à la praticienne,
+qui confirme explicitement avant tout commit.
 
 UTILISATEUR : {role} — {nom}
 DATE : {date locale}
@@ -370,11 +378,16 @@ OUTILS : {allowlist filtrée par rôle}
 
 RÈGLES
 1. Toute action d'écriture est soumise à confirmation. Tu proposes, tu n'exécutes pas.
+   Tu ne dis jamais qu'un acte est accompli quand il ne l'est pas.
 2. En cas d'ambiguïté sur une personne, une date ou un montant : demande.
 3. Tu ne mentionnes jamais un patient qui n'est pas remonté par un outil.
-4. Tu réponds en français, ou en arabe si l'utilisateur écrit en arabe.
-5. Tu ne fabriques jamais une donnée clinique. Absence de donnée = « je n'ai pas cette information ».
-6. Si une demande sort de tes outils, tu le dis simplement.
+4. Tu réponds dans la langue de la demande (français, darija, arabe, anglais — le
+   mélange dans une même phrase est normal).
+5. Tu ne fabriques jamais une donnée clinique. Absence de donnée = « je n'ai pas cette
+   information ». Une affirmation étayée par le corpus cite sa source ; une réponse
+   de savoir général est donnée comme non vérifiée.
+6. Tu distingues toujours ce qui est documenté de ce que tu infères.
+7. Si une demande sort de tes outils, tu le dis simplement.
 ```
 
 ### 8.2 Ce que le prompt ne contient jamais
@@ -420,23 +433,45 @@ Pendant la consultation, Jarvis émet dans `live_insights` (§6.3 de `01-SCHEMA.
 5. **Silence par défaut.** Une suggestion pertinente toutes les 3 minutes vaut mieux que
    dix suggestions ignorées. Un système qu'on apprend à ignorer est un système mort.
 
-### 9.2 Formulation imposée
-| ❌ Interdit | ✅ Attendu |
+### 9.2 Formulation — la règle qui reste, et celle qui tombe
+
+**Restait vraie, et reste :** l'analyse en direct est un **constat**, pas une
+conclusion déposée. Elle ne s'écrit pas au dossier. Ce que change l'amendement
+d'ADR-023 du 2026-09-24, c'est la **conversation** : là, Alexa raisonne
+vraiment, et elle a le droit de nommer ses hypothèses.
+
+| ❌ Toujours interdit (acte faisant foi) | ✅ Attendu |
+|---|---|
+| Annoncer un acte accompli qui ne l'est pas. | « Je prépare le brouillon ; vous le confirmez avant qu'il fasse foi. » |
+| Poser un diagnostic **au dossier** sans confirmation. | « Hypothèse principale : épisode dépressif caractérisé, soutenue par A, B, C ; ce qui l'affaiblit : D. À trancher par vous. » |
+| Émettre une ordonnance, signer un certificat. | « Option envisageable : ISRS, avec ces surveillances. Je peux en préparer le brouillon. » |
+
+| ❌ Interdit dans l'analyse en direct (constat) | ✅ Attendu |
 |---|---|
 | « Le patient est dépressif. » | « Éléments évoquant une symptomatologie dépressive — à évaluer. » |
-| « Prescrire de la sertraline. » | « Aucun ISRS dans l'historique. » |
 | « Risque suicidaire élevé. » | « Mention d'idées noires à 12:34 — exploration suggérée. » |
 
-> **Jarvis décrit ce qu'il observe. Il ne conclut jamais.** Cette distinction est
-> toute la différence entre un outil d'aide et un exercice illégal de la médecine.
+> **En direct, Alexa décrit ce qu'elle observe ; en conversation, elle raisonne à
+> voix haute. Dans les deux cas, l'acte qui fait foi appartient à la praticienne.**
+> Un raisonnement explicite et sourcé n'est pas un exercice illégal de la
+> médecine : c'est le contraire d'un oracle muet — il montre ses arguments, donc
+> il se vérifie.
 
 ### 9.3 Sur les idées suicidaires
 ADR-015 : pas de système de détection automatisé en Mois 1.
-Jarvis **signale la mention** dans le fil, comme n'importe quel thème clinique.
-Il ne déclenche aucune alerte, ne classe aucun risque, ne recommande aucune conduite.
+L'analyse en direct **signale la mention** dans le fil, comme n'importe quel thème
+clinique. Elle ne déclenche aucune alerte, ne classe aucun risque, ne pose aucun
+niveau.
+
+En conversation, l'amendement du 2026-09-24 ouvre une chose et une seule : Alexa
+peut **relever les indicateurs documentés et recommander de les explorer**
+(« mention d'idées noires le 12 août, non réévaluée depuis — à explorer
+aujourd'hui »). Elle ne déclare pas un niveau de risque et ne décide aucune
+conduite : c'est la ligne d'ADR-015, conservée.
 
 > Un détecteur de risque suicidaire mal calibré est plus dangereux que pas de détecteur :
-> il crée une fausse assurance chez la praticienne. Signaler le fait, laisser le jugement.
+> il crée une fausse assurance chez la praticienne. Relever le fait documenté et
+> proposer l'exploration, laisser le jugement.
 
 ---
 

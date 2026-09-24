@@ -121,7 +121,7 @@
           "attendu": {
             "verdict": "nonResolu", "source": null, "patient": null,
             "intentionChainee": null, "intentionRetenu": null,
-            "sondes": 1, "executesPatients": [], "transports": 0,
+            "sondes": 2, "executesPatients": [], "transports": 0,
             "clarification": { "contient": ["Sarah"], "exclut": ["Karim", "DJILALI"] },
             "ciblePreservee": "karim"
           }
@@ -387,7 +387,7 @@
           "attendu": {
             "verdict": "nonResolu", "source": null, "patient": null,
             "intentionChainee": null, "intentionRetenu": null,
-            "sondes": 1, "executesPatients": [], "transports": 0,
+            "sondes": 2, "executesPatients": [], "transports": 0,
             "clarification": { "contient": ["Yacine"], "exclut": [] }
           }
         }

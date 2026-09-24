@@ -415,7 +415,11 @@ describe("C · explicite non résolu : clarification, zéro outil, fil préserv�
     // Zéro appel passerelle, zéro capacité patient-spécifique.
     expect(t.recus).toHaveLength(0);
     expect(temoin.lancers).toEqual([]);
-    expect(temoin.sondes).toEqual(["Sarah"]);
+    // Mission §9 (réessai normalisé) : « Sarah » donne zéro, la forme
+    // canonique « sarah » est resondée avant de clarifier. La clarification
+    // nomme toujours la mention d'origine (ci-dessus), jamais la forme
+    // normalisée — et le fil Karim survit (ci-dessous).
+    expect(temoin.sondes).toEqual(["Sarah", "sarah"]);
     expect(r.data.appels).toHaveLength(1);
     expect(r.data.appels[0]?.capacite).toBe("search_patients");
     // Le fil survit : la recherche manquée ne détruit rien.

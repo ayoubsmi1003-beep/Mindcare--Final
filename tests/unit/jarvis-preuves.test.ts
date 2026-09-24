@@ -29,6 +29,17 @@ const PREUVE: PreuveConnnaissance = {
 };
 
 describe("validerPreuve", () => {
+  it("accepts book evidence only with a server ID and a physical page", () => {
+    const book = { ...PREUVE, id: "11111111-1111-4111-8111-111111111111",
+      livre: { numero: 1, edition: "Édition vérifiée", ocrReviewStatus: "accepted", pages: [
+        { splitId: "volume.pdf", physicalPage: 4, globalPhysicalPage: 4, printedPage: null },
+      ] } };
+    expect(validerPreuve(book)).toEqual(book);
+    expect(validerPreuve({ ...book, livre: { ...book.livre, ocrReviewStatus: "unreviewed" } })).toBeNull();
+    expect(validerPreuve({ ...book, id: "invented" })).toBeNull();
+    expect(validerPreuve({ ...book, livre: { ...book.livre, pages: [] } })).toBeNull();
+    expect(validerPreuve({ ...book, livre: { ...book.livre, pages: [{ ...book.livre.pages[0], printedPage: 3 }] } })).toBeNull();
+  });
   it("accepte une preuve bien formée", () => {
     expect(validerPreuve({ ...PREUVE })).toEqual(PREUVE);
   });

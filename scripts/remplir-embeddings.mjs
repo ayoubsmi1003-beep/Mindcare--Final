@@ -2,8 +2,11 @@
 /**
  * remplir-embeddings — M07 R3 · BACKFILL REPRENABLE des embeddings BGE-M3.
  *
- *   node scripts/remplir-embeddings.mjs --inventaire
- *   node scripts/remplir-embeddings.mjs --ecrire [--limite N] [--dossier P]
+ *   node scripts/remplir-embeddings.mjs --inventaire [--socket]
+ *   node scripts/remplir-embeddings.mjs --ecrire [--limite N] [--dossier P] [--socket]
+ * `--socket` = transport superuser local mc-p3 (docker exec + fichier),
+ * sans URL admin ; preuve d'écriture par RETURNING (identité prouvée).
+ * `--lots K` borne les lots (garde-fou : jamais de passe non bornée).
  *
  * Règles (plan R3 §4) : lots de 8 séquentiels, ordre `id` stable, UNE
  * instruction UPDATE par lot (tout ou rien), reprise = les lignes conformes
@@ -23,12 +26,20 @@ import {
   resoudreDossierProuve,
   verifierPariteTokens,
 } from "./embeddings-runtime.mjs";
+import { execSocket, lignesSocket as lignesSocketTransport } from "./transport-socket.mjs";
 import {
+  CHUNKERS_ACCEPTES,
+  decoderTexteB64,
+  sqlEmpreinteActive,
   sqlGardeGlobaleActive,
+  sqlGardeLotActif,
   sqlInventaire,
-  sqlMiseAJourLot,
+  sqlMiseAJourLotReturning,
   sqlSelectionLot,
+  sqlSelectionLotBase64,
   sqlUniformiteRecette,
+  validerIdChunk,
+  verifierRetourLot,
 } from "./remplir-embeddings-sql.mjs";
 
 const RACINE = resolve(dirname(fileURLToPath(import.meta.url)), "..");
@@ -44,6 +55,19 @@ function option(nom) {
 }
 const inventaireSeul = args.includes("--inventaire");
 const ecrire = args.includes("--ecrire");
+// R3-P2 : `--socket` = transport superuser local (docker exec + fichier),
+// SANS URL admin (absente du .env — MINDCARE_DATABASE_URL seule, 42501 en
+// écriture). Interpolation via `lierParams` (testée) + preuve par RETURNING
+// (identité + cardinalité), jamais par confiance.
+const viaSocket = args.includes("--socket");
+// Garde-fou opérateur (incident P8 : flag `--lots` ignoré = passe NON BORNÉE
+// tuée par timeout) : `--lots N` borne le nombre de lots, `--limite M` le
+// nombre total d'embeddings. Les deux peuvent se combiner.
+let maxLots = null;
+{
+  const i = args.indexOf("--lots");
+  if (i >= 0) maxLots = Math.max(1, Number.parseInt(args[i + 1], 10) || 1);
+}
 const limiteBrute = option("--limite");
 const limite = limiteBrute === null ? null : Math.max(0, Number.parseInt(limiteBrute, 10));
 
@@ -127,27 +151,46 @@ const RECETTE_SQL = {
   instruction_requete: config.instruction_requete,
   instruction_document: config.instruction_document,
   distance: config.distance,
-  chunker: config.versionChunk,
+  // Liste FERMÉE (décision humaine struct-v1.1) : jamais `config.versionChunk`
+  // seul — sinon les enfants v1.1 seraient exclus et les R1 ré-embarqués.
+  chunkers: [...CHUNKERS_ACCEPTES],
 };
 
 chargerEnv();
+
+// ── transport : pg (défaut) ou socket superuser local (--socket) ────────────
+// Module partagé `transport-socket.mjs` (fichier + ON_ERROR_STOP, nettoyage
+// en finally). La preuve d'écriture vient de RETURNING, pas du shell.
+function lignesSocket(requete) {
+  return lignesSocketTransport(RACINE, requete);
+}
+
 const url =
   process.env.MINDCARE_ADMIN_DATABASE_URL ??
   process.env.MINDCARE_TEST_DATABASE_URL ??
   process.env.MINDCARE_DATABASE_URL ??
   "";
-if (url.trim() === "") {
-  rouge("--ecrire/--inventaire exige MINDCARE_ADMIN_DATABASE_URL (ou TEST/DATABASE).");
+if (!viaSocket && url.trim() === "") {
+  rouge("--ecrire/--inventaire exige MINDCARE_ADMIN_DATABASE_URL (ou TEST/DATABASE), ou --socket (superuser local mc-p3).");
 }
-const { default: pg } = await import("pg");
-const client = new pg.Client({ connectionString: url });
+const { default: pg } = viaSocket ? { default: null } : await import("pg");
+const client = viaSocket ? null : new pg.Client({ connectionString: url });
 try {
-  await client.connect();
+  if (!viaSocket) await client.connect();
 } catch (err) {
   rouge(`connexion base impossible : ${String(err.message ?? err).slice(0, 200)}`);
 }
 
 async function uneLigne(sql) {
+  if (viaSocket) {
+    const lignes = lignesSocket(sql);
+    const cols = (lignes[0] ?? "").split("|");
+    if (cols.length === 1) return { n: Number.parseInt(cols[0], 10) };
+    return {
+      chunks: cols[0], sans_embedding: cols[1], sources: cols[2],
+      sources_active: cols[3], ext_vector: cols[4], migration_092: cols[5],
+    };
+  }
   const r = await client.query(sql.texte, sql.params);
   return r.rows[0];
 }
@@ -160,12 +203,20 @@ try {
   if ((inv.migration_092 ?? 0) < 1) rouge("migration 092 absente — STOP.");
   if ((inv.ext_vector ?? 0) < 1) rouge("extension pgvector absente — STOP.");
   if (inventaireSeul) {
-    await client.end();
+    if (!viaSocket) await client.end();
     process.exit(0);
   }
-  if ((inv.sources_active ?? 1) !== 0) {
-    rouge(`garde active : ${inv.sources_active} source(s) active(s) — STOP, aucune écriture.`);
+  // Scoping R3 (décision humaine, ADR-039) : les sources `active` coexistent
+  // avec le backfill — la sélection les exclut, chaque lot est gardé, et
+  // l'empreinte (embeddings par source active) doit être IDENTIQUE avant et
+  // après la passe. La garde historique `sources_active = 0` est remplacée.
+  async function empreinteActive() {
+    if (viaSocket) return lignesSocket(sqlEmpreinteActive()).join("\n");
+    const r = await client.query(sqlEmpreinteActive().texte, []);
+    return r.rows.map((x) => `${x.id}|${x.n}`).join("\n");
   }
+  const empreinteAvant = await empreinteActive();
+  console.log(`scoping — sources_active=${inv.sources_active} (intouchées, empreinte verrouillée)`);
 
   // ── modèle : résolution → SHA → session → témoin ──────────────────────────
   const dossier = resoudreDossierProuve(
@@ -206,17 +257,44 @@ try {
       console.log("interrompu — lot courant validé, reprise au prochain run.");
       break;
     }
+    if (maxLots !== null && rapport.lots >= maxLots) {
+      console.log(`borne --lots ${maxLots} atteinte — reprise au prochain run.`);
+      break;
+    }
     if (restants !== null && restants <= 0) break;
     const tailleLecture = restants === null ? 8 : Math.min(8, restants);
-    const sel = sqlSelectionLot(tailleLecture, RECETTE_SQL, exclus);
-    const res = await client.query(sel.texte, sel.params);
+    let lignesLues;
+    if (viaSocket) {
+      // UNE requête, ordre id garanti, texte en base64 (retours-ligne et
+      // `|` neutralisés) — jamais deux requêtes à recoller par position.
+      const sel = sqlSelectionLotBase64(tailleLecture, RECETTE_SQL, exclus);
+      lignesLues = lignesSocket(sel).map((ligne) => {
+        const [id, version, b64] = ligne.split("|");
+        return { id: validerIdChunk(id), chunker_version: version, texte: decoderTexteB64(b64 ?? "") };
+      });
+    } else {
+      const sel = sqlSelectionLot(tailleLecture, RECETTE_SQL, exclus);
+      const res = await client.query(sel.texte, sel.params);
+      lignesLues = res.rows;
+    }
+    const res = { rows: lignesLues };
     if (res.rows.length === 0) {
       epuise = true;
       break;
     }
+    // Garde par lot PRÉ-INFÉRENCE : aucun chunk du lot ne doit appartenir
+    // à une source `active` (le filtre de sélection + ce garde = 2 verrous).
+    {
+      const ids = res.rows.map((l) => String(l.id));
+      const garde = sqlGardeLotActif(ids);
+      const n = viaSocket
+        ? Number.parseInt((lignesSocket(garde)[0] ?? "1").trim(), 10)
+        : (await client.query(garde.texte, garde.params)).rows[0]?.n;
+      if ((n ?? 1) !== 0) rouge(`garde lot : ${n} source(s) active(s) dans le lot — STOP, aucune écriture.`);
+    }
     const exploitables = [];
     for (const ligne of res.rows) {
-      if (ligne.chunker_version !== config.versionChunk) {
+      if (!CHUNKERS_ACCEPTES.includes(ligne.chunker_version)) {
         rapport.sautes_decoupeur += 1;
         rapport.echecs.push({ id: ligne.id, motif: "decoupeur-derive-saut" });
         exclus.push(String(ligne.id));
@@ -251,10 +329,24 @@ try {
       id: String(ligne.id),
       litteral: local.formaterVecteurPg(vecteurs[i] ?? []),
     }));
-    const maj = sqlMiseAJourLot(lignes, RECETTE_SQL);
-    const majRes = await client.query(maj.texte, maj.params);
-    if ((majRes.rowCount ?? -1) !== lignes.length) {
-      rouge(`UPDATE a touché ${majRes.rowCount ?? "?"} ligne(s) pour ${lignes.length} — STOP.`);
+    const maj = sqlMiseAJourLotReturning(lignes, RECETTE_SQL);
+    // Preuve d'appariement par RETURNING (identité + cardinalité) : le seul
+    // verdict accepté, sur les deux transports. Le rowCount pg ne prouve que
+    // le nombre ; RETURNING prouve QUELLES lignes.
+    let retournes;
+    if (viaSocket) {
+      retournes = lignesSocket(maj);
+    } else {
+      const majRes = await client.query(maj.texte, maj.params);
+      if ((majRes.rowCount ?? -1) !== lignes.length) {
+        rouge(`UPDATE a touché ${majRes.rowCount ?? "?"} ligne(s) pour ${lignes.length} — STOP.`);
+      }
+      retournes = majRes.rows.map((r) => r.id);
+    }
+    try {
+      verifierRetourLot(lignes.map((l) => l.id), retournes);
+    } catch (err) {
+      rouge(`appariement lot refusé : ${String(err.message ?? err).slice(0, 200)}`);
     }
     rapport.lots += 1;
     rapport.ecrits += lignes.length;
@@ -265,10 +357,11 @@ try {
     console.log(`lot ${rapport.lots} — ${lignes.length} embedding(s), total ${rapport.ecrits}`);
   }
 
-  // ── post-vérifications : uniformité (si épuisé) + active=0 ────────────────
+  // ── post-vérifications : uniformité (si épuisé) + empreinte active ───────
   // L'uniformité n'est exigible qu'en fin de BALAYAGE complet : un run borné
   // (--limite) ou interrompu laisse par construction des dérives à reprendre.
   const uni = await uneLigne(sqlUniformiteRecette(RECETTE_SQL));
+  const empreinteApres = await empreinteActive();
   const garde = await uneLigne(sqlGardeGlobaleActive());
   rapport.termine = true;
   ecrireRapport();
@@ -276,11 +369,11 @@ try {
     `fin — ecrits=${rapport.ecrits} sautes_decoupeur=${rapport.sautes_decoupeur} echecs=${rapport.echecs.length} derive_restante=${uni.n} sources_active=${garde.n} epuise=${epuise}`,
   );
   if (epuise && (uni.n ?? 1) !== 0) rouge(`uniformité : ${uni.n} ligne(s) à recette dérivée.`);
-  if ((garde.n ?? 1) !== 0) rouge("garde active : une source active détectée après passe.");
-  await client.end();
+  if (empreinteApres !== empreinteAvant) rouge("empreinte active modifiée pendant la passe — STOP (écriture sur source active suspectée).");
+  if (!viaSocket) await client.end();
   process.exit(0);
 } catch (err) {
   ecrireRapport();
-  await client.end().catch(() => {});
+  if (!viaSocket) await client.end().catch(() => {});
   rouge(`passe interrompue : ${String(err.message ?? err).slice(0, 300)}`);
 }

@@ -152,13 +152,20 @@ const TEMPS: readonly EntreeLexique[] = [
 const AGENDA: readonly EntreeLexique[] = [
   { formes: ["موعد", "مواعيد", "appointment", "appointments"], canonique: "rendez-vous" },
   { formes: ["الاجندة", "اجندة", "البرنامج", "schedule", "my schedule"], canonique: "agenda" },
-  { formes: ["الجاي", "جاي", "jay", "jaye", "next"], canonique: "prochain" },
+  // Mission Alexa §20 — « jey » est la graphie STT/voix de « jay » (Groq rend
+  // « chkon jey », jamais « chkoun jay ») : sans elle, « chkon jey après ? »
+  // tombait en connaissance et l'agenda restait inatteignable à la voix.
+  { formes: ["الجاي", "جاي", "jay", "jaye", "jey", "jeye", "next"], canonique: "prochain" },
 
   // Formes composées : elles rendent d'un coup le motif complet
   // `(prochain|suivant)\s+(patient|consultation|rendez-vous)` du groupe
   // OPÉRATIONNEL, que les mots pris isolément ne formeraient pas.
   {
-    formes: ["شكون جاي", "شكون الجاي", "chkoun jay", "chkoun eljay", "who is next", "next patient"],
+    formes: [
+      "شكون جاي", "شكون الجاي", "chkoun jay", "chkoun eljay",
+      "chkon jey", "chkon jay", "chkoun jey", "chkon eljay",
+      "who is next", "next patient",
+    ],
     canonique: "prochain patient",
   },
   { formes: ["قاعة الانتظار", "waiting room"], canonique: "salle d'attente" },
@@ -383,6 +390,33 @@ const POSSESSIF: readonly EntreeLexique[] = [
 ];
 
 /**
+ * ═══ 5ter · PRÉPOSITIONS DARIJA ═══
+ *
+ * « ta3 / dyal / dial » EST le « de » de la darija : « traitement ta3 Nadia »
+ * dit « traitement de Nadia ». Sans cette entrée, la phrase restait
+ * illisible pour `routing.ts` (qui ne connaît que `de/d'/du/des`) et pour
+ * `NOM_PROPRE_COMPLEMENT` (qui exige une capitale, que le STT ne rend
+ * jamais) : toute question vocale darija nommant un patient tombait en
+ * connaissance — le défaut exact de la mission §37.
+ *
+ * ⚠️ POURQUOI UN MOT SEUL ICI ALORS QUE 5bis L'INTERDIT. 5bis refuse les
+ * possessifs isolés parce que le normaliseur substitue sans réordonner
+ * (« medicaments son » ne correspondrait à rien). « de », lui, est une
+ * PRÉPOSITION : « traitement de Nadia » est exactement l'ordre que le fichier
+ * gelé attend (`OPERATIONNEL` medicaments-de, `DEICTIQUES` dossier-de). La
+ * substitution produit une phrase que la règle sait déjà lire.
+ *
+ * ⚠️ SÛRETÉ : « de » seul ne désigne personne (pas de capitale, pas de
+ * déictique) et n'est ni un modal ni une action : l'union monotone ne peut
+ * ni ouvrir un refus ni en fermer un à cause de cette entrée — elle ne fait
+ * que rendre lisibles les motifs `de` existants. Le corpus de
+ * non-régression (`eval-jarvis-routage`) la surveille.
+ */
+const PREPOSITION_DARIJA: readonly EntreeLexique[] = [
+  { formes: ["ta3", "t3", "dyal", "dial", "deyal", "ديال"], canonique: "de" },
+];
+
+/**
  * ═══ 6 · SAVOIR GÉNÉRAL ═══
  * Ces entrées existent pour que l'arabe et l'anglais restent DU CÔTÉ
  * CONNAISSANCE. Une langue nouvelle ne doit pas transformer une question
@@ -535,6 +569,7 @@ export const LEXIQUE: readonly EntreeLexique[] = [
   ...FINANCE,
   ...DOSSIER,
   ...POSSESSIF,
+  ...PREPOSITION_DARIJA,
   ...SAVOIR,
   ...MODAL,
   ...ACTION,

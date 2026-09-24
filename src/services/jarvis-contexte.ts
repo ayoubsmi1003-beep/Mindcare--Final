@@ -39,7 +39,7 @@ import {
   type RefPatient,
 } from "./jarvis-identite";
 import { mesurerOctets } from "./jarvis-projections";
-import { normaliserDemande } from "@/shared/jarvis/normalisation";
+import { normaliserDemande, normaliserTexteIdentite } from "@/shared/jarvis/normalisation";
 import { log } from "./log";
 import type { PatientActif } from "./patient-actif";
 
@@ -329,12 +329,13 @@ export function ancreApplicable(
 // 1bis · RÉFÉRENCES PRONOMINALES — Phase 3
 // ═══════════════════════════════════════════════════════════════════════════
 
-/** Minuscules et sans accents : « séance » et « seance » sont un seul mot. */
+/**
+ * Minuscules et sans accents : « séance » et « seance » sont un seul mot.
+ * Mission A1 : délègue au normaliseur partagé (NFKC + repli arabe + NFD +
+ * minuscules) — même définition que le routage et la recherche SQL.
+ */
 function normaliserPhrase(texte: string): string {
-  return texte
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
-    .toLowerCase();
+  return normaliserTexteIdentite(texte);
 }
 
 /**
@@ -361,6 +362,11 @@ const REFERENCE_PATIENT: readonly RegExp[] = [
   /\blui\b/,
   /\b(derniere|dernier)\s+(seances?|consultations?|notes?|ordonnances?|visites?)\b/,
   /\b(ce|cette)\s+(patients?|patientes?|malades?)\b/,
+  // Mission A1 — Darija : « traitement ta3 Nadia », « dwa dyal Karim »,
+  // « dossier dial Amina ». Le nom propre suit ; ici on ne détecte que le
+  // SIGNAL possessif (ta3/t3/dial/dyal/deyal + nom clinique).
+  /\b(ta3|t3|dial|dyal|deyal)\b[^?.!]{0,20}\b(dossier|traitement|traitements|dwa|dossier|ordonnance|ordonnances|seance|seances|hessa|melf|3ilaj|ilaj|medicament|medicaments)\b/,
+  /\b(dossier|traitement|traitements|dwa|ordonnance|seance|medicament|medicaments)\s+(ta3|t3|dial|dyal|deyal)\b/,
 ];
 
 /**
@@ -435,6 +441,29 @@ export function besoinDeClarification(
 const CANDIDAT_MENTION =
   /[A-ZÀ-Þ][\p{L}'-]{2,}(?:\s+[A-ZÀ-Þ][\p{L}'-]{2,}){0,2}/gu;
 
+/**
+ * Mots qui ne sont jamais un nom de patient après une préposition — garde-fou
+ * du repli minuscule (mission A1). « traitement de substitution » ne doit pas
+ * sonder « substitution » comme un patient.
+ */
+const STOP_MENTION = new Set([
+  "dossier", "dossiers", "traitement", "traitements", "medicament", "medicaments",
+  "ordonnance", "ordonnances", "posologie", "consultation", "consultations",
+  "seance", "seances", "patient", "patiente", "patients", "substitution",
+  "matin", "matinee", "apres", "apres-midi", "demain", "aujourd", "hui",
+  "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche",
+  "semaine", "journee", "salle", "attente", "garde", "cabinet", "docteur",
+]);
+
+/**
+ * Complément de personne INSENSIBLE à la casse (mission A1 — sortie STT
+ * « ayoub salmi », Darija « ta3 Nadia », arabe). N'est tenté QUE si la voie
+ * capitalisée (fidèle) n'a rien rendu : la fidélité prime, le repli répare.
+ * Exclut les STOP_MENTION ; 1 à 3 mots ; lettres arabes+latines acceptées.
+ */
+const COMPLEMENT_INSOUCIANT =
+  /(?:^|[^\p{L}])(?:(?:à|a|pour|chez|de|avec|sur|ta3|t3|dial|dyal|deyal)\s+|d'|du\s+|des\s+|el\s+)([\p{L}][\p{L}'-]{2,}(?:\s+[\p{L}][\p{L}'-]{2,}){0,2})/giu;
+
 export function extraireMentionExplicite(message: string): string | null {
   const brut = message.trim();
   if (brut === "") return null;
@@ -460,6 +489,25 @@ export function extraireMentionExplicite(message: string): string | null {
       // refuse — jamais de sonde TRONQUÉE (un préfixe pourrait matcher
       // unique quand le nom complet matche zéro : fail-closed).
       if (mention.length >= 2) return mention;
+    }
+  }
+  // Repli minuscule (voix/STT, darija) : complément après préposition,
+  // insensible à la casse, sur le brut puis le canonique. On BALAYE toutes
+  // les occurrences : la première peut être un nom commun (« l'arrêt… »,
+  // « traitement… ») que STOP_MENTION écarte, la suivante le vrai nom.
+  // `l'` est volontairement absent des préfixes : `l'arrêt`, `l'ordonnance`
+  // sont des noms communs, jamais des compléments de personne.
+  for (const forme of formes) {
+    COMPLEMENT_INSOUCIANT.lastIndex = 0;
+    let m: RegExpExecArray | null;
+    while ((m = COMPLEMENT_INSOUCIANT.exec(forme)) !== null) {
+      const brut_candidat = (m[1] ?? "").trim().replace(/\s+/g, " ");
+      if (brut_candidat.length < 2 || brut_candidat.length > 80) continue;
+      const premier = normaliserTexteIdentite(brut_candidat.split(/\s+/)[0] ?? "");
+      if (STOP_MENTION.has(premier)) continue;
+      // Tel quel, sans recapitaliser (« ayoub salmi » reste minuscule : la
+      // sonde est insensible à la casse ; on ne fabrique pas de capitales).
+      return brut_candidat;
     }
   }
   return null;

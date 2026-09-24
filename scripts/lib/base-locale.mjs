@@ -1,6 +1,9 @@
-#!/usr/bin/env node
 /**
  * base-locale — le CYCLE DE VIE de la base locale de développement.
+ *
+ * NOTE 2026-09-24 : sans shebang — ce module n'est qu'importé (jamais exécuté
+ * direct), et `#!/usr/bin/env node` faisait échouer sa transformation sous
+ * vite (« Invalid or unexpected token »), donc les 3 tests du cycle de vie.
  *
  * ═══ POURQUOI CE MODULE EXISTE ══════════════════════════════════════════════
  *

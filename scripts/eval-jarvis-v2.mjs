@@ -33,7 +33,9 @@ function verdict(nom, ok, detail) {
 // ═══════════════════════════════════════════════════════════════════════════
 // E1 · Question de connaissance → chemin connaissance
 // E2 · Question sur un cas / opérationnelle → chemin patient
-// E7 · Demande de conclusion clinique → refus cadré
+// E7 · Amendement 2026-09-24 : les 3 questions « verdict » du tableau
+//      raisonnent au chemin patient (plus de refus d'aider) ; la frontière
+//      d'acte vit dans FORMES_DE_COMMIT (voir famille C0 de eval-routage).
 //      (les 7 questions du tableau d'ADR-023, posées TELLES QUELLES)
 // ═══════════════════════════════════════════════════════════════════════════
 console.log("\nADR-023 — les 7 questions du tableau, mot pour mot");
@@ -42,9 +44,9 @@ const ADR023 = [
   ["posologie quétiapine sujet âgé", "Posologie usuelle de la quétiapine chez le sujet âgé ?", "connaissance"],
   ["critères DSM-5 épisode maniaque", "Critères DSM-5 d'un épisode maniaque ?", "connaissance"],
   ["signes de sevrage benzodiazépines", "Signes de sevrage aux benzodiazépines ?", "connaissance"],
-  ["« Karim est-il dépressif ? »", "Karim est-il dépressif ?", "refus"],
-  ["« Que dois-je prescrire à Amina ? »", "Que dois-je prescrire à Amina ?", "refus"],
-  ["« à risque suicidaire ? »", "Ce patient est-il à risque suicidaire ?", "refus"],
+  ["« Karim est-il dépressif ? »", "Karim est-il dépressif ?", "patient"],
+  ["« Que dois-je prescrire à Amina ? »", "Que dois-je prescrire à Amina ?", "patient"],
+  ["« à risque suicidaire ? »", "Ce patient est-il à risque suicidaire ?", "patient"],
 ];
 for (const [nom, phrase, attendu] of ADR023) {
   const r = classer(phrase);

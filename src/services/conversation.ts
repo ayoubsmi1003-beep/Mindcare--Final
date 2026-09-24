@@ -21,6 +21,7 @@
  */
 
 import { fr } from "@/i18n/fr";
+import { libelleEtape } from "@/i18n/etapes";
 
 import { getSession } from "./auth";
 import { db } from "./db";
@@ -74,6 +75,8 @@ import {
 } from "./jarvis-tools";
 import { executerEcritureConfirmee } from "./jarvis-execution";
 import { garderPropos } from "./jarvis-garde-lecture";
+import { classerAppError, classerVerdict } from "./jarvis-erreurs";
+import { consignerMesure } from "./jarvis-mesures";
 import { log } from "./log";
 import { err, ok, type Result } from "./result";
 import type { AppError } from "./errors";
@@ -134,6 +137,12 @@ export interface EtatConversationPublique {
   readonly erreur: AppError | null;
   /** true pendant le rechargement initial de l'historique. */
   readonly chargementHistorique: boolean;
+  /**
+   * Mission §12 — mention d'étape pendant qu'une capacité tourne
+   * (« Recherche du dossier… »). `null` au repos : l'écran retombe sur le
+   * libellé générique. Jamais une donnée, jamais un nom (voir `i18n/etapes`).
+   */
+  readonly etapeEnCours: string | null;
 }
 
 type Abonne = (etat: EtatConversationPublique) => void;
@@ -150,6 +159,7 @@ interface EtatInterne {
   carteEcriture: CarteConfirmation | null;
   erreur: AppError | null;
   chargementHistorique: boolean;
+  etapeEnCours: string | null;
 }
 
 const interne: EtatInterne = {
@@ -160,6 +170,7 @@ const interne: EtatInterne = {
   carteEcriture: null,
   erreur: null,
   chargementHistorique: false,
+  etapeEnCours: null,
 };
 
 const abonnes = new Set<Abonne>();
@@ -174,6 +185,7 @@ function publier(): void {
     carteEcriture: interne.carteEcriture,
     erreur: interne.erreur,
     chargementHistorique: interne.chargementHistorique,
+    etapeEnCours: interne.etapeEnCours,
   };
   for (const a of abonnes) a(publique);
 }
@@ -190,6 +202,7 @@ export function abonnerConversation(abonne: Abonne): () => void {
     carteEcriture: interne.carteEcriture,
     erreur: interne.erreur,
     chargementHistorique: interne.chargementHistorique,
+    etapeEnCours: interne.etapeEnCours,
   });
   return () => {
     abonnes.delete(abonne);
@@ -962,7 +975,7 @@ export async function envoyer(messageBrut: string): Promise<void> {
 
   if (
     !ancreUtilisable &&
-    classerMultilingue(message).chemin !== "refus" &&
+    classerMultilingue(message).chemin !== "commit" &&
     besoinDeClarification(message)
   ) {
     // Phase 3 : pronom sans cible TTL-valide — on demande, on ne devine pas.
@@ -1002,6 +1015,7 @@ export async function envoyer(messageBrut: string): Promise<void> {
   }
 
   const tourJarvis = ajouterTour({ role: "jarvis", texte: "" });
+  interne.etapeEnCours = null;
 
   const controleur = new AbortController();
   controleurEnCours = controleur;
@@ -1022,9 +1036,11 @@ export async function envoyer(messageBrut: string): Promise<void> {
         publier();
       },
       // Mention d'étape pendant qu'une capacité tourne. L'écran ne doit jamais
-      // rester muet pendant que Jarvis travaille (05-UX-CONTRACT).
-      onCapacite: () => {
+      // rester muet pendant que Jarvis travaille (05-UX-CONTRACT, §12) : le
+      // NOM de la capacité devient une mention sans donnée (`i18n/etapes`).
+      onCapacite: (nom) => {
         interne.etat = "envoi";
+        interne.etapeEnCours = libelleEtape(nom);
         publier();
       },
     },
@@ -1048,11 +1064,28 @@ export async function envoyer(messageBrut: string): Promise<void> {
     interne.tours = interne.tours.filter((t) => t.id !== tourJarvis.id);
     interne.erreur = bilan.error;
     interne.etat = "erreur";
+    interne.etapeEnCours = null;
+    // §10 : le tour en échec compte dans les quantiles (PII-safe : ms,
+    // compte 0, chemin inconnu, code classé — jamais le message).
+    consignerMesure({
+      msTotal: Date.now() - debutTour,
+      nbAppels: 0,
+      chemin: "inconnu",
+      code: classerAppError(bilan.error.code),
+    });
     publier();
     return;
   }
 
   const r = bilan.data;
+  // §10 : chaque tour abouti compte (verdict M02 → tiroir §34 quand le tour
+  // clarifie ; `OK` sinon — les échecs de capacité vivent dans les traces).
+  consignerMesure({
+    msTotal: Date.now() - debutTour,
+    nbAppels: r.appels.length,
+    chemin: r.chemin ?? "inconnu",
+    code: r.resolution === undefined ? "OK" : classerVerdict(r.resolution.verdict.etat),
+  });
 
   // M09 slice 3 · couture live : le bilan PII-safe vers l'anneau, rien d'autre.
   // OFF par défaut (`captationLiveActivee`) ; la projection fermée vit dans
@@ -1126,6 +1159,7 @@ export async function envoyer(messageBrut: string): Promise<void> {
       interne.tours = interne.tours.filter((t) => t.id !== tourJarvis.id);
     }
     interne.etat = "composition";
+    interne.etapeEnCours = null;
     publier();
     return;
   }
@@ -1169,24 +1203,29 @@ export async function envoyer(messageBrut: string): Promise<void> {
       log.warn("jarvis.garde.lecture", { code: garde.raison });
       remplacerTour(tourJarvis.id, { texte: fr.jarvis.ecriture.proposee });
     }
+    interne.etapeEnCours = null;
     publier();
     // 063 d'abord : les quatre écritures du registre, avec précondition et
     // vérification. Les deux outils historiques de 033 restent en repli.
     if (await proposerEcritureRegistre(nom, args, message, r.runId)) {
+      interne.etapeEnCours = null;
       publier();
       return;
     }
     if (estOutilConnu(nom) && estOutilEcriture(nom)) {
       await proposerEcriture(nom, args, message, r.runId);
+      interne.etapeEnCours = null;
       publier();
       return;
     }
     ajouterTour({ role: "systeme", texte: fr.jarvis.argumentsInvalides });
+    interne.etapeEnCours = null;
     publier();
     return;
   }
 
   interne.etat = "composition";
+  interne.etapeEnCours = null;
   publier();
 }
 

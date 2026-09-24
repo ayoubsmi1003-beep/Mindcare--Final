@@ -1684,9 +1684,15 @@ export const fr = {
     plusieursPatients: "Plusieurs dossiers correspondent. Lequel ouvrir ?",
     aucunPatient: "Aucun dossier ne correspond à cette recherche.",
 
-    /** V2.3 / ADR-023 — le refus est cadré et propose une suite, jamais sec. */
-    refusCasIndividuel:
-      "Je ne conclus pas sur une patiente ou un patient nommé. Je peux relever les éléments du dossier et les points à explorer — la conclusion vous appartient.",
+    /**
+     * Amendement d'ADR-023 du 2026-09-24 — la frontière n'est plus un refus de
+     * RAISONNER (Alexa formule des hypothèses et des différentiels, y compris
+     * sur une personne nommée) mais un refus de COMMETTRE : l'acte qui fait foi
+     * appartient à la praticienne. La phrase dit ce qu'Alexa ne fait pas, et
+     * renvoie au geste qui le fait — jamais une porte fermée.
+     */
+    frontiereCommit:
+      "Je ne rends pas cet acte définitif : l'émettre, le signer ou l'écrire au dossier vous appartient. Je prépare ce que vous voulez — la proposition, le brouillon, le raisonnement qui la soutient — et vous confirmez avant qu'il fasse foi.",
     registreConnaissance:
       "Connaissance générale — pas ce dossier. Aide-mémoire, non vérifié : le Vidal reste la référence.",
 
@@ -1911,10 +1917,16 @@ export const fr = {
      * AMORCES — des gestes réels, pas un contenu : chaque phrase part telle
      * quelle dans le champ de saisie, l'utilisatrice la voit et l'édite.
      * Aucune donnée fictive derrière (règle 8) : ce sont des questions.
+     * amorce4-8 : pastilles de l'écran lune — mêmes questions, même contrat.
      */
     amorce1: "Résume-moi ma journée",
     amorce2: "Qui arrive ensuite ?",
     amorce3: "Explique-moi le score de Hamilton",
+    amorce4: "Voir l'agenda de demain",
+    amorce5: "Combien ai-je encaissé aujourd'hui ?",
+    amorce6: "Rechercher un dossier",
+    amorce7: "Préparer un brouillon de document",
+    amorce8: "Aide-moi à préparer ma journée",
   },
 
   /**

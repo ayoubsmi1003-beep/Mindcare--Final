@@ -1,7 +1,14 @@
-/** R1 — requetes SQL quarantaine (aucune activation). */
+/** R1 — requetes SQL quarantaine (aucune activation).
+ *
+ * NOTE (incident staging v1.1) : `statut` est VOLONTAIREMENT absent du SET
+ * de l'upsert source — le cycle de vie (discovered→…→active) est un acte
+ * humain, jamais une convergence de staging. Rejouer le chargeur ne promeut
+ * ni ne rétrograde (le 2026-09-21, un SET incluant `statut` avait éteint les
+ * 6 sources R1 `active` — restaurées, puis verrou verrouillé ici + test).
+ */
 export function sqlSource() {
   return `INSERT INTO app.knowledge_sources
-     (id, cabinet_id, titre, version, langue, classification, statut,
+      (id, cabinet_id, titre, version, langue, classification, statut,
       approved_at, approved_by, reviewed_by, reviewed_at, review_due_at,
       superseded_by, emetteur, reference_origine, contenu_hash)
    VALUES ($1, NULL, $2, $3, $4, 'C4', $5,
@@ -9,12 +16,22 @@ export function sqlSource() {
       NULL, $7, $8, $9)
    ON CONFLICT (id) DO UPDATE SET
      titre = EXCLUDED.titre, version = EXCLUDED.version,
-     langue = EXCLUDED.langue, statut = EXCLUDED.statut,
-     review_due_at = EXCLUDED.review_due_at,
+     langue = EXCLUDED.langue, review_due_at = EXCLUDED.review_due_at,
      emetteur = EXCLUDED.emetteur, reference_origine = EXCLUDED.reference_origine,
      contenu_hash = EXCLUDED.contenu_hash`;
 }
-export function sqlChunk() {
+/**
+ * Chunk mono-ligne (miroir documentaire — la voie live est le bulk de
+ * `charger-connaissance.mjs`). `statut`/`versionChunk` en liste FERMÉE :
+ * toute autre valeur = throw AVANT tout SQL (jamais d'interpolation libre).
+ * v1.1 = resplit `couperLong` des longs OCR (décision humaine) ; les parents
+ * rescindés voyagent `inactive` (traçabilité, zéro DELETE).
+ */
+export const STATUTS_CHUNK = ["active", "inactive"];
+export const VERSIONS_CHUNKER = ["struct-v1", "struct-v1.1"];
+export function sqlChunk({ statut = "active", versionChunk = "struct-v1" } = {}) {
+  if (!STATUTS_CHUNK.includes(statut)) throw new Error(`Statut chunk refusé : ${statut}`);
+  if (!VERSIONS_CHUNKER.includes(versionChunk)) throw new Error(`Découpeur refusé : ${versionChunk}`);
   // Les 3 colonnes instruction_requete/instruction_document/distance portent
   // un DEFAULT ('', '', 'cosine') dans 092 — on les OMET : aucun embed
   // (porte B/R2), aucune recette inventee, contrainte recette_complete OK.
@@ -23,12 +40,13 @@ export function sqlChunk() {
       texte_hash, occurrence, statut, chunker_version,
       embedding, embedding_provider, embedding_modele, embedding_version,
       embedding_dimensions, embedding_normalisation)
-   VALUES ($1, $2, $3, $4, NULL, $5, $6, $7, $8, 'active', 'struct-v1',
+   VALUES ($1, $2, $3, $4, NULL, $5, $6, $7, $8, '${statut}', '${versionChunk}',
       NULL, NULL, NULL, NULL, NULL, NULL)
    ON CONFLICT (id) DO UPDATE SET
      ordinal = EXCLUDED.ordinal, section = EXCLUDED.section,
      texte = EXCLUDED.texte,
-     texte_hash = EXCLUDED.texte_hash, occurrence = EXCLUDED.occurrence`;
+     texte_hash = EXCLUDED.texte_hash, occurrence = EXCLUDED.occurrence,
+     statut = EXCLUDED.statut, chunker_version = EXCLUDED.chunker_version`;
 }
 export function argsChargeur(argv, defauts) {
   const o = { ecrire: false, manifeste: defauts.manifeste, sortie: defauts.sortie, limite: null };

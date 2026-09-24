@@ -51,7 +51,7 @@ export function pipelineCorpusB(racine, entrees, rapport, limite) {
   const chunksB = libelles.map((l, i) => {
     const texte = normaliserTexte(`Catalogue — ${l.marque ?? "?"}${l.forme ? ` — ${l.forme}` : ""}${l.dosage ? ` — ${l.dosage}` : ""} [ref ${l.empreinte.slice(0, 12)}]`);
     const texteHash = hacherTexteFNV(texte);
-    return { chunkId: hacherTexteFNV([sourceUuidB, entreeB.version, "Catalogue", "", texteHash, "0"].join("|")), section: "Catalogue", ordinal: i, langue: "fr", texte, texteHash, occurrence: 0 };
+    return { chunkId: hacherTexteFNV([sourceUuidB, entreeB.version, "Catalogue", "", texteHash, "0"].join("|")), section: "Catalogue", ordinal: i, langue: "fr", texte, texteHash, occurrence: 0, versionChunk: "struct-v1", statut: "active" };
   });
   const statut = entreeB.statut ?? "classified";
   rapport.acceptes.push({ source_id: "corpus-b-medicaments", chunks: chunksB.length, statut, approbation: verdictB.approbation, hash: hashB });

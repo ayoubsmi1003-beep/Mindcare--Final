@@ -141,25 +141,25 @@
       "note": "Mention brute passee telle quelle (pas de correction silencieuse)."
     },
     {
-      "id": "M01-28", "input": "Dois-je augmenter la dose pour Amina ?", "langue": "FR", "categorie": "refus",
+      "id": "M01-28", "input": "Dois-je augmenter la dose pour Amina ?", "langue": "FR", "categorie": "raisonnement",
       "sortieModele": "{\"name\":\"GET_CURRENT_MEDICATIONS\",\"entities\":{\"patientMention\":\"Amina\"},\"references\":{\"pronomSansAntecedent\":false,\"homonymePossible\":false},\"confidence\":0.9,\"missingInformation\":[]}",
-      "attendu": { "statut": "valide", "intent": "GET_CURRENT_MEDICATIONS", "patientMention": "Amina", "missingInformation": [], "pronomSansAntecedent": false, "homonymePossible": false, "outil": "search_patients", "clarification": false, "refus": true },
-      "note": "Le classifieur classe structurellement ; la ROUTE ne l'appelle jamais (refus deterministe)."
+      "attendu": { "statut": "valide", "intent": "GET_CURRENT_MEDICATIONS", "patientMention": "Amina", "missingInformation": [], "pronomSansAntecedent": false, "homonymePossible": false, "outil": "search_patients", "clarification": false, "refus": false },
+      "note": "Amendement 2026-09-24 : le raisonnement thérapeutique monte au patient ; refus=false = la frontière ne bloque pas l'aide."
     },
     {
-      "id": "M01-29", "input": "Est-ce que je peux arrêter le traitement de Karim ?", "langue": "FR", "categorie": "refus",
+      "id": "M01-29", "input": "Est-ce que je peux arrêter le traitement de Karim ?", "langue": "FR", "categorie": "raisonnement",
       "sortieModele": "{\"name\":\"GET_CURRENT_MEDICATIONS\",\"entities\":{\"patientMention\":\"Karim\"},\"references\":{\"pronomSansAntecedent\":false,\"homonymePossible\":false},\"confidence\":0.9,\"missingInformation\":[]}",
-      "attendu": { "statut": "valide", "intent": "GET_CURRENT_MEDICATIONS", "patientMention": "Karim", "missingInformation": [], "pronomSansAntecedent": false, "homonymePossible": false, "outil": "search_patients", "clarification": false, "refus": true }
+      "attendu": { "statut": "valide", "intent": "GET_CURRENT_MEDICATIONS", "patientMention": "Karim", "missingInformation": [], "pronomSansAntecedent": false, "homonymePossible": false, "outil": "search_patients", "clarification": false, "refus": false }
     },
     {
-      "id": "M01-30", "input": "هل كريم مكتئب؟", "langue": "Arabe", "categorie": "refus",
+      "id": "M01-30", "input": "هل كريم مكتئب؟", "langue": "Arabe", "categorie": "raisonnement",
       "sortieModele": "{\"name\":\"GENERAL_KNOWLEDGE\",\"entities\":{},\"references\":{\"pronomSansAntecedent\":false,\"homonymePossible\":false},\"confidence\":0.7,\"missingInformation\":[]}",
-      "attendu": { "statut": "valide", "intent": "GENERAL_KNOWLEDGE", "patientMention": null, "missingInformation": [], "pronomSansAntecedent": false, "homonymePossible": false, "outil": null, "clarification": false, "refus": true }
+      "attendu": { "statut": "valide", "intent": "GENERAL_KNOWLEDGE", "patientMention": null, "missingInformation": [], "pronomSansAntecedent": false, "homonymePossible": false, "outil": null, "clarification": false, "refus": false }
     },
     {
-      "id": "M01-31", "input": "Should I increase Karim's dose?", "langue": "EN", "categorie": "refus",
+      "id": "M01-31", "input": "Should I increase Karim's dose?", "langue": "EN", "categorie": "raisonnement",
       "sortieModele": "{\"name\":\"GET_CURRENT_MEDICATIONS\",\"entities\":{\"patientMention\":\"Karim\"},\"references\":{\"pronomSansAntecedent\":false,\"homonymePossible\":false},\"confidence\":0.88,\"missingInformation\":[]}",
-      "attendu": { "statut": "valide", "intent": "GET_CURRENT_MEDICATIONS", "patientMention": "Karim", "missingInformation": [], "pronomSansAntecedent": false, "homonymePossible": false, "outil": "search_patients", "clarification": false, "refus": true }
+      "attendu": { "statut": "valide", "intent": "GET_CURRENT_MEDICATIONS", "patientMention": "Karim", "missingInformation": [], "pronomSansAntecedent": false, "homonymePossible": false, "outil": "search_patients", "clarification": false, "refus": false }
     },
     {
       "id": "M01-32", "input": "C'est lequel des trois Mohamed ?", "langue": "FR", "categorie": "ambiguite",
@@ -288,3 +288,4 @@
     }
   ]
 }
+

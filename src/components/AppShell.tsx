@@ -95,6 +95,21 @@ export interface AppShellProps {
    * cas d'usage. C'est le seul mobilier qui survit au repli.
    */
   readonly modeSeance?: boolean;
+  /**
+   * Retire le rail de navigation tout en gardant la barre supérieure.
+   * Échappatoire pour un futur écran plein-largeur, SANS usage actuel :
+   * `/jarvis` garde son rail depuis que celui-ci est un chrome sombre
+   * (V7/V8) — plus aucune bordure claire autour de la scène. La bulle Alexa
+   * reste montée dans tous les cas.
+   */
+  readonly sansRail?: boolean;
+  /**
+   * Supprime le défilement du <main> pour les écrans qui gèrent eux-mêmes
+   * leur zone déroulante interne — `/jarvis` : seul le fil de conversation
+   * défile, la scène, la barre supérieure et la saisie restent fixes.
+   * Opt-in par écran : les autres écrans gardent `overflow-y-auto` sur <main>.
+   */
+  readonly sansDefilement?: boolean;
   readonly children: React.ReactNode;
 }
 
@@ -119,6 +134,8 @@ export function AppShell({
   actions,
   sansGouttiere = false,
   modeSeance = false,
+  sansRail = false,
+  sansDefilement = false,
   children,
 }: AppShellProps): React.JSX.Element {
   /**
@@ -158,7 +175,7 @@ export function AppShell({
         modeSeance ? "mode-seance bg-night-bg" : "",
       ].join(" ")}
     >
-      {modeSeance ? null : (
+      {modeSeance || sansRail ? null : (
         <Rail role={role} nomComplet={nomComplet} onDeconnexion={onDeconnexion} />
       )}
 
@@ -187,11 +204,23 @@ export function AppShell({
         <main
           id="contenu-principal"
           className={[
-            "min-h-0 flex-1 overflow-y-auto",
+            sansDefilement
+              ? "flex min-h-0 flex-1 flex-col overflow-hidden"
+              : "min-h-0 flex-1 overflow-y-auto",
             sansGouttiere ? "" : "px-4 py-4",
           ].join(" ")}
         >
-          <div key={chemin} className="animate-fondu-monte motion-reduce:animate-none">
+          <div
+            key={chemin}
+            className={[
+              "animate-fondu-monte motion-reduce:animate-none",
+              /* En mode sans-défilement, l'enfant remplit le <main> en
+                 colonne bornée : `h-full`/`flex-1` des petits-enfants y
+                 résolvent une hauteur définie au lieu de retomber sur `auto`
+                 (qui laisserait la scène grandir sans borne). */
+              sansDefilement ? "flex min-h-0 flex-1 flex-col" : "",
+            ].join(" ")}
+          >
             {children}
           </div>
         </main>

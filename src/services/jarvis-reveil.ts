@@ -402,6 +402,20 @@ export async function cloturerCommande(jeton?: number, motif?: MotifFin): Promis
     return;
   }
   const texte = transcription.data.trim();
+  await acheminerTranscription(texte);
+}
+
+/**
+ * Le segment post-STT, PARTAGÉ entre la vraie transcription
+ * (`cloturerCommande`) et la transcription SYNTHÉTIQUE du harnais
+ * (`simulerTranscription`, §29). Un seul code pour les deux voies : une voix
+ * simulée qui divergerait de la voix réelle ne prouverait rien.
+ *
+ * Précondition : la machine est déjà en `traitement` (posée par l'appelant).
+ * Vide = faux réveil (silence jeté, retour veille, sans erreur). Le détecteur
+ * reste suspendu pendant la réponse, comme en réel.
+ */
+async function acheminerTranscription(texte: string): Promise<void> {
   if (texte === "") {
     detecteur?.reprendre();
     aller("veille");
@@ -439,6 +453,24 @@ export async function cloturerCommande(jeton?: number, motif?: MotifFin): Promis
     detecteur?.reprendre();
     aller("veille");
   }
+}
+
+/**
+ * Harnais voix §29 — rejoue une transcription SYNTHÉTIQUE comme si le STT
+ * venait de la rendre : même `traitement`, même `acheminerTranscription`,
+ * même retour veille/erreur. C'est par ici que les tests exercent, SANS
+ * micro, le pipeline exact que l'audio réel empruntera.
+ *
+ * Sans objet quand la machine n'est pas armée (`desactive`, `erreur`,
+ * `interrompu`) : un harnais qui parlerait à une machine éteinte
+ * fabriquerait des verdicts sur du vide. `false` = événement ignoré.
+ */
+export async function simulerTranscription(texte: string): Promise<boolean> {
+  if (detecteur === null) return false;
+  if (etat === "desactive" || etat === "erreur" || etat === "interrompu") return false;
+  aller("traitement");
+  await acheminerTranscription(texte.trim());
+  return true;
 }
 
 /**

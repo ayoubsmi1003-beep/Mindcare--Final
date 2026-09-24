@@ -462,6 +462,89 @@ autorisation → confirmation → exécution → vérification → audit (ADR-02
 ADR-033, ADR-027 décision 4). La mention *« Aide à la décision — le jugement
 clinique appartient au praticien. »* reste permanente.
 
+#### Amendement du 2026-09-24 — Alexa, copilote clinique expert : le raisonnement est autorisé, le commit reste au médecin
+
+**Décision humaine explicite.** L'ancienne lecture — « l'IA ne diagnostique pas,
+ne prescrit pas, ne conclut pas », appliquée dès qu'un patient est nommé — est
+**retirée**. Elle confondait deux choses distinctes : le **raisonnement clinique**
+(qui doit être maximal, sinon le produit est inutile) et le **commit** d'un acte
+clinique faisant foi (qui reste au médecin). La constitution qui en découle est
+`docs/domains/alexa-constitution.md` (ACTIVE, v1.0) ; elle ne crée aucun droit
+nouveau côté modèle : tous les invariants ci-dessous sont inchangés.
+
+| Plan | Contenu |
+|---|---|
+| **Autorisé à Alexa** | hypothèses diagnostiques, différentiels pour/contre, critères DSM/CIM, lecture longitudinale, options et considérations thérapeutiques/médicamenteuses, interactions et surveillances lorsqu'elles sont étayées, indicateurs de risque documentés, explication du raisonnement, brouillons (note, plan, ordonnance, certificat) |
+| **Réservé au médecin (commit)** | diagnostic final, traitement final, prescription, certificat, document clinique/légal, évaluation définitive, écriture au dossier |
+
+**Ce qui n'a PAS changé, et ne changera pas.** Aucune écriture sans
+`confirmed_at` ; allowlist `033`→`063` ; RLS décide ; sortie unique +
+pseudonymisation + `assertSafe` (règle 1) ; texte patient = donnée jamais
+instruction ; `locked_at` intouchable ; gate dose-OCR ; abstraction provider
+(`OPENROUTER_MODEL` prime, Gemini Live n'est qu'un choix initial) ;
+déterminisme en TypeScript. **Aucun droit n'est dérivé de l'intelligence du
+modèle** : Alexa hérite des permissions de l'utilisateur, jamais plus.
+
+**Décision 1 — la porte déterministe change de sujet, pas de nature.**
+`classer()` (`src/shared/jarvis/routing.ts`) ne refuse plus une *question* : elle
+refuse un **acte d'autorité non confirmé**. Le troisième chemin, jusqu'ici
+`refus`, devient `commit` (`connaissance` < `patient` < `commit` dans le treillis
+de `normalisation.ts`). Motifs étroits et explicites : demande d'émettre/signer/
+délivrer/enregistrer au dossier, contournement explicite de la confirmation
+(« sans me demander », « automatiquement »), acte destructeur ou de permission.
+Il rend, **avant tout appel de modèle et avant tout outil**, une constante qui
+n'est plus un refus d'aider mais la frontière de commit : ce qu'Alexa ne fait
+pas, et le geste qui le fait à sa place. Les motifs liés au *raisonnement*
+(diagnostic, dose, traitement, risque suicidaire, hospitalisation) ne sont plus
+des refus : ils montent au chemin `patient`, où le raisonnement est autorisé.
+
+**Décision 2 — prompts v4.0 (`jarvis-chat/prompt.ts`).**
+`PROMPT_VERSION = "v4.0"`. `PROMPT_PATIENT` porte désormais l'identité d'Alexa
+(copilote clinique expert), le raisonnement autorisé, la structure de sortie
+adaptative, l'exigence d'incertitude explicite et du « pourquoi », et la
+frontière : elle ne prétend jamais avoir accompli un acte, elle propose, la
+confirmation est le commit. `PROMPT_CONNAISSANCE` cesse d'être un refus déguisé
+de raisonner : le savoir général redevient une source légitime, mais une
+affirmation médicale significative qui s'appuie sur le corpus doit citer sa
+source, et une réponse hors corpus est donnée comme non vérifiée. La séparation
+des niveaux (politique / instruction / données) est conservée mot pour mot :
+c'est la défense anti-injection, elle n'est pas négociable.
+
+**Décision 3 — éclaircissement, pas de retrait de contrôle.** Le fait qu'une
+question de connaissance médicale sans preuve retrouvée reste servie comme
+savoir général **non vérifié** (au lieu de « je ne peux pas répondre sur cette
+base ») est un choix produit assumé : le corpus ne couvre pas tout, et un
+aide-mémoire honnêtement étiqueté vaut mieux qu'un silence. Les contrôles qui
+protègent la posologie (gate dose-OCR, provenance, gating d'activation) restent
+intacts, et aucune citation ne peut être inventée : la preuve est fournie par le
+serveur ou elle n'existe pas.
+
+**Décision 4 — goldens et tests mis à jour avec la sémantique, pas après.**
+`scripts/eval-jarvis-routage.mjs` (familles A–E, F1 verdicts multilingues,
+monotonie), `eval-jarvis-frontiere.mjs`, `eval-jarvis-v2.mjs`,
+`tests/unit/jarvis-routage-multilingue.test.ts`, `jarvis-prompt-*` : les
+attentes « verdict sur une personne nommée → refus » deviennent
+« → patient (raisonnement) », et les contrôles de commit portent sur la demande
+d'acte non confirmé. Les propriétés de sûreté (monotonie, « le commit rend avant
+tout modèle », enveloppe des données, injection) sont reprogrammées **avant**
+d'être déclarées tenues.
+
+**Hors périmètre de cet amendement, et il faut le dire.** `resume-cas.ts`,
+`analyze-session` et les briefs restent **factuels** : ils composent des faits et
+des observations séparés, et ne concluent pas. Ce n'est pas un reste de timidité,
+c'est un choix : un brief est lu en quinze secondes entre deux patients, et une
+hypothèse non demandée y serait du bruit. Le raisonnement s'obtient en le
+demandant.
+
+**Contrôle.** Un tour qui demande un acte d'autorité sans confirmation rend la
+constante de commit sans qu'aucun modèle ne soit appelé ; un tour qui demande un
+raisonnement sur une personne nommée atteint le chemin patient avec le prompt
+v4.0 ; aucune écriture ne peut exister sans `confirmed_at`. Ces trois points se
+vérifient par `tests/unit/jarvis-routage-multilingue.test.ts` (lecture de
+source), `pnpm eval:jarvis` et, pour le dernier, la contrainte `jarvis_must_confirm`
+(`012`), qui n'a pas bougé.
+
+
 ---
 
 ### ADR-024 — La voix bascule par un flag, jamais par le navigateur
@@ -1077,6 +1160,41 @@ les citations « ADR-022 » du code désignent §4.2 repris par ADR-025.
 **Recette.** `knowledge/recette-embedding-pinee.json` (provider `local-onnx`, `query_prefix`/`document_prefix` vides, normalisation `l2` native, distance `cosine`, chunker `struct-v1`, SHA-256 artefacts, runtime de production à câbler en R3). Aucune écriture `knowledge_chunks.embedding`, aucune activation, `092` intouchée.
 
 **Porte suivante.** R3 (backfill + hybride staging) — uniquement sur instruction R3 explicite.
+
+---
+
+### ADR-038 — Incrément OCR : langue `en` + garde anti-faux-positifs des manuels
+**Date.** 2026-09-20. **Statut.** ACTIVE (D1 + D2 approuvés en gate d'architecture ; D3/R3 VERROUILLÉ — instruction séparée exigée).
+
+**Décision 1 — périmètre `en`.** Le corpus R0 (ADR-037 : fr/ar/darija) s'étend à l'anglais pour deux stagings OCR : `ICD-11 Reference Guide` (codage) et `The Maudsley Prescribing Guidelines, Taylor 2021` (prescription). Migration `100_langue_en_connaissance` (forward, additive : CHECK `fr/ar/darija` → `fr/ar/darija/en` sur les deux tables, contraintes nommées, préconditions 092, 092 intacte). `Langue` TS + `validerLignePorte` admettent `en` ; toute autre valeur reste écartée. RLS, autorité C4+active+approved, allowlist (noms uniquement), recette R2, struct-v1, rerank, routage, egress : inchangés (constaté : aucun ne dépend de la langue).
+
+**Décision 2 — garde OCR.** Le garde `MARQUEURS_PATIENT` (conçu pour fiches curées) rejetait 4/4 manuels FR sur du contenu de manuel (codes d'échelles, débris `D-1`/`D-2` de bibliographies, prénoms de vignettes — vérifié). Règle OCR : `content_type=bibliographie` exclu du scan ; prénoms/`D-\d`/`P\d+` seuls ne rejettent plus — il faut un signal corroborant (téléphone `0[5-7]d8`, `patient_id`, `{{PATIENT`) dans le même paragraphe ; chaque signal est loggé (motif + extrait + section + type) dans le rapport de staging. Téléphone/ID seuls restent un rejet dur. Voie curée corpus-a/b inchangée.
+
+**Gels.** Golden v2 (46 cas) intact ; suite EN séparée (Maudsley doses citées, ICD-11 codes, no-answer EN, cross-lingue) + bench EN mesuré (jamais supposé). Seuils ADR-037 non dilués. Taylor reste `discovered` jusqu'à G7 (wrong-dose=0 %). Aucune source EN `active` par le seul effet de la migration ; R3/backfill verrouillé.
+
+---
+
+### ADR-039 — struct-v1.1 : resplit des longs OCR + transport socket prouvé
+**Date.** 2026-09-21. **Statut.** ACTIVE (décisions humaines P2/P3 : chunker v1.1, G7-avant-backfill, 101 en analyse — application 101 NON autorisée).
+
+**Constat.** Le tampon `struct-v1` du staging OCR était inexact : 2 948 paragraphes > `LIMITE_PARAGRAPHE` (2000) jamais rescindés (max 98 410), rendant leur queue vectorielle invisible (troncature recette 512 tokens). `struct-v1` reste gelé comme artefact historique ; les 3 435 paragraphes courts gardent leurs ids (vérifié par test).
+
+**Décision 1 — v1.1.** `couperLong` verbatim (même regex/limite que `decoupage.ts` et la voie R1) appliqué aux seuls longs : parents conservés `inactive` (zéro DELETE), enfants `struct-v1.1`+`active`, ordinaux renumérotés (hors identité), I1/I2 prouvés par test sur vraies données. Mesuré : 2 893 parents inactivés, 10 748 enfants, 55 paragraphes inscindables + 81 enfants > 2000 (blocs sans frontière — signalés par section, revue humaine). Résiduel actif > 2000 : 136 (vs 2 948).
+
+**Décision 2 — découpeurs acceptés.** `CHUNKERS_ACCEPTES = ["struct-v1", "struct-v1.1"]` (liste fermée, `remplir-embeddings-sql.mjs`) : les 15 666 R1 ne sont jamais ré-embarqués, les v1.1 sont éligibles, tout autre = saut journalisé. Recette `recette-embedding-pinee.json` intouchée (vecteurs comparables : même modèle, même normalisation).
+
+**Décision 3 — transport socket.** `MINDCARE_ADMIN_DATABASE_URL` absente (vérifié : `.env` n'a que `MINDCARE_DATABASE_URL`, 42501 en écriture) → `--socket` (`docker exec` + fichier, `ON_ERROR_STOP`) intégré au script sanctionné `remplir-embeddings.mjs`. Interpolation `lierParams` une-passe testée + preuve par `RETURNING` (identité + cardinalité, `verifierRetourLot`) : le risque ID↔vecteur du pilote ne peut plus passer en silence. Le pilote Temp est abandonné.
+
+**Gels.** 092 intouchée ; aucune activation ; 136 embeddings `l2 native` du pilote à renormaliser au tag R2 avant uniformité (dérive de libellé, vecteurs à re-dériver pour preuve).
+
+---
+
+### ADR-040 — Provenance vérifiable des six livres OCR
+**Date.** 2026-09-22. **Statut.** ACTIVE pour le contrat et le schéma ; l'activation clinique reste interdite sans décision distincte.
+
+**Décision humaine explicite.** La proposition `docs/domains/connaissance-provenance-contract.md` est approuvée : numéros B01–B06 stables, quatre tables de métadonnées/ligne de page et deux portes de recherche propres aux livres. Une migration forward peut créer ces objets. `092`, `093` et `100` restent intouchées ; les identifiants, textes, embeddings, statuts, approbations et dates de revue existants restent inchangés.
+
+**Bornes.** Le titre bibliographique et l'édition ne sont publiables qu'après vérification de la page de titre ; le folio imprimé reste `NULL` sans attestation. Chaque enfant `struct-v1.1` porte ses propres segments de page et offsets. Les portes livres conservent les filtres C4 + active + approved + revue à jour + non-superseded de `092/093`; les portes R1 existantes restent compatibles. Le backfill de provenance ne vaut ni revue clinique, ni G7 médicaments, ni activation. Clarification humaine du 2026-09-22 : le backfill de **provenance de pages seule** est autorisé maintenant ; G7 demeure obligatoire avant toute libération des preuves médicamenteuses. La portée clinique d'ADR-039 est conservée.
 
 ---
 

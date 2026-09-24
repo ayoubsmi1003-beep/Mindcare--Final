@@ -1,0 +1,77 @@
+-- Reject NULL review fields and every broken page span, not only chunks without one valid span.
+BEGIN;
+CREATE OR REPLACE FUNCTION app.activate_book_knowledge(
+  p_source_id uuid, p_version text, p_visa_reference text, p_eval_sha256 text
+) RETURNS uuid
+LANGUAGE plpgsql SECURITY DEFINER SET search_path=app,audit,pg_catalog AS $$
+DECLARE
+  v_source app.knowledge_sources%ROWTYPE;
+  v_book app.knowledge_book_editions%ROWTYPE;
+  v_total bigint;
+  v_unready bigint;
+  v_actor uuid := auth.uid();
+  v_role app.user_role := app.current_role();
+BEGIN
+  IF v_actor IS NULL OR v_role IS NULL OR v_role NOT IN ('owner','practitioner') OR NOT EXISTS (
+    SELECT 1 FROM app.profiles WHERE id=v_actor AND is_active
+  ) THEN RAISE EXCEPTION 'active doctor account required' USING ERRCODE='insufficient_privilege'; END IF;
+  IF p_source_id IS NULL OR nullif(btrim(p_version),'') IS NULL OR
+     nullif(btrim(p_visa_reference),'') IS NULL OR
+     p_eval_sha256 IS NULL OR p_eval_sha256 !~ '^[0-9a-f]{64}$' THEN
+    RAISE EXCEPTION 'book version, visa reference and eval hash required';
+  END IF;
+
+  SELECT * INTO v_source FROM app.knowledge_sources WHERE id=p_source_id FOR UPDATE;
+  IF NOT FOUND OR v_source.version IS DISTINCT FROM p_version OR
+     v_source.cabinet_id IS NOT NULL OR v_source.classification<>'C4' OR
+     v_source.statut<>'discovered' OR v_source.approved_at IS NOT NULL OR
+     v_source.approved_by IS NOT NULL OR v_source.superseded_by IS NOT NULL THEN
+    RAISE EXCEPTION 'book source not eligible';
+  END IF;
+  SELECT * INTO v_book FROM app.knowledge_book_editions WHERE source_id=p_source_id;
+  IF NOT FOUND OR v_book.title_exact IS NULL OR v_book.edition_label IS NULL OR
+     v_book.metadata_verified_by IS DISTINCT FROM v_actor OR
+     v_book.metadata_verified_at IS NULL THEN
+    RAISE EXCEPTION 'book metadata unattested';
+  END IF;
+
+  SELECT count(*),count(*) FILTER (WHERE
+    k.chunk_id IS NULL OR k.mapping_status IS DISTINCT FROM 'verified' OR
+    k.heading_status IS DISTINCT FROM 'verified' OR k.heading_verified_by IS DISTINCT FROM v_actor OR
+    k.heading_verified_at IS NULL OR coalesce(cardinality(k.heading_path),0)=0 OR
+    k.ocr_review_status IS DISTINCT FROM 'accepted' OR
+    k.texte_hash IS DISTINCT FROM c.texte_hash OR
+    k.chunker_version IS DISTINCT FROM c.chunker_version OR
+    c.embedding IS NULL OR NOT EXISTS (
+      SELECT 1 FROM app.knowledge_chunk_page_spans x
+      WHERE x.chunk_id=c.id AND x.source_id=c.source_id
+    ) OR EXISTS (
+      SELECT 1 FROM app.knowledge_chunk_page_spans x
+      LEFT JOIN app.knowledge_ocr_pages pg
+        ON pg.source_id=x.source_id AND pg.global_physical_page=x.global_physical_page
+       AND pg.texte_sha1=x.page_sha1
+      WHERE x.chunk_id=c.id AND (x.source_id IS DISTINCT FROM c.source_id OR pg.source_id IS NULL)
+    ))
+    INTO v_total,v_unready
+  FROM app.knowledge_chunks c
+  LEFT JOIN app.knowledge_book_chunks k ON k.chunk_id=c.id AND k.source_id=c.source_id
+  WHERE c.source_id=p_source_id AND c.statut='active';
+  IF v_total=0 OR v_unready<>0 THEN
+    RAISE EXCEPTION 'book chunks not fully attested: total %, unready %',v_total,v_unready;
+  END IF;
+
+  UPDATE app.knowledge_sources SET statut='active',
+    reviewed_by=v_actor,reviewed_at=now(),approved_by=v_actor,approved_at=now()
+  WHERE id=p_source_id;
+  IF NOT FOUND THEN RAISE EXCEPTION 'book activation transition failed'; END IF;
+  INSERT INTO audit.log(actor_id,actor_role,operation,table_name,row_id,changed_fields,old_values,new_values)
+  VALUES(v_actor,v_role,'update','knowledge_sources',p_source_id,
+    ARRAY['statut','reviewed_by','reviewed_at','approved_by','approved_at'],
+    jsonb_build_object('status',v_source.statut,'approved_at',v_source.approved_at),
+    jsonb_build_object('status','active','book_number',v_book.book_number,
+      'version',p_version,'visa_reference',p_visa_reference,'eval_sha256',p_eval_sha256,
+      'active_chunks',v_total));
+  RETURN p_source_id;
+END $$;
+INSERT INTO app.schema_migrations(version) VALUES ('106_activation_livres_integrite_spans') ON CONFLICT DO NOTHING;
+COMMIT;

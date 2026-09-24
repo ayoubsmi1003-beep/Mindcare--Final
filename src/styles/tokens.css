@@ -534,7 +534,7 @@
     --s-44: 176px;
     --s-48: 192px;
     --s-56: 224px;
-    --barre-largeur: 22px;
+    --barre-largeur: 36px;
 
     /* Profondeur teintée verte */
     --ombre-douce: 0 1px 2px rgba(62, 39, 35, 0.05), 0 4px 12px -6px rgba(27, 94, 32, 0.08);
@@ -775,6 +775,98 @@
   }
   .bulle-alexa-ombre {
     filter: drop-shadow(0 6px 18px rgba(27, 94, 32, 0.35));
+  }
+
+  /* ── Alexa Lune — composition 21st.dev, teinte émeraude ──
+     Îlot sombre dans l'app claire : le FOND porte le décor (base nuit + halo
+     d'horizon vert), le fil et la saisie restent opaques (§4.2 : noms, dates
+     et montants jamais sur dégradé). Littéraux hex/rgba ici, jamais en TSX.
+     Aucune image externe : la lune est recréée en dégradés (local-first,
+     poste sans réseau). */
+  .lune-alexa-scene {
+    background-color: #060d07;
+  }
+  .lune-alexa-fond {
+    background:
+      radial-gradient(1100px 520px at 50% 112%, rgba(46, 125, 50, 0.42), transparent 65%),
+      radial-gradient(820px 400px at 50% 116%, rgba(76, 175, 80, 0.30), transparent 60%),
+      radial-gradient(700px 380px at 50% -12%, rgba(200, 230, 201, 0.07), transparent 60%);
+  }
+  /* Le limbe de la lune : un arc lumineux derrière la zone de saisie. Géométrie
+     figée ici (pas de syntaxe arbitraire dans les écrans) ; le conteneur a
+     `overflow-hidden`, les bords de l'ellipse sont rognés. */
+  .lune-alexa-horizon {
+    position: absolute;
+    left: 50%;
+    top: 46%;
+    width: 160vw;
+    height: 85vh;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: linear-gradient(to bottom, rgba(21, 43, 24, 0) 0%, rgba(21, 43, 24, 0.55) 45%, rgba(10, 31, 12, 0.7) 100%);
+    border-top: 2px solid rgba(102, 187, 106, 0.75);
+    box-shadow: 0 -18px 120px 0 rgba(76, 175, 80, 0.35), 0 -4px 32px 0 rgba(129, 199, 132, 0.45);
+  }
+  /* La boîte de saisie : verre sombre, bordure claire fine, anneau émeraude
+     au focus-clavier (focus-within, pas de contour par défaut dupliqué). */
+  .lune-alexa-boite {
+    background: rgba(6, 13, 7, 0.62);
+    backdrop-filter: blur(16px) saturate(1.4);
+    -webkit-backdrop-filter: blur(16px) saturate(1.4);
+    border: 1px solid rgba(240, 235, 229, 0.16);
+    box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.6);
+  }
+  .lune-alexa-boite:focus-within {
+    border-color: rgba(76, 175, 80, 0.65);
+    box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(76, 175, 80, 0.35), 0 0 32px -8px rgba(76, 175, 80, 0.4);
+  }
+  /* L'état vide respire : la zone basse garde le vide du 21st.dev.
+     `clamp` plutôt que `20vh` fixe : sur 1366×768, 20vh (154 px) + héros +
+     saisie + pastilles dépassait le <main> borné et forçait un défilement
+     externe. 12vh garde l'air sur grand écran tout en tenant à 768 px. */
+  .lune-alexa-bas {
+    padding-bottom: clamp(24px, 12vh, 120px);
+  }
+  /* La zone de saisie colle en bas quand le fil défile (non-vide). */
+  .lune-alexa-colle {
+    position: sticky;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(6, 13, 7, 0) 0%, #060d07 28%);
+  }
+  /* Dictée active : le bouton voix porte l'anneau émeraude. */
+  .lune-alexa-ecoute {
+    border-color: #4caf50;
+    box-shadow: 0 0 0 1px rgba(76, 175, 80, 0.55), 0 0 28px -6px rgba(76, 175, 80, 0.55);
+  }
+  /* ── Alexa Lune — la scène remappe les jetons papier vers la nuit ──
+     Même mécanisme que `.mode-seance` : les composants papier (fil, carte
+     de confirmation, squelette) lisent `var(--card)` comme toujours et c'est
+     --card qui change — le fil reste UNE surface opaque (§4.2 : noms, dates
+     et montants jamais sur dégradé), simplement nocturne. `--action-*` et
+     `--paper` NE SONT PAS remappés : l'émeraude et son encre claire restent
+     la langue des gestes (bulle humain, bouton d'envoi) au clair comme dans
+     la nuit. `--sunken` retombe sur le fond de nuit (le renfoncement rejoint
+     le fond, aucun ton nouveau). Sélection et barre de défilement suivent
+     (surfaces du navigateur, pas de défaut). */
+  .lune-alexa-scene {
+    --canevas: var(--night-bg);
+    --layer-ambient: var(--night-bg);
+    --card: var(--night-card);
+    --layer-surface: var(--night-card);
+    --layer-raised: var(--night-card);
+    --sunken: var(--night-bg);
+    --rule: var(--night-rule);
+    --ink-900: var(--night-ink);
+    --ink-700: var(--night-ink);
+    --ink-500: var(--night-ink-soft);
+    --ink-300: var(--night-ink-soft);
+    --ink-100: var(--night-rule);
+    --selection-bg: rgba(76, 175, 80, 0.35);
+    --selection-ink: var(--night-ink);
+    scrollbar-color: var(--barre-defil-chrome) transparent;
+  }
+  .lune-alexa-scene ::-webkit-scrollbar-thumb {
+    background-color: var(--barre-defil-chrome);
   }
 
   /* ── Topbar flottante : translucide + blur, jamais transparente ──

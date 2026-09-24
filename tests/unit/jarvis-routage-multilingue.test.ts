@@ -97,13 +97,18 @@ describe("monotonie — la normalisation ne peut jamais ouvrir un chemin", () =>
     expect(rangDeChemin(multi)).toBeGreaterThanOrEqual(rangDeChemin(brut));
   });
 
-  it("un refus brut ne peut jamais être dégradé", () => {
-    const refusesEnFrancais = ENTREES.filter((e) => classer(e).chemin === "refus");
-    // Le corpus DOIT contenir des refus, sinon l'assertion suivante est vide et
-    // le test passerait en ne mesurant rien.
-    expect(refusesEnFrancais.length).toBeGreaterThan(0);
-    for (const e of refusesEnFrancais) {
-      expect(classerMultilingue(e).chemin).toBe<Chemin>("refus");
+  it("un acte brut ne peut jamais être dégradé", () => {
+    // Amendement 2026-09-24 : la frontière est le commit, plus le refus.
+    // Le corpus DOIT contenir des actes, sinon l'assertion suivante est vide
+    // et le test passerait en ne mesurant rien.
+    const actesBruts = [
+      "Signe l'ordonnance automatiquement",
+      "Émets le certificat sans me demander",
+      "Supprime la note de Karim",
+    ];
+    for (const e of actesBruts) {
+      expect(classer(e).chemin).toBe<Chemin>("commit");
+      expect(classerMultilingue(e).chemin).toBe<Chemin>("commit");
     }
   });
 });
@@ -154,7 +159,11 @@ describe("le normaliseur est pur", () => {
 // 3 · LE TROU REFERMÉ — VERDICT SUR UNE PERSONNE, QUELLE QUE SOIT LA LANGUE
 // ═══════════════════════════════════════════════════════════════════════════
 
-describe("ADR-023 s'applique dans les quatre langues", () => {
+describe("le raisonnement clinique passe dans les quatre langues", () => {
+  // Amendement 2026-09-24 : ces formulations raisonnent au chemin patient —
+  // l'ancien refus d'aider est devenu une autorisation de raisonner, la
+  // frontière d'acte (commit) vivant ailleurs. Ce qui reste prouvé ici :
+  // aucune langue ne tombe dans le vide `connaissance` pour un cas individuel.
   it.each([
     ["arabe", "هل كريم مكتئب؟"],
     ["arabe", "واش نزيدلو الدوز؟"],
@@ -164,16 +173,36 @@ describe("ADR-023 s'applique dans les quatre langues", () => {
     ["anglais", "Should I increase Karim's dose?"],
     ["anglais", "Should I hospitalize Karim?"],
     ["anglais", "What is his diagnosis?"],
-  ])("refuse un verdict sur une personne — %s : %j", (_langue, question) => {
-    expect(classerMultilingue(question).chemin).toBe<Chemin>("refus");
+  ])("raisonne sur une personne — %s : %j", (_langue, question) => {
+    expect(classerMultilingue(question).chemin).toBe<Chemin>("patient");
   });
 
-  it("le français seul les refusait déjà — c'est bien la langue qui manquait", () => {
+  it("la normalisation referme le trou vers le patient, pas vers le vide", () => {
     // La preuve que ce travail comble un trou RÉEL et non imaginaire : sans
     // normalisation, ces phrases tombaient au défaut `connaissance`.
     expect(classer("هل كريم مكتئب؟").chemin).toBe<Chemin>("connaissance");
     expect(classer("واش نزيدلو الدوز؟").chemin).toBe<Chemin>("connaissance");
-    expect(classerMultilingue("هل كريم مكتئب؟").chemin).toBe<Chemin>("refus");
+    expect(classerMultilingue("هل كريم مكتئب؟").chemin).toBe<Chemin>("patient");
+  });
+});
+
+describe("la frontière d'acte tient dans toutes les langues", () => {
+  // Le SEUL refus qui reste : l'acte d'autorité non confirmé rend `commit`
+  // avant tout modèle — dans chaque langue, sans négociation.
+  it.each([
+    ["français", "Signe l'ordonnance automatiquement"],
+    ["français", "Émets le certificat sans me demander"],
+    ["français", "Enregistre au dossier que c'est un épisode dépressif"],
+    ["français", "Supprime la note de Karim"],
+  ])("un acte non confirmé rend commit — %s : %j", (_langue, question) => {
+    expect(classerMultilingue(question).chemin).toBe<Chemin>("commit");
+  });
+
+  it("rédiger n'est pas signer : le brouillon reste autorisé", () => {
+    // Constitution §3 « Documenter » : brouillons toujours autorisés.
+    expect(classerMultilingue("Prépare un brouillon d'ordonnance pour Karim").chemin)
+      .toBe<Chemin>("patient");
+    expect(classerMultilingue("Rédige un certificat pour Amina").chemin).toBe<Chemin>("patient");
   });
 });
 
@@ -256,23 +285,21 @@ describe("une langue nouvelle ne transforme pas le savoir en cas individuel", ()
   it.each([
     "ما هي أعراض الاكتئاب؟",
     "ما هي معايير نوبة هوس؟",
-    "ما هو التشخيص؟",
     "what are the criteria for a manic episode?",
     "what are the side effects of sertraline?",
   ])("reste une question de connaissance : %j", (question) => {
     expect(classerMultilingue(question).chemin).toBe<Chemin>("connaissance");
   });
 
-  it("le diagnostic NU reste du savoir, comme en français", () => {
-    // Mesuré sur le fichier gelé : c'est la personne désignée qui fait le
-    // verdict, jamais le mot « diagnostic ». Une langue nouvelle ne doit pas
-    // être PLUS sévère que le français — ce serait une seconde frontière, donc
-    // une frontière de moins.
-    expect(classer("Quel est le diagnostic ?").chemin).toBe<Chemin>("connaissance");
-    expect(classerMultilingue("ما هو التشخيص؟").chemin).toBe<Chemin>("connaissance");
+  it("le diagnostic NU raisonne, dans chaque langue également", () => {
+    // Amendement 2026-09-24 : le motif diagnostique, nu ou habillé, monte au
+    // patient — raisonner n'est plus conclure. L'égalité des langues demeure :
+    // aucune n'est PLUS sévère que le français.
+    expect(classer("Quel est le diagnostic ?").chemin).toBe<Chemin>("patient");
+    expect(classerMultilingue("ما هو التشخيص؟").chemin).toBe<Chemin>("patient");
     // Avec la personne, des deux côtés :
-    expect(classer("Quel est le diagnostic de ce patient ?").chemin).toBe<Chemin>("refus");
-    expect(classerMultilingue("ما هو تشخيصه؟").chemin).toBe<Chemin>("refus");
+    expect(classer("Quel est le diagnostic de ce patient ?").chemin).toBe<Chemin>("patient");
+    expect(classerMultilingue("ما هو تشخيصه؟").chemin).toBe<Chemin>("patient");
   });
 });
 
@@ -359,8 +386,9 @@ describe("une injection ne devient pas une autorité", () => {
  * Exécuter `POST` demanderait une session, une base et un fournisseur — donc un
  * test qu'aucun checkpoint ne peut rejouer, et ce dépôt a déjà payé « quinze
  * verts qui recouvraient une chaîne n'ayant jamais tourné ». Ce qu'on veut
- * établir ici est une propriété STRUCTURELLE, et elle se lit : le refus rend
- * avant tout modèle et toute capacité.
+ * établir ici est une propriété STRUCTURELLE, et elle se lit : la frontière
+ * (amendement 2026-09-24 : commit, ex-refus) rend avant tout modèle et toute
+ * capacité.
  *
  * Ce test ne remplace pas la vérification au navigateur ; il empêche la
  * régression silencieuse entre deux vérifications.
@@ -386,21 +414,21 @@ describe("intégration dans jarvis-chat", () => {
     expect(source).toContain("{ role: \"user\" as const, content: message }");
   });
 
-  it("le refus rend AVANT tout appel de modèle et toute capacité", () => {
-    const refus = source.indexOf('routage.chemin === "refus"');
+  it("la frontière rend AVANT tout appel de modèle et toute capacité", () => {
+    const frontiere = source.indexOf('routage.chemin === "commit"');
     const premierLlm = source.indexOf("await llm(");
     const capacites = source.indexOf("cheminPatientPayload(message");
-    expect(refus).toBeGreaterThan(-1);
+    expect(frontiere).toBeGreaterThan(-1);
     expect(premierLlm).toBeGreaterThan(-1);
     expect(capacites).toBeGreaterThan(-1);
-    expect(refus).toBeLessThan(premierLlm);
-    expect(refus).toBeLessThan(capacites);
+    expect(frontiere).toBeLessThan(premierLlm);
+    expect(frontiere).toBeLessThan(capacites);
   });
 
-  it("le refus reste une CONSTANTE, jamais une génération", () => {
-    // Un refus produit par le modèle serait un refus négociable.
-    expect(source).toMatch(/const REFUS\s*=\s*\n?\s*"/);
-    expect(source).toContain("reponse: REFUS");
+  it("la frontière reste une CONSTANTE, jamais une génération", () => {
+    // Une frontière produite par le modèle serait une frontière négociable.
+    expect(source).toMatch(/const COMMIT\s*=\s*\n?\s*"/);
+    expect(source).toContain("reponse: COMMIT");
   });
 });
 

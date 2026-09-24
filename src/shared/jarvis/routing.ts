@@ -1,14 +1,21 @@
 /**
- * `routing.ts` — LA FRONTIÈRE D'ADR-023, ÉCRITE EN CODE.
+ * `routing.ts` — LA FRONTIÈRE D'ADR-023, ÉCRITE EN CODE, AMENDÉE LE 2026-09-24.
  *
- * ═══ POURQUOI CE FICHIER EXISTE ═══
- * `SESSION-CONTRACTS.md` §V2 : « La frontière d'ADR-023 se code, elle ne se
- * prompte pas. Une question qui nomme un patient et demande une conclusion doit
- * être refusée par une règle du système, pas par la bonne volonté du modèle. »
- * Un modèle de langage n'est pas une frontière de sécurité : il est persuadable,
- * et il est persuadable par le texte même qu'il analyse. La décision est donc
- * prise ICI, avant que le modèle ne voie quoi que ce soit — avant le contexte,
- * avant les outils.
+ * ═══ CE QUI A CHANGÉ, ET CE QUI N'A PAS CHANGÉ ═══
+ * La version d'origine refusait une QUESTION : « Karim est-il dépressif ? » ne
+ * pouvait pas atteindre le modèle. L'amendement du 2026-09-24 déplace la
+ * frontière de la question vers le COMMIT : le raisonnement clinique sur une
+ * personne nommée est désormais autorisé (c'est le produit), et ce qui reste
+ * interdit — décidé ici, en code, avant tout modèle — c'est de laisser croire
+ * qu'un acte clinique faisant foi a été accompli sans la confirmation de la
+ * praticienne. Voir `docs/domains/alexa-constitution.md` et l'amendement
+ * d'ADR-023.
+ *
+ * Ce fichier garde donc sa raison d'être exacte : « La frontière d'ADR-023 se
+ * code, elle ne se prompte pas. » Un modèle de langage n'est pas une frontière
+ * de sécurité : il est persuadable, et il est persuadable par le texte même
+ * qu'il analyse. La décision est prise ICI, avant que le modèle ne voie quoi
+ * que ce soit — avant le contexte, avant les outils.
  *
  * ═══ AUCUN IMPORT, ET C'EST DÉLIBÉRÉ ═══
  * Fonction pure, zéro dépendance : elle tourne sous Deno (l'Edge Function) ET
@@ -25,10 +32,10 @@
  */
 
 /**
- * Les trois issues. `refus` n'est pas un échec du routage : c'est une décision,
+ * Les trois issues. `commit` n'est pas un échec du routage : c'est une décision,
  * au même titre que les deux autres, et la seule qui n'appelle aucun modèle.
  */
-export type Chemin = "connaissance" | "patient" | "refus";
+export type Chemin = "connaissance" | "patient" | "commit";
 
 export interface Routage {
   readonly chemin: Chemin;
@@ -48,18 +55,19 @@ function normaliser(texte: string): string {
 }
 
 /**
- * ═══ FORMES CONCLUSIVES ═══
- * Une question qui demande un VERDICT, par opposition à une question qui
- * demande un savoir. « Quels sont les critères d'un épisode maniaque » demande
- * un savoir ; « est-il maniaque » demande un verdict.
+ * ═══ FORMES PERSONNELLES DE RAISONNEMENT ═══
+ * Depuis l'amendement du 2026-09-24, ces formes ne refusent plus : elles
+ * DÉSIGNENT un individu et montent au chemin `patient`, où le raisonnement
+ * clinique est autorisé. « Karim est-il dépressif ? » est exactement la question
+ * que le produit doit savoir servir.
  *
  * Les formes interrogatives personnelles (`est-il`, `souffre-t-elle`,
  * `a-t-il un`) DÉSIGNENT DÉJÀ UN INDIVIDU par leur grammaire même : leur sujet
- * ne peut pas être une molécule. C'est ce qui permet de refuser « Karim est-il
- * dépressif ? » sans disposer d'une liste de prénoms — et donc sans dépendre de
- * ce que l'interface a bien voulu transmettre.
+ * ne peut pas être une molécule. C'est ce qui permet de router sans disposer
+ * d'une liste de prénoms — et donc sans dépendre de ce que l'interface a bien
+ * voulu transmettre.
  */
-const FORMES_CONCLUSIVES_PERSONNELLES: readonly RegExp[] = [
+const FORMES_PERSONNELLES_DE_RAISONNEMENT: readonly RegExp[] = [
   /\b(est|sont)-(il|elle|ils|elles)\b/,
   /\b(souffre|souffrent)-t-(il|elle|ils|elles)\b/,
   /\ba-t-(il|elle)\s+(un|une|des|le|la|les)\b/,
@@ -71,12 +79,14 @@ const FORMES_CONCLUSIVES_PERSONNELLES: readonly RegExp[] = [
 ];
 
 /**
- * Formes conclusives qui ne désignent pas seules un individu : il faut qu'un
+ * Formes de raisonnement qui ne désignent pas seules un individu : il faut qu'un
  * individu soit par ailleurs présent dans la phrase. « Que dois-je prescrire ? »
  * posé dans le vide reste une question de connaissance ; « que dois-je
- * prescrire à Amina » est une décision clinique sur une personne.
+ * prescrire à Amina » est une question sur une personne — elle monte au chemin
+ * `patient`, où le raisonnement thérapeutique est autorisé. Ce que la réponse ne
+ * fait pas : émettre l'ordonnance. C'est la praticienne qui la signe.
  */
-const FORMES_CONCLUSIVES_DEPENDANTES: readonly RegExp[] = [
+const FORMES_DE_RAISONNEMENT_DEPENDANTES: readonly RegExp[] = [
   /\bque (dois|doit|devrais)-je (prescrire|donner|administrer|faire)\b/,
   // ⚠️ « Quel traitement » N'EST PAS TOUJOURS UNE DÉCISION. « Quel traitement
   // prend ce patient ? » est un FAIT, et le refuser rendait la lecture du dossier
@@ -89,13 +99,16 @@ const FORMES_CONCLUSIVES_DEPENDANTES: readonly RegExp[] = [
 
   // ═══ DÉCISION THÉRAPEUTIQUE — MODAL × ACTION ═══
   //
-  // ⚠️ C'EST LE TROU LE PLUS GRAVE QU'AVAIT CE FICHIER. « Dois-je augmenter la
-  // dose pour Amina ? » et « Est-ce que je peux arrêter le traitement de
-  // Karim ? » partaient au chemin PATIENT : la question atteignait les outils,
-  // et c'est le MODÈLE qu'on chargeait de refuser. Un refus confié au modèle
-  // n'est pas une frontière, c'est une espérance.
+  // ⚠️ L'HISTOIRE DE CE BLOC EXPLIQUE SA FORME, ET ELLE A CHANGÉ DE SENS.
+  // Ces motifs ont été ajoutés pour fermer un trou : « Dois-je augmenter la dose
+  // pour Amina ? » partait au chemin PATIENT, où c'est le MODÈLE qu'on chargeait
+  // de refuser — un refus confié au modèle n'étant pas une frontière mais une
+  // espérance. L'amendement du 2026-09-24 renverse la conclusion sans toucher
+  // aux motifs : le chemin patient est désormais le BON chemin, où le
+  // raisonnement thérapeutique est autorisé. Ce qui reste fermé, c'est le
+  // commit, et il l'est par `FORMES_DE_COMMIT` plus bas.
   //
-  // Le motif est un PRODUIT CARTÉSIEN explicite — un modal de décision (« dois-je »,
+  // Le motif reste un PRODUIT CARTÉSIEN explicite — un modal de décision (« dois-je »,
   // « puis-je », « recommandes-tu », « est-il approprié ») croisé avec une action
   // thérapeutique (augmenter, arrêter, changer, prescrire…). Aucune des deux
   // moitiés ne suffit : « augmenter » seul est un mot de savoir (« comment
@@ -112,6 +125,70 @@ const FORMES_CONCLUSIVES_DEPENDANTES: readonly RegExp[] = [
   // Darija/français mêlés — l'interface les accepte, la frontière doit les voir.
   /\b(wach|wech|chnou|chno|kifach)[^?.!]{0,60}\b(nzid|n9as|nwa9ef|nbeddel|na3ti|noktob|dose|traitement|dwa)\b/,
   /\bnzid(lo|lha)?\b|\bnwa9ef(lo|lha)?\b/,
+];
+
+/**
+ * ═══ FORMES DE COMMIT — LE SEUL REFUS QUI RESTE, ET IL NE REFUSE PAS D'AIDER ═══
+ *
+ * Depuis l'amendement du 2026-09-24, `classer()` ne refuse plus une QUESTION :
+ * elle refuse un ACTE D'AUTORITÉ NON CONFIRMÉ. Ce que ces motifs attrapent, ce
+ * n'est pas « comment traiter une dépression » ni « que penser de ce tableau » —
+ * c'est « émets l'ordonnance », « signe le certificat », « enregistre au dossier
+ * que… », « fais-le sans me demander ». La réponse n'appelle aucun modèle : elle
+ * dit ce qu'Alexa ne fait pas, et le geste qui le fait à sa place.
+ *
+ * ⚠️ POURQUOI ELLE RESTE EN CODE, ALORS QUE LE RAISONNEMENT EST OUVERT.
+ * Parce que le modèle ne peut pas exécuter ces actes (aucun outil ne les porte),
+ * mais il peut **croire** qu'il l'a fait, ou l'affirmer. Une phrase fausse sur un
+ * acte clinique est le mensonge le plus coûteux que l'assistant puisse produire :
+ * la praticienne compterait sur une ordonnance émise qui ne l'est pas. La
+ * frontière est donc décidée AVANT le modèle, comme l'était l'ancien refus.
+ *
+ * ⚠️ COÛT MESURÉ, PAS NIÉ, ET DANS QUEL SENS IL PENDULE. Trop étroite, la porte
+ * laisse le modèle affirmer un acte. Trop large, elle sert une phrase de
+ * frontière à une question légitime — par exemple « la tension se régule-t-elle
+ * automatiquement ? ». Les deux coûts ne sont pas symétriques : une phrase de
+ * frontière est une friction, un acte clinique annoncé à tort est un risque. Le
+ * seuil est donc volontairement *exigeant sur le contournement* (il faut un
+ * verbe d'acte ET une marque d'automatisme) et *large sur l'acte lui-même*.
+ *
+ * ⚠️ LE SEUIL DES NÉGATIONS VAUT POUR TOUT LE FICHIER. « Pourquoi ne signe-t-on
+ * pas ce certificat soi-même ? » n'est pas une demande d'acte. Ces motifs ne
+ * prétendent pas résoudre la négation : ils visent la forme impérative ou la
+ * première personne, qui est celle d'une demande.
+ */
+const FORMES_DE_COMMIT: readonly RegExp[] = [
+  // ── 1 · LE CONTOURNEMENT EXPLICITE DE LA CONFIRMATION ──
+  /\bsans (me |te |vous )?(demander|confirmer|validation|verifier|controler|reregarder)\b/,
+  /\bsans (que je|avoir a|besoin de) (valider|confirmer|verifier|relire)\b/,
+  /\b(emets|emet|delivre|signe|prescris|enregistre|applique|valide)\b[^?.!]{0,40}\bautomatiquement\b/,
+  /\bautomatiquement\b[^?.!]{0,30}\b(emets|emet|delivre|signe|prescris|enregistre|applique|valide)\b/,
+  /\btout seul\b/,
+  /\bsans mon (accord|aval)\b/,
+
+  // ── 2 · L'ÉMISSION OU LA SIGNATURE D'UN ACTE QUI FAIT FOI ──
+  // L'acte d'autorité est nommé : ordonnance, certificat, attestation, document,
+  // arrêt de travail, courrier. « Prépare » n'est PAS visé : préparer un
+  // brouillon est autorisé et souhaité.
+  /\b(emets|emet|emettre|delivre|delivrer|signe|signer|contresigne|contresigner|tamponne|tamponner)\b[^?.!]{0,40}\b(ordonnance|certificat|attestation|document|arret|courrier)\b/,
+  /\b(ordonnance|certificat|attestation)\b[^?.!]{0,40}\b(emets|emet|delivre|signe|contresigne|fais signer)\b/,
+  /\bprescris(-lui|-leur| lui| leur)?\b[^?.!]{0,30}\b(medicament|traitement|antidepresseur|anxiolytique|benzodiazepine|isrs|sertraline|fluoxetine|lithium|risperidone|quetiapine|haloperidol)\b/,
+
+  // ── 3 · L'ÉCRITURE D'UNE CONCLUSION AU DOSSIER ──
+  // « Dis-moi ce que tu en penses » est une demande de raisonnement ;
+  // « note au dossier que c'est un épisode dépressif » est un commit.
+  /\b(enregistre|enregistrer|note|noter|inscris|inscrire|ecris|ecrire|consigne|consigner)\b[^?.!]{0,50}\b(au|dans le|dans son)\s+(dossier|patient)\b/,
+  /\bconclus\b[^?.!]{0,60}\b(et )?(note|noter|enregistre|enregistrer|inscris|ecris|consigne)\b/,
+  /\bmets? a jour (le|son) dossier\b/,
+  /\b(retire|retirer|corrige|corriger)\b[^?.!]{0,30}\b(l['']historique|antécédent|antecedent|diagnostic (au dossier|pose))\b/,
+
+  // ── 4 · LES ACTES QUI N'ONT AUCUN OUTIL — DONC AUCUN CHEMIN ──
+  // Suppression, déverrouillage, permission : rien de tout cela n'existe. Une
+  // phrase de frontière vaut mieux qu'un « c'est fait » halluciné.
+  /\b(supprime|supprimer|efface|effacer|delete)\b[^?.!]{0,30}\b(dossier|note|donnee|donnees|ordonnance|certificat|patient|consultation)\b/,
+  /\b(deverrouille|deverrouiller)\b/,
+  /\b(donne|donner|accorde|accorder|change|changer|eleve|elever)\b[^?.!]{0,25}\b(droits|permissions|role|privileges)\b/,
+  /\b(pirate|contourne|contourner)\b[^?.!]{0,25}\b(la rls|les permissions|la securite|le compte)\b/,
 ];
 
 /**
@@ -183,12 +260,12 @@ const OPERATIONNEL: readonly RegExp[] = [
   // lexique n'avait simplement ni « patient », ni « encaissé », ni les tournures
   // de journée. On comble les trous, on ne change pas la règle.
   //
-  // ⚠️ POURQUOI C'EST SÛR : le REFUS est décidé AVANT ce groupe (branche 1 de
+  // ⚠️ POURQUOI C'EST SÛR : le COMMIT est décidé AVANT ce groupe (branche 1 de
   // `classer`) et rend directement. Élargir l'opérationnel ne peut donc PAS
-  // avaler un refus — la propriété critique d'ADR-023 est préservée par l'ORDRE,
-  // pas par la prudence du lexique. Le seul coût d'un élargissement trop large
-  // est de monter les outils sans nécessité, ce que ce fichier qualifie déjà
-  // lui-même de coût et non de danger.
+  // avaler une demande d'acte d'autorité — la propriété critique d'ADR-023 est
+  // préservée par l'ORDRE, pas par la prudence du lexique. Le seul coût d'un
+  // élargissement trop large est de monter les outils sans nécessité, ce que ce
+  // fichier qualifie déjà lui-même de coût et non de danger.
   /\b(prochain|prochaine|suivant|suivante)\s+(patient|patiente|consultation|rendez-vous|rdv|seance)\b/,
   /\b(patient|patiente)s?\s+(suivant|suivante)\b/,
   /\b(encaisse|encaissee|encaisses|recette|recettes|caisse|impaye|impayes|facture|facturation)\b/,
@@ -206,12 +283,12 @@ const OPERATIONNEL: readonly RegExp[] = [
   // « ayoub salmi », jamais « Ayoub Salmi »). Chaque question vocale nommant
   // un patient contournait donc le chemin patient par construction.
   //
-  // On NE baisse PAS l'exigence de majuscule (règle 9 : ce fichier est gelé,
-  // et « que dois-je prescrire de nouveau ? » deviendrait un individu
-  // « nouveau » + une décision → REFUS d'une question de savoir). On ajoute
-  // un motif FACTUEL étroit : <médicament|traitement|ordonnance|posologie> +
-  // de/d'/du/des. C'est une demande de LECTURE (jamais un verdict : le refus
-  // est décidé AVANT ce groupe, branche 1, et rend directement).
+  // On NE baisse PAS l'exigence de majuscule : « que dois-je prescrire de
+  // nouveau ? » deviendrait un individu « nouveau » + une demande de
+  // raisonnement → chemin patient sans nécessité, alors que c'est une question
+  // de savoir. On ajoute un motif FACTUEL étroit :
+  // <médicament|traitement|ordonnance|posologie> + de/d'/du/des. C'est une
+  // demande de LECTURE, et le commit est décidé AVANT ce groupe (branche 1).
   //
   // ⚠️ COÛT MESURÉ, PAS NIÉ : « l'arrêt du traitement de substitution »
   // montera les outils sans nécessité. Même classe de coût que l'ajout du
@@ -256,25 +333,45 @@ export function classer(phraseUtilisateur: string): Routage {
   const deictique = correspond(DEICTIQUES, texte);
   const individuDesigne = nomPropre || deictique;
 
-  const conclusivePersonnelle = correspond(FORMES_CONCLUSIVES_PERSONNELLES, texte);
-  const conclusiveDependante = correspond(FORMES_CONCLUSIVES_DEPENDANTES, texte);
+  // ⚠️ ORDRE : le commit est tranché AVANT tout le reste. C'est ce qui garantit
+  // qu'élargir le raisonnement ne peut jamais ouvrir un acte d'autorité.
+  const formePersonnelle = correspond(FORMES_PERSONNELLES_DE_RAISONNEMENT, texte);
+  const formeDependante = correspond(FORMES_DE_RAISONNEMENT_DEPENDANTES, texte);
 
-  // 1 · REFUS — un verdict est demandé sur une personne. Aucun modèle n'est
+  // 1 · COMMIT — un acte d'autorité est demandé sans confirmation. Aucun modèle n'est
   //     appelé : il n'y a rien à lui demander, la réponse est une règle.
-  if (conclusivePersonnelle || (conclusiveDependante && individuDesigne)) {
+  //
+  //     Ce n'est plus un refus de la question — depuis l'amendement du
+  //     2026-09-24, le raisonnement clinique est ouvert partout, y compris sur
+  //     une personne nommée. C'est un refus de laisser croire qu'un acte
+  //     clinique faisant foi a été accompli sans la praticienne.
+  if (correspond(FORMES_DE_COMMIT, texte)) {
     return {
-      chemin: "refus",
-      motif: conclusivePersonnelle
-        ? "forme interrogative personnelle appelant un verdict"
-        : "décision clinique demandée pour une personne désignée",
+      chemin: "commit",
+      motif: "acte clinique faisant foi demande sans confirmation",
     };
   }
 
-  // 2 · PATIENT — cas individuel sans demande de verdict, ou intention
-  //     opérationnelle. L4 s'applique intégralement : décrire, relever,
-  //     questionner. Jamais conclure.
-  if (individuDesigne) {
-    return { chemin: "patient", motif: "un individu est désigné dans la demande" };
+  // 2 · PATIENT — cas individuel, ou question de raisonnement clinique sur
+  //     une personne. Depuis l'amendement du 2026-09-24, ce chemin AUTORISE
+  //     le raisonnement : hypothèses, différentiel, critères, options, risques.
+  //     Le commit, lui, est déjà tranché en branche 1, par l'ORDRE.
+  if (individuDesigne || formePersonnelle || formeDependante) {
+    return {
+      chemin: "patient",
+      motif: formePersonnelle || formeDependante
+        ? "raisonnement clinique demandé sur une personne"
+        : "un individu est désigné dans la demande",
+    };
+  }
+  // Une question explicitement cadrée par les livres reste documentaire :
+  // « posologie du lithium » ressemble sinon à « posologie du patient » dans
+  // le motif opérationnel. Un destinataire introduit par « pour/chez » garde
+  // le chemin patient ; le commit, lui, a déjà priorité ci-dessus.
+  if (/\b(?:livres?|ouvrages?|manuels?)\b/.test(texte) &&
+      /\b(?:que disent|selon|dans|d'apres)\b/.test(texte) &&
+      !/\b(?:pour|chez)\b/.test(texte)) {
+    return { chemin: "connaissance", motif: "question explicitement documentaire" };
   }
   if (correspond(OPERATIONNEL, texte)) {
     return { chemin: "patient", motif: "intention opérationnelle (agenda, tarif, dossier)" };

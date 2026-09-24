@@ -15,7 +15,7 @@
  *
  * ═══ RÈGLES D'EMPLOI (tout écart rend `null`) ═══
  * · interrupteur `JARVIS_RESOLUTION_ENABLED=false` → null (repli historique) ;
- * · chemin refus → null, TOUJOURS (le refus est absolu, jamais un repli) ;
+ * · chemin commit → null, TOUJOURS (la frontière d'acte est absolue, jamais un repli) ;
  * · chemin connaissance → rempli SEULEMENT si le classifieur est incertain
  *   (panne ou UNKNOWN) : c'est l'escalade du suivi nu (« Et avant ? »), que
  *   le routeur — aveugle au fil — classe savoir. Un savoir DÉCIDÉ

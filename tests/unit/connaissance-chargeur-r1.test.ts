@@ -9,6 +9,7 @@ import {
   validerDossierLocal,
   validerQuarantaine,
 } from "../../scripts/charger-connaissance-socle.mjs";
+import { sqlSource } from "../../scripts/charger-connaissance-sql.mjs";
 
 // NOTE M08 : voir connaissance-backfill-r3.test.ts (allowJs local au
 // programme de test). Zero effet runtime ; signatures propriete M07.
@@ -79,5 +80,13 @@ describe("fixtures interdites", () => {
     const { readFileSync } = await import("node:fs");
     const m = JSON.parse(readFileSync("knowledge/manifest.json", "utf8"));
     for (const s of m.sources) expect(FIXTURE_IDS.has(s.source_id)).toBe(false);
+  });
+});
+
+describe("cycle de vie : le staging ne touche jamais au statut source", () => {
+  it("upsert source sans SET statut (incident v1.1 : 6 actives éteintes puis restaurées)", () => {
+    const sql = sqlSource();
+    expect(sql).not.toContain("statut = EXCLUDED");
+    expect(sql).toContain("ON CONFLICT (id) DO UPDATE SET");
   });
 });

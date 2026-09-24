@@ -380,97 +380,97 @@ describe("7. et 6. la cible décide de la clarification", () => {
 });
 
 // ═══════════════════════════════════════════════════════════════════════════
-// 10. LE REFUS RESTE EN AMONT — invariant de Slice 1, re-affirmé ici
+// 10. LA FRONTIÈRE RESTE EN AMONT — invariant de Slice 1, re-affirmé ici
+// (amendement 2026-09-24 : la frontière est le commit, plus le refus)
 // ═══════════════════════════════════════════════════════════════════════════
 
-describe("10. un refus mentionnant un patient reste un refus, avant tout", () => {
-  const REFUS = [
-    "Est-ce que Karim est dépressif ?",
-    "هل كريم مكتئب؟",
-    "nzidlo la dose?",
-    "Should I increase Karim's dose?",
+describe("10. un acte d'autorité reste en amont, patient nommé ou non", () => {
+  const ACTES = [
+    "Signe l'ordonnance de Karim automatiquement",
+    "Supprime la note de Karim",
+    "Enregistre sa posologie au dossier sans me demander",
   ];
 
-  for (const texte of REFUS) {
-    it(`refus tenu, sans modèle ni outil : ${texte}`, () => {
-      // La frontière ADR-023 décide AVANT le contexte : la précédence de cette
+  for (const texte of ACTES) {
+    it(`frontière tenue, sans modèle ni outil : ${texte}`, () => {
+      // La frontière décide AVANT le contexte : la précédence de cette
       // tranche ne s'insère jamais devant elle.
-      expect(classerMultilingue(texte).chemin).toBe("refus");
+      expect(classerMultilingue(texte).chemin).toBe("commit");
     });
   }
 
-  it("la précédence n'ouvre aucun chemin : un refus le reste, cible posée ou non", () => {
+  it("la précédence n'ouvre aucun chemin : un acte le reste, cible posée ou non", () => {
     adopterResolution(resoudreCible({ explicite: B }, T0), T0);
-    expect(classerMultilingue("هل كريم مكتئب؟").chemin).toBe("refus");
+    expect(classerMultilingue("Supprime la note de Karim").chemin).toBe("commit");
+  });
+
+  it("le raisonnement nommé monte au patient, sans clarification", () => {
+    // Amendement 2026-09-24 : « Est-ce que Karim est dépressif ? » n'est plus
+    // un refus — c'est du raisonnement autorisé sur une personne désignée.
+    // Le nom propre écarte toujours la clarification.
+    for (const texte of ["Est-ce que Karim est dépressif ?", "هل كريم مكتئب؟"]) {
+      effacerCible();
+      expect(classerMultilingue(texte).chemin).toBe("patient");
+      expect(besoinDeClarification(texte, T0)).toBe(false);
+    }
   });
 });
 
 // ═══════════════════════════════════════════════════════════════════════════
-// L'ORDRE DES DEUX GARDES — le refus passe devant la clarification
+// L'ORDRE DES DEUX GARDES — la frontière passe devant la clarification
+// (amendement 2026-09-24 : commit, plus refus)
 // ═══════════════════════════════════════════════════════════════════════════
 
-describe("refus AVANT clarification — l'audit ne doit pas disparaître", () => {
+describe("frontière AVANT clarification — l'audit ne doit pas disparaître", () => {
   /**
-   * ⚠️ MESURÉ LE 2026-09-07, sonde hors ligne sur 18 formulations : QUATRE sont
-   * à la fois classées `refus` et reconnues comme référence pronominale.
-   *
-   *     dois-je augmenter sa posologie ?      ← FRANÇAIS
-   *     faut-il arrêter son traitement ?      ← FRANÇAIS
-   *     nzidlo la dose?
-   *     نزيدلو الدوز؟
-   *
-   * Les deux premières se comportaient DÉJÀ ainsi avant la passe multilingue :
-   * `REFERENCE_PATIENT` n'a pas changé et « sa posologie » y correspond en
-   * clair. Ce n'est donc pas une régression de Slice 2, c'est un ordre qui
-   * n'avait jamais été tranché — Slice 2 l'a seulement rendu visible en
-   * étendant la classe à la darija.
-   *
-   * Ce que l'ordre inverse coûtait : la clarification est un échange LOCAL, sans
-   * trace ; le refus, lui, est écrit dans la conversation. Clarifier d'abord
-   * effaçait l'audit sur la classe de demandes la plus sensible du produit.
+   * ⚠️ L'ORDRE TRANSMIS, PAS LE CONTENU. Sous l'ancienne doctrine, quatre
+   * formulations (possessif + modal thérapeutique) étaient à la fois `refus`
+   * et référence pronominale ; l'ordre tranché était refus-avant-clarification
+   * pour ne pas effacer l'audit. Depuis l'amendement, ces formulations
+   * raisonnent au chemin patient — et la classe de conflit est devenue :
+   * acte d'autorité + référence pronominale (« note son traitement au
+   * dossier »). Le conflit a changé de visage, l'ordre n'a pas changé :
+   * la frontière rend avant toute clarification, sinon son audit disparaît
+   * dans un échange local sans trace.
    */
   const CONFLIT = [
-    "dois-je augmenter sa posologie ?",
-    "faut-il arrêter son traitement ?",
-    "nzidlo la dose?",
-    "نزيدلو الدوز؟",
+    "Enregistre sa posologie au dossier sans me demander",
+    "note son traitement au dossier",
   ];
 
   for (const texte of CONFLIT) {
-    it(`classé refus ET référence pronominale — le refus doit gagner : ${texte}`, () => {
+    it(`classé frontière ET référence pronominale — la frontière doit gagner : ${texte}`, () => {
       effacerCible();
       // Les deux gardes s'allument : c'est bien un cas de conflit.
-      expect(classerMultilingue(texte).chemin).toBe("refus");
+      expect(classerMultilingue(texte).chemin).toBe("commit");
       expect(besoinDeClarification(texte, T0)).toBe(true);
     });
   }
 
-  it("une référence pronominale SANS refus garde sa clarification", () => {
-    // La garde ajoutée ne doit pas avaler les cas légitimes : ceux-ci ne sont
-    // pas des refus, donc la clarification reste seule à décider.
+  it("une référence pronominale SANS acte garde sa clarification", () => {
+    // La garde ajoutée ne doit pas avaler les cas légitimes : ceux-ci ne
+    // demandent aucun acte, donc la clarification reste seule à décider.
     for (const texte of ["Et ses médicaments ?", "دواءه؟", "dwa dyalou?", "And his medication?"]) {
       effacerCible();
-      expect(classerMultilingue(texte).chemin).not.toBe("refus");
+      expect(classerMultilingue(texte).chemin).not.toBe("commit");
       expect(besoinDeClarification(texte, T0)).toBe(true);
     }
   });
 
-  it("un refus qui NOMME quelqu'un n'a jamais déclenché de clarification", () => {
-    // Contre-test : le nom propre écarte déjà la clarification. Ces cas
-    // partaient au refus avant comme après, et prouvent que le changement
-    // d'ordre ne concerne QUE les quatre formulations ci-dessus.
-    for (const texte of ["Est-ce que Karim est dépressif ?", "هل كريم مكتئب؟"]) {
+  it("un acte qui NOMME quelqu'un n'a jamais déclenché de clarification", () => {
+    // Contre-test : le nom propre écarte déjà la clarification.
+    for (const texte of ["Signe l'ordonnance de Karim automatiquement", "Supprime la note de Karim"]) {
       effacerCible();
-      expect(classerMultilingue(texte).chemin).toBe("refus");
+      expect(classerMultilingue(texte).chemin).toBe("commit");
       expect(besoinDeClarification(texte, T0)).toBe(false);
     }
   });
 
   it("une question de traitement ORDINAIRE reste intacte", () => {
     effacerCible();
-    // Ni refus, ni référence : elle doit traverser sans être interceptée.
+    // Ni frontière, ni référence : elle doit traverser sans être interceptée.
     expect(classerMultilingue("Quels sont les effets secondaires de la sertraline ?").chemin)
-      .not.toBe("refus");
+      .not.toBe("commit");
     expect(besoinDeClarification("Quels sont les effets secondaires de la sertraline ?", T0))
       .toBe(false);
   });

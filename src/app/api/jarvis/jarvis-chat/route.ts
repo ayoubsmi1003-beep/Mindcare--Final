@@ -14,7 +14,7 @@
  *      conversation — des phrases échangées avec CETTE utilisatrice, jamais
  *      une lecture de dossier ; la garantie « ce chemin ne peut pas LIRE un
  *      dossier » reste démontrable par lecture.
- *   3. Le chemin REFUS n'appelle AUCUN modèle. La réponse est une constante.
+ *   3. Le chemin COMMIT n'appelle AUCUN modèle. La réponse est une constante.
  *   4. Les TROIS chemins exigent une identité établie par `auth.getUser()`.
  *
  * ═══ MODE FLUX — V-JARVIS-CORE ═══
@@ -70,7 +70,10 @@ import {
 import { intentionChaineeOperationnelle } from "@/server/jarvis/intention-chainee";
 import { assertSafe, BoundaryViolation, pseudonymize, rehydrate } from "@/server/jarvis/pseudonymize";
 import { lireProposition } from "@/server/jarvis/proposition";
-import { recupererPreuves } from "@/server/jarvis/preuves-recherche";
+import { recupererPreuves, recupererPreuvesLivresAvecDiagnostic } from "@/server/jarvis/preuves-recherche";
+import { estQuestionMedicale } from "@/server/jarvis/domaine-medical";
+import { reponseLivres } from "@/server/jarvis/reponse-livres";
+import { AUCUNE_PREUVE_LIVRES } from "@/i18n/connaissance";
 import { construireBlocPreuves } from "@/shared/jarvis/preuves";
 import {
   estPropositionCompatible,
@@ -100,17 +103,23 @@ const MAX_CAR_HISTORIQUE_TOTAL = 6_000;
 const MAX_CAR_HISTORIQUE_TOUR = 4_000;
 
 /**
- * Le refus d'ADR-023, mot pour mot. C'est une CONSTANTE, pas une génération :
- * un refus produit par le modèle serait un refus négociable, et la septième
- * question du tableau deviendrait une question de chance.
+ * La FRONTIÈRE DE COMMIT, mot pour mot — amendement d'ADR-023 du 2026-09-24.
+ * C'est une CONSTANTE, pas une génération : une phrase produite par le modèle
+ * serait négociable, et l'affirmation d'un acte accompli deviendrait une
+ * question de chance.
  *
- * Il propose une suite — l'exploration — au lieu de fermer la porte. ADR-023 :
- * « refuse, propose l'exploration, jamais la conclusion ».
+ * ⚠️ CE N'EST PLUS UN REFUS DE RAISONNER, ET IL FAUT LE DIRE ICI. Alexa formule
+ * des hypothèses, des différentiels et des options sur une personne nommée ;
+ * ce qu'elle ne fait pas, c'est émettre, signer ou écrire au dossier sans la
+ * praticienne. La phrase dit donc ce qu'Alexa ne fait pas ET le geste qui le
+ * fait à sa place — une frontière qui renvoie au travail, jamais une porte
+ * fermée.
  */
-const REFUS =
-  "Je ne conclus pas sur une personne nommée : ce jugement vous appartient. " +
-  "Je peux en revanche relever les éléments du dossier, l'évolution entre les " +
-  "séances, et les points qui restent à explorer. Souhaitez-vous que je le fasse ?";
+const COMMIT =
+  "Je ne rends pas cet acte définitif : l'émettre, le signer ou l'écrire au " +
+  "dossier vous appartient. Je prépare ce que vous voulez — la proposition, le " +
+  "brouillon, le raisonnement qui la soutient — et vous confirmez avant qu'il " +
+  "fasse foi.";
 
 /**
  * CONTEXTE D'OUTIL — le résultat du tour précédent, et RIEN D'AUTRE.
@@ -127,7 +136,7 @@ const REFUS =
  * distinction est délibérée et bornée.
  *
  * ⚠️ CE QUI LE BORNE, ET QUI SE VÉRIFIE PAR LECTURE :
- *   1. Il n'est JAMAIS lu sur le chemin CONNAISSANCE ni sur le chemin REFUS —
+ *   1. Il n'est JAMAIS lu sur le chemin CONNAISSANCE ni sur le chemin COMMIT —
  *      ces branches rendent leur réponse avant d'y toucher. La garantie « le
  *      chemin connaissance ne voit aucune donnée de dossier » tient donc.
  *   2. Il est plafonné : cinq dossiers, cent vingt caractères par champ. Un
@@ -173,7 +182,7 @@ const REFUS =
  * M01 — INTENTION STRUCTUREE.
  *
  * Le classifieur vit DERRIERE `classerMultilingue()` : jamais appele sur un
- * refus, jamais avant l'identite. Il ne resout personne, n'autorise rien,
+ * commit, jamais avant l'identite. Il ne resout personne, n'autorise rien,
  * n'execute rien — il NOMME l'intention, que le schema strict valide et que
  * la table fermee confronte a la proposition du modele, ici meme, cote
  * serveur. La boucle et le client n'ont pas change : ils ne voient qu'une
@@ -194,7 +203,7 @@ function classifieurActif(): boolean {
 
 /**
  * Clarifications serveur — memes libelles que l'ecran (`fr.ts`
- * `jarvis.contexte.preciserPatient`), ici en constantes comme REFUS :
+ * `jarvis.contexte.preciserPatient`), ici en constantes comme COMMIT :
  * ce sont des reponses de passerelle, pas des chaines d'interface.
  */
 const CLARIFICATION_PATIENT = "De quel patient parlez-vous ?";
@@ -208,7 +217,7 @@ interface IntentionDuTour {
 }
 
 /**
- * Appelle le classifieur quand c'est son tour : jamais sur refus, jamais si
+ * Appelle le classifieur quand c'est son tour : jamais sur commit, jamais si
  * coupe par l'exploitation. Rend `null` = chemin historique, sans intention.
  * `turnId` reprend le `clientTurnId` (exige en flux) ou `sans-tour` en
  * historique — le `runId`, lui, est toujours frais.
@@ -221,7 +230,7 @@ async function classifierIntentSiUtile(
   hashPromptIntent: string,
 ): Promise<{ classification: ResultatClassification | null; runId: string }> {
   const runId = crypto.randomUUID();
-  if (chemin === "refus" || !classifieurActif()) {
+  if (chemin === "commit" || !classifieurActif()) {
     return { classification: null, runId };
   }
   // M05 — le classifieur NLU recoit le message SEUL, mais un message nommant
@@ -361,7 +370,7 @@ interface CorpsRequete {
    * sont complémentaires, et aucun des deux n'exige qu'une identité franchisse.
    *
    * ⚠️ ILS N'ENTRENT QUE SUR LE CHEMIN PATIENT. Les chemins CONNAISSANCE et
-   * REFUS rendent leur réponse sans y toucher : la garantie « le chemin
+   * COMMIT rendent leur réponse sans y toucher : la garantie « le chemin
    * connaissance ne voit aucune donnée de dossier » reste vraie par LECTURE de
    * ce fichier, pas par confiance.
    */
@@ -834,12 +843,13 @@ export async function POST(req: Request): Promise<Response> {
   const client = clientSql(userId);
 
   // ═══ LA DÉCISION, ENSUITE ═══
-  // Avant tout accès base, avant le modèle. Un refus n'a besoin de rien
-  // d'autre que de la phrase — mais il a besoin d'une identité.
+  // Avant tout accès base, avant le modèle. Une frontière de commit n'a besoin
+  // de rien d'autre que de la phrase — mais elle a besoin d'une identité.
   // ⚠️ `classerMultilingue` EST `classer` APPELÉ DEUX FOIS, PAS UN AUTRE
   // CLASSIFIEUR. Il unit `classer(message)` et `classer(forme canonique)` en
-  // prenant le MAXIMUM sur le treillis `refus > patient > connaissance` : le
-  // verdict n'est jamais moins restrictif qu'avant. `routing.ts` est inchangé.
+  // prenant le MAXIMUM sur le treillis `commit > patient > connaissance` : le
+  // verdict n'est jamais moins restrictif qu'avant. `routing.ts` est inchangé
+  // dans sa FORME (aucun import, aucune règle de langue).
   //
   // ⚠️ `message` — L'ORIGINAL — RESTE CE QUE LE MODÈLE REÇOIT, plus bas. La
   // forme canonique ne sert qu'à classer et ne quitte jamais cette ligne :
@@ -855,7 +865,7 @@ export async function POST(req: Request): Promise<Response> {
     return echec("indisponible", "Assistant indisponible.");
   }
 
-  // M01 : intention structuree, derriere le routage, jamais sur refus.
+  // M01 : intention structuree, derriere le routage, jamais sur commit.
   const hashPromptIntent = await empreinte(construirePromptClassifieur());
   const { classification, runId } = await classifierIntentSiUtile(
     message,
@@ -885,7 +895,7 @@ export async function POST(req: Request): Promise<Response> {
     (intentionChainee === null ? null : { intent: intentionChainee, runId });
   // M02 : escalade du suivi nu. « Et avant ? » route en connaissance (le
   // routeur ne voit pas le fil) ; une intention chainee valide et bornee
-  // fait remonter CE tour vers le patient — jamais un refus (rendu avant),
+  // fait remonter CE tour vers le patient — jamais un commit (rendu avant),
   // jamais contre un savoir decide ou un ASK (inlet nul dans ces cas : la
   // condition contient intentionChainee, pas le seul chemin).
   const escaladeChainee = routage.chemin === "connaissance" && intentionChainee !== null;
@@ -898,8 +908,8 @@ export async function POST(req: Request): Promise<Response> {
   // MODE HISTORIQUE (sans `mode:"flux"`) — inchangé, octet pour octet.
   // ═════════════════════════════════════════════════════════════════════════
   if (!modeFlux) {
-    if (routage.chemin === "refus") {
-      return reponseOk(req, { chemin: "refus" satisfies Chemin, type: "texte", reponse: REFUS });
+    if (routage.chemin === "commit") {
+      return reponseOk(req, { chemin: "commit" satisfies Chemin, type: "texte", reponse: COMMIT });
     }
 
     // M01 cas C : clarification sans second appel modele.
@@ -914,6 +924,13 @@ export async function POST(req: Request): Promise<Response> {
     }
 
     if (routage.chemin === "connaissance" && !escaladeChainee) {
+      if (estQuestionMedicale(message)) {
+        const { preuves, diagnostic } = await recupererPreuvesLivresAvecDiagnostic(client, message);
+        return reponseOk(req, {
+          chemin: "connaissance" satisfies Chemin, type: "texte",
+          reponse: reponseLivres(preuves, diagnostic), registre: "connaissance-generale", preuves,
+        });
+      }
       // M07 — preuves gouvernées AVANT le modèle (hybride-live slice 3 :
       // lexical + BGE-M3 local, calibration A3 ; modèle absent → lexical
       // seul, dégradation honnête vers vide). Le bloc est une DONNÉE, pas une instruction.
@@ -942,14 +959,15 @@ export async function POST(req: Request): Promise<Response> {
       if (!resultat.ok) {
         return echec(codeEchecLlm(resultat.error.code), resultat.error.message);
       }
+      const reponse = estQuestionMedicale(resultat.data) ? AUCUNE_PREUVE_LIVRES : resultat.data;
       return reponseOk(req, {
         chemin: "connaissance" satisfies Chemin,
         type: "texte",
-        reponse: resultat.data,
+        reponse,
         /** Le registre est RENDU par l'interface, pas produit par le modèle. */
         registre: "connaissance-generale",
         /** M07 — preuves gouvernées (fil), validées par le client. */
-        preuves,
+        preuves: reponse === resultat.data ? preuves : [],
       });
     }
 
@@ -983,11 +1001,11 @@ export async function POST(req: Request): Promise<Response> {
       // réellement emprunté, pas celui du routage aveugle au fil.
       ecriture.envoyer({ t: "chemin", chemin: escaladeChainee ? ("patient" satisfies Chemin) : routage.chemin });
 
-      if (routage.chemin === "refus") {
-        const persiste = await persisterReponse(client, corps.conversationId, tourId, "refus", REFUS);
+      if (routage.chemin === "commit") {
+        const persiste = await persisterReponse(client, corps.conversationId, tourId, "commit", COMMIT);
         ecriture.envoyer({
           t: "fin",
-          payload: { chemin: "refus" satisfies Chemin, type: "texte", reponse: REFUS },
+          payload: { chemin: "commit" satisfies Chemin, type: "texte", reponse: COMMIT },
           persiste,
         });
         return;
@@ -1006,6 +1024,16 @@ export async function POST(req: Request): Promise<Response> {
       }
 
       if (routage.chemin === "connaissance" && !escaladeChainee) {
+        if (estQuestionMedicale(message)) {
+          const { preuves, diagnostic } = await recupererPreuvesLivresAvecDiagnostic(client, message);
+          const texte = reponseLivres(preuves, diagnostic);
+          const persiste = await persisterReponse(client, corps.conversationId, tourId, "connaissance", texte, "connaissance-generale");
+          ecriture.envoyer({ t: "fin", payload: {
+            chemin: "connaissance" satisfies Chemin, type: "texte", reponse: texte,
+            registre: "connaissance-generale", preuves,
+          }, persiste });
+          return;
+        }
         // M07 — preuves gouvernées AVANT le modèle (même discipline qu'en
         // historique : hybride-live slice 3, dégradation honnête vers vide).
         const preuves = await recupererPreuves(client, message);
@@ -1054,7 +1082,8 @@ export async function POST(req: Request): Promise<Response> {
               const { done, value } = await lecteur.read();
               if (done) break;
               complet += value;
-              ecriture.envoyer({ t: "delta", v: value });
+              // Buffer until the server checks the completed answer. A streamed
+              // unsupported medical claim cannot be withdrawn from the screen.
             }
           } catch (erreurLecture) {
             // Flux rompu en cours : abandon CLIENT (req.signal a tué le fetch
@@ -1073,25 +1102,28 @@ export async function POST(req: Request): Promise<Response> {
             // Le partiel est noté INTERROMPU, jamais complet — et il est noté
             // MÊME quand c'est le client qui est parti : la conversation doit
             // montrer ce qui a été produit avant la coupure.
-            if (complet.length > 0) {
+            if (complet.length > 0 && !estQuestionMedicale(complet)) {
               await persisterReponse(client, corps.conversationId, tourId, "connaissance", complet.slice(0, 12_000), undefined, "interrompu");
             }
             void erreurLecture;
             return;
           }
 
+          const reponse = estQuestionMedicale(complet) ? AUCUNE_PREUVE_LIVRES : complet;
+          const preuvesFinales = reponse === complet ? preuves : [];
+          ecriture.envoyer({ t: "delta", v: reponse });
           const persiste = await persisterReponse(
-            client, corps.conversationId, tourId, "connaissance", complet, "connaissance-generale",
+            client, corps.conversationId, tourId, "connaissance", reponse, "connaissance-generale",
           );
           ecriture.envoyer({
             t: "fin",
             payload: {
               chemin: "connaissance" satisfies Chemin,
               type: "texte",
-              reponse: complet,
+              reponse,
               registre: "connaissance-generale",
               /** M07 — preuves gouvernées (fil), validées par le client. */
-              preuves,
+              preuves: preuvesFinales,
             },
             persiste,
           });
@@ -1168,10 +1200,10 @@ async function persisterReponseFluxDepuisPayload(
  */
 /**
  * L'unique appel modele du classifieur NLU — defini APRES les branches de
- * refus pour que la propriete structurale « le refus rend avant tout appel
- * de modele » reste lisible en positions par le test qui l'exprime
+ * commit pour que la propriete structurale « la frontiere de commit rend avant
+ * tout appel de modele » reste lisible en positions par le test qui l'exprime
  * (`jarvis-routage-multilingue.test.ts`). Fonction hoistee : l'ordre d'appel
- * est inchange (jamais sur refus, voir `classifierIntentSiUtile`), seul le
+ * est inchange (jamais sur commit, voir `classifierIntentSiUtile`), seul le
  * texte bouge.
  */
 async function appelerModeleClassifieur(

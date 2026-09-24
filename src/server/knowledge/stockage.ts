@@ -53,6 +53,9 @@ export const PORTES = {
   // que des littéraux nus, verifierAllowlist matche le proname nu.
   LEXICALE: "search_knowledge_lexical",
   VECTORIELLE: "search_knowledge_vector",
+  LIVRE_LEXICALE: "search_book_knowledge_lexical",
+  LIVRE_VECTORIELLE: "search_book_knowledge_vector",
+  LIVRE_DISPONIBILITE: "get_book_knowledge_availability",
 } as const;
 
 /**
@@ -274,7 +277,9 @@ export function validerLignePorte(valeur: unknown): LignePorte | null {
     return null;
   }
   const langue = ligne["langue"];
-  if (langue !== "fr" && langue !== "ar" && langue !== "darija") return null;
+  // ADR-038 : `en` admis (migration 100) ; toute autre valeur reste écartée
+  // (sens fermé : une langue inconnue ne devient jamais récupérable).
+  if (langue !== "fr" && langue !== "ar" && langue !== "darija" && langue !== "en") return null;
   const section = ligne["section"];
   if (section !== null && typeof section !== "string") return null;
   if (typeof ligne["source_statut"] !== "string") return null;

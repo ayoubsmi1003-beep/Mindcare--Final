@@ -69,7 +69,8 @@ import {
 } from "./jarvis-assembleur";
 import { carte as carteCourante, reinitialiserCarte } from "./jarvis-identite";
 import { demanderAJarvisEnFlux, type CheminJarvis } from "./jarvis";
-import { classerMultilingue } from "@/shared/jarvis/normalisation";
+import { demandeDonneeSensible, libelleEcran } from "./jarvis-erreurs";
+import { classerMultilingue, normaliserTexteIdentite } from "@/shared/jarvis/normalisation";
 import type { SafeToolResult } from "./jarvis-projections";
 import {
   construireIntentionChainee,
@@ -519,6 +520,22 @@ export async function executerTour(
     };
   };
 
+  // ── §17 · PARE-FEU SENSIBLE — refuser AVANT sonde, carte, amorce, modèle ──
+  //
+  // Une demande de carte bancaire, mot de passe, clé ou jeton ne voit AUCUN
+  // modèle et AUCUNE capacité : le refus est une règle du runtime, pas une
+  // espérance de prompt. 0 appel, 0 donnée lue, trace nommée. Placé avant la
+  // sonde pour que même le comptage `search_patients` ne tourne pas pour
+  // une demande qui ne doit rien lire.
+  if (demandeDonneeSensible(params.message)) {
+    log.warn("jarvis.pare-feu.sensible", { code: "sensible-bloque" });
+    return bilanClarificationM02(
+      libelleEcran("SENSITIVE_DATA_BLOCKED"),
+      { etat: "aucun" },
+      null,
+    );
+  }
+
   // ── M02 · RÉSOLUTION EXPLICITE — sonder AVANT carte, amorce, modèle ──
   //
   // L'ordre est la sécurité : la sonde frappe la carte PRÉ-TOUR (jetée
@@ -539,11 +556,38 @@ export async function executerTour(
     const mention =
       cheminM02 === "patient" ? extraireMentionExplicite(params.message) : null;
     if (mention !== null && mention.trim().length >= 2) {
-      const sonde = await sonderCandidats(mention, deps.registre, {
+      let sonde = await sonderCandidats(mention, deps.registre, {
         carte: carteCourante(),
         signal,
         aujourdHui: aujourdHui(),
       });
+      // Mission A3 — réessai normalisé (§9 : « retry normalized lookup »).
+      // La mention capitalisée (« Bélkacem ») et sa forme canonique
+      // (« belkacem », repli arabe) prennent des chemins SQL différents
+      // (ILIKE vs filet trigramme 108) : un zéro franc mérite une seconde
+      // sonde, par le REGISTRE (Zod+RLS+audit identiques), avant de clarifier.
+      // Ambigu/trouvé au premier essai : on ne resonde jamais (pas de
+      // dilution d'un vrai signal). M02-I1 intact : un double zéro clarifie.
+      if (sonde.ok && sonde.total === 0) {
+        const formeCanonique = normaliserTexteIdentite(mention);
+        if (formeCanonique.length >= 2 && formeCanonique !== mention) {
+          const seconde = await sonderCandidats(formeCanonique, deps.registre, {
+            carte: carteCourante(),
+            signal,
+            aujourdHui: aujourdHui(),
+          });
+          // Compte dans les budgets comme tout appel réel : c'en est un.
+          if (seconde.ok) {
+            tracesSonde.push({
+              capacite: "search_patients",
+              ms: seconde.ms,
+              ok: true,
+              deduplique: false,
+            });
+            if (seconde.total > 0) sonde = seconde;
+          }
+        }
+      }
       if (!sonde.ok) {
         log.warn("jarvis.resolution.sonde", { code: "indisponible" });
         return bilanClarificationM02(

@@ -51,7 +51,10 @@ describe("registre de réponse", () => {
     // Elle est écrite telle quelle dans `jarvis_actions` : deux registres
     // différents ne doivent jamais porter la même version.
     // v3.2 (M07) : le chemin connaissance reçoit le bloc PREUVES_DOCUMENTAIRES.
-    expect(PROMPT_VERSION).toBe("v3.2");
+    // v4.0 (2026-09-24) : refonte livres — le bloc est conservé, la version
+    // avance avec le registre. Épinglée ici : tout changement de registre
+    // EXIGE une version distincte, jamais silencieuse.
+    expect(PROMPT_VERSION).toBe("v4.0");
     expect(PROMPT_CONNAISSANCE).toMatch(/PREUVES_DOCUMENTAIRES/);
   });
 });

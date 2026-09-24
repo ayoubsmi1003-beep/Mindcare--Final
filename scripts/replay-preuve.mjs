@@ -187,8 +187,13 @@ const RX_UUID = /\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\
 const UUID_OK = /^(uuid-|00000000-|11111111-|22222222-|33333333-|123e4567-)/i;
 const REGLES_PII = [
   ["courriel", /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/],
-  ["telephone", /(\+213|0)(5|6|7)\d{8}/],
-  ["fixe", /(\+213|0)(2|3|4)\d{7,8}/],
+  // 2026-09-24 : bornes chiffres des deux côtés. Sans elles, tout horodatage
+  // ms dont les chiffres contiennent `0[2-7]` + 7-8 chiffres (ex. epoch
+  // 1790213070118 → « 0213070118 ») est signalé « fixe » : le scan devenait
+  // ROUGE avec le temps, sans qu'aucune donnée n'ait fuité (bombe à retardement
+  // mesurée sur l'export live). Un vrai numéro isolé matche toujours.
+  ["telephone", /(?<!\d)(\+213|0)(5|6|7)\d{8}(?!\d)/],
+  ["fixe", /(?<!\d)(\+213|0)(2|3|4)\d{7,8}(?!\d)/],
   ["dossier", /P-\d{3,}/],
 ];
 

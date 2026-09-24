@@ -375,8 +375,10 @@ await (async function mutation() {
   const RX_UUID = /\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b/gi;
   const REGLES = [
     ["courriel", /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/],
-    ["telephone", /(\+213|0)(5|6|7)\d{8}/],
-    ["fixe", /(\+213|0)(2|3|4)\d{7,8}/],
+    // 2026-09-24 : bornes chiffres (voir replay-preuve.mjs) — sinon les
+    // horodatages ms (epoch 1790… → « 0213070118 ») sont signalés « fixe ».
+    ["telephone", /(?<!\d)(\+213|0)(5|6|7)\d{8}(?!\d)/],
+    ["fixe", /(?<!\d)(\+213|0)(2|3|4)\d{7,8}(?!\d)/],
     ["dossier", /P-\d{3,}/],
   ];
   for (const rel of cibles) {

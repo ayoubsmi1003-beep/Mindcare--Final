@@ -158,6 +158,8 @@ interface Echelle {
   readonly zero: number;
   readonly haut: number;
   readonly bas: number;
+  /** Le plafond (haut + marge de 12 %) — borne haute des graduations d'axe. */
+  readonly plafond: number;
 }
 
 function echelleSignee(valeurs: readonly number[]): Echelle {
@@ -171,7 +173,7 @@ function echelleSignee(valeurs: readonly number[]): Echelle {
   const plafond = haut + amplitude * 0.12;
   const etendue = plafond - bas;
   const y = (valeur: number): number => ((plafond - valeur) * 100) / etendue;
-  return { y, zero: y(0), haut, bas };
+  return { y, zero: y(0), haut, bas, plafond };
 }
 
 /**
@@ -180,6 +182,13 @@ function echelleSignee(valeurs: readonly number[]): Echelle {
  * n'a pas vérifié la survie au remplacement des échelles.
  */
 const CACHE = "cache-visuellement";
+
+/**
+ * Le format des graduations d'axe — `Intl`, pas une chaîne : aucune phrase à
+ * traduire, et le groupement fr-FR (« 67 250 ») reste lisible sur six mois.
+ * Niveau module : un seul formateur pour tous les rendus.
+ */
+const FORMATER_AXE = new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 });
 
 /* ═══════════════════════════════════════════════════════════════════════════
  * AIRE — une série continue dans le temps
@@ -410,6 +419,14 @@ export interface GroupeBarres {
  * ⚠️ UN SEUL AXE POUR LES DEUX SÉRIES. Deux axes distincts feraient paraître
  * 8 000 DZD de charges plus haut que 40 000 DZD de recette — l'erreur de
  * lecture la plus coûteuse qu'un graphique d'argent puisse produire.
+ *
+ * Habillage « barres groupées » (maquette 21st.dev : légende en haut à droite,
+ * axe Y gradué à gauche, grille pointillée, barres pleines arrondies en haut
+ * uniquement). Rendu SANS dépendance — mêmes blocs HTML + SVG étiré que le
+ * reste du fichier, couleurs pleines `TRAIT` (vert l'argent qui entre, ambre
+ * celui qui sort), pas de dégradé sur les barres. La ligne du résultat net est
+ * conservée : la maquette de démo (trafic, toujours positif) n'en a pas, mais
+ * sur un graphique d'argent un mois déficitaire sans ligne serait un mensonge.
  */
 export function BarresGroupees({
   groupes,
@@ -440,92 +457,127 @@ export function BarresGroupees({
     groupes.flatMap((g) => [g.a, g.b, g.ligne]),
   );
 
+  // Les 5 graduations de l'axe Y, du plafond au plancher — l'équivalent des
+  // repères 0/85/170/255/340 de la maquette. Positions GÉOMÉTRIQUES lues sur
+  // l'échelle signée partagée, jamais des montants recalculés : l'axe ne fait
+  // que nommer l'échelle que les barres utilisent déjà.
+  const graduations = [0, 1, 2, 3, 4].map((i) => ({
+    top: (i * 100) / 4,
+    valeur: Math.round(ech.plafond - ((ech.plafond - ech.bas) * i) / 4),
+  }));
+
   return (
     <div className="flex min-w-0 flex-col gap-3">
-      <Legende
-        entrees={[
-          { famille: familleA, libelle: libelleA },
-          { famille: familleB, libelle: libelleB },
-          { famille: null, libelle: libelleLigne },
-        ]}
-      />
+      {/* La légende en haut à droite, comme la maquette : pastilles pleines +
+          libellés gris. `Legende` reste la source unique des pastilles. */}
+      <div className="flex justify-end">
+        <Legende
+          entrees={[
+            { famille: familleA, libelle: libelleA },
+            { famille: familleB, libelle: libelleB },
+            { famille: null, libelle: libelleLigne },
+          ]}
+        />
+      </div>
 
-      <div className={["relative w-full", hauteurClasse].join(" ")} aria-hidden="true">
-        {[25, 50, 75].map((t) => (
-          <div
-            key={t}
-            className="absolute inset-x-0 border-t border-rule opacity-disabled"
-            style={{ top: `${t}%` }}
-          />
-        ))}
-        <div className="absolute inset-x-0 border-t border-rule" style={{ top: `${ech.zero}%` }} />
-
-        {/* Les barres — en pourcentage de hauteur, donc rien n'est déformé.
-            Le rayon est posé en haut seulement : une barre arrondie en bas
-            flotterait au lieu de reposer sur son axe. */}
-        <div className="absolute inset-0 flex items-stretch gap-2">
-          {groupes.map((g) => (
-            <div key={g.cle} className="relative flex min-w-0 flex-1 justify-center gap-1">
-              <Barre
-                famille={familleA}
-                hautPct={Math.max(0, ech.zero - ech.y(g.a))}
-                basPct={100 - ech.zero}
-                titre={`${g.label} · ${libelleA} ${g.aLisible}`}
-              />
-              <Barre
-                famille={familleB}
-                hautPct={Math.max(0, ech.zero - ech.y(g.b))}
-                basPct={100 - ech.zero}
-                titre={`${g.label} · ${libelleB} ${g.bLisible}`}
-              />
-            </div>
+      <div className="flex min-w-0 items-stretch gap-2">
+        {/* L'axe Y : les ordres de grandeur, gris et tabulaires. Sans lui,
+            aucune barre n'a d'échelle — la maquette le porte à gauche. */}
+        <div
+          className={["relative w-11 shrink-0", hauteurClasse].join(" ")}
+          aria-hidden="true"
+        >
+          {graduations.map((g, i) => (
+            <span
+              key={i}
+              className="absolute right-0 -translate-y-1/2 font-num text-eyebrow tabular-nums text-ink-500"
+              style={{ top: `${g.top}%` }}
+            >
+              {FORMATER_AXE.format(g.valeur)}
+            </span>
           ))}
         </div>
 
-        <svg
-          className="absolute inset-0 h-full w-full"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-          focusable="false"
-        >
-          <polyline
-            fill="none"
-            stroke="var(--ink-700)"
-            strokeWidth="2"
-            strokeLinejoin="round"
-            strokeDasharray="4 3"
-            vectorEffect="non-scaling-stroke"
-            points={groupes
-              .map((g, i) => {
-                const largeur = 100 / groupes.length;
-                return `${i * largeur + largeur / 2},${ech.y(g.ligne)}`;
-              })
-              .join(" ")}
-          />
-        </svg>
-
-        <div className="absolute inset-0 flex items-stretch gap-2">
-          {groupes.map((g) => (
-            <div key={`p-${g.cle}`} className="relative min-w-0 flex-1">
-              <span
-                className="absolute left-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-card bg-ink-700"
-                style={{ top: `${ech.y(g.ligne)}%` }}
-                title={`${g.label} · ${libelleLigne} ${g.ligneLisible}`}
-              />
-            </div>
+        <div className={["relative min-w-0 flex-1", hauteurClasse].join(" ")} aria-hidden="true">
+          {/* La grille pointillée de la maquette : un filet par graduation. */}
+          {graduations.map((g, i) => (
+            <div
+              key={i}
+              className="absolute inset-x-0 border-t border-dashed border-rule opacity-disabled"
+              style={{ top: `${g.top}%` }}
+            />
           ))}
+          {/* La ligne de ZÉRO, pleine : sans elle, une barre au-dessus et une
+              barre en dessous se ressemblent. */}
+          <div className="absolute inset-x-0 border-t border-rule" style={{ top: `${ech.zero}%` }} />
+
+          {/* Les barres — pleines, arrondies en haut uniquement (rayon 4 de la
+              maquette), largeur bornée à 36. En pourcentage de hauteur, donc
+              rien n'est déformé. Une barre arrondie en bas flotterait au lieu
+              de reposer sur son axe. */}
+          <div className="absolute inset-0 flex items-stretch gap-2">
+            {groupes.map((g) => (
+              <div key={g.cle} className="relative flex min-w-0 flex-1 justify-center gap-1">
+                <Barre
+                  famille={familleA}
+                  hautPct={Math.max(0, ech.zero - ech.y(g.a))}
+                  basPct={100 - ech.zero}
+                  titre={`${g.label} · ${libelleA} ${g.aLisible}`}
+                />
+                <Barre
+                  famille={familleB}
+                  hautPct={Math.max(0, ech.zero - ech.y(g.b))}
+                  basPct={100 - ech.zero}
+                  titre={`${g.label} · ${libelleB} ${g.bLisible}`}
+                />
+              </div>
+            ))}
+          </div>
+
+          <svg
+            className="absolute inset-0 h-full w-full"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            focusable="false"
+          >
+            <polyline
+              fill="none"
+              stroke="var(--ink-700)"
+              strokeWidth="2"
+              strokeLinejoin="round"
+              strokeDasharray="4 3"
+              vectorEffect="non-scaling-stroke"
+              points={groupes
+                .map((g, i) => {
+                  const largeur = 100 / groupes.length;
+                  return `${i * largeur + largeur / 2},${ech.y(g.ligne)}`;
+                })
+                .join(" ")}
+            />
+          </svg>
+
+          <div className="absolute inset-0 flex items-stretch gap-2">
+            {groupes.map((g) => (
+              <div key={`p-${g.cle}`} className="relative min-w-0 flex-1">
+                <span
+                  className="absolute left-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-card bg-ink-700"
+                  style={{ top: `${ech.y(g.ligne)}%` }}
+                  title={`${g.label} · ${libelleLigne} ${g.ligneLisible}`}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      <div className="flex items-baseline gap-2" aria-hidden="true">
-        {groupes.map((g, i) => (
+      {/* Les mois sous l'aire — du vrai texte gris uniforme, comme la maquette.
+          Le décalage à gauche compense la gouttière de l'axe Y. */}
+      <div className="flex min-w-0 items-baseline gap-2" aria-hidden="true">
+        <span className="w-11 shrink-0" />
+        {groupes.map((g) => (
           <span
             key={`l-${g.cle}`}
-            className={[
-              "min-w-0 flex-1 truncate text-center font-ui text-eyebrow",
-              // Le dernier groupe porte l'encre pleine : c'est celui qu'on lit.
-              i === groupes.length - 1 ? "font-semibold text-ink-900" : "text-ink-500",
-            ].join(" ")}
+            className="min-w-0 flex-1 truncate text-center font-ui text-eyebrow text-ink-500"
           >
             {g.label}
           </span>
@@ -552,6 +604,8 @@ function Barre({
   readonly basPct: number;
   readonly titre: string;
 }): React.JSX.Element {
+  // Barre PLEINE à la couleur du trait — la maquette porte des aplats (vert /
+  // orange), pas des dégradés. Rayon 4 px en haut uniquement.
   return (
     <span
       title={titre}
@@ -559,11 +613,12 @@ function Barre({
       style={{ maxWidth: "var(--barre-largeur)" }}
     >
       <span
-        className="absolute inset-x-0 rounded-t-md transition duration-quick ease-out"
+        className="absolute inset-x-0 transition duration-quick ease-out"
         style={{
           bottom: `${basPct}%`,
           height: `${hautPct}%`,
-          backgroundImage: `linear-gradient(180deg, ${TRAIT[famille]} 0%, ${REMPLISSAGE[famille]} 100%)`,
+          backgroundColor: TRAIT[famille],
+          borderRadius: "4px 4px 0 0",
         }}
       />
     </span>

@@ -2,9 +2,10 @@
  * `route.ts` — LE CABLAGE M01 RESTE SOUS LA FRONTIERE.
  *
  * ═══ CE QUE CE FICHIER ÉPROUVE (lecture de source, comme ses voisins) ═══
- * Le classifieur n'est jamais appelé sur refus ; la proposition hors famille
- * est bloquée serveur ; le payload ne porte que le NOM de l'intention et le
- * run_id (jamais la mention) ; aucun second `fetch` ; passerelle unique.
+ * Le classifieur n'est jamais appelé sur la frontière (amendement 2026-09-24 :
+ * commit, ex-refus) ; la proposition hors famille est bloquée serveur ; le
+ * payload ne porte que le NOM de l'intention et le run_id (jamais la
+ * mention) ; aucun second `fetch` ; passerelle unique.
  */
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
@@ -16,18 +17,18 @@ const source = readFileSync(
   "utf8",
 );
 
-describe("le classifieur vit derrière le refus", () => {
-  it("rendu tôt sur refus, sans classifier", () => {
-    expect(source).toContain('if (chemin === "refus" || !classifieurActif())');
+describe("le classifieur vit derrière la frontière", () => {
+  it("rendu tôt sur la frontière, sans classifier", () => {
+    expect(source).toContain('if (chemin === "commit" || !classifieurActif())');
   });
 
-  it("l'appel modèle du classifieur est défini après les branches de refus", () => {
+  it("l'appel modèle du classifieur est défini après les branches de frontière", () => {
     // Même propriété que `jarvis-routage-multilingue.test.ts`, pour le second
-    // appel modèle du fichier : un refus ne déclenche aucun `llm(`.
-    const refus = source.indexOf('routage.chemin === "refus"');
+    // appel modèle du fichier : la frontière ne déclenche aucun `llm(`.
+    const frontiere = source.indexOf('routage.chemin === "commit"');
     const appelClassifieur = source.indexOf("async function appelerModeleClassifieur(");
-    expect(refus).toBeGreaterThan(-1);
-    expect(appelClassifieur).toBeGreaterThan(refus);
+    expect(frontiere).toBeGreaterThan(-1);
+    expect(appelClassifieur).toBeGreaterThan(frontiere);
   });
 
   it("coupe-circuit d'exploitation présent", () => {

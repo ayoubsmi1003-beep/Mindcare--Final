@@ -49,7 +49,9 @@ const RunHist = z.strictObject({
   gateVersion: z.string(),
   empreinteRun: z.string(),
   empreinte: z.string(),
-  chemin: z.enum(["connaissance", "patient", "refus", "inconnu"]),
+  // `refus` = tours enregistrés avant l'amendement du 2026-09-24 (lisible) ;
+  // `commit` = ce que le serveur émet désormais.
+  chemin: z.enum(["connaissance", "patient", "commit", "refus", "inconnu"]),
   interrompu: z.boolean(),
   persiste: z.boolean(),
   dureeMs: z.number().int().min(0),
@@ -124,7 +126,7 @@ export type StatsObservabilite = z.infer<typeof StatsObservabilite>;
 const EnteteLive = z.strictObject({
   runId: z.string().uuid(),
   gateVersion: z.string(),
-  chemin: z.enum(["connaissance", "patient", "refus", "inconnu"]),
+  chemin: z.enum(["connaissance", "patient", "commit", "refus", "inconnu"]),
   interrompu: z.boolean(),
   persiste: z.boolean(),
   dureeMs: z.number().int().min(0),

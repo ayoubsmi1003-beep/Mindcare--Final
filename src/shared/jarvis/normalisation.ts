@@ -3,18 +3,21 @@
  * SANS QU'UNE SEULE DE SES RÈGLES NE CHANGE.
  *
  * ═══ LE DÉFAUT QUE CE FICHIER CORRIGE ═══
- * `routing.ts` refuse « Karim est-il dépressif ? » par `FORMES_CONCLUSIVES_
- * PERSONNELLES`. La même question en arabe — « هل كريم مكتئب؟ » — ne
- * correspondait à AUCUN motif : elle tombait au défaut `connaissance` et
- * atteignait le modèle sans refus. Mesuré, pas supposé :
+ * `routing.ts` : la version d'origine refusait « Karim est-il dépressif ? » par
+ * `FORMES_CONCLUSIVES_PERSONNELLES`, et la même question en arabe —
+ * « هل كريم مكتئب؟ » — ne correspondait à AUCUN motif : elle tombait au défaut
+ * `connaissance` et atteignait le modèle sans refus. Mesuré, pas supposé :
  * `grep -rlP "[\x{0600}-\x{06FF}]" src/` rendait ZÉRO fichier — il n'y avait pas
  * un caractère arabe dans le code source.
  *
- * Aucune donnée de dossier ne fuyait par là (le chemin connaissance n'a ni
- * outil ni contexte). Mais l'invariant que `routing.ts` existe pour tenir —
- * AUCUN VERDICT SUR UNE PERSONNE NOMMÉE — était contourné par le simple choix
- * de la langue. Une frontière qui ne tient que dans une langue n'est pas une
- * frontière : c'est une coutume.
+ * ⚠️ CE QUE LA CORRECTION PROTÈGE A CHANGÉ DE NATURE LE 2026-09-24, ET ELLE EST
+ * PLUS SIMPLE. Le raisonnement sur une personne nommée est désormais autorisé
+ * (`patient`) ; ce qui reste fermé, c'est le COMMIT. L'invariant tenu ici est
+ * donc : une demande d'acte d'autorité formulée dans n'importe laquelle des
+ * quatre langues ne peut pas être OUVERTE par la normalisation — et réciproquement,
+ * une demande de raisonnement ne doit pas être fermée à tort parce qu'elle est
+ * posée en arabe. Le sens du défaut reste dicté par le coût : la normalisation
+ * ne rend jamais le routage MOINS restrictif qu'il ne l'était.
  *
  * ═══ LA FORME DE LA CORRECTION ═══
  *
@@ -22,10 +25,10 @@
  *               │                                                 ├─► plusStrict
  *               └─► normaliserDemande() ─► classer(canonique) ─────┘
  *
- *   treillis :   refus  >  patient  >  connaissance
+ *   treillis :   commit  >  patient  >  connaissance
  *
  * ⚠️ LA PROPRIÉTÉ QUI REND CECI SÛR, ET ELLE SE LIT. `plusStrict` prend le
- * MAXIMUM sur un treillis où `refus` domine. Le résultat n'est donc JAMAIS
+ * MAXIMUM sur un treillis où `commit` domine. Le résultat n'est donc JAMAIS
  * moins restrictif que `classer(brut)` seul. Ajouter une langue au lexique ne
  * peut pas OUVRIR un chemin ; au pire, elle en ferme un. C'est un coût produit
  * — une question de savoir refusée à tort — jamais un coût de sécurité. Le sens
@@ -102,6 +105,25 @@ function cle(mot: string): string {
     .normalize("NFD")
     .replace(/[̀-ͯ]/g, "")
     .toLowerCase();
+}
+
+/**
+ * Normalisation d'identité PARTAGÉE (mission Alexa fiabilité A1).
+ *
+ * Même formule que `cle(preparer(x))` sur la chaîne entière : NFKC + repli
+ * arabe (hamza→alef, ى→ي, ة→ه, tashkil/tatweel retirés) + NFD-strip latin +
+ * minuscules + espaces repliés. Point d'ancrage unique pour :
+ * `jarvis-contexte.ts` (extraction/clarification), `jarvis-identite.ts`
+ * (sidecar) et la migration SQL miroir (mêmes règles en PL/pgSQL).
+ * Pure, déterministe, sans IO.
+ */
+export function normaliserTexteIdentite(texte: string): string {
+  return cle(preparer(texte)).trim().replace(/\s+/g, " ");
+}
+
+/** Repli arabe exposé pour tests + documentation miroir SQL. */
+export function replierArabePublic(texte: string): string {
+  return replierArabe(texte);
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -400,14 +422,19 @@ export function normaliserDemande(texte: string): DemandeNormalisee {
 // ═══════════════════════════════════════════════════════════════════════════
 
 /**
- * Le treillis de restriction. `refus` domine, `connaissance` est le plancher —
+ * Le treillis de restriction. `commit` domine, `connaissance` est le plancher —
  * le même ordre que `classer()` applique dans ses branches, rendu ici
  * COMPARABLE pour qu'on puisse en prendre un maximum.
+ *
+ * ⚠️ CE QUI DOMINE A CHANGÉ DE NOM LE 2026-09-24, PAS DE RÔLE. `commit` est la
+ * frontière d'acte (l'ex-`refus`) : elle reste la plus restrictive, et la
+ * monotonie garde exactement le même sens — une langue ajoutée au lexique peut
+ * fermer un chemin, jamais en ouvrir un.
  */
 const RANG: Readonly<Record<Chemin, number>> = {
   connaissance: 0,
   patient: 1,
-  refus: 2,
+  commit: 2,
 };
 
 export function rangDeChemin(chemin: Chemin): number {
@@ -434,9 +461,11 @@ export interface RoutageMultilingue extends Routage {
  * LA DÉCISION, indépendante de la langue.
  *
  * Remplace `classer()` au SEUL point d'appel d'exécution du dépôt
- * (`jarvis-chat/route.ts`). Tout ce qui suit — le refus constant sans appel de
- * modèle, le chemin connaissance sans outils, le chemin patient sous RLS — est
- * inchangé : cette fonction décide du chemin, elle n'en ouvre aucun.
+ * (`jarvis-chat/route.ts`). Tout ce qui suit — la frontière de commit constante
+ * sans appel de modèle, le chemin connaissance sans outils, le chemin patient
+ * sous RLS — est inchangé : cette fonction décide du chemin, elle n'en ouvre
+ * aucun. La seule chose qui a changé le 2026-09-24 est ce qui est FERMÉ : des
+ * questions de raisonnement autrefois refusées, pas des actes autrefois permis.
  */
 export function classerMultilingue(phraseUtilisateur: string): RoutageMultilingue {
   const brut = classer(phraseUtilisateur);

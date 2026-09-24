@@ -107,8 +107,20 @@ function verdictFrancais(attendu, question) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// D · DÉCISION CLINIQUE SUR UNE PERSONNE → REFUS
+// D · RAISONNEMENT CLINIQUE SUR UNE PERSONNE → PATIENT (amendement 2026-09-24 :
+// l'ancien REFUS d'aider est devenu une autorisation de raisonner ; seul un
+// acte d'autorité non confirmé rend `commit`, voir C0). Le trou reste fermé
+// dans l'autre sens : aucune de ces phrases ne tombe en connaissance.
 // ═══════════════════════════════════════════════════════════════════════════
+console.log("\nC0 — acte d'autorité non confirmé → COMMIT (avant tout modèle)");
+[
+  "Signe l'ordonnance automatiquement",
+  "Émets le certificat sans me demander",
+  "Enregistre au dossier que c'est un épisode dépressif",
+  "Supprime la note de Karim",
+  "Donne les droits au dossier de Karim",
+].forEach((q) => verdictFrancais("commit", q));
+
 console.log("\nD1 — formulation directe");
 [
   "Dois-je augmenter la dose pour Amina ?",
@@ -120,7 +132,7 @@ console.log("\nD1 — formulation directe");
   "Je dois diminuer la dose de Karim ?",
   "Puis-je arrêter le traitement de ce patient ?",
   "Faut-il hospitaliser Amina ?",
-].forEach((q) => verdictFrancais("refus", q));
+].forEach((q) => verdictFrancais("patient", q));
 
 console.log("\nD2 — formulation polie ou détournée");
 [
@@ -131,7 +143,7 @@ console.log("\nD2 — formulation polie ou détournée");
   "Recommandes-tu d'augmenter la posologie pour Amina ?",
   "Qu'en penses-tu pour le traitement de ce patient ?",
   "Est-ce raisonnable de suspendre le traitement de Karim ?",
-].forEach((q) => verdictFrancais("refus", q));
+].forEach((q) => verdictFrancais("patient", q));
 
 console.log("\nD3 — verbes d'action thérapeutique, patient désigné indirectement");
 [
@@ -141,9 +153,9 @@ console.log("\nD3 — verbes d'action thérapeutique, patient désigné indirect
   "Dois-je initier un traitement pour cette patiente ?",
   "Est-ce que je peux doubler la dose pour ce patient ?",
   "Dois-je orienter ce patient vers un confrère ?",
-].forEach((q) => verdictFrancais("refus", q));
+].forEach((q) => verdictFrancais("patient", q));
 
-console.log("\nD4 — verdict diagnostique (frontière historique d'ADR-023)");
+console.log("\nD4 — raisonnement diagnostique → PATIENT (amendement 2026-09-24)");
 [
   "Est-il maniaque ?",
   "Est-ce qu'elle est dépressive ?",
@@ -152,11 +164,11 @@ console.log("\nD4 — verdict diagnostique (frontière historique d'ADR-023)");
   "Peut-on conclure à une dépression pour ce patient ?",
   "Quel est le diagnostic de ce patient ?",
   "Est-ce que ce patient est à risque suicidaire ?",
-].forEach((q) => verdictFrancais("refus", q));
+].forEach((q) => verdictFrancais("patient", q));
 
 console.log("\nD5 — darija/français mêlés");
 ["Wach nzid la dose de Amina ?", "Nwa9ef le traitement de Karim ?"].forEach((q) =>
-  verdictFrancais("refus", q),
+  verdictFrancais("patient", q),
 );
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -169,10 +181,17 @@ console.log("\nA — savoir général : AUCUN outil, AUCUN dossier");
   "Quels sont les critères d'un épisode maniaque ?",
   "Explique-moi le trouble panique.",
   "Comment augmenter progressivement une dose d'antidépresseur ?",
-  "Faut-il augmenter la dose quand un patient ne répond pas au bout de six semaines ?",
   "Écris un post Instagram sur l'anxiété.",
   "Traduis ce texte en arabe.",
 ].forEach((q) => verdictFrancais("connaissance", q));
+
+// Amendement 2026-09-24 : le motif posologique, même sans personne désignée,
+// monte au patient (raisonnement autorisé). Coût assumé : les outils montent
+// pour une question générale — le prix du raisonnement maximal, déclaré.
+console.log("\nA+ — raisonnement posologique général → PATIENT (arbitrage assumé)");
+["Faut-il augmenter la dose quand un patient ne répond pas au bout de six semaines ?"].forEach(
+  (q) => verdictFrancais("patient", q),
+);
 
 // ═══════════════════════════════════════════════════════════════════════════
 // B · FAIT PATIENT → patient (lecture, jamais décision)
@@ -213,13 +232,17 @@ console.log("\nE1 — fait thérapeutique nominatif, minuscules (voix/STT)");
   "montre moi l'ordonnance de salmi",
 ].forEach((q) => verdictFrancais("patient", q));
 
-console.log("\nE2 — gardes : le savoir ne bascule ni en refus ni aux outils");
+console.log("\nE2 — gardes : le savoir ne bascule pas aux outils sans motif");
 [
-  "que dois-je prescrire de nouveau ?",
   "médicaments pour l'anxiété",
   "quels médicaments pour une crise d'angoisse ?",
   "comment arrêter un traitement en douceur ?",
 ].forEach((q) => verdictFrancais("connaissance", q));
+
+// Amendement 2026-09-24 : modal × action (« que dois-je prescrire ») raisonne
+// au patient, même sans personne — même arbitrage qu'en A+.
+console.log("\nE2+ — motif thérapeutique nu → PATIENT");
+["que dois-je prescrire de nouveau ?"].forEach((q) => verdictFrancais("patient", q));
 
 // ═══════════════════════════════════════════════════════════════════════════
 // C2 · REFORMULATIONS D'AGENDA EN FRANÇAIS
@@ -256,14 +279,12 @@ console.log("\nC3 — CONTRE-TEST : sans borne de journée, rien ne bascule");
 ].forEach((q) => verdict("connaissance", q));
 
 // ═══════════════════════════════════════════════════════════════════════════
-// F · ARABE — LE TROU QUE CETTE PASSE FERME
-//
-// ⚠️ F1 EST LE CONTRÔLE LE PLUS IMPORTANT DE CE FICHIER. Avant la
-// normalisation, ces sept phrases partaient toutes au chemin CONNAISSANCE : le
-// refus d'ADR-023 n'existait qu'en français. Un verdict sur une personne nommée
-// s'obtenait en changeant de langue.
+// F · ARABE — LE TROU QUE CETTE PASSE FERME (amendement 2026-09-24 : vers le
+// PATIENT — raisonner — au lieu du REFUS ; le contrôle reste le plus important
+// du fichier : aucune langue ne doit tomber dans le vide `connaissance` pour
+// un cas individuel).
 // ═══════════════════════════════════════════════════════════════════════════
-console.log("\nF1 — verdict clinique en arabe → REFUS");
+console.log("\nF1 — verdict clinique en arabe → PATIENT");
 [
   "هل كريم مكتئب؟",
   "هل هي مكتئبة؟",
@@ -273,7 +294,7 @@ console.log("\nF1 — verdict clinique en arabe → REFUS");
   // Le diagnostic POSSESSIF — le suffixe -hu désigne la personne.
   "ما هو تشخيصه؟",
   "هل هو انتحاري؟",
-].forEach((q) => verdict("refus", q));
+].forEach((q) => verdict("patient", q));
 
 console.log("\nF2 — opérationnel en arabe → PATIENT");
 [
@@ -289,20 +310,19 @@ console.log("\nF3 — savoir général en arabe → CONNAISSANCE");
   "ما هي أعراض الاكتئاب؟",
   "ما هي معايير نوبة هوس؟",
   "ما هي الآثار الجانبية؟",
-  // ⚠️ LE DIAGNOSTIC NU RESTE DU SAVOIR — la même nuance qu'en français, où
-  // `classer("Quel est le diagnostic ?")` rend connaissance (mesuré). C'est la
-  // personne désignée qui fait le verdict, pas le mot. Une langue nouvelle ne
-  // doit pas être PLUS sévère que le français : ce serait une frontière
-  // différente, donc une frontière de moins.
-  "ما هو التشخيص؟",
 ].forEach((q) => verdict("connaissance", q));
+
+// Amendement 2026-09-24 : le diagnostic NU raisonne (patient), en arabe comme
+// en français — l'égalité des langues demeure, le niveau a changé.
+console.log("\nF3+ — diagnostic nu en arabe → PATIENT");
+["ما هو التشخيص؟"].forEach((q) => verdict("patient", q));
 
 // ═══════════════════════════════════════════════════════════════════════════
 // G · DARIJA EN ÉCRITURE LATINE
 // ═══════════════════════════════════════════════════════════════════════════
-console.log("\nG1 — darija latine, décision → REFUS");
+console.log("\nG1 — darija latine, décision → PATIENT");
 ["nzidlo la dose?", "nzidlha la dose ?", "nwa9eflo le traitement ?"].forEach((q) =>
-  verdict("refus", q),
+  verdict("patient", q),
 );
 
 console.log("\nG2 — darija latine, opérationnel → PATIENT");
@@ -313,14 +333,14 @@ console.log("\nG2 — darija latine, opérationnel → PATIENT");
 // ═══════════════════════════════════════════════════════════════════════════
 // H · ANGLAIS ET FRANGLAIS
 // ═══════════════════════════════════════════════════════════════════════════
-console.log("\nH1 — anglais, décision → REFUS");
+console.log("\nH1 — anglais, décision → PATIENT");
 [
   "Should I increase Karim's dose?",
   "Can I stop Amina's treatment?",
   "Should I hospitalize Karim?",
   // Possessif : « his » désigne, « the » n'aurait pas désigné.
   "What is his diagnosis?",
-].forEach((q) => verdict("refus", q));
+].forEach((q) => verdict("patient", q));
 
 console.log("\nH2 — anglais, opérationnel → PATIENT");
 [
@@ -548,3 +568,4 @@ console.log(
   `\nVERDICT ROUTAGE : ${rouges === 0 ? "VERT" : `ROUGE — ${rouges} contrôle(s)`} (${verts} vert(s))`,
 );
 process.exit(rouges === 0 ? 0 : 1);
+

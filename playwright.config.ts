@@ -1,5 +1,7 @@
 import { defineConfig, devices } from "playwright/test";
 
+const e2ePort = process.env.MINDCARE_E2E_PORT ?? "3000";
+
 export default defineConfig({
   testDir: "tests/e2e",
   timeout: 30_000,
@@ -10,7 +12,7 @@ export default defineConfig({
   workers: 1,
   reporter: [["list"], ["html", { open: "never" }]],
   use: {
-    baseURL: "http://localhost:3000",
+    baseURL: `http://localhost:${e2ePort}`,
     trace: "on-first-retry",
     screenshot: "only-on-failure",
     video: "retain-on-failure",
@@ -25,9 +27,9 @@ export default defineConfig({
   ],
   webServer: {
     command: "pnpm start",
-    url: "http://localhost:3000/api/health",
+    url: `http://localhost:${e2ePort}/api/health`,
     reuseExistingServer: !process.env.CI,
     timeout: 90_000,
-    env: {},
+    env: { PORT: e2ePort },
   },
 });

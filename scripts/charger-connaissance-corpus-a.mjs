@@ -13,6 +13,7 @@ export function pipelineCorpusA(racine, entrees, rapport) {
   const candidats = [];
   for (const e of entrees) {
     if (e.source_id === "corpus-b-medicaments") continue;
+    if (e.source_id.startsWith("corpus-ocr-")) continue; // route corpus-ocr (pipeline dedie R2)
     rapport.decouverts += 1;
     if (FIXTURE_IDS.has(e.source_id)) {
       rapport.rejetes.push({ source_id: e.source_id, motif: "fixture-interdite" });
@@ -50,7 +51,7 @@ export function pipelineCorpusA(racine, entrees, rapport) {
       const cle = `${e.source_id}|${e.version}|${s.section}|${texteHash}`;
       const occurrence = occ.get(cle) ?? 0;
       occ.set(cle, occurrence + 1);
-      chunks.push({ chunkId: hacherTexteFNV([sourceUuid, e.version, s.section, "", texteHash, String(occurrence)].join("|")), section: s.section, ordinal, langue: e.langue, texte: s.texte, texteHash, occurrence });
+      chunks.push({ chunkId: hacherTexteFNV([sourceUuid, e.version, s.section, "", texteHash, String(occurrence)].join("|")), section: s.section, ordinal, langue: e.langue, texte: s.texte, texteHash, occurrence, versionChunk: "struct-v1", statut: "active" });
     });
     candidats.push({ entree: e, sourceUuid, hash, statut: e.statut ?? "reviewed", approbation: verdict.approbation, chunks });
     rapport.acceptes.push({ source_id: e.source_id, chunks: chunks.length, statut: e.statut ?? "reviewed", approbation: verdict.approbation, hash });

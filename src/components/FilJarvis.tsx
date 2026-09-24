@@ -13,6 +13,11 @@
 
 "use client";
 
+import {
+  AUCUNE_PREUVE_LIVRES, EXTRAIT_SOURCE, LIVRE_NUMERO, NOMS_DOSSIERS_LIVRES, OCR_NON_RELU,
+  PAGE_IMPRIMEE, PAGE_IMPRIMEE_INDISPONIBLE, PAGE_PDF, PASSAGES_LIVRES, TITRE_IMPRIME,
+} from "@/i18n/connaissance";
+
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { SiriOrb } from "@/components/ui/siri-orb";
@@ -121,7 +126,7 @@ export function FilJarvis({
         const lisible = tour.texte.trim().length > 0 && tour.texte.trim().length <= 2000;
         return (
           <div key={tour.id} className="flex flex-col gap-1">
-            {tour.registre === "connaissance-generale" && (
+            {tour.registre === "connaissance-generale" && tour.texte !== AUCUNE_PREUVE_LIVRES && (
               <span className="inline-flex items-center gap-1 pl-1 font-ui text-label tracking-label text-ai-600">
                 <span aria-hidden className="inline-flex h-4 w-4 shrink-0 items-center justify-center overflow-hidden rounded-full">
                   <SiriOrb
@@ -129,19 +134,34 @@ export function FilJarvis({
                     animationDuration={18}
                   />
                 </span>
-                {fr.jarvis.registreConnaissance}
+                {(tour.preuves ?? []).some((p) => p.livre !== undefined) ? PASSAGES_LIVRES : fr.jarvis.registreConnaissance}
               </span>
             )}
             {/* M07 — preuves gouvernées : titre + section + version (données
                 C4, jamais d'identifiant). Absentes = réponse sans source. */}
-            {(tour.preuves ?? []).map((preuve) => (
-              <span
-                key={`${preuve.titre}-${preuve.version}-${preuve.section ?? "?"}`}
-                className="pl-1 font-ui text-label tracking-label text-ink-500"
-              >
-                {preuve.titre}
-                {preuve.section === null ? "" : ` · ${preuve.section}`} · v{preuve.version}
+            {(tour.preuves ?? []).map((preuve) => preuve.livre === undefined ? (
+              <span key={`${preuve.titre}-${preuve.version}-${preuve.section ?? "?"}`}
+                className="pl-1 font-ui text-label tracking-label text-ink-500">
+                {preuve.titre}{preuve.section === null ? "" : ` · ${preuve.section}`} · v{preuve.version}
               </span>
+            ) : (
+              <details key={preuve.id} className="pl-1 font-ui text-label text-ink-700">
+                <summary className="cursor-pointer">
+                  {LIVRE_NUMERO} B{String(preuve.livre.numero).padStart(2, "0")} · {NOMS_DOSSIERS_LIVRES[preuve.livre.numero] ?? preuve.titre} · {preuve.livre.edition}
+                  {preuve.section === null ? "" : ` · ${preuve.section}`}
+                </summary>
+                <div className="mt-1 pl-3 text-ink-500">
+                  <p className="m-0">{TITRE_IMPRIME} : {preuve.titre}</p>
+                  {preuve.livre.pages.map((page) => (
+                    <p key={`${page.splitId}-${page.physicalPage}`} className="m-0">
+                      {page.splitId} · {PAGE_PDF} {page.physicalPage} · {page.printedPage === null
+                        ? PAGE_IMPRIMEE_INDISPONIBLE : `${PAGE_IMPRIMEE} ${page.printedPage}`}
+                    </p>
+                  ))}
+                  {preuve.livre.ocrReviewStatus === "unreviewed" && <p className="m-0">{OCR_NON_RELU}</p>}
+                  <p className="mt-1 whitespace-pre-wrap">{EXTRAIT_SOURCE} : « {preuve.extrait} »</p>
+                </div>
+              </details>
             ))}
             <div className="flex items-end gap-1">
               <p
@@ -183,9 +203,11 @@ export function FilJarvis({
       })}
 
       {fluxEnCours && (
-        /* Trois points qui respirent — §4 règle 5 : opacité seule, rien ne bouge. */
+        /* Trois points qui respirent — §4 règle 5 : opacité seule, rien ne bouge.
+           Mission §12 : la mention d'étape (§12, sans donnée) remplace le
+           silence pendant qu'une capacité tourne ; sinon le libellé générique. */
         <div role="status" className="flex flex-col gap-1">
-          <span className="sr-only">{fr.jarvis.reflechit}</span>
+          <span className="sr-only">{etat.etapeEnCours ?? fr.jarvis.reflechit}</span>
           <span
             aria-hidden="true"
             className="inline-flex w-20 items-center justify-center gap-1 rounded-lg rounded-tl-sm border border-rule bg-card px-4 py-3 shadow-lift1"
@@ -194,6 +216,11 @@ export function FilJarvis({
             <span className="h-2 w-2 animate-respire rounded-full bg-ai-500" />
             <span className="h-2 w-2 animate-respire rounded-full bg-ai-500" />
           </span>
+          {etat.etapeEnCours !== null && (
+            <span className="pl-1 font-ui text-label italic text-ink-500">
+              {etat.etapeEnCours}
+            </span>
+          )}
         </div>
       )}
 

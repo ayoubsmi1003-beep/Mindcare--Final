@@ -345,8 +345,14 @@ export async function chargerAnalyse(
 // V2 — LE PANNEAU
 // ═══════════════════════════════════════════════════════════════════════════
 
-/** Les trois issues d'ADR-023, décidées par `_shared/routing.ts` côté serveur. */
-export type CheminJarvis = "connaissance" | "patient" | "refus";
+/**
+ * Les trois issues d'ADR-023, décidées par `shared/jarvis/routing.ts` côté
+ * serveur. `commit` (l'ex-`refus`) = un acte clinique faisant foi demandé sans
+ * confirmation de la praticienne : c'est la seule issue qui n'appelle aucun
+ * modèle. `refus` n'est plus PRODUIT par le serveur depuis l'amendement du
+ * 2026-09-24 ; il reste LISIBLE parce que les tours déjà enregistrés le portent.
+ */
+export type CheminJarvis = "connaissance" | "patient" | "commit" | "refus";
 
 /**
  * Ce que la passerelle rend. `outil` est une PROPOSITION : le nom et les
@@ -841,7 +847,10 @@ class ErreurPasserelle extends Error {
 }
 
 function estChemin(v: unknown): v is CheminJarvis {
-  return v === "connaissance" || v === "patient" || v === "refus";
+  // `refus` n'est plus émis par le serveur (amendement du 2026-09-24) mais reste
+  // accepté : les tours enregistrés avant le portent, et un rejeu ne doit pas
+  // devenir rouge parce que la sémantique a changé de nom.
+  return v === "connaissance" || v === "patient" || v === "commit" || v === "refus";
 }
 
 /** Garde-fou de FORME sur les événements SSE — rien de clinique ne passe ici. */
